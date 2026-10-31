@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-10-31-moridinamael-5e683f74",
+ "contributor": "moridinamael",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11755+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-10-31T15:19:44+00:00",
+ "roles": ["feeds bonsai1/L23/N11833-"],
+ "neighbours": [
+  {
+   "unit": "L20/N11755",
+   "pole": "+",
+   "label": "In multi-line code, the last piece of a multi-part variable name (like _type or _file) when it is used again after being set",
+   "short": "last piece of a snake_case variable name when reused in code",
+   "fire": [
+    "file_type = get_ext(path)\nif file_type == 'csv':\n    load_csv(path)",
+    "output_file = open('log.txt', 'w')\noutput_file.write(message)\noutput_file.close()",
+    "user_name = input('Name: ')\nprint('Hello, ' + user_name)",
+    "const max_count = 10;\nfor (let i = 0; i < max_count; i++) {\n  draw(i);\n}",
+    "config_path = os.path.join(base, 'settings.yaml')\nwith open(config_path) as f:\n    cfg = yaml.safe_load(f)",
+    "let error_msg = format!(\"bad input: {}\", x);\neprintln!(\"{}\", error_msg);",
+    "data_dir = Path('data')\nfor item in data_dir.iterdir():\n    process(item)",
+    "$row_count = count($rows);\necho \"Found $row_count rows\";"
+   ],
+   "quiet": [
+    "kind = get_ext(path)\nif kind == 'csv':\n    load_csv(path)",
+    "out = open('log.txt', 'w')\nout.write(message)\nout.close()",
+    "name = input('Name: ')\nprint('Hello, ' + name)",
+    "const limit = 10;\nfor (let i = 0; i < limit; i++) {\n  draw(i);\n}",
+    "path = os.path.join(base, 'settings.yaml')\nwith open(path) as f:\n    cfg = yaml.safe_load(f)",
+    "let msg = format!(\"bad input: {}\", x);\neprintln!(\"{}\", msg);",
+    "folder = Path('data')\nfor item in folder.iterdir():\n    process(item)",
+    "$n = count($rows);\necho \"Found $n rows\";"
+   ]
+  }
+ ],
+ "predictions": "Unsure: the neuron fired ~0.3-0.7 on snake_case reuse in my probes, but single-word names also fired a bit (0.2-0.3), so near misses may leak. Expect AUROC around 0.8.",
+ "methods": {
+  "agent": "claude-sonnet-5-5 (letsplay stream)",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "bank-solo",
+   "inverse-gmoo",
+   "step-out"
+  ]
+ }
+}
