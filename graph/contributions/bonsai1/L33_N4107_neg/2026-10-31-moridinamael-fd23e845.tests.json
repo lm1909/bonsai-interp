@@ -1,0 +1,50 @@
+{
+ "contribution": "2026-10-31-moridinamael-fd23e845",
+ "contributor": "moridinamael",
+ "kind": "qc",
+ "neuron": "bonsai1/L33/N4107-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-10-31T17:48:41+00:00",
+ "qc": {
+  "verdict": "refine",
+  "label_under_test": "the token '-p' opening the second half of a hyphenated compound (co-publisher, hand-painted, self-published), as against unhyphenated synonyms"
+ },
+ "neighbours": [
+  {
+   "unit": "L33/N4107",
+   "pole": "-",
+   "label": "a bare letter p/P piece that starts a word split across tokens (e.g. '-p' in hand-painted, ' p' in patted), not whole p-words or hyphen pieces like '-prom'",
+   "fire": [
+    "She patted the dog gently on the head before leaving.",
+    "The shop sold hand-painted mugs from a local artist.",
+    "He pried the lid off the old paint can with a screwdriver.",
+    "The kitten pawed at the dangling string for an hour.",
+    "Rain pelted the tin roof all night long.",
+    "My grandfather puttered around the garden every Sunday.",
+    "The toddler pouted when we turned off the cartoons.",
+    "She prodded the campfire with a long stick."
+   ],
+   "quiet": [
+    "She stroked the dog gently on the head before leaving.",
+    "The shop sold hand-made mugs from a local artist.",
+    "He forced the lid off the old can with a screwdriver.",
+    "The kitten batted at the dangling string for an hour.",
+    "Rain hammered the tin roof all night long.",
+    "My grandfather worked around the garden every Sunday.",
+    "The toddler sulked when we turned off the cartoons.",
+    "She stirred the campfire with a long stick."
+   ]
+  }
+ ],
+ "predictions": "Hand-painted and patted should fire; pried/pawed/pelted/pouted/prodded are likely whole tokens or 'p'+piece and may stay quiet. Expect roughly 3-5 of 8 fire, near misses quiet.",
+ "methods": {
+  "agent": "claude-sonnet-5-5 (letsplay stream)",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "inverse-gmoo",
+   "neighbors"
+  ]
+ }
+}
