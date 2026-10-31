@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-10-31-moridinamael-6f6db7c5",
+ "contributor": "moridinamael",
+ "kind": "qc",
+ "neuron": "bonsai1/L23/N11833-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-10-31T17:10:58+00:00",
+ "qc": {
+  "verdict": "refine",
+  "label_under_test": "In a multi-line code block, a variable name that begins a later (indented) line right before it is updated in place (+=, -=, name[key] = ..., name.append/update/clear(...)); the same name used mid-line, in a comment, in prose, or as the snippet's first line stays weak."
+ },
+ "neighbours": [
+  {
+   "unit": "L23/N11833",
+   "pole": "-",
+   "label": "In multi-line code, a local variable name that was assigned earlier in the same function, when it begins a new line (before =, +=, [..] or .method(); the next token does not matter); a first-time name, print/return, or the name on a single line with no earlier assignment stays near floor.",
+   "fire": [
+    "def total(items):\n    count = 0\n    for x in items:\n        count += x\n    return count",
+    "def build():\n    parts = []\n    parts.append('head')\n    return parts",
+    "def scale(v):\n    result = v * 2\n    result = result + 1\n    return result",
+    "function sum(arr) {\n  let acc = 0;\n  for (const n of arr) {\n    acc += n;\n  }\n  return acc;\n}",
+    "def tally(words):\n    freq = {}\n    for w in words:\n        freq[w] = freq.get(w, 0) + 1\n    return freq",
+    "def clean(text):\n    text = text.strip()\n    text = text.lower()\n    return text",
+    "def make_grid(n):\n    grid = [[0] * n for _ in range(n)]\n    grid[0][0] = 1\n    return grid",
+    "def collect(rows):\n    names = set()\n    for r in rows:\n        names.add(r.name)\n    return names"
+   ],
+   "quiet": [
+    "def total(items):\n    count = 0\n    for x in items:\n        print(x)\n    return count",
+    "def build():\n    parts = []\n    return parts",
+    "def scale(v):\n    result = v * 2\n    return result",
+    "function sum(arr) {\n  let acc = 0;\n  console.log(arr);\n  return acc;\n}",
+    "def tally(words):\n    freq = {}\n    print(len(words))\n    return freq",
+    "def clean(text):\n    stripped = text.strip()\n    lowered = stripped.lower()\n    return lowered",
+    "def make_grid(n):\n    grid = [[0] * n for _ in range(n)]\n    return grid",
+    "def collect(rows):\n    names = set(r.name for r in rows)\n    return names"
+   ]
+  }
+ ],
+ "predictions": "Expect fire to beat quiet only weakly: the quiet items also reuse names in 'return x' and mid-line, which may fire; likely fail or borderline.",
+ "methods": {
+  "agent": "claude-sonnet-5-5 (letsplay stream)",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "inverse-gmoo"
+  ]
+ }
+}
