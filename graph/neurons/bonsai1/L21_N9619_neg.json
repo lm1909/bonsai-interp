@@ -4,10 +4,10 @@
  "layer": 21,
  "index": 9619,
  "pole": "-",
- "label": "The future auxiliary 'will' (and 'll), strongest in relative clauses and questions ('which will', 'How will'); quiet on the noun 'will', past-tense rewrites and other modals.",
+ "label": "English future/prospective auxiliary: 'will', 'll, won't and hypothetical 'would', where a bare verb comes next; strongest in relative clauses and questions ('which will', 'Who will', 'Will you'); weak on could/should/must, quiet on noun 'will', a name Will mid-sentence, past/present tense and most non-English futures.",
  "short": "future auxiliary 'will'",
  "kind": "token",
- "status": "partial",
+ "status": "held",
  "depth": "quick",
  "tests": [
   {
@@ -131,6 +131,128 @@
     "near_misses_at_0.3": 0
    },
    "contribution": "2026-10-22-ChopinDavid-22493d15"
+  },
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N9619_neg/2026-10-31-moridinamael-e8a7f163.tests.json",
+   "prereg_commit": "bcd971b34",
+   "author": "blind:claude-opus-5-5 (label-only)",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.375,
+     "peak": " will"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.575,
+     "peak": " will"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.672,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.75,
+     "peak": "'ll"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.379,
+     "peak": "'t"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.139,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.203,
+     "peak": " will"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.562,
+     "peak": "'ll"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.527,
+     "peak": "Will"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": " took"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.051,
+     "peak": " took"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.074,
+     "peak": " carry"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.118,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 1,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.471,
+    "near_misses_at_0.3": 1
+   },
+   "contribution": "2026-10-31-moridinamael-e8a7f163"
   }
  ],
  "label_history": [
@@ -138,34 +260,37 @@
    "2026-10-22-ChopinDavid-22493d15",
    "The future auxiliary 'will' (and 'll), strongest in relative clauses and questions ('which will', 'How will'); quiet on the noun 'will', past-tense rewrites and other modals.",
    "held"
+  ],
+  [
+   "2026-10-31-moridinamael-e8a7f163",
+   "English future/prospective auxiliary: 'will', 'll, won't and hypothetical 'would', where a bare verb comes next; strongest in relative clauses and questions ('which will', 'Who will', 'Will you'); weak on could/should/must, quiet on noun 'will', a name Will mid-sentence, past/present tense and most non-English futures.",
+   "held"
   ]
  ],
  "examples": [],
  "evidence": [],
  "roles": [],
  "contributors": [
-  "ChopinDavid"
+  "ChopinDavid",
+  "moridinamael"
  ],
  "contributions": [
-  "2026-10-22-ChopinDavid-22493d15"
+  "2026-10-22-ChopinDavid-22493d15",
+  "2026-10-31-moridinamael-e8a7f163"
  ],
  "qc": {
   "confirm": 0,
   "dispute": 0,
-  "refine": 0
+  "refine": 1
  },
  "replications": [],
- "coverage": {
-  "value": 0.3655,
-  "method": "estimated from the label's quoted words (token measure)",
-  "strong": 2818
- },
+ "coverage": null,
  "scrutiny": {
-  "level": 1,
-  "name": "tested",
-  "test_rounds": 1,
-  "sentences": 16,
-  "contributors": 1,
-  "qc": 0
+  "level": 3,
+  "name": "checked",
+  "test_rounds": 2,
+  "sentences": 32,
+  "contributors": 2,
+  "qc": 1
  }
 }
