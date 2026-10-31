@@ -4,7 +4,7 @@
  "layer": 23,
  "index": 11833,
  "pole": "-",
- "label": "In a multi-line code block, a variable name that begins a later (indented) line right before it is updated in place (+=, -=, name[key] = ..., name.append/update/clear(...)); the same name used mid-line, in a comment, in prose, or as the snippet's first line stays weak.",
+ "label": "In multi-line code, a local variable name that was assigned earlier in the same function, when it begins a new line (before =, +=, [..] or .method(); the next token does not matter); a first-time name, print/return, or the name on a single line with no earlier assignment stays near floor.",
  "short": null,
  "kind": null,
  "status": "failed",
@@ -131,12 +131,139 @@
     "near_misses_at_0.3": 5
    },
    "contribution": "2026-10-20-moridinamael-5b3296ec"
+  },
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N11833_neg/2026-10-31-moridinamael-6f6db7c5.tests.json",
+   "prereg_commit": "4a94a8e7c",
+   "author": "blind:claude-opus-5-5 (label-only)",
+   "n_fire": 5,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.249,
+     "peak": " items"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.56,
+     "peak": " parts"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.337,
+     "peak": " v"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.27,
+     "peak": " acc"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.25,
+     "peak": " words"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.409,
+     "peak": " text"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.478,
+     "peak": " grid"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.426,
+     "peak": " names"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.233,
+     "peak": " items"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.185,
+     "peak": " parts"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.312,
+     "peak": " v"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.345,
+     "peak": "(arr"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.125,
+     "peak": " freq"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.321,
+     "peak": " text"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.224,
+     "peak": " n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.261,
+     "peak": "(r"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.373,
+    "near_misses_at_0.3": 3
+   },
+   "contribution": "2026-10-31-moridinamael-6f6db7c5"
   }
  ],
  "label_history": [
   [
    "2026-10-20-moridinamael-5b3296ec",
    "In a multi-line code block, a variable name that begins a later (indented) line right before it is updated in place (+=, -=, name[key] = ..., name.append/update/clear(...)); the same name used mid-line, in a comment, in prose, or as the snippet's first line stays weak.",
+   "failed"
+  ],
+  [
+   "2026-10-31-moridinamael-6f6db7c5",
+   "In multi-line code, a local variable name that was assigned earlier in the same function, when it begins a new line (before =, +=, [..] or .method(); the next token does not matter); a first-time name, print/return, or the name on a single line with no earlier assignment stays near floor.",
    "failed"
   ]
  ],
@@ -149,21 +276,22 @@
   "moridinamael"
  ],
  "contributions": [
-  "2026-10-20-moridinamael-5b3296ec"
+  "2026-10-20-moridinamael-5b3296ec",
+  "2026-10-31-moridinamael-6f6db7c5"
  ],
  "qc": {
   "confirm": 0,
   "dispute": 0,
-  "refine": 0
+  "refine": 1
  },
  "replications": [],
  "coverage": null,
  "scrutiny": {
-  "level": 1,
-  "name": "tested",
-  "test_rounds": 1,
-  "sentences": 16,
+  "level": 2,
+  "name": "re-tested",
+  "test_rounds": 2,
+  "sentences": 32,
   "contributors": 1,
-  "qc": 0
+  "qc": 1
  }
 }
