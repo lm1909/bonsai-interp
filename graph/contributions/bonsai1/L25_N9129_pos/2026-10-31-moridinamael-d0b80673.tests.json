@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-10-31-moridinamael-d0b80673",
+ "contributor": "moridinamael",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N9129+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-10-31T18:12:17+00:00",
+ "neighbours": [
+  {
+   "unit": "L25/N9129",
+   "pole": "+",
+   "label": "In multi-line Python code, the name of a keyword argument in a function call, on the token just before its '=' (e.g. 'scaling' in Model(verbose=False, scaling=s)); positional arguments and prose stay near floor.",
+   "fire": [
+    "model = Model(\n    verbose=False,\n    scaling=s,\n)",
+    "df = pd.read_csv(\n    path,\n    sep=\";\",\n    encoding=\"utf-8\",\n)",
+    "plt.plot(\n    x, y,\n    color=\"red\",\n    linewidth=2,\n)",
+    "loader = DataLoader(\n    dataset,\n    batch_size=32,\n    shuffle=True,\n)",
+    "parser.add_argument(\n    \"--lr\",\n    type=float,\n    default=0.001,\n)",
+    "response = requests.get(\n    url,\n    timeout=10,\n    headers=headers,\n)",
+    "optimizer = torch.optim.Adam(\n    model.parameters(),\n    lr=3e-4,\n    weight_decay=0.01,\n)",
+    "result = subprocess.run(\n    cmd,\n    capture_output=True,\n    check=False,\n)"
+   ],
+   "quiet": [
+    "model = Model(\n    False,\n    s,\n)",
+    "df = pd.read_csv(\n    path,\n    \";\",\n)",
+    "plt.plot(\n    x, y,\n    \"r-\",\n)",
+    "loader = DataLoader(\n    dataset,\n    32,\n)",
+    "parser.add_argument(\n    \"--lr\",\n    \"-l\",\n)",
+    "response = requests.get(\n    url,\n    params,\n)",
+    "optimizer = torch.optim.Adam(\n    model.parameters(),\n    3e-4,\n)",
+    "result = subprocess.run(\n    cmd,\n)"
+   ]
+  }
+ ],
+ "roles": ["reads bonsai1/L23/N11833-"],
+ "predictions": "Expect the 8 kwarg-name sentences to fire; near misses with positional args mostly quiet, but the line-start assignment target (model, df...) may leak.",
+ "methods": {
+  "agent": "claude-sonnet-5-5 (letsplay stream)",
+  "screens": [
+   "look",
+   "probe",
+   "inverse-gmoo",
+   "step-down"
+  ]
+ }
+}
