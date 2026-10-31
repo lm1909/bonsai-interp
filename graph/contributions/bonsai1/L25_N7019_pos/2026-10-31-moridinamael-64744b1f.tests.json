@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-10-31-moridinamael-64744b1f",
+ "contributor": "moridinamael",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N7019+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-10-31T15:43:34+00:00",
+ "roles": ["reads bonsai1/L23/N11833-"],
+ "selection": "step-in from bonsai1/L23/N11833-",
+ "short": "variable name used in a statement, deep in code",
+ "neighbours": [
+  {
+   "unit": "L25/N7019",
+   "pole": "+",
+   "label": "A variable name used inside a statement (after if/for/in/return, in brackets or call arguments) several lines into a multi-line code block; not bare assignment lines, one-line snippets, prose or SQL",
+   "fire": [
+    "def total(items):\n    result = 0\n    for item in items:\n        if item > 0:\n            result += item\n    return result",
+    "def find_user(users, name):\n    for user in users:\n        if user.name == name:\n            return user\n    return None",
+    "with open(path) as f:\n    lines = f.readlines()\ncount = 0\nfor line in lines:\n    if line.strip():\n        count += 1\nprint(count)",
+    "function sum(arr) {\n  let s = 0;\n  for (let i = 0; i < arr.length; i++) {\n    s += arr[i];\n  }\n  return s;\n}",
+    "def lookup(cache, key):\n    if key in cache:\n        return cache[key]\n    value = compute(key)\n    cache[key] = value\n    return value",
+    "for (int i = 0; i < n; i++) {\n    for (int j = 0; j < n; j++) {\n        if (grid[i][j] == target) {\n            return i;\n        }\n    }\n}",
+    "def process(data):\n    cleaned = []\n    for row in data:\n        if not row:\n            continue\n        cleaned.append(normalize(row))\n    return cleaned",
+    "while queue:\n    node = queue.pop(0)\n    for neighbor in graph[node]:\n        if neighbor not in visited:\n            visited.add(neighbor)\n            queue.append(neighbor)"
+   ],
+   "quiet": [
+    "result = 0",
+    "Add up all the positive items and return the total to the caller.",
+    "SELECT name, email FROM users WHERE active = 1 ORDER BY name;",
+    "x = 5\ny = 10\nz = 15",
+    "To find a user, loop over the list and compare each name with the one you want.",
+    "print('hello world')",
+    "The function counts non-empty lines in the file and prints the count.",
+    "SELECT COUNT(*) FROM orders\nWHERE status = 'shipped'\nGROUP BY customer_id;"
+   ]
+  }
+ ],
+ "predictions": "Weak-to-moderate: earlier probes of toy functions scored 0.04-0.6 of max. Expect the longer nested fire snippets to land 0.2-0.5 and near misses near 0; main risk is the median fire missing 0.20.",
+ "methods": {
+  "agent": "claude-sonnet-5-5 (letsplay stream)",
+  "screens": [
+    "look",
+    "probe",
+    "step-down",
+    "inverse-gmoo",
+    "bank-solo"
+  ]
+ }
+}
