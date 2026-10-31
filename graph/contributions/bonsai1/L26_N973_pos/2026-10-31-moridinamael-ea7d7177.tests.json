@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-10-31-moridinamael-ea7d7177",
+ "contributor": "moridinamael",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N973+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-10-31T16:47:03+00:00",
+ "roles": ["reads bonsai1/L25/N7019+"],
+ "neighbours": [
+  {
+   "unit": "L26/N973",
+   "pole": "+",
+   "label": "multi-line code that loops over lines of text and cleans each one (line = line.strip(), lines[i].trim(), fh.readline())",
+   "fire": [
+    "for line in f:\n    line = line.strip()\n    if not line:\n        continue",
+    "with open('data.txt') as fh:\n    for raw in fh:\n        cleaned = raw.rstrip('\\n').strip()\n        rows.append(cleaned)",
+    "for (let i = 0; i < lines.length; i++) {\n    lines[i] = lines[i].trim();\n}",
+    "line = fh.readline()\nwhile line:\n    line = line.strip()\n    process(line)\n    line = fh.readline()",
+    "while read -r line; do\n    line=$(echo \"$line\" | xargs)\n    echo \"$line\"\ndone < input.txt",
+    "for idx, line in enumerate(text.splitlines()):\n    line = line.strip().lower()\n    out[idx] = line",
+    "foreach (var line in File.ReadLines(path))\n{\n    var trimmed = line.Trim();\n    list.Add(trimmed);\n}",
+    "while ((line = reader.readLine()) != null) {\n    line = line.trim();\n    if (line.isEmpty()) continue;\n}"
+   ],
+   "quiet": [
+    "for n in numbers:\n    total = total + n\n    if total > limit:\n        break",
+    "with open('data.bin', 'rb') as fh:\n    header = fh.read(16)\n    payload = fh.read()",
+    "for (let i = 0; i < scores.length; i++) {\n    scores[i] = scores[i] * 2;\n}",
+    "count = 0\nwhile count < 10:\n    count += 1\n    print(count)",
+    "for file in *.jpg; do\n    mv \"$file\" backup/\ndone",
+    "for idx, item in enumerate(items):\n    item.price = item.price * 1.1\n    out[idx] = item",
+    "foreach (var user in users)\n{\n    var age = user.Age;\n    ages.Add(age);\n}",
+    "while (queue.size() > 0) {\n    Node n = queue.poll();\n    visit(n);\n}"
+   ]
+  }
+ ],
+ "predictions": "Expect most fire items to peak on the repeated line variable or .strip/.trim; near misses (numbers, binary reads, other loops) mostly low. Risk: the reading of fire may be low in absolute terms.",
+ "methods": {
+  "agent": "claude-sonnet-5-5 (letsplay stream)",
+  "screens": [
+   "look",
+   "probe",
+   "inverse-gmoo",
+   "bank-solo",
+   "step-down",
+   "quick-test"
+  ]
+ }
+}
