@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-bf54bc35",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N9342+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:50:33+00:00",
+ "recipe": {
+  "toolchain_commit": "5da3c242e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N9342_pos/2026-11-06-lm1909-bf54bc35.tests.json"
+ },
+ "label": "the 'or', 'and' or comma in legal boilerplate lists: 'any warranty or liability', 'duties, tariffs, or taxes', 'trademarks, service marks'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N9342_pos/2026-11-06-lm1909-bf54bc35.tests.json",
+   "prereg_commit": "5da3c242e",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.997,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.919,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.681,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.588,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.595,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.193,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.399,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.59,
+     "peak": " ou"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.02,
+     "peak": " guide"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.088,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.318,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.248,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " picnic"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.107,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.415,
+     "peak": " ou"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.593,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5da3c242e",
+  "minutes": 30,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "coordinator in legal boilerplate",
+ "unit_kind": "contextual / boilerplate",
+ "confidence": "high",
+ "selection": "random draw"
+}
