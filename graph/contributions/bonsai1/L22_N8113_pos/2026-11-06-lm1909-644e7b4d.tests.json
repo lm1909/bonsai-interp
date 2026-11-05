@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-644e7b4d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N8113+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:49:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N8113",
+   "pole": "+",
+   "label": "the last digits of a phone or fax number",
+   "fire": [
+    "Tel: 281620, Fax: 281648.",
+    "Contact Anna on 415.555.2716.",
+    "Fax: 337998",
+    "Tel: 553310",
+    "Phone: 020 7946 0958.",
+    "Call 612.555.0186.",
+    "Tel: 471120, Fax: 475530.",
+    "Fax: 442218."
+   ],
+   "quiet": [
+    "Tel and Fax are at the desk.",
+    "Contact Anna on Friday.",
+    "Fax me later",
+    "Tel me now",
+    "Phone me at home.",
+    "Call me soon.",
+    "Tel and Fax are closed.",
+    "Fax the form."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "end of a phone number",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "The card flags the pole as broad. Probes: 0.46 on a fax number, 0.19 on a dotted number, against 0.19 on a full stop in a sentence with no number, so this may not separate."
+}

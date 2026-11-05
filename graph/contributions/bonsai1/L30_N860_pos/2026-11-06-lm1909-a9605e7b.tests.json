@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-a9605e7b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N860+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:49:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N860",
+   "pole": "+",
+   "label": "' you' after 'if' or 'when' in the middle of site instructions: 'or if you don't have an account', 'when you are offline'",
+   "fire": [
+    "Please sign in above or if you are new, register here.",
+    "See the guide on using the files when you are offline.",
+    "Log in first. If you don't have a password, ask.",
+    "Use the form below or if you prefer, call us.",
+    "Please comment here. If you've already registered, log in.",
+    "Click below to continue, or if you need help, email us.",
+    "Read more on working with files when you are away.",
+    "Enter your email. If you forgot it, contact support."
+   ],
+   "quiet": [
+    "Please sign in above and then register your address here.",
+    "See the guide on using the files on a server.",
+    "Log in first. Then change your password now.",
+    "Use the form below and then call us.",
+    "Please comment here. Then share the post.",
+    "Click below to continue, and then email us.",
+    "Read more on working with files at home.",
+    "Enter your email. Then contact support."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' you' after if / when in instructions",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probes: 'or if you' 1.09 whichever word followed, sentence-initial 'If you' 0.06-0.16, so being mid-text seems to matter. The output direction is about absence (the - pole fires on what is lacking), which this label does not test.",
+ "trigger": {
+  "tokens": [
+   " you"
+  ]
+ }
+}

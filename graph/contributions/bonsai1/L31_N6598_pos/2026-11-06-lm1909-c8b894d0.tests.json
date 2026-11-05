@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-c8b894d0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6598+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:49:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N6598",
+   "pole": "+",
+   "label": "the capital G starting a German noun after a hyphen or as a surname: -G|esellschaft, -G|ymnasium, Hubert G|assner",
+   "fire": [
+    "Die Max-Planck-Gesellschaft forscht.",
+    "Das Goethe-Gymnasium ist alt.",
+    "Die Bosch-Gesellschaft wächst.",
+    "Hubert Gassner sprach zuerst.",
+    "Das Bundes-Gesetz gilt.",
+    "Die Deutsche Forschungs-Gemeinschaft zahlt.",
+    "Ein Bau-Gerüst steht dort.",
+    "Ihr Aufgabengebiet wird klar."
+   ],
+   "quiet": [
+    "Die Max-Planck-Stiftung forscht.",
+    "Das Goethe-Haus ist alt.",
+    "Die Bosch-Firma wächst.",
+    "Hubert Maier sprach zuerst.",
+    "Das Bundes-Amt gilt.",
+    "Die Deutsche Forschungs-Stelle zahlt.",
+    "Ein Bau-Kran steht dort.",
+    "Ihr Arbeitsplatz wird klar."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "German '-G' / ' G' pieces",
+ "unit_kind": "token piece",
+ "confidence": 0.7,
+ "notes": "A tokenizer check showed the '-G' piece in all but ' G' and 'Auf|g' items. A probe with 'Willi-Graf-Schule' fired 0.74 on the earlier -G of Graf, so near misses here avoid any -G.",
+ "trigger": {
+  "tokens": [
+   "-G",
+   " G"
+  ]
+ }
+}
