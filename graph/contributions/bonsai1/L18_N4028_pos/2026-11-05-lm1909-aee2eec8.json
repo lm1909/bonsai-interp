@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-aee2eec8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N4028+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:48:50+00:00",
+ "recipe": {
+  "toolchain_commit": "147c65b66",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N4028_pos/2026-11-05-lm1909-aee2eec8.tests.json"
+ },
+ "label": "setting a quantity against a reference ('compared to/with', 'relative to', 'in comparison', 'against', 'subtracted from')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N4028_pos/2026-11-05-lm1909-aee2eec8.tests.json",
+   "prereg_commit": "147c65b66",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.492,
+     "peak": " compared"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.53,
+     "peak": " compared"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.323,
+     "peak": " relative"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.438,
+     "peak": " compared"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.478,
+     "peak": " comparison"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.403,
+     "peak": " relative"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.287,
+     "peak": "ed"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.253,
+     "peak": " against"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " place"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.098,
+     "peak": " given"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " southern"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " stored"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " lists"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " accounts"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " were"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.42,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "147c65b66",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "measured against a reference",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' compared' x13, ' -' x5, ' relative' x2, ' Compare' x2; 'subtracted' and code subtraction also peak, so the shared pattern is a comparison with a reference rather than the one word. Probe: compared 0.704; relative 0.724; checked against 0.421; subtracted 0.332; 'values[i] - baseline[i]' 0.492; 'during the same quarter' 0.019.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "compared",
+   "compare",
+   "comparison",
+   "relative"
+  ]
+ }
+}

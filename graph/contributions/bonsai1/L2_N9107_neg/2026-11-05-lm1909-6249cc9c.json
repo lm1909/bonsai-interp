@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-6249cc9c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N9107-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:49:08+00:00",
+ "recipe": {
+  "toolchain_commit": "147c65b66",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N9107_neg/2026-11-05-lm1909-6249cc9c.tests.json"
+ },
+ "label": "dense unit (35% of tokens reach 0.1 of max); best guess: ' break' and ' surrender' tokens",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N9107_neg/2026-11-05-lm1909-6249cc9c.tests.json",
+   "prereg_commit": "147c65b66",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 5,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.685,
+     "peak": " break"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.613,
+     "peak": " surrender"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.789,
+     "peak": " break"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.726,
+     "peak": " surrender"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.599,
+     "peak": " breaking"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.687,
+     "peak": " break"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.778,
+     "peak": " surrender"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.709,
+     "peak": " breaking"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.263,
+     "peak": " spoil"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.248,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.351,
+     "peak": " sudden"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.356,
+     "peak": " leave"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.172,
+     "peak": " seal"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.389,
+     "peak": " window"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.423,
+     "peak": " siege"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.429,
+     "peak": "W"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.698,
+    "near_misses_at_0.3": 5
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "147c65b66",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; ' break', ' surrender' (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card: FLAG dense 35.4%, max only 0.34, gate-closed regime 100%; peaks 'Breaking', 'Break', ' Surre', 'res'. Probe: 'Break' 1.012, ' break' 0.779, ' surrender' 0.832, but the baseline is high: 'Please' 0.294, ' leave' 0.365, ' mat' 0.335. An 8 + 8 test will probably fail on the near misses; written as a best guess.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "break",
+   "breaking",
+   "surrender"
+  ]
+ }
+}

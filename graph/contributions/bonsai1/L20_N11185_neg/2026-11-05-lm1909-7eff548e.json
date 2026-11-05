@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-7eff548e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11185-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:49:31+00:00",
+ "recipe": {
+  "toolchain_commit": "147c65b66",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N11185_neg/2026-11-05-lm1909-7eff548e.tests.json"
+ },
+ "label": "the subject (' She', ' He', surname) in a present-tense biography of a living person, before 'has' or 'is'; dead people and institutions stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N11185_neg/2026-11-05-lm1909-7eff548e.tests.json",
+   "prereg_commit": "147c65b66",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.169,
+     "peak": " She"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.123,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.194,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.165,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.198,
+     "peak": " She"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.185,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.171,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.397,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.085,
+     "peak": " she"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.063,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " based"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.056,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " Tribune"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": " during"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.012,
+     "peak": " novels"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.178,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "147c65b66",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "subject of a living person's bio",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: ' He' x3, ' he' x3, ' She' x2, ' she' x2 and surnames, mostly before ' has' or ' is'; the output direction of the other pole promotes ' was', ' died', ' era'. Probe: Holt 'She has' 0.424; 'She has published' 0.271; 'He is' 0.240; Tom Reyes 0.187; Napoleon 0.035; Holt with death date 0.034; a department 0.031; Washington 0.014.",
+ "selection": "random draw"
+}

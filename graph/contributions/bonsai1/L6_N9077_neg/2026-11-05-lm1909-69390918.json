@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-69390918",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9077-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:49:40+00:00",
+ "recipe": {
+  "toolchain_commit": "147c65b66",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N9077_neg/2026-11-05-lm1909-69390918.tests.json"
+ },
+ "label": "'first principles' and its kin: the noun after a 'first' that means the fundamental starting point ('first principle(s)', 'ab initio', 'first impressions')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N9077_neg/2026-11-05-lm1909-69390918.tests.json",
+   "prereg_commit": "147c65b66",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.977,
+     "peak": " principles"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.681,
+     "peak": " principle"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.362,
+     "peak": "io"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.047,
+     "peak": " principles"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.638,
+     "peak": " principle"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.127,
+     "peak": " impressions"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.456,
+     "peak": "io"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.99,
+     "peak": " principles"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " no"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " classical"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " requirement"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " first"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " empirical"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " beats"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.659,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "147c65b66",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first principles / ab initio",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.75,
+ "notes": "Card: ' principle' / ' principles', 'io' of ab initio x5, ' impressions' x2, 'first Things'. Probe: 'from first principles' 1.033; 'first principle of good design' 0.681; 'ab initio' 0.463; 'first impressions' 0.309; synonyms stay quiet: 'from scratch' 0.002, 'the fundamentals' 0.045; other firsts stay quiet: 'first chapter' 0.014, 'first law' 0.023, 'first sight' 0.057. So it is about these phrases, not the meaning without the words.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "principle",
+   "principles",
+   "initio",
+   "impressions"
+  ]
+ }
+}

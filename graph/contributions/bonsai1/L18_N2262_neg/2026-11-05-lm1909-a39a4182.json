@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-a39a4182",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N2262-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:49:38+00:00",
+ "recipe": {
+  "toolchain_commit": "147c65b66",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N2262_neg/2026-11-05-lm1909-a39a4182.tests.json"
+ },
+ "label": "second-person parenting advice, on pronouns and function words near the parent ('help you', 'you will', 'you and your child')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N2262_neg/2026-11-05-lm1909-a39a4182.tests.json",
+   "prereg_commit": "147c65b66",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.068,
+     "peak": "Keep"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.026,
+     "peak": " preschool"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.441,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.336,
+     "peak": " feel"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.241,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.822,
+     "peak": " avoid"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.362,
+     "peak": " us"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.129,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.183,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.337,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.198,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.081,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.091,
+     "peak": " only"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.13,
+     "peak": " us"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.17,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.672,
+    "median_fire": 0.288,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "147c65b66",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "parenting advice (pronouns)",
+ "unit_kind": "contextual / topic",
+ "confidence": 0.35,
+ "notes": "Card: ' you' x4, ' I', ' us', ' will', ' be' in text for parents about children. Probe: 'help you keep them calm' 0.417; 'you and your child' 0.259; 'feel good about giving to them' 0.317; 'you will see' 0.245; but also weak: 'your baby sleep' 0.148, 'easy for parents' 0.094. Same frames without children: laptop 0.044, car 0.036, team 0.085, crew 0.150.",
+ "selection": "random draw"
+}
