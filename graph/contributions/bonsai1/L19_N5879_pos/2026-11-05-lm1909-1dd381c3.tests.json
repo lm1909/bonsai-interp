@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-1dd381c3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N5879+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N5879",
+   "pole": "+",
+   "label": "the indentation token at the start of a line inside a function or block of code, mostly in Python, as opposed to unindented code and prose lines",
+   "fire": [
+    "def load():\n    try:\n        data = read()\n    except:\n        data = None\n    return data",
+    "class B:\n    def name(self):\n        \"\"\"Return the name.\"\"\"\n        return self.title",
+    "def show(x):\n    print \"value\"\n    return True",
+    "def run():\n\tif ready:\n\t\tstart()\n\telse:\n\t\tstop()",
+    "for row in rows:\n    if row:\n        total += 1\n    else:\n        skip()",
+    "function load() {\n    try {\n        return read();\n    } catch (e) {\n        return null;\n    }\n}",
+    "def close(self):\n    '''Close the file.'''\n    self.f.close()\n    return None",
+    "while True:\n    line = next(it)\n    if not line:\n        break"
+   ],
+   "quiet": [
+    "data = read()\nresult = parse(data)\nprint(result)\nsave(result)",
+    "name = 'title'\ncount = 12\nitems = []\nready = True",
+    "The file failed.\nWe read it again.\nIt loaded.\nThen it closed.",
+    "First load the data.\nThen parse it.\nThen print the result.\nSave it.",
+    "import os\nimport sys\nfrom time import sleep\nimport json",
+    "var a = 1;\nvar b = 2;\nvar c = a + b;\nconsole.log(c);",
+    "x = 5\ny = 6\nz = x * y\nprint(z)",
+    "Close the door.\nTurn off the lights.\nLock the gate.\nGo home."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "indentation inside a code block",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "notes": "C code scored 0.13 in a probe, so this may be Python-leaning. The card also peaks on ' print' and ' return'."
+}

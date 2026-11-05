@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-158ecadc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N8920-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N8920",
+   "pole": "-",
+   "label": "a word-initial piece of a French or German word that is spelled like an English word (' rent'|able, ' report'|age, ' Deck'|en, ' print'|emps), as opposed to the English word itself and to other French or German words",
+   "fire": [
+    "Ce commerce est devenu très rentable après quelques années.",
+    "Nous avons regardé un long reportage sur les volcans.",
+    "Dans la cuisine, les couverts et les torchons sont dans le placard du printemps.",
+    "Elle voulait protéger le patrimoine de son village.",
+    "Im Winter braucht man warme Decken für das Bett.",
+    "Das Dach deckt den ganzen Hof gut ab.",
+    "Die Frau hatte eine Narbe auf der Stirn.",
+    "Les documents sont envoyés à notre imprimeur chaque mois."
+   ],
+   "quiet": [
+    "This small rental business is a good deal in a few years.",
+    "We watched a long report on the volcano last night.",
+    "Spring comes when the print shop reopens its doors.",
+    "She wanted to protect the patio of her house.",
+    "We stood out on the deck and drank tea.",
+    "The mountain stream runs past the farm.",
+    "Bitte stir the soup and keep it warm.",
+    "Ce magasin est devenu très connu après quelques années."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "fr/de word start spelled like an English word",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "The third fire sentence is awkward French, written to get 'printemps' in. The near misses mix English uses of the same strings with one French control, so the French and German baseline is tested less than the English one; in probes 'populaire' reached 0.25."
+}
