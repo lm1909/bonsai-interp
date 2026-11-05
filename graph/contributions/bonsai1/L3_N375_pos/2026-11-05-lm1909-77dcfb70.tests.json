@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-77dcfb70",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N375+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:07:24+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N375",
+   "pole": "+",
+   "label": "dense unit with no clear trigger; best guess: the word ' stolen'",
+   "fire": [
+    "Detectives recovered the stolen paintings from a barn outside Lyon.",
+    "Her bicycle was stolen while she was buying stamps at the post office.",
+    "The dealer admitted that the watches were stolen from a jeweller in Antwerp.",
+    "Somebody has stolen the copper pipe from the empty factory again.",
+    "Customs officers found stolen passports hidden inside a shipment of toys.",
+    "He bought a stolen laptop from a stranger in the car park.",
+    "Thieves had stolen two tractors before the farmer woke up.",
+    "Police say the stolen van was abandoned near the railway bridge."
+   ],
+   "quiet": [
+    "Detectives photographed the old paintings in a barn outside Lyon.",
+    "Her bicycle was parked while she was buying stamps at the post office.",
+    "The dealer admitted that the watches were bought from a jeweller in Antwerp.",
+    "Somebody has replaced the copper pipe in the empty factory again.",
+    "Customs officers found spare passports packed inside a shipment of toys.",
+    "He bought a used laptop from a stranger in the car park.",
+    "Workers had repaired two tractors before the farmer woke up.",
+    "Police say the rented van was parked near the railway bridge."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "dense; ' stolen' (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card: FLAG dense (33.6% of tokens reach 0.1 of max), echo regime 100%, max only 0.28, top peaks on Arabic ل/ف and Korean 한. Probes: ' stolen'/'olen' 0.60-0.65 was the highest reading, Arabic and Korean word starts 0.27-0.53, plain English filler 0.18-0.32. The top examples are not this word, so even a hold would be a sub-trigger of a dense unit. Written as a best-guess test.",
+ "trigger": {
+  "tokens": [
+   " stolen"
+  ]
+ }
+}

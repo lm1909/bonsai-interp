@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-f9ba0823",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N2220+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:07:24+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N2220",
+   "pole": "+",
+   "label": "Romance-language text whose diacritics are stripped or mangled (etait, pieges, matrÃcula), peaking on function words such as ' la'; the same sentence with correct accents stays quiet",
+   "fire": [
+    "Hier soir je suis alle a la fete et apres on a mange a la maison de Rene.",
+    "Ca fait deja trois ans que j'etudie a la fac et je n'ai pas arrete de reflechir a la suite.",
+    "Le probleme est que la moitie des eleves n'a pas repondu a la derniere question.",
+    "La pelicula se estrenÃ³ en la ciudad y fue un Ã©xito en la regiÃ³n.",
+    "Mon frere a achete la voiture la plus chere du quartier sans reflechir a la depense.",
+    "Les temoins ont declare a la police que la fenetre etait deja ouverte.",
+    "Nous avons visite la cathedrale et la bibliotheque ou mon pere a travaille.",
+    "Tambien fui a la farmacia porque mi mama no podia salir de la habitacion en ese dia."
+   ],
+   "quiet": [
+    "Hier soir je suis allé à la fête et après on a mangé à la maison de René.",
+    "Ça fait déjà trois ans que j'étudie à la fac et je n'ai pas arrêté de réfléchir à la suite.",
+    "Le problème est que la moitié des élèves n'a pas répondu à la dernière question.",
+    "La película se estrenó en la ciudad y fue un éxito en la región.",
+    "Mon frère a acheté la voiture la plus chère du quartier sans réfléchir à la dépense.",
+    "Les témoins ont déclaré à la police que la fenêtre était déjà ouverte.",
+    "Nous avons visité la cathédrale et la bibliothèque où mon père a travaillé.",
+    "También fui a la farmacia porque mi mamá no podía salir de la habitación en ese día."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "text with stripped or mangled accents",
+ "unit_kind": "contextual / encoding",
+ "confidence": "medium",
+ "notes": "Card: ' la' x7, in strings with broken encoding or missing accents. The - pole promotes é and fires right before it (caf, clich, Sant), so the two poles read as two sides of 'accent expected or absent'; not tested here. Probes: stripped French 0.97 and 0.64, mangled Spanish 0.79; correctly accented twins 0.19 and 0.01; plain unaccented French with no accent due 0.16."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-41fadd41",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N9173+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:07:24+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N9173",
+   "pole": "+",
+   "label": "operating-system access control: who may read, run or own something (chmod, chown, sudo, SELinux, security policy settings), not other admin commands and not security in the everyday sense",
+   "fire": [
+    "Before you continue, log in as an ordinary account with sudo rights on the host.",
+    "os.system('chmod 700 /srv/backup/keys')\nprint('done')",
+    "subprocess.call(['chown', '-R', 'www-data:www-data', '/var/www/site'])",
+    "In the console, go to Local Policies, then User Rights Assignment, then Security Options.",
+    "Restore the label with chcon -t httpd_sys_content_t and check the SELinux context.",
+    "Add the deploy account to the docker group so it can run containers without root.",
+    "Make the script executable for its owner only, then set the group to staff.",
+    "Grant the service account read access to the folder and deny write access to everyone else."
+   ],
+   "quiet": [
+    "Before you continue, log in to the shared wiki and read the notes on the host.",
+    "os.system('gzip /srv/backup/keys')\nprint('done')",
+    "subprocess.call(['rsync', '-a', '/tmp/build/', '/var/www/site'])",
+    "In the console, go to Regional Settings, then Date and Time, then Time Zone.",
+    "Restore the archive with tar -xzf backup.tgz and check the file count.",
+    "Add the deploy script to the nightly job so it can run after the build.",
+    "Make the script shorter and clearer, then add comments at the top.",
+    "Give the airport security officer your boarding pass and put your bag on the belt."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "OS permissions and privileges",
+ "unit_kind": "semantic / code",
+ "confidence": "medium",
+ "notes": "Card: ' security' x4, chmod x2, 'chown -R', 'with sudo'. Output promotes group, assigned, roles, running, native. Probes: setfattr security.selinux 0.91, chmod ugo 0.81, chown 0.68, Windows Security Settings 0.52, 'with sudo' 0.48; cp 0.18, Control Panel 0.24, laptop 0.04, security guard 0.04. A samba 'security = share' line was only 0.05, so it is not every config line."
+}

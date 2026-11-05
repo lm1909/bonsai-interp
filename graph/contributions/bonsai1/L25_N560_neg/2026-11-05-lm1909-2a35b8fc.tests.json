@@ -1,0 +1,58 @@
+{
+ "contribution": "2026-11-05-lm1909-2a35b8fc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N560-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:07:24+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N560",
+   "pole": "-",
+   "label": "measuring how fast software runs (timers, profilers, benchmarks, bottlenecks), in code and in technical prose; not 'performance' in the theatre and not the same loops without timing",
+   "fire": [
+    "import pstats\nimport cProfile\nprofiler = cProfile.Profile()\nprofiler.enable()\nrender_page()\n",
+    "    for trial in range(TRIALS):\n        duration = timer.timeit(number=500)\n        results.append(duration)\n",
+    "LOG_SLOW_REQUESTS = True\nSLOW_REQUEST_THRESHOLD = 0.25\nTIMEOUT = 30\n",
+    "After profiling the service we learned that JSON parsing was the main bottleneck.",
+    "Our benchmark compares query latency on the two storage engines under load.",
+    "The flame graph showed that most CPU time went to a single hashing function.",
+    "    start = time.perf_counter()\n    build_index(docs)\n    took = time.perf_counter() - start\n    print('took', took)\n",
+    "They rewrote the inner loop in C and reduced the overhead by forty percent."
+   ],
+   "quiet": [
+    "import json\nimport shutil\nconfig = json.load(handle)\nshutil.copy(src, dst)\nrender_page()\n",
+    "    for trial in range(TRIALS):\n        sample = picker.choice(items)\n        results.append(sample)\n",
+    "LOG_FILE_NAME = 'app.log'\nDEFAULT_LANGUAGE = 'en'\nTITLE = 'Home'\n",
+    "After reading the manual we learned that JSON files must be saved in the config folder.",
+    "Our committee compares grant proposals from the two universities each spring.",
+    "The bar graph showed that most students went to a single summer school.",
+    "    name = user.get_name()\n    build_index(docs)\n    label = name.title() + ':'\n    print('hello', label)\n",
+    "The orchestra rehearsed the slow movement again and gave a moving performance on Friday."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "measuring software run time / profiling",
+ "unit_kind": "semantic / code",
+ "confidence": "medium",
+ "notes": "Card: scattered peaks (' performance' x4, 'Profile', timeit, SLOW_DB_QUERY_TIME). Output: - pole promotes bottleneck, profiling, timings, overhead, performance. Probes: cProfile 0.95, profiler/bottleneck 0.67, timeit 0.63, slow-query constant 0.56, 'twice as fast' 0.40; actor's performance 0.00, import os 0.01, same loop with t.sum 0.03.",
+ "trigger": {
+  "words": [
+   "profile",
+   "profiler",
+   "profiling",
+   "timeit",
+   "benchmark",
+   "bottleneck"
+  ]
+ }
+}

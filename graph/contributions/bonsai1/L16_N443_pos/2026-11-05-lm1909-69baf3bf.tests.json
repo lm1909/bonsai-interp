@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-69baf3bf",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N443+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:07:24+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N443",
+   "pole": "+",
+   "label": "a '=True' keyword argument inside multi-line Python code, as opposed to '=False', '=None' or other values in the same place",
+   "fire": [
+    "class TestPorts(base.TestCase):\n    def test_update(self):\n        ports = self.api.list_ports(verbose=True)\n        self.assertEqual(len(ports), 2)\n",
+    "def sync_rows(rows, dry_run=False):\n    for row in rows:\n        write_row(row, overwrite=True)\n    return len(rows)\n",
+    "    def setUp(self):\n        super().setUp()\n        self.server = self.make_server(start=True)\n        self.addCleanup(self.server.stop)\n",
+    "for image_id in image_ids:\n    image = fetch_image(image_id, cached=True)\n    images.append(image)\nprint(len(images))\n",
+    "    plot_series(values, labels,\n                normalize=True)\n    save_figure(path)\n",
+    "def rebuild_cache(keys):\n    client = get_client()\n    for key in keys:\n        client.refresh(key, force=True)\n",
+    "    def test_create(self):\n        account = self.create_account(name='demo', is_active=True)\n        self.assertIsNotNone(account.id)\n",
+    "parser = make_parser()\nparser.add_argument('--fast', required=True)\nargs = parser.parse_args()\nrun(args)\n"
+   ],
+   "quiet": [
+    "class TestPorts(base.TestCase):\n    def test_update(self):\n        ports = self.api.list_ports(limit=5)\n        self.assertEqual(len(ports), 2)\n",
+    "def sync_rows(rows, dry_run=False):\n    for row in rows:\n        write_row(row, overwrite=False)\n    return len(rows)\n",
+    "    def setUp(self):\n        super().setUp()\n        self.server = self.make_server(port=8080)\n        self.addCleanup(self.server.stop)\n",
+    "for image_id in image_ids:\n    image = fetch_image(image_id, cached=None)\n    images.append(image)\nprint(len(images))\n",
+    "    plot_series(values, labels,\n                color='red')\n    save_figure(path)\n",
+    "def rebuild_cache(keys):\n    client = get_client()\n    for key in keys:\n        client.refresh(key, retries=3)\n",
+    "    def test_create(self):\n        account = self.create_account(name='demo', is_active=False)\n        self.assertIsNotNone(account.id)\n",
+    "parser = make_parser()\nparser.add_argument('--fast', default=0)\nargs = parser.parse_args()\nrun(args)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "=True keyword argument in Python (guess)",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "notes": "Card: '=True' x6 of the top 32 (max 25), the rest scattered in Python test code. Probes were weak: '=True' 0.04-0.21, ':\\n' 0.26, 'with self.assertRaises' 0.23. I expect this may well fail on the median rule."
+}
