@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-b2c269df",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N2178+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:44:11+00:00",
+ "recipe": {
+  "toolchain_commit": "9f33c1e53",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N2178_pos/2026-11-06-lm1909-b2c269df.tests.json"
+ },
+ "label": "The word 'notwithstanding' and the piece 'stant' in Spanish 'no obstante'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N2178_pos/2026-11-06-lm1909-b2c269df.tests.json",
+   "prereg_commit": "9f33c1e53",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.561,
+     "peak": " notwithstanding"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.753,
+     "peak": " notwithstanding"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.78,
+     "peak": " notwithstanding"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.508,
+     "peak": " notwithstanding"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.649,
+     "peak": " notwithstanding"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.617,
+     "peak": "stant"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.569,
+     "peak": "stant"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.556,
+     "peak": "stant"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": "Despite"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " law"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " despite"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " spite"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " spite"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " embargo"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": ";"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "ue"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.593,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9f33c1e53",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "'notwithstanding', 'no obstante'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " notwithstanding",
+   " Notwithstanding",
+   "stant"
+  ]
+ }
+}

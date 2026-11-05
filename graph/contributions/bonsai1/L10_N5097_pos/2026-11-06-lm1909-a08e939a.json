@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-a08e939a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N5097+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:44:04+00:00",
+ "recipe": {
+  "toolchain_commit": "9f33c1e53",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N5097_pos/2026-11-06-lm1909-a08e939a.tests.json"
+ },
+ "label": "American place names tied to U.S. history (Selma, Ellis Island, Harlem, Garfield Park), on their last piece",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N5097_pos/2026-11-06-lm1909-a08e939a.tests.json",
+   "prereg_commit": "9f33c1e53",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.754,
+     "peak": "ma"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.643,
+     "peak": " Island"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.502,
+     "peak": " Park"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.787,
+     "peak": "ole"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.261,
+     "peak": " Harlem"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.836,
+     "peak": "ma"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.697,
+     "peak": " Island"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.122,
+     "peak": " Park"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " Prague"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " landed"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.245,
+     "peak": " Hyde"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " Z"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.102,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " march"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.368,
+     "peak": " Park"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.67,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9f33c1e53",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "American historic place names",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "selection": "random draw"
+}
