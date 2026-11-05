@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-8d7cd74f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4040+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:36:31+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L0/N4040",
+   "pole": "+",
+   "label": "The code pieces '_response' and '_seconds' in identifiers; sibling identifiers (_days, jsonify) stay quiet. Second round: ' downloading' dropped after it scored low in round one",
+   "fire": [
+    "return flask.make_response(html)",
+    "response = make_response(render(t))",
+    "res = make_response(body, 201)",
+    "return make_response('', 204)",
+    "delay_seconds = parse_delay_seconds(x)",
+    "total_seconds = sum_seconds(rows)",
+    "max_wait_seconds = 30\n",
+    "sleep_seconds = get_sleep_seconds()"
+   ],
+   "quiet": [
+    "return flask.jsonify(html)",
+    "response = render(t)",
+    "res = Response(body, 201)",
+    "return jsonify('', 204)",
+    "delay_days = parse_delay_days(x)",
+    "total_days = sum_days(rows)",
+    "max_wait_days = 30\n",
+    "sleep_days = get_sleep_days()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "'_response' and '_seconds' pieces",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   "_response",
+   "_seconds"
+  ]
+ }
+}
