@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-d2d3b707",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3320-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:09:40+00:00",
+ "selection": "second round after the failed label in sweep seed 202611050402",
+ "neighbours": [
+  {
+   "unit": "L0/N3320",
+   "pole": "-",
+   "label": "a vowel-cancelling mark as its own token: the split virama in Devanagari and Bengali conjuncts, and the Arabic sukun (conjuncts that the tokenizer merges, such as प्र, stay quiet)",
+   "fire": [
+    "The Hindi word for soul (आत्मा) appears in many hymns.",
+    "A common word for world (विश्व) comes from Sanskrit.",
+    "Her name means lotus (पद्म) in the old texts.",
+    "Monks often repeat the word for duty (धर्म) at dawn.",
+    "The Bengali word for calm (শান্ত) fits this village well.",
+    "In Dhaka the word for knowledge (বিদ্যা) is on every school gate.",
+    "أَكَلْتُ خُبْزًا فِي الْبَيْتِ",
+    "جَلَسْنَا تَحْتَ شَجَرَةٍ كَبِيرَةٍ"
+   ],
+   "quiet": [
+    "The Hindi word for mother (माता) appears in many hymns.",
+    "A common word for river (नदी) comes from Sanskrit.",
+    "Her name means dear (प्रिय) in the old texts.",
+    "Monks often repeat the word for day (दिन) at dawn.",
+    "The Bengali word for person (মানুষ) fits this village well.",
+    "In Dhaka the word for river (নদী) is on every school gate.",
+    "أكلت خبزا في البيت",
+    "جَلَسَ وَلَدٌ عَلَى حَجَرٍ كَبِيرٍ"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "split virama and sukun",
+ "unit_kind": "token / orthographic",
+ "confidence": "high",
+ "notes": "Second round. Round 1 (virama and sukun marks) failed at AUROC 0.898 on one sentence, प्रेम, where the tokenizer merges virama and ra. The new label excludes merged conjuncts and tests them as near misses."
+}
