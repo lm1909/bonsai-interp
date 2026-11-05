@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-5dfbc265",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N629+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:57+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L35/N629",
+   "pole": "+",
+   "label": "the first piece of the word for 'complex' in Arabic (التعقيد), Persian (پیچیده), Korean (복잡) and German (kompl-), where 'complex' is the likely continuation",
+   "fire": [
+    "تعتبر هذه المسألة القانونية شديدة التعقيد في رأي المحامين.",
+    "يتميز هذا النظام البيئي بالتعقيد في علاقاته بين الأنواع.",
+    "كانت عملية الجراحة بالغة التعقيد بالنسبة إلى الفريق.",
+    "ساختار مغز انسان بسیار پیچیده است.",
+    "قوانین مالیاتی این کشور واقعا پیچیده هستند.",
+    "그의 가족 관계는 꽤 복잡합니다.",
+    "회사의 계약 절차가 너무 복잡하다.",
+    "Die neue Regelung ist wirklich kompliziert für viele Bürger."
+   ],
+   "quiet": [
+    "ساعد الموظفون في التعديل الأخير للقانون داخل المدينة.",
+    "ارتفعت أسعار الخبز في السوق أمس بعد الظهر.",
+    "يعمل المدير على التعامل مع الزبائن كل صباح.",
+    "دیروز من با پدر خود به بازار رفتم.",
+    "هوای امروز در این شهر خوب و آفتابی است.",
+    "우리 마을의 사회 복지 시설은 새로 지어졌다.",
+    "회사의 복사 기계가 어제 고장 났다.",
+    "Mein Bruder fand den Film gestern ziemlich komisch."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "'complex' in Arabic, Persian, Korean, German",
+ "unit_kind": "semantic / token",
+ "confidence": 0.7,
+ "notes": "Second round after my pre-registered first round (nightshift/claude-03/sweep5b-20261105), which failed at AUROC 0.891 because near misses sharing the fire items' frames leaked (up to 0.25 on non-trigger tokens) and the Japanese item read 0.14. New exploration narrowed the languages. Probe: 'تع' and ' التع' 0.500-0.531; Persian ' پ' 0.396; Korean ' 복' piece 0.245-0.384; German 'kom' 0.212. Weak or absent: Japanese 0.128, Spanish ' comple' 0.119, Hebrew 0.098, Russian ' сл' 0.073, Chinese 0.056, Turkish 0.055, Hindi 0.051, Thai 0.052, Vietnamese 0.028, French 0.017, English 0.000-0.007. So the pole is not 'complex in any language'. This round's near misses vary the lead-in, and six of them hold the same first token in another word, checked with the tokenizer: ' التع' in التعديل and التعامل, ' پ' in پدر, the Korean first piece in 복지 and 복사, and ' kom' in komisch. (In round 1 the التعليم near miss was a single token, so it did not test this; 복지 did.)"
+}
