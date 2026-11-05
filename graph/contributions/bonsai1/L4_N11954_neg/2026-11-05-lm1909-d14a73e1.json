@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-d14a73e1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11954-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:37:42+00:00",
+ "recipe": {
+  "toolchain_commit": "315c6abb7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N11954_neg/2026-11-05-lm1909-d14a73e1.tests.json"
+ },
+ "label": "The tokens temp / tmp: short forms for something temporary (temp files, /tmp, a swap variable, a temp worker)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N11954_neg/2026-11-05-lm1909-d14a73e1.tests.json",
+   "prereg_commit": "315c6abb7",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.921,
+     "peak": " tempfile"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.825,
+     "peak": "tmp"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.609,
+     "peak": " temp"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.673,
+     "peak": " temp"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.682,
+     "peak": " temp"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.53,
+     "peak": " tmp"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.328,
+     "peak": " tmp"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.545,
+     "peak": " Temp"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "out"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "/local"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "b"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " accounts"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " results"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "Open"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.641,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "315c6abb7",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "temp / tmp tokens",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: 'temp' x8, 'tmp' x7, 'Temporary' x4, '_temp' x3. Probe: mkstemp 0.86, /tmp 0.78, ' temp' agency 0.65; whole words ' Temporary' 0.26, ' temporary' 0.29; ' temperature' 0.35 is a known overlap and is left out of the test; ' temper' 0.05, /var 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "temp",
+   "tmp",
+   "temporary"
+  ]
+ }
+}

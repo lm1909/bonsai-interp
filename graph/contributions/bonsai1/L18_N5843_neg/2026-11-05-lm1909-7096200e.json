@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-7096200e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N5843-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:24+00:00",
+ "recipe": {
+  "toolchain_commit": "315c6abb7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N5843_neg/2026-11-05-lm1909-7096200e.tests.json"
+ },
+ "label": "Nouns for a person's social ties and contacts (friends, friendships, relationships, contacts, acquaintances, phone calls)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N5843_neg/2026-11-05-lm1909-7096200e.tests.json",
+   "prereg_commit": "315c6abb7",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.399,
+     "peak": " friends"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.667,
+     "peak": " contacts"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.258,
+     "peak": " relationships"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.458,
+     "peak": "ances"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.25,
+     "peak": " friendships"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.181,
+     "peak": " calls"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.252,
+     "peak": " friends"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.055,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.138,
+     "peak": " behind"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.057,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.039,
+     "peak": " repair"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.075,
+     "peak": " invoices"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.144,
+     "peak": " form"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.181,
+     "peak": " day"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.048,
+     "peak": " habits"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " built"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.255,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "315c6abb7",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a person's social ties and contacts",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' relationships' x5, ' friends' x2, ' calls', ' friendships', 'contact-os'. Probe: acquaintances 1.04, friends 0.57, contacts 0.55, calls 0.61, relationships 0.42, friendships 0.32. Non-social nouns in the same frame 0.01-0.16. But 'in touch with old books' fired on ' old' 0.59 and 'list of business expenses' on ' of' 0.34, so predicting a social noun may count; neighbours 0.20 and 'loved ones' 0.06 are weak. Near misses avoid 'in touch' and 'list of' frames next to the swapped noun where possible.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "friends",
+   "friendships",
+   "relationships",
+   "contacts"
+  ]
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-337cde7c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N10544-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:09+00:00",
+ "recipe": {
+  "toolchain_commit": "315c6abb7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N10544_neg/2026-11-05-lm1909-337cde7c.tests.json"
+ },
+ "label": "The words Constitution / constitutional, and more weakly statutory: law at the level of the founding document, not ordinary legal vocabulary",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N10544_neg/2026-11-05-lm1909-337cde7c.tests.json",
+   "prereg_commit": "315c6abb7",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.534,
+     "peak": " Constitution"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.577,
+     "peak": " Constitution"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.409,
+     "peak": " constitutional"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.47,
+     "peak": " Constitution"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.338,
+     "peak": " constitutional"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.341,
+     "peak": " Constitution"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.195,
+     "peak": " statutory"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.295,
+     "peak": " constitutional"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.063,
+     "peak": " contract"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.056,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " referendum"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.095,
+     "peak": " says"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " tax"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " Irish"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": " law"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.375,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "315c6abb7",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Constitution, constitutional, statutory",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Card: ' statutory' x6, ' statute' x4, ' Constitution' x3, ' constitutional' x2, but also ' bone', 'ony', ' DNA'. Probe: Constitution 0.86, constitutional 0.53, statutory 0.31, statute 0.17, unconstitutional 0.10; bones 0.18-0.33, skeleton 0.03, genome 0.10, charter 0.05, so a 'structural framework' pattern did not hold. Likely partial.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Constitution",
+   "constitutional",
+   "statutory"
+  ]
+ }
+}

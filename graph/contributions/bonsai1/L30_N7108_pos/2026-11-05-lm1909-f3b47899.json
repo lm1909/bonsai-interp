@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-05-lm1909-f3b47899",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N7108+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:03+00:00",
+ "recipe": {
+  "toolchain_commit": "315c6abb7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N7108_pos/2026-11-05-lm1909-f3b47899.tests.json"
+ },
+ "label": "The split-off opening pieces Tan-, Tanz-, Tang-, -anz- and Fund- of place names (Tanzanian, Tangier, Zanzibar, Tanjore, Fundy); whole-token place names stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N7108_pos/2026-11-05-lm1909-f3b47899.tests.json",
+   "prereg_commit": "315c6abb7",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.508,
+     "peak": " Tanz"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.732,
+     "peak": " Tanz"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.632,
+     "peak": " es"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.496,
+     "peak": " Tang"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.355,
+     "peak": " Tang"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.509,
+     "peak": " Tan"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.667,
+     "peak": " Fund"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.586,
+     "peak": " Tan"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " knew"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.043,
+     "peak": "te"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.547,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "315c6abb7",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Tan-/Tang-/Tanz-/Fund- pieces of place names",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: ' Tanz' x6, ' Tan' x3, 'anz' x3, ' Fund', but also ' United' x6. Probe: Tanjung 0.89, Tanzanian 0.73, Fundy 0.71, Zanzibar 0.63, Tanganyika 0.56; whole token ' Tanzania' only 0.08, Paris 0.00, 'trust fund' 0.02. Other split place names weaker (Biscay 0.31, Titicaca 0.23, Timbuktu 0.21), so a general 'piece of a split place name' label is not claimed. ' United' reached 0.30 and is not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Tanz",
+   " Tan",
+   " Tang",
+   "anz",
+   " Fund"
+  ]
+ }
+}

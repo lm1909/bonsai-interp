@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-d736e3c5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3684+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:20+00:00",
+ "recipe": {
+  "toolchain_commit": "315c6abb7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N3684_pos/2026-11-05-lm1909-d736e3c5.tests.json"
+ },
+ "label": "The exact tokens ' persistent' and German ' gehen' on a broad low-amplitude layer-0 pole: a word list, no shared pattern",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N3684_pos/2026-11-05-lm1909-d736e3c5.tests.json",
+   "prereg_commit": "315c6abb7",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.468,
+     "peak": " persistent"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.777,
+     "peak": " persistent"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.675,
+     "peak": " persistent"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.569,
+     "peak": " persistent"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.495,
+     "peak": " gehen"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.365,
+     "peak": " gehen"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.489,
+     "peak": " gehen"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.516,
+     "peak": " gehen"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.107,
+     "peak": " sudden"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.037,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.109,
+     "peak": " ruined"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.113,
+     "peak": " kept"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.13,
+     "peak": " früh"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.106,
+     "peak": " und"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.067,
+     "peak": "end"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.199,
+     "peak": " Kir"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.506,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "315c6abb7",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tokens ' persistent', ' gehen'",
+ "unit_kind": "token / lexical",
+ "confidence": "medium",
+ "notes": "Card: broad (7.8% of tokens at 0.1 of max, max 0.24), top ' persistent' x5, 'حب' x4, ' gehen' x3. Probe: ' persistent' 0.59-0.71, ' gehen' 0.56-0.62; chronic, constant, stubborn, laufen under 0.23. 'حب' fired 1.03 inside المحبة but 0.07 in الحب, so it is left out. Label is only a sub-trigger of a broad pole.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " persistent",
+   " gehen"
+  ]
+ }
+}
