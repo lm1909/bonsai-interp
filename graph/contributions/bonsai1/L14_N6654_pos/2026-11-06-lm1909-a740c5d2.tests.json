@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-a740c5d2",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L14/N6654+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:24:41+00:00",
+ "selection": "picked",
+ "qc": {
+  "verdict": "dispute",
+  "label_under_test": "the word that opens a time-span quantity ('in one to two weeks', 'over three days', 'in the first half of'), on the token before the number or unit"
+ },
+ "neighbours": [
+  {
+   "unit": "L14/N6654",
+   "pole": "+",
+   "label": "the word that opens a time-span quantity ('in one to two weeks', 'over three days', 'in the first half of'), on the token before the number or unit",
+   "fire": [
+    "The wound usually closes in one to three weeks.",
+    "Flowers appear in two to four months.",
+    "Her cough cleared over six days.",
+    "The company will report in the second half of 2024.",
+    "The tadpoles change in one to two months.",
+    "Tickets sold out over two weekends.",
+    "He healed in the first half of the season.",
+    "The paint dries in three to five hours."
+   ],
+   "quiet": [
+    "My keys are in one of these two bags.",
+    "The recipe calls for two to four eggs.",
+    "Our team climbed over six fences.",
+    "The lawyer read the second half of the contract.",
+    "A stack of one to two hundred pages arrived.",
+    "The horse jumped over two logs.",
+    "She painted the first half of the wall.",
+    "Each box holds three to five pens."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "notes": "A re-test of my QC 2026-11-06-lm1909-d642865a, whose near misses shared the whole prefix up to the firing token, so those pairs read the same by construction. Here every near miss has its own lead-in, with a number or range in a non-time frame. Registered as a dispute because the label's own forms ('over four days', 'first half') read low before."
+}
