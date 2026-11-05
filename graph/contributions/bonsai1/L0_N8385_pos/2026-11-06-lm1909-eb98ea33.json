@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-eb98ea33",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8385+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:23+00:00",
+ "recipe": {
+  "toolchain_commit": "883f6456a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N8385_pos/2026-11-06-lm1909-eb98ea33.tests.json"
+ },
+ "label": "a single-letter or digit token straight after a digit in a code-like word or number (omega-3|s, i18|n, k8|s, the 3 in 555-5327)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N8385_pos/2026-11-06-lm1909-eb98ea33.tests.json",
+   "prereg_commit": "883f6456a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.993,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.776,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.765,
+     "peak": "n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.475,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.489,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.491,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.544,
+     "peak": "n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.856,
+     "peak": "s"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": "Fish"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " moved"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " noon"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.038,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.655,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "883f6456a",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "single char after a digit",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: 's' x10, '1' x5, 'n' x5, '3' x4, 'a' x3, 'x', mostly after digits in IDs (broad flag 1.5%). Probes: 'n' in i18n 0.972, 's' in omega-3s 0.764, '3' in phone numbers and an ISBN 0.46-0.52; plain words under 0.02. Near misses keep the topic with the number gone.",
+ "selection": "random draw"
+}

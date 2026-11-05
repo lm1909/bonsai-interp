@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8782579b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N4095+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:03+00:00",
+ "recipe": {
+  "toolchain_commit": "883f6456a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N4095_pos/2026-11-06-lm1909-8782579b.tests.json"
+ },
+ "label": "a token in a description of what a fabric, craft or art material consists of (consisting of powdered pigment, faux-fur, Spandex / Polyester)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N4095_pos/2026-11-06-lm1909-8782579b.tests.json",
+   "prereg_commit": "883f6456a",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.771,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.679,
+     "peak": "-s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.174,
+     "peak": " /"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.203,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.364,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.026,
+     "peak": " stick"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.266,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.454,
+     "peak": "-le"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " Pet"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " tools"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " large"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "avel"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " T"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " lanes"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.315,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "883f6456a",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "describing fabric or art materials",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' a' x5, ' with' x3, ' tela' x2, ' or' x2, ' of', ' faux', ' /', all in descriptions of textiles, pastels and interiors, with one code outlier. Probes: 'in the form of a stick consisting of' 1.013, ' faux' 0.430, ' /' in a material list 0.408, silk textiles 0.285, shirt insert 0.200; a truck and a farm under 0.04. Near misses keep the sale or description frame with other goods.",
+ "selection": "random draw"
+}

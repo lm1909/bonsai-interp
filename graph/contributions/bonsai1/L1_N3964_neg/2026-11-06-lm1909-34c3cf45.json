@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-34c3cf45",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N3964-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:24+00:00",
+ "recipe": {
+  "toolchain_commit": "883f6456a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N3964_neg/2026-11-06-lm1909-34c3cf45.tests.json"
+ },
+ "label": "the suffix token 'ship' split off a noun (mentor|ship, court|ship, kin|ship, steward|ship) on a broad pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N3964_neg/2026-11-06-lm1909-34c3cf45.tests.json",
+   "prereg_commit": "883f6456a",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.668,
+     "peak": "ship"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.71,
+     "peak": "ship"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.691,
+     "peak": "ship"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.062,
+     "peak": " real"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.432,
+     "peak": "ship"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.715,
+     "peak": "ship"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.635,
+     "peak": "ship"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.512,
+     "peak": "ship"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.185,
+     "peak": " Maine"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.064,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.073,
+     "peak": " real"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.149,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.114,
+     "peak": " meeting"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.058,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.23,
+     "peak": " citation"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.651,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "883f6456a",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "suffix token 'ship'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card flags broad (4.8%) and gate-closed (100%), max 0.79: 'in' x8, 'ship' x7, 'ны' x4, 'ه' x3, 'ين' x2, 'ships' x2. So split word endings across languages. Probes: 'in' in nicotinamide 0.859, 'ны' 0.846, 'ship' 0.655-0.739; 'She runs a program' 0.056, 'my good friend' 0.025. Test is on the English suffix only, so it will be partial. Tokens are checked.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ship",
+   "ships"
+  ]
+ }
+}
