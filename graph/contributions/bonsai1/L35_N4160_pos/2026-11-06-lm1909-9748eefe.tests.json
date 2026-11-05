@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-9748eefe",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4160+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N4160",
+   "pole": "+",
+   "label": "Low-confidence: the katakana long-vowel token 'ー' + a split character, inside loanwords like ビ|ーチ and フィ|ーチャー.",
+   "fire": [
+    "このホテルは人気のビーチまで歩いて五分の場所にあり、ビジネス客にもオススメです。",
+    "市内の何処に行くにも便利で、ビーチ、ホットシャワー、朝食も用意されています。",
+    "チームが結成されたのは前のことですが、今ようやく新しいフィーチャーに取り組み始めました。",
+    "ホテルは静かなビーチ沿いにあり、カップルやレジャー客に大変人気があります。",
+    "次のリリースでは、大きなフィーチャーを三つ追加することができるようになりました。",
+    "夏になると多くの人がビーチに集まり、レジャーを楽しむことができるようになります。",
+    "このアプリの新しいフィーチャーは、開発チームが長い時間をかけて作ったものです。",
+    "空港から近いビーチには、ビジネス客とレジャー客のどちらにもオススメの宿があります。"
+   ],
+   "quiet": [
+    "このホテルは人気の公園まで歩いて五分の場所にあり、ビジネス客にもオススメです。",
+    "市内の何処に行くにも便利で、公園、温かい風呂、朝食も用意されています。",
+    "チームが結成されたのは前のことですが、今ようやく新しい仕事に取り組み始めました。",
+    "ホテルは静かな海沿いにあり、カップルや観光客に大変人気があります。",
+    "次のリリースでは、大きな機能を三つ追加することができるようになりました。",
+    "夏になると多くの人が海に集まり、休日を楽しむことができるようになります。",
+    "このアプリの新しい機能は、開発チームが長い時間をかけて作ったものです。",
+    "空港から近い海には、仕事の客と観光客のどちらにもオススメの宿があります。"
+   ]
+  }
+ ],
+ "predictions": "Near the threshold: my probes reached only 0.07-0.23, against the corpus's huge max of 356.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "katakana ー split token (guess)",
+ "unit_kind": "token piece",
+ "confidence": 0.25,
+ "notes": "Card: 'ー�' x5, ' �' x5, 'ERC' x5, with a max of 356. Probes: ビーチ, フィーチャー 0.07-0.23; コーヒー, ホテル at most 0.01. ERC and '-r' scored 0.01. The corpus contexts are long Japanese ad text, so the short sentences may underestimate it."
+}

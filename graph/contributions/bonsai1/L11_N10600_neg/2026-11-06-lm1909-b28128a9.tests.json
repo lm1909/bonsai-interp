@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b28128a9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N10600-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N10600",
+   "pole": "-",
+   "label": "The newline where a text switches between English and Chinese lines; a newline between lines in one language stays low.",
+   "fire": [
+    "HP Cloud Brings New Flexibility\n» English\n北京，2013年5月",
+    "Lenovo Unveils Thin Laptop\n» English\n上海，2014年3月",
+    "IBM Opens Research Centre\n» English\n香港，2011年9月",
+    "Trade Expo Daily, March 3, Page 2-3 展览, Specials\n上海交通大学机械学院自动化研究所",
+    "Auto Parts Show Daily, May 5, Page 8 展览, News\n清华大学计算机系人工智能实验室",
+    "Canon Launches New Camera\n» English\n台北，2015年6月",
+    "Intel Expands Its Plant\n» English\n成都，2010年4月",
+    "Medical Fair Daily, June 7, Page 6 展览, Reports\n复旦大学生物学院基因研究中心"
+   ],
+   "quiet": [
+    "HP Cloud Brings New Flexibility\n» Read more\nBeijing, May 2013",
+    "Lenovo Unveils Thin Laptop\n» Read more\nShanghai, March 2014",
+    "IBM Opens Research Centre\n» Read more\nHong Kong, September 2011",
+    "Trade Expo Daily, March 3, Page 2-3, Specials\nSchool of Mechanical Engineering, Shanghai",
+    "Auto Parts Show Daily, May 5, Page 8, News\nDepartment of Computer Science, Tsinghua",
+    "Canon Launches New Camera\n» Read more\nTaipei, June 2015",
+    "Intel Expands Its Plant\n» Read more\nChengdu, April 2010",
+    "Medical Fair Daily, June 7, Page 6, Reports\nSchool of Life Sciences, Fudan University"
+   ]
+  }
+ ],
+ "predictions": "4-6/8 fire. Based on only two probes (0.76 and 0.24), so this may fail.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "newline at an English/Chinese switch",
+ "unit_kind": "format / language",
+ "confidence": 0.4,
+ "notes": "Card: '.\\n' x22, '\\n' x7, with Chinese near several top examples, but also English-only ones (reparations.9, Beijing, China). English-only probes stayed at 0.02-0.17, Chinese-switch probes 0.24-0.76. The card's '.\\n' peak remains unexplained."
+}

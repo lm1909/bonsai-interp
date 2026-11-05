@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-66a2a861",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N2935-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N2935",
+   "pole": "-",
+   "label": "A Python base class that repeats its module's name, on the piece that repeats it: `class X(client_plugin.ClientPlugin):`; unrelated base classes stay low.",
+   "fire": [
+    "class UserToken(token.Token):\n    pass",
+    "class MainWidget(widget.Widget):\n    pass",
+    "class FileStorage(storage.Storage):\n    pass",
+    "class ApiRouter(router.Router):\n    pass",
+    "class FastParser(parser.Parser):\n    \"\"\"Fast parser\"\"\"",
+    "class AwsDriver(cloud_driver.CloudDriver):\n    pass",
+    "class LocalCache(cache_base.CacheBase):\n    pass",
+    "class TextEncoder(encoder.Encoder):\n    \"\"\"Text encoder\"\"\""
+   ],
+   "quiet": [
+    "class UserToken(object):\n    pass",
+    "class MainWidget(QtGui.QFrame):\n    pass",
+    "class FileStorage(dict):\n    pass",
+    "class ApiRouter(unittest.TestCase):\n    pass",
+    "class FastParser(models.Model):\n    \"\"\"Fast parser\"\"\"",
+    "class AwsDriver(Exception):\n    pass",
+    "class LocalCache(threading.Thread):\n    pass",
+    "class TextEncoder(forms.Form):\n    \"\"\"Text encoder\"\"\""
+   ]
+  }
+ ],
+ "predictions": "5-6/8 fire, 0-1 near miss. The rule comes from a handful of probes.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "module.Class repeated base-class name",
+ "unit_kind": "code / contextual",
+ "confidence": 0.5,
+ "notes": "Probes: client_plugin.ClientPlugin 0.49, linkable.Linkable 0.47, plugin.PluginBase 0.32; base.BaseHandler 0.18, SchemaMigration 0.13; unittest.TestCase 0.01, admin.ModelAdmin 0.05, plain 'class Foo:' 0.02. A decorator ('@ops.Register…') scored 0.12 and stays out."
+}

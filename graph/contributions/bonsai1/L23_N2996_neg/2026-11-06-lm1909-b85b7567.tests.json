@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b85b7567",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2996-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N2996",
+   "pole": "-",
+   "label": "Low-confidence list: Arabic ' المزيد' and the plural 'ولات', and the pieces 'mer' in Nummer and 'imos' in mínimos; I have no shared pattern.",
+   "fire": [
+    "لا يتحمل هذا القطاع المزيد من الضرائب هذا العام.",
+    "قال الوزير إن البلاد تحتاج المزيد من المستشفيات.",
+    "انطلقت جولة جديدة من الجولات الدراسية في الجنوب.",
+    "Sie ist schon lange meine Nummer 1 im Team.",
+    "Für mich bleibt er ganz klar die Nummer 1.",
+    "Die Bank ist heute die Nummer 3 im Land.",
+    "el índice volvió a los mínimos de febrero ayer.",
+    "los precios bajaron a los mínimos del último año."
+   ],
+   "quiet": [
+    "لا يتحمل هذا القطاع ضرائب كبيرة هذا العام.",
+    "قال الوزير إن البلاد تحتاج مستشفيات حديثة.",
+    "انطلقت رحلة جديدة من الميناء في الجنوب.",
+    "Sie ist schon lange meine Freundin im Team.",
+    "Für mich bleibt er ganz klar der Beste.",
+    "Die Bank ist heute die größte im Land.",
+    "el índice volvió a subir en febrero ayer.",
+    "los precios bajaron a finales del último año."
+   ]
+  }
+ ],
+ "predictions": "4-5/8 fire, may fail. This is a list of pieces in three languages, with no shared rule.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "المزيد, Nummer, mínimos (list)",
+ "unit_kind": "token piece / unclear",
+ "confidence": 0.25,
+ "notes": "Card peaks are mixed: ' way' x3, ' ways' x2, 'ولات', ' المزيد', 'وع', 'mer'. English way/ways scored only 0.02-0.15 in probes. Probes on the list: 0.14-0.46; the plain Arabic control 0.20, and the German control 0.02. The + output direction promotes where, that and which, so this - pole suppresses them."
+}

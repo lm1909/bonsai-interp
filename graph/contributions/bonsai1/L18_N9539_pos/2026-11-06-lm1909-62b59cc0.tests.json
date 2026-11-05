@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-62b59cc0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N9539+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N9539",
+   "pole": "+",
+   "label": "Low-confidence guess: the end of a short clause saying someone doesn't care or mind ('Nobody cares.', 'People won't care').",
+   "fire": [
+    "It's a bit loud. Nobody cares.",
+    "It's an ugly building. People won't care.",
+    "The food is cold here. Nobody minds.",
+    "It costs too much. Customers won't care.",
+    "The paint is peeling. Nobody seems to care.",
+    "The train is always late. Commuters don't care.",
+    "It's rather small. People won't mind.",
+    "The rules are silly. Nobody cares."
+   ],
+   "quiet": [
+    "It's a bit loud. Everybody dances.",
+    "It's an ugly building. People walk past.",
+    "The food is cold here. Everybody complains.",
+    "It costs too much. Customers go elsewhere.",
+    "The paint is peeling. Somebody should fix it.",
+    "The train is always late. Commuters drive instead.",
+    "It's rather small. People like it.",
+    "The rules are silly. Everybody laughs."
+   ]
+  }
+ ],
+ "predictions": "Probably fails: only 'Nobody cares.' (0.39) and 'won't care' (0.31) stood out.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "end of a not-caring clause (guess)",
+ "unit_kind": "contextual / discourse",
+ "confidence": 0.2,
+ "notes": "Card: '.' x10, ',' x3, ';' x2, with varied contexts. I started from 'punctuation after a negated clause', which probed at 0.05-0.18. This records the narrower guess."
+}

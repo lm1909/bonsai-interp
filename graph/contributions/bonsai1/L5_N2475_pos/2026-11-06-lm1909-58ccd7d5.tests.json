@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-58ccd7d5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2475+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N2475",
+   "pole": "+",
+   "label": "The Arabic piece 'عض' in الأعضاء (members).",
+   "fire": [
+    "وافقت الدول الأعضاء على الاتفاق الجديد أمس.",
+    "اجتمع الأعضاء في المقر لمناقشة الميزانية.",
+    "قال الرئيس إن جميع الأعضاء سيحضرون الجلسة.",
+    "يحق للدول الأعضاء التصويت في المجلس.",
+    "طلب المجلس من الأعضاء تقديم التقارير قبل الموعد.",
+    "عدد الأعضاء في النادي يزداد كل عام.",
+    "يجب على الأعضاء دفع الاشتراك السنوي.",
+    "رحبت اللجنة بالأعضاء الجدد في بداية الدورة."
+   ],
+   "quiet": [
+    "وافقت الدول العربية على الاتفاق الجديد أمس.",
+    "اجتمع الطلاب في المقر لمناقشة الميزانية.",
+    "قال الرئيس إن جميع الوزراء سيحضرون الجلسة.",
+    "يحق للدول الكبرى التصويت في المجلس.",
+    "طلب المجلس من المدراء تقديم التقارير قبل الموعد.",
+    "عدد الطلاب في النادي يزداد كل عام.",
+    "يجب على الموظفين دفع الاشتراك السنوي.",
+    "رحبت اللجنة بالطلاب الجدد في بداية الدورة."
+   ]
+  }
+ ],
+ "predictions": "8/8 fire, 0 near misses. Coverage partial: American-word pieces 'ري', 'ик' and 'eric' also fire (0.74-0.76).",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic piece عض (members)",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Probes: 0.75-0.81 on الأعضاء; other Arabic plural nouns in the same frames at most 0.06. Tokenization checked: الأ|عض|اء is split, while أعضاء and لأعضاء are whole tokens, so all fire items use الأعضاء.",
+ "trigger": {
+  "tokens": [
+   "عض"
+  ]
+ }
+}

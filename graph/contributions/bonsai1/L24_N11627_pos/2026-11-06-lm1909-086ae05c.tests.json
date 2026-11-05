@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-086ae05c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N11627+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:41:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N11627",
+   "pole": "+",
+   "label": "Program memory and file-like objects in programming text: 'memory leak', buffers, '(e.g. a file handle)'; human memory and everyday 'must be' stay low.",
+   "fire": [
+    "The daemon never frees the handle, and that causes a memory leak over time.",
+    "Because the cache keeps a reference, this code can cause a memory leak.",
+    "Any object with a \"read\" attribute (e.g. a file handle) may be used as the input.",
+    "Pass any file-like object (e.g. a pipe) as the second argument.",
+    "Closing the socket releases the buffer and prevents a memory leak.",
+    "You can give it any stream object (e.g. a socket) as a target.",
+    "The loop allocates a new array each time, which leads to a memory leak.",
+    "Anything with a \"close\" method (e.g. a database cursor) will work here."
+   ],
+   "quiet": [
+    "The old man never forgets a name, and his memory is sharp even now.",
+    "Because the song was so sweet, this tune brings back a memory of home.",
+    "Anyone with a valid passport (for instance a tourist) may enter the country.",
+    "Pass any busy cafe on the left and turn at the second bridge.",
+    "Closing the shop early gives the staff a good rest on Sundays.",
+    "You can give it any colour you like as a gift.",
+    "The train stops at a new station each time, which leads to a long trip.",
+    "Anything with a sharp edge (for instance a broken cup) must go in the bin."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0 near misses. Coverage partial: ' =', '.join' and ' be' in code are outside the label.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "memory leak, file-like objects",
+ "unit_kind": "semantic / code",
+ "confidence": 0.6,
+ "notes": "Probes: memory leak 0.53-0.77, '(e.g. a file handle)' 0.55-0.58, StringIO 0.25-0.40; 'must be opened' 0.13-0.32, 'further escaping' 0.18-0.22; human memory 0.01-0.02."
+}
