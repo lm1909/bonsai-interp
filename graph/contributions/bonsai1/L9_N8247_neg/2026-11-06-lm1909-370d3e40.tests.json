@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-370d3e40",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N8247-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:08:46+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L9/N8247",
+   "pole": "-",
+   "label": "the word that sets a thing aside after a preparation step, to rest or finish by itself: left to, let stand, leave (it), let sit, in recipe-like and process text",
+   "fire": [
+    "Boil the syrup for a minute, then leave it to thicken in the pan.",
+    "Fill the jars with brine and let stand in a cool cellar.",
+    "The clay figures were glazed and left to harden beside the kiln.",
+    "Whisk the eggs into the milk and let sit for half an hour.",
+    "Paint on a second coat, then leave overnight in the garage.",
+    "The curds are pressed into molds and left to drain until morning.",
+    "Knead the dough until smooth and leave it to double in size.",
+    "Pour the wax into the tin and let it stand until solid."
+   ],
+   "quiet": [
+    "Heat the syrup for a minute and pour it over the warm cake.",
+    "Please leave your muddy boots outside the door of the cabin.",
+    "Fill the jars with brine and carry them down to the cellar.",
+    "The clay figures were glazed and sold beside the kiln.",
+    "Do you know when the mayor plans to leave her office?",
+    "Whisk the eggs into the milk and pour onto the hot pan.",
+    "Take the second road on the left past the gas station.",
+    "Tell the driver you want to leave a bag at the front desk."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "setting something aside to rest",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. The first round (' to'/' for' after leave/left/let) had AUROC 1.000 and median 0.758 but failed on 2 near misses that had a preparation step before 'leave' or 'left' (frames such as 'then leave for work' 0.612). New probes: 'then leave it on the rack' 0.406, 'let stand' 0.498, 'left to harden' 0.689, while 'Leave the keys' 0.134 and 'Please leave a message' 0.154 stayed low. So this round's label includes ' leave' after a preparation step, and near misses are preparation steps with no setting aside, plus leave/left in unrelated frames, with different lead-ins."
+}

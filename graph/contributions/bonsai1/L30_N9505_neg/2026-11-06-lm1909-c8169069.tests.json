@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-c8169069",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N9505-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:08:46+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L30/N9505",
+   "pole": "-",
+   "label": "the first split piece (' min', ' tr', ' ban') of minuscule, trite, trifle and banal: words that play something down as tiny or trivial",
+   "fire": [
+    "Next to the national debt, that sum is truly minuscule.",
+    "Critics found the plot trite and the songs forgettable.",
+    "The whole argument began over a mere trifle at dinner.",
+    "Most of what he said on stage was utterly banal.",
+    "Against such huge forces, our efforts were minuscule indeed.",
+    "Her poems about love felt trite to the younger readers.",
+    "He pays no attention to such a trifle as money.",
+    "The small talk at these parties is always so banal."
+   ],
+   "quiet": [
+    "Measured against the national debt, this figure looks truly enormous.",
+    "Readers called the plot gripping and the songs memorable.",
+    "A heated argument broke out over the large bill at dinner.",
+    "Nearly everything she said on stage was deeply moving.",
+    "Facing such huge forces, our army's courage was remarkable indeed.",
+    "Younger readers found his poems about love quite thrilling.",
+    "He pays careful attention to subjects such as money.",
+    "Conversation at these dinners is always so lively."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "first piece of minuscule/trite/trifle/banal",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Second round. The first round used a wider set (negligible, petty, paltry, mundane) and shared prefixes with its near misses; it failed at AUROC 0.891 because 'this cost is enormous' fired 0.456 on the shared ' is', and whole-token synonyms stayed low. New probes: ' tr' in trifle 0.571 and trite 0.474, ' ban' 0.426, ' min' 0.368 and 0.109; 'trivial' 0.058, 'trial' 0.001, 'bank' 0.001, 'minister' 0.002. Narrower label, split pieces only, and near misses that keep the topics with different lead-ins and no shared prefix. Tokens are checked for every fire sentence."
+}

@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-b0a3a78b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7360-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:08:46+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L28/N7360",
+   "pole": "-",
+   "label": "the point where the name of a US federal regulator begins or is expected: its first word (Environmental, Food, Securities), or ' the' after a verb like 'report to', 'approved by' in a compliance context",
+   "fire": [
+    "Mines must report every serious accident to the federal safety office.",
+    "The new pesticide was finally approved by the US government agency.",
+    "Hospitals file these reports each year with the Food and Drug Administration.",
+    "Investors took their complaints about the broker to the Securities and Exchange Commission.",
+    "Polluters are fined each month by the Environmental Protection Agency.",
+    "Airlines must submit their safety records to the regulators in Washington.",
+    "A petition was sent to the U.S. Consumer Product Safety Commission.",
+    "Factories have to send their test results to the federal labor department."
+   ],
+   "quiet": [
+    "Children must bring every signed permission slip to the school picnic.",
+    "The new playground was finally opened by the village choir leader.",
+    "Grandparents read these stories each year with the children at bedtime.",
+    "Fans took their complaints about the band to the ticket booth.",
+    "Sheep are sheared each spring by the farmers on the hill.",
+    "Sailors must carry their heavy duffel bags to the docks in Boston.",
+    "A postcard was sent to the old cottage near Lake Tahoe.",
+    "Musicians have to bring their own instruments to the summer concert."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "where a US regulator's name begins",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. The first round (first word of the name) had 8/8 fire at median 0.689 but failed because 'must report delays to the' reached 0.714 on ' the', with no agency following. New probes: 'report injuries to the' 0.623, 'submit their filings to the' 0.613, 'approved by the' 0.376; 'Tourists must report to the' 0.080, 'gave the ball to the' 0.048, 'Complaints about the movie went to the' 0.160. So the pole anticipates the regulator. The label now says so, and near misses keep ' the' after a verb with no regulator in view."
+}
