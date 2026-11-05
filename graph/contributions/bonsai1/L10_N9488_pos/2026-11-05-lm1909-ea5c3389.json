@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-ea5c3389",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N9488+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:35+00:00",
+ "recipe": {
+  "toolchain_commit": "31e63b091",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N9488_pos/2026-11-05-lm1909-ea5c3389.tests.json"
+ },
+ "label": "A position word (left, right, top, center, 'from left') in a photo caption that tells the reader which pictured person or thing is meant; the same words as directions or in other senses stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N9488_pos/2026-11-05-lm1909-ea5c3389.tests.json",
+   "prereg_commit": "31e63b091",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.508,
+     "peak": "right"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.901,
+     "peak": " left"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.528,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.463,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.496,
+     "peak": "bottom"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.952,
+     "peak": "center"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.408,
+     "peak": " right"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.492,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.031,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.112,
+     "peak": " bottom"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.075,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " right"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " left"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.502,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e63b091",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "position word in a photo caption",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Probes: '(center)' 0.93, ', left,' 0.86, against 'Turn left at the light' 0.10 and 'You are right' 0.01. The output direction promotes ' left', ' middle', ' row', ' shown'.",
+ "selection": "random draw"
+}

@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-e4fb260c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11563-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:36+00:00",
+ "recipe": {
+  "toolchain_commit": "31e63b091",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N11563_neg/2026-11-05-lm1909-e4fb260c.tests.json"
+ },
+ "label": "A Russian word piece ending in a hushing consonant (ж, ш), chiefly ' отнош', 'аж', 'раж' and 'уш', against other Russian words in the same frame.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N11563_neg/2026-11-05-lm1909-e4fb260c.tests.json",
+   "prereg_commit": "31e63b091",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.86,
+     "peak": " отнош"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.89,
+     "peak": " отнош"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.566,
+     "peak": "аж"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.73,
+     "peak": "раж"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.589,
+     "peak": "уш"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.357,
+     "peak": "нуть"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.722,
+     "peak": "уш"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.83,
+     "peak": "аж"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.22,
+     "peak": "ож"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.311,
+     "peak": " реш"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.367,
+     "peak": " кни"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.078,
+     "peak": " дом"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.142,
+     "peak": "на"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.379,
+     "peak": "нуть"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.183,
+     "peak": "у"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": "ход"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.726,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e63b091",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "Russian piece ending ж/ш",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "A flagged broad pole in its gate-closed regime with a max of 1.02, so ordinary Russian near misses read 0.15-0.33. The ч pieces in the top examples ('звуч', 'och') were not tested.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " отнош",
+   "аж",
+   "раж",
+   "уш"
+  ]
+ }
+}

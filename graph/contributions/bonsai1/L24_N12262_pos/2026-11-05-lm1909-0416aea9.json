@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-0416aea9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N12262+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:56+00:00",
+ "recipe": {
+  "toolchain_commit": "31e63b091",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N12262_pos/2026-11-05-lm1909-0416aea9.tests.json"
+ },
+ "label": "' to' (or Spanish ' para') introducing the purpose of a revision, after 'updated', 'revised', 're-edited' or 'make sure', where what comes next is the change or addition; other uses of 'to' stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N12262_pos/2026-11-05-lm1909-0416aea9.tests.json",
+   "prereg_commit": "31e63b091",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.973,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.767,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.019,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.667,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.689,
+     "peak": " para"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.574,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.178,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.767,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.045,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": " author"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " tiene"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": "Please"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.034,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.728,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e63b091",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'to' giving a revision's purpose",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "The output direction promotes ' adding', ' add', ' include', ' ensuring'. Probes: 'updated to correct' 0.96, 'wants to go' 0.03.",
+ "selection": "random draw"
+}

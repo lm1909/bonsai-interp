@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-2dbd44a7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N5785-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:34:25+00:00",
+ "recipe": {
+  "toolchain_commit": "31e63b091",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N5785_neg/2026-11-05-lm1909-2dbd44a7.tests.json"
+ },
+ "label": "The noun completing a named region or population after a group or direction modifier (Native American, South Asia, Middle East, Chinese authorities, working class); the same noun alone, or plain places, stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N5785_neg/2026-11-05-lm1909-2dbd44a7.tests.json",
+   "prereg_commit": "31e63b091",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.611,
+     "peak": " American"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.232,
+     "peak": " East"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.309,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.533,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.708,
+     "peak": " authorities"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.765,
+     "peak": " class"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.142,
+     "peak": " Northeast"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.642,
+     "peak": " America"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.118,
+     "peak": " villages"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.127,
+     "peak": " Laos"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.082,
+     "peak": " authorities"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " class"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.093,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.104,
+     "peak": " poverty"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.627,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e63b091",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "noun completing region or population",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probes: ' Northeast' 1.04, ' American' 0.84, ' authorities' 0.79 after 'Chinese' and 0.08 without. 'local tribes' read 0.19.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-cc836d21",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N2637-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:43+00:00",
+ "recipe": {
+  "toolchain_commit": "31e63b091",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N2637_neg/2026-11-05-lm1909-cc836d21.tests.json"
+ },
+ "label": "The token that opens a line of literal example values or commands in documentation or a config block (' ``' before a quoted option, '>' before a command, the indent before a dict string); the same blocks with numbers or plain prose stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N2637_neg/2026-11-05-lm1909-cc836d21.tests.json",
+   "prereg_commit": "31e63b091",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.398,
+     "peak": " ``"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.326,
+     "peak": ">"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.117,
+     "peak": " {\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.455,
+     "peak": " ``"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.231,
+     "peak": ">"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.207,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.424,
+     "peak": " ``"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.086,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.1,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.123,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.041,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.123,
+     "peak": " (\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.124,
+     "peak": "-------\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": "Set"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.279,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e63b091",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "line opening literal examples",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "A low-confidence reading. The output direction promotes string openers (' \"', '(\"', '\\'). One-line code and most assignments stayed low in probes ('_PROJECT_ID = \"PD\"' 0.02), so the top examples' ' =' and '.get' are not covered.",
+ "selection": "random draw"
+}

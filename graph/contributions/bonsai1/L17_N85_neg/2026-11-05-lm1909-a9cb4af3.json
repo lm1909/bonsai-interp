@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-a9cb4af3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N85-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:34:21+00:00",
+ "recipe": {
+  "toolchain_commit": "31e63b091",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N85_neg/2026-11-05-lm1909-a9cb4af3.tests.json"
+ },
+ "label": "Best guess for a dense pole: the closing credit or sign-up line of a news item ('contributed to this report', 'Sign up here').",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N85_neg/2026-11-05-lm1909-a9cb4af3.tests.json",
+   "prereg_commit": "31e63b091",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.302,
+     "peak": " Doe"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.218,
+     "peak": " Sam"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.178,
+     "peak": " Fox"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.109,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.623,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.297,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.093,
+     "peak": " today"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.184,
+     "peak": " Vega"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.11,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.166,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.117,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.12,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.167,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.137,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.074,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.119,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.201,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e63b091",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "dense; news credit line guess",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "9.6% of tokens reach 0.1 of max and the gate-closed regime dominates. Probes read 0.05-0.29 with no clear split, and sentence-first words fired too. Expected to fail: the test is here to record the density.",
+ "selection": "random draw"
+}

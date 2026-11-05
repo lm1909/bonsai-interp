@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-ff29872d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N4673+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:34:02+00:00",
+ "recipe": {
+  "toolchain_commit": "31e63b091",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N4673_pos/2026-11-05-lm1909-ff29872d.tests.json"
+ },
+ "label": "The token '-and' inside a hyphenated fixed compound (hack-and-slash, hit-and-run); other hyphenated compounds and plain ' and' stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N4673_pos/2026-11-05-lm1909-ff29872d.tests.json",
+   "prereg_commit": "31e63b091",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.182,
+     "peak": "-and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.039,
+     "peak": "-and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.077,
+     "peak": "-and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.185,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.237,
+     "peak": "-and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.311,
+     "peak": "-and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.032,
+     "peak": "-and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.412,
+     "peak": "-and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " commands"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "It"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.041,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.116,
+     "peak": " cautious"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": " shirts"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " laptops"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.183,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e63b091",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'-and' in a hyphenated compound",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "A sub-trigger. Top examples also include 'igator', ' pen', ' pickle' and 'right' in 'unrighteous', with no shared pattern I could test: 'He is in a bit of a pickle' read 0.003. Binomials with a spaced ' and' were mostly quiet ('salt and pepper' 0.005).",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "-and"
+  ]
+ }
+}
