@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-a0bd3094",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10776+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:53+00:00",
+ "recipe": {
+  "toolchain_commit": "d11e50597",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N10776_pos/2026-11-05-lm1909-a0bd3094.tests.json"
+ },
+ "label": "a French preposition or article (de, du, l') right before a noun for a sport, show or art, as opposed to the same words before a mundane noun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N10776_pos/2026-11-05-lm1909-a0bd3094.tests.json",
+   "prereg_commit": "d11e50597",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.247,
+     "peak": " du"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.312,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.339,
+     "peak": "art"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.23,
+     "peak": " du"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.306,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.301,
+     "peak": " l"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.628,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.276,
+     "peak": " du"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.249,
+     "peak": " cl"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.079,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.063,
+     "peak": " l"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.23,
+     "peak": " du"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.059,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.108,
+     "peak": "urance"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.126,
+     "peak": " cl"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.091,
+     "peak": " lo"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.303,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d11e50597",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French article before a sport or art noun (guess)",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: scattered, ' de' x4, l'é, leurs, Russian ' а', ' L', ' a'; many top examples are about sport, dance or fitness. Probes: 'L'art du' 0.93, 'ponctuée de spectacles' 0.67, 'faire du sport' 0.60, 'appelée l'art' 0.57; 'formulaires de demande' 0.18, 'Il a mangé' 0.07. But also English 'an accepted' 0.40, German ' Auf' 0.40. Low confidence: the shared pattern may be something else.",
+ "selection": "random draw"
+}

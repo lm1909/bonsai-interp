@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-b9379497",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10053-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:41+00:00",
+ "recipe": {
+  "toolchain_commit": "d11e50597",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10053_neg/2026-11-05-lm1909-b9379497.tests.json"
+ },
+ "label": "the token ' thing' when an evaluative adjective comes before it (a bad thing, a strange thing), not ' thing' as a plain object noun and not other nouns after 'bad'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10053_neg/2026-11-05-lm1909-b9379497.tests.json",
+   "prereg_commit": "d11e50597",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.122,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.053,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.894,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.948,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.601,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.524,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.287,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.329,
+     "peak": " thing"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.153,
+     "peak": " sign"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.168,
+     "peak": " habit"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.091,
+     "peak": " deal"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.088,
+     "peak": " when"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.138,
+     "peak": " thing"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.179,
+     "peak": " thing"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.05,
+     "peak": " thing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.064,
+     "peak": " thing"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.748,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d11e50597",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' thing' after an evaluative adjective",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' thing' x28 of the top 32, mostly 'a bad thing'. Probes: 'bad thing' 0.95-1.00, 'strange thing' 0.67, 'good thing' 0.50, plain 'a thing on the table' 0.17, 'bad idea' 0.24, 'first thing' 0.02.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " thing"
+  ]
+ }
+}

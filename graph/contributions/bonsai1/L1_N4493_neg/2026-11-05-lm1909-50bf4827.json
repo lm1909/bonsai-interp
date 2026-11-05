@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-50bf4827",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N4493-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:27:39+00:00",
+ "recipe": {
+  "toolchain_commit": "d11e50597",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N4493_neg/2026-11-05-lm1909-50bf4827.tests.json"
+ },
+ "label": "dense or broad unit with no clear trigger; best guess: 相 of 相距 / 相隔 (two places or times lie apart) in Chinese",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N4493_neg/2026-11-05-lm1909-50bf4827.tests.json",
+   "prereg_commit": "d11e50597",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.458,
+     "peak": "相"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.508,
+     "peak": "相"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.326,
+     "peak": "相"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.435,
+     "peak": "相"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.426,
+     "peak": "相"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.571,
+     "peak": "相"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.244,
+     "peak": "相"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.42,
+     "peak": "相"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.072,
+     "peak": "多"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.44,
+     "peak": "离"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.085,
+     "peak": "河"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.109,
+     "peak": "紧张"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": "那"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.128,
+     "peak": "几乎"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": "灯"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.235,
+     "peak": "常常"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.43,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d11e50597",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; 相 in 相距/相隔 (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card: FLAG broad (8.9% of tokens reach 0.1 of max), gate-closed regime 94%, max only 0.26, peaks scattered across CJK and English. Probes: 相距 0.64 and 0.25, 相隔 0.35, but also English ' features' 0.32-0.39 and ' bean' 0.34-0.45, so this is at best one sub-trigger. Written as a best-guess test.",
+ "selection": "random draw"
+}

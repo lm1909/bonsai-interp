@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-05-lm1909-73c20147",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N185+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:40+00:00",
+ "recipe": {
+  "toolchain_commit": "d11e50597",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N185_pos/2026-11-05-lm1909-73c20147.tests.json"
+ },
+ "label": "words about letter case (uppercase, lowercase, capitalize, capital letter), in prose and in code; not 'capital' as a city or money, not 'upper' as position",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N185_pos/2026-11-05-lm1909-73c20147.tests.json",
+   "prereg_commit": "d11e50597",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.781,
+     "peak": " uppercase"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.436,
+     "peak": " capitalize"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.423,
+     "peak": " lowercase"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.368,
+     "peak": " lowercase"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.756,
+     "peak": " capital"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.584,
+     "peak": "upper"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.494,
+     "peak": " capital"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.331,
+     "peak": "ization"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.122,
+     "peak": " digit"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " underline"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " pencil"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.157,
+     "peak": " spelling"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.279,
+     "peak": " capital"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": ".strip"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " t"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " counts"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.465,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d11e50597",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "letter case: uppercase, lowercase, capitalize",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Probes: '_upper' 0.97, 'capital letter' 0.72, uppercase 0.65, capitalize 0.47, capitals 0.43; capital of France 0.01, investors' capital 0.00, upper bedroom 0.00, suitcase 0.00.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "uppercase",
+   "lowercase",
+   "capitalize",
+   "capitalized",
+   "capitalization",
+   "capitalisation"
+  ]
+ }
+}

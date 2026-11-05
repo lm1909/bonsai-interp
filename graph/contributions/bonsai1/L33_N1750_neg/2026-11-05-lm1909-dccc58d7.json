@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-dccc58d7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N1750-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:27+00:00",
+ "recipe": {
+  "toolchain_commit": "d11e50597",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N1750_neg/2026-11-05-lm1909-dccc58d7.tests.json"
+ },
+ "label": "a material or process word modifying a part in a description of manufacturing or aerospace hardware (a metal cutting tool, a rotary hot foil unit, an aluminum ring), as opposed to the same material words on everyday objects",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N1750_neg/2026-11-05-lm1909-dccc58d7.tests.json",
+   "prereg_commit": "d11e50597",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.482,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.181,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.348,
+     "peak": " die"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.167,
+     "peak": " aluminum"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.135,
+     "peak": " titanium"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.259,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.589,
+     "peak": " steel"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.078,
+     "peak": " brass"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.045,
+     "peak": " wooden"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.039,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": " steel"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " cl"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.078,
+     "peak": " titanium"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " bakery"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": " steel"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": " brass"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.992,
+    "median_fire": 0.22,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d11e50597",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "material or process modifier of a machine part",
+ "unit_kind": "contextual / semantic",
+ "confidence": "low",
+ "notes": "Card: ' a' x8, ' an' x7, ' launch', ' metal', ' hot', ' hardware'. Output: this pole promotes parameter, ground, scaling, compliance. Probes: 'metal cutting tool' 0.60, 'rotary hot foil' 0.42, aluminum 0.27-0.37, 'tool steel' 0.34, 'diamond tipped' 0.31; everyday metal bracelet 0.08, metal hook 0.07, sugar glaze 0.05. The ' a'/' an' peaks at high activation stayed mostly under 0.35 in my probes.",
+ "selection": "random draw"
+}

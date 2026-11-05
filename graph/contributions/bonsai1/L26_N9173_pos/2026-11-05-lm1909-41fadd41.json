@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-41fadd41",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N9173+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:27:51+00:00",
+ "recipe": {
+  "toolchain_commit": "d11e50597",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N9173_pos/2026-11-05-lm1909-41fadd41.tests.json"
+ },
+ "label": "operating-system access control: who may read, run or own something (chmod, chown, sudo, SELinux, security policy settings), not other admin commands and not security in the everyday sense",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N9173_pos/2026-11-05-lm1909-41fadd41.tests.json",
+   "prereg_commit": "d11e50597",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.298,
+     "peak": " sudo"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.498,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.642,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.214,
+     "peak": " Security"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.466,
+     "peak": "inux"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.649,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.739,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.372,
+     "peak": " deny"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " log"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": "/"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": "var"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.124,
+     "peak": " then"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.095,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": " security"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.57,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d11e50597",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "OS permissions and privileges",
+ "unit_kind": "semantic / code",
+ "confidence": "medium",
+ "notes": "Card: ' security' x4, chmod x2, 'chown -R', 'with sudo'. Output promotes group, assigned, roles, running, native. Probes: setfattr security.selinux 0.91, chmod ugo 0.81, chown 0.68, Windows Security Settings 0.52, 'with sudo' 0.48; cp 0.18, Control Panel 0.24, laptop 0.04, security guard 0.04. A samba 'security = share' line was only 0.05, so it is not every config line.",
+ "selection": "random draw"
+}

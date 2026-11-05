@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-05-lm1909-2a35b8fc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N560-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:58+00:00",
+ "recipe": {
+  "toolchain_commit": "d11e50597",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N560_neg/2026-11-05-lm1909-2a35b8fc.tests.json"
+ },
+ "label": "measuring how fast software runs (timers, profilers, benchmarks, bottlenecks), in code and in technical prose; not 'performance' in the theatre and not the same loops without timing",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N560_neg/2026-11-05-lm1909-2a35b8fc.tests.json",
+   "prereg_commit": "d11e50597",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.201,
+     "peak": "iler"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.41,
+     "peak": "it"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.686,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.336,
+     "peak": " bottleneck"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.431,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.303,
+     "peak": " CPU"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.489,
+     "peak": "f"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.388,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "_page"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.101,
+     "peak": "IAL"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.069,
+     "peak": "DEFAULT"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " files"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " universities"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.035,
+     "peak": " showed"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "()\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " again"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.42,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d11e50597",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "measuring software run time / profiling",
+ "unit_kind": "semantic / code",
+ "confidence": "medium",
+ "notes": "Card: scattered peaks (' performance' x4, 'Profile', timeit, SLOW_DB_QUERY_TIME). Output: - pole promotes bottleneck, profiling, timings, overhead, performance. Probes: cProfile 0.95, profiler/bottleneck 0.67, timeit 0.63, slow-query constant 0.56, 'twice as fast' 0.40; actor's performance 0.00, import os 0.01, same loop with t.sum 0.03.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "profile",
+   "profiler",
+   "profiling",
+   "timeit",
+   "benchmark",
+   "bottleneck"
+  ]
+ }
+}
