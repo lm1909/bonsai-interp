@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5a771af4",
+ "kind": "qc",
+ "neuron": "bonsai1/L32/N10163-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:29:44+00:00",
+ "recipe": {
+  "toolchain_commit": "a5b355ea7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N10163_neg/2026-11-06-lm1909-5a771af4.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N10163_neg/2026-11-06-lm1909-5a771af4.tests.json",
+   "prereg_commit": "a5b355ea7",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.671,
+     "peak": " tiny"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.174,
+     "peak": " small"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.073,
+     "peak": " before"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.068,
+     "peak": " rash"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.089,
+     "peak": " formed"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.147,
+     "peak": "wall"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.226,
+     "peak": "res"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.077,
+     "peak": " appeared"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " big"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.039,
+     "peak": " d"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "Sand"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.038,
+     "peak": " arm"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.274,
+     "peak": "wall"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.14,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.076,
+     "peak": " paint"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.797,
+    "median_fire": 0.118,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5b355ea7",
+  "minutes": 5,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "a size or surface modifier (tiny, small, surface, minor) describing a small physical defect or symptom on skin, walls or the body, just before the noun it modifies"
+ },
+ "notes": "Fresh size or surface modifiers before a small defect or symptom. Near misses keep 'small' before other nouns in two cases. The card also has ' oxygen' and ' deep', which the label does not cover. Not probed.",
+ "selection": "picked"
+}

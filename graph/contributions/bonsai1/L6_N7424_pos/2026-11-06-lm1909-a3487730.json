@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a3487730",
+ "kind": "qc",
+ "neuron": "bonsai1/L6/N7424+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:29:54+00:00",
+ "recipe": {
+  "toolchain_commit": "a5b355ea7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N7424_pos/2026-11-06-lm1909-a3487730.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N7424_pos/2026-11-06-lm1909-a3487730.tests.json",
+   "prereg_commit": "a5b355ea7",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.732,
+     "peak": " teacher"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.359,
+     "peak": " class"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.935,
+     "peak": " restaurant"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.49,
+     "peak": "-speaking"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.524,
+     "peak": " department"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.056,
+     "peak": " teacher"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.607,
+     "peak": " restaurant"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.532,
+     "peak": "-speaking"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " teacher"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " class"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " Street"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " region"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " history"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.049,
+     "peak": " teacher"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.025,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "Most"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.669,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5b355ea7",
+  "minutes": 5,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "a role, course or institution noun right after a language or nationality adjective (English teacher, French class, Chinese restaurant, Persian-speaking), versus the same noun after a non-language modifier"
+ },
+ "notes": "Fresh language or nationality + role, course or institution; near misses swap the modifier, as the label says. Not probed.",
+ "selection": "picked"
+}

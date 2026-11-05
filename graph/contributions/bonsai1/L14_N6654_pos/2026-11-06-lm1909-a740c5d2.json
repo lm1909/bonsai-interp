@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a740c5d2",
+ "kind": "qc",
+ "neuron": "bonsai1/L14/N6654+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:28:56+00:00",
+ "recipe": {
+  "toolchain_commit": "a5b355ea7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N6654_pos/2026-11-06-lm1909-a740c5d2.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N6654_pos/2026-11-06-lm1909-a740c5d2.tests.json",
+   "prereg_commit": "a5b355ea7",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.247,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.028,
+     "peak": " two"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.102,
+     "peak": " cough"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.061,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.538,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.125,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.133,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.187,
+     "peak": " three"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.035,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.08,
+     "peak": " four"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " fences"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " second"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " first"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.048,
+     "peak": " pens"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.129,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5b355ea7",
+  "minutes": 4,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "dispute",
+  "label_under_test": "the word that opens a time-span quantity ('in one to two weeks', 'over three days', 'in the first half of'), on the token before the number or unit"
+ },
+ "notes": "A re-test of my QC 2026-11-06-lm1909-d642865a, whose near misses shared the whole prefix up to the firing token, so those pairs read the same by construction. Here every near miss has its own lead-in, with a number or range in a non-time frame. Registered as a dispute because the label's own forms ('over four days', 'first half') read low before.",
+ "selection": "picked"
+}

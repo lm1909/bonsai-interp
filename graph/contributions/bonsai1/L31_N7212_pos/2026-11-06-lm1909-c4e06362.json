@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c4e06362",
+ "kind": "qc",
+ "neuron": "bonsai1/L31/N7212+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:29:37+00:00",
+ "recipe": {
+  "toolchain_commit": "a5b355ea7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N7212_pos/2026-11-06-lm1909-c4e06362.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N7212_pos/2026-11-06-lm1909-c4e06362.tests.json",
+   "prereg_commit": "a5b355ea7",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.248,
+     "peak": "в"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.443,
+     "peak": " Н"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.733,
+     "peak": " zun"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.535,
+     "peak": " zun"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.816,
+     "peak": " N"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.231,
+     "peak": " Н"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.004,
+     "peak": "iet"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.206,
+     "peak": " N"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.199,
+     "peak": "вед"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.066,
+     "peak": "ланд"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "achsen"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " wird"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.122,
+     "peak": "ени"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "ethe"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " Elm"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.346,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5b355ea7",
+  "minutes": 5,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "a split-off word-initial N/н consonant piece (' н|ор…', ' Н|ор…', 'N W') and the German ' zun|eh…' piece, versus words whose first piece is another consonant or a whole token"
+ },
+ "notes": "Fresh split ' н|ор', ' Н|ор', ' zun|eh' and N; near misses keep the frames. Tokenization checked, not probed.",
+ "selection": "picked"
+}

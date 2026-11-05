@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fe7e326e",
+ "kind": "qc",
+ "neuron": "bonsai1/L14/N1504+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:28:52+00:00",
+ "recipe": {
+  "toolchain_commit": "a5b355ea7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N1504_pos/2026-11-06-lm1909-fe7e326e.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N1504_pos/2026-11-06-lm1909-fe7e326e.tests.json",
+   "prereg_commit": "a5b355ea7",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.551,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.523,
+     "peak": " above"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.431,
+     "peak": " schedule"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.38,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.092,
+     "peak": " goal"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.275,
+     "peak": "ivered"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.391,
+     "peak": " beat"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.382,
+     "peak": " exceeded"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.052,
+     "peak": " targets"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.129,
+     "peak": " early"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.277,
+     "peak": " schedule"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " but"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.045,
+     "peak": " goal"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " Tuesday"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.093,
+     "peak": " expectations"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " next"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.387,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5b355ea7",
+  "minutes": 4,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "going beyond a target, goal or expectation (exceeded, above and beyond, ahead of schedule, and more, surpassed), as against meeting it, falling short, or literal height"
+ },
+ "notes": "Fresh sentences about going beyond a goal; near misses meet it, fall short or are unrelated, as the label says. Not probed.",
+ "selection": "picked"
+}
