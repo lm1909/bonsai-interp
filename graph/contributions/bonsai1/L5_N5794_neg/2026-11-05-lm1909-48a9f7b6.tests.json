@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-05-lm1909-48a9f7b6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N5794-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:02:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N5794",
+   "pole": "-",
+   "label": "'|' as the first character of a line or document (table rows, reST roles); '|' later in a line and '||' stay quiet",
+   "fire": [
+    "|Year|Winner|Score|\n|1990|Ann|12|\n",
+    "|coro|\n\nThe default handler.",
+    "|Name|Age|\n|Bob|44|\n",
+    "\n|Country|Capital|\n",
+    "|---|---|\n|a|b|\n",
+    "|Emblem of Laos|\n|Motto|Peace|\n",
+    "\n\n|07-17-2012|\n",
+    "|Director|Jane Doe|\n"
+   ],
+   "quiet": [
+    "Year, Winner, Score\n1990, Ann, 12\n",
+    "coro\n\nThe default handler.",
+    "Name: Bob, Age: 44\n",
+    "\nCountry and capital\n",
+    "a = b || c;\n",
+    "Emblem of Laos\nMotto: Peace\n",
+    "\n\n07-17-2012\n",
+    "Director | Jane Doe\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'|' at the start of a line",
+ "unit_kind": "positional",
+ "confidence": "medium",
+ "trigger": {
+  "tokens": [
+   "|",
+   "||"
+  ]
+ }
+}
