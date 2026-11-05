@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-06a7df30",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N9780+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:34:14+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N9780_pos/2026-11-06-lm1909-06a7df30.tests.json"
+ },
+ "label": "talk of preventing or reducing a health risk ('avoid eyestrain', 'can prevent', 'try to reduce your nausea')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N9780_pos/2026-11-06-lm1909-06a7df30.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.631,
+     "peak": " prevent"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.078,
+     "peak": " avoid"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.097,
+     "peak": " prevent"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.018,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.081,
+     "peak": " day"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.578,
+     "peak": " prevent"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.039,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.046,
+     "peak": " prevent"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " arguments"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.104,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " prevent"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": " less"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.078,
+     "peak": " avoid"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " fees"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " booking"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.08,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "preventing a health risk",
+ "unit_kind": "topic",
+ "confidence": 0.2,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ',' x4, 'M' of MCI, ' to', ' you', ' treatment', ' avoid', ' prevent'. Probe: ' prevent' after 'before having a baby' 0.754, but in other health sentences only 0.039-0.118, against 0.015-0.105 for non-health frames.",
+ "selection": "random draw"
+}

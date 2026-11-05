@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-abd8c932",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N606-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:44+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N606_neg/2026-11-06-lm1909-abd8c932.tests.json"
+ },
+ "label": "a plural noun for a trouble that may arise or get worse ('other charges', 'make problems worse', 'allow infections')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N606_neg/2026-11-06-lm1909-abd8c932.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.48,
+     "peak": " charges"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.201,
+     "peak": " problems"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.168,
+     "peak": " infections"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.465,
+     "peak": " charges"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.332,
+     "peak": " problems"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.499,
+     "peak": " charges"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.324,
+     "peak": " problems"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.152,
+     "peak": " infections"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " recorded"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": "ions"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " walks"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.028,
+     "peak": " being"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " tired"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.51,
+     "peak": " offices"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " coats"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.036,
+     "peak": " through"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.328,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "troubles that may arise",
+ "unit_kind": "semantic",
+ "confidence": 0.35,
+ "notes": "Card: ' as' x3, ' problems' x2, ' charges', ' issues', ' resources', ' infections'; promotes ' encountered', ' present', ' found'. Probe: ' charges' 0.657; ' problems' 0.382; ' infections' 0.155; but ' issues' 0.028, ' resources' 0.054, and ' cars' 0.144 in the same frame as charges. Weak evidence.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-19ca2f15",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N5969-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:20+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N5969_neg/2026-11-06-lm1909-19ca2f15.tests.json"
+ },
+ "label": "mobile services that use where a person is (check-in, location-based, geolocation, points of interest, mobility data)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N5969_neg/2026-11-06-lm1909-19ca2f15.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.442,
+     "peak": "quare"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.277,
+     "peak": "-based"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.152,
+     "peak": " interest"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.296,
+     "peak": " mobility"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.288,
+     "peak": "olocation"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.114,
+     "peak": " location"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.182,
+     "peak": " location"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.206,
+     "peak": " location"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.133,
+     "peak": " discounts"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " smartphone"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " phone"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.104,
+     "peak": " smartphone"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.054,
+     "peak": " which"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.031,
+     "peak": " find"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.032,
+     "peak": " alert"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " plans"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.241,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "location-aware mobile services",
+ "unit_kind": "topic",
+ "confidence": 0.75,
+ "notes": "Card: ' location' x5, '-in', '-Based', 'I' of POI, 'ización' of geolocalización, ' mobility', ' check in', and 'ist' of Situationist. Probe: '-based' 0.614; ' interest' in 'point of interest' 0.409; 'quare' of foursquare 0.397; ' mobility' 0.339; banking services and playlists on phones 0.019-0.056. 'ist' of Situationist read 0.349, and this label does not cover it.",
+ "selection": "random draw"
+}

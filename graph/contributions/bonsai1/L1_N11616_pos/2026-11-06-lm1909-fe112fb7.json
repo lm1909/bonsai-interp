@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-fe112fb7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N11616+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:16+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N11616_pos/2026-11-06-lm1909-fe112fb7.tests.json"
+ },
+ "label": "the tokens '—all' (em dash glued to 'all'), the 'س' of Arabic هند|س|ية and the 'ado' of Spanish orient|ado",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N11616_pos/2026-11-06-lm1909-fe112fb7.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.71,
+     "peak": "—all"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.663,
+     "peak": "—all"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.602,
+     "peak": "—all"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.571,
+     "peak": "—all"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.806,
+     "peak": "س"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.923,
+     "peak": "س"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.742,
+     "peak": "ado"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.518,
+     "peak": "ado"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.139,
+     "peak": " them"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.117,
+     "peak": " maps"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.17,
+     "peak": " lost"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.175,
+     "peak": " الع"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.053,
+     "peak": " los"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.357,
+     "peak": "ó"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.686,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'—all', هند|س|ية, orient|ado",
+ "unit_kind": "token (list)",
+ "confidence": 0.6,
+ "notes": "This is a list: I found nothing the tokens share. The card flags the pole as broad (2.9%) with 71% echo-regime peaks and max 0.66. Probe: 'س' 0.925; '—all' 0.765-0.802; 'ado' 0.470; ', in a matter of days' 0.158; '—some' 0.072; the same Arabic and Spanish frames without the word 0.052-0.124.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "—all",
+   "س",
+   "ado"
+  ]
+ }
+}

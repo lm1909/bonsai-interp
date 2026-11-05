@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c5be22c9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N3091+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:47+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N3091_pos/2026-11-06-lm1909-c5be22c9.tests.json"
+ },
+ "label": "marking written text by circling, crossing out, underlining or striking through",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N3091_pos/2026-11-06-lm1909-c5be22c9.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.589,
+     "peak": " circle"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.765,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.66,
+     "peak": " underline"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.156,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.544,
+     "peak": " circle"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.945,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.422,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.919,
+     "peak": " circle"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.063,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.624,
+     "peak": " crossed"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.141,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.713,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "marking up written text",
+ "unit_kind": "semantic",
+ "confidence": 0.85,
+ "notes": "Card: ' circle' x4, ' cross' x2, '-decoration' x2, ' underline' x2, 'strike', ' Out'. Probe: ' through' after 'a strike' 1.489; ' in' after 'circle the two words' 0.674; ' out' after 'cross' 0.642; 'circle it in red' 0.491; 'read out' and 'say the two words' 0.008; 'sat in a circle' 0.005; 'cross the river' 0.056. Near misses keep the same words in another sense or the same frames with another verb.",
+ "selection": "random draw"
+}

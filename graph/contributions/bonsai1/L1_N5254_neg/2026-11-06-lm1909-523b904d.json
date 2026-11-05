@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-523b904d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N5254-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:34:32+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N5254_neg/2026-11-06-lm1909-523b904d.tests.json"
+ },
+ "label": "a capitalized word in the name of a broadcaster or a formal declaration, after a long lead-in ('NHK WORLD RADIO', 'Universal Islamic Declaration'), and ' version' after 'either' in a licence",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N5254_neg/2026-11-06-lm1909-523b904d.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.182,
+     "peak": " RADIO"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.678,
+     "peak": " Declaration"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.244,
+     "peak": " version"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.09,
+     "peak": " RADIO"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.804,
+     "peak": " Declaration"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.234,
+     "peak": " version"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.848,
+     "peak": " RADIO"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.68,
+     "peak": " Declaration"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " Spanish"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " trade"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.067,
+     "peak": " Free"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " been"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.042,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.066,
+     "peak": " Free"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.069,
+     "peak": " Arabic"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.084,
+     "peak": " Cairo"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.742,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' RADIO', ' Declaration', ' version' (guess)",
+ "unit_kind": "token (list)",
+ "confidence": 0.25,
+ "notes": "Low-confidence guess. Card: ' version' x13, ' Plan' x2, ' RADIO', ' Declaration'; L 99%; max 2.05. Probe: ' RADIO' 1.292 after a long lead-in, but 0.023 and 0.008 in short sentences; ' Declaration' 0.607 in 'Universal Islamic Declaration', 0.042 in 'Declaration of Independence'; ' version' 0.324 after the long licence line, 0.035 in a short one.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " RADIO",
+   " Declaration",
+   " version"
+  ]
+ }
+}

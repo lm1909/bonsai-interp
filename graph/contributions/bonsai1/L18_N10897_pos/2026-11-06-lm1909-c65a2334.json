@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c65a2334",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N10897+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:27+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N10897_pos/2026-11-06-lm1909-c65a2334.tests.json"
+ },
+ "label": "the Python fallback after a failed optional import ('except ImportError:' and the line after it)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N10897_pos/2026-11-06-lm1909-c65a2334.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.388,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.607,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.364,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.304,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.461,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.425,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.517,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.4,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.179,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.125,
+     "peak": "except"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.181,
+     "peak": " None"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.238,
+     "peak": " OSError"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.161,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.191,
+     "peak": " ValueError"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.281,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.272,
+     "peak": "   "
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.412,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "optional-import fallback in Python",
+ "unit_kind": "syntactic",
+ "confidence": 0.4,
+ "notes": "Card: broad (6.4%), ':\\n' x5, peaks after 'except ImportError'; other peaks on prose ', ' and ' certificate'. Probe: indent after 'except ImportError:' 0.354-0.581; 'except ValueError' 0.145. But plain 'import yaml' 0.322, 'not included in the bundle,' 0.741 and 'self-signed SSL certificate' 0.327, so this is a partial reading of a broad pole. Near misses are other except clauses in the same shape.",
+ "selection": "random draw"
+}

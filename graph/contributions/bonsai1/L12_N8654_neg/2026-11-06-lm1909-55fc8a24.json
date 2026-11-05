@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-55fc8a24",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N8654-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:34:30+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N8654_neg/2026-11-06-lm1909-55fc8a24.tests.json"
+ },
+ "label": "a preposition placing a body or object physically on, through or into something ('lay on the bed', 'run through the plaster', 'toss into')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N8654_neg/2026-11-06-lm1909-55fc8a24.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.542,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.505,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.664,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.702,
+     "peak": " into"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.786,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.633,
+     "peak": " onto"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.454,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.22,
+     "peak": " into"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.0,
+     "peak": "Stand"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.105,
+     "peak": " through"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.154,
+     "peak": " through"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.049,
+     "peak": " slept"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.108,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.165,
+     "peak": " into"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.588,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "physical placement prepositions",
+ "unit_kind": "syntactic / semantic",
+ "confidence": 0.85,
+ "notes": "Card: ' on' x9, ' in' x5, ' through' x4, ' onto' x4, ' into' x2, ' enters', ' passes'. Probe: ' through' in 'cables run through the plaster' 0.805; ' on' in 'lay ... on the bed' 0.780; ' on' in 'flat on the floor' 0.733; ' into' 0.526; 'on Monday' 0.056; 'depends on' 0.003; 'through his whole life' 0.070. The near misses use the same prepositions in time or abstract senses.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-d6be4325",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N418+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:50+00:00",
+ "recipe": {
+  "toolchain_commit": "bd8a198d0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N418_pos/2026-11-06-lm1909-d6be4325.tests.json"
+ },
+ "label": "'disability' or 'disabilities' in the phrase 'learning disability'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N418_pos/2026-11-06-lm1909-d6be4325.tests.json",
+   "prereg_commit": "bd8a198d0",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.056,
+     "peak": " disability"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.699,
+     "peak": " disabilities"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.935,
+     "peak": " disabilities"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.032,
+     "peak": " disability"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.791,
+     "peak": " disabilities"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.082,
+     "peak": " disability"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.823,
+     "peak": " Disabilities"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.987,
+     "peak": " disability"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.088,
+     "peak": " loss"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.184,
+     "peak": " delays"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.107,
+     "peak": " disability"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.182,
+     "peak": " styles"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.118,
+     "peak": " impairment"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " Center"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": " with"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.961,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd8a198d0",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'learning disability'",
+ "unit_kind": "lexical",
+ "confidence": 0.9,
+ "notes": "Card: ' disabilities' x6, ' disability' x5, ' Disabilit...', and a few ' health', ' Hall', ' organs'. Probe: 'learning disability' 0.997; 'Learning Disabilities' 0.953; 'learning disabilities' 0.744; 'physical disability' 0.099; bare 'a disability' 0.000; 'learning difference' 0.183; ' health' 0.061; ' organs' 0.047; ' Hall' 0.076. So the word needs 'learning' in front of it.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "disability",
+   "disabilities"
+  ]
+ }
+}
