@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-7257018f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N518+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:01:07+00:00",
+ "recipe": {
+  "toolchain_commit": "82f21d76d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N518_pos/2026-11-05-lm1909-7257018f.tests.json"
+ },
+ "label": "the Arabic token 'ائ' inside a word (الد|ائ|رة, الكن|ائ|س)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N518_pos/2026-11-05-lm1909-7257018f.tests.json",
+   "prereg_commit": "82f21d76d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.623,
+     "peak": "ائ"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.825,
+     "peak": "ائ"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.656,
+     "peak": "ائ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.852,
+     "peak": "ائ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.652,
+     "peak": "ائ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.769,
+     "peak": "ائ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.787,
+     "peak": "ائ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.867,
+     "peak": "ائ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": "رو"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": "زار"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": "ثل"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": "كتب"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "وال"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.103,
+     "peak": " أخي"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.066,
+     "peak": " القر"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "سة"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.778,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82f21d76d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic token 'ائ'",
+ "unit_kind": "token",
+ "confidence": 0.9,
+ "notes": "Card: 'ائ' x32 of the top 32. Probe: 'ائ' in الدائرة 0.772 and الكنائس 0.806; the same sentences with المحكمة and المساجد 0.042-0.069.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ائ"
+  ]
+ }
+}

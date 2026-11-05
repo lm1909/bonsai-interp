@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-0631c0c5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10187-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:41+00:00",
+ "recipe": {
+  "toolchain_commit": "82f21d76d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N10187_neg/2026-11-05-lm1909-0631c0c5.tests.json"
+ },
+ "label": "the piece 'west' or 'western' after 'north' ('north|west', 'North|west', 'north|western')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N10187_neg/2026-11-05-lm1909-0631c0c5.tests.json",
+   "prereg_commit": "82f21d76d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.085,
+     "peak": "west"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.895,
+     "peak": "west"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.829,
+     "peak": "western"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.723,
+     "peak": "western"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.714,
+     "peak": "western"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.045,
+     "peak": "west"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.736,
+     "peak": "western"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.072,
+     "peak": "west"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.081,
+     "peak": " l"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.054,
+     "peak": " h"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.068,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.087,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.162,
+     "peak": " reef"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": " from"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.862,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82f21d76d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'west' after 'north'",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: 'west' x9, 'western' x8, ' Southwest' x3. Probe: 'north-northwest' 1.035, 'northwestern' 0.793, 'North|west Airlines' 0.739; ' Northeast' 0.229, 'northeastern' 0.083, plain ' west' 0.034, ' western' 0.066. 'theast' in 'north-northeast' read 0.303, so that form is not a near miss here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "west",
+   "western"
+  ]
+ }
+}

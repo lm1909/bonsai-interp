@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-65b9e75a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6306-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:01:01+00:00",
+ "recipe": {
+  "toolchain_commit": "82f21d76d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N6306_neg/2026-11-05-lm1909-65b9e75a.tests.json"
+ },
+ "label": "naming a past culture or people as the origin of art, writing or artefacts ('Arabic designs', 'early Greek works', 'Roman literature', 'Middle Saxon finds')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N6306_neg/2026-11-05-lm1909-65b9e75a.tests.json",
+   "prereg_commit": "82f21d76d",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.707,
+     "peak": "antine"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.746,
+     "peak": " Celtic"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.779,
+     "peak": "can"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.359,
+     "peak": " Norse"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.262,
+     "peak": " Hebrew"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.882,
+     "peak": "rian"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.34,
+     "peak": "optic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.403,
+     "peak": "an"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.185,
+     "peak": " reveal"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.366,
+     "peak": " early"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.179,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.055,
+     "peak": " Swedish"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.26,
+     "peak": " oldest"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " German"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.229,
+     "peak": " handwritten"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.137,
+     "peak": " Mexican"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.555,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82f21d76d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "culture as origin of art or writing",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' Greek', ' Roman', ' Arabic', 'axon', ' Irish', ' Persian', ' Arab'. Probe: ' Arabic' 0.868, 'axon' 0.872, ' Roman' 0.753, ' Greek' 0.620; a Japanese car maker and a Canadian bank 0.045; 'strong influence' 0.065. But ' early' 0.266 and ' modern' 0.311 in the same art frames, so near misses in art frames carry the risk. New cultures in the test: Byzantine, Celtic, Etruscan, Norse, Hebrew, Assyrian, Coptic, Mayan.",
+ "selection": "random draw"
+}

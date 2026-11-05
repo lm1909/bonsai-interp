@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-05-lm1909-24ef955e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N4818+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:01:02+00:00",
+ "recipe": {
+  "toolchain_commit": "82f21d76d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N4818_pos/2026-11-05-lm1909-24ef955e.tests.json"
+ },
+ "label": "a mid-word piece of a rare name beginning with S ('Saty|a|jit', 'Sar|oy|an', 'Syc|am|ore', 'Sor|bon|ne', 'Sah|it|ya')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N4818_pos/2026-11-05-lm1909-24ef955e.tests.json",
+   "prereg_commit": "82f21d76d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.624,
+     "peak": "an"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.867,
+     "peak": "aj"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.002,
+     "peak": "av"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.695,
+     "peak": "am"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.734,
+     "peak": "bon"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.062,
+     "peak": "a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.646,
+     "peak": "y"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.667,
+     "peak": "am"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "-"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": "ics"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " daughter"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " pop"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " earned"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " Society"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " campaign"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.714,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82f21d76d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "mid pieces of rare S- names",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "Card: 'am', 'ya', 'an', 'av', 'aj', 'bon', and ' California' and ' Pacific' peaks. Probe: 'av' of Satyavati 0.984; 'an' of Saroyan 0.922 and 0.544; 'aj' 0.775; 'y' of Satyagraha 0.821; 'am' of Sycamore and sycamore 0.639-0.729; 'bon' 0.676; 'a' of Sahitya 0.737; Bagdasarian 0.014; Scorsese 0.011. ' California' and ' Pacific' read about 0.00 in my sentences, so those card peaks are not covered. I did not find what these names share beyond the S.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Saroyan",
+   "Satyajit",
+   "Satyavati",
+   "Sycamore",
+   "Sorbonne",
+   "Sahitya",
+   "Satyagraha"
+  ]
+ }
+}

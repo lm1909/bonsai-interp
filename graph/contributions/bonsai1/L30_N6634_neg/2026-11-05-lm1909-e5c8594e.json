@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e5c8594e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N6634-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:47+00:00",
+ "recipe": {
+  "toolchain_commit": "82f21d76d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N6634_neg/2026-11-05-lm1909-e5c8594e.tests.json"
+ },
+ "label": "function words in text about electrical power equipment (transformers, flux, voltage, switching)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N6634_neg/2026-11-05-lm1909-e5c8594e.tests.json",
+   "prereg_commit": "82f21d76d",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.418,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.301,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.347,
+     "peak": " breaker"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.382,
+     "peak": " same"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.468,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.177,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.229,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.649,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " second"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " same"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " flock"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.364,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82f21d76d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "electrical power engineering prose",
+ "unit_kind": "topic",
+ "confidence": 0.5,
+ "notes": "Card: ' the', ' of', ' during', ' limited', '°C', ' in' in texts on transformers, flux density and plant rooms. Probe: 'arcing formed during' 0.336; 'flux density ... in the' 0.300; 'per unit impedance' 0.206; '3-phase electricity supply' 0.206; the same frames about rent, fishing and teachers 0.001-0.016. But 'heated during the baking step' reached 0.165 and 'sealed in appropriate packaging' 0.218, so this may be technical process text more than electricity.",
+ "selection": "random draw"
+}

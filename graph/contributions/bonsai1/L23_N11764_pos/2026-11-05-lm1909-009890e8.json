@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-009890e8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11764+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:01:07+00:00",
+ "recipe": {
+  "toolchain_commit": "82f21d76d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N11764_pos/2026-11-05-lm1909-009890e8.tests.json"
+ },
+ "label": "':\\n' ending an 'else' line in Python, inside a method",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N11764_pos/2026-11-05-lm1909-009890e8.tests.json",
+   "prereg_commit": "82f21d76d",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.194,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.316,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.417,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.358,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.331,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.307,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.454,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.245,
+     "peak": ":\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": ".state"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.037,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": ".heading"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.098,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.079,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.117,
+     "peak": ".nick"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.055,
+     "peak": "\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.324,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82f21d76d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'else:\\n' in Python",
+ "unit_kind": "syntactic",
+ "confidence": 0.45,
+ "notes": "Card: ':\\n' x17 (after 'else' and 'if not ...' lines), ')\\n' x3. Probe: code with 'else:\\n' 0.295-0.322; 'for ... in items:\\n' 0.025; 'if not period:\\n' with no else 0.150; plain assignments 0.102; prose and HTML about 0.02. Near misses are the same methods with no else branch.",
+ "selection": "random draw"
+}
