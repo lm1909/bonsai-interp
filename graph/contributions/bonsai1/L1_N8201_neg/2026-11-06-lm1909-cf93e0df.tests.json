@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-cf93e0df",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8201-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N8201",
+   "pole": "-",
+   "label": "a very dense unit (52.9% of tokens reach 0.1 of max, gate-closed leak, a positional cluster at window position 3) with no clear trigger; its top tokens are punctuation (',', '.\\n', '\\n'), but mid-clause words read about the same",
+   "fire": [
+    "The carpenter came, measured it, and left.\nThen his son arrived.",
+    "settings = {\n    'x': 1,\n    'y': 2,\n}",
+    "We bought apples, pears, plums, and a melon.",
+    "She closed the door.\nHe opened the window.\nThey waited.",
+    "Paris, Rome, Madrid, and Lisbon are capitals.",
+    "def f():\n    a = 1,\n    b = 2,\n    return a",
+    "He ate, slept, woke, and ran.",
+    "The report is short.\nThe summary is shorter."
+   ],
+   "quiet": [
+    "The carpenter came and measured it and then left with his son",
+    "settings x and y equal one and two at the start of the run",
+    "We bought apples and pears and plums and a melon",
+    "She closed the door while he opened the window and they waited",
+    "Paris and Rome and Madrid and Lisbon are capitals",
+    "define a function that sets a and b and then returns a",
+    "He ate and slept and woke and ran",
+    "The report is short but the summary is shorter"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense: no clear trigger",
+ "unit_kind": "dense / positional",
+ "confidence": "medium"
+}

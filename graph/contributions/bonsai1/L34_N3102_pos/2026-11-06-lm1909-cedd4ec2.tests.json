@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-cedd4ec2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3102+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N3102",
+   "pole": "+",
+   "label": "the ' R' or '-r' that opens 'race' or 'racing' when the tokenizer splits it (' R'+'ACING', drag'-r'+'ace', foot'-r'+'aces'); other all-caps words and the same compounds with another noun stay low",
+   "fire": [
+    "The sponsor backs MOTORCYCLE RACING and little else.",
+    "He won every foot-race at the county fair.",
+    "Teen drivers held a drag-race on the old airstrip.",
+    "THIS POLICY EXCLUDES BOAT RACING AND SIMILAR EVENTS.",
+    "As a boy I ran in several foot-races each summer.",
+    "Local farmers held a kind of tractor-race every August.",
+    "WE DO NOT COVER AUTO RACING OR STUNT DRIVING.",
+    "The film ends with a wild drag-race through town."
+   ],
+   "quiet": [
+    "The sponsor backs MOTORCYCLE SAFETY and little else.",
+    "He won every pie contest at the county fair.",
+    "Teen drivers held a car show on the old airstrip.",
+    "THIS POLICY EXCLUDES BOAT TRAVEL AND SIMILAR EVENTS.",
+    "As a boy I ran several errands each summer.",
+    "Local farmers held a kind of tractor parade every August.",
+    "WE DO NOT COVER AUTO THEFT OR STUNT DRIVING.",
+    "The film ends with a wild chase through town."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split ' R' / '-r' of RACING, -race",
+ "unit_kind": "spelling piece",
+ "confidence": "medium",
+ "trigger": {
+  "tokens": [
+   " R",
+   "-r",
+   " r"
+  ]
+ }
+}
