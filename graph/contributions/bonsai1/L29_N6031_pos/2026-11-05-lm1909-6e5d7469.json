@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-6e5d7469",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N6031+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:48+00:00",
+ "recipe": {
+  "toolchain_commit": "9415aa5e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N6031_pos/2026-11-05-lm1909-6e5d7469.tests.json"
+ },
+ "label": "load or weight before a carrying capacity (weight capacity, load bearing, can carry)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N6031_pos/2026-11-05-lm1909-6e5d7469.tests.json",
+   "prereg_commit": "9415aa5e2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.759,
+     "peak": " lb"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.272,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.198,
+     "peak": " can"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.167,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.341,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.533,
+     "peak": " weight"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.747,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.154,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.058,
+     "peak": " chairs"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " beam"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.119,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.069,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.155,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.154,
+     "peak": " can"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.306,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9415aa5e2",
+  "minutes": 4,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "weight/load carrying capacity",
+ "unit_kind": "contextual / prediction",
+ "confidence": "high",
+ "selection": "random draw"
+}
