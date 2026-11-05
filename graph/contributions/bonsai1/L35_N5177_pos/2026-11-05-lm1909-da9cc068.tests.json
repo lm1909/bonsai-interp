@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-da9cc068",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5177+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5177",
+   "pole": "+",
+   "label": "first token of a corpus window (positional; not reproducible on complete sentences)",
+   "fire": [
+    "tasks that people perform on a normal working day, such as filing.",
+    "only for the purpose of this example, assume it holds.",
+    "policy for reducing illegal fishing, were discussed at length.",
+    "describe the item you wish to return to the store.",
+    "rather than the usual route, take the coast road.",
+    "information about opening hours can be found online.",
+    "methods for cleaning old coins, were listed in the guide.",
+    "even for a moment, think about what it means."
+   ],
+   "quiet": [
+    "Workers perform these tasks on a normal working day, such as filing.",
+    "For this example only, we can assume that it holds.",
+    "The new policy on illegal fishing was discussed at length.",
+    "Please describe the item you wish to return to the store.",
+    "Instead of the usual route, you should take the coast road.",
+    "Our website has information about opening hours.",
+    "The guide lists several methods for cleaning old coins.",
+    "Now stop for a moment and think about what it means."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: mid-sentence openings probed at 0.00.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "window position 0",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags positional: every top peak is at window position 0 (100%), on unrelated tokens (' –', ' just', ' J', ' strategy'), max 412. Probe: copies of those fragments, with and without a leading space, 0.00-0.00. Its output direction promotes ' plot' tokens. Recorded as positional, with a best-guess test of fragment openings against sentence openings."
+}

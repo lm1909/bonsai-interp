@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-b71d7d1e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9059+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N9059",
+   "pole": "+",
+   "label": "odd word-internal piece of rare names (Os|prey, E|ps|om, Cs|aba, H|too)",
+   "fire": [
+    "The catalogue listed three titles from Osprey Books on medieval armies.",
+    "My aunt bought a small flat near Epsom Downs before she retired.",
+    "We watched two ospreys circling above the reservoir at dusk.",
+    "The referee that night was a Hungarian named Csaba Balogh.",
+    "They interviewed Htoo Aung about his bank's plans for the coming year.",
+    "A jar of Epsom powder sat on the shelf beside the sink.",
+    "The review praised the new Osprey volume on Roman siege engines.",
+    "In the second round she lost to Csilla from Debrecen."
+   ],
+   "quiet": [
+    "The catalogue listed three titles from Oxford Books on medieval armies.",
+    "My aunt bought a small flat near Brighton before she retired.",
+    "We watched two herons circling above the reservoir at dusk.",
+    "The referee that night was a Hungarian named Peter Balogh.",
+    "They interviewed David Aung about his bank's plans for the coming year.",
+    "A jar of baking powder sat on the shelf beside the sink.",
+    "The review praised the new Penguin volume on Roman siege engines.",
+    "In the second round she lost to Maria from Debrecen."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; ordinary names stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "rare-name pieces",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "A list label, not a shared pattern: Tsering/Nguyen stayed quiet in the probe, so 'any unusual onset' does not hold. Probe: Osprey 0.69-0.88, Epsom 0.46, Csaba 0.94; Penguin, 'bath salts' under 0.03. Tokenization of the new forms not checked before commit."
+}

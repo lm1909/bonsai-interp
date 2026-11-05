@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-7ba213bd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8931+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N8931",
+   "pole": "+",
+   "label": "the digit '7' right after a letter in a model or version name (v7, i7, A7), not inside long numbers",
+   "fire": [
+    "Her old laptop still has a Core i7 and plenty of memory.",
+    "The dealer offered him a used Audi A7 at a fair price.",
+    "Leaders of the G7 met in Canada that summer.",
+    "Update the board to firmware v7 before you flash it.",
+    "This tablet uses an ARMv7 processor with two cores.",
+    "Eggs and nuts are good sources of vitamin B7 in most diets.",
+    "Our lab bought a Sony A7 for the field recordings.",
+    "The patch only applies to release r7 of the compiler."
+   ],
+   "quiet": [
+    "Her old laptop still has a fast chip and plenty of memory.",
+    "The dealer offered him a used Audi sedan at a fair price.",
+    "Leaders of the group met in Canada during 1987 that summer.",
+    "Update the board to the latest firmware before you flash it.",
+    "This tablet sold 2173 units with two cores in each.",
+    "Eggs and nuts are good sources of biotin in most diets.",
+    "Our lab bought a Sony camera for the 2017 field recordings.",
+    "The patch only applies to build 30741 of the compiler."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; digits inside long numbers and letter-only names stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'7' after a letter",
+ "unit_kind": "token / contextual",
+ "confidence": "medium",
+ "notes": "Card: '7' x18 of the top 32, also 4, 5, 9, 6 in the same contexts. Probe: v7 0.99, i7 0.99, O7 0.53, ' 7' 0.37, '1975' 0.03. Other digits not tested here.",
+ "trigger": {
+  "tokens": [
+   "7"
+  ]
+ }
+}

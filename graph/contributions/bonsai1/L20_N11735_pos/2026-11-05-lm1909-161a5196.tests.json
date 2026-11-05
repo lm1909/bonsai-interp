@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-161a5196",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11735+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N11735",
+   "pole": "+",
+   "label": "a relative word right after a coordinator: the second conjunct of a relative clause ('and which', 'or that')",
+   "fire": [
+    "This is a recipe my mother taught me and which I still make every winter.",
+    "She chose a route that avoids the hills and that passes two lakes.",
+    "It is a tool many carpenters own but which few of them use well.",
+    "We want parts that ship quickly or that can be made locally.",
+    "He wrote a book that sold poorly and that nobody reviewed.",
+    "These are rules we inherited and which no one has dared to change.",
+    "They need a venue that is cheap or that offers free parking.",
+    "The town has a law that dates from 1890 and which is still enforced."
+   ],
+   "quiet": [
+    "This is a recipe my mother taught me, and I still make it every winter.",
+    "She chose a route that avoids the hills and passes two lakes.",
+    "It is a tool many carpenters own, but few of them use it well.",
+    "We want parts that ship quickly from a local maker.",
+    "He wrote a book that sold poorly, and nobody reviewed it.",
+    "These are rules we inherited, and no one has dared to change them.",
+    "They need a cheap venue with free parking nearby.",
+    "The town has an old law from 1890, and it is still enforced."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; a single relative clause with no coordinator stays quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'and which' / 'or that'",
+ "unit_kind": "contextual / syntactic",
+ "confidence": "medium",
+ "notes": "Card: ' is', ' ever', ' what', ' none', ' which', 'or that', 'and which', 'versus what'. Probe: 'and which' 0.35, 'or that' 0.45; plain 'and I' 0.01; 'versus what' 0.09, 'nor ever' 0.06, so only the relative-word case is claimed.",
+ "trigger": {
+  "tokens": [
+   " which",
+   " that"
+  ]
+ }
+}

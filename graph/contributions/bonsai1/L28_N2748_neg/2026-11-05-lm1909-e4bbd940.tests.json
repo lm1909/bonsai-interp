@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e4bbd940",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N2748-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N2748",
+   "pole": "-",
+   "label": "photo-caption identification of people in the picture ('From left, …', '(right)', 'file photo')",
+   "fire": [
+    "From left, juniors Emma Price, Luke Ward and Hannah Boyd are among the 20 finalists at the fair.",
+    "Mayor Helen Ross (center) with council member Ian Fitch at the opening.",
+    "In this 2011 file photo, Mark Dunn, left, and his lawyer Sue Park arrive at the courthouse.",
+    "Pictured from left are Rosa Gill, Owen Tate and Nina Shaw of the garden club.",
+    "Trainer Joe Hart (right) with the winning filly after the race.",
+    "Jan 4, 2016; Boston, MA, USA; Celtics guard Ray Moss (7) talks to center Al Dean (42).",
+    "Standing, from left: Paul Webb, Kim Lowe and Greg Ames; seated: Ann Cole.",
+    "In this file photo, Judge Carol Bell, right, speaks with clerk Dan Yates at the hearing."
+   ],
+   "quiet": [
+    "Emma Price, Luke Ward and Hannah Boyd worked for months on their projects for the fair.",
+    "Mayor Helen Ross thanked council member Ian Fitch for his work on the opening.",
+    "Mark Dunn hired his lawyer Sue Park two years before the case reached the courthouse.",
+    "Rosa Gill, Owen Tate and Nina Shaw started the garden club together many years ago.",
+    "Trainer Joe Hart said the winning filly had run well in the race.",
+    "Celtics guard Ray Moss spoke to center Al Dean about the game in Boston.",
+    "Paul Webb, Kim Lowe and Greg Ames arrived early, and Ann Cole came soon after.",
+    "Judge Carol Bell asked clerk Dan Yates to reschedule the hearing for next week."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; the same people in narrative prose stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "photo-caption names",
+ "unit_kind": "contextual / format",
+ "confidence": "medium",
+ "notes": "Card: '(right)', '(5)', 'From left', 'file photo' captions, plus ' who's who' pieces that this label does not explain. Probe: captions 0.48-0.72; narrative without names under 0.02. Named people in plain narrative are new in this test."
+}

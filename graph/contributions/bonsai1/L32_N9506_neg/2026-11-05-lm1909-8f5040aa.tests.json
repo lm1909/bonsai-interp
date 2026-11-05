@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-8f5040aa",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N9506-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N9506",
+   "pole": "-",
+   "label": "cancer-drug context: a named oncology drug or its trial entry",
+   "fire": [
+    "Participants took 400 mg imatinib by mouth daily for 12 weeks. Other Name: Gleevec.",
+    "Women already taking the drug letrozole showed slower growth of their tumors.",
+    "Arm A received trastuzumab every three weeks. Other Name: Herceptin.",
+    "Patients on the drug anastrozole had fewer recurrences of breast cancer.",
+    "The trial gave 200 mg erlotinib by mouth per day. Other Name: Tarceva.",
+    "Men treated with the drug enzalutamide lived longer with prostate cancer.",
+    "Each cycle included paclitaxel by infusion on the first day. Other Name: Taxol.",
+    "Tumors shrank in people already treated with the drug sunitinib."
+   ],
+   "quiet": [
+    "Participants took 400 mg ibuprofen by mouth daily for 12 weeks for their knee pain.",
+    "Women already taking the drug metformin showed slower growth of their blood sugar.",
+    "Arm A received amoxicillin every eight hours for their ear infections.",
+    "Patients on the drug atorvastatin had fewer recurrences of chest pain.",
+    "The trial gave 200 mg caffeine by mouth per day to tired students.",
+    "Men treated with the drug lisinopril lived longer with high blood pressure.",
+    "Each cycle included saline by infusion on the first day for hydration.",
+    "Rashes shrank in people already treated with the drug hydrocortisone."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; other drugs in the same frames stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "oncology drugs",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Probe: lapatinib trial entry 0.90, tamoxifen 0.45; aspirin 0.00; 'chemotherapy and radiation' without a named drug 0.12. Other top examples ('Mrs', 'Prof. Dr.') are not explained by this."
+}

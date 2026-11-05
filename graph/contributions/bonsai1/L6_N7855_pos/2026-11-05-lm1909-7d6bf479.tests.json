@@ -1,0 +1,58 @@
+{
+ "contribution": "2026-11-05-lm1909-7d6bf479",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7855+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N7855",
+   "pole": "+",
+   "label": "sequencing or discourse word opening a new sentence (Lastly, Well, Additionally, Furthermore)",
+   "fire": [
+    "The wings are pale and narrow. Lastly, the tail has a dark band.",
+    "The method saves time on small jobs. Lastly, it needs no special tools.",
+    "We reviewed the budget and the hiring plan. Lastly, we set a date.",
+    "I was sure we had lost. Well, after the break, things turned around.",
+    "Nobody expected much from the sequel. Well, it turned out to be fun.",
+    "The engine is light and quiet. Additionally, it burns very little oil.",
+    "The school added two new classrooms. Additionally, the gym was repainted.",
+    "The sample was large and varied. Furthermore, the follow-up lasted a decade."
+   ],
+   "quiet": [
+    "The wings are pale and narrow. The tail has a dark band.",
+    "The method saves time on small jobs and it needs no special tools.",
+    "We reviewed the budget and the hiring plan, and lastly we set a date.",
+    "I was sure we had lost. After the break, things turned around.",
+    "Nobody expected much from the sequel. It turned out to be fun.",
+    "The engine is light and quiet. It burns very little oil.",
+    "The school added two new classrooms, and additionally the gym was repainted.",
+    "The sample was large and varied. The follow-up lasted a decade."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same sentences without the opener, or with it mid-sentence, stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "sentence-opening connective",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' Well' x12, ' Lastly' x3, ' How' x3. Probe: Lastly 0.68, Well 0.44, Furthermore 0.22; 'However' 0.04 (so not every connective), mid-sentence 'furthermore' 0.07.",
+ "trigger": {
+  "tokens": [
+   " Lastly",
+   " Well",
+   " Additionally",
+   " Furthermore",
+   "Additionally",
+   "Lastly"
+  ]
+ }
+}

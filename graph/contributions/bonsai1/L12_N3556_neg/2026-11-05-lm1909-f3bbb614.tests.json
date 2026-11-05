@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-f3bbb614",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N3556-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N3556",
+   "pole": "-",
+   "label": "the period closing a radio reporter's sign-off ('For NPR News, I'm <name> in <city>.')",
+   "fire": [
+    "The levee held through the night. For NPR News, I'm Sara Kim in Baton Rouge.",
+    "Voters return to the polls next week. For NPR News, I'm Tom Alvarez in Phoenix.",
+    "The strike enters its third day tomorrow. For NPR News, I'm Dana Fox in Detroit.",
+    "Crews expect to reopen the bridge by Friday. For NPR News, I'm Leah Stone in Pittsburgh.",
+    "The trial resumes on Monday. For NPR News, I'm Ben Ortiz in Santa Fe.",
+    "Farmers are hoping for rain this month. For NPR News, I'm Nora Hale in Omaha.",
+    "The school board votes again in June. For NPR News, I'm Eli Grant in Tucson.",
+    "Doctors say the outbreak is slowing. For NPR News, I'm Ruth Chen in Seattle."
+   ],
+   "quiet": [
+    "The levee held through the night, officials said from Baton Rouge.",
+    "Voters return to the polls next week, and the governor flew to Phoenix.",
+    "The strike enters its third day tomorrow, and talks moved to Detroit.",
+    "Crews expect to reopen the bridge by Friday, the first in Pittsburgh.",
+    "The trial resumes on Monday, the clerk told reporters in Santa Fe.",
+    "Farmers are hoping for rain this month, a grower told us in Omaha.",
+    "The school board votes again in June, according to a memo from Tucson.",
+    "Doctors say the outbreak is slowing, and a clinic opened in Seattle."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; a period after a city in ordinary news prose stays quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "radio sign-off period",
+ "unit_kind": "contextual / format",
+ "confidence": "high",
+ "notes": "Probe: sign-off '.' 0.83-0.85; 'I live in Denver' 0.00; 'The mayor spoke in Denver.' 0.01; 'For NPR News, the mayor said ...' 0.02. The pole's other top examples (' new', ' I', '_ERROR', ',') are not explained by this."
+}

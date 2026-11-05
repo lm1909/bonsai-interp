@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-39823da2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N8675+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N8675",
+   "pole": "+",
+   "label": "Spanish article ' el' after 'para' (para el + noun)",
+   "fire": [
+    "La empresa presentó un plan nuevo para el desarrollo de la región costera.",
+    "Compraron semillas importadas para el cultivo de maíz en la sierra.",
+    "El ayuntamiento destinó fondos para el transporte de los estudiantes rurales.",
+    "Usan sensores baratos para el control de plagas en los invernaderos.",
+    "Abrieron una cuenta aparte para el pago de los impuestos municipales.",
+    "Necesitamos más datos para el análisis de las muestras de agua.",
+    "Contrataron a dos técnicos para el mantenimiento de las bombas viejas.",
+    "Existen cremas especiales para el cuidado de la piel seca."
+   ],
+   "quiet": [
+    "La empresa presentó un plan nuevo para la región costera y sus puertos.",
+    "Compraron semillas importadas para plantar maíz en la sierra.",
+    "El ayuntamiento destinó fondos para los estudiantes de las zonas rurales.",
+    "Usan sensores baratos para detectar plagas en los invernaderos.",
+    "Abrieron una cuenta aparte para pagar los impuestos municipales.",
+    "Necesitamos más datos para analizar las muestras de agua.",
+    "Contrataron a dos técnicos para reparar las bombas viejas.",
+    "Existen cremas especiales para la piel seca y sensible."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; 'para la/los' near misses stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Spanish 'para el'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' el' x17 of the top 32, mostly after 'para'. Probe: 'para el' 0.48-0.74, 'en el' 0.19, 'para la' 0.00.",
+ "trigger": {
+  "tokens": [
+   " el"
+  ]
+ }
+}
