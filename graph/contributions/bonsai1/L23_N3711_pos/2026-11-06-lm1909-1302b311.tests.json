@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-1302b311",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N3711+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:15:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N3711",
+   "pole": "+",
+   "label": "the punctuation or connective between short parallel clauses with the same subject (I read, I planned, and; it is clever; it is new)",
+   "fire": [
+    "We cook dinner, we wash the plates, we go to bed.",
+    "She sings, she dances, and she plays three instruments.",
+    "It is loud; it is crowded; it is the best bar in town.",
+    "You can walk to the station, or you can take the bus.",
+    "He runs, he swims, he lifts weights every morning.",
+    "They laughed, they cried, and they hugged at the door.",
+    "It was cold; it was dark; it was nearly midnight.",
+    "I wrote, I edited, and I printed every page myself."
+   ],
+   "quiet": [
+    "We cook dinner and wash the plates before bed.",
+    "She sings and dances while playing three instruments.",
+    "It is a loud and crowded bar and the best in town.",
+    "You can reach the station by walking or by bus.",
+    "He runs and swims and lifts weights every morning.",
+    "They laughed and cried and hugged at the door.",
+    "It was a cold and dark night near midnight.",
+    "I wrote and edited and printed every page myself."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "between parallel clauses",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ',' x20, '.' x4, ' or' x4, ';' x2, ' and', ' And', all between repeated clause frames. Probes: 'we make breakfast,' 0.772, ';' 0.601, 'I read,' 0.598, ', or we can' 0.382; the same content in a single clause under 0.05. Near misses keep the words without the parallel repetition."
+}

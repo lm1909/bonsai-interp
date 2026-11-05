@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-a350b1d9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5968-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:15:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N5968",
+   "pole": "-",
+   "label": "a split inner piece of a big city's name in a non-English or all-caps spelling (Est|amb|ul, Lond|res, SY|D|NEY, ロ|ンド|ン, A|ten|as)",
+   "fire": [
+    "Pasamos tres noches en Estambul durante el viaje de novios.",
+    "Su hermana estudia música en una academia de Londres.",
+    "SYDNEY, Australia -- Heavy rains flooded the suburbs on Friday.",
+    "地域 : ヨーロッパ > イギリス > ロンドン",
+    "La empresa abrió una tienda en Estambul este invierno.",
+    "Mi hijo vive en Londres desde hace dos años.",
+    "SYDNEY, NSW -- Shares fell on Monday after the report.",
+    "El museo de Atenas recibe muchos turistas cada verano."
+   ],
+   "quiet": [
+    "Pasamos tres noches en Madrid durante el viaje de novios.",
+    "Su hermana estudia música en una academia de Roma.",
+    "PARIS, France -- Heavy rains flooded the suburbs on Friday.",
+    "地域 : ヨーロッパ > フランス > パリ",
+    "La empresa abrió una tienda en Sevilla este invierno.",
+    "Mi hijo vive en Roma desde hace dos años.",
+    "PARIS, TX -- Shares fell on Monday after the report.",
+    "El museo de Madrid recibe muchos turistas cada verano."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split city name (Estambul, Londres, SYDNEY)",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: 'amb' x6, 'D' x4, 'ور' x3, ' Lond' x2, 'qu', 'ンド'. Probes: 'amb' 0.923, 'ンド' 0.675, ' Lond' 0.661, 'D' in SYDNEY 0.594, 'ten' in Atenas 0.413; whole-token Madrid 0.025, 'IS' in PARIS 0.005. Tokens are checked for every fire sentence. Near misses use whole-token city names in the same frames."
+}
