@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-7b1a4065",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N11642-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:18:29+00:00",
+ "recipe": {
+  "toolchain_commit": "f7236bdbc",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N11642_neg/2026-11-05-lm1909-7b1a4065.tests.json"
+ },
+ "label": "the Arabic word-final pieces 'سة' and 'يرة' as their own tokens (مدرسة, الجزيرة)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N11642_neg/2026-11-05-lm1909-7b1a4065.tests.json",
+   "prereg_commit": "f7236bdbc",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.19,
+     "peak": "لوم"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.599,
+     "peak": "سة"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.168,
+     "peak": "سة"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.231,
+     "peak": "سة"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.144,
+     "peak": "يرة"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.361,
+     "peak": "اء"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.303,
+     "peak": "يرة"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.115,
+     "peak": "يرة"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.19,
+     "peak": "لوم"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.423,
+     "peak": "رب"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.165,
+     "peak": "وف"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": "ريق"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": "ون"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.299,
+     "peak": "اء"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.19,
+     "peak": "بة"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " ن"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.672,
+    "median_fire": 0.211,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f7236bdbc",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "Arabic endings سة / يرة",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   "سة",
+   "يرة"
+  ]
+ }
+}
