@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-d4455a67",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N2692+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:10:25+00:00",
+ "recipe": {
+  "toolchain_commit": "cb93f7a1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N2692_pos/2026-11-05-lm1909-d4455a67.tests.json"
+ },
+ "label": "marking something as historically or life-changingly important ('changed the course of history', 'most important', 'change your life forever')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N2692_pos/2026-11-05-lm1909-d4455a67.tests.json",
+   "prereg_commit": "cb93f7a1e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.609,
+     "peak": " changed"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.64,
+     "peak": " important"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.681,
+     "peak": " change"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.272,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.279,
+     "peak": " speech"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.394,
+     "peak": " changed"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.594,
+     "peak": " changed"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.337,
+     "peak": " forever"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": " renewed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.051,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.226,
+     "peak": " call"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.251,
+     "peak": " changed"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.049,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.594,
+     "peak": " changed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.255,
+     "peak": " change"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.93,
+    "median_fire": 0.494,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb93f7a1e",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "momentous, world-changing",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "The output direction promotes ' pivotal', ' foundational', ' groundbreaking', ' transformative', ' changed'. Probe: 'changed the course of European history' 0.53, 'most important treaty' 0.43, 'change your life forever' 0.32; 'changed the color of the kitchen walls' 0.17, 'signed the lease' 0.02.",
+ "selection": "random draw"
+}

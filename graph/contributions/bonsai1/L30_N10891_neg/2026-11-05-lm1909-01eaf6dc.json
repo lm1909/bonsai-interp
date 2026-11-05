@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-01eaf6dc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N10891-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:11:24+00:00",
+ "recipe": {
+  "toolchain_commit": "cb93f7a1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N10891_neg/2026-11-05-lm1909-01eaf6dc.tests.json"
+ },
+ "label": "the year or date of a recurring government event ('his 2013 budget speech', 'the 2004 budget', 'State of the Union')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N10891_neg/2026-11-05-lm1909-01eaf6dc.tests.json",
+   "prereg_commit": "cb93f7a1e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.929,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.917,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.712,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.676,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.805,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.642,
+     "peak": " State"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.499,
+     "peak": " federal"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.412,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.394,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.184,
+     "peak": " finance"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.168,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.086,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.149,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.235,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.099,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.307,
+     "peak": "2"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.694,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb93f7a1e",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dated budget or address",
+ "unit_kind": "contextual / semantic",
+ "confidence": "medium",
+ "notes": "Probe: '2013 budget speech' 0.93, '2004 budget' 0.50, '2011 State of the Union' 0.67, 'next month's holiday sales' 0.41 (not explained by this label); 'after his breakfast' 0.09. Dated non-political events are new in this test.",
+ "selection": "random draw"
+}

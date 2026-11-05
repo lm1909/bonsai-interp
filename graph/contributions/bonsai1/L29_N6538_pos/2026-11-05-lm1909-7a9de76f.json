@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-7a9de76f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N6538+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:10:30+00:00",
+ "recipe": {
+  "toolchain_commit": "cb93f7a1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N6538_pos/2026-11-05-lm1909-7a9de76f.tests.json"
+ },
+ "label": "'in' as a verb particle meaning entry (call in, fill in, dip in; also 'entered' and German separable 'ein'), not the location preposition",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N6538_pos/2026-11-05-lm1909-7a9de76f.tests.json",
+   "prereg_commit": "cb93f7a1e",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.413,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.001,
+     "peak": " happy"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.016,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.22,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.354,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.005,
+     "peak": " staff"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.187,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.175,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.035,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " pay"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " write"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " skim"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " sign"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " guard"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "She"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.181,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb93f7a1e",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "particle 'in' (entering)",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' in' x5, ' ein' x3, ' entra' x3, ' into' x2. Probe: 'call in' 0.62, 'fill in ... dip in' 0.47, 'entered' 0.34, German final 'ein' 0.28; 'call back' 0.08, 'lives in a small house in Ohio' 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " in",
+   " ein",
+   " entered"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-a5828b64",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N11461-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:10:56+00:00",
+ "recipe": {
+  "toolchain_commit": "cb93f7a1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N11461_neg/2026-11-05-lm1909-a5828b64.tests.json"
+ },
+ "label": "modal, 'to' or negation in talk of military power and confrontation ('before the United States could recover', 'the authority to deploy')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N11461_neg/2026-11-05-lm1909-a5828b64.tests.json",
+   "prereg_commit": "cb93f7a1e",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.336,
+     "peak": " could"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.329,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.195,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.205,
+     "peak": " invaders"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.489,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.111,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.164,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.237,
+     "peak": " bombers"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.107,
+     "peak": " could"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.069,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " keep"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.057,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.049,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.042,
+     "peak": " could"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.221,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb93f7a1e",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "war-power modal",
+ "unit_kind": "contextual / semantic",
+ "confidence": "low",
+ "notes": "Card: ' to' x7, ' could' x3, ' never' x3, ' not' x2, in war and state-power contexts. Probe: 'authority to deploy troops' 0.31, 'before the United States could recover' 0.23, 'power to wage war' 0.16; civil frames 0.03-0.06, but 'never' scored 0.10 in both war and food sentences.",
+ "selection": "random draw"
+}

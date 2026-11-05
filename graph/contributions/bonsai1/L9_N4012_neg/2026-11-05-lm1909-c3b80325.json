@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-c3b80325",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N4012-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:10:36+00:00",
+ "recipe": {
+  "toolchain_commit": "cb93f7a1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N4012_neg/2026-11-05-lm1909-c3b80325.tests.json"
+ },
+ "label": "biomolecule terms in science prose (amino acids, DNA, RNA, nucleotides)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N4012_neg/2026-11-05-lm1909-c3b80325.tests.json",
+   "prereg_commit": "cb93f7a1e",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.419,
+     "peak": " acids"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.206,
+     "peak": " short"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.138,
+     "peak": " would"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.167,
+     "peak": " cells"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.514,
+     "peak": " simple"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.101,
+     "peak": " cell"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.084,
+     "peak": " amino"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.179,
+     "peak": " solution"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.151,
+     "peak": " delivered"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.06,
+     "peak": " short"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.14,
+     "peak": " would"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.114,
+     "peak": " cultures"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.278,
+     "peak": " held"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " valleys"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.066,
+     "peak": " distant"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " wire"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.173,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb93f7a1e",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "biomolecule terms",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card top examples are mixed (' pro' of probed, ' Origin', ' heat', 'MR', ' amino'). Probe: ' acids' in 'amino acids' 0.82 (and 0.21 in a shorter sentence), ' DNA' 0.58; 'nutrients' 0.02. Astrobiology itself did not fire without these words. RNA and nucleotides are new.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "acids",
+   "DNA",
+   "RNA",
+   "nucleotides"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-a9da6b2c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N205-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:11:10+00:00",
+ "recipe": {
+  "toolchain_commit": "cb93f7a1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N205_neg/2026-11-05-lm1909-a9da6b2c.tests.json"
+ },
+ "label": "the counted noun in a 'number of …' or 'total of …' phrase (reads with the same sequence, nine kits; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N205_neg/2026-11-05-lm1909-a9da6b2c.tests.json",
+   "prereg_commit": "cb93f7a1e",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.058,
+     "peak": "n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.193,
+     "peak": " kits"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.03,
+     "peak": " prefix"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.177,
+     "peak": " address"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.176,
+     "peak": " kits"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.5,
+     "peak": " genotype"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.02,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.048,
+     "peak": " key"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.088,
+     "peak": "group"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.043,
+     "peak": " single"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " reads"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " welcome"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " flying"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.153,
+     "peak": " genotype"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.305,
+     "peak": " rows"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.727,
+    "median_fire": 0.117,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb93f7a1e",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "counted noun (guess)",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card shows no dominant token (' for', ' in', ' sequence', ' vectors', ' kits'). Probe: 'number of reads with the same sequence' 0.52, 'A total of six kits' 0.27, comprehension ' for' 0.10, 'vectors = [...]' 0.03. Code ' for' / ' in' in the top examples are not explained.",
+ "selection": "random draw"
+}
