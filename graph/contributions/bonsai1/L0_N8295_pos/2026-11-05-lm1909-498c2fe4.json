@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-498c2fe4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8295+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:34:08+00:00",
+ "recipe": {
+  "toolchain_commit": "a4f91fdde",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N8295_pos/2026-11-05-lm1909-498c2fe4.tests.json"
+ },
+ "label": "'...' opening a quoted excerpt on a new line after a colon",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N8295_pos/2026-11-05-lm1909-498c2fe4.tests.json",
+   "prereg_commit": "a4f91fdde",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.804,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.679,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.799,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.635,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.753,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.678,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.577,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.627,
+     "peak": "..."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.054,
+     "peak": " applies"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.043,
+     "peak": " why"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.092,
+     "peak": " walked"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.105,
+     "peak": " notes"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.264,
+     "peak": "Let"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.129,
+     "peak": " judge"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.135,
+     "peak": " account"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.046,
+     "peak": " raise"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.679,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a4f91fdde",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'...' opening an excerpt",
+ "unit_kind": "token / format",
+ "confidence": 0.65,
+ "notes": "The pole's corpus max is tiny (0.23), the card flags it broad, and the gate-closed regime dominates (71%). A coverage check should show how much the other top tokens (' :', '：', '!') add.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "..."
+  ]
+ }
+}

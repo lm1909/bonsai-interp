@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-81edff4f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N1379-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:54+00:00",
+ "recipe": {
+  "toolchain_commit": "a4f91fdde",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N1379_neg/2026-11-05-lm1909-81edff4f.tests.json"
+ },
+ "label": "the single capital letter that opens a name or abbreviation right after '(' or '-': (N|asdaq, (L|SE, (P|ieridae, -F|DA",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N1379_neg/2026-11-05-lm1909-81edff4f.tests.json",
+   "prereg_commit": "a4f91fdde",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.489,
+     "peak": "Z"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.445,
+     "peak": "N"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.012,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.015,
+     "peak": " day"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.812,
+     "peak": "-F"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.511,
+     "peak": "L"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.501,
+     "peak": "P"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.348,
+     "peak": "N"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.25,
+     "peak": "C"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": " study"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " day"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.187,
+     "peak": "a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.467,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a4f91fdde",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "capital opening a bracketed name",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.65,
+ "notes": "The card flags the pole as broad. Multi-letter first pieces such as (Adv|il and (Clar|itin were left out on purpose after a tokenizer check, so the test does not show how they behave.",
+ "selection": "random draw"
+}

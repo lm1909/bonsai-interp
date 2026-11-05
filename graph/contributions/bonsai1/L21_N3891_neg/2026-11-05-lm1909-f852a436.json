@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-f852a436",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N3891-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:41+00:00",
+ "recipe": {
+  "toolchain_commit": "a4f91fdde",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N3891_neg/2026-11-05-lm1909-f852a436.tests.json"
+ },
+ "label": "the library or namespace prefix of a qualified type in code and docstrings: 'matplotlib.', 'requests.', 'cv::', 'std::'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N3891_neg/2026-11-05-lm1909-f852a436.tests.json",
+   "prereg_commit": "a4f91fdde",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.168,
+     "peak": " matplotlib"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.341,
+     "peak": " asyncio"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.512,
+     "peak": "ask"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.025,
+     "peak": " requests"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.317,
+     "peak": "::"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.195,
+     "peak": " pandas"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.179,
+     "peak": ".socket"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.175,
+     "peak": "<int"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.046,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.059,
+     "peak": " float"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " tourist"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": " dict"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " /"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.066,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " :"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " items"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.187,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a4f91fdde",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "library prefix of a type",
+ "unit_kind": "code / contextual",
+ "confidence": 0.65,
+ "notes": "Probes: ' np' was weak (0.07-0.09) against 'requests' 0.65, so a very common alias may not fire.",
+ "selection": "random draw"
+}
