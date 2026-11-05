@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-292066a4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N12216-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:01:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N12216",
+   "pole": "-",
+   "label": "a split word-start ' ex', ' exc', ' exh' or ' e' on a word that does not get its own token (' ex|claim', ' exc|elled', ' e|ases', ' e|ke'), as opposed to other verbs in the same sentences",
+   "fire": [
+    "The neighbors exclaim that prices are mad, but nothing changes.",
+    "Her brother excelled at chess in the school club.",
+    "A warm bath eases muscle pain after the race.",
+    "Most farmers there eke out a living on small plots.",
+    "The new law will excite the voters in the suburbs.",
+    "Slowly she began to exhale and count to ten.",
+    "The rulers exiled the poet in the spring of 1820.",
+    "This walk often eases my mind when work is hard."
+   ],
+   "quiet": [
+    "The neighbors say that prices are mad, but nothing changes.",
+    "Her brother did well at chess in the school club.",
+    "A warm bath lowers muscle pain after the race.",
+    "Most farmers there earn a living on small plots.",
+    "The new law will please the voters in the suburbs.",
+    "Slowly she began to breathe and count to ten.",
+    "The rulers banned the poet in the spring of 1820.",
+    "This walk often calms my mind when work is hard."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split ' ex' / ' e' word start",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked for all fire words. Whole tokens like ' exhibited' were silent in a probe (0.00). Card's 'c' and Cyrillic ' э' are not tested."
+}
