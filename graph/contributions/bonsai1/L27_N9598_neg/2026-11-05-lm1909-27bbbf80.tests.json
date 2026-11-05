@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-27bbbf80",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9598-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:39:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N9598",
+   "pole": "-",
+   "label": "(sub-trigger of a broad pole) the opening quote of the message in 'raise XError(' or 'pytest.mark.skip('",
+   "fire": [
+    "raise ValueError('bad input')\n",
+    "raise NotImplementedError('subclasses must do this')\n",
+    "@pytest.mark.skip('flaky on CI')\ndef test_b():\n    assert True\n",
+    "if n < 0:\n    raise RuntimeError('negative count')\n",
+    "raise TypeError('expected a string')\n",
+    "@pytest.mark.skip('needs network')\ndef test_c():\n    assert True\n",
+    "def run(self):\n    raise NotImplementedError('override run')\n",
+    "raise KeyError('missing key')\n"
+   ],
+   "quiet": [
+    "log.append('bad input')\n",
+    "names.append('subclasses must do this')\n",
+    "@pytest.mark.parametrize('x', [1, 2])\ndef test_b(x):\n    assert True\n",
+    "if n < 0:\n    print('negative count')\n",
+    "text = str('expected a string')\n",
+    "@app.route('/home')\ndef page():\n    return 'ok'\n",
+    "def run(self):\n    return open('override.txt')\n",
+    "value = d.get('missing key')\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "message quote after raise / skip",
+ "unit_kind": "token / code",
+ "confidence": 0.6,
+ "notes": "The card flags this pole broad (2.8% of tokens reach 0.1 of max), so a hold can only be a sub-trigger. Probes: raise NotImplementedError(' 0.54, mark.skip(' 0.62, print(' 0.04, ' broken' in a comment 0.33. The Russian 'ление' and other top examples stay unexplained."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-6c792ec2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N1580+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:39:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N1580",
+   "pole": "+",
+   "label": "preposition after a school-stage word, expecting a school next: 'senior year in', 'graduating from', 'while still in', 'a junior in'",
+   "fire": [
+    "He took up chess during his sophomore year in high school.",
+    "She met him right after graduating from college.",
+    "She wrote her first novel while she was still in school.",
+    "As a freshman in Ohio, she won the state title.",
+    "They married soon after he graduated from law school.",
+    "My junior year in college was the hardest of all.",
+    "He began coding as a senior in Denver.",
+    "He sold his first app while still in high school."
+   ],
+   "quiet": [
+    "He took up chess during his long stay in Colorado.",
+    "She met him right after returning from Canada.",
+    "She wrote her first novel while she was living in Spain.",
+    "As a lawyer in Ohio, she won the state title.",
+    "They married soon after he returned from a trip.",
+    "My last week in Paris was the hardest of all.",
+    "He began coding as a clerk in Denver.",
+    "He sold his first app while working in sales."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "preposition expecting a school",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.8,
+ "notes": "Output promotes ' college', ' university', ' undergraduate'; the - pole fires on ' school' and ' college'. Probes: ' in' after 'senior year' 0.91, 'junior' 0.77, 'while still' 0.87 (also before 'prison', since it can only see the prefix), ' from' after 'graduating' 0.67; 'moving from' 0.13. The peak comes on the preposition, before the school word."
+}

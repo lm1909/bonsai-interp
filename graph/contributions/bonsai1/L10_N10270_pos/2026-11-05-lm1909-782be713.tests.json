@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-05-lm1909-782be713",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10270+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:39:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N10270",
+   "pole": "+",
+   "label": "exception-raising options and docs in Python: ':raises:', 'raise_exception=', 'raise_on_', 'fail_on_' (English 'raises prices' stays quiet)",
+   "fire": [
+    "    :param q: the query\n    :raises: KeyError if q is missing\n",
+    "form.is_valid(raise_exception=True)\nform.save()\n",
+    "def fetch(url, raise_on_error=False):\n    return get(url)\n",
+    "def load(path, fail_on_missing=True):\n    return open(path)\n",
+    "    :returns: a list\n    :raises: TypeError if n is odd\n",
+    "def put(self, item, raise_exception=True):\n    self.items.append(item)\n",
+    "client.post(url, fail_on_bad_code=True)\n",
+    "run(cmd, raise_on_failure=True)\n"
+   ],
+   "quiet": [
+    "    :param q: the query\n    :returns: the row for q\n",
+    "form.is_valid(partial=True)\nform.save()\n",
+    "def fetch(url, use_cache=False):\n    return get(url)\n",
+    "def load(path, keep_open=True):\n    return open(path)\n",
+    "    :returns: a list\n    :type n: an odd number\n",
+    "def put(self, item, overwrite=True):\n    self.items.append(item)\n",
+    "The landlord raises the rent every January.",
+    "Each spring the club raises money for the school."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "raise_/fail_on options, :raises:",
+ "unit_kind": "token / code",
+ "confidence": 0.8,
+ "notes": "Probes: ':raises:' 0.67, 'raise' in raise_exception 0.53, '_on' in fail_on_error 0.59; bare 'Raises:' peaks at 0.30 on ' if'; 'raises prices' 0.00, 'raises cattle' 0.01. Near misses keep the code shape with other option names, and two keep the English verb.",
+ "trigger": {
+  "tokens": [
+   "raises",
+   " Raises",
+   " raise",
+   "raise",
+   "Raises",
+   "_on"
+  ]
+ }
+}
