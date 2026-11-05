@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-05-lm1909-aa649ac3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N3173-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:37:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N3173",
+   "pole": "-",
+   "label": "the full stop token '.', firing wherever one appears (sentence ends and after numbers)",
+   "fire": [
+    "The bus leaves at 7. Bring a coat and some water",
+    "Call the front desk at extension 220. They can help after hours",
+    "The bakery on this corner was run by Mrs Hall. It closed in 1975",
+    "The meeting starts at 3. Please be on time",
+    "Room 14 is on the second floor. The stairs are to the left",
+    "It rained all week. Nobody went outside",
+    "The film runs for 90 minutes. Tickets are sold at the door",
+    "My sister lives in a small flat near the station. She walks to work"
+   ],
+   "quiet": [
+    "The bus leaves at 7, so bring a coat and some water",
+    "Call the front desk at extension 220 because they can help after hours",
+    "The bakery on this corner was run by Mrs Hall until it closed in 1975",
+    "Does the meeting start at 3? Please be on time!",
+    "Room 14 is on the second floor, and the stairs are to the left",
+    "It rained all week, and nobody went outside",
+    "The film runs for 90 minutes and tickets are sold at the door",
+    "My sister lives in a small flat near the station and walks to work"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the full stop",
+ "unit_kind": "token / punctuation",
+ "confidence": 0.6,
+ "notes": "Probes showed the full stop firing in every position tried, including 'Dr.' and 'St.', so the near misses here contain no full stop at all. The card flags the pole as broad.",
+ "trigger": {
+  "tokens": [
+   "."
+  ]
+ }
+}
