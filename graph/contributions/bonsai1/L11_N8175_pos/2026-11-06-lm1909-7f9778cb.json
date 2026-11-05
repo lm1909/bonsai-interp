@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7f9778cb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N8175+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:44:34+00:00",
+ "recipe": {
+  "toolchain_commit": "3c6128954",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N8175_pos/2026-11-06-lm1909-7f9778cb.tests.json"
+ },
+ "label": "British and common-law institutions named as such: law branches (tort law, common law), the Crown, the courts, numbered Regiments; other institutions and topics stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N8175_pos/2026-11-06-lm1909-7f9778cb.tests.json",
+   "prereg_commit": "3c6128954",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.669,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.666,
+     "peak": " tort"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.341,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.518,
+     "peak": " Regiment"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.337,
+     "peak": " Regiment"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.465,
+     "peak": "Justice"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.444,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.238,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " launched"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "Students"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " Art"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " singer"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " trade"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.455,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c6128954",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "common law, Crown, regiments",
+ "unit_kind": "semantic / topic",
+ "confidence": 0.65,
+ "notes": "A list of two fields (law, army) with one shared flavour; I did not find a tighter pattern. ' courts' read 0.28.",
+ "selection": "random draw"
+}

@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-218f3ec1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N4176-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:43:34+00:00",
+ "recipe": {
+  "toolchain_commit": "3c6128954",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N4176_neg/2026-11-06-lm1909-218f3ec1.tests.json"
+ },
+ "label": "The first piece ' gl' or ' гл' of a word, mostly outside English (gl|ándula, гл|убокий), and ' ép' (ép|oca); whole-token English gl- words stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N4176_neg/2026-11-06-lm1909-218f3ec1.tests.json",
+   "prereg_commit": "3c6128954",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.649,
+     "peak": " gl"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.265,
+     "peak": " gl"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.276,
+     "peak": " гл"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.369,
+     "peak": " гл"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.403,
+     "peak": " ép"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.49,
+     "peak": " ép"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.585,
+     "peak": " gl"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.11,
+     "peak": " гл"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "u"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.048,
+     "peak": "з"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "смотр"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "ran"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": " r"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " papel"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " стар"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.386,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c6128954",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word piece gl-/гл-/ép-",
+ "unit_kind": "token piece",
+ "confidence": 0.65,
+ "notes": "English ' gl' of glutes read 0.25, whole-token global and glass under 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " gl",
+   " гл",
+   " ép"
+  ]
+ }
+}
