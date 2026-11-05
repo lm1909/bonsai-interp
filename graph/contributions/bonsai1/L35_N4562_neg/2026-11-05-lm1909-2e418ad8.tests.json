@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-2e418ad8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4562-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:24:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N4562",
+   "pole": "-",
+   "label": "the word-initial piece ' з' or ' z' of a Slavic word that the tokenizer splits (з|ел|ёного, з|ем|ли, z|em|ljepisnih)",
+   "fire": [
+    "В лавке продавали платки синего, красного, зелёного цвета.",
+    "Мы долго шли по горам Святой земли вместе с паломниками.",
+    "Охотники рассказывали о диких зверях старого леса.",
+    "На рынке было много белого, жёлтого, зелёного товара.",
+    "Старик говорил о родной земле и о своих детях.",
+    "В сказке всем зверям леса дали новые имена.",
+    "Slovenski zemljepisni atlas je izšel lani v Ljubljani.",
+    "Hrvatska zemljopisna karta visi na zidu u razredu."
+   ],
+   "quiet": [
+    "В лавке продавали платки синего, красного, чёрного цвета.",
+    "Мы долго шли по горам старой страны вместе с паломниками.",
+    "Охотники рассказывали о диких волках старого леса.",
+    "На рынке было много белого, жёлтого, серого товара.",
+    "Старик говорил о родной деревне и о своих детях.",
+    "В сказке всем детям леса дали новые имена.",
+    "Slovenski pomorski atlas je izšel lani v Ljubljani.",
+    "Hrvatska stara karta visi na vratima u razredu."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split word-initial з / z",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: ' з' x6, ' зап' x3, 'оп' x4, ' Z' among the top peaks at the last layer. Probes: ' z' in zemljepisnih 0.812, ' з' in зелёного 0.544, ' з' in земли/зверям 0.236; but зелёное in a short sentence stayed at 0.033, and 'уп' in злоупотреблении reached 0.534, so ' з' alone will not explain the pole. Tokenization was checked for every sentence before commit, without scoring: fire items contain a split ' з' or ' z'; near misses keep the frame and use a word without it."
+}

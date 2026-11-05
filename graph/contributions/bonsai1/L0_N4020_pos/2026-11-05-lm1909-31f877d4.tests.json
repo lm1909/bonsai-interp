@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-31f877d4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4020+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:24:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N4020",
+   "pole": "+",
+   "label": "domain and path tokens inside a web address, strongest on '.gov' (www.agency.gov/...), not the same institution named in plain prose",
+   "fire": [
+    "The full rules are posted at http://www.epa.gov/water/rules for anyone curious.",
+    "Applicants should visit www.irs.gov/forms before the April deadline.",
+    "Maps of the park appear at http://www.nps.gov/yell/planyourvisit online.",
+    "You can check recalls at http://www.fda.gov/safety each week.",
+    "Census tables were retrieved from http://www.census.gov/data in June.",
+    "The weather office posts alerts on www.weather.gov/alerts during storms.",
+    "Our source is http://www.bls.gov/cpi, accessed in March 2015.",
+    "A list of grants is kept at http://www.nsf.gov/funding by the foundation."
+   ],
+   "quiet": [
+    "The full rules are posted on the water pages of the environment agency.",
+    "Applicants should visit the tax office before the April deadline.",
+    "Maps of the park appear in the visitor guide at the Yellowstone entrance.",
+    "You can check recalls with the food safety regulators each week.",
+    "Census tables were retrieved from the statistics bureau in June.",
+    "The weather office posts alerts on its home page during storms.",
+    "Our source is the labor bureau's price index, accessed in March 2015.",
+    "A list of grants is kept by the science foundation in its annual report."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "URL domain token (.gov)",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: '.gov' x17, '.net' x4, '/~' x3 in the top 32; max only 0.59, broad flag 1.5%. Probes: '.gov' 0.49-0.65, but '.edu' 0.31, '/news' after .org 0.37 and '/forum' 0.44, so it is not .gov-only; prose naming the agency stayed under 0.1. The test contrasts URLs with prose, not .gov with other domains.",
+ "trigger": {
+  "tokens": [
+   ".gov",
+   ".net",
+   ".org",
+   ".edu"
+  ]
+ }
+}

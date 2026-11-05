@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-ad544569",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N2960-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:24:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N2960",
+   "pole": "-",
+   "label": "sentence- or clause-ending punctuation or a newline after a complete concrete statement ('.\\n', newline, comma before a new clause)",
+   "fire": [
+    "We walked along the beach all morning and found three shells.\nLunch was at a small cafe.",
+    "The plumber fixed the leak under the sink.\nHe charged us forty dollars.",
+    "Maria painted the fence on Saturday, and her brother cut the grass.",
+    "My neighbor sold his old truck to a farmer.\nThe farmer drove it home.",
+    "Fresh Tomato Soup with Basil and Cream\nA Simple Family Recipe",
+    "The bus to the airport leaves at noon, and it stops twice.",
+    "Add a colorful silk ribbon to your summer hat.\nGift cards are available in store.",
+    "The kids built a snowman behind the garage.\nIt melted by Tuesday."
+   ],
+   "quiet": [
+    "We walked along the beach all morning and found three shells before lunch at a small cafe",
+    "The plumber fixed the leak under the sink and charged us forty dollars",
+    "Maria painted the fence on Saturday while her brother cut the grass",
+    "My neighbor sold his old truck to a farmer who drove it home",
+    "Fresh tomato soup with basil and cream is a simple family recipe",
+    "The bus to the airport leaves at noon and stops twice",
+    "Add a colorful silk ribbon to your summer hat or buy gift cards in store",
+    "The kids built a snowman behind the garage that melted by Tuesday"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "clause-ending punctuation",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card peaks on '\\n', ',', '.\\n', '.' with no topic. Probes: '.\\n' 0.33-0.58, final '.' up to 0.36, a clause comma 0.27; the same sentences without the boundary about 0.02, but 'Hello everyone, welcome back' stayed at 0.045, so this is not universal. Near misses keep the words and drop the punctuation and line breaks."
+}
