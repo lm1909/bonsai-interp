@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-1a3be5cd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N2032-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:47:18+00:00",
+ "recipe": {
+  "toolchain_commit": "d6d582369",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N2032_neg/2026-11-06-lm1909-1a3be5cd.tests.json"
+ },
+ "label": "' another' or 'Trying' in an English message inside a Python string",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N2032_neg/2026-11-06-lm1909-1a3be5cd.tests.json",
+   "prereg_commit": "d6d582369",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.414,
+     "peak": " another"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.042,
+     "peak": " another"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.408,
+     "peak": " another"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.187,
+     "peak": " port"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.052,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.528,
+     "peak": " another"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.062,
+     "peak": " another"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.188,
+     "peak": " client"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.079,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "print"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.084,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.251,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.138,
+     "peak": "s"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.227,
+     "peak": "Cannot"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": ".\")"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.099,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.656,
+    "median_fire": 0.188,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d6d582369",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' another'/'Trying' in code strings",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Probes also fired '.add' (0.18-0.36), not covered by this label.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " another",
+   "Trying"
+  ]
+ }
+}
