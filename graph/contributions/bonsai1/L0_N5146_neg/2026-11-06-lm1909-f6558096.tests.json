@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-f6558096",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5146-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:49:31+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N5146",
+   "pole": "-",
+   "label": "the word ' the' / 'The', as opposed to a, this and no article in the same sentences",
+   "fire": [
+    "We split the data on each server.",
+    "Please close the door behind you.",
+    "The bird sat on the wire outside.",
+    "Alexander the Great died at thirty-two.",
+    "Turn off the lights before you go.",
+    "He plays the violin at weddings.",
+    "The river is low this year.",
+    "Ask the teacher about it tomorrow."
+   ],
+   "quiet": [
+    "We split some data on each server.",
+    "Please close a door behind you.",
+    "Birds sat on a wire outside.",
+    "Alexander died at thirty-two.",
+    "Turn off those lights before you go.",
+    "He plays violin at weddings.",
+    "Rivers are low this year.",
+    "Ask your teacher about it tomorrow."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "the word 'the'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card flags this pole as broad (2.1%), and its top 32 are all the/The. Max 2.19. In a probe, the 'the' in ' thead' also fired (0.62), so it may be about the piece.",
+ "trigger": {
+  "tokens": [
+   " the",
+   " The",
+   "The"
+  ]
+ }
+}
