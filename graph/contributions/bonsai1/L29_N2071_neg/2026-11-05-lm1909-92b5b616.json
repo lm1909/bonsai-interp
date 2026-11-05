@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-92b5b616",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N2071-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:36:37+00:00",
+ "recipe": {
+  "toolchain_commit": "12188d197",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N2071_neg/2026-11-05-lm1909-92b5b616.tests.json"
+ },
+ "label": "re-doing something: the prefix re- or 再/재 on making anew (redesign, rebuild, reengineer, 再建)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N2071_neg/2026-11-05-lm1909-92b5b616.tests.json",
+   "prereg_commit": "12188d197",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.383,
+     "peak": " re"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.444,
+     "peak": " rev"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.475,
+     "peak": "再"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.056,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.094,
+     "peak": " redesigned"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.78,
+     "peak": "再"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.263,
+     "peak": " re"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.203,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " software"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " create"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": "について"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " test"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " painted"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": "を"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " clean"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " catalog"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.323,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "12188d197",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "re- (doing anew)",
+ "unit_kind": "semantic / token piece",
+ "confidence": "medium",
+ "notes": "Output direction promotes ' re', ' redesign', ' retrofit', ' refactor', ' redo'. Card: ' re' x8, '再' x3, ' 재' x2, ' rev' x2. Probe: 再建 0.79, reengineering 0.46, redesigned/revamped 0.29; 'designed ... launched' 0.00. 'Destroyed ... it was' fired 0.56 whatever followed, so 'destroyed' frames are avoided here.",
+ "selection": "random draw"
+}

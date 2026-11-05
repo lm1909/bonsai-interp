@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-4deb5566",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N10668-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:36:20+00:00",
+ "recipe": {
+  "toolchain_commit": "12188d197",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N10668_neg/2026-11-05-lm1909-4deb5566.tests.json"
+ },
+ "label": "token after a clause boundary that carries on the explanation (guess; broad unit)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N10668_neg/2026-11-05-lm1909-4deb5566.tests.json",
+   "prereg_commit": "12188d197",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.406,
+     "peak": " Probably"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.09,
+     "peak": " warm"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.034,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.096,
+     "peak": " late"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.16,
+     "peak": " fingers"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.069,
+     "peak": " concert"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.359,
+     "peak": " people"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.042,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.048,
+     "peak": " pretty"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.041,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": " report"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.054,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": " good"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.093,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "12188d197",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "clause continuation (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (2.3% of tokens); peaks are ' to', '.', ' Probably', ' so', ' touched', '?', ':'. Four probes scored 0.07-0.14. A best guess.",
+ "selection": "random draw"
+}

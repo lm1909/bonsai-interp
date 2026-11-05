@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-583b644d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N2256+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:37:12+00:00",
+ "recipe": {
+  "toolchain_commit": "12188d197",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N2256_pos/2026-11-05-lm1909-583b644d.tests.json"
+ },
+ "label": "the period ending the results of a structured abstract, just before 'Conclusion'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N2256_pos/2026-11-05-lm1909-583b644d.tests.json",
+   "prereg_commit": "12188d197",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.687,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.446,
+     "peak": ")."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.36,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.139,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.266,
+     "peak": " Results"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.646,
+     "peak": ").\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.565,
+     "peak": ")."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.241,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " larger"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " these"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " this"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.403,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "12188d197",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "abstract results period",
+ "unit_kind": "format / contextual",
+ "confidence": "low",
+ "notes": "Card: '.\\n' x6, '.' x4, ').\\n' x4, ' results' x4, almost all right before 'Conclusion(s)'. The output promotes ' Overview'. Probe: 'P = .46). CONCLUSIONS' 0.27, 'Conclusion.' sentence 0.08; narrative 0.00-0.02.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-da4e7c99",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N6564+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:36:01+00:00",
+ "recipe": {
+  "toolchain_commit": "12188d197",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N6564_pos/2026-11-05-lm1909-da4e7c99.tests.json"
+ },
+ "label": "opening piece of a word split by the tokenizer (' Barr|icades', 'Ke|in', '다|음'; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N6564_pos/2026-11-05-lm1909-da4e7c99.tests.json",
+   "prereg_commit": "12188d197",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.236,
+     "peak": " barric"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.365,
+     "peak": " Barr"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.658,
+     "peak": " Barr"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.476,
+     "peak": "다"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.497,
+     "peak": "다"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.118,
+     "peak": " Mär"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.112,
+     "peak": "Ke"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.333,
+     "peak": " Barr"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.1,
+     "peak": "test"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " ended"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.151,
+     "peak": "그"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": "그래"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.103,
+     "peak": " Mär"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": "Ein"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " novel"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.349,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "12188d197",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-word opening (guess)",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Card: '�' x6, '다' x3, ' Dop' x2, 'arg' x2. Probe: ' Barr' 0.58, '다' 0.45, 'Ke' 0.11, '差不多' 0.02 (top example scored low outside its long context).",
+ "selection": "random draw"
+}

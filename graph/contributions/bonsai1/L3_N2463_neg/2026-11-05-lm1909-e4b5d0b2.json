@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e4b5d0b2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2463-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:36:42+00:00",
+ "recipe": {
+  "toolchain_commit": "12188d197",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N2463_neg/2026-11-05-lm1909-e4b5d0b2.tests.json"
+ },
+ "label": "rare Hangul or CJK syllable split into byte pieces (' �' in 튼튼, '蒂' in 梵蒂冈; gate-closed unit)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N2463_neg/2026-11-05-lm1909-e4b5d0b2.tests.json",
+   "prereg_commit": "12188d197",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.402,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.262,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.186,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.174,
+     "peak": "다"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.332,
+     "peak": "蒂"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.327,
+     "peak": "그"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.242,
+     "peak": "蒂"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.485,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.099,
+     "peak": "서"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.12,
+     "peak": "자는"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.116,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.096,
+     "peak": " 다"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.034,
+     "peak": "教"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.105,
+     "peak": "그"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.047,
+     "peak": "古"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.098,
+     "peak": " 사"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.294,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "12188d197",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "rare syllable pieces",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card flags gate-closed (99% leak); ' �' x9, 'T' x2, '타' x2, '托' x2. Probe: 튼튼 0.90, 타 0.27, 蒂 0.17; English 0.01. Which syllables split was not checked before commit.",
+ "selection": "random draw"
+}
