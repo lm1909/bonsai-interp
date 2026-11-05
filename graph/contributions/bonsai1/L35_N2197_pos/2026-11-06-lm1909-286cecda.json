@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-286cecda",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N2197+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:37:44+00:00",
+ "recipe": {
+  "toolchain_commit": "45b1155d9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N2197_pos/2026-11-06-lm1909-286cecda.tests.json"
+ },
+ "label": "the partial-byte token opening a Korean word with a rarer first syllable (앵커, 암살, 애착, 야당, 약속)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N2197_pos/2026-11-06-lm1909-286cecda.tests.json",
+   "prereg_commit": "45b1155d9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.688,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.455,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.718,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.372,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.479,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.606,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.356,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.354,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " 집"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " 사람"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "에"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " 사람"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " 집"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.031,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "와"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.095,
+     "peak": " �"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.467,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45b1155d9",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "partial-byte token of rarer Korean syllables",
+ "unit_kind": "token piece / language",
+ "confidence": "medium",
+ "notes": "Common Korean also splits into a partial-byte token, but with low activation in the probes (' 공', ' 간' about 0.05, ' 먹' 0.02); ' 약국' gave 0.12 while ' 약속' gave 0.50, so the rule is not simply 'rare syllable'. The pole also fires on Japanese ' サーテ' and French ' ré'.",
+ "selection": "random draw"
+}

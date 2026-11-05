@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e4cd4218",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N4649-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:38:09+00:00",
+ "recipe": {
+  "toolchain_commit": "45b1155d9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N4649_neg/2026-11-06-lm1909-e4cd4218.tests.json"
+ },
+ "label": "sitting idly among an audience or in bed (sitting in the audience, sitting in bed waiting)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N4649_neg/2026-11-06-lm1909-e4cd4218.tests.json",
+   "prereg_commit": "45b1155d9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.658,
+     "peak": " audience"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.912,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.806,
+     "peak": " audience"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.912,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.923,
+     "peak": " silence"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.98,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.737,
+     "peak": " audience"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.867,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " giving"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.006,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " talk"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.308,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.038,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " son"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.083,
+     "peak": " pause"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.889,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45b1155d9",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "sitting idly (guess)",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Weak guess: 'sitting in the audience' and 'sitting in bed, waiting with' reached 0.83-0.92 in the probes, but 'sitting at the kitchen table' and 'sitting on the couch' stayed at 0.04 or less. I could not explain that difference.",
+ "selection": "random draw"
+}
