@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-aa32324a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N459+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:26:06+00:00",
+ "recipe": {
+  "toolchain_commit": "4eafd74f3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N459_pos/2026-11-06-lm1909-aa32324a.tests.json"
+ },
+ "label": "police reports of a violent crime: a suspect taken into custody, unknown attackers",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N459_pos/2026-11-06-lm1909-aa32324a.tests.json",
+   "prereg_commit": "4eafd74f3",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.936,
+     "peak": " suspect"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.9,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.55,
+     "peak": " gunmen"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.249,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.835,
+     "peak": " person"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.045,
+     "peak": " suspect"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.313,
+     "peak": " attackers"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.418,
+     "peak": " taken"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " schools"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.116,
+     "peak": " men"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.249,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.353,
+     "peak": " took"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.088,
+     "peak": " remains"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.035,
+     "peak": " dancers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.418,
+     "peak": " taken"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.484,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4eafd74f3",
+  "minutes": 16,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "crime report: suspect, custody",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "selection": "random draw"
+}
