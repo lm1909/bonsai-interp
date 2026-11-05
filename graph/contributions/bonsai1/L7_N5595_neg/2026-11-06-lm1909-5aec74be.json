@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5aec74be",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N5595-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:47:02+00:00",
+ "recipe": {
+  "toolchain_commit": "fd06fe79d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N5595_neg/2026-11-06-lm1909-5aec74be.tests.json"
+ },
+ "label": "the word completed after a superlative marker, in many languages (le plus possible, min|dest|ens, самые луч|шие, наиболее вероят|но, 最主要, the most out of), as opposed to the same sentences with no superlative",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N5595_neg/2026-11-06-lm1909-5aec74be.tests.json",
+   "prereg_commit": "fd06fe79d",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.325,
+     "peak": " possible"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.592,
+     "peak": "dest"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.016,
+     "peak": " ц"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.183,
+     "peak": " наиболее"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.352,
+     "peak": "最重要"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.043,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.072,
+     "peak": " posible"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.394,
+     "peak": "最主要"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " un"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " dem"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " ц"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": "а"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": " part"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " restaurant"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": "水"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.93,
+    "median_fire": 0.339,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd06fe79d",
+  "minutes": 1,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "after a superlative marker (many languages)",
+ "unit_kind": "syntactic",
+ "confidence": "high",
+ "notes": "'mindestens' is checked only by probe. In English only ' most out of' was probed.",
+ "selection": "random draw"
+}

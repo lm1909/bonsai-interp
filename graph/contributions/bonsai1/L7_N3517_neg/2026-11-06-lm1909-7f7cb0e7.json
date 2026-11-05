@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7f7cb0e7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N3517-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:47:10+00:00",
+ "recipe": {
+  "toolchain_commit": "fd06fe79d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N3517_neg/2026-11-06-lm1909-7f7cb0e7.tests.json"
+ },
+ "label": "the piece right after 'non' or 'non-' (non|traditional, non|standard, non-|f|arm, non|met|als, non|violent), as opposed to the same word without 'non'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N3517_neg/2026-11-06-lm1909-7f7cb0e7.tests.json",
+   "prereg_commit": "fd06fe79d",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.59,
+     "peak": "traditional"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.785,
+     "peak": "standard"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.77,
+     "peak": "farm"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.104,
+     "peak": "bal"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.026,
+     "peak": "violent"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.035,
+     "peak": "fiction"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.229,
+     "peak": "-native"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.126,
+     "peak": "com"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " classes"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " program"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " thesis"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " march"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " titles"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " speakers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " for"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.177,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd06fe79d",
+  "minutes": 1,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "word after non- / non",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked: words where 'non' is merged (' nonprofit', ' nonlinear', ' nonsense') are left out. The card's digit peaks ('6', '3') are not covered.",
+ "selection": "random draw"
+}

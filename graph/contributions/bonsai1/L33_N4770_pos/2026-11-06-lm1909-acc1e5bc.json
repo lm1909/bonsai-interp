@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-acc1e5bc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4770+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:48:26+00:00",
+ "recipe": {
+  "toolchain_commit": "fd06fe79d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N4770_pos/2026-11-06-lm1909-acc1e5bc.tests.json"
+ },
+ "label": "Korean ' 활' (the start of 활동, 활성, 활발) and its Japanese counterpart 活, as opposed to the same sentences with other words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N4770_pos/2026-11-06-lm1909-acc1e5bc.tests.json",
+   "prereg_commit": "fd06fe79d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.961,
+     "peak": " 활"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.874,
+     "peak": " 활"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.031,
+     "peak": " 활"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.73,
+     "peak": " 활"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.04,
+     "peak": " 활"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.545,
+     "peak": "活"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.948,
+     "peak": "活"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.588,
+     "peak": " 활"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": "이"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " 지역"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "들은"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " 다시"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "くなります"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.222,
+     "peak": "も"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "교"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.911,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd06fe79d",
+  "minutes": 3,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "Korean 활 / Japanese 活",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "The Japanese tokens are split into bytes in some cases (活発 printed as five byte tokens), so '活' may not always be one token. Chinese 活跃 scored 0.04 in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " 활",
+   "活"
+  ]
+ }
+}

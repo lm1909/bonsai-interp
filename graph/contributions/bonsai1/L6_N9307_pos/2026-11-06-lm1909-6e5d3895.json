@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6e5d3895",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9307+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:47:13+00:00",
+ "recipe": {
+  "toolchain_commit": "fd06fe79d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N9307_pos/2026-11-06-lm1909-6e5d3895.tests.json"
+ },
+ "label": "a human as a person: ' being' in 'human being', ' человек', people's ' representatives', as opposed to animals and things in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N9307_pos/2026-11-06-lm1909-6e5d3895.tests.json",
+   "prereg_commit": "fd06fe79d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.724,
+     "peak": " being"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.344,
+     "peak": " beings"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.391,
+     "peak": " человек"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.48,
+     "peak": " representatives"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.688,
+     "peak": " being"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.331,
+     "peak": " человек"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.302,
+     "peak": " who"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.871,
+     "peak": " being"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " morning"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.042,
+     "peak": " fresh"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.043,
+     "peak": " один"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.058,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.042,
+     "peak": "л"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " chart"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.435,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd06fe79d",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "human being, a person as such",
+ "unit_kind": "semantic",
+ "confidence": "low",
+ "notes": "Card flags this pole as broad (1.9%), and its other peaks ('ores', '着', ' being' in other uses) are not explained. Near misses are easy.",
+ "selection": "random draw"
+}
