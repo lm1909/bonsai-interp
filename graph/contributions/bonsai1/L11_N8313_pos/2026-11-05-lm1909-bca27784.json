@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-bca27784",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N8313+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:49+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N8313_pos/2026-11-05-lm1909-bca27784.tests.json"
+ },
+ "label": "(guess, positional) the newline of a wrapped line in the middle of a sentence",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N8313_pos/2026-11-05-lm1909-bca27784.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.026,
+     "peak": " found"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.025,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.022,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.023,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.023,
+     "peak": " later"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.034,
+     "peak": " water"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.03,
+     "peak": " draft"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.028,
+     "peak": " tool"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": " found"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " later"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": " draft"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": " using"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.531,
+    "median_fire": 0.026,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "mid-sentence line wrap (guess, positional)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card: '\\n' 31 of the top 32, flagged positional (top peaks cluster near window position 8). But my probes of mid-sentence wraps all stayed under 0.07, including near-copies of top examples, so I don't know what else it needs. Expected to fail; recorded so the draw stays complete.",
+ "selection": "random draw"
+}

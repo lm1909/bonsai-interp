@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-d245b9a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N11210+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:30+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N11210_pos/2026-11-05-lm1909-d245b9a5.tests.json"
+ },
+ "label": "(guess) the piece just after a glue point in a rare compound or fantasy name: Zul'|G|urub, Honu'|ea, week|n|ights",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N11210_pos/2026-11-05-lm1909-d245b9a5.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.897,
+     "peak": "G"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.866,
+     "peak": "ights"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.795,
+     "peak": "ea"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.863,
+     "peak": "ights"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.821,
+     "peak": "F"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.807,
+     "peak": "ea"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.855,
+     "peak": "ights"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.914,
+     "peak": "G"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.046,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.094,
+     "peak": "heads"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.031,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.043,
+     "peak": " nine"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.041,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.859,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "piece after a glue point (guess)",
+ "unit_kind": "token piece / unclear",
+ "confidence": 0.4,
+ "notes": "Card: gate-closed (-x- echo 100%), weak (max 1.71), no single token. Probes: 'G' 0.86, 'ea' 0.83, 'ights' 0.72-0.81, 'F' 0.63, 'ah' 0.37; plain sentences 0.03-0.06; Abbas 0.03. 'Glue point' is my reading of the pattern.",
+ "selection": "random draw"
+}

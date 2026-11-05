@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-86a8e5fe",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11075+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:28+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N11075_pos/2026-11-05-lm1909-86a8e5fe.tests.json"
+ },
+ "label": "surname and place-name tails in rarer names: 'insky', 'inka', 'ody' (gate-closed, broad pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N11075_pos/2026-11-05-lm1909-86a8e5fe.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.825,
+     "peak": "inka"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.513,
+     "peak": "insky"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.816,
+     "peak": "ody"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.735,
+     "peak": "inka"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.143,
+     "peak": " composer"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.41,
+     "peak": "insky"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.755,
+     "peak": "ody"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.807,
+     "peak": "inka"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.155,
+     "peak": " range"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.069,
+     "peak": " code"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.1,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.066,
+     "peak": " moved"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": " composer"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.056,
+     "peak": " interview"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.068,
+     "peak": " Spain"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.045,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.745,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tails of rare names",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "The card flags it dense (11% of tokens reach 0.1 of max) in the gate-closed regime, so the test may fail on density, but probes separate well: 'inka' 0.88, 'ody' 0.76, 'insky' 0.60; a plain sentence 0.06. The tail tokens were checked.",
+ "selection": "random draw"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-c741b9e1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N11220-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:42+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N11220_neg/2026-11-05-lm1909-c741b9e1.tests.json"
+ },
+ "label": "PLoS citations: the digit in the DOI prefix 10.1371, and the journal name PLoS",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N11220_neg/2026-11-05-lm1909-c741b9e1.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.025,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.454,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.902,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.554,
+     "peak": "):"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.846,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.646,
+     "peak": "):"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.519,
+     "peak": "):"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.917,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.276,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.047,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.224,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.135,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " Lanc"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.142,
+     "peak": "0"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.746,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "PLoS citations, DOI 10.1371",
+ "unit_kind": "token / contextual",
+ "confidence": 0.85,
+ "notes": "Card: 'S' 7, '1' 4, 'LOS' 3. Probes: '1' in 10.1371 0.87, PLoS One line 0.54; Nature DOI 0.18, Lancet line 0.09. Near misses keep the citation shape with other journals.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-4a600874",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3063+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:25+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N3063_pos/2026-11-05-lm1909-4a600874.tests.json"
+ },
+ "label": "the word spatial, mostly in ecology and statistics",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N3063_pos/2026-11-05-lm1909-4a600874.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.577,
+     "peak": " spatial"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.429,
+     "peak": " spatial"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.484,
+     "peak": " spatial"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.466,
+     "peak": " spatial"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.325,
+     "peak": "Spatial"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.433,
+     "peak": " spatial"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.624,
+     "peak": " spatial"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.569,
+     "peak": " spatial"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.061,
+     "peak": " across"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.089,
+     "peak": " soil"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " strong"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " tables"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " along"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.2,
+     "peak": " temporal"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.325,
+     "peak": " correlation"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.992,
+    "median_fire": 0.475,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word spatial",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' spatial' 8 of the top 32. Probes: ' spatial' 0.47-0.62, 'Spatial' 0.34, ' declining' 0.20; 'seasonal' 0.02. The near misses keep the study language; two use 'temporal' and 'serial', and the card also shows ' serial' peaking once, so that near miss could fire.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "spatial"
+  ]
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-4d2f5832",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N6437+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:27:57+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N6437_pos/2026-11-05-lm1909-4d2f5832.tests.json"
+ },
+ "label": "human-rights report vocabulary on specific abuses and minorities: female genital mutilation (FGM), Roma, Travellers",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N6437_pos/2026-11-05-lm1909-4d2f5832.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.757,
+     "peak": " mutil"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.96,
+     "peak": "GM"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.595,
+     "peak": " Roma"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.081,
+     "peak": "GM"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.736,
+     "peak": " Roma"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.592,
+     "peak": " mutil"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.613,
+     "peak": "ellers"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.89,
+     "peak": " Roma"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "Activ"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " protests"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " unequal"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " crowded"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.746,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "FGM, Roma, Travellers",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.75,
+ "notes": "Card: ' mutil' 4, ' Roma' 3. Probes: ' mutil' 0.82, 'GM' 0.91, ' Roma' 0.59, 'ellers' 0.61; 'soldiers mutilated the bodies' 0.10; 'condemned corruption' 0.01. A list held together by the genre of human-rights reports, which the test cannot prove.",
+ "selection": "random draw"
+}

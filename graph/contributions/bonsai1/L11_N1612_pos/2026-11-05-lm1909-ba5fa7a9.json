@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-ba5fa7a9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N1612+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:53+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N1612_pos/2026-11-05-lm1909-ba5fa7a9.tests.json"
+ },
+ "label": "promises that seem too good to be true: 'too good to be true', easy money, gain with no effort",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N1612_pos/2026-11-05-lm1909-ba5fa7a9.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.146,
+     "peak": " true"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.033,
+     "peak": " good"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.294,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.877,
+     "peak": " easy"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.67,
+     "peak": " effort"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.088,
+     "peak": " true"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.926,
+     "peak": " money"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.033,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.573,
+     "peak": " too"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.705,
+     "peak": " too"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " modest"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.065,
+     "peak": " slowly"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.69,
+     "peak": " too"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " steady"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " with"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.98,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "too good to be true, easy gain",
+ "unit_kind": "semantic",
+ "confidence": 0.75,
+ "notes": "Card: ' easy' 7, ' good' and ' be' in 'too good to be true'. Probes: 'too good to be true' 1.05, 'too good,' 0.92, 'free money with no effort' 1.04, 'quick and easy money' 0.57; 'too late' 0.05, 'easy for the whole class' 0.06, 'free trial' 0.02, but 'too loud to be heard' 0.60 on ' too', so one near miss here copies that shape. The word 'perpetual' (0.59) is not covered.",
+ "selection": "random draw"
+}

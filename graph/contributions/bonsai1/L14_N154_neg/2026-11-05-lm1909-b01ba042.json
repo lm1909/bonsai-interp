@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-b01ba042",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N154-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:12+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N154_neg/2026-11-05-lm1909-b01ba042.tests.json"
+ },
+ "label": "(sub-trigger of a broad pole) the name Pixar",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N154_neg/2026-11-05-lm1909-b01ba042.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.039,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.493,
+     "peak": " Pixar"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.186,
+     "peak": " movie"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.085,
+     "peak": " Pixar"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.176,
+     "peak": " Pixar"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.01,
+     "peak": "We"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.217,
+     "peak": " Pixar"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.131,
+     "peak": " Pixar"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.059,
+     "peak": " movie"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.031,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " engineers"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.009,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": " writing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": " work"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.181,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the name Pixar",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "The card flags this pole broad, and its top examples have no single token. Probes: ' Pixar' 0.52-0.78, 'ar' in sentence-initial Pixar 0.23; DreamWorks 0.05, Disney 0.01. This can only be a small piece of the pole.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Pixar"
+  ]
+ }
+}

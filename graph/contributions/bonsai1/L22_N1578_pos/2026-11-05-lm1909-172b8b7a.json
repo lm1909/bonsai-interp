@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-172b8b7a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N1578+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:05+00:00",
+ "recipe": {
+  "toolchain_commit": "a27cd85c5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N1578_pos/2026-11-05-lm1909-172b8b7a.tests.json"
+ },
+ "label": "Russian ' так' ('so, thus, in this way'): 'точно так же', 'вот так', 'ну так вот'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N1578_pos/2026-11-05-lm1909-172b8b7a.tests.json",
+   "prereg_commit": "a27cd85c5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.477,
+     "peak": " так"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.715,
+     "peak": " так"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.709,
+     "peak": " так"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.632,
+     "peak": " так"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.356,
+     "peak": " так"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.658,
+     "peak": " так"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.58,
+     "peak": " так"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.358,
+     "peak": " так"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " что"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.355,
+     "peak": " и"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.16,
+     "peak": " вот"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": " что"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": "или"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.3,
+     "peak": " и"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.174,
+     "peak": " снова"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.057,
+     "peak": " том"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.606,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a27cd85c5",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian ' так' (thus)",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "Card: ' так' 16 of the top 32 (one token dominates). Probes: ' так' 0.71-0.75; same sentences without it 0.09-0.25. The Chinese 就这样 scored 0.23 and is left out.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " так"
+  ]
+ }
+}
