@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-8f775616",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N12008-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:52:10+00:00",
+ "recipe": {
+  "toolchain_commit": "cfcaff3ae",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N12008_neg/2026-11-05-lm1909-8f775616.tests.json"
+ },
+ "label": "Arabic possessive pronoun suffixes 'هم' and 'ها' as their own token (كتبهم, كتابها); the same nouns with the article stay quiet. Russian ' им' and ' apparently' also fire and are not tested",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N12008_neg/2026-11-05-lm1909-8f775616.tests.json",
+   "prereg_commit": "cfcaff3ae",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.566,
+     "peak": "هم"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.321,
+     "peak": "هم"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.136,
+     "peak": "هم"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.236,
+     "peak": "ها"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.333,
+     "peak": "هم"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.579,
+     "peak": "هم"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.379,
+     "peak": "ها"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.237,
+     "peak": "هم"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": "در"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.108,
+     "peak": " الحرب"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.052,
+     "peak": " الأ"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.097,
+     "peak": " س"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.053,
+     "peak": " الأ"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.108,
+     "peak": " الأ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.196,
+     "peak": " الكتاب"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.118,
+     "peak": "ادات"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.327,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cfcaff3ae",
+  "minutes": 4,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "Arabic suffixes هم / ها",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "هم",
+   "ها"
+  ]
+ }
+}

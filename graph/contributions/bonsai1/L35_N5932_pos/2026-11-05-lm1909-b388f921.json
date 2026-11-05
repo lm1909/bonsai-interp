@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-b388f921",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5932+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:51:18+00:00",
+ "recipe": {
+  "toolchain_commit": "cfcaff3ae",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N5932_pos/2026-11-05-lm1909-b388f921.tests.json"
+ },
+ "label": "An inner piece of a word that splits into several tokens in non-Latin script: 'нев' in средневековье, '烈' in 火烈鸟, 'じ' in あらかじめ; the same sentences with other words stay quiet. The piece list is a sample of a wider set (Arabic 'نج', 吉, 冰淇)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N5932_pos/2026-11-05-lm1909-b388f921.tests.json",
+   "prereg_commit": "cfcaff3ae",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.565,
+     "peak": "нев"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.56,
+     "peak": "нев"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.601,
+     "peak": "нев"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.588,
+     "peak": "нев"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.483,
+     "peak": "烈"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.506,
+     "peak": "烈"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.469,
+     "peak": "じ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.447,
+     "peak": "じ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.056,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": "ом"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.095,
+     "peak": "нюю"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": "ые"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": "大象"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.086,
+     "peak": "的小"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.065,
+     "peak": "知"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": "金"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.533,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cfcaff3ae",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "inner pieces of split non-Latin words",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "нев",
+   "烈",
+   "じ"
+  ]
+ }
+}
