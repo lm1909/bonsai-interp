@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c6005ac7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N10709-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:30:24+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L30/N10709",
+   "pole": "-",
+   "label": "The leadership title of a legislative chamber, with the chamber named: Senate Majority Leader, House Speaker, Parliament Speaker",
+   "fire": [
+    "Senate Majority Leader Bob Dole opened the session.",
+    "House Speaker Tip O'Neill opened the session.",
+    "Parliament Speaker Ali Larijani opened the session.",
+    "Senate President Pro Tem Orrin Hatch opened the session.",
+    "House Minority Leader John Boehner opened the session.",
+    "State Senate Leader Darrell Steinberg opened the session.",
+    "Knesset Speaker Reuven Rivlin opened the session.",
+    "Assembly Speaker Sheldon Silver opened the session."
+   ],
+   "quiet": [
+    "Committee chairman Tom Smith opened the session.",
+    "Club president Rob Riley opened the session.",
+    "Party leader David Cameron opened the session.",
+    "School principal Ann Hale opened the session.",
+    "Team manager Jim Hart opened the session.",
+    "Company leader Carl Stone opened the session.",
+    "Union speaker Ruth Katz opened the session.",
+    "Conference speaker Mark Cooper opened the session."
+   ]
+  }
+ ],
+ "predictions": "Titles with a chamber fire; ' leader', ' speaker' and ' president' in other bodies stay quiet.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "legislative chamber leader title",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Second round. The first label, 'U.S. congressional leaders', failed on AUROC 0.891 (sweep 3, seed 202611051603): 'Speaker Newt Gingrich' without a chamber read 0.05, and probes then showed Parliament Speaker at 0.93, so the chamber matters and the U.S. does not."
+}

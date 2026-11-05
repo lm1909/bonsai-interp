@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-730f023b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N3541+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:30:24+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L27/N3541",
+   "pole": "+",
+   "label": "The copula right after a sentence-opening 'That': 'That is why', 'That's the'",
+   "fire": [
+    "We missed the train. That's why we were late.",
+    "She lost her keys. That is the whole story.",
+    "Nobody answered. That's what worried me.",
+    "He smokes a lot. That is why he coughs.",
+    "The shop is closed. That's the problem.",
+    "They argued all night. That is how it ended.",
+    "I saw the price. That's when I left.",
+    "The door was open. That is what I noticed."
+   ],
+   "quiet": [
+    "We missed the train. The traffic was why we were late.",
+    "She lost her keys. The story is long.",
+    "Nobody answered. Silence is what worried me.",
+    "He smokes a lot. Tobacco is why he coughs.",
+    "The shop is closed. The owner is ill.",
+    "They argued all night, which is how it ended.",
+    "I saw the price, which is when I left.",
+    "The door was open, which is what I noticed."
+   ]
+  }
+ ],
+ "predictions": "' is' or ''s after sentence-opening That fires. 'which is' and ' is' after a noun stay quiet.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "copula after sentence-opening 'That'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. The first label also claimed 'this is' and 'which is' and failed on median fire 0.093 (sweep 3, seed 202611051603). Probes then read 'which is' at about 0.09 and sentence-opening 'That' at about 0.45-0.64, so 'which is' moves to the near misses."
+}

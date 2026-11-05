@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-dfcb6e29",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N10067-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:30:24+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L18/N10067",
+   "pole": "-",
+   "label": "The opening of a definition of a technical term set off by a bracket, dash, comma or quotes ((the wearing away of), – a buildup of, \"water\")",
+   "fire": [
+    "Erosion (the wearing away of rock) shapes valleys.",
+    "She has gout – a buildup of uric acid – and limps.",
+    "The word comes from Latin aqua \"water\".",
+    "Mitosis, the division of a cell, takes an hour.",
+    "Inflation (a general rise in prices) hurts savers.",
+    "He suffers from vertigo – a sense of spinning – at times.",
+    "The name comes from Greek hippos \"horse\".",
+    "Humus, the dark matter in soil, holds water."
+   ],
+   "quiet": [
+    "Erosion (see chapter two) shapes valleys.",
+    "She has gout – or so the doctor thinks – and limps.",
+    "The shipment comes from Greek ports each week.",
+    "Mitosis, as we saw, takes an hour.",
+    "Inflation (up again this year) hurts savers.",
+    "He suffers from vertigo – I saw it myself – at times.",
+    "The name comes from my aunt in Ohio.",
+    "Humus, she told me, holds water."
+   ]
+  }
+ ],
+ "predictions": "The gloss opener fires; asides in the same slots stay quiet.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "start of a term's definition",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. The first test failed narrowly (AUROC 0.898, sweep 5, seed 202611051605) on the leak 'which is the one on the left'. The token cannot see ahead there, so this round drops the 'which is the' frame and states that in the label."
+}
