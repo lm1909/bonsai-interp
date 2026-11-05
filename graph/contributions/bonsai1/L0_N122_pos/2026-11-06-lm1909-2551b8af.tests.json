@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-2551b8af",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N122+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:19:49+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N122",
+   "pole": "+",
+   "label": "the Arabic ending -ين (dual or plural) as its own token, and the katakana piece ニ",
+   "fire": [
+    "رزق الرجل بطفلين في العام الماضي.",
+    "اندلع القتال بين الجيشين قرب الحدود.",
+    "بين الأخوين خلاف قديم.",
+    "انتقد الوزير السياسيين المتطرفين في الخطاب.",
+    "وقعت حوادث بين الفريقين أثناء المباراة.",
+    "جاء إلى المدينة آلاف السائحين.",
+    "顧客ニーズを把握する。",
+    "地域ニーズに応える。"
+   ],
+   "quiet": [
+    "رزق الرجل بطفل في العام الماضي.",
+    "اندلع القتال بين الجيش والشرطة قرب الحدود.",
+    "بين الأخ وأخته خلاف قديم.",
+    "انتقد الوزير السياسة الخارجية في الخطاب.",
+    "وقعت حوادث كثيرة أثناء المباراة.",
+    "جاء إلى المدينة آلاف الناس.",
+    "顧客の要望を把握する。",
+    "地域の声に応える。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic ending -ين, katakana ニ",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Corpus max is small (0.50), and the card flags the pole broad. The link between -ين and ニ is unexplained; the test only shows that both fire.",
+ "trigger": {
+  "tokens": [
+   "ين",
+   "ニ"
+  ]
+ }
+}

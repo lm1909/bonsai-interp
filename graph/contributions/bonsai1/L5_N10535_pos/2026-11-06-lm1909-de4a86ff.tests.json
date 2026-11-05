@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-de4a86ff",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10535+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:19:49+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N10535",
+   "pole": "+",
+   "label": "Django test and URL helpers: reverse('...'), self.client.login(...), and 'dependencies' in a migration",
+   "fire": [
+    "url = reverse('admin:index')",
+    "redirect_url = reverse('account_login')",
+    "def test_view(self):\n    self.client.login(username='x', password='y')\n    url = reverse('home')",
+    "from django.urls import reverse\nlogout_url = reverse('logout')",
+    "response = self.client.get(reverse('detail'))",
+    "class Migration(migrations.Migration):\n\n    dependencies = [('app', '0001_initial')]",
+    "self.client.login(username='super', password='secret')\nself.assertEqual(1, 1)",
+    "detail_url = reverse('post_detail', args=[1])"
+   ],
+   "quiet": [
+    "url = join('admin', 'index')",
+    "redirect_url = settings.LOGIN",
+    "def test_view(self):\n    self.client.close()\n    url = home()",
+    "import os\nlogout_url = os.environ['LOGOUT']",
+    "response = requests.get(detail)",
+    "class Point(object):\n\n    coords = [(0, 1)]",
+    "self.client.close()\nself.assertEqual(1, 1)",
+    "items = sorted(posts, key=str)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Django reverse() and client.login",
+ "unit_kind": "code / contextual",
+ "confidence": 0.5,
+ "notes": "Probes on short snippets were modest (reverse 0.35, .login 0.12, dependencies 0.11), so this may fail on strength. The - pole of this neuron is Django forms.",
+ "trigger": {
+  "tokens": [
+   " reverse",
+   ".login"
+  ]
+ }
+}
