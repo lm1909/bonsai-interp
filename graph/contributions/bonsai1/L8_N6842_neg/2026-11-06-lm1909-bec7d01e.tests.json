@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-bec7d01e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N6842-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:08:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N6842",
+   "pole": "-",
+   "label": "A short literal setting in code or a protocol line: '1' in 'border=1' or 'HTTP/1.1', '=True', '-c'; the same line without that literal stays quiet.",
+   "fire": [
+    "html = \"<td colspan=1 rowspan=2>\"\n",
+    "run(verbose=True)\n",
+    "sock.connect(('', 10500))\n",
+    "POST /login HTTP/1.1\n",
+    "bash -c 'pwd'\n",
+    "plot(data, grid=True)\n",
+    "<img border=1 src=\"a.png\">\n",
+    "HEAD /status HTTP/1.1\n"
+   ],
+   "quiet": [
+    "html = \"<td>\"\n",
+    "run(verbose)\n",
+    "sock.connect((host, port))\n",
+    "POST /login\n",
+    "bash script.sh\n",
+    "plot(data, grid)\n",
+    "<img src=\"a.png\">\n",
+    "HEAD /status\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "short literal setting in code",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Probes: 0.55-1.02; 'while 1:' read 0.24, and '1' and 'True' in prose 0.01. The '802.11b' example in the top examples is not tested."
+}
