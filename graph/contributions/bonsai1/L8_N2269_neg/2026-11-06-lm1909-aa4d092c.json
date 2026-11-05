@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-aa4d092c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N2269-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:30:30+00:00",
+ "recipe": {
+  "toolchain_commit": "927e80a49",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N2269_neg/2026-11-06-lm1909-aa4d092c.tests.json"
+ },
+ "label": "The dash that closes a gerund comparison ('Doing X is like doing Y –'), just before the writer expands on it; the same dash without a comparison stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N2269_neg/2026-11-06-lm1909-aa4d092c.tests.json",
+   "prereg_commit": "927e80a49",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.342,
+     "peak": " –"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.435,
+     "peak": " –"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.434,
+     "peak": " –"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.273,
+     "peak": " –"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.428,
+     "peak": " –"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.372,
+     "peak": " –"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.334,
+     "peak": " –"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.37,
+     "peak": " –"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.042,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": " –"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.214,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.082,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " –"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.142,
+     "peak": " –"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " –"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": " thought"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.371,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "927e80a49",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "dash closing a gerund comparison",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. My first test (punctuation closing a 'like' simile, in the sweep with seed 202611051801) failed at AUROC 0.859: dashes after a simile scored 0.38-0.43, periods mostly 0.10-0.17. Probe of this narrower label: 'like herding cats –' 0.32, 'like driving at night –' 0.31; but noun comparands were weaker ('like a family –' 0.10, 'tastes like my mother's –' 0.07), so the test uses gerund comparands only. Dash without a comparison 0.02-0.17.",
+ "selection": "second round after a failed sweep test"
+}
