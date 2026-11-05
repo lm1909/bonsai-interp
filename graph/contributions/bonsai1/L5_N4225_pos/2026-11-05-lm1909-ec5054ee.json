@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-ec5054ee",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N4225+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:04:27+00:00",
+ "recipe": {
+  "toolchain_commit": "d0731d357",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N4225_pos/2026-11-05-lm1909-ec5054ee.tests.json"
+ },
+ "label": "the piece 'на' of Russian обнаруж- (to detect, to discover)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N4225_pos/2026-11-05-lm1909-ec5054ee.tests.json",
+   "prereg_commit": "d0731d357",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.754,
+     "peak": "на"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.772,
+     "peak": "на"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.827,
+     "peak": "на"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.75,
+     "peak": "на"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.788,
+     "peak": "на"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.705,
+     "peak": "на"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.84,
+     "peak": "на"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.61,
+     "peak": "на"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.066,
+     "peak": "ете"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.042,
+     "peak": "ция"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.046,
+     "peak": "рав"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": "оп"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.054,
+     "peak": "ма"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.048,
+     "peak": "ак"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.063,
+     "peak": "ок"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.056,
+     "peak": "ма"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.763,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d0731d357",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'на' in обнаруж- (detect)",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "The same pole also fires on surname pieces such as -ay- and -aur- (Ekanayake, Gochneaur in the probes); the label is only the Russian piece.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "на"
+  ]
+ }
+}

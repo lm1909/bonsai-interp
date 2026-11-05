@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-1cb8de90",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7166+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:04:56+00:00",
+ "recipe": {
+  "toolchain_commit": "d0731d357",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N7166_pos/2026-11-05-lm1909-1cb8de90.tests.json"
+ },
+ "label": "in code that repeats a similar call on successive lines, the line start or argument separator of the next repeat",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N7166_pos/2026-11-05-lm1909-1cb8de90.tests.json",
+   "prereg_commit": "d0731d357",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.04,
+     "peak": " Register"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.029,
+     "peak": " Upgrade"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.048,
+     "peak": " Settings"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.217,
+     "peak": "')\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.113,
+     "peak": "_model"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.025,
+     "peak": ".join"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.197,
+     "peak": "       "
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.039,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "def"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.084,
+     "peak": ".tables"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " Settings"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " list"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": " Reset"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " port"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": ".ex"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "def"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.044,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d0731d357",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "next repeat of a similar code line",
+ "unit_kind": "code / repeat",
+ "confidence": "medium",
+ "notes": "The pole is broad (1.1% of tokens reach 0.1 of max), and some top examples are prose, so a hold would describe only the code part.",
+ "selection": "random draw"
+}

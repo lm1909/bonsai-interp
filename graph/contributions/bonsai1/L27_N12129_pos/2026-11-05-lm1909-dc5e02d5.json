@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-dc5e02d5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N12129+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:05:05+00:00",
+ "recipe": {
+  "toolchain_commit": "d0731d357",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N12129_pos/2026-11-05-lm1909-dc5e02d5.tests.json"
+ },
+ "label": "consumer-electronics spec or platform names: '1080p' after 4K, and 'Google Play'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N12129_pos/2026-11-05-lm1909-dc5e02d5.tests.json",
+   "prereg_commit": "d0731d357",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.957,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.711,
+     "peak": " "
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.645,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.718,
+     "peak": " Play"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.246,
+     "peak": " Play"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.826,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.678,
+     "peak": " Play"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.698,
+     "peak": " Play"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.161,
+     "peak": "el"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.168,
+     "peak": " webcam"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.112,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.348,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.265,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.063,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.124,
+     "peak": " phones"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.704,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d0731d357",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "1080p after 4K; Google Play",
+ "unit_kind": "contextual / semantic",
+ "confidence": "medium",
+ "notes": "A list label; I did not find a single pattern that covers both. The top examples also include ' AutoPilot' and code brackets.",
+ "selection": "random draw"
+}
