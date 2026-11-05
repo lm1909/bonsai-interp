@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-d642865a",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L14/N6654+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:16:30+00:00",
+ "selection": "picked",
+ "qc": {
+  "verdict": "dispute",
+  "label_under_test": "the word that opens a time-span quantity ('in one to two weeks', 'over three days', 'in the first half of'), on the token before the number or unit"
+ },
+ "neighbours": [
+  {
+   "unit": "L14/N6654",
+   "pole": "+",
+   "label": "the word that opens a time-span quantity ('in one to two weeks', 'over three days', 'in the first half of'), on the token before the number or unit",
+   "fire": [
+    "The seedlings sprout in two to three weeks.",
+    "The swelling should ease over four days.",
+    "Results will come in the second half of the year.",
+    "The eggs hatch in one to two weeks.",
+    "The fever may last over five days.",
+    "We expect a decision in the first half of June.",
+    "Kittens open their eyes in one to two weeks.",
+    "Prices will rise over the next three months."
+   ],
+   "quiet": [
+    "The seedlings sprout in two or three rows.",
+    "The swelling should ease with cold water.",
+    "Results will come in a second letter from the lab.",
+    "The eggs hatch in one or two nests.",
+    "The bridge may span over five rivers.",
+    "We expect a decision from the first judge.",
+    "Kittens open their eyes in a dark box.",
+    "Prices will rise over the next three stores."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "notes": "Registered as a dispute: in probes only 'in one to four weeks' fired (0.63), while 'over three days' read 0.07 and 'in the first half' 0.05. So I expect the general 'time-span' label to fail. The fire set uses the label's own forms."
+}

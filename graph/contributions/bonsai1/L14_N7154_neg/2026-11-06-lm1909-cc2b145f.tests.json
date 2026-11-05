@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-cc2b145f",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L14/N7154-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:16:29+00:00",
+ "selection": "picked",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "the line break right after a signature or name at the end of a letter or message, before unrelated material (phone line, date, footer) begins, as against line breaks inside the body of a letter or list"
+ },
+ "neighbours": [
+  {
+   "unit": "L14/N7154",
+   "pole": "-",
+   "label": "the line break right after a signature or name at the end of a letter or message, before unrelated material (phone line, date, footer) begins, as against line breaks inside the body of a letter or list",
+   "fire": [
+    "Please call before noon.\nSincerely, Mrs. Hall\n(702) 555-0142\n",
+    "Thank you for your time.\nYours truly,\nAnna Reed\nJune 4, 2011\n",
+    "Let me know if you can come.\nBest,\nSam Cole\nSent from my iPad\n",
+    "We hope to see you soon.\nWith love, Grandma\nP.O. Box 44\n",
+    "I look forward to your reply.\nRegards,\nDr. Ken Ito\nwww.example.com\n",
+    "That is all for today.\nCheers,\nMeg\nThis email is confidential.\n",
+    "Feel free to write back.\nKind regards, Paul Hill\n555-0199\n",
+    "Thanks again for everything.\nSincerely,\nJohn Park\nAttachments: 2\n"
+   ],
+   "quiet": [
+    "Dear Mrs. Hall,\nPlease call before noon.\nThe office is open.\n",
+    "Dear Anna,\nThank you for your time.\nThe report is attached.\n",
+    "Hi Sam,\nLet me know if you can come.\nThe party is at six.\n",
+    "Dear Grandma,\nWe hope to see you soon.\nThe kids are well.\n",
+    "Dear Dr. Ito,\nI look forward to your reply.\nThe tests are done.\n",
+    "Hi Meg,\nThat is all for today.\nThe meeting went fine.\n",
+    "Hello Paul,\nFeel free to write back.\nThe door code is new.\n",
+    "Dear John,\nThanks again for everything.\nThe flowers were lovely.\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "notes": "Fresh sign-offs followed by unrelated material; near misses are line breaks in the same letters' bodies. The card's top is dominated by blank lines after 'return x' in code (21 of the top 32), which this label does not cover, although short code read only 0.06-0.21 in probes. Expect low coverage."
+}

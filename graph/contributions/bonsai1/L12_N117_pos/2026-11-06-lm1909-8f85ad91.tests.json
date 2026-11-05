@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-8f85ad91",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L12/N117+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:16:29+00:00",
+ "selection": "picked",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "column header cell in a table header row or column-label comment"
+ },
+ "neighbours": [
+  {
+   "unit": "L12/N117",
+   "pole": "+",
+   "label": "column header cell in a table header row or column-label comment",
+   "fire": [
+    "|Product||Price||Stock|\n|Pen||2||40|\n",
+    "|Date||Speaker||Topic||Room|\n|May 1||Lee||Soil||B2|\n",
+    "|Citing Article||Year||Journal||Authors|\n|A study||2001||Nature||Lee|\n",
+    "# Column name    # Type    # Notes\nCOLS = (1, 2, 3)\n",
+    "|Item||Cost||Due Date||Notes|\n|Rent||900||May||paid|\n",
+    "# Field name     # Width\nFIELDS = (1, 2)\n",
+    "|Player||Team||Goals|\n|Kim||Reds||7|\n",
+    "|Step||Action||Result|\n|1||Open||OK|\n"
+   ],
+   "quiet": [
+    "|Pen||2||40|\n|Ink||5||12|\n",
+    "|May 1||Lee||Soil||B2|\n|May 2||Ray||Rain||B3|\n",
+    "|A study||2001||Nature||Lee|\n|A note||2002||Cell||Ray|\n",
+    "# Set the values here\nCOLS = (1, 2, 3)\n",
+    "|Rent||900||May||paid|\n|Gas||80||May||due|\n",
+    "# Keep this short\nFIELDS = (1, 2)\n",
+    "|Kim||Reds||7|\n|Ann||Blues||3|\n",
+    "|1||Open||OK|\n|2||Close||OK|\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "notes": "Fresh header rows and column-label comments; near misses are body rows of the same tables and ordinary comments. A flagged broad, gate-closed pole, so the header reading may not survive: probes ranged from 0.12 to 0.82."
+}
