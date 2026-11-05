@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-e7e99237",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N3432+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:35:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N3432",
+   "pole": "+",
+   "label": "the keyword argument ' save' in save_dir= or save_path= in code",
+   "fire": [
+    "download_images(url=URL_TRAIN, save_dir=\"./data/train/\")",
+    "fetch_pages(url=BASE_URL, save_path=\"./cache/pages/\")",
+    "crawl_site(start=HOME_URL, save_dir=\"./output/site/\")",
+    "load_dataset(name=DATA_NAME, save_dir=\"./datasets/raw/\")",
+    "render_plots(frames=ALL_FRAMES, save_path=\"./figs/run1/\")",
+    "export_table(query=SQL_TEXT, save_path=\"./tables/out/\")",
+    "grab_videos(url=URL_VIDEOS, save_dir=\"./media/in/\")",
+    "parse_feed(url=FEED_URL, save_dir=\"./feeds/today/\")"
+   ],
+   "quiet": [
+    "download_images(url=URL_TRAIN, timeout=30, retries=2)",
+    "fetch_pages(url=BASE_URL, verify=False, limit=10)",
+    "crawl_site(start=HOME_URL, depth=3, delay=0.5)",
+    "load_dataset(name=DATA_NAME, split=\"train\", shuffle=True)",
+    "render_plots(frames=ALL_FRAMES, dpi=300, color=\"red\")",
+    "export_table(query=SQL_TEXT, header=True, sep=\",\")",
+    "grab_videos(url=URL_VIDEOS, quality=\"low\", audio=False)",
+    "parse_feed(url=FEED_URL, encoding=\"utf-8\", strict=True)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' save' keyword argument (guess)",
+ "unit_kind": "code / contextual",
+ "confidence": "low",
+ "notes": "Weak guess from one top example. The other top examples are miscellaneous; 'before' in 'a final note before' reached 0.26 in a probe."
+}
