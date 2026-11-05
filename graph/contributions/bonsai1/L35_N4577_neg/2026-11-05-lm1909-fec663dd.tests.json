@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-fec663dd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4577-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:37:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N4577",
+   "pole": "-",
+   "label": "Opening quotation mark before a phrase in Romance-language prose (Spanish, Portuguese, Italian); English quotes stay low.",
+   "fire": [
+    "El ministro defendió una \"reforma profunda\" del sistema de pensiones.",
+    "Los sindicatos denunciaron un \"ataque directo\" contra los trabajadores.",
+    "Según el informe, existe un \"riesgo evidente\" para las costas del sur.",
+    "A presidente prometeu um \"novo começo\" para os agricultores do norte.",
+    "Os médicos falam de um \"problema grave\" nos hospitais públicos.",
+    "Il sindaco ha promesso un \"piano serio\" per le periferie della città.",
+    "Gli studenti hanno chiesto una \"scuola aperta\" durante la protesta.",
+    "El arzobispo pidió un \"diálogo sincero\" entre las dos comunidades."
+   ],
+   "quiet": [
+    "El ministro defendió una reforma profunda del sistema de pensiones.",
+    "Según el informe, existe un riesgo evidente para las costas del sur.",
+    "Os médicos falam de um problema grave nos hospitais públicos.",
+    "Gli studenti hanno chiesto una scuola aperta durante la protesta.",
+    "The minister defended a \"deep reform\" of the pension system.",
+    "The unions denounced a \"direct attack\" on the workers.",
+    "The mayor promised a \"serious plan\" for the outskirts of the city.",
+    "Der Bischof forderte einen \"ehrlichen Dialog\" zwischen den beiden Gruppen."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire. Near misses are the risk: unquoted Spanish reached 0.22-0.39 on articles in probes, so this pole has a Spanish baseline.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "opening quote in Romance prose",
+ "unit_kind": "format / language",
+ "confidence": 0.55,
+ "notes": "Probes: Spanish, Portuguese, Italian ' \"' 0.54-0.82; English ' \"' 0.11-0.14; the same Spanish without quotes 0.22-0.39. Parentheses scored lower (0.20-0.35) and aren't tested. Half the near misses are unquoted Romance sentences and half are quoted English or German."
+}

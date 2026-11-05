@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-338b65bc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N11215+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:37:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N11215",
+   "pole": "+",
+   "label": "The German comma that opens a defining relative clause after a generic head ('Leute, die', 'etwas, das', 'in einem Maße, das'); commas before other clauses stay quiet.",
+   "fire": [
+    "In dieser Stadt gibt es Menschen, die nie ein Theater besucht haben.",
+    "Der Wirkstoff wird in einem Umfang eingesetzt, der viele Forscher überrascht.",
+    "Am Ende bleibt immer etwas, das man nicht erklären kann.",
+    "Heute gibt es viele Eltern, die ihren Kindern kaum noch vorlesen.",
+    "Das Mittel wird in einem Ausmaß genutzt, das Fachleute für gefährlich halten.",
+    "Er sagte damals etwas, das uns alle zum Nachdenken brachte.",
+    "Überall trifft man Leute, die sich für klüger halten als andere.",
+    "Die Regel gilt in einem Maß, das kaum jemand erwartet hätte."
+   ],
+   "quiet": [
+    "In dieser Stadt besuchen viele Menschen nie ein Theater, weil es zu teuer ist.",
+    "Der Wirkstoff wird oft eingesetzt, und viele Forscher sind überrascht.",
+    "Am Ende bleibt mir nichts übrig, als nach Hause zu gehen.",
+    "Heute lesen viele Eltern ihren Kindern kaum noch vor, obwohl sie es wollen.",
+    "Fachleute halten das Mittel für gefährlich, wenn es falsch genutzt wird.",
+    "Er sagte damals, dass wir alle noch einmal nachdenken sollten.",
+    "Überall trifft man auf der Straße Bekannte, Nachbarn und alte Freunde.",
+    "Niemand hätte erwartet, dass die Regel so streng gilt."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire, 0 near misses. Concrete heads ('Hotels, die' 0.10, 'Dinge, die' 0.11) are weak, so the head matters.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "German comma before defining relative",
+ "unit_kind": "syntactic / language",
+ "confidence": 0.55,
+ "notes": "Probes: 'Leute, die' 0.58, 'in einem Maße, das' 0.58, 'Umfang, der' 0.65, 'etwas, das' 0.37; 'Momente, in denen' 0.16; 'weiß, dass' and a comma before und under 0.01. English and French comma relatives 0.10 or less. The output promotes which/who."
+}

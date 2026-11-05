@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-9c4a1987",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N526-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:37:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N526",
+   "pole": "-",
+   "label": "Number-format specifiers and maths-reference headings: '%.1f'-style codes in strings and 'Symbols'-type headings; plain words in strings and non-maths lists stay low.",
+   "fire": [
+    "print '%d of %s samples (%.2fs): %s'",
+    "sys.stdout.write('%s took %d steps (%.3fs)')",
+    "return '{0:s}{1:03d}-{2:02d}'.format(x, y, z)",
+    "logger.info('%s: %d items in %.1fs', name, n, t)",
+    "Decimals. Percentages. Symbols. Exponents. Units.",
+    "Chapter 2. Powers and Roots. Symbols. Conversion Charts.",
+    "Integers. Ratios. Symbols. Scales. Measures.",
+    "print 'run %s of %d lasted %.4fs' % (a, b, c)"
+   ],
+   "quiet": [
+    "print 'all samples were written to disk'",
+    "sys.stdout.write('the job took many steps')",
+    "return 'done with the first part'.upper()",
+    "logger.info('the items were loaded by name')",
+    "Lions. Tigers. Leopards. Jaguars. Pumas.",
+    "Chapter 2. Rivers and Lakes. Maps. Travel Charts.",
+    "Tables. Chairs. Lamps. Shelves. Mirrors.",
+    "print 'the run was over' + ' for today'"
+   ]
+  }
+ ],
+ "predictions": "4-5/8 fire: this is a list label with a low pole max (7.2), and it may not hold.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "number-format codes, maths headings",
+ "unit_kind": "code / contextual",
+ "confidence": 0.35,
+ "notes": "Probes: '%.1fs' 0.73, 'Numbers. Fractions. Symbols.' 0.71, '{0:s}' 0.27, 'gdd: C' 0.15; plain print string 0.01, 'Apples. Oranges.' 0.04. I have no single pattern yet beyond 'how numbers are written'. The + pole is rounding."
+}

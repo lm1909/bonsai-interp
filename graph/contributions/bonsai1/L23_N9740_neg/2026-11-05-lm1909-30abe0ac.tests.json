@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-30abe0ac",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N9740-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:37:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N9740",
+   "pole": "-",
+   "label": "The dash after an item's name in a tips or features list ('2. Basil – The King of Herbs'), when more items follow; numbered sentences and dashes in prose stay low.",
+   "fire": [
+    "Tips for a Better Garden\n1. Compost – The Cheap Way to Feed Soil\nIt adds nutrients.\n2. Mulch – The Answer to Weeds\nIt keeps moisture in.",
+    "Our Favourite Tools\n1. Trowel – The Gardener's Best Friend\n2. Secateurs – The Key to Clean Cuts\n3. Hoe – The Enemy of Weeds",
+    "Why Choose Us\nFast Shipping – Orders leave the same day\nLow Prices – We match any quote\nLocal Support – We answer every call",
+    "Five Ways to Save Money\n1. Budgeting – The First Step to Control\nWrite everything down.\n2. Coupons – The Easy Win at the Store\nCollect them weekly.",
+    "Best Stretches for Runners\n1. Lunges – The Classic Hip Opener\n2. Squats – The Secret to Strong Knees\n3. Planks – The Core Builder",
+    "What You Get\nUnlimited Storage – Keep every file forever\nDaily Backups – Never lose your work\nTeam Sharing – Invite anyone you like",
+    "Remedies Worth Trying\n1. Honey – The Oldest Cough Soother\nTake a spoonful.\n2. Ginger – The Stomach Settler\nBrew it in hot water.",
+    "Top Sights in Lisbon\n1. Belem Tower – The Icon of the River\n2. Alfama – The Oldest Quarter\n3. Sintra – The Royal Escape"
+   ],
+   "quiet": [
+    "Tips for a Better Garden\n1. Add compost, because it is a cheap way to feed soil.\n2. Spread mulch, because it stops weeds and keeps moisture in.",
+    "Our Favourite Tools\nWe like a trowel for planting and secateurs for clean cuts, and we keep a hoe for the weeds.",
+    "Why Choose Us\nOrders leave the same day, we match any quote, and we answer every call you make to us.",
+    "Five Ways to Save Money\n1. Write everything down in a budget.\n2. Collect coupons every week and use them at the store.",
+    "Best Stretches for Runners\nI started doing lunges last year – my hips were tight – and squats soon followed.",
+    "What You Get\nYou can keep every file forever, your work is backed up daily, and you can invite anyone.",
+    "Remedies Worth Trying\nMy aunt swears by honey – she takes a spoonful nightly – and brews ginger in hot water.",
+    "Top Sights in Lisbon\nWe saw the Belem Tower first, walked through Alfama next, and took a train out to Sintra."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire. Multi-line lists scored 0.33-0.59, so the median may sit near the threshold.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "dash after an item name in a list",
+ "unit_kind": "format / contextual",
+ "confidence": 0.45,
+ "notes": "Card: '.', ':', ' –', ' -', '—'. Probes: dash in multi-line lists 0.33-0.59; a one-line title 0.04, a dash in prose 0.02. Colons did not behave the same ('Case 2' 0.07, 'Lesson No. 1:' 0.06)."
+}

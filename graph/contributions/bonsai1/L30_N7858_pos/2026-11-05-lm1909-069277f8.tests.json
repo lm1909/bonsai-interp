@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-069277f8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N7858+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:37:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N7858",
+   "pole": "+",
+   "label": "Liver disease in a medical passage (cirrhosis, hepatitis, fatty liver, hepatic scarring), also without the word 'liver'; the same frames about other organs stay low.",
+   "fire": [
+    "Years of heavy drinking had left him with cirrhosis and a badly swollen abdomen.",
+    "Doctors warned that fatty liver disease can quietly progress to permanent scarring.",
+    "Chronic hepatitis B slowly damages the tissue and raises the risk of tumours.",
+    "The biopsy showed hepatic fibrosis, and the patient was referred to a specialist.",
+    "Her jaundice turned out to be a sign that her liver was beginning to fail.",
+    "An overdose of paracetamol can destroy hepatocytes within a couple of days.",
+    "Patients with cirrhosis often need a transplant once the organ stops working.",
+    "Hepatitis C infection is the main reason for damage to the liver in this group."
+   ],
+   "quiet": [
+    "Years of heavy smoking had left him with emphysema and a badly scarred chest.",
+    "Doctors warned that high blood pressure can quietly progress to permanent kidney damage.",
+    "Chronic asthma slowly damages the airways and raises the risk of infections.",
+    "The biopsy showed gastric inflammation, and the patient was referred to a specialist.",
+    "Her rash turned out to be a sign that her skin was reacting to soap.",
+    "An overdose of aspirin can irritate the stomach within a couple of days.",
+    "Patients with heart failure often need a pacemaker once the organ slows down.",
+    "Type 2 diabetes is the main reason for damage to the eyes in this group."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses. Coverage may be partial: Korean names with Yun, Jun and Hyun also fire this pole (0.33-0.78). Liver as food scored 0.14.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "liver disease context",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Probes: liver disease 0.41-1.07, including sentences with no 'liver' (hepatitis 0.73-0.95); lungs 0.19-0.23, stomach 0.16, kidney 0.01. The - pole is East Asian given-name pieces, and this + pole's Yun, Jun and Hyun peaks look related."
+}
