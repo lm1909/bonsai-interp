@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-87fc8048",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7714+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:20:05+00:00",
+ "recipe": {
+  "toolchain_commit": "b997b1dca",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N7714_pos/2026-11-05-lm1909-87fc8048.tests.json"
+ },
+ "label": "bare ' be' as an imperative or hortative ('and be thankful', 'let us be wary', 'be still'), mostly in older literary English; ' be' after a modal stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N7714_pos/2026-11-05-lm1909-87fc8048.tests.json",
+   "prereg_commit": "b997b1dca",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.562,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.582,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.374,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.731,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.508,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.239,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.355,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.564,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.179,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.163,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.198,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.048,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.048,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.16,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.206,
+     "peak": " be"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.535,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b997b1dca",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "imperative or hortative ' be'",
+ "unit_kind": "syntactic",
+ "confidence": "medium",
+ "notes": "Probes also fired on 'to be sure' (0.62) and weakly on 'wants to be' (0.24); the top examples include ' to' in 'put to death'. The imperative is the clearest case, not the whole pole.",
+ "selection": "random draw"
+}

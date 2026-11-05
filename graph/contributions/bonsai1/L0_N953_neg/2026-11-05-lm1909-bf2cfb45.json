@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-05-lm1909-bf2cfb45",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N953-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:20:43+00:00",
+ "recipe": {
+  "toolchain_commit": "b997b1dca",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N953_neg/2026-11-05-lm1909-bf2cfb45.tests.json"
+ },
+ "label": "the Chinese character 联 / 聯 ('link, unite') as a token, alone or in 联合 / 聯合, as opposed to the same sentences with another word",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N953_neg/2026-11-05-lm1909-bf2cfb45.tests.json",
+   "prereg_commit": "b997b1dca",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.316,
+     "peak": "联合"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.083,
+     "peak": "联盟"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.757,
+     "peak": "聯"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.046,
+     "peak": "聯絡"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.082,
+     "peak": "苏联"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.113,
+     "peak": "联系"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.706,
+     "peak": "聯"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.91,
+     "peak": "联"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": "委员会"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": "各国"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": "活動"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": "以"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "关闭"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "离"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": "合"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.214,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b997b1dca",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese 联 / 聯",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "The card's other main token is Korean ' 연' (the same character's reading). It scored only 0.15 in a probe, so this test covers Chinese only.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "联",
+   "聯",
+   "联合",
+   "聯合"
+  ]
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-97a1fad1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6525-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:20:15+00:00",
+ "recipe": {
+  "toolchain_commit": "b997b1dca",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N6525_neg/2026-11-05-lm1909-97a1fad1.tests.json"
+ },
+ "label": "' education' as what one person receives or has (a thorough, good or formal education), as opposed to education as an institution, field or budget line",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N6525_neg/2026-11-05-lm1909-97a1fad1.tests.json",
+   "prereg_commit": "b997b1dca",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.464,
+     "peak": " education"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.625,
+     "peak": " education"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.355,
+     "peak": " under"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.734,
+     "peak": " education"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.488,
+     "peak": " education"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.421,
+     "peak": " education"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.451,
+     "peak": " education"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.688,
+     "peak": " education"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " Education"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.101,
+     "peak": " education"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.18,
+     "peak": " education"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.186,
+     "peak": " education"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.135,
+     "peak": " education"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " education"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.049,
+     "peak": " education"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.22,
+     "peak": " education"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.476,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b997b1dca",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a person's education (a good education)",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Probes: the adjective can fire before the noun ('a good horse' 0.41, 'a thorough checkup' 0.34), so 'good' and 'thorough' are kept out of the near misses and the adjective-only behaviour is untested here.",
+ "selection": "random draw"
+}

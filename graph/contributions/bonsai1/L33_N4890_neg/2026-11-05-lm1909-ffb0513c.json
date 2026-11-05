@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-05-lm1909-ffb0513c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4890-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:20:40+00:00",
+ "recipe": {
+  "toolchain_commit": "b997b1dca",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N4890_neg/2026-11-05-lm1909-ffb0513c.tests.json"
+ },
+ "label": "a capital T or Т split off as its own token at the start of a name or word (' T|arek', ' Т|имур'), as opposed to names starting with another letter or staying whole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N4890_neg/2026-11-05-lm1909-ffb0513c.tests.json",
+   "prereg_commit": "b997b1dca",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.496,
+     "peak": " T"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.203,
+     "peak": " T"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.286,
+     "peak": " T"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.114,
+     "peak": " T"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.127,
+     "peak": " Т"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.164,
+     "peak": " Т"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.205,
+     "peak": " Т"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.343,
+     "peak": " Т"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " Maria"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.057,
+     "peak": " could"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.192,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " И"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " пр"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "х"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.09,
+     "peak": "от"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.204,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b997b1dca",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split capital T / Т word start",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Tokenization checked for all fire names. Probes ranged 0.10 to 0.36, so the median rule is the risk. The card also lists 'た' pieces, which this label does not cover. One probe, 'Теперь' after a full Russian sentence, scored 0.00; I did not check how it tokenized.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " T",
+   "T",
+   " Т",
+   "Т"
+  ]
+ }
+}

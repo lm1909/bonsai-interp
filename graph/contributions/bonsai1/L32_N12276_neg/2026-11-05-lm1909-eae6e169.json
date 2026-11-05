@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-eae6e169",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N12276-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:20:29+00:00",
+ "recipe": {
+  "toolchain_commit": "b997b1dca",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N12276_neg/2026-11-05-lm1909-eae6e169.tests.json"
+ },
+ "label": "in Russian, French and Spanish, the token right before a number, time or age (до 18:00, около 8, старше 65, à 18 ans, a 23:00), as opposed to the same prepositions before a noun or place",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N12276_neg/2026-11-05-lm1909-eae6e169.tests.json",
+   "prereg_commit": "b997b1dca",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.283,
+     "peak": " около"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.534,
+     "peak": " до"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.521,
+     "peak": "лось"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.432,
+     "peak": "ше"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.302,
+     "peak": " à"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.658,
+     "peak": " à"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.525,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.302,
+     "peak": " casi"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.129,
+     "peak": " ц"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " до"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.096,
+     "peak": " нед"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "ют"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": " depuis"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.083,
+     "peak": " semaine"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " del"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "er"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b997b1dca",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "token before a number (ru, fr, es)",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "English equivalents were weak in probes ('to 17:00' 0.19, 'until 11' 0.19, 'at least 12' 0.03), and ' ==' before 0 fired only sometimes (0.17 to 0.35), so the test covers the three languages where it was strong.",
+ "selection": "random draw"
+}
