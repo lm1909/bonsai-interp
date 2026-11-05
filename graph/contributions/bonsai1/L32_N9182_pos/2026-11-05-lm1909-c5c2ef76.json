@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-c5c2ef76",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N9182+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:38:42+00:00",
+ "recipe": {
+  "toolchain_commit": "566fb077a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N9182_pos/2026-11-05-lm1909-c5c2ef76.tests.json"
+ },
+ "label": "the ' hyp' piece of 'hypersonic' (guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N9182_pos/2026-11-05-lm1909-c5c2ef76.tests.json",
+   "prereg_commit": "566fb077a",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.956,
+     "peak": " hyp"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.232,
+     "peak": " hyp"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.045,
+     "peak": " during"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.75,
+     "peak": " hyp"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.829,
+     "peak": " hyp"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.093,
+     "peak": " against"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.014,
+     "peak": " hyp"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.085,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.441,
+     "peak": "ous"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.199,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " during"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.061,
+     "peak": " high"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.42,
+     "peak": " trans"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.028,
+     "peak": " wall"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.719,
+    "median_fire": 0.163,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "566fb077a",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'hypersonic' (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Top examples show no pattern (' hyp', \" '\", ' MS', ' one', 'uctive', ' in'). Probe: 'application to hypersonic flows' 0.52, 'hypersonic glider' 0.14, 'supersonic' 0.03, 'hyperspectral' and 'hypothesis' under 0.04. Best guess.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "hypersonic"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-25342361",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N3030+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:38:27+00:00",
+ "recipe": {
+  "toolchain_commit": "566fb077a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N3030_pos/2026-11-05-lm1909-25342361.tests.json"
+ },
+ "label": "digit or value token in structured listings and code (guess; gate-closed unit)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N3030_pos/2026-11-05-lm1909-25342361.tests.json",
+   "prereg_commit": "566fb077a",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.093,
+     "peak": "b"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.057,
+     "peak": "\":"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.14,
+     "peak": " labels"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.07,
+     "peak": "EO"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.152,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.054,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.075,
+     "peak": "height"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.146,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.09,
+     "peak": " days"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.088,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.088,
+     "peak": " Soy"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.064,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.05,
+     "peak": " summer"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.08,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": " Airbus"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.711,
+    "median_fire": 0.084,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "566fb077a",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "structured values (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags it broad (2.5% of tokens) and gate-closed (95% -x- echo), with no dominant token. Seven probes on close copies of top contexts scored 0.05-0.10. A best guess, recorded so the pole has a test.",
+ "selection": "random draw"
+}
