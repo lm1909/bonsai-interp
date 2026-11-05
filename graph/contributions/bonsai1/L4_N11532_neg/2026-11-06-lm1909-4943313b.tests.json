@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-4943313b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11532-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:06:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N11532",
+   "pole": "-",
+   "label": "word piece ending in -im / -em / -om ('recom', 'gem', 'يم'; broad, gate-closed)",
+   "fire": [
+    "La profesora le recomienda que lea más.",
+    "Mi madre siempre me recomienda ese libro.",
+    "Der Nachfolgemodell kam im Herbst auf den Markt.",
+    "يمكن شراء التذاكر من المحطة.",
+    "يمكنك الدخول من الباب الخلفي.",
+    "El guía nos recomienda salir temprano.",
+    "El vendedor recomienda este modelo a todos.",
+    "يمضغ الطفل قطعة من الخبز."
+   ],
+   "quiet": [
+    "La profesora le dice que lea más.",
+    "Mi madre siempre me compra ese libro.",
+    "Der neue Wagen kam im Herbst auf den Markt.",
+    "تباع التذاكر في المحطة.",
+    "ادخل من الباب الخلفي.",
+    "El guía nos pide salir temprano.",
+    "El vendedor enseña este modelo a todos.",
+    "أكل الطفل قطعة من الخبز."
+   ]
+  }
+ ],
+ "predictions": "Likely a fail: a near miss with 'dice' probed at 0.29, and the unit is broad.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "-m pieces (broad)",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Card flags broad (3.9%) and gate-closed (100% leak). Card: 'يم' x8, ' recom' x6, 'im' x3, 'em' x2, 'om' x2. Probe: ' recom' 0.88, 'gem' 0.69, 'يم' 0.67, ' recommend' 0.37; 'El médico le dice' 0.29 on 'can'."
+}

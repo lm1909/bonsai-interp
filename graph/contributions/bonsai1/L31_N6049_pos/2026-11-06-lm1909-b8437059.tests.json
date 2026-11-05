@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-b8437059",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6049+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:06:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N6049",
+   "pole": "+",
+   "label": "the word 'Jacuzzi' (the piece ' Jac')",
+   "fire": [
+    "Does the room come with a pool or Jacuzzi on the deck?",
+    "The Jacuzzi tub in the suite can be filled in minutes.",
+    "We relaxed in the Jacuzzi after a long day of skiing.",
+    "Is there a Jacuzzi at the rental in Aspen?",
+    "They added a large Jacuzzi to the master bathroom.",
+    "After the gym, she likes to sit in the Jacuzzi.",
+    "The resort has a sauna, a Jacuzzi and two bars.",
+    "He fixed the old Jacuzzi jets in the back yard."
+   ],
+   "quiet": [
+    "Does the room come with a pool or sauna on the deck?",
+    "The bath tub in the suite can be filled in minutes.",
+    "We relaxed by the fire after a long day of skiing.",
+    "Is there a washer at the rental in Aspen?",
+    "They added a large mirror to the master bathroom.",
+    "After the gym, she likes to sit in the park.",
+    "The resort has a sauna, a gym and two bars.",
+    "He fixed the old garden hose in the back yard."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; 'sauna' and 'hot tub' stay quiet. Coverage should be small.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'Jacuzzi'",
+ "unit_kind": "lexical / token piece",
+ "confidence": "medium",
+ "notes": "Card: ' J' x4, ' swim' x3, ' Jac' x2, ' Cell' x2, ' cell' x2, ' Jim'. No shared pattern found. Probe: ' Jac' in Jacuzzi 0.80, ' jumps' 0.39, 'J.C.' 0.06, 'Judd' 0.15; 'pool or sauna' 0.07. A sub-trigger.",
+ "trigger": {
+  "words": [
+   "Jacuzzi"
+  ]
+ }
+}

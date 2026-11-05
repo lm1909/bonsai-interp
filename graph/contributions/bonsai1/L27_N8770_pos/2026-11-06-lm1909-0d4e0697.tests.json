@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-0d4e0697",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N8770+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:06:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N8770",
+   "pole": "+",
+   "label": "code test just before 'or' is expected ('if x is None or …', 'if not item'; output promotes ' or' in many languages)",
+   "fire": [
+    "latest = None\nfor row in rows:\n    if latest is None or row.day > latest:\n        latest = row.day",
+    "top_score = None\nfor i in range(n):\n    score = fit(i)\n    if top_score is None or score > top_score:\n        top_score = score",
+    "def get(fields):\n    for name in [\"year\", \"period\", \"company\"]:\n        if not fields.get(name):\n            raise ValueError(name)",
+    "row = db.get_value(\"Item\", code, [\"is_stock\", \"disabled\"], as_dict=1)\nif not row:\n    throw(\"Item not found\")",
+    "low = None\nfor v in values:\n    if low is None or v < low:\n        low = v",
+    "def check(opts):\n    for key in [\"name\", \"size\"]:\n        if not opts.get(key):\n            raise KeyError(key)",
+    "first = None\nfor e in events:\n    if first is None or e.t < first:\n        first = e.t",
+    "data = load(path)\nif not data:\n    raise IOError(path)"
+   ],
+   "quiet": [
+    "latest = 0\nfor row in rows:\n    if row.day > latest:\n        latest = row.day",
+    "top_score = 0\nfor i in range(n):\n    score = fit(i)\n    total += score",
+    "def get(fields):\n    for name in fields:\n        print(name)",
+    "row = db.get_value(\"Item\", code)\nprint(row)",
+    "low = 0\nfor v in values:\n    total += v",
+    "def check(opts):\n    for key in opts:\n        print(key)",
+    "first = 0\nfor e in events:\n    count += 1",
+    "data = load(path)\nprint(data)"
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: short copies probed under 0.20, though the card shows large peaks in longer code.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before 'or' in a test",
+ "unit_kind": "prediction / code",
+ "confidence": "low",
+ "notes": "Output direction promotes ' or', ' или', '—or', ' Alternatively', ' oder', '或'. Card: ' None' x3, ' unable' x3, ' response' x2. Probe: ' None' 0.03, ' item' 0.04, ' filters' 0.20, ' unable' 0.16. Fire items are written as multi-line passages with earlier context."
+}
