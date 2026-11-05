@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-91c3071a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5496+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:53:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N5496",
+   "pole": "+",
+   "label": "digit of the second size number in a GUI call (resize(700, 15), QSize(250, 50), set_default_size(950, 650))",
+   "fire": [
+    "panel.resize(800, 25)\npanel.show()",
+    "self.box.setMinimumSize(QtCore.QSize(300, 60))",
+    "self.set_default_size(1024, 768)",
+    "win.setGeometry(QtCore.QRect(0, 0, 640, 180))",
+    "cv.MoveWindow(\"Preview\", 600, 425)",
+    "wx.Frame.__init__(self, None, -1, \"Tool\", size=(780, 450))",
+    "self.main.setMaximumSize(QtCore.QSize(500, 70))",
+    "dialog.resize(420, 35)\ndialog.exec_()"
+   ],
+   "quiet": [
+    "total = add(800, 25)\nprint(total)",
+    "self.box.setValue(max(300, 60))",
+    "self.set_range(1024, 768)",
+    "win.send(0, 0, 640, 180)",
+    "cv.Threshold(\"Preview\", 600, 425)",
+    "rate.compute(self, None, -1, \"Tool\", base=(780, 450))",
+    "self.main.setPrice(round(500, 70))",
+    "price.round(420, 35)\nprice.save()"
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; two numbers in other calls stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "GUI height digit",
+ "unit_kind": "code / contextual",
+ "confidence": "high",
+ "notes": "Card: '5' x4, '6' x3, '2' x2, '0' x2, ' bottom' x2. Probe: resize 0.95, QSize 0.53, set_default_size 0.52; 'add(700, 15)' 0.01; 'wide and 650 high' 0.34 on ' high'."
+}

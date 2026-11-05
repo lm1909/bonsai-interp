@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-759009f3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4394-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:53:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N4394",
+   "pole": "-",
+   "label": "closing piece of a word (E|ps|om, Re|ps, sque|ak; broad, gate-closed)",
+   "fire": [
+    "My aunt soaks her feet in Epsom salts every night.",
+    "Reps. Jones and Smith voted against the bill.",
+    "The door began to squeak when the wind rose.",
+    "A bag of Epsom crystals sat on the shelf.",
+    "The bill passed with Reps. Kim and Hall in favor.",
+    "The old stairs squeak under every step.",
+    "Doctors suggest Epsom baths for sore backs.",
+    "Mice squeak behind the wall at night."
+   ],
+   "quiet": [
+    "My aunt soaks her feet in warm water every night.",
+    "Senators Jones and Smith voted against the bill.",
+    "The door began to rattle when the wind rose.",
+    "A bag of rock salt sat on the shelf.",
+    "The bill passed with Senators Kim and Hall in favor.",
+    "The old stairs bend under every step.",
+    "Doctors suggest warm baths for sore backs.",
+    "Mice run behind the wall at night."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; words not split into these pieces stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word-final pieces (broad)",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Card flags broad (1.7%) and gate-closed (62% leak), max only 0.35. Card: 'ps' x6, 'رم' x5, 'ure' x5, 'ak' x2. A list. Probe: 'squeak' 0.83, 'Epsom' 0.65, 'Reps.' 0.62; 'Bath salts' 0.04."
+}

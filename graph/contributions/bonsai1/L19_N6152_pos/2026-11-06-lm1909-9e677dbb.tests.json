@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-9e677dbb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N6152+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:53:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N6152",
+   "pole": "+",
+   "label": "the ']' of an index zero being set after an array is created ('dp[0] = True', 'u[0] =')",
+   "fire": [
+    "self.memo = [None for k in range(m)]\nself.memo[0] = 1",
+    "v = np.zeros(m)\nv[0] = (2.-y)*c",
+    "table = [0] * size\ntable[0] = 1",
+    "w = np.ones(k)\nw[0] = a/b",
+    "self.seen = [False for i in range(n)]\nself.seen[0] = True",
+    "p = np.zeros(t)\np[0] = start",
+    "counts = [0 for j in range(r)]\ncounts[0] = 5",
+    "y = np.empty(q)\ny[0] = y0"
+   ],
+   "quiet": [
+    "self.memo = [None for k in range(m)]\nprint(self.memo)",
+    "v = np.zeros(m)\nshow(v)",
+    "table = [0] * size\nreturn table",
+    "w = np.ones(k)\nsave(w)",
+    "self.seen = [False for i in range(n)]\nself.ready = True",
+    "p = np.zeros(t)\nq = start",
+    "counts = [0 for j in range(r)]\ntotal = 5",
+    "y = np.empty(q)\nz = y0"
+   ]
+  }
+ ],
+ "predictions": "4/8 fire; the median may miss",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "x[0] = after creation",
+ "unit_kind": "code",
+ "confidence": "low",
+ "notes": "Card: ' from' x3, ']' x2, '1' x2, ' see', '_rev', ' side'. Output promotes ' another', ' differently', ' split'. Probe: 'self.dp[0] =' 0.33, 'u[0] =' 0.24; 'one side always faces' 0.49 is not claimed; prose 0.01-0.03."
+}
