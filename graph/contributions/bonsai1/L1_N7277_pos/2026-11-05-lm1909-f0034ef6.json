@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-f0034ef6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N7277+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:34:21+00:00",
+ "recipe": {
+  "toolchain_commit": "61374d341",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N7277_pos/2026-11-05-lm1909-f0034ef6.tests.json"
+ },
+ "label": "the Arabic preposition عن ('about, from')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N7277_pos/2026-11-05-lm1909-f0034ef6.tests.json",
+   "prereg_commit": "61374d341",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.553,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.472,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.47,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.41,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.439,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.419,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.542,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.351,
+     "peak": " عن"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": "تحدث"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.381,
+     "peak": " صف"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.096,
+     "peak": " البحر"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.118,
+     "peak": " بال"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " الك"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.066,
+     "peak": " مو"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.049,
+     "peak": " إلى"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.048,
+     "peak": "وقف"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.455,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "61374d341",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic preposition عن",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " عن",
+   " عنها"
+  ]
+ }
+}
