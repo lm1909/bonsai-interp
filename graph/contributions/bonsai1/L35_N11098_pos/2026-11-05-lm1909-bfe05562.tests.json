@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-bfe05562",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11098+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:24:01+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N11098",
+   "pole": "+",
+   "label": "dense / positional: on for most tokens, higher on the space or leading digit of a number and on commas and contractions in lists",
+   "fire": [
+    "Nearly 70 percent of the 138 towns lie on the coast.",
+    "We sell bread, milk, cheese, and eggs at the shop.",
+    "They aren't certain when the 15 buses will arrive.",
+    "She was born in 1854 and died in 1911.",
+    "Roughly 40 of the 100 seats went to the party.",
+    "Add salt, pepper, oil, and vinegar to the bowl.",
+    "He wouldn't say how 12 of the 19 men escaped.",
+    "At age 60 and over, about 16 percent are affected."
+   ],
+   "quiet": [
+    "Nearly all of the little towns lie on the coast.",
+    "We sell fresh bread at the shop on the corner.",
+    "They hope the morning buses will arrive on time.",
+    "She was born here and died here as well.",
+    "Most of the seats went to the ruling party.",
+    "Add the salt to the bowl and stir it slowly.",
+    "He told us how the men escaped from the camp.",
+    "As people grow older this becomes more common."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "dense, numbers and commas",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "The card flags it dense (77% of tokens reach 0.1 of max, 1.3% reach 0.3). Probes: plain English 0.21, the space before a number 0.86, a list comma 0.67, ' weren' 0.82. This test records the density and is expected to fail on near misses."
+}

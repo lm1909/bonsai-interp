@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-b2187519",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N660-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:24:01+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N660",
+   "pole": "-",
+   "label": "split-off word-initial f piece: the token ' ف' in Arabic words and ' F' in Arabic names (Fattah, Fadlallah)",
+   "fire": [
+    "سافرنا أمس وفي المساء نزلنا في فندق صغير قرب البحر.",
+    "كتب الطالب مقالة طويلة عن فلسفة التاريخ القديم.",
+    "قرأت الخبر عن فوز فريق المدينة في المباراة.",
+    "The ceremony honoured Marshal Fattah and his aide in Cairo.",
+    "Sheikh Fadlallah delivered the sermon at the mosque in Tyre.",
+    "نشرت الصحيفة صورة فهد مع أصدقائه في الحفل.",
+    "تناول الأطفال فطورهم ثم خرجوا إلى الحديقة.",
+    "يعمل أخي فني كهرباء في شركة كبيرة."
+   ],
+   "quiet": [
+    "سافرنا أمس وفي المساء نزلنا في منزل صغير قرب البحر.",
+    "كتب الطالب مقالة طويلة عن تاريخ المدن القديمة.",
+    "قرأت الخبر عن نجاح لاعب المدينة في المباراة.",
+    "The ceremony honoured Marshal Hassan and his aide in Cairo.",
+    "Sheikh Nasrallah delivered the sermon at the mosque in Tyre.",
+    "نشرت الصحيفة صورة سعيد مع أصدقائه في الحفل.",
+    "تناول الأطفال غداءهم ثم خرجوا إلى الحديقة.",
+    "يعمل أخي مهندس كهرباء في شركة كبيرة."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "split-off initial ف / F",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: ' ف' 17 of the top 32, 'ف' 7, ' F' 3. Probes: split ' ف' 0.67-0.92, ' F'attah 0.95, ' f' in fällt 0.64; whole tokens ' fan' and ' Fat' stay under 0.04, so the label is about the split-off letter. Near misses keep the Arabic sentence or the Arab name and swap the word.",
+ "trigger": {
+  "tokens": [
+   " ف",
+   "ف",
+   " F"
+  ]
+ }
+}
