@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-d1e0fca4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N10475+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:54:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N10475",
+   "pole": "+",
+   "label": "The digit in the paper size A4 (a4, A4), in settings or prose; letter, legal and other page-size words stay low.",
+   "fire": [
+    "Print the form on A4 and sign it at the bottom.",
+    "The default paper type in this driver is a4 for Europe.",
+    "Please submit two sides of A4 by Friday noon.",
+    "latex_paper_size = 'a4'\nlatex_font_size = '11pt'",
+    "Our printer only takes A4 sheets, so resize the poster.",
+    "The report must fit on one page of A4 with wide margins.",
+    "papersize: a4\nmargin: 2cm",
+    "He folded the A4 sheet in half and put it in his coat."
+   ],
+   "quiet": [
+    "Print the form on letter paper and sign it at the bottom.",
+    "The default paper type in this driver is legal for lawyers.",
+    "Please submit two sides of notes by Friday noon.",
+    "latex_paper_size = 'letter'\nlatex_font_size = '11pt'",
+    "Our printer only takes thick card, so resize the poster.",
+    "The report must fit on one page of A5 with wide margins.",
+    "papersize: tabloid\nmargin: 2cm",
+    "He folded the paper bag in half and put it in his coat."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0-1 near miss. An 'A5' near miss tests whether the digit 4 matters, and I don't know the answer. Coverage will be low: 'IPv4' 0.26, ' dense' 0.41, 'RP' 0.28 also fire.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "A4 paper size",
+ "unit_kind": "lexical / token",
+ "confidence": 0.7,
+ "notes": "I started from a guess about technical options and dropped it: 'sparse or dense' 0.03, 'tea or coffee' 0.02. A4 scored 0.76-1.06, so the label is word level."
+}

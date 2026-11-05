@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-94e00476",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1058+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:54:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N1058",
+   "pole": "+",
+   "label": "The mark just before a vowel-initial word, where the article or elision requires a vowel: French l’ and d’, and 'an “'. Possessive ’s, 'a “' and non-elided French stay quiet.",
+   "fire": [
+    "Le ministre regrette aujourd’hui l’absence de dialogue.",
+    "Ces familles sont loin d’oublier les inondations.",
+    "The report called it an “unusual oversight” by the board.",
+    "Her editor inserted an “s” at the end of the word.",
+    "Je vois encore l’ombre de ce grand arbre.",
+    "Les habitants ont peur d’être chassés de la ville.",
+    "Critics described the show as an “uneven experiment” at best.",
+    "Il a posé la clé sur l’étagère de la cuisine."
+   ],
+   "quiet": [
+    "Le ministre regrette aujourd’hui la fin du dialogue.",
+    "Ces familles sont loin de partir après les inondations.",
+    "The report called it a “serious oversight” by the board.",
+    "Her editor’s friend changed the end of the word.",
+    "Je vois encore la forme de ce grand arbre.",
+    "Les habitants ont peur de partir de la ville.",
+    "Critics described the show as a “messy experiment” at best.",
+    "Il a posé la clé sur la table de la cuisine."
+   ]
+  }
+ ],
+ "predictions": "8/8 fire, 0 near misses. The output promotes vowel-initial pieces (enes, ees, aqu, oor), which is what suggested this label.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "mark before a vowel-initial word",
+ "unit_kind": "spelling / prediction",
+ "confidence": 0.85,
+ "notes": "Probes: l’, d’ 0.66-0.72; 'an “' 0.57-0.88; 'a “' under 0.01, la and de 0.05, possessive ’s under 0.01. This pattern unifies the card's two peak tokens (’ x21, ' “' x8) and is tested on new phrases."
+}

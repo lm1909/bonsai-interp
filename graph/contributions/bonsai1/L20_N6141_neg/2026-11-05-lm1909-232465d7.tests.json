@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-232465d7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N6141-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:54:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N6141",
+   "pole": "-",
+   "label": "Digits in the middle of long separated numbers: ISBNs, DOIs and comma-grouped figures like 54,089; short everyday numbers stay low.",
+   "fire": [
+    "The total road length was 93,512 kilometers (58,106 miles) in that year.",
+    "ISBN 978-1-4039-7714-2 from Palgrave Macmillan in London.",
+    "https://doi.org/10.1016/02773791.2011.08344",
+    "Its surface covers 1,904,569.21 km2 (735,358.44 sq mi) in all.",
+    "The port handled 4,381,276 tons of cargo during the 2008 season.",
+    "Oxford University Press, 2004. ISBN 0-19-516247-3, pp. 201-215.",
+    "http://dx.doi.org/10.3102/00346543.2009.31552",
+    "Population in the census was 12,647,093 (2,503,118 households) overall."
+   ],
+   "quiet": [
+    "The total road length was 93 kilometers from the town to the coast.",
+    "Book 3 from a small press in London came out in May.",
+    "The website has 6 pages and 2 short videos about it.",
+    "Its surface covers 7 acres and has 2 small ponds in all.",
+    "The port handled 4 ships on Friday during the holiday season.",
+    "Oxford, 2004. Chapter 2, pp. 20-21, with 3 tables.",
+    "Our class read 9 papers in the first 12 weeks.",
+    "Population in the village was 450, with 80 households overall."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses. A bare 45-digit run scored only 0.19, so separators seem to matter.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "middle digits of long numbers",
+ "unit_kind": "format / token",
+ "confidence": 0.8,
+ "notes": "Probes: 54,089 0.76, ISBN 0.58, DOI 0.93, area figures 0.76; bare long run 0.19; 87 km, 25 dollars and page 12 under 0.03."
+}

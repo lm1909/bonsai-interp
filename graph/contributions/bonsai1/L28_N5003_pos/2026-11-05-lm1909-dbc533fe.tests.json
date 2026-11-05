@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-dbc533fe",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5003+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:54:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N5003",
+   "pole": "+",
+   "label": "French ' d' elided before a vowel, especially before un/une ('propriétaire d’une', 'il s’agit d’un'); 'de la', 'du' and other prepositions stay low.",
+   "fire": [
+    "Le maire a parlé hier d’un projet pour le quartier.",
+    "Ma tante, gérante d’une petite librairie, nous a invités.",
+    "Selon le journal, il s’agit d’un accident de la route.",
+    "Nous avons visité la maison d'un ancien ministre.",
+    "Paul est le fils d'une célèbre chanteuse italienne.",
+    "Pour ce film, il s'agit d'une histoire vraie.",
+    "Elle rêve depuis toujours d’un voyage en Asie.",
+    "Le prix comprend la location d'un vélo et le repas."
+   ],
+   "quiet": [
+    "Le maire a parlé hier de la sécurité dans le quartier.",
+    "Ma tante, gérante de la petite librairie, nous a invités.",
+    "Selon le journal, le camion a causé la panne de la route.",
+    "Nous avons visité la maison du ministre en ville.",
+    "Paul est le fils de la célèbre chanteuse italienne.",
+    "Pour ce film, le réalisateur a choisi la vraie histoire.",
+    "Elle rêve depuis toujours de la mer et du soleil.",
+    "Le prix comprend la location du vélo et le repas."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses. The output promotes a/an/一个, but '(' before 'the' fired as much as before 'a' (0.76 vs 0.69), so ' (' is outside this label.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "French d’ before un/une",
+ "unit_kind": "token / language",
+ "confidence": 0.7,
+ "notes": "Probes: d’un/d’une 0.44-0.68, d’argent 0.41, d’elle 0.22; de la, du 0.03. 'Je suis d'accord' 0.001, so the set phrase is quiet. 创造 0.71 is another trigger I left out. Coverage of ' d' counts every French d'.",
+ "trigger": {
+  "tokens": [
+   " d"
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-c59f20c1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10959+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:54:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N10959",
+   "pole": "+",
+   "label": "Opaque machine strings: tokens inside hex escapes, URL number runs, DOI and PMID codes and long repeated-letter runs; everyday numbers stay quiet.",
+   "fire": [
+    "\\x1F\\x00\\x00\\x8B\\x08\\x00\\x00\\x00\\x00\\x00\\x03\\x00\\xED",
+    "\\x00\\x00\\x00\\x7A\\x00\\x5C\\x01\\x00\\x00\\x09\\x00\\x00\\x2E",
+    "http://www.telegraph.co.uk/News/0,2281,5571930,00.html",
+    "http://www.example.com/Article/0,1518,7734102,00.html",
+    "doi:10.1093/ajcn.88.5.1190. PMID 18996850",
+    "doi:10.1016/jmb.04.17.233. PMID 15120634",
+    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzyzzzzzzzzzzzzzzzzzzzzzzzz"
+   ],
+   "quiet": [
+    "The file opened after a short wait, and the old report was on the screen.",
+    "We sent 12 boxes to the warehouse and kept 3 at the office.",
+    "The Telegraph ran the news story on page 5 of the print edition.",
+    "The article was posted on the site in May and shared by friends.",
+    "The journal printed the paper in 2008 with two authors from Ohio.",
+    "Our doctor read a medical study from 2004 about school lunches.",
+    "The bees buzzed in the warm garden as the children ate lunch.",
+    "She fell asleep in the car, and the night was quiet and long."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0 near misses. UUID-like and base64 strings were weak (0.19), so I left them out.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "opaque machine strings",
+ "unit_kind": "format / contextual",
+ "confidence": 0.6,
+ "notes": "Probes: hex escapes 0.74, URL with comma numbers 0.60, DOI 0.58, 'aaaa' 0.48; base64 and UUID 0.19; plain sentences with numbers 0.01-0.03. Low density (0.043%)."
+}
