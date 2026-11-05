@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-f5f8a071",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11503-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:22:00+00:00",
+ "recipe": {
+  "toolchain_commit": "22381daaa",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N11503_neg/2026-11-06-lm1909-f5f8a071.tests.json"
+ },
+ "label": "Dutch text, as opposed to the same sentences in German, Danish, Swedish and English",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N11503_neg/2026-11-06-lm1909-f5f8a071.tests.json",
+   "prereg_commit": "22381daaa",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.571,
+     "peak": "ond"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.38,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.873,
+     "peak": " om"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.454,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.363,
+     "peak": " bij"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.498,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.558,
+     "peak": "oud"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.307,
+     "peak": " geb"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " O"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.056,
+     "peak": " med"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " eight"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.071,
+     "peak": " min"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.06,
+     "peak": "eh"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " go"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": " vå"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.067,
+     "peak": " anger"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.476,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "22381daaa",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "Dutch text",
+ "unit_kind": "language",
+ "confidence": "high",
+ "notes": "Second round. The first label on this pole, 'Dutch text; Russian ъ', failed in a sweep because the two Russian items scored 0.02–0.04 while the 6 Dutch items scored 0.28–0.52. This round drops ъ. ъ fired in probes but not there, and this test says nothing about it. Tiny corpus max (2.16).",
+ "selection": "second round after a failed label (picked)"
+}
