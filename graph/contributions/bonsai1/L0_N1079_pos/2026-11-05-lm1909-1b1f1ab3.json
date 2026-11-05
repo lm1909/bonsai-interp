@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-1b1f1ab3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N1079+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:44:01+00:00",
+ "recipe": {
+  "toolchain_commit": "92ba063d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N1079_pos/2026-11-05-lm1909-1b1f1ab3.tests.json"
+ },
+ "label": "Best guess for a dense pole: contrast openers ('Instead', 'Rather', 'Apart') and ' thought', at the top of a pole that is on for many tokens.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N1079_pos/2026-11-05-lm1909-1b1f1ab3.tests.json",
+   "prereg_commit": "92ba063d4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.55,
+     "peak": "Instead"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.48,
+     "peak": " argue"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.393,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.623,
+     "peak": " thought"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.55,
+     "peak": "Instead"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.454,
+     "peak": "Rather"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.509,
+     "peak": " nothing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.523,
+     "peak": " thought"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.169,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.311,
+     "peak": " argued"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.264,
+     "peak": " fine"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.194,
+     "peak": " saw"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.375,
+     "peak": " had"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.149,
+     "peak": " took"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.369,
+     "peak": "Nothing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.32,
+     "peak": " had"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.516,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "92ba063d4",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "dense; contrast opener guess",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "16.5% of tokens reach 0.1 of max, the max is 0.19, and the gate-closed regime covers 99% of it. Ordinary sentences read 0.12-0.30 in probes. Expected to fail: the test is here to record the density.",
+ "selection": "random draw"
+}

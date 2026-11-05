@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-08207c5a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N24-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:43:49+00:00",
+ "recipe": {
+  "toolchain_commit": "92ba063d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N24_neg/2026-11-05-lm1909-08207c5a.tests.json"
+ },
+ "label": "Reordering a sequence in code: '.argsort', '.shuffle', '.perm(utation)', '.sort'; other numpy or list calls in the same slot stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N24_neg/2026-11-05-lm1909-08207c5a.tests.json",
+   "prereg_commit": "92ba063d4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.84,
+     "peak": ".argsort"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.645,
+     "peak": ".shuffle"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.716,
+     "peak": "utation"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.565,
+     "peak": ".argsort"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.682,
+     "peak": ".shuffle"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.408,
+     "peak": "utation"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.772,
+     "peak": ".argsort"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.408,
+     "peak": "()\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.117,
+     "peak": ".arg"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.07,
+     "peak": " deck"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.053,
+     "peak": "]\n"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.089,
+     "peak": ".seed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.05,
+     "peak": " rng"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "()\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "(values"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.663,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "92ba063d4",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "code call that reorders a sequence",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Plain English 'sort' and 'shuffle' read 0.09, and 'frozen fruit' reached 0.50 in a probe, so the food top examples remain unexplained. '.sort' peaks late, on the closing token ('])\\n').",
+ "selection": "random draw"
+}

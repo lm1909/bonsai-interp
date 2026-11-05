@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-00fc756b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N404+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:43:52+00:00",
+ "recipe": {
+  "toolchain_commit": "92ba063d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N404_pos/2026-11-05-lm1909-00fc756b.tests.json"
+ },
+ "label": "'...' that cuts a word off mid-word at the end of a preview snippet ('and is criti... Read More'), against '...' or a full stop after a whole word in the same sentence.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N404_pos/2026-11-05-lm1909-00fc756b.tests.json",
+   "prereg_commit": "92ba063d4",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.798,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.483,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.088,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.364,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.439,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.403,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.374,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.136,
+     "peak": "..."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.049,
+     "peak": "..."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " expanding"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " support"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " becoming"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " exercise"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " how"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " farming"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.389,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "92ba063d4",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'...' truncating a word in a snippet",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Literary or spoken '...' read near 0 ('I wonder...', 'Wait...'), and so did '...' after a whole word. Short snippets were weak ('next vaca...' 0.05, 'late win...' 0.10), so the length or kind of lead-in matters too.",
+ "selection": "random draw"
+}

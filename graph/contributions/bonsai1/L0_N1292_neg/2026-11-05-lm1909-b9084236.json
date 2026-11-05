@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-b9084236",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N1292-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:44:00+00:00",
+ "recipe": {
+  "toolchain_commit": "92ba063d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N1292_neg/2026-11-05-lm1909-b9084236.tests.json"
+ },
+ "label": "A word right after a period (a sentence boundary or an abbreviation such as 'U.S.'), other than the very common ' The', against the same word inside a sentence.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N1292_neg/2026-11-05-lm1909-b9084236.tests.json",
+   "prereg_commit": "92ba063d4",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.322,
+     "peak": " Nobody"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.256,
+     "peak": " then"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.066,
+     "peak": " Inc"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.107,
+     "peak": " Texas"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.168,
+     "peak": " thanks"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.266,
+     "peak": " Everyone"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.302,
+     "peak": " Nothing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.274,
+     "peak": " Parliament"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.056,
+     "peak": "It"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.067,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.125,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.083,
+     "peak": " that"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.261,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "92ba063d4",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "word right after a period",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: ' Nobody' after a period 0.40, ' The' after a period 0.06, 'American foreign' 0.08 against 'U.S. foreign' 0.72. A flagged broad pole, and bare words at the very start of a text also read 0.24-0.26.",
+ "selection": "random draw"
+}

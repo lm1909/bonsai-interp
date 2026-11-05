@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-55730e21",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11079+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:44:01+00:00",
+ "recipe": {
+  "toolchain_commit": "92ba063d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N11079_pos/2026-11-05-lm1909-55730e21.tests.json"
+ },
+ "label": "' having', ' being' or ' regards' right after 'as' ('cited as having', 'described as being', 'as regards'); the same words without 'as' stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N11079_pos/2026-11-05-lm1909-55730e21.tests.json",
+   "prereg_commit": "92ba063d4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.74,
+     "peak": " having"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.726,
+     "peak": " being"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.851,
+     "peak": " regards"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.674,
+     "peak": " having"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.686,
+     "peak": " being"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.862,
+     "peak": " regards"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.681,
+     "peak": " having"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.712,
+     "peak": " being"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " food"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "Being"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " safety"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": " saved"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " having"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.719,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "92ba063d4",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "having/being/regards after 'as'",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Probes: 0.73-0.84 after 'as', under 0.07 elsewhere; 'as coming' 0.16. Remarkable for layer 0: the pole already depends on the previous token.",
+ "selection": "random draw"
+}

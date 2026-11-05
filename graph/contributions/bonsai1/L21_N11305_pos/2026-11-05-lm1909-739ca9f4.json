@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-05-lm1909-739ca9f4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N11305+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:44:06+00:00",
+ "recipe": {
+  "toolchain_commit": "92ba063d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N11305_pos/2026-11-05-lm1909-739ca9f4.tests.json"
+ },
+ "label": "The tokens for the Perl language (' Perl', 'Perl', 'perl') and for Myanmar/Burma (' Myanmar', 'anmar', ' Burma'). A list: I found no shared pattern, and other languages and other Asian countries stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N11305_pos/2026-11-05-lm1909-739ca9f4.tests.json",
+   "prereg_commit": "92ba063d4",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.893,
+     "peak": " Perl"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.584,
+     "peak": " Perl"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.728,
+     "peak": " Perl"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.947,
+     "peak": " perl"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.296,
+     "peak": " Myanmar"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.371,
+     "peak": " Burma"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.3,
+     "peak": " Myanmar"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.348,
+     "peak": " Burma"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.155,
+     "peak": " Ruby"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": " scripts"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " Python"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " pip"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "elda"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " Tibet"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": "Fl"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.0,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "92ba063d4",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' Perl' and Myanmar/Burma tokens",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "A list by the card's top tokens. The output direction promotes ' Perl' and ' perl'. Probes: ' Perl' 0.89, ' Burma' 0.31, ' Myanmar' 0.24 at the low end; ' Ruby' 0.14, ' pearl' 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Perl",
+   "Perl",
+   "perl",
+   " perl",
+   " Myanmar",
+   "anmar",
+   " Burma"
+  ]
+ }
+}
