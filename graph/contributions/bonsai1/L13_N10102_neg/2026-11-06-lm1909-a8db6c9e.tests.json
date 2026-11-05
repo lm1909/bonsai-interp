@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-a8db6c9e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N10102-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:00:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N10102",
+   "pole": "-",
+   "label": "words in code strings and test names (help text, identifier parts; guess)",
+   "fire": [
+    "version = version + \"-%s\" % release_tag",
+    "parser.add_argument(\"--title\", type=str, help=\"The title to show\")",
+    "def test_get_num_threads(self):\n    print(\"Testing\")",
+    "parser.add_argument(\"--limit\", type=int, help=\"The limit to apply\")",
+    "label = label + \"-%s\" % suffix_name",
+    "# Check that --a and --b are not both specified\nif opts['a']:",
+    "def test_set_max_retries(self):\n    print(\"Testing\")",
+    "# If the options include defaults, then a\n# result cannot be found"
+   ],
+   "quiet": [
+    "The version number has a short tag at the end of it.",
+    "You can choose a title to show at the top of the page.",
+    "She counted the number of threads on the spool again.",
+    "The limit on this road is forty miles an hour.",
+    "The label on the jar has the name of the farm.",
+    "Check that the two boxes are not both on the top shelf.",
+    "He tried three more times before he went home.",
+    "The menu includes a few extras at no added cost."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: probes were 0.18-0.31, against 0.09 in prose.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code strings (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card shows no dominant token (' the', 'ctype', '%', ' defaults', ' comment', ' specified'). Probe: 'prerelease' 0.31, help text 0.28, '_channels' 0.18, numbered list 0.19, prose 0.09. A best guess."
+}

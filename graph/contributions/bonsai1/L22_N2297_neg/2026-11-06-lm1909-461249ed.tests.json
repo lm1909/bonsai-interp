@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-461249ed",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N2297-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:00:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N2297",
+   "pole": "-",
+   "label": "'Q.' followed by a statement rather than a question word (a Q&A question that opens 'There's …', 'I have …'; output promotes ' Is', ' Can', ' How')",
+   "fire": [
+    "Q. There's a bat in my attic. Who should I call?",
+    "Q. You're the new owner now, so can I park here?",
+    "Q. I have three old invoices. Are they still valid?",
+    "Q. This is my first time. Do I need a helmet?",
+    "Q. I've never used this app. Is it free?",
+    "Q. That's a lot of money. Can I pay later?",
+    "Q. There's a leak under my sink. Is it serious?",
+    "Q. You said it was closed. When does it open?"
+   ],
+   "quiet": [
+    "Q. What should I do about a bat in my attic?",
+    "Q. Where can I park as the new owner?",
+    "Q. Are my three old invoices still valid?",
+    "Q. Do I need a helmet on my first time?",
+    "Q. Is this app free for new users?",
+    "Q. Can I pay this money later?",
+    "Q. Why is there a leak under my sink?",
+    "Q. When does it open again?"
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; 'Q: What …' and no-Q versions stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Q. + statement opener",
+ "unit_kind": "format / prediction",
+ "confidence": "medium",
+ "notes": "Output direction promotes ' Is', 'Can', ' How', ' Would', ' Does', ' why', '请问'. Card: 'I' x6, ' There' x3, ' You' x3, ' This' x3. Probe: 'Q. There's' 0.81, 'Q. You're' 0.77, 'Q. I have' 0.71; 'Q: What' 0.03; 'A: There's' 0.28; no Q 0.24."
+}

@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-d361ae41",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N11891+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:00:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N11891",
+   "pole": "+",
+   "label": "epistemic 'may' / 'might' about the past or a guess ('we might have said', 'they may have'; output promotes ' has', ' last', ' previous')",
+   "fire": [
+    "Twenty years ago, we might have called the boy shy.",
+    "There are signs that they may have sailed to the island.",
+    "Fifty years ago, doctors might have sent her home.",
+    "A few years ago, you may have needed a travel agent.",
+    "Records hint that the monks may have brewed beer there.",
+    "A decade ago, people might have laughed at the idea.",
+    "There is evidence that the tribe may have traded with Rome.",
+    "Back then, a teacher might have punished him for that."
+   ],
+   "quiet": [
+    "Twenty years ago, we called the boy shy.",
+    "There are signs that they sailed to the island.",
+    "Fifty years ago, doctors sent her home.",
+    "A few years ago, you needed a travel agent.",
+    "Records show that the monks brewed beer there.",
+    "A decade ago, people laughed at the idea.",
+    "There is evidence that the tribe traded with Rome.",
+    "Back then, a teacher punished him for that."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same statements without a modal stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "past-guess 'may/might'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Output direction promotes ' yesterday', ' previous', ' last', ' has', \"'ve\", ' past'. Card: ' may' x20, ' must' x6, ' might' x2. Probe: 'we might have said' 0.59; 'they may have brought' 0.23 and 'they may bring' 0.23 peak on ' may' before the verb is seen; 'must have' 0.08; 'They have brought' 0.02. So 'must' is not claimed, and the future/past difference is not tested.",
+ "trigger": {
+  "tokens": [
+   " may",
+   " might"
+  ]
+ }
+}

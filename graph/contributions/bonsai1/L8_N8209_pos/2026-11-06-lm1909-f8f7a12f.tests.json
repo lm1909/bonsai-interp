@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-f8f7a12f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N8209+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:00:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N8209",
+   "pole": "+",
+   "label": "' State' inside a proper name, mostly 'X State Park' ('Niagara Falls State Park', 'Maine State … Grant')",
+   "fire": [
+    "We hiked to the falls in Letchworth State Park last fall.",
+    "The trail ends at Palo Duro Canyon State Park near Amarillo.",
+    "He runs a small shop close to Custer State Park.",
+    "The lake at Itasca State Park is the source of the river.",
+    "They spent a week at Baxter State Park with the kids.",
+    "She won a Vermont State Arts Council award in 2010.",
+    "Most of the cabins in Brown County State Park are full.",
+    "The road passes through Big Basin Redwoods State Park."
+   ],
+   "quiet": [
+    "We hiked to the falls in a county park last fall.",
+    "The trail ends at a small canyon near Amarillo.",
+    "He runs a small shop close to the old mill.",
+    "The lake in this state is the source of the river.",
+    "They spent a week at a campground with the kids.",
+    "She won an arts award from the state of Vermont in 2010.",
+    "Most of the cabins in the county park are full.",
+    "The road passes through a redwood forest in the state."
+   ]
+  }
+ ],
+ "predictions": "8/8 fire; lowercase 'state' and other parks stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' State' in a name",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Card: ' State' x19, ' National' x2, ' Where' x3, ' where' x3. Probe: 'X State Park' 0.79-0.80, 'Maine State ... Grant' 0.80; 'National Park' 0.41; 'The state of Maine' 0.10.",
+ "trigger": {
+  "tokens": [
+   " State"
+  ]
+ }
+}

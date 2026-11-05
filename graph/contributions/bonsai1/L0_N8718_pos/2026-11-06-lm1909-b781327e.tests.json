@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-b781327e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8718+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:00:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N8718",
+   "pole": "+",
+   "label": "the token '(\\n': an opening parenthesis that ends a line",
+   "fire": [
+    "result = client.fetch_user(\n    user_id, cache=True)",
+    "parser.add_argument(\n    '--host', default='local')",
+    "rows = conn.execute(\n    query)",
+    "logger.info(\n    'done in %s', elapsed)",
+    "mock = MagicMock(\n    spec=Client)",
+    "Colors = Enum(\n    'Colors', names)",
+    "response = requests.post(\n    url, data=body)",
+    "print(\n    'hello world')"
+   ],
+   "quiet": [
+    "result = client.fetch_user(user_id, cache=True)",
+    "parser.add_argument('--host', default='local')",
+    "rows = conn.execute(query)",
+    "logger.info('done in %s', elapsed)",
+    "mock = MagicMock(spec=Client)",
+    "Colors = Enum('Colors', names)",
+    "response = requests.post(url, data=body)",
+    "print('hello world')"
+   ]
+  }
+ ],
+ "predictions": "8/8 fire; the same calls on one line stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'(' at line end",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: '(\\n' x30, ' (\\n' x2 of the top 32. Probe: 0.54-0.73; the same call on one line 0.00.",
+ "trigger": {
+  "tokens": [
+   "(\n",
+   " (\n"
+  ]
+ }
+}

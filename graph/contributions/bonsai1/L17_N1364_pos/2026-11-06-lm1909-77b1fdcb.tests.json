@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-77b1fdcb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N1364+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:00:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N1364",
+   "pole": "+",
+   "label": "Python list mutation calls ('.append', '.pop') in indented code",
+   "fire": [
+    "for y in rows:\n    if y.size > limit:\n        big.append(y)\n    else:\n        small.append(y)",
+    "queue.append(4)\nitem = queue.pop()\nreturn item",
+    "def add(self, m):\n    self.items.append(m)\n    return self.items",
+    "for line in lines:\n    if line.strip():\n        kept.append(line)",
+    "while stack:\n    node = stack.pop()\n    seen.append(node)",
+    "def pop_last(self):\n    last = self.buffer.pop()\n    return last",
+    "for key in keys:\n    if key.startswith('a'):\n        hits.append(key)",
+    "while work:\n    job = work.pop()\n    done.append(job)"
+   ],
+   "quiet": [
+    "for y in rows:\n    if y.size > limit:\n        print(y)\n    else:\n        log(y)",
+    "queue = make_queue(4)\nitem = queue.first\nreturn item",
+    "def add(self, m):\n    self.count += m\n    return self.count",
+    "for line in lines:\n    if line.strip():\n        print(line)",
+    "while stack:\n    node = stack.top\n    show(node)",
+    "def get_last(self):\n    last = self.buffer.tail\n    return last",
+    "for key in keys:\n    if key.startswith('a'):\n        print(key)",
+    "We take each job from the pile and move it to the finished pile."
+   ]
+  }
+ ],
+ "predictions": "Borderline: the probes reached only 0.11-0.22.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "list .append / .pop",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "notes": "Card: '.append' x7, '.pop' x4, ' return' x3, ' =' x2. Probe: '.pop' 0.22, '.append' 0.11-0.18; prose 0.02.",
+ "trigger": {
+  "tokens": [
+   ".append",
+   ".pop"
+  ]
+ }
+}

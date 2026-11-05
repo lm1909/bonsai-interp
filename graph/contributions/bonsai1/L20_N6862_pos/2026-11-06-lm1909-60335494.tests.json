@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-60335494",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N6862+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:00:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N6862",
+   "pole": "+",
+   "label": "a dash that adds an elaboration after a clause ('isn't news to scientists — evidence …'; output promotes '—he', ' especially', ' indeed')",
+   "fire": [
+    "While this isn't new to doctors — records from the 1920s describe it — the public was surprised.",
+    "This is by no means a new debate — the town has argued about it for years.",
+    "They charge a fee for every order — and a large one — and keep your address.",
+    "It isn't a secret among farmers — old almanacs mention the trick.",
+    "The idea isn't new to engineers — tests in the 1950s showed the same result.",
+    "This is hardly a rare problem — most schools have faced it before.",
+    "It doesn't work everywhere — only in towns with a fast network.",
+    "That isn't news to sailors — logbooks have recorded it for centuries."
+   ],
+   "quiet": [
+    "While this isn't new to doctors, the public was surprised by the records.",
+    "This is by no means a new debate, and the town has argued about it.",
+    "They charge a fee for every order and keep your address on file.",
+    "It isn't a secret among farmers, and old almanacs mention the trick.",
+    "The idea isn't new to engineers, and tests in the 1950s showed it.",
+    "This is hardly a rare problem, and most schools have faced it.",
+    "It doesn't work everywhere, only in towns with a fast network.",
+    "That isn't news to sailors, and logbooks have recorded it."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same sentences with a comma stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "elaborating dash",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Output direction promotes '—he', '—they', '—', '—all', ' especially', ' indeed'. Card: '.' x14, ' too' x4, ':' x3, ' –' x2. Probe: ' —' 0.90, ' –' case 0.36 on ' one'; comma version 0.22 on '.'; '.' in 'you probably know about.' 0.37. The '.' mass is not claimed.",
+ "trigger": {
+  "tokens": [
+   " —",
+   " –",
+   "--"
+  ]
+ }
+}
