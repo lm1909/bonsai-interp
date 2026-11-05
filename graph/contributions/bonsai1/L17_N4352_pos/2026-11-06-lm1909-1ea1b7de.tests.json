@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-1ea1b7de",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N4352+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:28:44+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L17/N4352",
+   "pole": "+",
+   "label": "' not' that marks one option as unfit or the odd one out ('Which of these ... not ...', 'A ruler would not be useful for ...'); a factual denial stays quiet",
+   "fire": [
+    "Which of these metals would not be useful for making a magnet?",
+    "Which of the tools was not suitable for the job?",
+    "A ruler would not be useful for weighing flour.",
+    "Which of the listed foods is not a good source of iron?",
+    "A spoon would not be useful for cutting steak.",
+    "Which of these maps would not help a sailor at sea?",
+    "A thermometer would not be useful for measuring distance.",
+    "Which one of these words does not belong in the list?"
+   ],
+   "quiet": [
+    "These metals would be useful for making a magnet.",
+    "The tools were not delivered to the job until Friday.",
+    "A ruler would be useful for measuring the shelf.",
+    "The listed foods are not expensive at this time of year.",
+    "A spoon was not on the table at dinner.",
+    "These maps would help a sailor at sea.",
+    "A thermometer was not in the first aid box.",
+    "These words do not appear in the old dictionary."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "' not' singling out the unfit option",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. My first test (exam-question stem, 2026-11-06-lm1909 in the sweep with seed 202611051803) failed because 'This tool would not be useful for measuring length.' reached 0.84 as a near miss, which suggests the claim was wrong about exam format rather than about the negation. Probe: 'She asked me which of the tools was not useful' 1.90, 'A hammer would not be useful' 0.80; 'This tool is useful' 0.03; earlier factual denials 0.03-0.19. Questions without a negation were weaker: '?\\n' of 'Which of the following is a mammal' 0.50, 'Which planet has the most moons' 0.05."
+}

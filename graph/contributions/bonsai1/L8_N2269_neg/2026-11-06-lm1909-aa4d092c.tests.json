@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-aa4d092c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N2269-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:28:44+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L8/N2269",
+   "pole": "-",
+   "label": "The dash that closes a gerund comparison ('Doing X is like doing Y –'), just before the writer expands on it; the same dash without a comparison stays quiet",
+   "fire": [
+    "Finding a flat is a lot like hunting for treasure – most days you find nothing.",
+    "Learning a language is like building a house – you start with the foundations.",
+    "Managing a team is rather like cooking for a crowd – someone always complains.",
+    "Buying a used car is like playing poker – never show your hand.",
+    "Writing a novel is much like running a marathon – the middle miles are the worst.",
+    "Growing tomatoes is like raising children – they need patience and water.",
+    "Editing a film is just like solving a puzzle – every piece has to fit.",
+    "Moving abroad is a bit like starting school again – you know nobody at first."
+   ],
+   "quiet": [
+    "Finding a flat takes a lot of time and money – most days you find nothing.",
+    "Learning a language takes several years of practice – you start with the basics.",
+    "Managing a team requires clear rules and habits – someone always complains.",
+    "Buying a used car involves a lot of paperwork – never skip the checks.",
+    "Writing a novel takes about two years for me – the middle chapters are the worst.",
+    "Growing tomatoes needs a warm and sunny spot – they need patience and water.",
+    "Editing a film takes many weeks of careful work – every piece has to fit.",
+    "Moving abroad costs a lot more than I thought – you know nobody at first."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "dash closing a gerund comparison",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. My first test (punctuation closing a 'like' simile, in the sweep with seed 202611051801) failed at AUROC 0.859: dashes after a simile scored 0.38-0.43, periods mostly 0.10-0.17. Probe of this narrower label: 'like herding cats –' 0.32, 'like driving at night –' 0.31; but noun comparands were weaker ('like a family –' 0.10, 'tastes like my mother's –' 0.07), so the test uses gerund comparands only. Dash without a comparison 0.02-0.17."
+}
