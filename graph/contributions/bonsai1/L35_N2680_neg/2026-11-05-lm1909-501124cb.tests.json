@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-501124cb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N2680-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:47:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N2680",
+   "pole": "-",
+   "label": "The ' !' of '!=' in an if condition in code (status !=, s[2] !=), predicting '='; its output promotes '=' tokens",
+   "fire": [
+    "class Order:\n\tdef close(self, now):\n\t\tself.touched_on = now()\n\t\tif self.state==\"Open\" and state !=\"Open\":\n\t\t\tself.done = now()\n",
+    "for row in open(fname):\n\tv = split(row)\n\tif len(v)>2 and v[1] !=\"#\" :\n\t\tname=v.replace('x','y')\n",
+    "def scan(tok):\n\tfor t in tok:\n\t\tif t.kind !=\"word\":\n\t\t\tcontinue\n\t\tyield t\n",
+    "while pos<n:\n\tc = data[pos]\n\tif c !=\"a\" :\n\t\tout+=c\n\tpos+=1\n",
+    "for k in keys:\n\tval = d[k]\n\tif val !=\"-\" and k !=\"id\":\n\t\trows.append(val)\n",
+    "def clean(a):\n\tb=[]\n\tfor x in a:\n\t\tif x[0] !=\"!\":\n\t\t\tb.append(x)\n\treturn b\n",
+    "if mode !=\"test\":\n\tinit()\n\trun()\nelse:\n\tskip()\n",
+    "while True:\n\tline = f.readline()\n\tif line !=\"\":\n\t\thandle(line)\n\telse:\n\t\tbreak\n"
+   ],
+   "quiet": [
+    "class Order:\n\tdef close(self, now):\n\t\tself.touched_on = now()\n\t\tif self.state and state:\n\t\t\tself.done = now()\n",
+    "for row in open(fname):\n\tv = split(row)\n\tprint(len(v), v[1])\n\tname = v.strip()\n",
+    "def scan(tok):\n\tfor t in tok:\n\t\tif t.kind:\n\t\t\tcontinue\n\t\tyield t\n",
+    "while pos<n:\n\tc = data[pos]\n\tout.append(c)\n\tpos+=1\n",
+    "for k in keys:\n\tval = d[k]\n\tif val and k:\n\t\trows.append(val)\n",
+    "def clean(a):\n\tb=[]\n\tfor x in a:\n\t\tif x[0]:\n\t\t\tb.append(x)\n\treturn b\n",
+    "if mode:\n\tinit()\n\trun()\nelse:\n\tskip()\n",
+    "while True:\n\tline = f.readline()\n\thandle(line)\n\tif not line:\n\t\tbreak\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' !' of != in code conditions",
+ "unit_kind": "code / prediction",
+ "confidence": 0.65,
+ "notes": "Short snippets read near 0; multi-line passages read 0.29-0.53. Keyword names (campus, mode) read 0.08-0.19 and are left out of the test."
+}

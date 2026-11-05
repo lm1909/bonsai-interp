@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-8a856d0c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N6320+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:47:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N6320",
+   "pole": "+",
+   "label": "A token repeating the previous line's call in a run of near-identical code lines that differ in arguments (html.replace(...) x3, sock.bind((...)), tuples in a list); lines of different calls stay quiet",
+   "fire": [
+    "    text = text.replace('&amp;', ' ')\n    text = text.replace('&lt;', ' ')\n    text = text.replace('&gt;', ' ')\n",
+    "    conn.settimeout(5)\n    srv.settimeout(5)\n    conn.connect(('', 8000))\n    srv.connect(('', 8001))\n",
+    "    pairs = [ (\"=net-misc/curl-7*\", \"net-misc/curl-7\" ),\n              (\"=dev-libs/glib-2\", \"dev-libs/glib-2\" ),\n    ]\n",
+    "    name = name.strip('<')\n    name = name.strip('>')\n    name = name.strip('/')\n",
+    "    args.add_option('-a', 'all')\n    args.add_option('-b', 'brief')\n    args.add_option('-c', 'color')\n",
+    "    self.table.insert('red', 1)\n    self.table.insert('blue', 2)\n    self.table.insert('green', 3)\n",
+    "    url = url.replace('http:', 'https:')\n    url = url.replace('www.', '')\n    url = url.replace('.htm', '.html')\n",
+    "    cases = [ (\"=app-text/vim-8\", \"app-text/vim-8\" ),\n              (\"=sys-libs/zlib-1\", \"sys-libs/zlib-1\" ),\n    ]\n"
+   ],
+   "quiet": [
+    "    text = load(path)\n    words = text.split(' ')\n    total = len(words)\n",
+    "    conn.settimeout(5)\n    addr = lookup(host)\n    total = conn.send(data)\n    done()\n",
+    "    pairs = open(path).read()\n    count = len(pairs)\n    print(count)\n",
+    "    name = name.strip('<')\n    size = len(name)\n    print(size)\n",
+    "    args = parser.parse_args()\n    print(args)\n    sys.exit(0)\n",
+    "    self.table = {}\n    self.count = 0\n    self.reset()\n",
+    "    url = get_url()\n    page = fetch(url)\n    return page\n",
+    "    cases = sorted(items)\n    first = cases[0]\n    return first\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "repeated call in code run",
+ "unit_kind": "code / repeat",
+ "confidence": 0.6,
+ "notes": "Plain repeats with no arguments ('html = strip(html)') read 0.01, and .copy in an unrepeated line 0.04."
+}
