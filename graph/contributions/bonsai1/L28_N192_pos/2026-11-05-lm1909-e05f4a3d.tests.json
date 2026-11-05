@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e05f4a3d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N192+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N192",
+   "pole": "+",
+   "label": "just before 'type' or 'kind' is expected ('defines what …', 'message_type'; output promotes ' type', ' kind')",
+   "fire": [
+    "The first byte specifies what type of packet is sent.",
+    "This field determines what kind of record follows it.",
+    "The flag indicates what type of file is being read.",
+    "elif pkt.packet_type == packet.DATA:\n    y = 2",
+    "if evt.event_type == event.CLICK:\n    z = 3",
+    "The second bit tells the reader what type of value comes next.",
+    "NGC 4321 - galaxy in Coma. Type: Sb - spiral galaxy.",
+    "M 87 - galaxy in Virgo. Type: E - elliptical galaxy."
+   ],
+   "quiet": [
+    "The first byte comes before the rest of the packet that is sent.",
+    "This field sits at the end of the record that follows it.",
+    "The flag turns green when the file is being read.",
+    "elif pkt.size > packet.MAX:\n    y = 2",
+    "if evt.count == event.LIMIT:\n    z = 3",
+    "The second bit comes right after the first one in the value.",
+    "NGC 4321 is a bright galaxy in Coma, seen in spring.",
+    "M 87 is a large galaxy in Virgo, seen in spring."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; sentences where 'type' is not expected stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before 'type'",
+ "unit_kind": "prediction",
+ "confidence": "medium",
+ "notes": "Output direction promotes ' type', ' types', '-type', ' kind', ' kinds', '_type'. Probe: 'defines what type of data' 0.64 on ' what', 'msg.message_type' 0.31 on '.message', 'Type: Sc' 0.36; 'comes first in the data' 0.01."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-424f6294",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N12251-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N12251",
+   "pole": "-",
+   "label": "code that indexes arrays by a loop variable inside a for-loop body ('a[i]', 'out[i*m+j,:]')",
+   "fire": [
+    "errors = []\nfor i in range(0, len(ref)):\n    errors.append(50*(x[i]-y[i]))",
+    "diffs = []\nfor i in range(len(vals)):\n    diffs.append(abs(vals[i]-means[i]))",
+    "total = 0\nfor i in range(0, n):\n    total += w[i]*(p[i]-q[i])",
+    "ratio = []\nfor k in range(0, len(top)):\n    ratio.append(top[k]/(bottom[k]+1))",
+    "for i in range(n):\n    for j in range(m):\n        grid[i*m+j] = a[i] + b[j]",
+    "out = []\nfor i in range(0, len(u)):\n    out.append(2*(u[i]+v[i]))",
+    "sq = []\nfor i in range(len(xs)):\n    sq.append((xs[i]-c[i])**2)",
+    "for t in range(0, steps):\n    pos[t] = pos[t-1] + vel[t-1]"
+   ],
+   "quiet": [
+    "errors = []\nfor item in ref:\n    errors.append(item.error)",
+    "diffs = []\nfor val in vals:\n    diffs.append(abs(val))",
+    "total = 0\nfor weight in weights:\n    total += weight",
+    "ratio = compute_ratio(top, bottom)\nprint(ratio)",
+    "grid = make_grid(n, m)\nshow(grid)",
+    "We go through each pair and add twice their sum to the output list.",
+    "Each value has its center removed, and the result is squared.",
+    "The position after each step comes from the previous position and velocity."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; loops without an index and prose about loops stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "loop-index code",
+ "unit_kind": "contextual / code",
+ "confidence": "medium",
+ "notes": "Card: indentation after 'for i in range', '[i' x2, '(y' x2, ' =' and ' ==' in index expressions. Probe: 'flow_error.append(100*(a[i]-b[i]))' 0.62 on '[i', nested '[i*m+j,:]' 0.18, prose 0.09."
+}

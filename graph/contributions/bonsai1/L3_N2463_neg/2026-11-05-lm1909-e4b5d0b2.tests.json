@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e4b5d0b2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2463-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N2463",
+   "pole": "-",
+   "label": "rare Hangul or CJK syllable split into byte pieces (' �' in 튼튼, '蒂' in 梵蒂冈; gate-closed unit)",
+   "fire": [
+    "매일 운동을 해서 다리를 튼튼하게 만들었다.",
+    "이 의자는 아주 튼튼해서 오래 쓸 수 있다.",
+    "아이들은 밥을 잘 먹고 튼튼하게 자랐다.",
+    "다리를 튼튼하게 지어서 홍수에도 무너지지 않았다.",
+    "教宗在梵蒂冈接见了各国代表。",
+    "그는 튼튼한 가방을 사서 여행을 떠났다.",
+    "梵蒂冈的图书馆收藏了许多古书。",
+    "벽을 튼튼하게 고치는 데 사흘이 걸렸다."
+   ],
+   "quiet": [
+    "매일 운동을 해서 다리를 길게 만들었다.",
+    "이 의자는 아주 작아서 오래 쓸 수 없다.",
+    "아이들은 밥을 잘 먹고 일찍 잠들었다.",
+    "다리를 새로 지어서 사람들이 많이 다녔다.",
+    "教宗在北京接见了各国代表。",
+    "그는 작은 가방을 사서 여행을 떠났다.",
+    "北京的图书馆收藏了许多古书。",
+    "벽을 하얗게 칠하는 데 사흘이 걸렸다."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; Korean and Chinese with common syllables stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "rare syllable pieces",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card flags gate-closed (99% leak); ' �' x9, 'T' x2, '타' x2, '托' x2. Probe: 튼튼 0.90, 타 0.27, 蒂 0.17; English 0.01. Which syllables split was not checked before commit."
+}
