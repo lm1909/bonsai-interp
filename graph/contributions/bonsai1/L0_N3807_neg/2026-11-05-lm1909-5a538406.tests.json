@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-5a538406",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3807-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N3807",
+   "pole": "-",
+   "label": "a short piece inside a word that the tokenizer split letter by letter: 'ج' in Arabic, 'ш' in Russian, 'CLA' in an acronym (guess)",
+   "fire": [
+    "ويرجع سبب هذا الأمر إلى الطقس",
+    "ويرجع الرجل إلى البيت كل مساء",
+    "ثم شجع الرجل ابنه على الدراسة",
+    "Вчера шапка упала на пол в коридоре",
+    "Там лежит шапка моего старшего брата",
+    "Эта мышь живет под полом в доме",
+    "Congress passed the CERCLA statute in 1980 after the scandal.",
+    "She studied the CERCLA rules for cleaning old mines."
+   ],
+   "quiet": [
+    "وهذا الأمر مهم في المدينة",
+    "وهو في البيت كل مساء",
+    "ثم قال الرجل كلمة في المدرسة",
+    "Вчера Москва встретила гостей в городе",
+    "Там работает врач в большом городе",
+    "Эта школа стоит в центре города",
+    "Congress passed the budget in 1980 after the scandal.",
+    "She studied the NASA rules for cleaning old rockets."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "short mid-word pieces (guess)",
+ "unit_kind": "token piece",
+ "confidence": 0.3,
+ "notes": "Card: 'ج' x5, 'т' x4, 'ده' x4, 'ш' x3, 'ك' x2, 'KO', 'CLA'; broad, max 0.52. Probe: 'CLA' 0.918; 'ج' 0.402; 'ш' 0.380; a Russian sentence without them 0.078; English 0.032. Scattered; near misses are the same languages with whole-token words."
+}

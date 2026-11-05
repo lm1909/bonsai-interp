@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-5025d0b7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N7933-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N7933",
+   "pole": "-",
+   "label": "silk and satin, across languages ('satin', ' silk', French 'soie', Russian 'шёлк-')",
+   "fire": [
+    "The bride chose a long dress of ivory satin with a small train.",
+    "The scarf is woven from pure silk in a village near Suzhou.",
+    "Sa robe de soie rouge brillait sous les lampes du salon.",
+    "Эта шёлковая рубашка очень дорого стоит в магазине.",
+    "The box is lined with soft black satin and has a brass lock.",
+    "Traders carried silk across the desert to the Roman markets.",
+    "Elle portait un foulard de soie bleue autour du cou.",
+    "My grandmother kept a satin ribbon in her old sewing tin."
+   ],
+   "quiet": [
+    "The bride chose a long dress of ivory lace with a small train.",
+    "The scarf is woven from pure wool in a village near Inverness.",
+    "Sa robe de laine rouge brillait sous les lampes du salon.",
+    "Эта льняная рубашка очень дорого стоит в магазине.",
+    "The box is lined with soft black felt and has a brass lock.",
+    "Traders carried salt across the desert to the Roman markets.",
+    "Elle portait un foulard de coton bleu autour du cou.",
+    "My grandmother kept a cotton thread in her old sewing tin."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "silk and satin",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.85,
+ "notes": "Card: ' satin' x5, ' silk' x5, 'in' of Sat|in x7, 'ie' of so|ie, 'ken', 'ков' of Шёл|ков. Probe: silk-satin 1.064; so|ie 0.766; duchess satin 0.567; Шёлковый 0.557; Silk Road 0.379; cotton 0.224; wool 0.159.",
+ "trigger": {
+  "words": [
+   "silk",
+   "satin",
+   "soie"
+  ]
+ }
+}

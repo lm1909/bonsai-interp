@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-7f6ce597",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11688+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N11688",
+   "pole": "+",
+   "label": "common Python tokens in code: ' return' as a statement, 'version' of __version__, Qt module names; the same words in prose stay quiet",
+   "fire": [
+    "def page():\n    \"\"\"Render the page.\"\"\"\n    return render('page.html')",
+    "from mypkg import __version__\n\nprint('running', __version__)",
+    "def is_ready(self):\n    return self.count > 0",
+    "from . import __version__\nfrom .core import main",
+    "def total(items):\n    \"\"\"Add up the items.\"\"\"\n    return sum(items)",
+    "from PyQt5 import QtWidgets,QtCore\nimport sys",
+    "def name(self):\n    return self._name",
+    "import mylib\nassert mylib.__version__ >= '1.0'"
+   ],
+   "quiet": [
+    "def page():\n    \"\"\"Render the page.\"\"\"\n    print(render('page.html'))",
+    "from mypkg import helpers\n\nprint('running', helpers)",
+    "We will return to the question of readiness in the next chapter.",
+    "from . import helpers\nfrom .core import main",
+    "def total(items):\n    \"\"\"Add up the items.\"\"\"\n    print(sum(items))",
+    "The second version of the program came out in the spring.",
+    "def name(self):\n    print(self._name)",
+    "import mylib\nassert mylib.helpers is not None"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python ' return', __version__",
+ "unit_kind": "token / code",
+ "confidence": 0.7,
+ "notes": "Card: ' return' x12, 'version' x4, '.Window' x3, '_APPS' x2, '.relu' x2, '/bin' x2. Probe: __version__ 0.838; QtCore 0.636; ' return' statement 0.488; print in the same function 0.095; prose 'return to the city' 0.041; prose 'new version' 0.051.",
+ "trigger": {
+  "tokens": [
+   " return",
+   "version",
+   "QtCore"
+  ]
+ }
+}

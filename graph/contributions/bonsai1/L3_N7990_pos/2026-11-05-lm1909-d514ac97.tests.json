@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-d514ac97",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N7990+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N7990",
+   "pole": "+",
+   "label": "the tokens ' sister', ' moral', ' Ph' (of Ph.D.) and the Korean 천 of 추천: a list, no shared pattern found",
+   "fire": [
+    "Her younger sister teaches piano at a school in Leeds.",
+    "They argued about the moral duty of the wealthy to give.",
+    "My neighbour earned a Ph.D. in geology from Utah last year.",
+    "이 책은 친구에게 추천할 만합니다.",
+    "It was my sister who found the old photos in the attic.",
+    "The author raises a moral question about animal testing.",
+    "The new lecturer holds a Ph.D. in linguistics from Edinburgh.",
+    "선생님이 좋은 영화를 추천했습니다."
+   ],
+   "quiet": [
+    "Her younger cousin teaches piano at a school in Leeds.",
+    "They argued about the legal duty of the wealthy to pay.",
+    "My neighbour earned a degree in geology from Utah last year.",
+    "이 책은 친구에게 선물할 만합니다.",
+    "It was my uncle who found the old photos in the attic.",
+    "The author raises a practical question about animal feed.",
+    "The new lecturer holds a master's in linguistics from Edinburgh.",
+    "선생님이 좋은 영화를 보았습니다."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' sister', ' moral', ' Ph', 천",
+ "unit_kind": "token",
+ "confidence": 0.35,
+ "notes": "Card: ' Ph' x3, '천' x3, ' sister' x2, '동' x2, ' moral' x2, '階'; broad, gate-closed 71%. Probe: ' sister' 0.971; ' Ph' 0.554; '천' 0.510; ' moral' 0.483; '階' 0.292; 'graduate' sentence 0.033. I could not state a pattern behind these, so this keeps the list, and says so.",
+ "trigger": {
+  "tokens": [
+   " sister",
+   " moral",
+   " Ph",
+   "천"
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-51873245",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N11773+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N11773",
+   "pole": "+",
+   "label": "positional: fires on the first token of a corpus window, whatever it is; no reading in a probed sentence",
+   "fire": [
+    " please indicate the name of the buyer on the form",
+    " tasks needed in ordinary daily work",
+    " – the people born between 1960 and 1975",
+    " strategy for stopping illegal fishing near the coast",
+    " disaster to strike before he agreed to leave",
+    " information about the old mine and its owners",
+    " – for instance – tax and property records",
+    " indicate your seat number when you check in"
+   ],
+   "quiet": [
+    "Now please indicate the name of the buyer on the form",
+    "These are tasks needed in ordinary daily work",
+    "We mean the people born between 1960 and 1975",
+    "It was a strategy for stopping illegal fishing near the coast",
+    "He waited for disaster to strike before he agreed to leave",
+    "She has information about the old mine and its owners",
+    "You will need things, for instance, tax and property records",
+    "You should indicate your seat number when you check in"
+   ]
+  }
+ ],
+ "predictions": "probably fails: the near misses and the fire items should both stay low",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "positional (window start)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.6,
+ "notes": "Card: FLAG positional, 100% of top peaks at window position 0; tokens scattered (' indicate', ' tasks', ' –', ' strategy', 'j'). Probe: sentences beginning with those tokens all stayed at or below 0.016, and so did the same words mid-sentence. I think `play probe` does not reach the state a bare window start gives, so an 8 + 8 test cannot show this. Written as a best guess so the pole is recorded as positional; failure expected."
+}

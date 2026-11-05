@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-cb3aca2f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N2954-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N2954",
+   "pole": "-",
+   "label": "the token ' bl' or ' Bl' when the tokenizer splits a word after it (' bl|azer', ' Bl|imp', ' Bl|uff')",
+   "fire": [
+    "She arrived at the office in a navy blazer and flat shoes.",
+    "My father drove an old Chevy Blazer for twenty years.",
+    "A huge blimp drifted over the stadium during the final.",
+    "We toured the Goodyear Blimp hangar on a school trip.",
+    "The restaurant sits on Eagle Bluff above the river.",
+    "Leaving the bridge unguarded was a serious blunder by the general.",
+    "The village was cut off for days by a sudden blizzard.",
+    "He took off his wool blazer and hung it on the chair."
+   ],
+   "quiet": [
+    "She arrived at the office in a navy coat and flat shoes.",
+    "My father drove an old Chevy pickup for twenty years.",
+    "A huge balloon drifted over the stadium during the final.",
+    "We toured the Goodyear tire factory on a school trip.",
+    "The restaurant sits on Eagle Road above the river.",
+    "Leaving the bridge unguarded was a serious error by the general.",
+    "The village was cut off for days by a sudden flood.",
+    "He took off his blue sweater and hung it on the chair."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' bl' / ' Bl' split piece",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Card: ' bl' x10, ' Bl' x4, ' fl' x2, ' t' x3, and ' Western' x3, ' China'. Probe: ' bl' in blazer 0.530; ' Bl' in Blazer and Blimp 0.758; ' China' 0.240; whole-token 'blue', 'blood' 0.014; ' jacket' sentence 0.092. Tokenization of each fire word checked: bl|azer, Bl|azer, bl|imp, Bl|imp, Bl|uff, bl|under, bl|izzard.",
+ "trigger": {
+  "tokens": [
+   " bl",
+   " Bl"
+  ]
+ }
+}

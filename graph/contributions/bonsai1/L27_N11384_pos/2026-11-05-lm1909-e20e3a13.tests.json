@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-05-lm1909-e20e3a13",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N11384+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N11384",
+   "pole": "+",
+   "label": "smell, scent and aroma, firing on the words after the smell word ('the smell of roses in', 'The Scent of a', 'notes subtiles du')",
+   "fire": [
+    "I always loved the smell of fresh bread in the morning.",
+    "The room was filled with the scent of pine and old books.",
+    "There is a strong aroma of coffee in the whole building.",
+    "Les parfums du jasmin s'unissent aux notes légères du santal.",
+    "He caught the faint smell of smoke on the evening air.",
+    "This candle has the fragrance of lavender and a hint of the sea.",
+    "Ce vin révèle des arômes de fruits et des notes fines du chêne.",
+    "The stench of rotting fish came up from the harbour."
+   ],
+   "quiet": [
+    "I always loved the taste of fresh bread in the morning.",
+    "The room was filled with the sound of rain and old songs.",
+    "There is a strong air filter in the whole building.",
+    "Les couleurs du jardin s'unissent aux lignes légères du toit.",
+    "He caught the faint glow of lights on the evening horizon.",
+    "This candle has the shape of a shell and a base of the wood.",
+    "Ce vin vient des collines de la ville et des terres du sud.",
+    "The sight of leaping fish came up from the harbour."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "smell and scent",
+ "unit_kind": "semantic",
+ "confidence": 0.75,
+ "notes": "Card: ' the' x4, ' a' x2, 'cent' of S|cent x2, ' of' x2, 'ented', in smell passages; French wine and perfume notes (' du', ' au'). Probe: 'aromes du citron ... notes subtiles du' 0.726; 'the smell of roses in' 0.570; 'The Scent of' 0.359; 'colour of roses' 0.014; 'sniffing the cotton shirts' only 0.040, so it may need the noun.",
+ "trigger": {
+  "words": [
+   "smell",
+   "scent",
+   "aroma",
+   "fragrance",
+   "stench"
+  ]
+ }
+}

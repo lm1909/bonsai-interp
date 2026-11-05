@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-c8f803b1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N10737+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N10737",
+   "pole": "+",
+   "label": "the word just before a friendly exclamation mark in a closing or greeting ('Thank you for ...!', 'happy sewing!', 'Enjoy!'; promotes '!')",
+   "fire": [
+    "That's all for this week, so until next time, happy baking!",
+    "Hope you all have a wonderful weekend. Happy Mother's Day!",
+    "Download the free pattern and go check it out!",
+    "I had so much fun making these cards. Good luck and enjoy!",
+    "Please leave a comment. Thank you so much for visiting!",
+    "Merry Christmas, everyone, and thanks for reading!",
+    "Don't forget to enter the giveaway below. Best of luck!",
+    "It came out great, as you can see below. Have fun!"
+   ],
+   "quiet": [
+    "That's all for this report, so the next session covers baking methods.",
+    "My mother spent the weekend at home. The day passed quietly.",
+    "The firm released the pattern and the court checked it out.",
+    "I made these cards at work. Luck played a small part in sales.",
+    "The form requires a comment. The office thanked him for visiting.",
+    "Christmas fell on a Friday that year, and readers noted the date.",
+    "The rules of the giveaway are listed below in section four.",
+    "The result is shown below, as you can see in table two."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before a friendly '!'",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.8,
+ "notes": "Card: ' below', ' Day', ' you', ' luck', ' out' as peaks in blog sign-offs; promotes '!', '!\\n\\n', '!)'. Probe: 'happy sewing' 0.750; 'Happy New Year' 0.608; 'check them out' 0.393; 'Follow me online' 0.383; 'thank you for the purchase and left' 0.036; 'the new year and its budget' 0.004. Fire items end in '!' but the pole reads before it."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-8a2162d0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N10820-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N10820",
+   "pole": "-",
+   "label": "the word right after 'or' in a tight pair that shares what follows ('sea or table salt', 'remove or reduce the growth')",
+   "fire": [
+    "Sprinkle some brown or white sugar over the warm apples.",
+    "Surgeons can shrink or destroy the tumour with radiation.",
+    "Use this menu to copy or move files to another folder.",
+    "Pour in a cup of whole or skim milk and stir it well.",
+    "The drug may delay or prevent the onset of the illness.",
+    "You can download or stream the show on your phone.",
+    "The bill would limit or ban the sale of the pesticide.",
+    "Add a handful of green or black olives to the salad."
+   ],
+   "quiet": [
+    "Sprinkle some sugar over the warm apples and bake them.",
+    "Surgeons can treat the tumour with radiation next week.",
+    "Use this menu to open files from another folder.",
+    "Pour in a cup of milk and stir it well.",
+    "The drug may help during the onset of the illness.",
+    "You can watch the show on your phone.",
+    "The bill would tax the sale of the pesticide.",
+    "Add a handful of olives to the salad and serve."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "second term after 'or'",
+ "unit_kind": "contextual / syntactic",
+ "confidence": 0.6,
+ "notes": "Card: ',' , ')', ' William', ' Joseph', ' link', ' table', ' reduce' after 'or' or 'and'. Probe: 'remove or reduce' 0.447; 'import or link to' 0.366; 'sea or table salt' 0.261; 'Richard and William' 0.119; same sentence without a pair 0.025; 'apples and went' 0.001. Near misses keep the sentence and drop the pair."
+}

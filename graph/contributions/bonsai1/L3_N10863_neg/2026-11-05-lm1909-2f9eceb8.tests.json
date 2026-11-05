@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-2f9eceb8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N10863-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N10863",
+   "pole": "-",
+   "label": "the token 'return' or ' return' as coming back (going to/returning, return home), most strongly when glued to a slash (guess at a part of a broad pole)",
+   "fire": [
+    "He was seen going to/returning from the rally on Sunday.",
+    "No photos exist of them driving to/return from the airport.",
+    "Buses run to/returning from the stadium every twenty minutes.",
+    "Her trip to/return from Madrid was paid for by the firm.",
+    "The soldiers will return home to their families next spring.",
+    "Thousands of migrants return to the village every winter.",
+    "We hope that the birds return to the lake after the drought.",
+    "After the war, few of the refugees could return to their farms."
+   ],
+   "quiet": [
+    "He was seen going to/coming from the rally on Sunday.",
+    "No photos exist of them driving to/from the airport.",
+    "Buses run to/leaving from the stadium every twenty minutes.",
+    "Her trip to/around Madrid was paid for by the firm.",
+    "The soldiers will come home to their families next spring.",
+    "Thousands of migrants travel to the village every winter.",
+    "We hope that the birds stay at the lake after the drought.",
+    "After the war, few of the refugees could go to their farms."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'return' (coming back)",
+ "unit_kind": "token",
+ "confidence": 0.35,
+ "notes": "Card: ' return' x6, '路' x3, 'اع' x3, 'ition' x3, '常' x2, ' back' x2; broad. Probe: 'to/returning' 0.730; 'Please return the book' 0.160; code 'return x' 0.183 peaking on 'def'; 'walked home' 0.106; Chinese 0.065. The plain ' return' is under the bar, so half the fire items use the slash form.",
+ "trigger": {
+  "words": [
+   "return",
+   "returning"
+  ]
+ }
+}

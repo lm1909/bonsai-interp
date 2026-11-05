@@ -1,0 +1,59 @@
+{
+ "contribution": "2026-11-05-lm1909-f48465bd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N2055-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N2055",
+   "pole": "-",
+   "label": "negation and its kin: ' not', \"n't\", ' cannot', ' unlikely', ' no longer'",
+   "fire": [
+    "I wouldn't be shocked if the price doubles by next spring.",
+    "She said it is very unlikely that the bridge will reopen.",
+    "My sister doesn't want to go to the wedding in June.",
+    "The plan cannot work without far more money from the state.",
+    "This paint may not hold its colour in strong sun.",
+    "He said, \"No, I don't want to move to the city.\"",
+    "The figures do not back up what the minister told us.",
+    "Since the surgery, he no longer needs a stick to walk."
+   ],
+   "quiet": [
+    "I would be shocked if the price doubles by next spring.",
+    "She said it is very likely that the bridge will reopen.",
+    "My sister wants to go to the wedding in June.",
+    "The plan can work with far more money from the state.",
+    "This paint will hold its colour in strong sun.",
+    "He said, \"Yes, I want to move to the city.\"",
+    "The figures back up what the minister told us.",
+    "Since the surgery, he still needs a stick to walk."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "negation",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.8,
+ "notes": "Card: ' not' x10, '’t' x3, \"'t\" x3, ' cannot' x2, ' unlikely' x2, ' different', ' longer'. Probe: \"wouldn't\" 0.735; ' unlikely' 0.578; 'may not keep' 0.232; 'do not support' 0.177; 'no longer' 0.168; affirmative versions 0.001, 0.002. Note the plain ' not' reading is low, so the median may be close.",
+ "trigger": {
+  "words": [
+   "not",
+   "cannot",
+   "unlikely"
+  ],
+  "tokens": [
+   "’t",
+   "'t"
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e0713ea7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N10112+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N10112",
+   "pole": "+",
+   "label": "clause boundaries in long machine-translated technical prose (guess; probes stayed low)",
+   "fire": [
+    "The hardness of the coating is higher than that of the substrate, and it has no influence on the toughness of the blade, and the service life is greatly extended.",
+    "During the operation, special attention should be paid to the pressure of the valve, and the operating temperature should be adjusted according to the actual situation.",
+    "Generally speaking, according to the structure of the motor, it can be divided into two types, and the thickness of the shell will gradually become thinner.",
+    "In addition, the positioning accuracy of each feed axis is improved, and the long-term stability of processing is ensured, which is the important principle of design.",
+    "The strength of the film will become increasingly high, and gradually tend to be stable, and the surface roughness should be strictly controlled.",
+    "For patients with heart disease, special attention should be paid during the operation, and the dosage should be reduced according to the condition.",
+    "Pay attention to avoid the steel plate on the side when installing the switch, and the drill bit should be selected according to the size of the hole.",
+    "The cost of the process is lower than that of the traditional process, and it has the advantages of simple operation, and the quality can be well guaranteed."
+   ],
+   "quiet": [
+    "The coating on my old frying pan has worn away over the years, and I have been meaning to buy a new one, but the shops here are expensive.",
+    "During the storm, we sat in the kitchen with a candle, and my grandmother told us about the winters she remembered from when she was young.",
+    "To be honest, I never liked that motor, and when it finally broke down last summer we pushed the boat back to the dock and went for lunch.",
+    "Besides that, the hotel was lovely, and the staff remembered our names, which is the main reason that we keep coming back every other year.",
+    "The film got better as it went along, and by the end most of the audience was laughing, and my friend said it was the best of the year.",
+    "My aunt had heart surgery in the spring, and she is back in her garden now, and the doctors say that she should take it easy for a while.",
+    "We drilled a hole for the switch last weekend, and my son held the ladder, and it took far longer than I had told my wife that it would.",
+    "The old way of making cheese costs more than the new way, and the farmers here are proud of it, and the tourists love to buy it at the market."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "translated technical prose (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card: ' and' x3, '.' x3, ',' x2, ' should', ' attention', ' speaking', ' addition', in Chinese-to-English technical text. Probe: short sentences reached only 0.099, 0.092, 0.061, against 0.020 and 0.004 for ordinary prose. The top examples sit in long passages, so the test uses long ones. Expect a failure on the median."
+}

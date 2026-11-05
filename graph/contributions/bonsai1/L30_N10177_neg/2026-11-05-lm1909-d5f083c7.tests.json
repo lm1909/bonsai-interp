@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-d5f083c7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N10177-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N10177",
+   "pole": "-",
+   "label": "a common capitalized word beginning a company name after a corporate cue ('a subsidiary of New York Life', 'a company called Second Sight')",
+   "fire": [
+    "The bank is a wholly owned subsidiary of New England Financial Group.",
+    "The device was built by a Boston-based startup called Blue Harbor Robotics.",
+    "The brand is an indirect subsidiary of First National Holdings.",
+    "It was developed by a Texas-based company called Black Rock Energy.",
+    "The insurer is a subsidiary of New Jersey Mutual Life.",
+    "Investors backed a small British firm called Second Nature Foods.",
+    "She took a job at a Seattle-based company named Red Cedar Software.",
+    "The store chain was sold to a subsidiary of Golden State Brands."
+   ],
+   "quiet": [
+    "The bay is a sheltered part of the New England coast.",
+    "The device was built by a Boston-based engineer in her garage.",
+    "The brand is an indirect result of the First World War.",
+    "It was developed by a Texas-based teacher with a love of maps.",
+    "The town is a suburb of Newark in New Jersey.",
+    "Investors backed a small British farm near the Second Severn Crossing.",
+    "She took a job at a Seattle-based school near the Red Cross office.",
+    "The store chain was sold in a hurry during the Golden State drought."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "start of a company name",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.5,
+ "notes": "Card: ' New' x8, ' The' x5, ' like' x2, ' Second' x2, ' Black' x2, after 'subsidiary of', 'company called', 'group'. Probe: 'subsidiary of New York Life' 0.948; 'company called Second Sight' 0.475; but 'companies like Moderna' 0.016 peaked on the name itself; 'an indirect part of' 0.011. Near misses keep the capitalized word or the frame but drop the company."
+}

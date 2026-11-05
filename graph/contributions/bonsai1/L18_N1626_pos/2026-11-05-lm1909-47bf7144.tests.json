@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-47bf7144",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1626+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:19:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N1626",
+   "pole": "+",
+   "label": "parameter names in a Python docstring (':param context:') (guess at a part of a broad pole)",
+   "fire": [
+    "def fetch(url, session):\n    \"\"\"Fetch a page.\n\n    :param url: the page address\n    :param session: the open session\n    \"\"\"",
+    "def resize(image, width):\n    \"\"\"Resize the image.\n\n    :param image: input image\n    :param width: new width\n    \"\"\"",
+    ":param request: the incoming request\n:param user: the logged-in user",
+    "def save(path, data):\n    \"\"\"\n    :param path: where to write\n    :param data: the bytes to write\n    \"\"\"",
+    ":param token: access token\n:param scope: requested scope",
+    "def scale(matrix, factor):\n    \"\"\"\n    :param matrix: the input\n    :param factor: scale to apply\n    \"\"\"",
+    ":param cursor: database cursor\n:param table: name of the table",
+    "def send(message, channel):\n    \"\"\"\n    :param message: the text\n    :param channel: the target\n    \"\"\""
+   ],
+   "quiet": [
+    "def fetch(url, session):\n    page = session.get(url)\n    page.raise_for_status()\n    return page.text",
+    "def resize(image, width):\n    ratio = width / image.width\n    return image.scale(ratio)",
+    "request = get_request()\nuser = request.user\nprint(user)",
+    "def save(path, data):\n    with open(path, 'wb') as f:\n        f.write(data)",
+    "token = load_token()\nscope = 'read'\nprint(token, scope)",
+    "def scale(matrix, factor):\n    return [row * factor for row in matrix]",
+    "cursor = db.cursor()\ntable = 'users'\ncursor.execute(sql)",
+    "def send(message, channel):\n    channel.push(message)\n    return True"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "docstring parameter names (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": 0.15,
+ "notes": "Card: broad (1.6% reach 0.1 of max), scattered code identifiers and ' syll'. Probe: ':param context' 0.380; ' syll' 0.335; 'self.refno' 0.109; 'output_delimiter' 0.085; prose about a dog 0.012. The one repeatable-looking reading I found; low confidence."
+}
