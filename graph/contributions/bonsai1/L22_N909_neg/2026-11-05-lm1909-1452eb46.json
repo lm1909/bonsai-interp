@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-1452eb46",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N909-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:45+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N909_neg/2026-11-05-lm1909-1452eb46.tests.json"
+ },
+ "label": "talk of repaying borrowed money (pay back, paid back with interest, repaid, a way to pay the loan), not other senses of pay",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N909_neg/2026-11-05-lm1909-1452eb46.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.86,
+     "peak": " paid"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.412,
+     "peak": "aying"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.625,
+     "peak": " paid"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.387,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.336,
+     "peak": " pay"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.747,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.406,
+     "peak": " repay"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.331,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": " paid"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.421,
+     "peak": " paying"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " compliment"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.05,
+     "peak": " pay"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": " paid"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": "A"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.409,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "repaying borrowed money",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' pay' x9, ' paid' x4, ' back' x3, ' loan', ' payment', ' recovered'. Probes: 'paid back with interest' 1.242, 'repaid' 0.901, 'pay this money back' 0.614, 'no way to pay it' 0.342; 'pay a visit' 0.110, 'got paid on Friday' 0.014, 'paid a compliment' 0.011. Near misses use other senses of pay.",
+ "selection": "random draw"
+}

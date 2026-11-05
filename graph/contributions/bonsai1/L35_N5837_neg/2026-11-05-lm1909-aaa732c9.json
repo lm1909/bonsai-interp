@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-aaa732c9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5837-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:00+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N5837_neg/2026-11-05-lm1909-aaa732c9.tests.json"
+ },
+ "label": "a split piece of a Hangul syllable at the start of a transliterated foreign name or word in Korean (캘리포니아, 캐나다, 캐릭터)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N5837_neg/2026-11-05-lm1909-aaa732c9.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.296,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.503,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.261,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.396,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.154,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.412,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.246,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.335,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.14,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " 지난"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": " 어"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": "화"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "우"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": " �"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.316,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first Hangul piece of a loanword",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: '�' x19 and ' �' x3 byte pieces, mostly Korean transliterations (캘리포니아, 캐리, 캔버스) with some CJK outliers; 'キャ' is the top peak. Probes: 캐리 0.377, 캘리 0.352, 캔버 0.213; native-word Korean and Japanese sentences at 0.000. Japanese キャ in a short sentence scored only 0.042, so Japanese is left out. Near misses use native Korean words in the same frames.",
+ "selection": "random draw"
+}

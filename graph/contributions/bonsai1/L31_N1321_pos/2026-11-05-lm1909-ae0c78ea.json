@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-ae0c78ea",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N1321+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:13+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N1321_pos/2026-11-05-lm1909-ae0c78ea.tests.json"
+ },
+ "label": "the spelling piece ' cock' or ' Cock' at the start of a longer word (cockatoo, cockup, Cockburn, cockerel, cockroach)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N1321_pos/2026-11-05-lm1909-ae0c78ea.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.685,
+     "peak": " cock"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.625,
+     "peak": " cock"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.587,
+     "peak": " Cock"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.678,
+     "peak": " cock"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.642,
+     "peak": " cock"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.709,
+     "peak": " cock"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.436,
+     "peak": " Cock"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.531,
+     "peak": " cock"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.049,
+     "peak": " gum"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " finish"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " historian"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.045,
+     "peak": " ro"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " series"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.0,
+     "peak": " Edinburgh"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.028,
+     "peak": " need"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.633,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'cock-' word start",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' cock' x5, ' Cock' x3, 'ck', all in non-sexual uses (Cockburn, cockups, cockatoo), plus outliers ('한', '这种', ' the') at the top. Probes: cockups 0.725, cockatoo 0.638, cockerel 0.588, Cockburn 0.580; Fowler 0.041. Whole-token ' cockpit' and ' cocktail' are avoided since they do not contain the piece. Fire sentences use only bird, insect, surname and error senses.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " cock",
+   " Cock"
+  ]
+ }
+}

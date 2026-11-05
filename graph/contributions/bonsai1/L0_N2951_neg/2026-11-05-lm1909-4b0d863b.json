@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-4b0d863b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N2951-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:41+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N2951_neg/2026-11-05-lm1909-4b0d863b.tests.json"
+ },
+ "label": "the Arabic letter piece 'ض' as its own token (إ|ض|افة), and the English adverb ' just'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N2951_neg/2026-11-05-lm1909-4b0d863b.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.591,
+     "peak": "ض"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.731,
+     "peak": "ض"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.591,
+     "peak": "ض"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.558,
+     "peak": "ض"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.412,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.295,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.591,
+     "peak": "ض"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.558,
+     "peak": " just"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.2,
+     "peak": " السابقة"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.212,
+     "peak": " عن"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.135,
+     "peak": "زي"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.071,
+     "peak": "ق"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": " wait"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.062,
+     "peak": " any"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.119,
+     "peak": " الطعام"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.108,
+     "peak": " for"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.575,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic 'ض' piece / ' just'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: 'ض' x22, ' just' x4 of the top 32 (broad flag 2.2%, max 0.59). Probes: 'ض' in إضافة 0.591; ' just' 0.558 and 0.412; sentences where ض is part of a longer token 0.064-0.141. A list of two unrelated tokens; AGENTS.md says to keep a list if I can't find the pattern. Tokenization of every Arabic sentence was checked before commit.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ض",
+   " just"
+  ]
+ }
+}

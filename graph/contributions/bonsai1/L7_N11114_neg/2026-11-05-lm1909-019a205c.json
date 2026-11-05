@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-019a205c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N11114-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:03+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N11114_neg/2026-11-05-lm1909-019a205c.tests.json"
+ },
+ "label": "the digit right after a capital D in a code-like name (D1, D2, D3, D-10), across vitamins, cameras, sports divisions and models",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N11114_neg/2026-11-05-lm1909-019a205c.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.543,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.033,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.959,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.664,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.572,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.67,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.602,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.005,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " vitamin"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " medical"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " bought"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " vitamin"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " moved"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " coin"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " opening"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.667,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "digit after D",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: '1' x13, '2' x9, '3' x5 after D: D1 football, Nikon D3, vitamin D2, D-10TS, D20. Probes: D1 1.089, D3 0.848, D-10T 0.697, D2 0.627; vitamin A and C 0.009, B2 and 4K 0.012, 'Vitamin D' without a digit 0.005. Near misses keep the frames with other letters or no digit. Tokens in each sentence were checked.",
+ "selection": "random draw"
+}

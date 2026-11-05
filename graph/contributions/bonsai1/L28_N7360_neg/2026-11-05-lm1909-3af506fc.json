@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-3af506fc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7360-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:41+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N7360_neg/2026-11-05-lm1909-3af506fc.tests.json"
+ },
+ "label": "the first word of the name of a US federal regulatory agency, after 'U.S.' or 'the' (Environmental Protection Agency, Food and Drug Administration, Securities and Exchange Commission)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N7360_neg/2026-11-05-lm1909-3af506fc.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.852,
+     "peak": " Environmental"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.895,
+     "peak": " Food"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.63,
+     "peak": " Consumer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.518,
+     "peak": " Securities"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.522,
+     "peak": " Health"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.747,
+     "peak": " Federal"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.835,
+     "peak": " Food"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.412,
+     "peak": " Safety"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.16,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.119,
+     "peak": " drug"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.107,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.714,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.173,
+     "peak": " food"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.301,
+     "peak": " highway"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.689,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first word of a US regulator's name",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' Environmental' x10, ' Food' x10, ' Drug' x6, ' Consumer', ' Securities'. Probes: 0.87 Environmental, 0.85 Food, 0.74 Securities, 0.70 Consumer; 'U.S. Army' 0.163, 'Environmental damage' 0.079, 'Food prices' 0.031. New agencies are in the test (Occupational Safety and Health, Federal Aviation, National Highway Traffic Safety), and near misses keep the words as ordinary nouns.",
+ "selection": "random draw"
+}

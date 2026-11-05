@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e24c89d2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N11764+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:56:26+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N11764_pos/2026-11-05-lm1909-e24c89d2.tests.json"
+ },
+ "label": "the start of the predicate after a long subject in Spanish or French prose (es un claro ejemplo, seront inscrits), much weaker in the same sentence in English",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N11764_pos/2026-11-05-lm1909-e24c89d2.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.5,
+     "peak": " un"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.053,
+     "peak": " los"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.091,
+     "peak": " mejor"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.66,
+     "peak": " un"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.394,
+     "peak": " seront"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.282,
+     "peak": " con"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.278,
+     "peak": " son"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.42,
+     "peak": " exemple"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.136,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " companies"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.187,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.091,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " firms"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.338,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "predicate after a long Romance subject",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: broad flag 1.3%; es, be, un, seront, he, son, sont, seinen: mostly verbs after long subjects in Spanish and French. Probes: long Spanish subject 0.603 and 0.385, French 0.185-0.232; a short 'La casa es grande' 0.103; an English translation 0.242. Near misses are English translations, which is a weak contrast: this tests language plus position, not a meaning.",
+ "selection": "random draw"
+}

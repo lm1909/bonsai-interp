@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-167d0f31",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N288+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:56:47+00:00",
+ "recipe": {
+  "toolchain_commit": "3c1aa85fe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N288_pos/2026-11-05-lm1909-167d0f31.tests.json"
+ },
+ "label": "vocabulary for quantum numbers of electrons (angular momentum, magnetic quantum number)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N288_pos/2026-11-05-lm1909-167d0f31.tests.json",
+   "prereg_commit": "3c1aa85fe",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.264,
+     "peak": " momentum"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.341,
+     "peak": " quantum"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.582,
+     "peak": " quantum"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.805,
+     "peak": " momentum"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.509,
+     "peak": " quantum"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.359,
+     "peak": " number"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.65,
+     "peak": " momentum"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.583,
+     "peak": " quantum"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " s"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.088,
+     "peak": " wavelength"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.118,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "Safety"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " electron"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " crystal"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.583,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c1aa85fe",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "quantum-number vocabulary",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: higher, momentum, magnetic, angular, un, high, with the top peak on ' momentum' in 'angular momentum quantum number'; density is very low. Probes: ' quantum' after magnetic 0.556, ' number' in the angular momentum phrase 0.402; 'blood quantum' 0.149, 'external steam' 0.055, 'linear speed' 0.002. Near misses keep the physics and drop the quantum-number phrase. The card's other peaks (very high, effective, external) are outside this label.",
+ "selection": "random draw"
+}
