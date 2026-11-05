@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-df45669f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N11413+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N11413",
+   "pole": "+",
+   "label": "A token that announces a specification or elaboration of what was just said (':' after 'two parts', ', principalmente,', ', you know,', 'En primer lugar'), in English and Spanish; the same content with no such turn stays quiet.",
+   "fire": [
+    "The exam has three sections: reading, writing and math.",
+    "The report covers two topics: cost and safety.",
+    "Eat simple foods (you know, like a pear) at lunch.",
+    "Se centran en varios países, principalmente, en Francia y España.",
+    "Es barato, es rápido, pero lo mejor, es que funciona.",
+    "En primer lugar, el precio es bajo.",
+    "Todo funciona bien, sobre todo, en verano.",
+    "There is a class for every student, except one group… those who work nights."
+   ],
+   "quiet": [
+    "The exam has three sections and ends at noon.",
+    "The report covers two years of cost data.",
+    "Eat simple foods at lunch every day.",
+    "Se centran en varios países de Europa.",
+    "Es barato y rápido y funciona.",
+    "El precio es bajo en este lugar.",
+    "Todo funciona bien en verano.",
+    "There is a class for every student in the school."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "announcing a specification",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probes: 0.26-0.92, but a plain Spanish sentence read 0.32 on ' más', so Spanish may leak. The output direction suppresses ' especially', ' particularly', ' so', which suggests the pole marks a slot other than those words."
+}

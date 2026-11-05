@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-0c09c6f6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N12153+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N12153",
+   "pole": "+",
+   "label": "A separator that opens the next level of a settings path: '->' between menu names, \"['\" or \"('\" before a config key in code; plain code and prose about settings stay quiet.",
+   "fire": [
+    "Open Edit->Settings->Display and uncheck the box.",
+    "port = self.config.get('server', 'port')\n",
+    "name = settings['database']['name']\n",
+    "Go to File->Options->Save to change it.",
+    "user = parser.get('auth', 'user')\n",
+    "conf['logging'][0]['level'] = 'info'\n",
+    "Choose View->Layout->Grid from the menu.",
+    "if conf.has_section('proxy'):\n    pass\n"
+   ],
+   "quiet": [
+    "Open the settings page and uncheck the box.",
+    "port = self.port\n",
+    "name = get_name()\n",
+    "Go to the store to change it.",
+    "user = current_user()\n",
+    "items[0][1] = 7\n",
+    "Choose a color from the menu.",
+    "if has_proxy:\n    pass\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "opening next level of a settings path",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probes: '->' 0.80, \"('\" 0.28-0.47, \"['\" 0.17-0.44. The card's '- Click' and dict-indent examples read 0.17-0.34 and are not covered."
+}
