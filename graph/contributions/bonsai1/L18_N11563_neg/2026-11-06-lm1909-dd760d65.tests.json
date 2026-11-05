@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-dd760d65",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N11563-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:20:28+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N11563",
+   "pole": "-",
+   "label": "(guess) a placeholder name in test or example code: foo, col_1, group1",
+   "fire": [
+    "handler.parse(StringIO(\"<foo>\"))\nassert handler.tag == 'foo'\n",
+    "tree = parse(\"<foo><bar/></foo>\")\nprint(tree)\n",
+    "frame = pd.DataFrame({\"col_1\": [1], \"col_2\": [2]})\n",
+    "<node id=\"group1\">\n  <leaf id=\"item2\"/>\n</node>\n",
+    "obj = Mock()\nobj.foo = 1\nassert obj.foo == 1\n",
+    "def test_foo():\n    assert foo(1) == 1\n",
+    "table = make_table({\"col_1\": [3, 4]})\nprint(table)\n",
+    "<item name=\"foo\">\n  <value>1</value>\n</item>\n"
+   ],
+   "quiet": [
+    "handler.parse(StringIO(text))\nassert handler.done\n",
+    "tree = parse(path)\nprint(tree)\n",
+    "frame = pd.DataFrame(rows)\n",
+    "<html>\n  <body>Hello</body>\n</html>\n",
+    "obj = load()\nobj.count = 1\nassert obj.count == 1\n",
+    "def test_sum():\n    assert sum([1]) == 1\n",
+    "table = make_table(rows)\nprint(table)\n",
+    "<book title=\"Emma\">\n  <price>1</price>\n</book>\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "placeholder names in example code (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": "low"
+}

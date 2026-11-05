@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-257bbc0c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7778+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:20:28+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N7778",
+   "pole": "+",
+   "label": "markup syntax for references and template blocks: :ref:`…`, <ref>, {% block %}",
+   "fire": [
+    "See the :ref:`installation notes <setup>` before you begin.\n",
+    "For details see :ref:`Model.fit` and related methods.\n",
+    "{% extends \"layout.html\" %}\n{% block body %}\n<p>Hello</p>\n",
+    "The town has two old churches.<ref>Smith 1990, p. 4</ref>",
+    "Handlers must be a :ref:`callback <callback>`, as noted.\n",
+    "Read the :ref:`FAQ <faq>` for common errors.\n",
+    "{% load static %}\n{% block title %}Home{% endblock %}\n",
+    "The river floods every spring.<ref>Jones 2004</ref>"
+   ],
+   "quiet": [
+    "See the installation notes on page three before you begin.\n",
+    "For details see the model's fit method and related methods.\n",
+    "<html>\n<body>\n<p>Hello</p>\n",
+    "The town has two old churches and a large market.",
+    "Handlers must be a callback function, as noted.\n",
+    "Read the FAQ for common errors.\n",
+    "<title>Home</title>\n<h1>Welcome</h1>\n",
+    "The river floods every spring near the old mill."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "markup: :ref:`, <ref>, {% block",
+ "unit_kind": "format / code",
+ "confidence": "high"
+}
