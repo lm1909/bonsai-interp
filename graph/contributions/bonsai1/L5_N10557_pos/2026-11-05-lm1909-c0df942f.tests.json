@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-c0df942f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10557+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:06:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N10557",
+   "pole": "+",
+   "label": "the class-name piece after 'Q' in PyQt code (QIcon, QFrame, QSize)",
+   "fire": [
+    "pix = QtGui.QIcon(path)\nself.btn.setIcon(pix)",
+    "self.line = QtWidgets.QFrame(self.page)\nself.line.setObjectName(\"line\")",
+    "box = QtCore.QSize(64, 64)\nself.resize(box)",
+    "w = QtWidgets.QLabel('hi')\nw.show()",
+    "rect = QtCore.QRect(10, 10, 50, 50)\nself.area.setGeometry(rect)",
+    "self.grid = QtWidgets.QGridLayout(self)\nself.grid.addWidget(w)",
+    "help_view = QtHelp.QHelpEngine(path)\nhelp_view.setupData()",
+    "font = QtGui.QFont('Arial')\nlabel.setFont(font)"
+   ],
+   "quiet": [
+    "pix = load_image(path)\nself.btn.config(image=pix)",
+    "self.line = tk.Frame(self.page)\nself.line.pack()",
+    "box = (64, 64)\nself.resize(box)",
+    "w = wx.StaticText(parent, label='hi')\nw.Show()",
+    "rect = pygame.Rect(10, 10, 50, 50)\nself.area.blit(rect)",
+    "self.grid = ttk.Frame(self)\nself.grid.pack(side='left')",
+    "help_view = open_manual(path)\nhelp_view.read()",
+    "font = ImageFont.truetype('arial.ttf', 12)\nlabel.draw(font)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Qt class name after Q",
+ "unit_kind": "code / token piece",
+ "confidence": "high"
+}
