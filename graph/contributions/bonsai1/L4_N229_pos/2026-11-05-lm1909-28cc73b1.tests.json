@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-28cc73b1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N229+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:41:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N229",
+   "pole": "+",
+   "label": "early token in a window (dense, positional; second token of a text)",
+   "fire": [
+    "looking up what to cook",
+    "every Friday before the match",
+    "took off my shoes and sat down",
+    "fixing up an old bicycle",
+    "some Monday around the holidays",
+    "got out my maps and went walking",
+    "sorting through a box of letters",
+    "each Sunday during the summer"
+   ],
+   "quiet": [
+    "Yesterday I spent the afternoon looking up what to cook",
+    "We always meet every Friday before the match",
+    "When I got home I took off my shoes and sat down",
+    "My brother likes fixing up an old bicycle",
+    "We could visit some Monday around the holidays",
+    "At dawn I got out my maps and went walking",
+    "She spent an hour sorting through a box of letters",
+    "They drive to the coast each Sunday during the summer"
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: 12% of tokens reach 0.1 of max, and all probes scored about 0.2-0.3.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "second token (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (12.4%), positional (94% of peaks at window position 1) and gate-closed (100% -x- echo). Probe: lowercase fragments 0.21-0.26. A best-guess test of very short lowercase fragments against the same words later in a sentence."
+}

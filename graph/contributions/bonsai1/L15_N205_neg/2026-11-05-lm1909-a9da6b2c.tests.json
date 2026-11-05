@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-a9da6b2c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N205-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:41:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N205",
+   "pole": "-",
+   "label": "the counted noun in a 'number of …' or 'total of …' phrase (reads with the same sequence, nine kits; guess)",
+   "fire": [
+    "# number of samples with the same barcode\nn = len(samples)",
+    "A total of four kits make up the full set of parts.",
+    "The number of reads with the same prefix was small.",
+    "# count of users with the same address\nc = len(users)",
+    "A total of twelve kits were sold to the flying club.",
+    "The number of cells with the same genotype was recorded.",
+    "In all, a total of eight modules make up the system.",
+    "# number of rows with the same key\nm = len(rows)"
+   ],
+   "quiet": [
+    "# keep samples together under one barcode\ngroup(samples)",
+    "Four parts of the set come in a single large box.",
+    "The reads with a matching prefix were put aside.",
+    "# send each of the users a welcome note\nnotify(users)",
+    "Twelve members of the flying club came to the sale.",
+    "The cells with that genotype grew more slowly.",
+    "In all, the system looks simple from the outside.",
+    "# sort the rows by the key\nsort(rows)"
+   ]
+  }
+ ],
+ "predictions": "Likely a fail; probes were 0.03-0.52 with no firm contrast.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "counted noun (guess)",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card shows no dominant token (' for', ' in', ' sequence', ' vectors', ' kits'). Probe: 'number of reads with the same sequence' 0.52, 'A total of six kits' 0.27, comprehension ' for' 0.10, 'vectors = [...]' 0.03. Code ' for' / ' in' in the top examples are not explained."
+}

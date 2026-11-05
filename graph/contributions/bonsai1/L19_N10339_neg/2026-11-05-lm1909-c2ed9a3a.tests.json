@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-c2ed9a3a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N10339-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:41:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N10339",
+   "pole": "-",
+   "label": "token inside a Python type check or membership test (isinstance(x, (str, …)), ':' in name; guess on a broad unit)",
+   "fire": [
+    "if isinstance(paths, (list, tuple)):\n    paths = paths[0]",
+    "if not isinstance(arr, np.ndarray):\n    arr = np.array(arr)",
+    "if isinstance(value, (int, float)):\n    total += value",
+    "if not isinstance(name, str):\n    raise TypeError(\"name\")",
+    "if '/' in filename:\n    filename = filename.split('/')[-1]",
+    "if isinstance(data, (bytes, bytearray)):\n    data = data.decode()",
+    "if not isinstance(rows, list):\n    raise ValueError(\"rows\")",
+    "if '.' in version:\n    major = version.split('.')[0]"
+   ],
+   "quiet": [
+    "If the paths come as a list, we take only the first of them.",
+    "Convert the input to an array when it is not already one.",
+    "Add the value to the total when it is a number.",
+    "The function complains when the name is not a string.",
+    "Take only the last part of the file name after the slash.",
+    "Decode the data when it arrives as raw bytes.",
+    "The program stops with an error when the rows are not a list.",
+    "Take the major number from the first part of the version."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: probes were 0.04-0.24, and the unit is broad.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python type check (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (1.6% of tokens). Top examples: ' in', ' ValueError', ' \"', '):', 'Teacher', '[', '.com'. Probe: isinstance tuple 0.24, ValueError 0.14, 'if ':' in hostname' 0.04. A best guess."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-01eaf6dc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N10891-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:41:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N10891",
+   "pole": "-",
+   "label": "the year or date of a recurring government event ('his 2013 budget speech', 'the 2004 budget', 'State of the Union')",
+   "fire": [
+    "The chancellor set out the reform in her 2017 budget statement to the house.",
+    "A tax on sugar was announced in the 2016 budget.",
+    "The president returned to the theme in his 2015 State of the Union speech.",
+    "Pension changes were first proposed in the 2009 budget.",
+    "The premier promised new roads in his 2019 budget address.",
+    "She raised the issue again in her 2014 State of the Nation address.",
+    "The levy on fuel dates from the 2008 federal budget.",
+    "Spending on schools rose after the 2012 budget speech in parliament."
+   ],
+   "quiet": [
+    "The chancellor set out the reform in a long statement to the house.",
+    "A tax on sugar was announced by the finance ministry.",
+    "The president returned to the theme in a short speech to farmers.",
+    "Pension changes were first proposed by a junior minister.",
+    "The premier promised new roads in a chat with local reporters.",
+    "She raised the issue again at her 2014 high school reunion.",
+    "The dent in the fender dates from the 2008 family holiday.",
+    "Spending on toys rose after the 2012 wedding at the farm."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same sentences without the dated political event stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dated budget or address",
+ "unit_kind": "contextual / semantic",
+ "confidence": "medium",
+ "notes": "Probe: '2013 budget speech' 0.93, '2004 budget' 0.50, '2011 State of the Union' 0.67, 'next month's holiday sales' 0.41 (not explained by this label); 'after his breakfast' 0.09. Dated non-political events are new in this test."
+}

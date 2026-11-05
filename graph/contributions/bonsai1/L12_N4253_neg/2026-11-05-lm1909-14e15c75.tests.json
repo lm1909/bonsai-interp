@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-14e15c75",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N4253-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:41:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N4253",
+   "pole": "-",
+   "label": "a disease name in a title line (' Alzheimer', 'Melan|oma' in a heading such as 'Clinical Features of …')",
+   "fire": [
+    "Diagnosis of Malignant Melanoma\nA biopsy confirms the lesion type.",
+    "Treatment of Alzheimer's Disease\nDrugs slow the decline for a while.",
+    "Risk Factors for Multiple Myeloma\nAge is the strongest one known.",
+    "Early Signs of Alzheimer's Disease\nFamilies often notice small lapses.",
+    "Pathology of Cutaneous Lymphoma\nThe skin shows dense infiltrates.",
+    "Staging of Malignant Mesothelioma\nImaging guides the first decision.",
+    "Caring for Patients with Alzheimer's\nRoutine helps more than anything.",
+    "Management of Hepatocellular Carcinoma\nSurgery is preferred when possible."
+   ],
+   "quiet": [
+    "A biopsy confirmed that the lesion on her back was a melanoma.",
+    "Drugs for Alzheimer's disease slow the decline for a while.",
+    "Age is the strongest known risk factor for multiple myeloma.",
+    "Families often notice small lapses in relatives with Alzheimer's.",
+    "Diagnosis of the Old Boiler\nA gauge confirms the pressure.",
+    "Treatment of Wooden Floors\nOil protects the boards for a while.",
+    "Risk Factors for Late Trains\nSnow is the strongest one known.",
+    "Management of Small Harbors\nDredging is preferred when possible."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same disease in prose and non-disease headings stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "disease name in a heading",
+ "unit_kind": "contextual / format",
+ "confidence": "medium",
+ "notes": "Card: '\\n' x5, ' \"\"\"\\n' x4, ' \"\"\"' x3, ' Alzheimer' x2. Docstrings probed at 0.02-0.03 even though they lead the card, so this label does not cover them. Probe: 'Clinical Features of Malignant Melanoma' 0.69, '... Alzheimer's Disease' 0.57; disease in prose 0.04-0.08; 'Clinical Features of the New Bridge' 0.02."
+}

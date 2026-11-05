@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-a098516e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9972-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:41:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N9972",
+   "pole": "-",
+   "label": "dense spelling unit, strongest on word pieces such as 'ang' in Strang and final 'q' in transliterated names",
+   "fire": [
+    "The funeral for Mr. Strang will be held at the chapel on Saturday.",
+    "Oddly and strangely, the Strangs never wrote back.",
+    "Hebrew sources spell the name Yitshaq in the older texts.",
+    "The Polish name of the village is Brzezinka on most maps.",
+    "Strangers came to the shop run by the Strang brothers.",
+    "Older texts call him Ya'qub and his brother Yitshaq.",
+    "The town of Brzeg lies on the river west of the capital.",
+    "Her late husband, Tom Strang, sold the farm in spring."
+   ],
+   "quiet": [
+    "The funeral for Mr. Miller will be held at the chapel on Saturday.",
+    "Oddly and sadly, the Millers never wrote back.",
+    "Hebrew sources spell the name Isaac in the older texts.",
+    "The Polish name of the village is Lipowa on most maps.",
+    "Visitors came to the shop run by the Miller brothers.",
+    "Older texts call him Jacob and his brother Isaac.",
+    "The town of Lublin lies on the river east of the capital.",
+    "Her late husband, Tom Miller, sold the farm in spring."
+   ]
+  }
+ ],
+ "predictions": "Expect at most a marginal result; 13% of tokens reach 0.1 of max.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense, spelling pieces",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (13.4%) and gate-closed (100% -g +u leak). Card: 'ang' x8, ' 거' x3, 'ri', 'ze', 'q', 'akk'. Probe: 'Strang' 0.72, 'Yitshaq' 0.86. Near misses keep the sentence and swap the name."
+}
