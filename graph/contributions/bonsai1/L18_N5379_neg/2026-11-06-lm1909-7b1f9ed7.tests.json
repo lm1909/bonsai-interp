@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-06-lm1909-7b1f9ed7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N5379-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:02:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N5379",
+   "pole": "-",
+   "label": "the first token of a negative contraction (' don', ' isn', ' weren', ' wasn', ' didn')",
+   "fire": [
+    "Everyone at the table agreed that the plan isn't going to work.",
+    "After the long meeting on Friday, the managers still don't know.",
+    "Most of the older houses on that street weren't built to last.",
+    "Her first novel sold well, but the sequel wasn't quite as good.",
+    "In the end, my brother and his friends didn't come to the party.",
+    "Looking back at it now, we honestly don't regret the move.",
+    "The old clock in the hall isn't working again this morning.",
+    "Several of the students said that they weren't ready for the test."
+   ],
+   "quiet": [
+    "Everyone at the table agreed that the plan is not going to work.",
+    "After the long meeting on Friday, the managers still have questions.",
+    "Most of the older houses on that street were built to last.",
+    "Her first novel sold well, and the sequel was quite as good.",
+    "In the end, my brother and his friends came to the party.",
+    "Looking back at it now, we honestly regret the move.",
+    "The old clock in the hall is working again this morning.",
+    "Several of the students said that they were ready for the test."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "first token of n't contraction",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: '0' x6, '1' x6, ' don' x4, '-' x4, ' ' x3, ' such' x2, and many top windows are short, so this may be partly positional. Probes: ' isn' 0.917, ' weren' 0.916, ' don' 0.906; full forms 'There is no' and 'We were going' under 0.04. But ' ' before a year near the start also scored 0.866-0.877, whether 1998 or 2008, which this label does not cover. The fire items place the contraction past the sentence start to test the position question.",
+ "trigger": {
+  "tokens": [
+   " don",
+   " isn",
+   " weren",
+   " wasn",
+   " didn"
+  ]
+ }
+}

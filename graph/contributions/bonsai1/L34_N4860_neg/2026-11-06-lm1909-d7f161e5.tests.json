@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-d7f161e5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4860-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:02:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N4860",
+   "pole": "-",
+   "label": "a word piece that will be followed by '-iv': 'unct' in conj|unct|ivitis or adj|unct|ive, 'esh' in y|esh|iva, 'pect' in pers|pect|iva",
+   "fire": [
+    "Bacterial conjunctivitis spreads quickly among small children at school.",
+    "Doctors prescribe drops for allergic conjunctivitis in severe cases.",
+    "Her son studied at a small yeshiva in the city of Jerusalem.",
+    "Grammar books list a conjunctive adverb in this kind of sentence.",
+    "The rabbi ran the Rosh Yeshiva program for many years.",
+    "Un análisis con perspectiva histórica ayuda a entender el conflicto.",
+    "The nurse washed her hands after treating his conjunctivitis.",
+    "Este libro ofrece una nueva perspectiva sobre la guerra civil."
+   ],
+   "quiet": [
+    "Bacterial infections spread quickly among small children at school.",
+    "Doctors prescribe drops for allergic rashes in severe cases.",
+    "Her son studied at a small college in the city of Jerusalem.",
+    "Grammar books list a common adverb in this kind of sentence.",
+    "The rabbi ran the youth program for many years.",
+    "Un análisis con datos históricos ayuda a entender el conflicto.",
+    "The nurse washed her hands after treating his rash.",
+    "Este libro ofrece una nueva historia sobre la guerra civil."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "stem before a split '-iv'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: 'esh' x5, 'unct' x4, 'cent' x3, 'еж' x2, ' posit', 'pect': each one stops right before -iv/-ив (conjunctivitis, yeshiva, incentive, perspectiva, отслеживать). A prediction of the next piece, at L34. Probes: 'unct' 0.641, 'esh' 0.437; ' posit' before 'ivist' only 0.034 in a short sentence; whole-token ' incentives' and ' perspective' about 0. Only words that split this way can fire. Tokens are checked for every sentence."
+}
