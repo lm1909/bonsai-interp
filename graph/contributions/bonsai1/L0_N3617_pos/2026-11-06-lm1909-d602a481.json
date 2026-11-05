@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-d602a481",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3617+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:57:36+00:00",
+ "recipe": {
+  "toolchain_commit": "bf77439d9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N3617_pos/2026-11-06-lm1909-d602a481.tests.json"
+ },
+ "label": "the word for slowness across languages: English ' slowly' and Chinese 慢 (很慢, 太慢), as opposed to words for speed or manner in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N3617_pos/2026-11-06-lm1909-d602a481.tests.json",
+   "prereg_commit": "bf77439d9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.452,
+     "peak": " slowly"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.421,
+     "peak": " slowly"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.409,
+     "peak": " slowly"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.495,
+     "peak": " slowly"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.444,
+     "peak": " slowly"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.948,
+     "peak": "慢"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.776,
+     "peak": "慢"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.87,
+     "peak": "慢"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": " quickly"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " while"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " drifted"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": " suddenly"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " toward"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.121,
+     "peak": "很快"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": "烦"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": "继续"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.474,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf77439d9",
+  "minutes": 1,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "the word for slow: ' slowly', 慢",
+ "unit_kind": "lexical / cross-language",
+ "confidence": "high",
+ "notes": "Card: ' slowly' x23, 慢 x8, 慢性 of the top 32. Probes: ' slowly' 0.41-0.49, 很慢 0.88, 缓慢 0.29; quickly 0.06, gently 0.04, 很快 0.12-0.13. Adjective ' slow' reached 0.25 and sentence-initial 'Slowly' 0.16, so the adverb in mid-sentence is the core.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " slowly",
+   "慢"
+  ]
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-fe708b17",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N5613+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:57:17+00:00",
+ "recipe": {
+  "toolchain_commit": "bf77439d9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N5613_pos/2026-11-06-lm1909-fe708b17.tests.json"
+ },
+ "label": "code or a command that asks what an object is (np.shape(x), type(x), dir(obj), the `dir` command), as opposed to calls that compute with or copy the object",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N5613_pos/2026-11-06-lm1909-fe708b17.tests.json",
+   "prereg_commit": "bf77439d9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.873,
+     "peak": ".shape"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.817,
+     "peak": ".shape"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.008,
+     "peak": "(type"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.657,
+     "peak": " dir"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.914,
+     "peak": "(type"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.843,
+     "peak": "dir"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.8,
+     "peak": ".shape"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.761,
+     "peak": " dir"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.184,
+     "peak": ".sum"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.275,
+     "peak": ".max"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": "(sorted"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": "(name"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.12,
+     "peak": " load"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": ".copy"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.83,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf77439d9",
+  "minutes": 1,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "code asking what an object is: shape, type, dir",
+ "unit_kind": "code / semantic",
+ "confidence": "high",
+ "notes": "Card: '.shape' x8, ' dir' x4, ' type' x3, '(type' x2, 'dir' x2; the - pole is about tolerance and leniency, not the other side of this. Probes: .shape 0.72-0.74, (type 1.00, dir 0.75-0.78; np.sum 0.14, np.copy 0.01, sorted 0.08, plain loop 0.03. `len` after isinstance reached 0.31, so length checks may belong to this and are not tested here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".shape",
+   "(type",
+   " dir",
+   "dir"
+  ]
+ }
+}
