@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-eb98ea33",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8385+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:26:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N8385",
+   "pole": "+",
+   "label": "a single-letter or digit token straight after a digit in a code-like word or number (omega-3|s, i18|n, k8|s, the 3 in 555-5327)",
+   "fire": [
+    "Fish oils are rich in omega-3s and other fats.",
+    "We moved the whole cluster to k8s last year.",
+    "The app needs i18n support before it ships.",
+    "Please call our office at 555-7341 for details.",
+    "She sold all her old mp3s to a friend.",
+    "The ISBN on the cover is 0-262-53305-7 in this edition.",
+    "Add l10n files to the repo for each language.",
+    "They run many services on k8s in the cloud."
+   ],
+   "quiet": [
+    "Fish oils are rich in vitamins and other fats.",
+    "We moved the whole cluster to Oregon last year.",
+    "The app needs better support before it ships.",
+    "Please call our office after noon for details.",
+    "She sold all her old records to a friend.",
+    "The title on the cover is in gold in this edition.",
+    "Add language files to the repo for each country.",
+    "They run many services on servers in the cloud."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "single char after a digit",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: 's' x10, '1' x5, 'n' x5, '3' x4, 'a' x3, 'x', mostly after digits in IDs (broad flag 1.5%). Probes: 'n' in i18n 0.972, 's' in omega-3s 0.764, '3' in phone numbers and an ISBN 0.46-0.52; plain words under 0.02. Near misses keep the topic with the number gone."
+}

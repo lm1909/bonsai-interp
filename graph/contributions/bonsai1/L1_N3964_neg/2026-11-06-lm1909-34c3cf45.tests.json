@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-34c3cf45",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N3964-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:26:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N3964",
+   "pole": "-",
+   "label": "the suffix token 'ship' split off a noun (mentor|ship, court|ship, kin|ship, steward|ship) on a broad pole",
+   "fire": [
+    "Their long courtship began at a summer camp in Maine.",
+    "The college offered her a governorship of its physics board.",
+    "He started a mentorship scheme for young engineers.",
+    "A real kinship takes years to build and trust.",
+    "She won a stewardship of the music hall in Vienna.",
+    "New graduates can apply for a mentorship with senior staff.",
+    "That courtship ended after a quarrel over money.",
+    "Each authorship dispute goes to the editor for review."
+   ],
+   "quiet": [
+    "Their long walks began at a summer camp in Maine.",
+    "The college offered her a seat on its physics board.",
+    "He started a training scheme for young engineers.",
+    "A real house takes years to build and pay for.",
+    "She won a seat on the music board in Vienna.",
+    "New graduates can apply for a meeting with senior staff.",
+    "That partner left after a quarrel over money.",
+    "Each citation dispute goes to the editor for review."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "suffix token 'ship'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card flags broad (4.8%) and gate-closed (100%), max 0.79: 'in' x8, 'ship' x7, 'ны' x4, 'ه' x3, 'ين' x2, 'ships' x2. So split word endings across languages. Probes: 'in' in nicotinamide 0.859, 'ны' 0.846, 'ship' 0.655-0.739; 'She runs a program' 0.056, 'my good friend' 0.025. Test is on the English suffix only, so it will be partial. Tokens are checked.",
+ "trigger": {
+  "tokens": [
+   "ship",
+   "ships"
+  ]
+ }
+}

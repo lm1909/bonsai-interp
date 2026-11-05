@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-a43dda9a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N781-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:26:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N781",
+   "pole": "-",
+   "label": "a word in a short status or error message string in code (\"Email not found\", 'Invalid Username', u\"Sprint edited\")",
+   "fire": [
+    "        form.error = \"Account not found\"\n",
+    "        status = 'Invalid Password'\n",
+    "    logging.info('user options: %s user Selected: %s')\n",
+    "    LOG(u\"Project deleted\")\n",
+    "        self.message = \"Profile not updated\"\n",
+    "        error = 'Incorrect Username'\n",
+    "    print('Copy of: %s to: %s Failed.')\n",
+    "        form.notice = \"Record not found\"\n"
+   ],
+   "quiet": [
+    "        form.error = error_text\n",
+    "        status = status + 1\n",
+    "    logging.info(user_options)\n",
+    "    LOG(project)\n",
+    "        self.message = message\n",
+    "        error = count\n",
+    "    print(copy_name)\n",
+    "        form.notice = notice\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "word in a code status message",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: 's' x5, 'password' x2, ' found', ' Username', ' Selected', ' edited', all in Python strings. Probes: 'Selected: %s' 0.427 on 's', 'Email not found' 0.402, 'Invalid Username' 0.309, 'Sprint edited' 0.120; plain assignments 0.05-0.21; the same words in prose 0.096. Near misses are the same code without a message string."
+}

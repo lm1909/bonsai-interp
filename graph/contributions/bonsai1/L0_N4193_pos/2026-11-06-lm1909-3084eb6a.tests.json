@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-3084eb6a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4193+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:26:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N4193",
+   "pole": "+",
+   "label": "the partial-byte token of the Japanese pronoun 僕 ('I', male speaker), a rare CJK character split across tokens",
+   "fire": [
+    "僕は六時に起きます。",
+    "僕の友達は東京に住んでいます。",
+    "僕が昨日その本を買いました。",
+    "僕たちは一緒に公園へ行った。",
+    "今日は僕の誕生日です。",
+    "僕はコーヒーが好きです。",
+    "この車は僕のものです。",
+    "明日は僕が料理を作ります。"
+   ],
+   "quiet": [
+    "私は六時に起きます。",
+    "私の友達は東京に住んでいます。",
+    "私が昨日その本を買いました。",
+    "私たちは一緒に公園へ行った。",
+    "今日は私の誕生日です。",
+    "私はコーヒーが好きです。",
+    "この車は私のものです。",
+    "明日は私が料理を作ります。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "Japanese 僕 (split bytes)",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: '�' x32 of the top 32: partial-byte tokens of rare CJK characters (しあさ, 展望, 展览, 僕). Max 1.32. Probes: 僕 0.785; 展覧 and 展望 in sentences under 0.01, since those pieces did not split the same way; 私 0.007. One word stands in for a group of partial-byte tokens here, so it will be partial if it holds. Tokens are checked."
+}
