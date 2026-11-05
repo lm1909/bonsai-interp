@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-81bddc49",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N9105-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:06:38+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N9105_neg/2026-11-06-lm1909-81bddc49.tests.json"
+ },
+ "label": "on a dense weak pole, the split 'ç' and 'çu' of French perçu and ' quant' in 'quant à'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N9105_neg/2026-11-06-lm1909-81bddc49.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.492,
+     "peak": "çu"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.324,
+     "peak": " quant"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.858,
+     "peak": "ç"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.693,
+     "peak": " quant"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.954,
+     "peak": "çu"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.294,
+     "peak": " quant"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.756,
+     "peak": "ç"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.66,
+     "peak": " quant"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.082,
+     "peak": " habit"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.045,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.117,
+     "peak": " fut"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.115,
+     "peak": " avons"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.045,
+     "peak": "u"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.124,
+     "peak": " son"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.133,
+     "peak": " jug"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.106,
+     "peak": " pr"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.676,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French 'perçu', 'quant à' (dense pole)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags broad (7.4%) and gate-closed (92% leak), with a max of only 0.38: 'ación' x6, ' quant' x3, ' рын' x2, 'çu'. Probes: 'ç' in perçue 1.267, ' quant' 0.505; 'Información' sentence 0.126; English sentences under 0.08. Reported as dense regardless of this test's outcome.",
+ "selection": "random draw"
+}

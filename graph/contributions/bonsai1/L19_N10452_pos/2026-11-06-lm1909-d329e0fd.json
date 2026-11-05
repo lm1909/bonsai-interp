@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d329e0fd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N10452+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:07:20+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N10452_pos/2026-11-06-lm1909-d329e0fd.tests.json"
+ },
+ "label": "the short abbreviation of a title or unit before its period or number (Rep., Dr., 1 c sugar)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N10452_pos/2026-11-06-lm1909-d329e0fd.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.301,
+     "peak": " Rep"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.166,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.266,
+     "peak": " c"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.022,
+     "peak": " Kerr"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.453,
+     "peak": " c"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.207,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.024,
+     "peak": " Price"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.201,
+     "peak": " c"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " Long"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " milk"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " Ruiz"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": "ins"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " Price"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " smooth"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.204,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "abbreviated title or unit",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card: '.' x4, \" '\" x2, 'html' x2, ' Investigation', ' Rep', ' republic', ' Dr', ' c', with no clear pattern. Probes: ' c' as a unit 0.295, '.' after Dr 0.269, ' Rep' 0.236, but 'Ms.' sentence 0.018. A guess at the abbreviation cluster; the median may fall short.",
+ "selection": "random draw"
+}

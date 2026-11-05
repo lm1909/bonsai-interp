@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-78b6abea",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N7935+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:07:13+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N7935_pos/2026-11-06-lm1909-78b6abea.tests.json"
+ },
+ "label": "the word 'linked' or 'cited' in the sense of one document or profile referring to another (Works Cited, cited in, the linked essays, linkedin)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N7935_pos/2026-11-06-lm1909-78b6abea.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.664,
+     "peak": "ited"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.239,
+     "peak": " cited"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.756,
+     "peak": " linked"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.629,
+     "peak": " linked"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.517,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.764,
+     "peak": "ited"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.554,
+     "peak": " linked"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.917,
+     "peak": " linked"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": "Please"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": " later"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": " mine"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " how"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.186,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " type"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.647,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'cited' / 'linked' as a reference",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' linked' x6, ' cited' x3, ' in' x2, ' registered' x2, 'ited', 'References'. Probes: linkedin 1.111, 'Works Cited' 0.853, 'works cited' 0.683, 'linked essays' 0.369; 'Shopping list' 0.011, 'short essays' 0.012. Near misses use other words in the same frames.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "cited",
+   "linked",
+   "linkedin"
+  ]
+ }
+}

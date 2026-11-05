@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f30cd352",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N11184-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:06:54+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N11184_neg/2026-11-06-lm1909-f30cd352.tests.json"
+ },
+ "label": "a noun or verb for a disease or scourge threatening people (malaria, flu, diseases that attack, the big killers)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N11184_neg/2026-11-06-lm1909-f30cd352.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.206,
+     "peak": "era"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.371,
+     "peak": " flu"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.325,
+     "peak": " waiting"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.253,
+     "peak": " malaria"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.448,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.188,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.308,
+     "peak": " tuberculosis"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.182,
+     "peak": " influenza"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " region"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": " load"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.036,
+     "peak": " autumn"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": "ill"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.188,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.025,
+     "peak": " visitors"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " by"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.28,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "scourge or threatening disease",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' flu' x2, ' bugs', ' attack', ' malaria', ' unemployment', ' killers', with disaster framing. Probes: 'waiting to attack' 0.716, 'got the flu' 0.693, 'engulfed by malaria' 0.470, 'Mass unemployment ... resentment' 0.178; 'filled with music' 0.025, 'Mass tourism' 0.003. Near misses keep the frames with neutral nouns. Whether social scourges (unemployment) belong is left out of the claim.",
+ "selection": "random draw"
+}

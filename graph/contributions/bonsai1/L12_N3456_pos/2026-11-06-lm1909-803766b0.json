@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-803766b0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N3456+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:07:01+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N3456_pos/2026-11-06-lm1909-803766b0.tests.json"
+ },
+ "label": "the action verb after 'can' in a statement of what someone can do to bring about a good outcome (you can help, prevent, enhance)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N3456_pos/2026-11-06-lm1909-803766b0.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.65,
+     "peak": " help"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.468,
+     "peak": " reduce"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.302,
+     "peak": " improve"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.413,
+     "peak": " strengthen"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.569,
+     "peak": " prevent"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.554,
+     "peak": " boost"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.187,
+     "peak": " help"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.514,
+     "peak": " protect"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.133,
+     "peak": " find"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.047,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.044,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.114,
+     "peak": " store"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": " look"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " can"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.491,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'you can help/prevent': enabling verb",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' help' x8, ' from' x5, ' prevent' x2, ' for', ' get', ' enhance'; Wikipedia's 'You can help by' and 'You can prevent' stand out. Probes: 'You can help' 0.611, 'prevent' 0.570, 'enhance' 0.557; 'You can see it' 0.131. ' from' in 'separated from' 0.640 is a separate trigger outside this label. Near misses keep 'can' with a plain verb.",
+ "selection": "random draw"
+}

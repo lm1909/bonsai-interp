@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-61868208",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6103+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:07:06+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N6103_pos/2026-11-06-lm1909-61868208.tests.json"
+ },
+ "label": "the split pieces 'ante' in French soixante and '-ex' in co-exist (a short list)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N6103_pos/2026-11-06-lm1909-61868208.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.957,
+     "peak": "ante"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.827,
+     "peak": "-ex"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.574,
+     "peak": "ante"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.742,
+     "peak": "-ex"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.936,
+     "peak": "ante"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.726,
+     "peak": "-ex"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.99,
+     "peak": "ante"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.755,
+     "peak": "-ex"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.064,
+     "peak": "om"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.039,
+     "peak": " religion"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.085,
+     "peak": "Il"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.024,
+     "peak": "W"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.041,
+     "peak": " tre"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": " buses"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.052,
+     "peak": " ré"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.881,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'ante' in soixante, '-ex' in co-exist",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card flags broad (1.3%) and gate-closed (99% echo); max only 4.66, with '-ex' x7, 'x' x3, 'ex' x3, 'ante' x2. Probes: 'ante' 1.268, '-ex' 0.738, '.' after 'Ex' 0.313; 'share a road' 0.053, 'dix kilomètres' 0.124. No shared pattern found, so it stays a list.",
+ "selection": "random draw"
+}

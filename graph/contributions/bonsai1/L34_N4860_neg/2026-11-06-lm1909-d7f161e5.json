@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d7f161e5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4860-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:07:33+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N4860_neg/2026-11-06-lm1909-d7f161e5.tests.json"
+ },
+ "label": "a word piece that will be followed by '-iv': 'unct' in conj|unct|ivitis or adj|unct|ive, 'esh' in y|esh|iva, 'pect' in pers|pect|iva",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N4860_neg/2026-11-06-lm1909-d7f161e5.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.574,
+     "peak": "unct"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.687,
+     "peak": "unct"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.46,
+     "peak": "esh"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.05,
+     "peak": "unct"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.588,
+     "peak": "esh"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.579,
+     "peak": "pect"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.749,
+     "peak": "unct"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.502,
+     "peak": "pect"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.0,
+     "peak": " school"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " prescribe"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.0,
+     "peak": " sentence"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": "Un"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "Este"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.577,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "stem before a split '-iv'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: 'esh' x5, 'unct' x4, 'cent' x3, 'еж' x2, ' posit', 'pect': each one stops right before -iv/-ив (conjunctivitis, yeshiva, incentive, perspectiva, отслеживать). A prediction of the next piece, at L34. Probes: 'unct' 0.641, 'esh' 0.437; ' posit' before 'ivist' only 0.034 in a short sentence; whole-token ' incentives' and ' perspective' about 0. Only words that split this way can fire. Tokens are checked for every sentence.",
+ "selection": "random draw"
+}

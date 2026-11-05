@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6da1849e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N5450+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:06:51+00:00",
+ "recipe": {
+  "toolchain_commit": "c88251190",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N5450_pos/2026-11-06-lm1909-6da1849e.tests.json"
+ },
+ "label": "' (' before the year in a list of works by an author (Joan Miró (1948), Matisse (1953))",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N5450_pos/2026-11-06-lm1909-6da1849e.tests.json",
+   "prereg_commit": "c88251190",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.417,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.07,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.302,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.446,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.057,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.093,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.061,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.047,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.403,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " Rem"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.21,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.095,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.048,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.048,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " Mitchell"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.719,
+    "median_fire": 0.082,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c88251190",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' (' before a year in a list of works",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has '.\\n' x5, ' (' x2, ',', '.', '.,', ')', from legal texts, numbered lists and Chinese statutes. Probes were weak: ' (' before a year 0.221, a legal reference 0.188, others under 0.06. A best guess at the strongest probe, likely to fail.",
+ "selection": "random draw"
+}
