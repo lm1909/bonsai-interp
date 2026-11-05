@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-e008fa4e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N6134-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:05:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N6134",
+   "pole": "-",
+   "label": "A code token that bundles a quote mark at the edge of a string, especially quotes inside quotes (' '\"', '('\"', '\",\\n', ''>')",
+   "fire": [
+    "key = '\"value\":' + str(y)\n",
+    "print('\"done\"')\n",
+    "title=\"my-title\",\n    size=\"large\",\n",
+    "<img src='a.png'>photo</img>\n",
+    "msg = '\"error\":' + text\n",
+    "log('\"start\"')\n",
+    "color=\"dark-blue\",\n    width=\"thin\",\n",
+    "<div id='top'>home</div>\n"
+   ],
+   "quiet": [
+    "key = value + str(y)\n",
+    "print(done)\n",
+    "title = my_title\nsize = large\n",
+    "image = load(photo)\n",
+    "msg = error + text\n",
+    "log(start)\n",
+    "color = dark_blue\nwidth = thin\n",
+    "total = top + home\n"
+   ]
+  }
+ ],
+ "predictions": "The quote-bundling tokens fire; the same code with no string literal stays lower. The pole is broad and bare '=h' read 0.23 in probes.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "quote-bundling tokens in code",
+ "unit_kind": "token",
+ "confidence": "low"
+}

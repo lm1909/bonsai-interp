@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-e1898a26",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N5936-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:05:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N5936",
+   "pole": "-",
+   "label": "Generated or junk files that tools skip: '.pyc', '.DS_Store' and similar entries in ignore lists",
+   "fire": [
+    "IGNORE = ('*.pyc', '*.pyo')\n",
+    "SKIP = ['.DS_Store', 'Thumbs.db']\n",
+    "if path.endswith('.pyc'):\n    continue\n",
+    "*.pyc\n__pycache__/\n.DS_Store\n",
+    "exclude = ('.DS_Store', '.git')\n",
+    "files = [f for f in names if f != '.DS_Store']\n",
+    "for ext in ('.pyc', '.pyo', '.o'):\n    remove(ext)\n",
+    "rm -f *.pyc .DS_Store\n"
+   ],
+   "quiet": [
+    "KEEP = ('*.py', '*.txt')\n",
+    "SKIP = ['alpha', 'beta']\n",
+    "if path.endswith('.py'):\n    continue\n",
+    "README.md\nLICENSE\nindex.html\n",
+    "include = ('main.c', 'util.c')\n",
+    "files = [f for f in names if f != 'index.html']\n",
+    "for ext in ('.py', '.txt', '.md'):\n    open(ext)\n",
+    "rm -f notes.txt report.pdf\n"
+   ]
+  }
+ ],
+ "predictions": "The junk-file names fire; ordinary source and document files in the same code shape stay quiet. '_build' read only 0.16 in probes, so it is not used.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "generated junk files (.pyc, .DS_Store)",
+ "unit_kind": "contextual",
+ "confidence": "medium"
+}

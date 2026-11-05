@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-c14167ed",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5637+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:05:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5637",
+   "pole": "+",
+   "label": "A token ending partway through a multi-byte character: rare characters that the tokenizer splits into bytes (Arabic ظ, Cyrillic Щ, Japanese ーポ)",
+   "fire": [
+    "جلس الرجل في ظل الشجرة الكبيرة.",
+    "كان الليل في ظلام شديد جدا.",
+    "ذهب الأولاد في ظهر يوم الجمعة.",
+    "قرأت عن الأستاذ ظافر في الجريدة.",
+    "Мой друг Юра Щукин живёт в Москве.",
+    "Её зовут Анна Щербакова из Киева.",
+    "会社のプライバシーポリシーを読みました。",
+    "このスーパーポイントは便利です。"
+   ],
+   "quiet": [
+    "جلس الرجل في بيت الشجرة الكبيرة.",
+    "كان الليل في برد شديد جدا.",
+    "ذهب الأولاد في صباح يوم الجمعة.",
+    "قرأت عن الأستاذ كامل في الجريدة.",
+    "Мой друг Юра Петров живёт в Москве.",
+    "Её зовут Анна Иванова из Киева.",
+    "会社の説明書を読みました。",
+    "このお店は便利です。"
+   ]
+  }
+ ],
+ "predictions": "Fires on the byte-split token. Words with whole-character tokens stay quiet.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "token ends mid-character",
+ "unit_kind": "token",
+ "confidence": "medium"
+}
