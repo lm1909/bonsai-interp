@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-9e72459e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N595-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:31+00:00",
+ "recipe": {
+  "toolchain_commit": "1267f5811",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N595_neg/2026-11-05-lm1909-9e72459e.tests.json"
+ },
+ "label": "Final split-off pieces of a few words: 'ج' of Arabic نتائج (results), 'als' of conceals, 'ided' of presided: a list, on a broad low-amplitude pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N595_neg/2026-11-05-lm1909-9e72459e.tests.json",
+   "prereg_commit": "1267f5811",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.703,
+     "peak": "ج"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.87,
+     "peak": "ج"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.488,
+     "peak": "ج"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.776,
+     "peak": "ج"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.506,
+     "peak": "als"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.878,
+     "peak": "als"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.748,
+     "peak": "ided"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.658,
+     "peak": "ided"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.13,
+     "peak": "دراسة"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.198,
+     "peak": " الانتخابات"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " جدا"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.099,
+     "peak": " ت"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.143,
+     "peak": "Snow"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.114,
+     "peak": " Easter"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.067,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.726,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1267f5811",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "'ج' of نتائج; conce-als; pres-ided",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Card: broad and gate-closed; 'ج' x7, 'ided' x3, 'als' x2, 結果 x2 (results, as in نتائج). Probe: 'ج' 0.95, 'als' 0.77, 'ided' 0.69, 結果 0.41; أسباب 0.12, 'destroyed' 0.14. I looked for a 'results' meaning but conceals and presided do not fit it, so this stays a list.",
+ "selection": "random draw"
+}

@@ -1,0 +1,165 @@
+{
+ "id": "2026-11-05-lm1909-33906148",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1846-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:13+00:00",
+ "recipe": {
+  "toolchain_commit": "1267f5811",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N1846_neg/2026-11-05-lm1909-33906148.tests.json"
+ },
+ "label": "A word that dates a reported event to the recent past: a weekday or 'yesterday', 'last week' in news-style narration (published on Wednesday, last Sunday); the same report without a date stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N1846_neg/2026-11-05-lm1909-33906148.tests.json",
+   "prereg_commit": "1267f5811",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.451,
+     "peak": " Thursday"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.538,
+     "peak": " Sunday"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.271,
+     "peak": " Monday"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.145,
+     "peak": " Tuesday"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.605,
+     "peak": " yesterday"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.335,
+     "peak": " Friday"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.191,
+     "peak": " week"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.764,
+     "peak": " Saturday"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": " letter"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.004,
+     "peak": " Ohio"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " coast"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.042,
+     "peak": " announced"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " ruling"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": " Fridays"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.093,
+     "peak": " reopened"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.034,
+     "peak": " nearby"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.393,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1267f5811",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "weekday or recent date in a report",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' Saturday' x9, ' Wednesday' x5, ' Sunday' x4, ' week', ' last', ' posted', ' yesterday'. Probe: Wednesday 0.63, past Saturday 0.55, yesterday's 0.68, last week 0.33, Monday 0.20; 'Sunday school' 0.26, Saturdays 0.23; undated report 0.06. ' posted' 0.66 in 'recently posted' is not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday",
+   "yesterday"
+  ]
+ }
+}

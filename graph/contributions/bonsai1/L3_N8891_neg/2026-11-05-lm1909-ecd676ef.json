@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-ecd676ef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N8891-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:59:48+00:00",
+ "recipe": {
+  "toolchain_commit": "1267f5811",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N8891_neg/2026-11-05-lm1909-ecd676ef.tests.json"
+ },
+ "label": "The British spelling token ' enrol' (enrol, enrolment); American ' enroll' and synonyms stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N8891_neg/2026-11-05-lm1909-ecd676ef.tests.json",
+   "prereg_commit": "1267f5811",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.947,
+     "peak": " enrol"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.354,
+     "peak": " enrol"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.738,
+     "peak": " enrol"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.986,
+     "peak": " enrol"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.825,
+     "peak": " enrol"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.17,
+     "peak": " enrol"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.266,
+     "peak": " enrol"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.718,
+     "peak": " enrol"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " June"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": "Students"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.05,
+     "peak": "Thousands"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " using"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.058,
+     "peak": "School"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.097,
+     "peak": " enroll"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.781,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1267f5811",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "token ' enrol' (British spelling)",
+ "unit_kind": "token / lexical",
+ "confidence": "high",
+ "notes": "Card: ' enrol' x5, ' hooked' x3, Japanese 申し込み x2, on a gate-closed pole. Probe: ' enrol' 0.72-0.84, ' enroll' 0.11, register 0.02, sentence-initial Enrolment 0.03, ' hooked' 0.33-0.35. So the label is the spelling, not the meaning, and ' hooked' is outside it.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " enrol"
+  ]
+ }
+}

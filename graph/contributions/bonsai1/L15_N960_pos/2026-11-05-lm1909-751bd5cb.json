@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-751bd5cb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N960+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:59:41+00:00",
+ "recipe": {
+  "toolchain_commit": "1267f5811",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N960_pos/2026-11-05-lm1909-751bd5cb.tests.json"
+ },
+ "label": "' and' (or Russian ' и') that joins the parts of a breakdown of a total, right before the next count ('five people: three in Texas and two in Wisconsin')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N960_pos/2026-11-05-lm1909-751bd5cb.tests.json",
+   "prereg_commit": "1267f5811",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.434,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.352,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.138,
+     "peak": " seven"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.411,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.432,
+     "peak": " и"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.196,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.127,
+     "peak": " six"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.247,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.112,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.021,
+     "peak": " cases"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": "и"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "Sh"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.299,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1267f5811",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "' and' before the next count in a breakdown",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' and' x5 and ' и', plus digits inside '(84%)' figures. Probe: 'three in Texas and two' 0.54, Russian equivalent 0.52; 'Texas and Wisconsin'-like joins not probed directly; digits in '(84%)' scored erratically (0.04-0.78), so percentages are left out of the claim.",
+ "selection": "random draw"
+}

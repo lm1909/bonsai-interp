@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-bdf14a3c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N6288+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:59:44+00:00",
+ "recipe": {
+  "toolchain_commit": "1267f5811",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N6288_pos/2026-11-05-lm1909-bdf14a3c.tests.json"
+ },
+ "label": "'top' as a concrete noun or head of a compound: an upper surface, lid or garment (set-top, table top, blacktop, soft top); 'on top of', 'top of the hill' and attributive 'top prize' stay under it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N6288_pos/2026-11-05-lm1909-bdf14a3c.tests.json",
+   "prereg_commit": "1267f5811",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.741,
+     "peak": " top"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.819,
+     "peak": "-top"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.69,
+     "peak": "-top"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.087,
+     "peak": "top"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.507,
+     "peak": " top"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.774,
+     "peak": " top"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.85,
+     "peak": "-top"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.561,
+     "peak": " top"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.104,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.074,
+     "peak": " roof"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " parking"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.35,
+     "peak": " top"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.236,
+     "peak": " top"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.117,
+     "peak": " top"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " stove"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.758,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1267f5811",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "'top' as a concrete thing or compound head",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Card: 'top' x11, '-top' x9, ' tops' x5 in blacktop, set-top, table tops. Probe: set-top 0.91, tree-top 0.91, blacktopped 0.98, counter tops 0.70, soft top 0.72, red top 0.62; 'top prize' 0.20, 'top priority' 0.26, 'top of the hill' 0.19, 'on top of' 0.05-0.16, laptop 0.03.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "top",
+   "-top",
+   " top",
+   " tops"
+  ]
+ }
+}

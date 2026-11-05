@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-05-lm1909-0c66e9d6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N7032-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:29+00:00",
+ "recipe": {
+  "toolchain_commit": "1267f5811",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N7032_neg/2026-11-05-lm1909-0c66e9d6.tests.json"
+ },
+ "label": "The split-off final piece of a device noun, the agentive -er or -izer that the tokenizer separates (steril-izer, div-iders, analy-ser, ext-ender); device nouns that are one token stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N7032_neg/2026-11-05-lm1909-0c66e9d6.tests.json",
+   "prereg_commit": "1267f5811",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.339,
+     "peak": "izer"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.758,
+     "peak": "iders"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.55,
+     "peak": "izer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.017,
+     "peak": "izer"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.071,
+     "peak": "izer"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.134,
+     "peak": "ser"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.002,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.752,
+     "peak": "ender"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " boiler"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " sugar"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": "aver"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " chamber"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " kitchen"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "A"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.445,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1267f5811",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "split-off -izer/-er piece of a device noun",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'izer' x8, 'iders' x5, 'iter' x5, 'zers' x4, 'ser', 'ender'. The + pole has dr-'aper', ' baker', so it looks like one side of an -er split. Probe: 'ser' of analyser 1.04, 'iders' 0.81, 'ender' 0.65; whole tokens fertilizer 0.00, sanitizer 0.13, organizer 0.12, printer 0.00. Tokenizer checked for each fire word. ' humid'+'ifier' is the one fire word whose ending was not in the top examples.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "izer",
+   "iders",
+   "zers",
+   "ser",
+   "ender",
+   "iter"
+  ]
+ }
+}

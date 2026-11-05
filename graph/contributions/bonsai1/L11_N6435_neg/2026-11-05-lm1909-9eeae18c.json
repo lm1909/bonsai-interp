@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-9eeae18c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6435-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:09+00:00",
+ "recipe": {
+  "toolchain_commit": "1267f5811",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N6435_neg/2026-11-05-lm1909-9eeae18c.tests.json"
+ },
+ "label": "Words for a firm's standing among competitors in a market: market leader, market share, a sector's manufacturers or major players (also German Hersteller, Russian производитель)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N6435_neg/2026-11-05-lm1909-9eeae18c.tests.json",
+   "prereg_commit": "1267f5811",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.801,
+     "peak": " leader"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.769,
+     "peak": " share"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.378,
+     "peak": " leader"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.677,
+     "peak": " share"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.771,
+     "peak": "aus"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.888,
+     "peak": "steller"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.294,
+     "peak": " manufacturers"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.461,
+     "peak": " manufacturers"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.131,
+     "peak": " popular"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": " quarter"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " leader"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.092,
+     "peak": "%"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.047,
+     "peak": " check"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.087,
+     "peak": "ener"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " belt"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " club"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.723,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1267f5811",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "standing among competitors in a market",
+ "unit_kind": "semantic / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' leader' x3, ' manufacturers' x3, 'steller' x2, ' share', 'aus' of credit bureaus, 'ителя'. Probe: market share 1.05, market leader 0.95, credit bureaus 0.87, Hersteller 0.67, manufacturers 0.30, suppliers 0.19; team leader 0.01, share the bill 0.01, fish market 0.01, workers 0.01.",
+ "selection": "random draw"
+}
