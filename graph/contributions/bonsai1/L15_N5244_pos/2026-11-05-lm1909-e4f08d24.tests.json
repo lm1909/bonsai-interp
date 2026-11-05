@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-e4f08d24",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N5244+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:22:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N5244",
+   "pole": "+",
+   "label": "(guess) underscore-prefixed or snake-case names in Python classes: `self._repo`, `__clean`, `test_data`",
+   "fire": [
+    "class Store:\n    def __init__(self, path):\n        self._path = path\n        self._cache = {}\n",
+    "class Runner:\n    def __reset(self, job):\n        self._job = job\n        return self.__count\n",
+    "    def test_create_user(self, user_data):\n        result = make(user_data)\n        return result\n",
+    "    def __scan(self, target):\n        self._seen.add(target)\n        return self._seen\n",
+    "    if key not in self.valid_moves:\n        self.valid_moves[key] = self._calc(key)\n",
+    "class Node:\n    def __repr__(self):\n        return self._label\n",
+    "    def test_delete_item(self, item_id):\n        drop(item_id)\n        return None\n",
+    "class Queue:\n    def _pop(self):\n        return self._items.pop()\n"
+   ],
+   "quiet": [
+    "class Store:\n    def __init__(self, path):\n        self.path = path\n        self.cache = {}\n",
+    "class Runner:\n    def reset(self, job):\n        self.job = job\n        return self.count\n",
+    "    def create(self, user):\n        result = make(user)\n        return result\n",
+    "    def scan(self, target):\n        self.seen.add(target)\n        return self.seen\n",
+    "    if key not in self.moves:\n        self.moves[key] = calc(key)\n",
+    "class Node:\n    def label(self):\n        return self.text\n",
+    "    def delete(self, item):\n        drop(item)\n        return None\n",
+    "class Queue:\n    def pop(self):\n        return self.items.pop()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "underscore names in Python (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": "low"
+}
