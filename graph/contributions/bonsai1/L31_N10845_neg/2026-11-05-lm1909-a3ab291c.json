@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-a3ab291c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10845-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:41:09+00:00",
+ "recipe": {
+  "toolchain_commit": "c89b1ab9a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N10845_neg/2026-11-05-lm1909-a3ab291c.tests.json"
+ },
+ "label": "a feminine or plural determiner (' la', ' une', ' una', ' ses') opening a verb's abstract object in formal French or Spanish, as opposed to casual sentences on concrete things",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N10845_neg/2026-11-05-lm1909-a3ab291c.tests.json",
+   "prereg_commit": "c89b1ab9a",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.306,
+     "peak": " la"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.196,
+     "peak": " une"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.058,
+     "peak": " la"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.412,
+     "peak": " ses"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.081,
+     "peak": " una"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.146,
+     "peak": " la"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.212,
+     "peak": " una"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.356,
+     "peak": " una"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.079,
+     "peak": " le"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.058,
+     "peak": " un"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.111,
+     "peak": " des"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " son"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.047,
+     "peak": "che"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " niños"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "ro"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " al"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.945,
+    "median_fire": 0.204,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c89b1ab9a",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "determiner of an abstract object, formal fr/es",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Probes leaked: ' le' in a formal sentence 0.22, subject ' la' 0.40 and 0.21. So the near misses here are casual and masculine, which makes this test easier than the word-level question. The label is about register and type of object, not gender, and a hold would not separate those.",
+ "selection": "random draw"
+}

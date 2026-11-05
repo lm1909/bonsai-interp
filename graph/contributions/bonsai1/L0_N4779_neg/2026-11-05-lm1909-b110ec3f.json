@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-b110ec3f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4779-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:41:26+00:00",
+ "recipe": {
+  "toolchain_commit": "c89b1ab9a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N4779_neg/2026-11-05-lm1909-b110ec3f.tests.json"
+ },
+ "label": "the word ' traditional' and its near-synonym ' conventional', as opposed to 'old', 'usual' and 'ordinary' in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N4779_neg/2026-11-05-lm1909-b110ec3f.tests.json",
+   "prereg_commit": "c89b1ab9a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.867,
+     "peak": " traditional"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.597,
+     "peak": " conventional"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.804,
+     "peak": " traditional"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.562,
+     "peak": " conventional"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.758,
+     "peak": " traditional"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.566,
+     "peak": " conventional"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.81,
+     "peak": " traditional"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.716,
+     "peak": " traditional"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.056,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": "Unlike"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " simple"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " ordinary"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " replaced"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " industrial"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.061,
+     "peak": " passive"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.737,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c89b1ab9a",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "traditional / conventional",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "The card's top examples are all ' traditional'. 'Conventional' rests on one probe (0.60); ' traditionally' reached 0.45 in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " traditional",
+   " conventional"
+  ]
+ }
+}
