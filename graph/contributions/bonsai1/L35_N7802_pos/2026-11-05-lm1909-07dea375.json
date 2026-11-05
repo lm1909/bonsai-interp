@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-07dea375",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N7802+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:44:18+00:00",
+ "recipe": {
+  "toolchain_commit": "0229896cc",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N7802_pos/2026-11-05-lm1909-07dea375.tests.json"
+ },
+ "label": "the word-initial pieces ' ac' / ' Ac' when a word splits right after them (acuíferos, Acquired, _acc-ents)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N7802_pos/2026-11-05-lm1909-07dea375.tests.json",
+   "prereg_commit": "0229896cc",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.949,
+     "peak": " ac"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.404,
+     "peak": " Ac"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.58,
+     "peak": " ac"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.404,
+     "peak": " Ac"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.548,
+     "peak": "_acc"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.558,
+     "peak": " ac"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.404,
+     "peak": " Ac"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.314,
+     "peak": " ac"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.326,
+     "peak": "í"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.0,
+     "peak": " Bought"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.086,
+     "peak": " lag"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " Purch"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "(tokens"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.106,
+     "peak": " tur"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": " Built"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": "ad"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.476,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0229896cc",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split word-initial ' ac' piece",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " ac",
+   " Ac"
+  ]
+ }
+}
