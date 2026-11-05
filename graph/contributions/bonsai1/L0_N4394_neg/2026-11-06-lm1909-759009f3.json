@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-759009f3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4394-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:56:32+00:00",
+ "recipe": {
+  "toolchain_commit": "0e5172a04",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N4394_neg/2026-11-06-lm1909-759009f3.tests.json"
+ },
+ "label": "closing piece of a word (E|ps|om, Re|ps, sque|ak; broad, gate-closed)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N4394_neg/2026-11-06-lm1909-759009f3.tests.json",
+   "prereg_commit": "0e5172a04",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.861,
+     "peak": "ps"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.622,
+     "peak": "ps"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.957,
+     "peak": "ak"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.737,
+     "peak": "ps"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.089,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.841,
+     "peak": "ak"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.726,
+     "peak": "ps"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.934,
+     "peak": "ak"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.047,
+     "peak": "ators"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.141,
+     "peak": " rose"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.141,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.034,
+     "peak": " bill"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": " stairs"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " at"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.789,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e5172a04",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word-final pieces (broad)",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Card flags broad (1.7%) and gate-closed (62% leak), max only 0.35. Card: 'ps' x6, 'رم' x5, 'ure' x5, 'ak' x2. A list. Probe: 'squeak' 0.83, 'Epsom' 0.65, 'Reps.' 0.62; 'Bath salts' 0.04.",
+ "selection": "random draw"
+}

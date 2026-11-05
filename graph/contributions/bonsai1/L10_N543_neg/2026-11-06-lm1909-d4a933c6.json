@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d4a933c6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N543-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:56:34+00:00",
+ "recipe": {
+  "toolchain_commit": "0e5172a04",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N543_neg/2026-11-06-lm1909-d4a933c6.tests.json"
+ },
+ "label": "patent boilerplate ('persons skilled in the art', 'a preferred embodiment', 'the exemplary approach of FIG. 1')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N543_neg/2026-11-06-lm1909-d4a933c6.tests.json",
+   "prereg_commit": "0e5172a04",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.766,
+     "peak": " skilled"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.033,
+     "peak": " changes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.609,
+     "peak": " embodiment"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.074,
+     "peak": " skilled"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.662,
+     "peak": " embodiment"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.104,
+     "peak": " skilled"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.2,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.786,
+     "peak": " embodiment"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " changes"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " see"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " room"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.404,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e5172a04",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "patent boilerplate",
+ "unit_kind": "semantic / format",
+ "confidence": "high",
+ "notes": "Card: '.' x9, ' skilled' x3, ' embodiment' x2, ' preferred' x2, ' curvature' x2. Probe: 'variations ... persons skilled in the art' 0.77, 'exemplary approach of FIG. 1.' 0.20, 'those skilled in the art' fragment 0.08; 'skilled at chess' 0.00. Fire items are full patent-style sentences.",
+ "selection": "random draw"
+}

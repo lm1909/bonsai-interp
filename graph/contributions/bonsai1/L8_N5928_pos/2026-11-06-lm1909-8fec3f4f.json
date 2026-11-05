@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8fec3f4f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N5928+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:56:23+00:00",
+ "recipe": {
+  "toolchain_commit": "0e5172a04",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N5928_pos/2026-11-06-lm1909-8fec3f4f.tests.json"
+ },
+ "label": "a news article, paper or outlet named as the source ('An article on BASIS Online looks at', 'This month's paper', 'Press Enterprise Writers'; broad, gate-closed)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N5928_pos/2026-11-06-lm1909-8fec3f4f.tests.json",
+   "prereg_commit": "0e5172a04",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.137,
+     "peak": " Writers"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.731,
+     "peak": " looks"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.252,
+     "peak": " paper"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.282,
+     "peak": " Writers"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.562,
+     "peak": " looks"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.167,
+     "peak": " paper"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.698,
+     "peak": " looks"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.234,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " hall"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.051,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.095,
+     "peak": " picnic"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.059,
+     "peak": " noon"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.075,
+     "peak": " page"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.117,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.072,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.103,
+     "peak": " crop"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.267,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e5172a04",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "article or outlet as subject",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card flags broad (1.4%) and gate-closed (82% echo). Card: ' Online' x2, ' consultant' x2, ' Writers', ' looks', ' paper'. Probe: 'Press Enterprise Writers' 0.82, 'BASIS Online looks' 0.68, 'This month's paper' 0.45; 'Chief Strategy Officer ... spoke' 0.10.",
+ "selection": "random draw"
+}

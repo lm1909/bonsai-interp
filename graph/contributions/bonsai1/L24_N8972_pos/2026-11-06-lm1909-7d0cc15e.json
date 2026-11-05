@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-7d0cc15e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N8972+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:56:21+00:00",
+ "recipe": {
+  "toolchain_commit": "0e5172a04",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N8972_pos/2026-11-06-lm1909-7d0cc15e.tests.json"
+ },
+ "label": "verbs of composition ('consists of', 'comprises', 'consisting of')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N8972_pos/2026-11-06-lm1909-7d0cc15e.tests.json",
+   "prereg_commit": "0e5172a04",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.126,
+     "peak": " consists"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.326,
+     "peak": " comprises"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.281,
+     "peak": " consisting"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.193,
+     "peak": " consist"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.205,
+     "peak": " consists"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.212,
+     "peak": " comprises"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.306,
+     "peak": " consisting"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.212,
+     "peak": " consists"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " three"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": "It"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "or"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " saw"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " room"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " after"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.212,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e5172a04",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'consists of'",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' consists' x4, ' consisting' x2, ' vary' x2, ' choose' x2, ' range' x2, ' comprises' on top. Probe: comprises 0.42, consisting 0.37, consists 0.29, ranging 0.15; 'hired' 0.03.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "consists",
+   "consist",
+   "consisting",
+   "comprises",
+   "comprise"
+  ]
+ }
+}
