@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ffd264d8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2358+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:37:30+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L23/N2358",
+   "pole": "+",
+   "label": "'/' between the two numbers of a blood-pressure reading",
+   "fire": [
+    "Her blood pressure was 150/90 at noon.",
+    "BP was 118/72 after rest.",
+    "Aim for a reading under 140/90.",
+    "The nurse recorded 132/84 today.",
+    "Pressure fell to 110/70 overnight.",
+    "Goal: keep it below 125/75.",
+    "His pressure stayed at 160/100 all week.",
+    "A reading of 135/85 is borderline."
+   ],
+   "quiet": [
+    "Her blood pressure was high at noon.",
+    "BP was normal after rest.",
+    "Aim for a reading under 140 today.",
+    "The nurse recorded 132 today.",
+    "Pressure fell to 110 overnight.",
+    "Goal: stay open 24/7 all year.",
+    "His temperature stayed at 38 all week.",
+    "A ratio of 3/4 is borderline."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "'/' in a blood-pressure reading",
+ "unit_kind": "token / contextual",
+ "confidence": 0.8,
+ "notes": "Second round; in the first ('separator of paired numbers') only '/' fired. ' (' after °C scored 0.00 in two new probes though 1.05 in an earlier one, so I can't describe that trigger. Probes: '/' in 128/76 0.44. Two near misses have other number slashes."
+}

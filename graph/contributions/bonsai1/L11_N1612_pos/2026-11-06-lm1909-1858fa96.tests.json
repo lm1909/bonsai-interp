@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-1858fa96",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N1612+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:37:30+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L11/N1612",
+   "pole": "+",
+   "label": "judging an offer as too good: ' too' after 'seems', 'looks', 'sounds' about a deal or prize, and gain with no effort",
+   "fire": [
+    "That offer seems too cheap to be real.",
+    "The prize looked too big to be honest.",
+    "This deal sounds too easy to believe.",
+    "The job looked too simple to be safe.",
+    "Win a new phone with no effort required!",
+    "Make fast money with no risk at all!",
+    "That loan seems too generous to trust.",
+    "Get free cash with no work at all!"
+   ],
+   "quiet": [
+    "That box seems rather cheap and plain.",
+    "The prize looked quite big and shiny.",
+    "This road sounds very long to walk.",
+    "The soup was too hot to eat.",
+    "Win a new phone by solving the quiz.",
+    "Make fresh bread with flour and water.",
+    "That loan seems fair and clear.",
+    "The car is too old to sell."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "offer seeming too good, effortless gain",
+ "unit_kind": "semantic",
+ "confidence": 0.6,
+ "notes": "Second round; the first ('too good to be true, easy gain') failed because ' too' in 'looked too small', 'seems too hot' and 'sounds too long' fired. New probes: 'too small to be useful' and 'too hot to go outside' after is/was 0.02-0.05; 'no effort' 0.74; 'easy money' 0.42. So the evaluation verb looks like what matters. Two near misses keep ' too' after is/was."
+}

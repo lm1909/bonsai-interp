@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b2ce58f4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N11124+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:37:30+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L1/N11124",
+   "pole": "+",
+   "label": "' Washington', ' Vancouver' or ' State' as the second word of a two-word name: Martha Washington, Mount Washington, Fort Vancouver, Penn State (not bare 'to Washington')",
+   "fire": [
+    "Martha Washington ran the estate for years.",
+    "George Washington crossed the river at night.",
+    "They climbed Mount Washington in July.",
+    "Troops held Fort Vancouver through winter.",
+    "Denzel Washington won the award again.",
+    "The Penn State coach resigned.",
+    "Supplies reached Fort Vancouver by boat.",
+    "Lady Washington sailed into the bay."
+   ],
+   "quiet": [
+    "They flew to Washington in July.",
+    "The river runs past Washington at night.",
+    "He worked in Washington for years.",
+    "Troops moved to Vancouver through winter.",
+    "She moved away from Vancouver again.",
+    "The state coach resigned.",
+    "Supplies reached Vancouver by boat.",
+    "The ship sailed from Washington to the bay."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "second word of a two-word name",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.6,
+ "notes": "Second round; the first failed with AUROC 0.89 because 'ferry goes to Vancouver' stayed low. New probes: 'Martha Washington' 0.38, ' State' in Penn State 0.18; 'goes to Washington' 0.03, 'moved to Vancouver' 0.05. Gate-closed echo regime."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-518a77e9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N1580+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:37:30+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L30/N1580",
+   "pole": "+",
+   "label": "the time word linking a person's activity to a stage of their life: 'took up the cello during', 'became a doctor after', 'began singing while'",
+   "fire": [
+    "He took up the cello during his teens in Leeds.",
+    "She began painting while living in Rome as a girl.",
+    "He became a doctor after years of night classes.",
+    "She took up running during her second year abroad.",
+    "He began acting while he worked at a bakery.",
+    "She became a judge after a long legal career.",
+    "He picked up French during a summer in Lyon.",
+    "She began singing while she was a student nurse."
+   ],
+   "quiet": [
+    "The road was closed during the storm in Leeds.",
+    "The roof began leaking while it rained in Rome.",
+    "The shop became a bank after years of losses.",
+    "The river rose quickly during the second week of rain.",
+    "The engine began failing while it ran at low speed.",
+    "The field became a park after a long legal fight.",
+    "The town lost power during a summer in Lyon.",
+    "The kettle began whistling while the soup cooled."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "time link in a life story",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.6,
+ "notes": "Second round; the first ('preposition expecting a school') failed because time words such as ' during' and ' while' fired in near misses about a person's life. Probes for this label: ' during' 0.56, ' after' 0.37, ' while' 0.28; 'The bridge was closed during' 0.01, 'The store opened in' 0.01. Near misses keep the time word and drop the person."
+}

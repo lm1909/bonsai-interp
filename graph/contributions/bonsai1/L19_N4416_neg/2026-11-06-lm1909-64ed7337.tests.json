@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-64ed7337",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N4416-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:37:30+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L19/N4416",
+   "pole": "-",
+   "label": "' are' or the next word when stating how a common medical finding usually turns out: 'Most thyroid nodules in adults are'",
+   "fire": [
+    "Most thyroid nodules in adults are benign.",
+    "Many people with small polyps are without symptoms.",
+    "Most skin moles in adults are harmless.",
+    "Many women with small fibroids are never treated.",
+    "Most heart valve leaks in teens are mild.",
+    "Many patients with gallstones are unaware of them.",
+    "Most lung nodules in smokers are benign.",
+    "Many infants with hip clicks are fine."
+   ],
+   "quiet": [
+    "Most paintings in galleries are found by chance.",
+    "Many people with small cars are without parking.",
+    "Most shop signs in towns are plastic.",
+    "Many women with small gardens are never bored.",
+    "Most bridge repairs in spring are mild.",
+    "Many drivers with old vans are unaware of them.",
+    "Most garden ponds in villages are shallow.",
+    "Many owners with small dogs are fine."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "how a medical finding usually turns out",
+ "unit_kind": "contextual / semantic",
+ "confidence": 0.7,
+ "notes": "Second round; the first ('medically harmless') failed because ' are' in plain medical statements fired in near misses, including 'usually dangerous'. Probes: ' are' after 'Most heart murmurs in children' 0.45, 'Many patients with small cysts' 0.59; 'Most paintings in museums' 0.02; 'Enzyme rises like this are usually' 0.04. Near misses keep the sentence frame in other topics."
+}
