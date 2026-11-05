@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7c36cd2f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N4357+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:09:37+00:00",
+ "recipe": {
+  "toolchain_commit": "fdec70d3e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N4357_pos/2026-11-06-lm1909-7c36cd2f.tests.json"
+ },
+ "label": "air or wind moving through a system of fans, vents, compressors or ducts, as opposed to the same frames about vehicles and rooms, and to other machines",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N4357_pos/2026-11-06-lm1909-7c36cd2f.tests.json",
+   "prereg_commit": "fdec70d3e",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.121,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.205,
+     "peak": " air"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.69,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.293,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.075,
+     "peak": " forces"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.784,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.897,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.066,
+     "peak": " filter"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " farm"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " holding"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " clerk"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " kitchen"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.249,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fdec70d3e",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "air through vents, fans and compressors",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card and probes also fire on channel biology ('conductance' 1.07), which this does not cover; 'potassium channel' scored only 0.01.",
+ "selection": "random draw"
+}

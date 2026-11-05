@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fc279839",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N4058-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:08:47+00:00",
+ "recipe": {
+  "toolchain_commit": "fdec70d3e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N4058_neg/2026-11-06-lm1909-fc279839.tests.json"
+ },
+ "label": "a play in a ball game (a pass, a fumble, a long ball), as opposed to the same words outside sport",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N4058_neg/2026-11-06-lm1909-fc279839.tests.json",
+   "prereg_commit": "fdec70d3e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.839,
+     "peak": " passes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.328,
+     "peak": "umble"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.631,
+     "peak": " ball"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.264,
+     "peak": " pass"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.378,
+     "peak": " serve"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.57,
+     "peak": " pass"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.136,
+     "peak": " passes"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.51,
+     "peak": " ball"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.309,
+     "peak": " passes"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " flight"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": " through"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " pass"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " soup"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " entrance"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " harvest"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "He"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.444,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fdec70d3e",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "a play in a ball game",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Uneven in probes (0.14 to 0.69). ' pass' for a museum pass reached 0.14.",
+ "selection": "random draw"
+}

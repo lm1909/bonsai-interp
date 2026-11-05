@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-292066a4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N12216-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:09:22+00:00",
+ "recipe": {
+  "toolchain_commit": "fdec70d3e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N12216_neg/2026-11-06-lm1909-292066a4.tests.json"
+ },
+ "label": "a split word-start ' ex', ' exc', ' exh' or ' e' on a word that does not get its own token (' ex|claim', ' exc|elled', ' e|ases', ' e|ke'), as opposed to other verbs in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N12216_neg/2026-11-06-lm1909-292066a4.tests.json",
+   "prereg_commit": "fdec70d3e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.427,
+     "peak": " ex"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.642,
+     "peak": " exc"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.43,
+     "peak": " e"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.683,
+     "peak": " e"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.231,
+     "peak": " exc"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.267,
+     "peak": " exh"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.519,
+     "peak": " ex"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.608,
+     "peak": " e"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": " school"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " warm"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "Slow"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " cal"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.475,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fdec70d3e",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "split ' ex' / ' e' word start",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked for all fire words. Whole tokens like ' exhibited' were silent in a probe (0.00). Card's 'c' and Cyrillic ' э' are not tested.",
+ "selection": "random draw"
+}

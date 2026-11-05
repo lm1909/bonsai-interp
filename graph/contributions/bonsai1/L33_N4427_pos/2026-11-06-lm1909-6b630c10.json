@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6b630c10",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4427+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:08:57+00:00",
+ "recipe": {
+  "toolchain_commit": "fdec70d3e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N4427_pos/2026-11-06-lm1909-6b630c10.tests.json"
+ },
+ "label": "the possessive 's after a named person or fiction character, as in talk about a story or show (Olivia's sudden return, Mary's pregnancy), as opposed to the possessive of a company or a place, and to 's meaning 'is'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N4427_pos/2026-11-06-lm1909-6b630c10.tests.json",
+   "prereg_commit": "fdec70d3e",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.667,
+     "peak": " sudden"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.54,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.232,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.569,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.378,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.499,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.297,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.261,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.377,
+     "peak": " sudden"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.107,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.041,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.16,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.246,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " cold"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": " debt"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.439,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fdec70d3e",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "possessive of a named character",
+ "unit_kind": "syntactic",
+ "confidence": "medium",
+ "notes": "Peak sometimes lands a word after 's ('sudden', '-minute'), and 'Jessa's still' scored 0.14 in a probe, where 's means 'is'.",
+ "selection": "random draw"
+}

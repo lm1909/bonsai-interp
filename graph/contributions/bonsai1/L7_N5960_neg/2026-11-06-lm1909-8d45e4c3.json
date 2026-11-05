@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-8d45e4c3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N5960-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:09:26+00:00",
+ "recipe": {
+  "toolchain_commit": "fdec70d3e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N5960_neg/2026-11-06-lm1909-8d45e4c3.tests.json"
+ },
+ "label": "the object markers 를 (Korean) and を (Japanese), as opposed to the same sentences' other particles and to Chinese",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N5960_neg/2026-11-06-lm1909-8d45e4c3.tests.json",
+   "prereg_commit": "fdec70d3e",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.038,
+     "peak": "를"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.227,
+     "peak": "가"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.486,
+     "peak": "를"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.07,
+     "peak": "를"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.492,
+     "peak": "を"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.038,
+     "peak": "を"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.116,
+     "peak": "を開"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.326,
+     "peak": "を"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.227,
+     "peak": "가"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " 도"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.046,
+     "peak": "들이"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": "と"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": "昨日"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.049,
+     "peak": "の"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": "里"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.867,
+    "median_fire": 0.172,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fdec70d3e",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "object marker 를 / を",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "The Korean sentence with 음악를 has a spelling slip (standard is 음악을), left as written. The card's English peaks (' is', ' animals', ' car') suggest the wider pattern may be 'the thing acted on', which I did not test.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "를",
+   "を"
+  ]
+ }
+}

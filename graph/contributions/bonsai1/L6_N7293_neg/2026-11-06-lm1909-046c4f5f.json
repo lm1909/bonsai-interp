@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-046c4f5f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7293-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:09:07+00:00",
+ "recipe": {
+  "toolchain_commit": "fdec70d3e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N7293_neg/2026-11-06-lm1909-046c4f5f.tests.json"
+ },
+ "label": "a list of words with no pattern I can name: ' living', ' sound' (of audio), ' forced', over|fed",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N7293_neg/2026-11-06-lm1909-046c4f5f.tests.json",
+   "prereg_commit": "fdec70d3e",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.237,
+     "peak": " living"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.118,
+     "peak": " living"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.382,
+     "peak": " sound"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.36,
+     "peak": "fed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.042,
+     "peak": " labour"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.173,
+     "peak": " sound"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.025,
+     "peak": " living"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.019,
+     "peak": " Lagos"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.087,
+     "peak": " stray"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " plant"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.033,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.145,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fdec70d3e",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "' living', ' sound', ' forced', 'fed' (list)",
+ "unit_kind": "lexical",
+ "confidence": "low",
+ "notes": "A list. The card's other peaks (' Fus', ' feeding') are similar in form but do not suggest a shared meaning. Tiny corpus max (5.28).",
+ "selection": "random draw"
+}
