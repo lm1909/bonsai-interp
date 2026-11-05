@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-5ad0b375",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N1354-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:34:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N1354",
+   "pole": "-",
+   "label": "a comma separating arguments in a code call or list, in numeric or machine-learning code (tf.reshape(a, [-1, n]), return a, b)",
+   "fire": [
+    "    y = tf.reshape(b, [-1, depth * 2, 4])\n    return best_ids, best_loss\n",
+    "    z = tf.reshape(h, [batch_size, -1, units])\n    return z\n",
+    "    weights, labels = model.fit(data, labels, epochs, verbose)\n",
+    "        return best_nodes, best_cost, best_steps\n",
+    "    q = np.zeros([n_rows, n_cols, 3])\n    return q, n_rows\n",
+    "    t = tf.concat([left, right], axis)\n    return t, left\n",
+    "    w = self.cell(inputs, state, scope)\n    return w, state\n",
+    "    ax.plot(xs, ys, label, color)\n    return xs, ys\n"
+   ],
+   "quiet": [
+    "    y = tf.reshape(b)\n    return best_ids\n",
+    "    z = tf.squeeze(h)\n    return z\n",
+    "    weights = model.fit(data)\n",
+    "        return best_nodes\n",
+    "    q = np.zeros(n_rows)\n    return q\n",
+    "    t = tf.identity(left)\n    return t\n",
+    "    w = self.cell(inputs)\n    return w\n",
+    "    ax.plot(xs)\n    return xs\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "comma between code arguments",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card: ',' x23 of the top 32, mostly in Python argument lists and returns. Probes were weak: 0.202 at best (the comma after -1 in tf.reshape), 0.045-0.054 in other call and tuple code, 0.010 in a prose list. A best guess, expected to fail on the median."
+}
