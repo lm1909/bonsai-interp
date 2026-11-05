@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-72508781",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N3024+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:41:04+00:00",
+ "recipe": {
+  "toolchain_commit": "ff09e79e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N3024_pos/2026-11-05-lm1909-72508781.tests.json"
+ },
+ "label": "a function word in a statement that electrons or matter act as both wave and particle (have both wave and, behave as, also as)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N3024_pos/2026-11-05-lm1909-72508781.tests.json",
+   "prereg_commit": "ff09e79e2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.795,
+     "peak": " both"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.547,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.039,
+     "peak": " both"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.68,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.565,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.724,
+     "peak": " also"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.615,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.517,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.34,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": " thin"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.342,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.044,
+     "peak": " travel"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": " electron"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.663,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " molecules"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.163,
+     "peak": " are"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.647,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ff09e79e2",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "wave-particle duality statements",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' accuracy' x5, ' as' x2, ' electron' x2, '9', 'aven', with the top three peaks in wave-particle statements. Probes: 'have both wave and' 1.105, 'behave as particles' 0.710, 'thought of as both' 0.140; 'both wing and tail' 0.007, 'waves crashed' 0.003. The ' accuracy' and numeric peaks are outside this label, so it is likely partial.",
+ "selection": "random draw"
+}

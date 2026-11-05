@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-cd2ba423",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N1995-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:40:47+00:00",
+ "recipe": {
+  "toolchain_commit": "ff09e79e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N1995_neg/2026-11-05-lm1909-cd2ba423.tests.json"
+ },
+ "label": "a phrase marking an appearance that later turns out otherwise (at first glance, or so I thought, to untrained eyes, on the surface)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N1995_neg/2026-11-05-lm1909-cd2ba423.tests.json",
+   "prereg_commit": "ff09e79e2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.402,
+     "peak": " sight"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.354,
+     "peak": " paper"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.507,
+     "peak": " observer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.322,
+     "peak": " so"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.444,
+     "peak": " surface"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.456,
+     "peak": " glance"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.481,
+     "peak": " eye"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.661,
+     "peak": " so"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " group"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.059,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": " mill"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.074,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.046,
+     "peak": " side"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.043,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": " had"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.45,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ff09e79e2",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "appearance vs reality marker",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' glance' x3, ' thought' x3, ' surface' x2, ' eyes', plus ',' and '.' that end such setups. A distinction, not a list. Probes: 'on the surface' 0.496, 'or so I thought' 0.487, 'at first glance' 0.456, 'to untrained eyes' 0.426; plain versions under 0.03. The test uses new variants too (at first sight, on paper, to the casual observer), and near misses keep the frames.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-bf7e6639",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6615+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:40:34+00:00",
+ "recipe": {
+  "toolchain_commit": "ff09e79e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N6615_pos/2026-11-05-lm1909-bf7e6639.tests.json"
+ },
+ "label": "a noun naming a conflict or grievance between parties, often the cause of something bad (dispute, disagreement, discontent, debt, envy)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N6615_pos/2026-11-05-lm1909-bf7e6639.tests.json",
+   "prereg_commit": "ff09e79e2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.882,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.063,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.23,
+     "peak": " unpaid"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.599,
+     "peak": "udge"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.084,
+     "peak": " dispute"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.455,
+     "peak": " envy"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.531,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.272,
+     "peak": " ended"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.077,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " same"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " floor"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "keeper"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " road"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " reached"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " ended"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.364,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ff09e79e2",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun for a conflict or grievance",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' economic' x5, ' dispute' x3, ' envy' x2, Arabic خلاف, ' disagreement', ' debt', ' discontent', in news of violence and unrest. Probes: dispute 1.106, disagreement 0.748, discontent 0.672; 'a meeting about land' 0.212, 'old promise' 0.080. The test uses new nouns (quarrel, feud, grudge, resentment) as well as dispute, to test the pattern and not the list.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-b8bb5d7e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N7563-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:41:45+00:00",
+ "recipe": {
+  "toolchain_commit": "ff09e79e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N7563_neg/2026-11-05-lm1909-b8bb5d7e.tests.json"
+ },
+ "label": "the adjective ' special' or the adverb ' particularly' in community, school or charity prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N7563_neg/2026-11-05-lm1909-b8bb5d7e.tests.json",
+   "prereg_commit": "ff09e79e2",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.1,
+     "peak": " special"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.157,
+     "peak": "Our"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.746,
+     "peak": " special"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.448,
+     "peak": " special"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.058,
+     "peak": " volunteer"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.15,
+     "peak": " someone"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.143,
+     "peak": " particularly"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.404,
+     "peak": " special"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.097,
+     "peak": " our"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.111,
+     "peak": " trip"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.312,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.198,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": " volunteer"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.107,
+     "peak": " other"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.08,
+     "peak": " her"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.75,
+    "median_fire": 0.153,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ff09e79e2",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' special' / ' particularly'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Card: ' with' x9, ' special' x7, ' particular' x3, ' particularly', mostly British community and school websites. Probes: special 0.433, particularly 0.400, but ' particular' only 0.085, and the baseline is high: 'have enjoyed' 0.298 and 'with long histories' 0.201. So near misses may fire; the test will show if the words beat the context.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " special",
+   " particularly"
+  ]
+ }
+}

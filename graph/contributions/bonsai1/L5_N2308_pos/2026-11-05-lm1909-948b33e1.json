@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-948b33e1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2308+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:41:48+00:00",
+ "recipe": {
+  "toolchain_commit": "ff09e79e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N2308_pos/2026-11-05-lm1909-948b33e1.tests.json"
+ },
+ "label": "' with' in the comparison phrase 'as with X' (as with every day out, as with anything we eat)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N2308_pos/2026-11-05-lm1909-948b33e1.tests.json",
+   "prereg_commit": "ff09e79e2",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.221,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.155,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.221,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.089,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.221,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.108,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.221,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.073,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " played"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " played"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " site"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.188,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ff09e79e2",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' with' in 'as with X'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' with' x14, ' noqa' x5, ' considerable' x3, ' respect'. Probes: 'As with' 0.21-0.22, 'went out with' and 'ate with friends' under 0.02; ' noqa' 0.694 and ' considerable' 0.270 are other triggers, so this label is partial. The median may sit right at the 0.20 bar.",
+ "selection": "random draw"
+}

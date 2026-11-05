@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-4d470be5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N9657-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:42:02+00:00",
+ "recipe": {
+  "toolchain_commit": "ff09e79e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N9657_neg/2026-11-05-lm1909-4d470be5.tests.json"
+ },
+ "label": "the mark of a direct object (accusative): the Korean particle 를/을 and Russian accusative pronouns (тебя, вас, которую), as opposed to subject forms (가, ты, вы, которая)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N9657_neg/2026-11-05-lm1909-4d470be5.tests.json",
+   "prereg_commit": "ff09e79e2",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.638,
+     "peak": "을"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.189,
+     "peak": "를"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.383,
+     "peak": "을"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.603,
+     "peak": " вас"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.099,
+     "peak": " тебя"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.326,
+     "peak": " которую"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.603,
+     "peak": " вас"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.325,
+     "peak": " которую"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.108,
+     "peak": " 나타"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": "실"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": "더"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " знаю"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " вес"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "чу"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.077,
+     "peak": " на"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.355,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ff09e79e2",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "accusative object marker",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: 'を' x5, '를' x4, ' которую' x2, ' вас' x2, '을' x2, ' тебя': grammatical case rather than a word. Probes: ' тебя' 0.537, '를' 0.491, ' которую' 0.255; subject forms ' которая' 0.058, ' ты' 0.013, Korean '가' sentence 0.156. Japanese 'を' was weak in a short sentence (0.025-0.165), so Japanese is left out of the claim. Near misses keep the sentence with a subject form.",
+ "selection": "random draw"
+}
