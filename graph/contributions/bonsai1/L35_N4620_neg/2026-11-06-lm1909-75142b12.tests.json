@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-75142b12",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4620-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:38:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N4620",
+   "pole": "-",
+   "label": "Arabic text about opinion: the slot before رأي or الآراء ('عن رأي', 'استطلاع للرأي', 'عن آرائهم')",
+   "fire": [
+    "المقالات المنشورة هنا لا تعبر عن رأي الجريدة.",
+    "كشف استطلاع للرأي نشرته صحيفة محلية.",
+    "يحق للمواطن التعبير عن رأيه بحرية.",
+    "التعليقات لا تعبر عن رأي إدارة المنتدى.",
+    "نتائج استطلاع للرأي العام صدرت أمس.",
+    "سمحت الحكومة للناس بالتعبير عن آرائهم.",
+    "نتبادل الآراء في هذا الملتقى العام.",
+    "قرأت مقالا في باب الرأي والتعليقات."
+   ],
+   "quiet": [
+    "المقالات المنشورة هنا تتحدث عن تاريخ الجريدة.",
+    "كشف تقرير للوزارة نشرته صحيفة محلية.",
+    "يحق للمواطن السفر إلى الخارج بحرية.",
+    "التعليقات تظهر في أسفل صفحة المنتدى.",
+    "نتائج مباراة كرة القدم صدرت أمس.",
+    "سمحت الحكومة للناس بالسفر إلى الخارج.",
+    "نتبادل الهدايا في هذا العيد كل عام.",
+    "قرأت مقالا في باب الرياضة والسفر."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic slot before 'opinion'",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.6,
+ "notes": "The output direction: the + pole promotes ' opinion', ' views', '意见', ' avis', yet this - pole fires before the word, and English 'express your opinion' reached only 0.07. A probe with 'لا تعبر عن' before another noun reached 0.63, so the prefix alone may be enough."
+}

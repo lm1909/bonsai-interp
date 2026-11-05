@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-fca7e270",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10249+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:38:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N10249",
+   "pole": "+",
+   "label": "the first piece 'sn' / 'Sn' of a split word: sn|ail, Sn|ipe, Sn|orkeling; whole-word ' snake' stays quiet",
+   "fire": [
+    "A tiny snail crawled up the wall.",
+    "The Common Snipe nests in wet fields.",
+    "Snorkeling and diving are popular there.",
+    "The gardener crushed a snail under his boot.",
+    "We watched a snipe take off.",
+    "Snails eat the young lettuce.",
+    "A snipe ran through the reeds.",
+    "Snorkeling gear is included."
+   ],
+   "quiet": [
+    "A tiny beetle crawled up the wall.",
+    "The Common Teal nests in wet fields.",
+    "Swimming and diving are popular there.",
+    "The gardener crushed a slug under his boot.",
+    "We watched a heron take off.",
+    "Slugs eat the young lettuce.",
+    "A rail ran through the reeds.",
+    "Diving gear is included."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first piece sn / Sn",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "A tokenizer check shows ' snake', ' snorkel' and ' sneezed' do not split this way, so they are left out. Commas after medical symptoms are also on the card and are not covered.",
+ "trigger": {
+  "tokens": [
+   " sn",
+   " Sn",
+   "Sn",
+   "sn"
+  ]
+ }
+}

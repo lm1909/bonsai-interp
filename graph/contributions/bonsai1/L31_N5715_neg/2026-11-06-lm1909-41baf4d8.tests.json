@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-41baf4d8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N5715-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:38:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N5715",
+   "pole": "-",
+   "label": "the first digit of a date number right after a month, or a year in a date string: 'September 3|0', 'July 4|3', date_range('2|014'",
+   "fire": [
+    "The Journal of Medicine, October 21, 1990.",
+    "He served between June and August 44.",
+    "dates = pd.date_range('2019', '2020')",
+    "Published in Science, March 15, 2001.",
+    "The regiment sailed in April and May 42.",
+    "Lancet, December 12, 1978.",
+    "start = pd.Timestamp('2016')",
+    "The Times, January 30, 1931."
+   ],
+   "quiet": [
+    "The Journal of Medicine, the winter issue.",
+    "He served between June and August with 44 men.",
+    "dates = list(range(3, 9))",
+    "Published in Science, volume 15, page 20.",
+    "The regiment sailed with 42 ships in spring.",
+    "Lancet, the spring issue.",
+    "start = int('12')",
+    "The Times, page 30, column 3."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "digit in a date after a month",
+ "unit_kind": "token / contextual",
+ "confidence": 0.55,
+ "notes": "A second probe item, 'JAMA. 2008 May 7', scored 0.01, so citation-style dates may not fire. The + pole of this neuron already holds a label about the space before a year naming a reporting period."
+}
