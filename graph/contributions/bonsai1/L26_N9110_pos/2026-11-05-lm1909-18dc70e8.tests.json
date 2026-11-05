@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-18dc70e8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N9110+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:09:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N9110",
+   "pole": "+",
+   "label": "The capitalised tokens ' Do', ' Doc', ' Doctor', ' Mo' and ' Board' (DoE, DoD, MoH, Doomsday, Doc Holliday, Doctor of Medicine, Board of Trustees); whole-token D- names stay quiet: a list, no shared pattern found",
+   "fire": [
+    "A memo from the DoE described the new reactor plans.",
+    "Officials at the DoD refused to answer the question.",
+    "Staff at the MoH sent new guidance to the clinics.",
+    "She earned her Doctor of Medicine at a small college.",
+    "He was elected to the Board of Trustees in 2004.",
+    "The novel ends with a Doomsday scene on the coast.",
+    "Fans of the Western still argue about Doc Holliday.",
+    "The Dozier trial was covered by every local paper."
+   ],
+   "quiet": [
+    "A memo from the Treasury described the new reactor plans.",
+    "Officials at the Pentagon refused to answer the question.",
+    "Staff at the hospital sent new guidance to the clinics.",
+    "She earned her nursing diploma at a small college.",
+    "He was elected to the Senate in 2004.",
+    "The novel ends with a Dorchester scene on the coast.",
+    "Fans of the Western still argue about Wyatt Earp.",
+    "The Dover trial was covered by every local paper."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "capitalised ' Do', ' Doc', ' Doctor', ' Mo', ' Board'",
+ "unit_kind": "token / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' Do' x13, ' Board' x3, ' Doctor' x3, ' Doc' x2, ' DO' x2, ' Mo'. Probe: DoD 0.94, Dozier 1.04, Doctor 0.93, Doc 0.92, Board 0.56-0.86, MoD 0.69; Dover 0.03, Dodge 0.01, Dor- 0.02, Doha 0.04, Dean 0.21, Director 0.24, Committee 0.20, Bureau 0.11. I tried an 'institution or title opening' idea: Dean and Director do not fire enough for it.",
+ "trigger": {
+  "tokens": [
+   " Do",
+   " Doc",
+   " Doctor",
+   " Mo",
+   " Board"
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-fae316dd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N2848-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:09:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N2848",
+   "pole": "-",
+   "label": "'brand name(s)' or 'trade name(s)' in a parenthesis right after a drug's generic name (a sub-trigger of a broad pole)",
+   "fire": [
+    "Atorvastatin (brand names: Lipitor, Torvast) lowers cholesterol in the blood.",
+    "Ibuprofen (brand names Advil and Motrin) relieves mild pain.",
+    "The sedative diazepam (trade names: Valium, Diastat) is widely prescribed.",
+    "Patients take sertraline (brand name: Zoloft) once each morning.",
+    "Omeprazole (trade names Prilosec, Losec) reduces stomach acid.",
+    "The antibiotic amoxicillin (brand names include Amoxil) treats ear infections.",
+    "Insulin glargine (brand name Lantus) is injected once a day.",
+    "Fluoxetine (trade name Prozac) was approved for use in 1987."
+   ],
+   "quiet": [
+    "Atorvastatin (a common statin drug) lowers cholesterol in the blood.",
+    "Ibuprofen (often taken with food) relieves mild pain.",
+    "The sedative diazepam (first sold in 1963) is widely prescribed.",
+    "Patients take sertraline (usually as a tablet) once each morning.",
+    "Omeprazole (sold over the counter) reduces stomach acid.",
+    "The antibiotic amoxicillin (also given to children) treats ear infections.",
+    "Insulin glargine (a long-acting form) is injected once a day.",
+    "Fluoxetine (an older antidepressant) was approved for use in 1987."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "parenthetical brand or trade name after a drug",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: broad (3.2% of tokens at 0.1 of max), peaks on function words (that, with, to, as, any) plus one 'brand' in a Warfarin definition. Probe: 'brand' 0.80 or 0.25, 'names' 0.47, 'famous brand' 0.03; function words after their verb reach only 0.11-0.31, too weak to test. So this is only a sub-trigger; expect it to be partial at best."
+}

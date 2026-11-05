@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-d3c13bc1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6825-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:09:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N6825",
+   "pole": "-",
+   "label": "' P' or 'P' as a separate token that opens an acronym or rare name the tokenizer splits (PTFE, PVA, PEEK, Punic)",
+   "fire": [
+    "The bearing is lined with PTFE so that it runs without grease.",
+    "Factories that once released PFOA are now being asked to clean the river.",
+    "Surgeons often prefer a spinal cage made of PEEK for older patients.",
+    "Carthage lost the third Punic war, and the city was burned.",
+    "Apply a thin layer of wood glue (PVA) along the joint before clamping.",
+    "Anglers now use line coated in PTFE because it slips through the guides.",
+    "Inscriptions in Punic were found on the stones near the harbour.",
+    "For this craft you need card, paint and craft glue (PVA) for the edges."
+   ],
+   "quiet": [
+    "The bearing is lined with nylon so that it runs without grease.",
+    "Factories that once released lead are now being asked to clean the river.",
+    "Surgeons often prefer a spinal cage made of titanium for older patients.",
+    "Carthage lost the third war with Rome, and the city was burned.",
+    "Apply a thin layer of wood glue (epoxy) along the joint before clamping.",
+    "Anglers now use line coated in silicone because it slips through the guides.",
+    "Inscriptions in Greek were found on the stones near the harbour.",
+    "For this craft you need card, paint and craft glue (UHU) for the edges."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "separate ' P' token opening a split word",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: ' P' x15, 'P' x3, plus Arabic ' الح' x6. Probe: (PVA) 0.97, PTFE 0.65, Punic 0.30-0.61; words that keep P in a longer token stayed quiet (PVC, PCR, PDF, Punjab, Palmyra under 0.05). Lowercase ' p' reached only 0.15-0.20. Tokenizer checked for each fire word.",
+ "trigger": {
+  "tokens": [
+   " P",
+   "P"
+  ]
+ }
+}

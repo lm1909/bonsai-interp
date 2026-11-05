@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-7096200e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N5843-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:09:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N5843",
+   "pole": "-",
+   "label": "Nouns for a person's social ties and contacts (friends, friendships, relationships, contacts, acquaintances, phone calls)",
+   "fire": [
+    "Moving abroad meant leaving behind most of her friends from school.",
+    "He built up a long list of contacts while working in Berlin.",
+    "Therapy can help you repair damaged relationships with your family.",
+    "She lost touch with many acquaintances after changing jobs.",
+    "The internet helps teenagers form friendships across borders.",
+    "A good salesman spends most of his day returning phone calls.",
+    "Retired workers often miss their former colleagues and friends.",
+    "Divorce can strain friendships that were built over many years."
+   ],
+   "quiet": [
+    "Moving abroad meant leaving behind most of her books from school.",
+    "He built up a large stock of recipes while working in Berlin.",
+    "Therapy can help you repair damaged muscles in your back.",
+    "She lost track of many invoices after changing jobs.",
+    "The internet helps teenagers form opinions across borders.",
+    "A good salesman spends most of his day filling in forms.",
+    "Retired workers often miss their former routines and habits.",
+    "Divorce can strain savings that were built over many years."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "a person's social ties and contacts",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' relationships' x5, ' friends' x2, ' calls', ' friendships', 'contact-os'. Probe: acquaintances 1.04, friends 0.57, contacts 0.55, calls 0.61, relationships 0.42, friendships 0.32. Non-social nouns in the same frame 0.01-0.16. But 'in touch with old books' fired on ' old' 0.59 and 'list of business expenses' on ' of' 0.34, so predicting a social noun may count; neighbours 0.20 and 'loved ones' 0.06 are weak. Near misses avoid 'in touch' and 'list of' frames next to the swapped noun where possible.",
+ "trigger": {
+  "words": [
+   "friends",
+   "friendships",
+   "relationships",
+   "contacts"
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-ecede2a0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2932+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:09:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N2932",
+   "pole": "+",
+   "label": "An object pronoun for a person right after a verb, strongest on ' me' (' him' and ' her' weaker); the same verbs with a noun object stay quiet",
+   "fire": [
+    "The smell of fresh bread always reminds me of my childhood summers.",
+    "The long drive from the coast exhausted me more than the work did.",
+    "That old photograph convinced me to call the family again.",
+    "The strange noise in the attic frightened me during the night.",
+    "The final chapter of the book moved me to tears.",
+    "The early start on Monday annoyed me for the whole day.",
+    "The long drive through the hills exhausted him more than the work did.",
+    "The strange letter from the bank worried her for days."
+   ],
+   "quiet": [
+    "The smell of fresh bread always reminds the town of its early summers.",
+    "The long drive from the coast exhausted the horses more than the work did.",
+    "That old photograph convinced the family to call the police again.",
+    "The strange noise in the attic frightened the cat during the night.",
+    "The final chapter of the book moved the plot to its end.",
+    "The early start on Monday annoyed the staff for the whole day.",
+    "The long drive through the hills damaged the engine more than the work did.",
+    "The strange letter from the bank worried the board for days."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "object pronoun for a person, mostly ' me'",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' me' x29 of the top 32, all after verbs (brings me, made me, inspired me); gate-closed echo regime, broad. Probe: ' me' 0.66-0.95, ' him' 0.39-0.66, ' her' 0.39-0.43, ' us' 0.47, noun objects 0.11-0.16, ' it' 0.18. Sentence-initial pronouns also reach about 0.5, so the test keeps them away from the first token. Not claimed: Chinese 我 belongs to the other pole.",
+ "trigger": {
+  "tokens": [
+   " me",
+   " him",
+   " her"
+  ]
+ }
+}

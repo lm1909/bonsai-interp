@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-d14a73e1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11954-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:09:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N11954",
+   "pole": "-",
+   "label": "The tokens temp / tmp: short forms for something temporary (temp files, /tmp, a swap variable, a temp worker)",
+   "fire": [
+    "tmp_dir = tempfile.mkdtemp()\nshutil.copy(src, tmp_dir)",
+    "cp build/output.bin /tmp/output.bin && chmod +x /tmp/output.bin",
+    "int temp = a;\na = b;\nb = temp;",
+    "He worked as a temp in the accounts office before being hired.",
+    "Delete the temp files in the cache folder to free some disk space.",
+    "The script writes its results to a tmp folder and exits.",
+    "def swap(x, y):\n    tmp = x\n    x = y\n    y = tmp",
+    "Open the Temp folder in Windows and remove everything inside."
+   ],
+   "quiet": [
+    "out_dir = os.getcwd()\nshutil.copy(src, out_dir)",
+    "cp build/output.bin /usr/local/bin/output.bin && chmod +x /usr/local/bin/output.bin",
+    "int sum = a;\na = b;\nb = sum;",
+    "He worked as a clerk in the accounts office before being hired.",
+    "Delete the old files in the cache folder to free some disk space.",
+    "The script writes its results to a log folder and exits.",
+    "def swap(x, y):\n    old = x\n    x = y\n    y = old",
+    "Open the Downloads folder in Windows and remove everything inside."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "temp / tmp tokens",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: 'temp' x8, 'tmp' x7, 'Temporary' x4, '_temp' x3. Probe: mkstemp 0.86, /tmp 0.78, ' temp' agency 0.65; whole words ' Temporary' 0.26, ' temporary' 0.29; ' temperature' 0.35 is a known overlap and is left out of the test; ' temper' 0.05, /var 0.01.",
+ "trigger": {
+  "words": [
+   "temp",
+   "tmp",
+   "temporary"
+  ]
+ }
+}
