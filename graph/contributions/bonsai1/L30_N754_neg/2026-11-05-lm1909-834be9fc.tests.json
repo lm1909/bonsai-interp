@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-834be9fc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N754-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:35:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N754",
+   "pole": "-",
+   "label": "' import' in 'from random / math / threading import', and the module name ' random'; prose and 'from os import' stay quiet",
+   "fire": [
+    "from random import randint\nimport sys",
+    "from math import sqrt",
+    "from threading import Lock",
+    "import random\nn = random.randint(1, 6)",
+    "from random import shuffle",
+    "from math import pi; from random import choice;",
+    "from time import sleep",
+    "val = random.uniform(0, 1)"
+   ],
+   "quiet": [
+    "from os import getcwd",
+    "import os\nimport json",
+    "The firm will import fresh fruit from Chile.",
+    "The list was sorted in random order by the clerk.",
+    "from sys import argv",
+    "x = os.getcwd()",
+    "import sys\nimport re",
+    "val = len(items)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "from random import",
+ "unit_kind": "code / contextual",
+ "confidence": 0.75,
+ "notes": "Probes: 'from os import path' 0.09 and 'import os' 0.11, against 'from random import' 1.01 and 'from threading import' 0.52. 'time' was not probed."
+}

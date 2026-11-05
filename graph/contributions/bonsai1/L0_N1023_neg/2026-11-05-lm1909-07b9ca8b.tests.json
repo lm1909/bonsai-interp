@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-05-lm1909-07b9ca8b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N1023-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:35:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N1023",
+   "pole": "-",
+   "label": "a small set of code tokens: .listdir, .readlines, .TextField, (TestCase, doctype, phinx (a list; no shared pattern found)",
+   "fire": [
+    "html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]",
+    "title = models.TextField(null=True)",
+    "files = os.listdir('.')",
+    "rows = fh.readlines()",
+    "class BarTest(TestCase):\n    pass",
+    "page = '<!doctype html>'",
+    "body = forms.TextField()",
+    "for name in os.listdir(root):"
+   ],
+   "quiet": [
+    "p = os.path.join(root, name)",
+    "y = str(c) + str(d)",
+    "title = models.CharField(null=True)",
+    "size = os.getcwd()",
+    "rows = fh.read()",
+    "class BarTest(object):\n    pass",
+    "page = '<html>'",
+    "for name in items(root):"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code tokens: .listdir, .readlines ...",
+ "unit_kind": "token / code",
+ "confidence": 0.75,
+ "notes": "Corpus max is small (1.73). I looked for a shared pattern and did not find one, so the label stays a list. The + pole of this neuron is '.join' and '.parametrize'.",
+ "trigger": {
+  "tokens": [
+   ".listdir",
+   ".readlines",
+   ".TextField",
+   "(TestCase",
+   "doctype",
+   "phinx"
+  ]
+ }
+}
