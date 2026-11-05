@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-bfbea4b8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5382+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:21:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N5382",
+   "pole": "+",
+   "label": "Reading a response or output stream back from a network connection or subprocess in code (response, .recv, .stdout); code that only computes on local data stays quiet",
+   "fire": [
+    "session = requests.Session()\nresponse = session.get(api_url, timeout=5)\ndata = response.json()\n",
+    "s = socket.socket()\ns.connect((addr, 9000))\ns.sendall(payload)\nreply = s.recv(4096)\n",
+    "p = subprocess.Popen(args, stdout=subprocess.PIPE)\nfor raw in p.stdout:\n    log(raw.decode())\n",
+    "async with aiohttp.ClientSession() as sess:\n    async with sess.get(link) as response:\n        text = await response.text()\n",
+    "req = urllib.request.Request(target)\nresponse = urllib.request.urlopen(req)\nhtml = response.read()\n",
+    "def test_home(self):\n    response = self.client.get('/home/')\n    self.assertContains(response, 'Welcome')\n",
+    "def poll(self):\n    line = self.proc.stdout.readline().rstrip()\n    if not line:\n        return None\n",
+    "ws = create_connection(endpoint)\nws.send(json.dumps(query))\nresult = json.loads(ws.recv())\n"
+   ],
+   "quiet": [
+    "values = list(range(10))\ntotal = sum(values)\nmean = total / len(values)\n",
+    "a = numpy.zeros((3, 3))\na[0, 0] = 1.0\nb = a.dot(a)\n",
+    "parts = name.split('-')\nfor part in parts:\n    seen.add(part.lower())\n",
+    "def area(w, h):\n    return w * h\n\nsize = area(4, 5)\n",
+    "class Stack:\n    def push(self, item):\n        self.items.append(item)\n",
+    "def test_add(self):\n    result = add(2, 3)\n    self.assertEqual(result, 5)\n",
+    "def clean(self):\n    text = self.title.strip().lower()\n    if not text:\n        return None\n",
+    "table = {}\ntable['key'] = json.dumps(record)\nresult = json.loads(table['key'])\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "reading network/process replies in code",
+ "unit_kind": "contextual",
+ "confidence": "high"
+}
