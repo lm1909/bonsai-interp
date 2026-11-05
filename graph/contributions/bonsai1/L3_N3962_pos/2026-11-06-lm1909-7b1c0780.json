@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-7b1c0780",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N3962+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:31:15+00:00",
+ "recipe": {
+  "toolchain_commit": "b675c5a4e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N3962_pos/2026-11-06-lm1909-7b1c0780.tests.json"
+ },
+ "label": "' B' as the second of a labelled pair right after an ' A' earlier in the text (Phase A … Phase B, point A to point B, Group B); ' B' with no ' A' before it and other next items stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N3962_pos/2026-11-06-lm1909-7b1c0780.tests.json",
+   "prereg_commit": "b675c5a4e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.739,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.592,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.475,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.449,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.574,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.651,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.44,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.423,
+     "peak": " B"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.136,
+     "peak": " bottom"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.091,
+     "peak": " A"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " rail"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.108,
+     "peak": " Vitamin"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.097,
+     "peak": " B"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " tank"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.035,
+     "peak": "atitis"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.118,
+     "peak": "ains"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.524,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b675c5a4e",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' B' as second of an A/B pair",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " B"
+  ]
+ }
+}

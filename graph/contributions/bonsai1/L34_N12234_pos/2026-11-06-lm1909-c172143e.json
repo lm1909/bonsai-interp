@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-c172143e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N12234+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:31:32+00:00",
+ "recipe": {
+  "toolchain_commit": "b675c5a4e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N12234_pos/2026-11-06-lm1909-c172143e.tests.json"
+ },
+ "label": "the single letter ' s' or ' S' (also Cyrillic ' с') opening a word the tokenizer splits (' s'+'loop', ' s'+'elen'+'ide', ' s'+'ours'); other split openers and whole-word s-words in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N12234_pos/2026-11-06-lm1909-c172143e.tests.json",
+   "prereg_commit": "b675c5a4e",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.633,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.401,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.525,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.359,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.061,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.019,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.229,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.152,
+     "peak": " s"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.04,
+     "peak": " br"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " ultr"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " marsh"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "ep"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.294,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b675c5a4e",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "split-off opening ' s'",
+ "unit_kind": "spelling piece",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " s",
+   " S",
+   " с",
+   " С"
+  ]
+ }
+}

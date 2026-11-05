@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-cf93e0df",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8201-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:31:14+00:00",
+ "recipe": {
+  "toolchain_commit": "b675c5a4e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N8201_neg/2026-11-06-lm1909-cf93e0df.tests.json"
+ },
+ "label": "a very dense unit (52.9% of tokens reach 0.1 of max, gate-closed leak, a positional cluster at window position 3) with no clear trigger; its top tokens are punctuation (',', '.\\n', '\\n'), but mid-clause words read about the same",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N8201_neg/2026-11-06-lm1909-cf93e0df.tests.json",
+   "prereg_commit": "b675c5a4e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 8,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.472,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.49,
+     "peak": "':"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.473,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.524,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.307,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.502,
+     "peak": ",\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.419,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.414,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.387,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.567,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.396,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.507,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.367,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.372,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.451,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.463,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.609,
+    "median_fire": 0.472,
+    "near_misses_at_0.3": 8
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b675c5a4e",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "dense: no clear trigger",
+ "unit_kind": "dense / positional",
+ "confidence": "medium",
+ "selection": "random draw"
+}

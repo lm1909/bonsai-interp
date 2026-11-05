@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-fbf49088",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N5970-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:31:59+00:00",
+ "recipe": {
+  "toolchain_commit": "b675c5a4e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N5970_neg/2026-11-06-lm1909-fbf49088.tests.json"
+ },
+ "label": "the word 'library' (' Library', 'Library', ' library', ' lib'), strongest in names such as 'Library of Congress'; museums, archives and parks in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N5970_neg/2026-11-06-lm1909-fbf49088.tests.json",
+   "prereg_commit": "b675c5a4e",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.616,
+     "peak": " Library"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.804,
+     "peak": "Library"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.422,
+     "peak": " library"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.294,
+     "peak": " Library"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.45,
+     "peak": " library"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.416,
+     "peak": " Library"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.303,
+     "peak": " library"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.904,
+     "peak": " Library"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.085,
+     "peak": " Museum"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " railway"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " pool"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " Museum"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " reading"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.064,
+     "peak": "ums"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.118,
+     "peak": " books"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.033,
+     "peak": " Liberty"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.436,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b675c5a4e",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "word 'library'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "library",
+   "Library",
+   "lib"
+  ]
+ }
+}

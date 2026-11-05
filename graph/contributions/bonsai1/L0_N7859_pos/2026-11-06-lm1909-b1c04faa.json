@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-b1c04faa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7859+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:31:11+00:00",
+ "recipe": {
+  "toolchain_commit": "b675c5a4e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N7859_pos/2026-11-06-lm1909-b1c04faa.tests.json"
+ },
+ "label": "the domain or path piece of a documentation or reference URL: '.org', '.io', '/doc', '/master', '/ref', firing on that token; '.com' page URLs and the same words in prose stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N7859_pos/2026-11-06-lm1909-b1c04faa.tests.json",
+   "prereg_commit": "b675c5a4e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.195,
+     "peak": ".html"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.06,
+     "peak": "/report"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.664,
+     "peak": ".io"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.463,
+     "peak": ".org"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.649,
+     "peak": "/doc"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.41,
+     "peak": "/blob"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.597,
+     "peak": "/en"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.472,
+     "peak": "data"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.209,
+     "peak": ".sh"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " now"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.122,
+     "peak": "cheap"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " books"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": "Details"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.468,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b675c5a4e",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'.org' / '.io' / '/doc' in a URL",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".org",
+   ".io",
+   "/master",
+   "/doc",
+   "/ref",
+   ".ca"
+  ]
+ }
+}

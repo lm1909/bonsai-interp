@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-43043b45",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9113-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:31:13+00:00",
+ "recipe": {
+  "toolchain_commit": "b675c5a4e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N9113_neg/2026-11-06-lm1909-43043b45.tests.json"
+ },
+ "label": "' a' or ' your' after a call to consult someone: 'Ask a', 'Talk to your', 'Chat with a', 'Consult your', firing on the determiner; the same determiners after non-consulting verbs stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N9113_neg/2026-11-06-lm1909-43043b45.tests.json",
+   "prereg_commit": "b675c5a4e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.675,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.826,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.926,
+     "peak": " trained"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.424,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.012,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.84,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.453,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.698,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.093,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.106,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.33,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.081,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": " our"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.338,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.762,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b675c5a4e",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'Ask a …' / 'Talk to your …'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " a",
+   " A",
+   " your",
+   " an"
+  ]
+ }
+}
