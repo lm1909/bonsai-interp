@@ -1,0 +1,44 @@
+{
+ "contribution": "2026-11-05-lm1909-1ffada56",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N4495-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N4495",
+   "pole": "-",
+   "label": "the opening of a Python dict literal ({ or {') assigned inside a function or method, as opposed to the same assignment made by a function call",
+   "fire": [
+    "class Job:\n    def __init__(self, owner, zone):\n        self.owner = owner\n        if zone:\n            self.place = {'owner': owner, 'zone': zone}\n        else:\n            self.place = None\n",
+    "def make_event(kind, level):\n    event = {\n        'kind': kind,\n        'level': level,\n    }\n    return event\n",
+    "def as_row(user):\n    print(user.id)\n    row = {\n        'id': user.id,\n        'email': user.email,\n    }\n    return row\n",
+    "class Report:\n    def summary(self):\n        total = sum(self.items)\n        data = {'total': total, 'count': len(self.items)}\n        return data\n",
+    "def headers(token):\n    result = {\n        'Accept': 'text/plain',\n        'Token': token,\n    }\n    return result\n",
+    "class Disk:\n    def info(self):\n        name = self.name\n        meta = {\n            'name': name,\n            'size': self.size,\n        }\n        return meta\n",
+    "def to_dict(point):\n    out = {'x': point.x, 'y': point.y}\n    return out\n",
+    "class Store:\n    def __init__(self, path):\n        self.path = path\n        self.cache = {\n            'path': path,\n            'hits': 0,\n        }\n"
+   ],
+   "quiet": [
+    "class Job:\n    def __init__(self, owner, zone):\n        self.owner = owner\n        if zone:\n            self.place = find_place(owner, zone)\n        else:\n            self.place = None\n",
+    "def make_event(kind, level):\n    event = new_event(kind, level)\n    log(kind)\n    return event\n",
+    "def as_row(user):\n    print(user.id)\n    row = user_row(user.id, user.email)\n    save(user)\n    return row\n",
+    "class Report:\n    def summary(self):\n        total = sum(self.items)\n        data = self.format(total, len(self.items))\n        return data\n",
+    "def headers(token):\n    result = build_headers(token)\n    check(token)\n    return result\n",
+    "class Disk:\n    def info(self):\n        name = self.name\n        meta = read_meta(name, self.size)\n        return meta\n",
+    "def to_pair(point):\n    out = pair(point.x, point.y)\n    return out\n",
+    "class Store:\n    def __init__(self, path):\n        self.path = path\n        self.cache = open_cache(path)\n        self.hits = 0\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,probe"
+ },
+ "short": "opening a dict literal inside a Python method (guess)",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "notes": "Card: \" {'\" x5, ' {\\n' x3, \"({'\" x2. Probes are not clean: multi-line dict in a function 0.41-0.61, but an indented list literal also reached 0.26-0.67 and an assignment by a call 0.23-0.29. Top-level config dict only 0.06; s.dumps({' 0.03. I expect this may fail."
+}

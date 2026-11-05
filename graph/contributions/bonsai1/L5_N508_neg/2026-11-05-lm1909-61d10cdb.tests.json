@@ -1,0 +1,50 @@
+{
+ "contribution": "2026-11-05-lm1909-61d10cdb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N508-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N508",
+   "pole": "-",
+   "label": "the split-word piece ' ard' or ' Ard' at the start of a rarer word (ardor, ardently, ardillas, Ardagh), in any language; words where the tokenizer does not produce that piece stay quiet",
+   "fire": [
+    "The young poet praised her with the ardor of a first love.",
+    "Critics admired the ardour of his early speeches on reform.",
+    "She argued ardently for a new library in the old town.",
+    "En el parque vimos dos ardillas sobre una rama alta.",
+    "The family moved from Limerick to Ardagh when the farm failed.",
+    "Our train passed the Ardennes hills just after sunrise.",
+    "We spent a week cycling along the rivers of the Ardèche in June.",
+    "Era un defensor ardiente de la causa de los obreros."
+   ],
+   "quiet": [
+    "The young poet praised her with the warmth of a first love.",
+    "Critics admired the courage of his early speeches on reform.",
+    "She argued loudly for a new library in the old town.",
+    "En el parque vimos dos palomas sobre una rama alta.",
+    "The family moved from Limerick to Galway when the farm failed.",
+    "Our train passed the Scottish hills just after sunrise.",
+    "We spent a week cycling along the rivers of the Loire in June.",
+    "Era un defensor valiente de la causa de los obreros."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,probe"
+ },
+ "short": "the piece ' ard' / ' Ard' in split words",
+ "unit_kind": "token / spelling",
+ "confidence": "medium",
+ "notes": "Card: ' Ard' x8, ' ard' x5, 'rd', 'ARD', plus Ald|ous and Dol|om. Tokenizer checked. Probes: ardor 0.99, ardour 1.03, Ardmore 0.66, ardilla 0.82; other rare pieces also fire (Ald|ous 0.99, Dol|om|ites 0.86, ard|ua 0.49), so this label names part of the pole at most. Hard, thistles, bastard, Arduino as one token stayed under 0.03.",
+ "trigger": {
+  "tokens": [
+   " ard",
+   " Ard"
+  ]
+ }
+}

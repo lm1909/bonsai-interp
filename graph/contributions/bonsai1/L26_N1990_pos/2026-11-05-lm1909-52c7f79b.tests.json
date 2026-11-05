@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-52c7f79b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N1990+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N1990",
+   "pole": "+",
+   "label": "' instead' naming what was chosen in place of something (took a car instead, tablets instead of books), as opposed to the same sentences adding something with too, also or as well",
+   "fire": [
+    "The ferry was full, so they drove around the bay instead.",
+    "Our club picked a picnic instead of the usual formal dinner.",
+    "He put down the novel and reached for a magazine instead.",
+    "Most of the town now heats with wood instead of oil.",
+    "The bakery ran out of rye, so I bought a white loaf instead.",
+    "She took the stairs instead of waiting for the slow elevator.",
+    "The band dropped the ballad and closed with a louder song instead.",
+    "Farmers here grow barley instead of wheat on the upper fields."
+   ],
+   "quiet": [
+    "The ferry was full, so they drove around the bay too.",
+    "Our club picked a picnic as well as the usual formal dinner.",
+    "He put down the novel and reached for a magazine as well.",
+    "Most of the town now heats with wood and with oil.",
+    "The bakery had plenty of rye, so I bought a white loaf too.",
+    "She took the stairs and then waited for the slow elevator.",
+    "The band played the ballad and closed with a louder song too.",
+    "Farmers here grow barley and wheat on the upper fields."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,look,probe"
+ },
+ "short": "' instead' naming a replacement",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' instead' x10 of the top 32, also ' not', ' something', ' think'. Output suppresses not/non. Probes: instead 0.31-0.42. The same pivot fires without the word: \"I'm tired of black paint; I think\" 0.90, 'but for the people' 0.46, 'gave up sugar and started' 0.38, while \"I'm fond of the curtains; I think\" 0.03. This test covers only the word; the wider pivot is not tested here.",
+ "trigger": {
+  "tokens": [
+   " instead"
+  ]
+ }
+}

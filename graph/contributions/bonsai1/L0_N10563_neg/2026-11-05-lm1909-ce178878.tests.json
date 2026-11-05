@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-ce178878",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10563-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N10563",
+   "pole": "-",
+   "label": "the broken-byte token (shown as �) where the tokenizer splits a kana across two tokens, as after ー in ラーメン or し in 少しずつ; katakana words that are whole tokens stay quiet, and so do kanji split the same way (駅, 毎, 窓)",
+   "fire": [
+    "友達と駅の近くでラーメンを食べました。",
+    "母は庭にチューリップを植えました。",
+    "弟は学校でハーモニカを練習しています。",
+    "朝ごはんにソーセージと卵を焼きました。",
+    "毎朝、私はヨーグルトを食べています。",
+    "妹は畑でピーマンを育てています。",
+    "祖母は窓辺でハーブを育てています。",
+    "日曜日に家族でカレーライスを作りました。"
+   ],
+   "quiet": [
+    "友達と駅の近くでニュースを見ました。",
+    "母は庭で冷たいジュースを飲みました。",
+    "弟は学校でキャンプの計画を立てています。",
+    "朝ごはんの前にシャワーを浴びました。",
+    "毎朝、私はスーパーで働いています。",
+    "妹は店でメニューを選んでいます。",
+    "祖母は窓辺でカメラを磨いています。",
+    "日曜日に家族でツアーに参加しました。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,probe"
+ },
+ "short": "split kana (broken-byte token), not split kanji",
+ "unit_kind": "token / spelling",
+ "confidence": "high",
+ "notes": "Card: '�' x32 of the top 32, all Japanese, weak (max 2.09, leak regime 98%). Tokenizer checked: ニュ|ー�|�|ク style splits. Probes: split words 0.50-1.05 (チャーハン, ニューヨーク, バーベキュー, カーテン, 少しずつ); whole-token ニュース-type and plain Japanese 0.02-0.07; kanji split into the same kind of token stayed at 0.13 or less (駅, 毎週, 窓, 開発). The near misses keep such split kanji on purpose. The declared token also matches those kanji fragments, so measured coverage is an upper bound. Language scope outside Japanese is untested here.",
+ "trigger": {
+  "tokens": [
+   "�"
+  ]
+ }
+}

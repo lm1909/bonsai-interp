@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-05-lm1909-230f54e2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N4005-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N4005",
+   "pole": "-",
+   "label": "the variable 'parser' opening another line of repeated parser.add_argument calls in multi-line Python, as opposed to a parser object used once or another builder object repeated",
+   "fire": [
+    "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--input', type=str)\nparser.add_argument('--output', type=str)\nparser.add_argument('--workers', type=int)\n",
+    "def parse_cli():\n    parser = argparse.ArgumentParser(prog='sync')\n    parser.add_argument('source')\n    parser.add_argument('target')\n    parser.add_argument('--dry-run', action='store_true')\n    return parser.parse_args()\n",
+    "import argparse\n\nparser = argparse.ArgumentParser(description='Train a model')\nparser.add_argument('--epochs', default=10)\nparser.add_argument('--batch', default=32)\nargs = parser.parse_args()\n",
+    "def main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--host', default='localhost')\n    parser.add_argument('--port', default=8080)\n    parser.add_argument('--debug', default=False)\n    run(parser.parse_args())\n",
+    "if __name__ == '__main__':\n    parser = argparse.ArgumentParser()\n    parser.add_argument('path')\n    parser.add_argument('--limit', type=int)\n    opts = parser.parse_args()\n",
+    "def options():\n    parser = argparse.ArgumentParser(add_help=False)\n    parser.add_argument('--color')\n    parser.add_argument('--width')\n    parser.add_argument('--height')\n    return parser\n",
+    "import argparse\nparser = argparse.ArgumentParser(usage='tool FILE')\nparser.add_argument('file')\nparser.add_argument('--mode', choices=['a', 'b'])\nparser.add_argument('--quiet', action='store_true')\n",
+    "def cli(argv):\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--year', type=int)\n    parser.add_argument('--month', type=int)\n    return parser.parse_args(argv)\n"
+   ],
+   "quiet": [
+    "import csv\nreader = csv.reader(handle)\nheader = next(reader)\nrows = list(reader)\nprint(len(rows))\n",
+    "def render_page():\n    page = Page(title='sync')\n    body = page.body()\n    links = body.links()\n    count = len(links)\n    return count\n",
+    "import html.parser\n\nparser = html.parser.HTMLParser()\nparser.feed(text)\ntitle = extractor.title\nprint(title)\n",
+    "def main():\n    grid = Grid()\n    grid.add_item('host')\n    grid.add_item('port')\n    grid.add_item('debug')\n    run(grid.layout())\n",
+    "if __name__ == '__main__':\n    conn = sqlite3.connect('path.db')\n    cur = conn.cursor()\n    cur.execute('select 1')\n    print(cur.fetchone())\n",
+    "def options():\n    box = Box(padding=2)\n    box.push('color')\n    box.push('width')\n    box.push('height')\n    return box\n",
+    "import json\nconfig = json.load(handle)\nname = config['file']\nmode = config['mode']\nprint(name, mode)\n",
+    "def cli(argv):\n    settings = Settings()\n    year = int(argv[0])\n    month = int(argv[1])\n    return settings.lookup(year, month)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,probe"
+ },
+ "short": "line-initial parser in repeated add_argument lines",
+ "unit_kind": "code / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' parser' x6 plus indentation tokens before repeated chained calls (menu.Append, .add_field). Probes: parser 0.58-0.69 in argparse blocks, ap 0.34, menu.Append 0.44, embed 0.38 (so other repeated builders can also fire; this label names the strongest part); xml parser used once 0.05, make_parser() 0.01, table.add_row 0.11, table.add_column 0.20, buf.write 0.08.",
+ "trigger": {
+  "tokens": [
+   " parser",
+   "parser",
+   "\tparser"
+  ]
+ }
+}

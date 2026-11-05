@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-25266dab",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N891-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N891",
+   "pole": "-",
+   "label": "the Arabic piece ' ج' at the start of جرام (gram) right after كيلو or ميلي (kilo, milli), as opposed to other unit words after the same prefix or the spelling كجم",
+   "fire": [
+    "اشترت أمي خمسة كيلو جرام من الأرز هذا الأسبوع.",
+    "يصل وزن الخروف إلى أربعين كيلو جرام في الربيع.",
+    "يأخذ المريض عشرة ميلي جرام من الدواء كل صباح.",
+    "حمل العامل عشرين كيلو جرام من الإسمنت إلى السطح.",
+    "تحتوي الحبة على خمسين ميلي جرام من المادة الفعالة.",
+    "خسر اللاعب ثلاثة كيلو جرام قبل بداية المباراة.",
+    "أرسل المصنع مائة كيلو جرام من القطن إلى الميناء.",
+    "ينصح الطبيب بتناول مائتي ميلي جرام من الكالسيوم يوميا."
+   ],
+   "quiet": [
+    "اشترت أمي خمسة أكياس من الأرز هذا الأسبوع.",
+    "يصل طول الطريق إلى أربعين كيلو متر في الجبل.",
+    "يأخذ المريض عشرة قطرات من الدواء كل صباح.",
+    "حمل العامل عشرين كيسا من الإسمنت إلى السطح.",
+    "تحتوي الحبة على نسبة صغيرة من المادة الفعالة.",
+    "ركض اللاعب ثلاثة كيلو متر قبل بداية المباراة.",
+    "أرسل المصنع مائة صندوق من القطن إلى الميناء.",
+    "ينصح الطبيب بتناول حبتين من الكالسيوم يوميا."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,probe"
+ },
+ "short": "' ج' of جرام after a kilo or milli prefix",
+ "unit_kind": "token / spelling",
+ "confidence": "medium",
+ "notes": "Card: ' ج' x6, ' ا' x6, ' مج' x3, ' الإ' x2, all split Arabic pieces. Tokenizer checked: ' ج'|'رام'. Probes: كيلو جرام 0.81-1.04, ميلي جرام 0.42, but مائة جرام 0.06, 8 جنية 0.16; كيلو غرام 0.22; مجتمع 0.25-0.30 on ' مج'; كجم 0.07, لتر 0.03; كيلو متر 0.31 and كيلو واط 0.09 with the peak on 'يل' of كيلو itself, so two near misses keep كيلو متر on purpose and may reach 0.30. The label names one narrow strong use, not the pole; the ' ا' and ' مج' uses are not covered.",
+ "trigger": {
+  "tokens": [
+   " ج"
+  ]
+ }
+}
