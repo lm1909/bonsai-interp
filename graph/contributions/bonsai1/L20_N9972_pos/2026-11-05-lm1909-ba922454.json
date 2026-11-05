@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-ba922454",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N9972+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:37:08+00:00",
+ "recipe": {
+  "toolchain_commit": "c5395b27a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N9972_pos/2026-11-05-lm1909-ba922454.tests.json"
+ },
+ "label": "The noun ' thing(s)' after another, other or one more, introducing the next remark; a concrete or specific noun in the same slot stays quiet. Other top tokens (example, rules) did not reproduce in probes",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N9972_pos/2026-11-05-lm1909-ba922454.tests.json",
+   "prereg_commit": "c5395b27a",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.266,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.234,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.323,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.246,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.273,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.179,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.262,
+     "peak": " other"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.129,
+     "peak": " thing"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.163,
+     "peak": " odd"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.149,
+     "peak": " remark"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.267,
+     "peak": " annoying"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.145,
+     "peak": " strange"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.209,
+     "peak": " other"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.13,
+     "peak": " feature"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.178,
+     "peak": " other"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.209,
+     "peak": " perk"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.254,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c5395b27a",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "' thing' after another/other",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "thing",
+   "things"
+  ]
+ }
+}

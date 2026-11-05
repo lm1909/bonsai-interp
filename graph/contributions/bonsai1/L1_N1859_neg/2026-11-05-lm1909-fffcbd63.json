@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-fffcbd63",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N1859-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:36:41+00:00",
+ "recipe": {
+  "toolchain_commit": "c5395b27a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N1859_neg/2026-11-05-lm1909-fffcbd63.tests.json"
+ },
+ "label": "The tokens ' pencil' and ' case' (a court or study case). A list, not a pattern; the pole is dense at low values (13% of tokens reach 0.1 of max), and top examples also include Korean '년'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N1859_neg/2026-11-05-lm1909-fffcbd63.tests.json",
+   "prereg_commit": "c5395b27a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.597,
+     "peak": " pencil"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.131,
+     "peak": " pencil"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.376,
+     "peak": " pencil"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.538,
+     "peak": " pencil"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.942,
+     "peak": " case"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.494,
+     "peak": " case"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.315,
+     "peak": " case"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.427,
+     "peak": " pencil"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.068,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.087,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.204,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.227,
+     "peak": " our"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.126,
+     "peak": " comes"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.19,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.055,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.185,
+     "peak": "Her"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.516,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c5395b27a",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "' pencil' and ' case' tokens",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "pencil",
+   "case"
+  ]
+ }
+}
