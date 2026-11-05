@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-edf67ee6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5355+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:24:26+00:00",
+ "recipe": {
+  "toolchain_commit": "9eebead5a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N5355_pos/2026-11-06-lm1909-edf67ee6.tests.json"
+ },
+ "label": "the piece 'Christ' at the start of a given name (Christ|ophe, Christ|elle, Christ|of), not Christ the religious figure or 'Christian'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N5355_pos/2026-11-06-lm1909-edf67ee6.tests.json",
+   "prereg_commit": "9eebead5a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.527,
+     "peak": " Christ"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.65,
+     "peak": " Christ"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.57,
+     "peak": " Christ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.557,
+     "peak": " Christ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.409,
+     "peak": " Christ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.696,
+     "peak": " Christ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.336,
+     "peak": " Christ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.577,
+     "peak": " Christ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.046,
+     "peak": " Paul"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.059,
+     "peak": " Is"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.132,
+     "peak": " Christ"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " Stefan"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "Later"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.129,
+     "peak": " Eva"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "Tickets"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.069,
+     "peak": " Christ"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.564,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9eebead5a",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'Christ-' in a given name",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: ' Christ' x6, 'Christ' x5, ' Am' x3, ' Sum' x2, ' Crist' x2, all in names. Probes: Christophe 0.704, Christine and Christof 0.506; 'Jesus Christ' 0.080, 'Christian' 0.021, Philippe 0.070. Note that whole-token ' Christopher' and ' Christina' have no separate piece; they are not in the test.",
+ "selection": "random draw"
+}

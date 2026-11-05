@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-11e8f398",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8182-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:50+00:00",
+ "recipe": {
+  "toolchain_commit": "9eebead5a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N8182_neg/2026-11-06-lm1909-11e8f398.tests.json"
+ },
+ "label": "a word stating what a medical procedure did or failed to do (This stretches the artery, which failed to improve)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N8182_neg/2026-11-06-lm1909-11e8f398.tests.json",
+   "prereg_commit": "9eebead5a",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.174,
+     "peak": " This"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.476,
+     "peak": " failed"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.033,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.507,
+     "peak": " failed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.087,
+     "peak": " This"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.284,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.08,
+     "peak": " eased"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.285,
+     "peak": " failed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " This"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.031,
+     "peak": "he"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.021,
+     "peak": "wich"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " bright"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": " cleaning"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " helped"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.229,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9eebead5a",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "outcome of a medical procedure",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' to' x4, '2' x2, ' =' x2, ' This', ' surgery', ' failed', ' expect', ' ended', with some medical items and code. Probes: ' failed' 0.475, ' This' after an angioplasty step 0.356; 'Bypass surgery does not change' 0.047; a bus version 0.038. A guess at the medical cluster.",
+ "selection": "random draw"
+}

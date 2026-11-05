@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c9087d2a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N491-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:36+00:00",
+ "recipe": {
+  "toolchain_commit": "9eebead5a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N491_neg/2026-11-06-lm1909-c9087d2a.tests.json"
+ },
+ "label": "a word in the formal title of a law, clause or regulation (Commerce Clause, Sales and Use Tax, Food and Drugs Act)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N491_neg/2026-11-06-lm1909-c9087d2a.tests.json",
+   "prereg_commit": "9eebead5a",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.174,
+     "peak": " Commerce"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.496,
+     "peak": " Use"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.14,
+     "peak": " Drugs"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.135,
+     "peak": " Protection"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.057,
+     "peak": " paid"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.197,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.045,
+     "peak": " Act"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.187,
+     "peak": " Act"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " ruling"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " fine"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": " set"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " case"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " at"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.157,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9eebead5a",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word in a law's formal title",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' Drugs' x2, ' regulations' x2, ' the', ' Commerce', 'unic', ' Use', ' rules'. Probes: ' Use' 0.395, ' Commerce' 0.307, ' Drugs' 0.186-0.225; plain sentences under 0.03. Near misses keep legal or business topics without a title. Median is expected near the bar.",
+ "selection": "random draw"
+}

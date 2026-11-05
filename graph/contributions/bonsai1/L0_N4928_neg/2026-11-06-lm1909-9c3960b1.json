@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-9c3960b1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4928-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:37+00:00",
+ "recipe": {
+  "toolchain_commit": "9eebead5a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N4928_neg/2026-11-06-lm1909-9c3960b1.tests.json"
+ },
+ "label": "the tokens ' Rapid', ' executives' and ' vending' on a dense, very weak pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N4928_neg/2026-11-06-lm1909-9c3960b1.tests.json",
+   "prereg_commit": "9eebead5a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.673,
+     "peak": " Rapid"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.523,
+     "peak": " executives"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.582,
+     "peak": " vending"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.782,
+     "peak": " Rapid"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.637,
+     "peak": " executives"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.635,
+     "peak": " vending"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.694,
+     "peak": " Rapid"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.602,
+     "peak": " executives"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.302,
+     "peak": " downtown"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.095,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.147,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.108,
+     "peak": "Forecast"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": " losses"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.149,
+     "peak": " soda"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.329,
+     "peak": " Extra"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.17,
+     "peak": " report"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.636,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9eebead5a",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Rapid', ' executives', ' vending' (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags broad (8.4%) and gate-closed (89%); max only 0.17. Tokens: ' Rapid' x7, ' executives' x6, '1' x3, '_interval' x3. Probes: ' vending' 0.685, ' executives' 0.606, ' Rapid' 0.539; other sentences 0.15-0.21. Reported as dense whatever the test says.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Rapid",
+   " executives",
+   " vending"
+  ]
+ }
+}

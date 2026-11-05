@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-eb4f2860",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N7483+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:24:42+00:00",
+ "recipe": {
+  "toolchain_commit": "9eebead5a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N7483_pos/2026-11-06-lm1909-eb4f2860.tests.json"
+ },
+ "label": "a verb or comparative saying that something appears large or looms (would loom larger)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N7483_pos/2026-11-06-lm1909-eb4f2860.tests.json",
+   "prereg_commit": "9eebead5a",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.273,
+     "peak": " larger"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.076,
+     "peak": " larger"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.214,
+     "peak": "om"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.097,
+     "peak": "omed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.046,
+     "peak": "om"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.074,
+     "peak": " larger"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.095,
+     "peak": " larger"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.127,
+     "peak": "om"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": " would"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.141,
+     "peak": " away"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " failure"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": " next"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " hidden"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " threat"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.096,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9eebead5a",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'loom larger'",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' face' x2, ' short', ' can', Arabic 'ك', ' the', 'om', ' thou'. Probes were weak: ' larger' in 'loom larger' 0.398, ' face' 0.177, ' thou' 0.081, ' falls short' sentence 0.022. A best guess at the strongest probe; likely to fail.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e6e59392",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N5124+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:30+00:00",
+ "recipe": {
+  "toolchain_commit": "9eebead5a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N5124_pos/2026-11-06-lm1909-e6e59392.tests.json"
+ },
+ "label": "a token inside the definition of a unit of measurement (one watt equals, a carat is a unit for, BTU - the amount of heat)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N5124_pos/2026-11-06-lm1909-e6e59392.tests.json",
+   "prereg_commit": "9eebead5a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.49,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.737,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.533,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.709,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.353,
+     "peak": " used"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.684,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.679,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.404,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " marker"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.068,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " where"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.606,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9eebead5a",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "defining a unit of measurement",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: digits, ' of', ' the', ' a', ' large', ' (' with unit definitions (BTU, watt, carat, megawatt, gallon, 'million, billion'). Probes: 'equals 1/746' 0.912, 'a carat is a' 0.841, BTU 0.419, Megawatt 0.398; 'One farmer owns' 0.009, 'A cat is a pet' 0.007. The peak can be a digit, article or a word, so the context is what counts. New units are in the test, and near misses keep the 'X is a Y' frames.",
+ "selection": "random draw"
+}
