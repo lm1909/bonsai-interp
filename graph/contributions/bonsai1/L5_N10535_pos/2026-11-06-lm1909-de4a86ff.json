@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-de4a86ff",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10535+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:36:47+00:00",
+ "recipe": {
+  "toolchain_commit": "6a946ab0c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10535_pos/2026-11-06-lm1909-de4a86ff.tests.json"
+ },
+ "label": "Django test and URL helpers: reverse('...'), self.client.login(...), and 'dependencies' in a migration",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10535_pos/2026-11-06-lm1909-de4a86ff.tests.json",
+   "prereg_commit": "6a946ab0c",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.139,
+     "peak": " reverse"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.278,
+     "peak": " reverse"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.487,
+     "peak": " reverse"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.818,
+     "peak": "logout"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.314,
+     "peak": "(reverse"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.104,
+     "peak": "')]"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.039,
+     "peak": "='"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.352,
+     "peak": " reverse"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.075,
+     "peak": ".LOGIN"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.071,
+     "peak": " os"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": "class"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": "self"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": ")"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.296,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6a946ab0c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Django reverse() and client.login",
+ "unit_kind": "code / contextual",
+ "confidence": 0.5,
+ "notes": "Probes on short snippets were modest (reverse 0.35, .login 0.12, dependencies 0.11), so this may fail on strength. The - pole of this neuron is Django forms.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " reverse",
+   ".login"
+  ]
+ }
+}

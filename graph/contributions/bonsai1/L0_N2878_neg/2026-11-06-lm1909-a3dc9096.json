@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-a3dc9096",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N2878-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:36:28+00:00",
+ "recipe": {
+  "toolchain_commit": "6a946ab0c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N2878_neg/2026-11-06-lm1909-a3dc9096.tests.json"
+ },
+ "label": "a short list of tokens: the piece 'board' in whiteboard and sideboard, ' choice' after 'good/best', ' of' in 'the best of'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N2878_neg/2026-11-06-lm1909-a3dc9096.tests.json",
+   "prereg_commit": "6a946ab0c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.747,
+     "peak": "board"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.438,
+     "peak": " choice"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.849,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.877,
+     "peak": " choice"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.553,
+     "peak": "board"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.462,
+     "peak": " choice"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.849,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.796,
+     "peak": "board"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.053,
+     "peak": " window"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.086,
+     "peak": " option"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " exercise"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " hall"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.109,
+     "peak": " spot"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.109,
+     "peak": " health"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " electronic"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.772,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6a946ab0c",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tokens: board, good choice, best of",
+ "unit_kind": "token",
+ "confidence": 0.6,
+ "notes": "Corpus max is tiny (0.36), the card flags the pole broad, and the gate-closed regime dominates (78%). I found no pattern that joins these tokens, so the label stays a list.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "board",
+   " choice"
+  ]
+ }
+}
