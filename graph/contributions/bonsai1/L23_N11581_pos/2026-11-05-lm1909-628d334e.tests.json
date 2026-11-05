@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-628d334e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11581+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:45:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N11581",
+   "pole": "+",
+   "label": "layout arguments in Python GUI code (tkinter, wx, Qt): `weight=`, `border=`, `sticky=`, sizes and positions of widgets",
+   "fire": [
+    "import tkinter as tk\nroot = tk.Tk()\nlabel = tk.Label(root, text='Name')\nlabel.grid(row=2, column=0, sticky='w', padx=4)\nroot.columnconfigure(0, weight=1)\n",
+    "box = wx.BoxSizer(wx.HORIZONTAL)\nbox.Add(self.saveBtn, flag=wx.LEFT, border=6)\nbox.Add(self.quitBtn, flag=wx.LEFT, border=6)\n",
+    "self.widget = QtWidgets.QPushButton(Form)\nself.widget.setGeometry(QtCore.QRect(30, 60, 120, 40))\nself.widget.setFixedSize(120, 40)\n",
+    "frame = tkinter.Frame(win)\nframe.grid_rowconfigure(1, weight=2)\nframe.pack(side='left', padx=10, pady=(3, 3))\n",
+    "sizer = wx.GridBagSizer(5, 5)\nsizer.Add(self.nameLabel, pos=(0, 0), flag=wx.ALL, border=4)\nsizer.Add(self.nameText, pos=(0, 1), span=(1, 2))\n",
+    "btn = ttk.Button(top, text='Go', width=12)\nbtn.pack(side='right', padx=8)\nentry = ttk.Entry(top, width=30)\nentry.pack(fill='x', expand=True)\n",
+    "font = QtGui.QFont()\nfont.setPointSize(14)\nfont.setBold(True)\nself.title.setFont(font)\nself.title.resize(300, 50)\n",
+    "layout = [[sg.Text('Size', size=(10, 1)), sg.Input(key='n', size=(6, 1))],\n          [sg.Button('OK', font=('Arial', 12), size=(8, 1))]]\n"
+   ],
+   "quiet": [
+    "import json\ndata = json.load(open(path))\nname = data.get('name', 'x')\nrows = sorted(data['rows'], key=len, reverse=True)\nprint(rows[0], name)\n",
+    "x = np.linspace(0, 1, num=6)\ny = np.interp(x, xs, ys, left=0)\nz = np.clip(y, a_min=0, a_max=6)\n",
+    "self.client = requests.Session()\nself.client.headers.update({'a': 'b'})\nresp = self.client.get(url, timeout=40, stream=True)\n",
+    "table = pandas.read_csv(path)\ntable = table.dropna(axis=1, how='any')\ntable.to_csv(out, sep=';', index=False)\n",
+    "model = sklearn.linear_model.Ridge(alpha=5, fit_intercept=True)\nmodel.fit(train_x, train_y, sample_weight=w)\npred = model.predict(test_x)\n",
+    "logger = logging.getLogger('app')\nlogger.setLevel(logging.INFO)\nlogger.info('start', extra={'n': 12})\nlogger.warning('late', stacklevel=2)\n",
+    "parser = argparse.ArgumentParser()\nparser.add_argument('--size', type=int, default=14)\nparser.add_argument('--bold', action='store_true')\nargs = parser.parse_args()\n",
+    "cfg = [[dict(name='size', value=10), dict(name='n', value=6)],\n       [dict(name='ok', value=8, unit='px')]]\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python GUI layout arguments",
+ "unit_kind": "code / contextual",
+ "confidence": "high"
+}
