@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-20fa5c36",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N6256-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:18:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N6256",
+   "pole": "-",
+   "label": "Dense unit (gate-closed leak, 25% of tokens over 0.1 of max). Best guess: the '#' opening a code comment",
+   "fire": [
+    "x = 1\n# load the file\ny = 2\n",
+    "import os\n# helper functions\nimport sys\n",
+    "def f():\n    # return nothing\n    pass\n",
+    "total = 0\n# add up rows\ntotal += 1\n",
+    "# Copyright 2010\n# Licensed under MIT\nimport re\n",
+    "a = 3\n# scale by two\nb = a * 2\n",
+    "class A:\n    # no fields\n    pass\n",
+    "run()\n# clean up here\nstop()\n"
+   ],
+   "quiet": [
+    "x = 1\nload('file')\ny = 2\n",
+    "import os\nimport json\nimport sys\n",
+    "def f():\n    value = 0\n    pass\n",
+    "total = 0\nrows = 5\ntotal += 1\n",
+    "name = 'x'\nsize = 3\nimport re\n",
+    "a = 3\nscale = 2\nb = a * 2\n",
+    "class A:\n    x = 0\n    pass\n",
+    "run()\nclean()\nstop()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense: '#' comment",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "The card flags this pole dense and 100% gate-closed; max only 0.18. Probes show 0.14-0.56 on scattered words. This records the density and is expected to fail."
+}

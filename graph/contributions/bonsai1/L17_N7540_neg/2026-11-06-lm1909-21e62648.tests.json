@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-21e62648",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N7540-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:18:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N7540",
+   "pole": "-",
+   "label": "The separator in a long homogeneous list in code (column_sizes=[15, 7, 15, 15, ...], ['int', 'str', 'str', ...]); short argument lists and prose lists stay quiet",
+   "fire": [
+    "grid = make_grid(names=['x', 'y', 'z'],\n    row_heights=[12, 9, 12, 12, 12, 12, 12])\n",
+    "check(ds.column_types(),['str', 'int', 'int', 'int', 'str', 'int', 'str', 'str'])\n",
+    "widths = [10, 4, 10, 10, 10, 10, 10, 10, 10, 10]\nshow(widths)\n",
+    "    fmt = ['float', 'float', 'int', 'float', 'int', 'int', 'float', 'int']\n    load(fmt)\n",
+    "    print('%d,%d,%.3f' % (i, n, err, lr, acc, tp, fp))\n",
+    "    self.table = Table(['id', 'pid', 'name', 'host', 'mem', 'cpu', 'tags'],\n        sizes=[8, 6, 20, 20, 8, 8, 12])\n",
+    "kinds = ['a', 'b', 'b', 'a', 'b', 'a', 'a', 'b', 'a', 'b']\nrun(kinds)\n",
+    "assert_equal(types, ['int', 'int', 'str', 'int', 'str', 'str', 'int', 'int'])\n"
+   ],
+   "quiet": [
+    "grid = make_grid(names)\nheights = load(grid)\nshow(heights)\n",
+    "check(ds)\ntypes = ds.types()\nprint(types)\n",
+    "width = 10\nshow(width)\n",
+    "    fmt = get_format()\n    load(fmt)\n",
+    "    print('done', i)\n",
+    "    self.table = Table()\n    self.size = 8\n",
+    "We packed shirts, socks, belts, hats, boots, gloves and scarves.",
+    "assert_equal(a, b)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "separator in long code list",
+ "unit_kind": "code / repeat",
+ "confidence": 0.65,
+ "notes": "Probes: 0.26 at best, on ',' and \" '\". Prose lists and short calls read under 0.01."
+}
