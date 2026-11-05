@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-a9cb4af3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N85-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N85",
+   "pole": "-",
+   "label": "Best guess for a dense pole: the closing credit or sign-up line of a news item ('contributed to this report', 'Sign up here').",
+   "fire": [
+    "Staff writer Jane Doe contributed to this report.",
+    "Reporter Sam Cole contributed reporting for this article.",
+    "Research by Alan Fox contributed to this article.",
+    "Editor Kim Lau also contributed to this story.",
+    "Want the news in your inbox every day? Sign up here.",
+    "Associated Press writer Bob Hale contributed to this report.",
+    "Follow us for more updates. Sign up today.",
+    "Intern Rita Vega contributed reporting from Denver."
+   ],
+   "quiet": [
+    "The staff writer ate lunch at her desk today.",
+    "The reporter drove home after the game last night.",
+    "The research lab is on the third floor.",
+    "The editor took a long holiday in Spain.",
+    "The mail comes to the inbox in the morning.",
+    "The press room was closed for cleaning.",
+    "We followed the trail up to the lake.",
+    "The intern moved to Denver in the spring."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; news credit line guess",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "9.6% of tokens reach 0.1 of max and the gate-closed regime dominates. Probes read 0.05-0.29 with no clear split, and sentence-first words fired too. Expected to fail: the test is here to record the density."
+}

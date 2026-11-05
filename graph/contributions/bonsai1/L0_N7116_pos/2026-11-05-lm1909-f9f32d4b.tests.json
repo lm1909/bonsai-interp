@@ -1,0 +1,58 @@
+{
+ "contribution": "2026-11-05-lm1909-f9f32d4b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7116+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N7116",
+   "pole": "+",
+   "label": "A two-letter mixed-case token, lower case then capital, chiefly the unit abbreviations dB, kB, mA, kW and mL; all-capital (MB, GB) and all-lower-case (cm, mm) units in the same slot stay quiet.",
+   "fire": [
+    "The signal dropped by 6 dB past the hill.",
+    "Each photo is about 90 kB on the server.",
+    "The small sensor draws 5 mA when awake.",
+    "This heater is rated at 3 kW in winter.",
+    "Add 50 mL of water to the flask.",
+    "A noisy room can reach 70 dB by evening.",
+    "The email attachment was only 12 kB in size.",
+    "The LED needs about 15 mA to glow."
+   ],
+   "quiet": [
+    "The signal dropped by 6 percent past the hill.",
+    "Each photo is about 90 MB on the server.",
+    "The small sensor draws 5 watts when awake.",
+    "This heater is rated at 3 GW in winter.",
+    "Add 50 cm of tubing to the flask.",
+    "A noisy room can reach 70 people by evening.",
+    "The email attachment was only 12 GB in size.",
+    "The LED needs about 15 mm to fit."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "lower+capital two-letter unit",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Probes: ' mA' 0.74, ' kW' 0.39, ' mL' 0.64 against ' MB' 0.004, ' cm' 0.007. Three-letter ' kHz' read 0.15, and 'Ah' in mAh 0.004. Base64 chunks in the top examples ('xC', 'xE') are not covered by this test.",
+ "trigger": {
+  "tokens": [
+   " dB",
+   "dB",
+   " kB",
+   "kB",
+   " mA",
+   " kW",
+   " mL"
+  ]
+ }
+}

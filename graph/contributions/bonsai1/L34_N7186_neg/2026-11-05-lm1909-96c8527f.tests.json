@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-96c8527f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7186-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N7186",
+   "pole": "-",
+   "label": "A word-opening piece with the sound 'in' in a non-Latin script: Japanese 'イン', Russian ' ин', Arabic 'إن' and 'ان'; other words in the same frame stay quiet.",
+   "fire": [
+    "インクが切れたので買いました。",
+    "インストールが終わりました。",
+    "イングランドの歴史を学びます。",
+    "Этот индикатор на панели мигает красным.",
+    "Он включил инвертор на ночь.",
+    "الإنجليزية لغة جميلة.",
+    "سافرت إلى انجلترا العام الماضي.",
+    "Этот индекс растёт каждый год."
+   ],
+   "quiet": [
+    "ペンが切れたので買いました。",
+    "ダウンロードが終わりました。",
+    "フランスの歴史を学びます。",
+    "Этот экран на панели мигает красным.",
+    "Он включил лампу на ночь.",
+    "العربية لغة جميلة.",
+    "سافرت إلى فرنسا العام الماضي.",
+    "Этот курс растёт каждый год."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'in-' piece across scripts",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "A cross-script sound. Latin 'in' in 'internet' stayed at 0.04, and a word the tokenizer keeps whole (インターネット) reads near 0. ' .IN' in the top examples is not tested.",
+ "trigger": {
+  "tokens": [
+   "イン",
+   " ин",
+   "إن",
+   "ان"
+  ]
+ }
+}

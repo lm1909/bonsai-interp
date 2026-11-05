@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-cc836d21",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N2637-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N2637",
+   "pole": "-",
+   "label": "The token that opens a line of literal example values or commands in documentation or a config block (' ``' before a quoted option, '>' before a command, the indent before a dict string); the same blocks with numbers or plain prose stay quiet.",
+   "fire": [
+    "Parameters\n----------\nmode : str\n    The mode. Can be ``'fast'``,\n    ``'slow'`` or ``'auto'``.\n",
+    "Examples:\n> mytool-cli getinfo 20\n> curl http://localhost:8332\n",
+    "settings = {\n    'title': 'home',\n    'theme': 'dark',\n    'lang': 'en',\n}\n",
+    "Options\n-------\nkind : str\n    One of ``'a'``,\n    ``'x'`` or ``'y'``.\n",
+    "Usage:\n> foo-cli listblocks 5\n> foo-cli status\n",
+    "params = {\n    'user': 'bob',\n    'role': 'admin',\n    'city': 'Oslo',\n}\n",
+    "Returns\n-------\nstatus : str\n    Either ``'ok'``,\n    ``'bad'`` or ``'none'``.\n",
+    "Commands:\n> db-cli getkey 9\n> db-cli setkey 9\n"
+   ],
+   "quiet": [
+    "Parameters\n----------\nmode : int\n    The mode. Can be 1,\n    2 or 3.\n",
+    "Examples:\nRun the tool with twenty items and then open the local page.\n",
+    "settings = [\n    1,\n    2,\n    3,\n]\n",
+    "Options\n-------\nkind : int\n    One of 4,\n    5 or 6.\n",
+    "Usage:\nRun the tool with five blocks and then check the status.\n",
+    "params = (\n    user,\n    role,\n    city,\n)\n",
+    "Returns\n-------\nstatus : bool\n    True or False.\n",
+    "Commands:\nSet the key to nine and then read it back.\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line opening literal examples",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "A low-confidence reading. The output direction promotes string openers (' \"', '(\"', '\\'). One-line code and most assignments stayed low in probes ('_PROJECT_ID = \"PD\"' 0.02), so the top examples' ' =' and '.get' are not covered."
+}
