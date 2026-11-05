@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-9d8e4314",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N6358+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:43:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N6358",
+   "pole": "+",
+   "label": "(guess) a project-specific module or class name used as a Python namespace: `mne.concatenate`, `vconfig.Libvirt`, `curator.find`; stdlib names like `os.path` stay quiet",
+   "fire": [
+    "epochs = mne.Epochs(raw, events, tmin=0)\nprint(epochs)\n",
+    "disk = vconfig.LibvirtConfigGuestDisk()\ndisk.parse(xml)\n",
+    "found = curator.find_expired_indices(client)\nprint(found)\n",
+    "raws = mne.concatenate_raws([x, y])\nraws.plot()\n",
+    "serial = vconfig.LibvirtConfigGuestSerial()\nserial.type = 'pty'\n",
+    "gtk.Bin.do_realize(self)\nself.show()\n",
+    "IPDevice.return_value = device = mock.Mock()\nrun(device)\n",
+    "mapping = driver_block_device.legacy_block_devices(items)\nprint(mapping)\n"
+   ],
+   "quiet": [
+    "epochs = list(range(10))\nprint(epochs)\n",
+    "disk = os.path.abspath(name)\nprint(disk)\n",
+    "found = sorted(items)\nprint(found)\n",
+    "raws = json.loads(text)\nprint(raws)\n",
+    "serial = str(value)\nserial = serial.strip()\n",
+    "time.sleep(1)\nself.show()\n",
+    "value = device = dict()\nrun(device)\n",
+    "mapping = re.compile(pattern).findall(items)\nprint(mapping)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "project module name as a namespace (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": "low"
+}

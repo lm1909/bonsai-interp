@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-c5827292",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N243-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:43:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N243",
+   "pole": "-",
+   "label": "conditional branching in code: SQL CASE WHEN, tf.cond, tf.case, 'a case statement', conditional_",
+   "fire": [
+    "SELECT name, CASE WHEN score IS NULL THEN 0 ELSE score END FROM runs",
+    "out = tf.cond(flag, lambda: x, lambda: y)\nreturn out\n",
+    "def visit_case(self, node):\n    \"Generate a case statement.\"\n    return node\n",
+    "UPDATE users SET age = CASE age WHEN '' THEN NULL ELSE age END",
+    "return control_flow_ops.cond(has_value, fn1, fn2)\n",
+    "from django.utils.html import conditional_escape\n",
+    "result = tf.case(pairs, default=fn)\nreturn result\n",
+    "SELECT CASE %s WHEN 'yes' THEN 1 ELSE 0 END FROM log"
+   ],
+   "quiet": [
+    "SELECT name, score, level FROM runs WHERE score > 2 ORDER BY name",
+    "out = tf.add(flag, x)\nreturn out\n",
+    "def visit_loop(self, node):\n    \"Generate a for loop.\"\n    return node\n",
+    "UPDATE users SET age = 30 WHERE name = 'Ann'",
+    "return math_ops.multiply(has_value, fn1)\n",
+    "from django.utils.html import strip_tags\n",
+    "result = tf.concat(pairs, axis=0)\nreturn result\n",
+    "SELECT COUNT(*) FROM log WHERE level = 'yes'"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "conditional branch in code",
+ "unit_kind": "code / semantic",
+ "confidence": "high"
+}
