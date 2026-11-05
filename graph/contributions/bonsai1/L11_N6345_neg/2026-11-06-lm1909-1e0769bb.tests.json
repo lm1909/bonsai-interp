@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-1e0769bb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6345-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:53:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N6345",
+   "pole": "-",
+   "label": "the padding argument in neural-network layer code",
+   "fire": [
+    "x = Conv2D(64, (3, 3), padding='same')(x)\n",
+    "layers.Conv2D(filters=16, kernel_size=3, padding='valid', activation='relu')\n",
+    "net = tf.layers.conv2d(net, 32, 5, padding='same')\n",
+    "nn.Conv2d(3, 16, kernel_size=3, padding=1)\n",
+    "pool = MaxPooling2D(pool_size=2, padding='same')(x)\n",
+    "out = conv(x, stride=2, padding=1)\n",
+    "The layer uses same padding so the width is kept.\n",
+    "def conv_block(x, padding='same'):\n    return Conv2D(8, 3, padding=padding)(x)\n"
+   ],
+   "quiet": [
+    "x = Conv2D(64, (3, 3), activation='relu')(x)\n",
+    "layers.Dense(units=16, activation='relu')\n",
+    "net = tf.layers.dense(net, 32)\n",
+    "nn.Linear(3, 16, bias=True)\n",
+    "pool = MaxPooling2D(pool_size=2)(x)\n",
+    "out = conv(x, stride=2)\n",
+    "The layer uses a kernel so the width is kept.\n",
+    "def dense_block(x):\n    return Dense(8)(x)\n"
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-1 near miss; '(filters' reached 0.42 in exploration",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "'padding' in layer code",
+ "unit_kind": "code / lexical",
+ "confidence": "medium",
+ "trigger": {
+  "words": [
+   "padding"
+  ]
+ }
+}
