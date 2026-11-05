@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-bdf32ae0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N3722+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:56:23+00:00",
+ "recipe": {
+  "toolchain_commit": "73ecd72c4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N3722_pos/2026-11-05-lm1909-bdf32ae0.tests.json"
+ },
+ "label": "the tail or whole-word token of 'st-' words stigma, stigmatize, stencil and Stiglitz",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N3722_pos/2026-11-05-lm1909-bdf32ae0.tests.json",
+   "prereg_commit": "73ecd72c4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.428,
+     "peak": " stigma"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.657,
+     "peak": "igmat"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.511,
+     "peak": " stencil"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.885,
+     "peak": "ig"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.625,
+     "peak": " stigma"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.897,
+     "peak": "igm"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.823,
+     "peak": "enc"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.83,
+     "peak": "ig"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.001,
+     "peak": " when"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " crate"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": "f"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.74,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73ecd72c4",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "stigma/stencil/Stiglitz",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' stigma' x10, 'igmat' x7, 'igm' x4, 'ig' x4, 'enc' x3 and 'ils', so a spelling unit rather than a meaning: the botanical stigma and the name Stiglitz fire as well as social stigma. Probes 0.52-0.89; 'fear' 0.001. Near misses keep topic and drop the word.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "stigma",
+   "stencil",
+   "Stiglitz"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-2e418ad8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4562-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:56:53+00:00",
+ "recipe": {
+  "toolchain_commit": "73ecd72c4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N4562_neg/2026-11-05-lm1909-2e418ad8.tests.json"
+ },
+ "label": "the word-initial piece ' з' or ' z' of a Slavic word that the tokenizer splits (з|ел|ёного, з|ем|ли, z|em|ljepisnih)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N4562_neg/2026-11-05-lm1909-2e418ad8.tests.json",
+   "prereg_commit": "73ecd72c4",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.661,
+     "peak": " з"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.074,
+     "peak": " з"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.431,
+     "peak": " з"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.631,
+     "peak": " з"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.295,
+     "peak": " з"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.007,
+     "peak": " и"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.22,
+     "peak": " z"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.413,
+     "peak": " z"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": " ч"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.051,
+     "peak": " п"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.098,
+     "peak": " д"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.1,
+     "peak": " сер"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " род"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " и"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.121,
+     "peak": " iz"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.155,
+     "peak": " raz"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.354,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73ecd72c4",
+  "minutes": 19,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split word-initial з / z",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: ' з' x6, ' зап' x3, 'оп' x4, ' Z' among the top peaks at the last layer. Probes: ' z' in zemljepisnih 0.812, ' з' in зелёного 0.544, ' з' in земли/зверям 0.236; but зелёное in a short sentence stayed at 0.033, and 'уп' in злоупотреблении reached 0.534, so ' з' alone will not explain the pole. Tokenization was checked for every sentence before commit, without scoring: fire items contain a split ' з' or ' z'; near misses keep the frame and use a word without it.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-d1465edf",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N2814-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:56:21+00:00",
+ "recipe": {
+  "toolchain_commit": "73ecd72c4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N2814_neg/2026-11-05-lm1909-d1465edf.tests.json"
+ },
+ "label": "' from' marking the source that a substance, heat or light comes out of (emitted from, leaking from, extracted from), not 'from' for senders, times or origins of people",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N2814_neg/2026-11-05-lm1909-d1465edf.tests.json",
+   "prereg_commit": "73ecd72c4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.377,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.317,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.51,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.466,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.912,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.442,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.775,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.429,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " came"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.039,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.041,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " orch"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.15,
+     "peak": " from"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.454,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73ecd72c4",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'from': source of emission/extraction",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' from' x27 of the top 32, after emitted, escaping, leaked, extracted, reflected, and the Arabic equivalent. Probes: 'radiated from' 1.305, 'leaking from' 0.546, 'distilled from' 0.593; 'letter from', 'from nine to five', 'graduated from' 0.04 or less. Near misses keep ' from' in other senses, so the token alone cannot pass.",
+ "selection": "random draw"
+}

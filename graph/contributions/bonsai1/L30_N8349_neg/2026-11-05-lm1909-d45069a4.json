@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-d45069a4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N8349-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:56:15+00:00",
+ "recipe": {
+  "toolchain_commit": "73ecd72c4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N8349_neg/2026-11-05-lm1909-d45069a4.tests.json"
+ },
+ "label": "the disease name diabetes ('diabetes', 'Diabetes', 'diabetic')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N8349_neg/2026-11-05-lm1909-d45069a4.tests.json",
+   "prereg_commit": "73ecd72c4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.765,
+     "peak": " diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.615,
+     "peak": " diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.581,
+     "peak": " diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.767,
+     "peak": " Diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.382,
+     "peak": " diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.306,
+     "peak": " diabetic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.444,
+     "peak": " Diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.654,
+     "peak": " diabetes"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.337,
+     "peak": " migraine"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.144,
+     "peak": "ch"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.074,
+     "peak": " obesity"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.135,
+     "peak": "us"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.12,
+     "peak": "emia"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.096,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.07,
+     "peak": " Alzheimer"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.136,
+     "peak": " liver"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.598,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73ecd72c4",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word diabetes",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' diabetes' x21 and ' Diabetes' x8 of the top 32. Probes: 'Diabetes' in a risk-factor list 0.996, 'diabetes' after 'diagnosed with' 0.266, 'Diabetic' 0.431; hypertension 0.010, metformin/glucose 0.065, but 'high blood sugar' 0.186. Near misses use other chronic diseases and diabetes-adjacent vocabulary without the word.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "diabetes",
+   "diabetic"
+  ]
+ }
+}

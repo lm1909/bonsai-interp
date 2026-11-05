@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-31d9d61e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N11559+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:56:25+00:00",
+ "recipe": {
+  "toolchain_commit": "73ecd72c4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N11559_pos/2026-11-05-lm1909-31d9d61e.tests.json"
+ },
+ "label": "the descriptive modifier in an animal's common species name (garter snake, red-tailed hawk, sperm whale), not the bare animal word",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N11559_pos/2026-11-05-lm1909-31d9d61e.tests.json",
+   "prereg_commit": "73ecd72c4",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.16,
+     "peak": "ared"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.287,
+     "peak": "ose"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.487,
+     "peak": "ied"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.267,
+     "peak": " painted"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.517,
+     "peak": "oe"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.492,
+     "peak": "ed"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.184,
+     "peak": " comes"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.318,
+     "peak": "iny"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": " owl"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.039,
+     "peak": " wreck"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.122,
+     "peak": " belly"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.18,
+     "peak": " painted"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.096,
+     "peak": " hare"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.13,
+     "peak": "airie"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": " through"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " large"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.302,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73ecd72c4",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "modifier in species common name",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: garter, scalloped, Rusty, Sperm, prairie, Collared, -bellied, -chinned, belted, snowy, with no shared token. Probes on new species: spotted hyena 0.334, ruby-throated 0.371, red-tailed 0.421, white-headed 0.399, sperm 0.330; bare animals under 0.1. Open question: a 'belted with blue' probe scored 0.467, so the piece may partly be spelling.",
+ "selection": "random draw"
+}

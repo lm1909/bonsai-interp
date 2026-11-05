@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-31f877d4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N4020+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:56:15+00:00",
+ "recipe": {
+  "toolchain_commit": "73ecd72c4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N4020_pos/2026-11-05-lm1909-31f877d4.tests.json"
+ },
+ "label": "domain and path tokens inside a web address, strongest on '.gov' (www.agency.gov/...), not the same institution named in plain prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N4020_pos/2026-11-05-lm1909-31f877d4.tests.json",
+   "prereg_commit": "73ecd72c4",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.19,
+     "peak": "www"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.459,
+     "peak": ".gov"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.197,
+     "peak": "www"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.616,
+     "peak": ".gov"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.335,
+     "peak": ".gov"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.485,
+     "peak": ".gov"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.535,
+     "peak": ".gov"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.703,
+     "peak": ".gov"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.109,
+     "peak": " pages"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": "licants"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.054,
+     "peak": "Maps"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": " recalls"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " June"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.057,
+     "peak": " science"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.472,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73ecd72c4",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "URL domain token (.gov)",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: '.gov' x17, '.net' x4, '/~' x3 in the top 32; max only 0.59, broad flag 1.5%. Probes: '.gov' 0.49-0.65, but '.edu' 0.31, '/news' after .org 0.37 and '/forum' 0.44, so it is not .gov-only; prose naming the agency stayed under 0.1. The test contrasts URLs with prose, not .gov with other domains.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".gov",
+   ".net",
+   ".org",
+   ".edu"
+  ]
+ }
+}

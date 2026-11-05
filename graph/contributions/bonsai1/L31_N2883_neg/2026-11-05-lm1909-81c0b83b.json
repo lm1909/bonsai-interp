@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-81c0b83b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N2883-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:57:04+00:00",
+ "recipe": {
+  "toolchain_commit": "73ecd72c4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N2883_neg/2026-11-05-lm1909-81c0b83b.tests.json"
+ },
+ "label": "' the' in a sentence about astronauts or crewed spaceflight, right after a preposition or verb of place, where a spacecraft or destination is about to be named (to the, aboard the)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N2883_neg/2026-11-05-lm1909-81c0b83b.tests.json",
+   "prereg_commit": "73ecd72c4",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.87,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.504,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.219,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.778,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.782,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.876,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.72,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.617,
+     "peak": " International"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.213,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.097,
+     "peak": " aboard"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.161,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.617,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.749,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73ecd72c4",
+  "minutes": 19,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' the' before a spaceflight destination",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' the' x23 of the top 32, before International Space Station, Mir, Tiangong; ' Space' x4. Probes: 'aboard the' 0.906, 'fly to the moon' 0.703, 'astronauts returned to the village' 0.468 and 'visited the White House' 0.301, so the space-traveller context drives it even for an earthly destination; 'tourists will fly to the island' 0.042 and 'crew walked to the launch pad' 0.040. Near misses keep the syntax with non-space travellers, or keep the space context without ' the'.",
+ "selection": "random draw"
+}
