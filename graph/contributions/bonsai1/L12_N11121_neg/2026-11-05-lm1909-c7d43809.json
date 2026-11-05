@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-05-lm1909-c7d43809",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N11121-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:57:22+00:00",
+ "recipe": {
+  "toolchain_commit": "35b37b16d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N11121_neg/2026-11-05-lm1909-c7d43809.tests.json"
+ },
+ "label": "words for same-sex orientation: gay, gays, lesbian, homosexual, homosexuality, same-sex",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N11121_neg/2026-11-05-lm1909-c7d43809.tests.json",
+   "prereg_commit": "35b37b16d",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.209,
+     "peak": "-sex"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.454,
+     "peak": " gay"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.683,
+     "peak": " gay"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.651,
+     "peak": " homosexuality"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.488,
+     "peak": " gay"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.362,
+     "peak": " men"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.162,
+     "peak": " gays"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.251,
+     "peak": "-sex"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.052,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.05,
+     "peak": " teachers"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " split"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.048,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " labor"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "Researchers"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.14,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": "itudes"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.408,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "35b37b16d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "same-sex orientation words",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.75,
+ "notes": "The pole's corpus max is small (3.53) and the card shows the gate-closed regime dominating (92%), so these are low-level readings.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "gay",
+   "gays",
+   "lesbian",
+   "lesbians",
+   "homosexual",
+   "homosexuality",
+   "same-sex"
+  ]
+ }
+}

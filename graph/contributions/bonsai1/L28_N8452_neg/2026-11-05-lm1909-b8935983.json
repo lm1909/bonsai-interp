@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-b8935983",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N8452-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:57:46+00:00",
+ "recipe": {
+  "toolchain_commit": "35b37b16d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N8452_neg/2026-11-05-lm1909-b8935983.tests.json"
+ },
+ "label": "the closing bracket of a nested function in a mathematical formula, just before multiplication; ordinary code brackets stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N8452_neg/2026-11-05-lm1909-b8935983.tests.json",
+   "prereg_commit": "35b37b16d",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.274,
+     "peak": " *"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.462,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.24,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.259,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.313,
+     "peak": "))"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.339,
+     "peak": " *"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.258,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.2,
+     "peak": "))"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " sum"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "(str"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "count"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": "()"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "(str"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "_user"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": "))"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.267,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "35b37b16d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "closing bracket in maths formula",
+ "unit_kind": "code / contextual",
+ "confidence": 0.6,
+ "notes": "The pole is very sparse (0.009% of tokens reach 0.1 of max). The card's other top tokens ('def', \"('\", '-') are not covered by this label.",
+ "selection": "random draw"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-379dfdf2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N10513-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:57:14+00:00",
+ "recipe": {
+  "toolchain_commit": "35b37b16d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N10513_neg/2026-11-05-lm1909-379dfdf2.tests.json"
+ },
+ "label": "Spanish masculine articles el, del, al in running text (a guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N10513_neg/2026-11-05-lm1909-379dfdf2.tests.json",
+   "prereg_commit": "35b37b16d",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.072,
+     "peak": " del"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.073,
+     "peak": " al"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.05,
+     "peak": " ref"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.078,
+     "peak": " al"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.324,
+     "peak": " hasta"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.014,
+     "peak": " siguiente"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.062,
+     "peak": " al"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.03,
+     "peak": "ante"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " junto"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": "feito"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " sistema"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": "a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " sir"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " o"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " o"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.067,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "35b37b16d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Spanish el/del/al (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Probes on short Spanish passages reached at most 0.10, against Italian 0.04 and Portuguese 0.02, so this is the best guess from the top examples and will probably fail on strength.",
+ "selection": "random draw"
+}

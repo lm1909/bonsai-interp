@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-15bc811e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N1457-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:57:08+00:00",
+ "recipe": {
+  "toolchain_commit": "35b37b16d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N1457_neg/2026-11-05-lm1909-15bc811e.tests.json"
+ },
+ "label": "reports of violent crime and coercion: verbs and nouns of attacking, killing and fleeing",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N1457_neg/2026-11-05-lm1909-15bc811e.tests.json",
+   "prereg_commit": "35b37b16d",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.42,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.664,
+     "peak": " dumped"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.235,
+     "peak": " attacked"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.51,
+     "peak": " he"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.161,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.226,
+     "peak": " assaulted"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.369,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.475,
+     "peak": " jumped"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " money"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.816,
+     "peak": " ph"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " met"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.093,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": " girls"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.394,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "35b37b16d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "violent acts",
+ "unit_kind": "semantic",
+ "confidence": 0.5,
+ "notes": "The card flags this pole as broad, and its top examples are mixed (Spanish and Russian pieces too), so this label covers at most part of it.",
+ "selection": "random draw"
+}

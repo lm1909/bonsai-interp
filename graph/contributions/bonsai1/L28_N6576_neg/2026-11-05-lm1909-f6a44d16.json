@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-05-lm1909-f6a44d16",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N6576-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:57:20+00:00",
+ "recipe": {
+  "toolchain_commit": "35b37b16d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N6576_neg/2026-11-05-lm1909-f6a44d16.tests.json"
+ },
+ "label": "US congressional party politics: Republican/Democratic leaders, caucuses and party seat counts",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N6576_neg/2026-11-05-lm1909-f6a44d16.tests.json",
+   "prereg_commit": "35b37b16d",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.63,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.638,
+     "peak": " Leader"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.458,
+     "peak": " Democratic"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.344,
+     "peak": " hold"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.241,
+     "peak": "GOP"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.035,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.263,
+     "peak": "Democrats"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.614,
+     "peak": " Leader"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.054,
+     "peak": " clerk"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " Minister"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.088,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.149,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.088,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.525,
+     "peak": "'"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.536,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "35b37b16d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "US party politics in Congress",
+ "unit_kind": "semantic",
+ "confidence": 0.75,
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Republican",
+   " Republicans",
+   " Democratic",
+   " Democrats",
+   " GOP",
+   " Leader"
+  ]
+ }
+}

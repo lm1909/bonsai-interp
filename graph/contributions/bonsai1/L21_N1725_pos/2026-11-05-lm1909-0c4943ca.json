@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-0c4943ca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N1725+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:57:34+00:00",
+ "recipe": {
+  "toolchain_commit": "35b37b16d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N1725_pos/2026-11-05-lm1909-0c4943ca.tests.json"
+ },
+ "label": "a slot expecting a personal pronoun next: 'My X and [I]', 'what works for [you]'; the activation is on the word before the pronoun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N1725_pos/2026-11-05-lm1909-0c4943ca.tests.json",
+   "prereg_commit": "35b37b16d",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.546,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.398,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.589,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.532,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.269,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.143,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.327,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.61,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " butter"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.061,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.465,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "35b37b16d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "expects I / you / us next",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.7,
+ "notes": "The card's output direction promotes ' you', ' me', ' us', ' your'. Probes: 'My sister and' 0.54 against 'Mum and' 0.01 and 'Salt and' 0.00.",
+ "selection": "random draw"
+}

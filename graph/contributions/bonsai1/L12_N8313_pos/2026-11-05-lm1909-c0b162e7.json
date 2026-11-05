@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-c0b162e7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N8313+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:56:54+00:00",
+ "recipe": {
+  "toolchain_commit": "35b37b16d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N8313_pos/2026-11-05-lm1909-c0b162e7.tests.json"
+ },
+ "label": "the noun that completes a technical 'X of Y' term: 'line of symmetry', 'axis of rotation', 'angle of reflection' (a low-confidence guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N8313_pos/2026-11-05-lm1909-c0b162e7.tests.json",
+   "prereg_commit": "35b37b16d",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.852,
+     "peak": " symmetry"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": -0.005,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.247,
+     "peak": " equal"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.091,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.013,
+     "peak": " Beat"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.013,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.043,
+     "peak": " reflection"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.384,
+     "peak": " symmetry"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.307,
+     "peak": " equal"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.004,
+     "peak": " frame"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.093,
+     "peak": " equal"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.021,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": " green"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " down"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.609,
+    "median_fire": 0.067,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "35b37b16d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun in 'line of symmetry' terms",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "The pole's corpus max is small (6.25), and its top examples also include mid-word pieces of uncommon words ('g|nat', 'me|aly|bug', 'Bul|im|ia', 'super|flu|ity'), which this label does not explain. Probes: ' symmetry' after 'line of' 0.92, ' reflection' after 'line of' 0.40.",
+ "selection": "random draw"
+}
