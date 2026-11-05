@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-8cb49854",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10777-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:32:24+00:00",
+ "recipe": {
+  "toolchain_commit": "01fec5d29",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N10777_neg/2026-11-05-lm1909-8cb49854.tests.json"
+ },
+ "label": "a word that opens a question or subordinate clause in Russian or Spanish (почему, что, если; que)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N10777_neg/2026-11-05-lm1909-8cb49854.tests.json",
+   "prereg_commit": "01fec5d29",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.923,
+     "peak": " почему"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.291,
+     "peak": " почему"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.32,
+     "peak": " что"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.199,
+     "peak": " что"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.181,
+     "peak": "озв"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.214,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.247,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.436,
+     "peak": " почему"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.277,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.199,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.138,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.106,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.151,
+     "peak": "озв"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.044,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.108,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.177,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.269,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "01fec5d29",
+  "minutes": 26,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "clause opener in Russian/Spanish",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' почему' x3, ' что' x3, ' que' x2, ' этого' x2, 'ока', 'ем', 'mente', mostly Russian and Spanish. Probes: ' почему' 0.80-0.89, ' что' 0.27-0.41, ' que' 0.15-0.29, 'Если' 0.236, 'mente' 0.332; plain Russian sentences reached 0.14-0.24 on '.', Spanish 0.02-0.18. The weak baseline may hurt AUROC: this is a language-sensitive pole.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " почему",
+   " что",
+   " если",
+   " que"
+  ]
+ }
+}

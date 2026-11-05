@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-2df5a4bd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N8247-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:31:58+00:00",
+ "recipe": {
+  "toolchain_commit": "01fec5d29",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N8247_neg/2026-11-05-lm1909-2df5a4bd.tests.json"
+ },
+ "label": "the ' to' or ' for' after leave, left or let (something) sit, meaning a substance or thing is set aside to rest or undergo a process with no further action (left to dry, leave to rise, let sit for an hour)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N8247_neg/2026-11-05-lm1909-2df5a4bd.tests.json",
+   "prereg_commit": "01fec5d29",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.859,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.963,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.657,
+     "peak": " sit"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.646,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.975,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.629,
+     "peak": " sit"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.881,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.64,
+     "peak": " leave"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.612,
+     "peak": " leave"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.346,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.225,
+     "peak": " sit"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.088,
+     "peak": " jar"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.129,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.047,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " with"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.758,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "01fec5d29",
+  "minutes": 26,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'left to dry': setting aside to rest",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' to' x13, ' for' x4, ' sit' x4, ' leave' x4, in recipes, gardening and manure handling. Probes: 'let the sauce sit for' 1.049, 'left to drain' 0.878, 'leave to rise' 0.515; 'she left to catch the train' 0.072, 'turn left to reach' 0.033, 'add sugar to' 0.018. Near misses keep leave, left, sit and to in other senses.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-6e9f2aac",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N11499-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:31:48+00:00",
+ "recipe": {
+  "toolchain_commit": "01fec5d29",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N11499_neg/2026-11-05-lm1909-6e9f2aac.tests.json"
+ },
+ "label": "the letter 'o' or the hollow circle '○' used as a bullet marker at the start of a list line",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N11499_neg/2026-11-05-lm1909-6e9f2aac.tests.json",
+   "prereg_commit": "01fec5d29",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.473,
+     "peak": "o"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.506,
+     "peak": "o"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.372,
+     "peak": "○"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.592,
+     "peak": "o"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.252,
+     "peak": "○"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.377,
+     "peak": "o"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.513,
+     "peak": "o"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.299,
+     "peak": "○"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "P"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " call"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "Tax"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " main"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " cat"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " shell"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " changes"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.425,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "01fec5d29",
+  "minutes": 26,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'o' / '○' as a line bullet",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: '-' x20, 'o' x6, '○' x1 of the top 32, but the five strongest are 'o'. Probes: 'o' bullets 0.44, '○' 0.393, while '-' bullets stayed at 0.08 in two passages, so the label claims the hollow-bullet family only and may be partial. The same lines without a bullet were under 0.02.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "o",
+   "○"
+  ]
+ }
+}

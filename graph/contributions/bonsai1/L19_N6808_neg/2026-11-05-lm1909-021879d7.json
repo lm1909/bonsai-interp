@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-021879d7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N6808-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:32:02+00:00",
+ "recipe": {
+  "toolchain_commit": "01fec5d29",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N6808_neg/2026-11-05-lm1909-021879d7.tests.json"
+ },
+ "label": "' and' straight after a researcher's surname, joining a co-author, team or colleagues in science reporting (Lopez and colleagues, Hall and Lund)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N6808_neg/2026-11-05-lm1909-021879d7.tests.json",
+   "prereg_commit": "01fec5d29",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.309,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.266,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.127,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.303,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.351,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.171,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.057,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.076,
+     "peak": "uchs"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " letter"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.12,
+     "peak": " researchers"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " physics"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.059,
+     "peak": " spine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": " soil"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " Yale"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " across"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.219,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "01fec5d29",
+  "minutes": 26,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' and' after a researcher's name",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' and' x23 of the top 32, in author lists and science news. Probes: 'Maria Lopez and colleagues' 0.291, 'Amy Chen and colleagues' 0.208, 'Smith and Jones' 0.150, 'Mevius and Erhardt, 2005' 0.146, 'Professor Tanaka and his team' 0.060; 'three reviews and two letters' 0.018, 'apples and pears' 0.002, 'Oslo and Bergen' 0.045. The median may fall short of 0.20.",
+ "selection": "random draw"
+}

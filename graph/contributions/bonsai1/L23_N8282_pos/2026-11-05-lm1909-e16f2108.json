@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e16f2108",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8282+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:31:53+00:00",
+ "recipe": {
+  "toolchain_commit": "01fec5d29",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N8282_pos/2026-11-05-lm1909-e16f2108.tests.json"
+ },
+ "label": "function tokens within a narrative of a person's life (birth, marriage, family, career moves), as opposed to the same style of history about things or institutions",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N8282_pos/2026-11-05-lm1909-e16f2108.tests.json",
+   "prereg_commit": "01fec5d29",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.578,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.631,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.761,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.554,
+     "peak": " moved"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.423,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.499,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.699,
+     "peak": " his"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.589,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.114,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " line"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " taken"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.046,
+     "peak": "0"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.583,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "01fec5d29",
+  "minutes": 26,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "narrative of a person's life",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: broad flag 1.7%; peaks on ' his', ' and', ',', '.', all in biographies, so no single token. Probes: orphaned 1.032, married 0.775, 'born in Ohio and studied law' 0.496, 'worked as a nurse' 0.385; a bridge built in Ohio 0.060 and a company founded in 1920 0.069. Not limited to family words, as first thought: careers fire too. Near misses keep the dates, places and syntax with a building, firm or ship as subject.",
+ "selection": "random draw"
+}

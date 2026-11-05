@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-ff7fdbeb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9299+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:32:17+00:00",
+ "recipe": {
+  "toolchain_commit": "01fec5d29",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N9299_pos/2026-11-05-lm1909-ff7fdbeb.tests.json"
+ },
+ "label": "a short list of head tokens in fixed technical or set phrases: ' mass' after 'invariant', 'ilog' in antilog, '_log' in inverse_log, ' Energy' after 'Alternative', ' light' after 'true'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N9299_pos/2026-11-05-lm1909-ff7fdbeb.tests.json",
+   "prereg_commit": "01fec5d29",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.743,
+     "peak": " mass"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.802,
+     "peak": "ilog"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.653,
+     "peak": "_log"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.725,
+     "peak": " Energy"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.134,
+     "peak": " light"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.111,
+     "peak": " mass"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.609,
+     "peak": "ilog"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.741,
+     "peak": " Energy"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": " searched"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": " logarith"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": "="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.217,
+     "peak": " Power"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " Jesus"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.152,
+     "peak": "on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": " root"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " runs"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.733,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "01fec5d29",
+  "minutes": 26,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "set-phrase heads (list)",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card: _log, Energy, m, den, mass, ilog, with no shared token. I could not find the pattern: same-frame phrases failed. Probes: invariant mass 0.742, inverse_log 0.700, Alternative Energy 0.579, antilog 0.550, true light 0.476, but 'Dark Energy' 0.007, 'true vine' 0.044, 'invariant measure' 0.024, 'average mass' 0.022, 'logarithm' 0.018. So it stays a list, tested with new sentences, and it may be a set of near-memorised strings.",
+ "selection": "random draw"
+}

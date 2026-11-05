@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-964c4151",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N11934+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:32:19+00:00",
+ "recipe": {
+  "toolchain_commit": "01fec5d29",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N11934_pos/2026-11-05-lm1909-964c4151.tests.json"
+ },
+ "label": "the word that adds a lesser, optional or occasional second item after a main one (and sometimes X, to a lesser extent, occasionally supplemented by, with perhaps)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N11934_pos/2026-11-05-lm1909-964c4151.tests.json",
+   "prereg_commit": "01fec5d29",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.77,
+     "peak": " occasionally"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.765,
+     "peak": " degree"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.387,
+     "peak": " sometimes"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.288,
+     "peak": " supplemented"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.451,
+     "peak": " perhaps"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.587,
+     "peak": " sometimes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.527,
+     "peak": " often"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.917,
+     "peak": " followed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.383,
+     "peak": " bit"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.184,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.163,
+     "peak": " little"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.055,
+     "peak": " delivered"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.045,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.113,
+     "peak": " smaller"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.17,
+     "peak": " followed"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.676,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "01fec5d29",
+  "minutes": 26,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "hedged secondary addition",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' sometimes' x7, ' extent' x5, ' supplemented' x2, ' possible' x2, ' occasionally', 'perhaps', and Russian иногда. A distinction rather than a list: a main item, then a hedged extra. Probes: 'and sometimes' 0.916, 'with perhaps' 0.864, 'lesser extent' 0.654, 'supplemented at times by' 0.621; the same sentences without the hedge at 0.01 or less. New cases use new hedges and frames.",
+ "selection": "random draw"
+}
