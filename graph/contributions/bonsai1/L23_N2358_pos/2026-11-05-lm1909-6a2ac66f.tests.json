@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-6a2ac66f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2358+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:30:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N2358",
+   "pole": "+",
+   "label": "the separator between two paired numbers: ' (' before a converted temperature, '/' in blood pressure, '-' in a confidence interval",
+   "fire": [
+    "Summers reach 28 °C (82 °F) along the coast.",
+    "Her blood pressure was 145/95 at the clinic.",
+    "Risk was higher (OR: 2.31, 95% CI: 1.20-4.45) in smokers.",
+    "January lows average 3 °C (37 °F) inland.",
+    "A normal reading is about 120/80 for adults.",
+    "Mortality fell (HR: 0.72, 95% CI: 0.55-0.94) overall.",
+    "Water boils at 100 °C (212 °F) at sea level.",
+    "The target was set at 135/85 for most patients."
+   ],
+   "quiet": [
+    "Summers reach 28 °C along the coast.",
+    "Her blood pressure was 145 at the clinic.",
+    "Risk was higher (OR: 2.31) in smokers.",
+    "January lows average 3 °C inland.",
+    "A normal reading is about 120 for adults.",
+    "Mortality fell (HR: 0.72) overall.",
+    "Water boils at 100 °C at sea level.",
+    "The target was set at 135 for most patients."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "separator of paired numbers",
+ "unit_kind": "contextual / numeric",
+ "confidence": 0.8,
+ "notes": "Card: ':' 9, ' (' 6, '/' 2. Probes: ' (' after °C 1.05, '-' in a CI 0.92, '/' in 130/80 0.74; 'pressure low' 0.00. The near misses keep the first number and drop the pair. Since the pole sees only the prefix, the fire tokens are the separators themselves."
+}

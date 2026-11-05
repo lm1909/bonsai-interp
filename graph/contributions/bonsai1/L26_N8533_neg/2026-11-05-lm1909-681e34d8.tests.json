@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-681e34d8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N8533-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:30:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N8533",
+   "pole": "-",
+   "label": "' !' in a comparison written with no space after the operator: 'status !=\"Open\"'",
+   "fire": [
+    "if status !=\"Sent\" and mode !=\"Test\":\n    y = 2\n",
+    "while state !=\"Done\":\n    step()\n",
+    "if name !=\"root\":\n    deny()\n",
+    "if self.kind !=\"Draft\":\n    self.save()\n",
+    "assert color !=\"Red\"\n",
+    "if lang !=\"en\" and lang !=\"de\":\n    warn()\n",
+    "if row.state !=\"Closed\":\n    row.close()\n",
+    "if user !=\"admin\":\n    z = 3\n"
+   ],
+   "quiet": [
+    "if status == 'Sent' and mode == 'Test':\n    y = 2\n",
+    "while state == 'Busy':\n    step()\n",
+    "if name == 'root':\n    deny()\n",
+    "if self.kind == 'Draft':\n    self.save()\n",
+    "assert color == 'Red'\n",
+    "if lang == 'en' or lang == 'de':\n    warn()\n",
+    "if row.state == 'Closed':\n    row.close()\n",
+    "if user == 'admin':\n    z = 3\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' !' before =\"...\" (unspaced)",
+ "unit_kind": "token / code",
+ "confidence": 0.4,
+ "notes": "Card: ' !' among many punctuation tokens set off by spaces (' _', ' ,', '#', ' +'). Probes: ' !' before =\"Open\" 0.41; \"!= 'Open'\" 0.01; ' %.' 0.01; ' ,' in Arabic 0.07; '#' 0.09. The label covers a very narrow piece."
+}

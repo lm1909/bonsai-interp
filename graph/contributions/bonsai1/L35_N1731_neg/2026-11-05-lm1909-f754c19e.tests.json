@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-f754c19e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1731-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:30:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N1731",
+   "pole": "-",
+   "label": "' a' or ' an' as a split-off word start in a list of nouns, where a noun is expected: 'uncles, a|unts', 'corals, an|emones'",
+   "fire": [
+    "Her grandparents, aunts and cousins came to the wedding.",
+    "Clams, anemones and crabs hide among the rocks.",
+    "I have brothers, aunts and nephews in Ohio.",
+    "Sponges, anemones and starfish cover the wall.",
+    "He sent cards to uncles, aunts and old friends.",
+    "Worms, anemones and shrimp filled the tank.",
+    "Our sisters, aunts and mothers cooked the meal.",
+    "Mussels, anemones and barnacles grow on the pier."
+   ],
+   "quiet": [
+    "Her grandparents, cousins and nieces came to the wedding.",
+    "Clams, shrimp and crabs hide among the rocks.",
+    "I have brothers, sisters and nephews in Ohio.",
+    "Sponges, corals and starfish cover the wall.",
+    "He sent cards to uncles, cousins and old friends.",
+    "Worms, snails and shrimp filled the tank.",
+    "Our sisters, cousins and mothers cooked the meal.",
+    "Mussels, oysters and barnacles grow on the pier."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off a/an in a noun list",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' a' 6, ' at' 4, ' an' 4 of the top 32, each a split-off start of a longer word. Probes: ' a' before unts 0.68, ' an' before emones 0.39; 'to stay a|float' 0.08, ' in'|activity 0.11, ' at'|olls under 0.13, real articles 0.04. The tests are the two list cases only."
+}
