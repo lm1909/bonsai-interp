@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-719663ca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N11907-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:39:16+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N11907_neg/2026-11-05-lm1909-719663ca.tests.json"
+ },
+ "label": "short pieces of acronyms and path segments ('-eei', 'TMX', '/atb/') (guess; probes stayed low)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N11907_neg/2026-11-05-lm1909-719663ca.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.087,
+     "peak": "ee"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.01,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.003,
+     "peak": ".c"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.248,
+     "peak": "ij"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.011,
+     "peak": " Design"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.016,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.024,
+     "peak": "AR"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.002,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": "/documents"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "lessons"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": ".j"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " free"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": " SM"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " state"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.656,
+    "median_fire": 0.013,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "acronym and URL pieces (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Card: 'ee', 'Chip', ' TM', 'AR', 'ij', 'kins', '/at': scattered; 0.68% reach 0.1 of max. Probe: 0.054 at best, the rest at or below 0.015, on my attempts to reproduce the top examples. Expect a failure.",
+ "selection": "random draw"
+}

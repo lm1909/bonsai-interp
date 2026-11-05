@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-30162c66",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N2027-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:39:39+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N2027_neg/2026-11-05-lm1909-30162c66.tests.json"
+ },
+ "label": "the architecture of cathedrals and churches ('nave, transept', 'called a cathedra', 'column capitals')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N2027_neg/2026-11-05-lm1909-30162c66.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.749,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.429,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.395,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.187,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.437,
+     "peak": "ra"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.432,
+     "peak": " flying"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.616,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.186,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " glass"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " concrete"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " car"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.43,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "cathedral architecture",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' a' x3, '-' x2, ',', 'a', 'is', 'Central', in cathedral and medieval Latin text, but also 'Central Artery' and 'such as the knees' lists. Probe: 'called a cathedra' 0.715; 'nave, transept' 0.389; 'Historiam ecclesiasticam' 0.208; Spanish 'naves' 0.065; shopping mall 0.010; 'the knees, ankles' 0.007.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "nave",
+   "transept",
+   "cathedral",
+   "cathedra"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e1d4e940",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6490+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:46+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N6490_pos/2026-11-05-lm1909-e1d4e940.tests.json"
+ },
+ "label": "the line break after a colon that introduces a list (':\\n' before bullets)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N6490_pos/2026-11-05-lm1909-e1d4e940.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.441,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.04,
+     "peak": " area"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.045,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.182,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.035,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.225,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.041,
+     "peak": " post"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.015,
+     "peak": "Major"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": "ainless"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " alloy"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": " heating"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": " post"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.002,
+     "peak": "Major"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.742,
+    "median_fire": 0.043,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "':\\n' before a list",
+ "unit_kind": "format",
+ "confidence": 0.55,
+ "notes": "Card: '\\n' x10, ':\\n' x5, '.\\n' x3, ']\\n' x3, '?\\n' x2; gate-closed 73%, max 4. Probe: 'are used in:\\n-' 0.464; 'must consider:\\n-' 0.169 (peak elsewhere); heading line 0.140; no list 0.036; 'He went home.\\nShe stayed.' 0.103.",
+ "selection": "random draw"
+}

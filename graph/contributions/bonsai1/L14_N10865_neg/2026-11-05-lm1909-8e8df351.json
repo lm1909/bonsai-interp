@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-8e8df351",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N10865-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:39:27+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N10865_neg/2026-11-05-lm1909-8e8df351.tests.json"
+ },
+ "label": "scenes of Jesus in the Gospels, above all the Transfiguration ('Mount of Transfiguration', 'Moses and Elijah', 'My God, my God')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N10865_neg/2026-11-05-lm1909-8e8df351.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.046,
+     "peak": "fig"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.851,
+     "peak": "fig"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.394,
+     "peak": " God"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.658,
+     "peak": "fig"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.565,
+     "peak": "fig"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.658,
+     "peak": " Elijah"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.953,
+     "peak": "fig"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.91,
+     "peak": "fig"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " why"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.754,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the Transfiguration and Gospel scenes",
+ "unit_kind": "semantic",
+ "confidence": 0.75,
+ "notes": "Card: 'fig' of Trans|figuration x4, ' Moses', ' God', ' Peter', ' head', 'Sermon on the Mount'. Probe: 'visited by Moses and Elijah' 1.221; 'Transfiguration of Christ' 0.688; 'why have you forsaken me' 0.512; but 'He said to Peter, Simon' 0.012. Near misses keep religious or mountain settings without the scene.",
+ "selection": "random draw"
+}

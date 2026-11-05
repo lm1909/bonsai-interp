@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-4bfce3b1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N10183-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:39:12+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N10183_neg/2026-11-05-lm1909-4bfce3b1.tests.json"
+ },
+ "label": "the point in a run of numbers where another number is due ('[2, 3, 4, 5],', '8/1|0', '5 cats, 3 dogs and')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N10183_neg/2026-11-05-lm1909-4bfce3b1.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.364,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.8,
+     "peak": "],"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.625,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.036,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.459,
+     "peak": "],"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.917,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.271,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.354,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.056,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.093,
+     "peak": " ['"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.04,
+     "peak": " no"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.043,
+     "peak": " coat"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "names"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": " b"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.045,
+     "peak": " lot"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "box"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.411,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "before the next number in a sequence",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: '|' x5, ',' x2, ' ||' x2, ' x' x2, '3' x2, '],' in number lists and arithmetic; gate-closed 93%, max 3.73. Probe: '8/10' 0.753; '5 cats, 3 dogs and' 0.545; '[[2, 3, 4, 5],' 0.524; table of names 0.146; cat on the mat 0.074.",
+ "selection": "random draw"
+}

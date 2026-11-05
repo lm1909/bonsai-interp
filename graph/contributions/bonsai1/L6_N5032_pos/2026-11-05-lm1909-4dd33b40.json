@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-4dd33b40",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N5032+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:30+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N5032_pos/2026-11-05-lm1909-4dd33b40.tests.json"
+ },
+ "label": "the end of 'FedEx' / 'Fedex' (and 'fe' of the name Metcalfe)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N5032_pos/2026-11-05-lm1909-4dd33b40.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.076,
+     "peak": "ex"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.104,
+     "peak": "ex"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.051,
+     "peak": "ex"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.443,
+     "peak": "fe"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.958,
+     "peak": "fe"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.103,
+     "peak": "ex"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.12,
+     "peak": "ex"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.424,
+     "peak": "fe"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " worked"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " forms"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " statue"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " rented"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " courier"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " Virginia"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 1.063,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "FedEx (and Metcal|fe)",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: '2' x14, 'ex' x3, ' FedEx' x3, 'Lean' x3, 'Ex' x2, 'fe' x2. Probe: 'Fedex' 1.080; 'Metcalfe' 0.932; ' FedEx' 0.363 (a whole token); UPS sentence 0.002; 'Python 2' 0.002; 'Lean' 0.010. I did not find what the '2' peaks are about.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ex",
+   "Ex",
+   " FedEx",
+   "fe"
+  ]
+ }
+}

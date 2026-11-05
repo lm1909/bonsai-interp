@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-8a7dc6cb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3998+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:59+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N3998_pos/2026-11-05-lm1909-8a7dc6cb.tests.json"
+ },
+ "label": "a command-line option definition in code, just before its help text ('add_option(..., help='); strongest when it concerns output",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N3998_pos/2026-11-05-lm1909-8a7dc6cb.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.663,
+     "peak": "='"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.57,
+     "peak": "='"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.487,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.585,
+     "peak": "='"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.277,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.61,
+     "peak": "='"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.639,
+     "peak": "='"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.571,
+     "peak": "='"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.062,
+     "peak": "='"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.138,
+     "peak": "('--"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.046,
+     "peak": "='"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.29,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.128,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.167,
+     "peak": "='"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.105,
+     "peak": "='"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.15,
+     "peak": "='"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.578,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "CLI option definitions",
+ "unit_kind": "contextual / code",
+ "confidence": 0.4,
+ "notes": "Card: ',' x4, \"['\" x3, '.create', \"('\", ' in'; promotes ' output', ' Output', ' input'. Scattered code. Probe: \"--output', help=\" 0.512; \"--verbose', help=\" 0.074; \"print('Output file:'\" 0.052; 'the output was fine' 0.008; arithmetic 0.004. The difference between output and verbose suggests the output direction matters more than the option form.",
+ "selection": "random draw"
+}

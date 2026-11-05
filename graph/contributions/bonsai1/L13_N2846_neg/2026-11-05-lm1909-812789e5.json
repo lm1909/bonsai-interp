@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-812789e5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N2846-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:38:54+00:00",
+ "recipe": {
+  "toolchain_commit": "9ac187e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N2846_neg/2026-11-05-lm1909-812789e5.tests.json"
+ },
+ "label": "jurisdiction and governing-law clauses in terms of sale, firing around the court or place ('exclusive jurisdiction of the courts of', 'la compétence des tribunaux')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N2846_neg/2026-11-05-lm1909-812789e5.tests.json",
+   "prereg_commit": "9ac187e16",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.729,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.891,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.516,
+     "peak": "ux"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.286,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.674,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.368,
+     "peak": " its"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.454,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.459,
+     "peak": "ändig"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " members"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.179,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": "ale"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " lake"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " parties"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " ist"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.488,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9ac187e16",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "jurisdiction clauses",
+ "unit_kind": "semantic / legal",
+ "confidence": 0.8,
+ "notes": "Card: ',' x16, ')' x7, 'ence' of compétence, ' of', ' is', ' which', in governing-law text and also in copyright lines. Probe: 'jurisdiction of the courts of' 0.675; 'compétence des tribunaux' 0.615; 'place of jurisdiction ... Berlin,' 0.594; 'governing law ... located' 0.353; copyright line 0.267; 'place of the wedding' 0.137. Copyright lines are left out of the test.",
+ "selection": "random draw"
+}
