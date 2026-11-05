@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-ecef87c3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N3949-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:15:02+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N3949_neg/2026-11-05-lm1909-ecef87c3.tests.json"
+ },
+ "label": "a requirement stated as minimal: 'need not', 'requires only', 'need have no' (promotes ' only' and ' no')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N3949_neg/2026-11-05-lm1909-ecef87c3.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.39,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.105,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.341,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.169,
+     "peak": " requires"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.198,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.232,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.311,
+     "peak": " requires"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.304,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": " must"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.083,
+     "peak": " requires"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.341,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.132,
+     "peak": " requires"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.062,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " requires"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.157,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.852,
+    "median_fire": 0.268,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "minimal requirement",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.4,
+ "notes": "Card: ' need' x3, ' requires' x3, ' needs' x3; the - pole promotes ' only', ' neither', ' merely', ' never', ' nothing'. Probe: 'you need not wait' 0.217; 'requires only a small drop' 0.185; 'needs no preparation' 0.113; 'needs little introduction' 0.045; 'requires a large machine' 0.025; 'You need a passport' 0.022. Weak, and it reads before the token that makes it minimal.",
+ "selection": "random draw"
+}

@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-85c91896",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N6514+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:15:37+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N6514_pos/2026-11-05-lm1909-85c91896.tests.json"
+ },
+ "label": "' up' after 'stand' / 'stood' / 'standing', in the literal and the 'stand up to' sense",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N6514_pos/2026-11-05-lm1909-85c91896.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.644,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.768,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.828,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.8,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.792,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.466,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.731,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.804,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " still"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.042,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.035,
+     "peak": " down"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.048,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.78,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' up' after stand",
+ "unit_kind": "token / contextual",
+ "confidence": 0.9,
+ "notes": "Card: ' up' x30 of the top 32, nearly all after stand/stood. Probe: 'stand up to a bully' 0.710; 'stood up' 0.813; 'Standing up' 0.676; 'woke up' 0.272; 'picked up' and 'went up' below 0.015; 'stand by' 0.016. Near misses keep ' up' after other verbs, or 'stand' with another particle.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " up"
+  ]
+ }
+}

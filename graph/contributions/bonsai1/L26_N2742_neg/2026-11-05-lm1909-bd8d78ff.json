@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-05-lm1909-bd8d78ff",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2742-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:15:07+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2742_neg/2026-11-05-lm1909-bd8d78ff.tests.json"
+ },
+ "label": "stating a direction or angle in space ('at 30 degrees above', 'as an angle with', 'wind direction: north')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2742_neg/2026-11-05-lm1909-bd8d78ff.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.21,
+     "peak": " degrees"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.204,
+     "peak": " makes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.619,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.299,
+     "peak": " degrees"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.167,
+     "peak": "ly"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.468,
+     "peak": " angle"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.119,
+     "peak": " direction"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.492,
+     "peak": " degrees"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.105,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " pilots"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " "
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.255,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "stating a direction or angle",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' the' x5 and ' an' x2 before ' angle', ' north' x3, ' degrees' x2, ':' after 'Wind direction'; promotes ' direction', ' axis', ' align', ' along'. Probe: ' degrees' 0.322; ' angle' 0.331; ' north' 0.318; 'northeast orientation' 0.121; magnitude only 0.038, 0.011. The top activations are 'is' and 'the' before the direction word, so this may fire ahead of it.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "direction",
+   "angle",
+   "degrees",
+   "north",
+   "northwest",
+   "northeast"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-57dd7112",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N71+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:15:33+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N71_pos/2026-11-05-lm1909-57dd7112.tests.json"
+ },
+ "label": "a conventional system for reading time, numbers or writing: the clock's hour or minute hand, Arabic or Roman numerals, a calendar, a script",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N71_pos/2026-11-05-lm1909-57dd7112.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.567,
+     "peak": " hand"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.801,
+     "peak": " numer"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.615,
+     "peak": " script"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.316,
+     "peak": "orian"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.359,
+     "peak": " hand"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.723,
+     "peak": " numer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.557,
+     "peak": " script"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.329,
+     "peak": " calendar"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": "At"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " festivals"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " kitchen"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " pre"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.264,
+     "peak": " letters"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " sell"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.562,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "clock hand, numerals, calendars, scripts",
+ "unit_kind": "semantic",
+ "confidence": 0.6,
+ "notes": "Card: ' hand' x3 (clock), ' numer' x3, ' script' x2, ' calendar', 'Gregorian Months', ' abbreviated', '位' (unit). Probe: 'minute hand' 0.667; 'Arabic numerals' 0.633; 'Arabic script' 0.563; 'its own calendar' 0.167; 'held his hand' 0.010; 'Arabic class' 0.032. The shared pattern is a convention for reading a value; new cases in the test are Roman numerals, Cyrillic, Hebrew and hour hands.",
+ "selection": "random draw"
+}

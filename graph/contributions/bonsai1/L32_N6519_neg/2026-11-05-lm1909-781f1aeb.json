@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-781f1aeb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6519-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:15:22+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N6519_neg/2026-11-05-lm1909-781f1aeb.tests.json"
+ },
+ "label": "Italian text and Italian names (' di', ' del', 'dispon', ' Pi|aggio', ' Serie')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N6519_neg/2026-11-05-lm1909-781f1aeb.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.346,
+     "peak": " di"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.697,
+     "peak": "ol"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.491,
+     "peak": " dispon"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.552,
+     "peak": " tro"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.319,
+     "peak": " elabor"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.584,
+     "peak": " citt"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.08,
+     "peak": " mang"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.294,
+     "peak": "'"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " ris"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " le"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": "Le"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " p"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " weather"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": " hab"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " le"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "My"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.418,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Italian language",
+ "unit_kind": "language",
+ "confidence": 0.8,
+ "notes": "Card: ' di' x4, ' Pi' x2, ' del', ' dispon', ' elabor', ' Serie', ' Gi|ampaolo'. Probe: Italian 0.514, 0.384; Spanish 0.013; French 0.186; English sentence about Piaggio and Serie A 0.213. Near misses are the same content in Spanish, French, Portuguese and English.",
+ "selection": "random draw"
+}

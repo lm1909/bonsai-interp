@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-ef152bfe",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N7482-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:15:10+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N7482_neg/2026-11-05-lm1909-ef152bfe.tests.json"
+ },
+ "label": "something made simpler or smaller for a less capable audience ('simple sentences', 'simpler version', 'half the adult dose', 'reading level')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N7482_neg/2026-11-05-lm1909-ef152bfe.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.726,
+     "peak": " simple"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.835,
+     "peak": " phrases"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.32,
+     "peak": " edition"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.541,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.413,
+     "peak": " words"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.768,
+     "peak": " level"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.31,
+     "peak": " simple"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.387,
+     "peak": " version"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.401,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " edition"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.163,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.274,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.08,
+     "peak": " pupils"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "simplified for a less able audience",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.65,
+ "notes": "Card: ' simple' x5, ' simpler', ' easy', ' level', ' dose', ' smaller'. Probe: 'simple everyday language' 0.682; 'half the adult dose' 0.628; 'short and simple sentences' 0.530; 'simpler version' 0.303; 'dense legal language' 0.192; 'full version' 0.040. New cases in the test: easy readers, plain language.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "simple",
+   "simpler",
+   "easy",
+   "easier"
+  ]
+ }
+}

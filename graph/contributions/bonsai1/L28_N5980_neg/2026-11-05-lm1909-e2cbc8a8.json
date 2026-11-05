@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-e2cbc8a8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5980-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:16:02+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N5980_neg/2026-11-05-lm1909-e2cbc8a8.tests.json"
+ },
+ "label": "the CJK morpheme for 'present' as its own token: 現 in Japanese and Chinese, 현 in Korean",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N5980_neg/2026-11-05-lm1909-e2cbc8a8.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.816,
+     "peak": "現"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.855,
+     "peak": "現"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.636,
+     "peak": "現"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.819,
+     "peak": "現"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.692,
+     "peak": " 현"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.627,
+     "peak": " 현"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.724,
+     "peak": " 현"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.693,
+     "peak": "現"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "それ"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": "実は"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "活"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "新しい"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " 표"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "할"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": "今の"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.708,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "現 / 현 (present-)",
+ "unit_kind": "token",
+ "confidence": 0.85,
+ "notes": "Card: '現' x18, ' 현' x8, '현' x4; max 438. Probe: 現実 0.816; 현대 0.636; 本当 0.022; 今天 0.000; but the merged token 現在 scored 0.009, so it needs 現 on its own. Tokenization checked: 現|実, 現|状, 現|役, 現|有, 현|대, 현|지, 현|금 split; 現在 and 現場 merge and are avoided.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "現",
+   " 현",
+   "현"
+  ]
+ }
+}

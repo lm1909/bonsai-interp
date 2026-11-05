@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-9cb388b3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N6626-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:15:44+00:00",
+ "recipe": {
+  "toolchain_commit": "206594b97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N6626_neg/2026-11-05-lm1909-9cb388b3.tests.json"
+ },
+ "label": "the second piece of a compound or rare name (Play|girl, Bath|gate, Lol|ita, Bal|och), not a name that is one token",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N6626_neg/2026-11-05-lm1909-9cb388b3.tests.json",
+   "prereg_commit": "206594b97",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.017,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.067,
+     "peak": "gate"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.011,
+     "peak": " Ev"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.739,
+     "peak": "girl"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.85,
+     "peak": "och"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.769,
+     "peak": "ita"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.465,
+     "peak": "uch"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.508,
+     "peak": "gate"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": " Oxford"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " my"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " village"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "rib"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": "in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " almost"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.852,
+    "median_fire": 0.487,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "206594b97",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tail of a compound name",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "Card: 'ita' x2, 'ney' x2, 'uch' x2, 'och', 'girl', '-Based', 'Art' after Play, 'gate' after Bath. Probe: 'och' 0.789; Playgirl 0.703; Bathgate 0.549; Lolita 0.465; ' Med' 0.357. Near misses are one-token names in the same position. This pole overlaps in kind with L6/N8207+ and L6/N10410+.",
+ "selection": "random draw"
+}
