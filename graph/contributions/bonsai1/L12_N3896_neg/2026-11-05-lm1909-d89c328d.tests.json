@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-d89c328d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N3896-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N3896",
+   "pole": "-",
+   "label": "column-aligned whitespace or bars in matrices and plain text tables",
+   "fire": [
+    "Name      Age      City\nAnna      31       Oslo\n",
+    "Item    Price    Qty\n",
+    "The value is |A| = |a b|\n               |c d|\n",
+    "    #     {A_11   A_12   A_13}\n",
+    "[2 0 1]\n[1 3 0]\n[0 1 4]\n",
+    "Bond    Bond    Strength\nC-C     C-H     346\n",
+    "Month    Sales    Cost\nJan      120      80\n",
+    "x1     x2     x3     x4\n"
+   ],
+   "quiet": [
+    "Anna is thirty-one and lives in Oslo.",
+    "The item has a price and a quantity.",
+    "The determinant of a matrix is a number.",
+    "The matrix A has three columns and three rows.",
+    "Multiply the first row by two and add it to the last.",
+    "The carbon bond is strong.",
+    "Sales in January were 120 and costs were 80.",
+    "There are four variables in this model."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; exploration gave 0.17-0.33, so the median may miss 0.20",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "aligned columns in text tables",
+ "unit_kind": "format",
+ "confidence": "medium"
+}
