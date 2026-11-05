@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-c21006c0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11117+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:35:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N11117",
+   "pole": "+",
+   "label": "Python calls that take an object to inspect or patch: mock.patch.object, isinstance, hasattr",
+   "fire": [
+    "def test_send(self):\n    with mock.patch.object(client, 'send') as send:\n        client.run()\n",
+    "@mock.patch.object(utils, 'get_host')\ndef test_host(self, get_host):\n    pass\n",
+    "def clean(value):\n    assert isinstance(value, str)\n    return value.strip()\n",
+    "if isinstance(item, dict):\n    print(item.keys())\n",
+    "def size(obj):\n    assert hasattr(obj, 'shape')\n    return obj.shape\n",
+    "if hasattr(request, 'user'):\n    print(request.user)\n",
+    "self.assertTrue(isinstance(result, list))\nself.assertEqual(len(result), 2)\n",
+    "with mock.patch.object(db, 'commit'):\n    save(record)\n"
+   ],
+   "quiet": [
+    "def test_send(self):\n    with open(path, 'w') as out:\n        client.run()\n",
+    "@property\ndef host(self):\n    return self.host_name\n",
+    "def clean(value):\n    assert value != ''\n    return value.strip()\n",
+    "if item > 3:\n    print(item * 2)\n",
+    "def size(obj):\n    assert obj.shape\n    return obj.shape\n",
+    "if request.user:\n    print(request.user)\n",
+    "self.assertTrue(result)\nself.assertEqual(len(result), 2)\n",
+    "with db.transaction():\n    save(record)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "patch.object / isinstance / hasattr",
+ "unit_kind": "token / code",
+ "confidence": "medium",
+ "trigger": {
+  "tokens": [
+   ".object",
+   " isinstance",
+   " hasattr"
+  ]
+ }
+}

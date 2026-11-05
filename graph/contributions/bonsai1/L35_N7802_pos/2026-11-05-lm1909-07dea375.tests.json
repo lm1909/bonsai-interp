@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-05-lm1909-07dea375",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N7802+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:35:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N7802",
+   "pole": "+",
+   "label": "the word-initial pieces ' ac' / ' Ac' when a word splits right after them (acuíferos, Acquired, _acc-ents)",
+   "fire": [
+    "Los pozos de la zona no contaminan los acuíferos de la provincia.",
+    "- Acquired in 1987, the old locomotive now sits in the depot yard.",
+    "El agricultor riega con agua de los acuíferos cercanos al pueblo.",
+    "- Acquired from a private owner, this painting hangs in the east wing.",
+    "tokens = CountVectorizer(strip_accents='ascii', lowercase=True)\nprint(tokens)\n",
+    "En verano los acueductos romanos atraen a muchos turistas.",
+    "- Acquired by the navy in 1962, the ship served for ten years.",
+    "Vivimos cerca de un acuario enorme con tiburones y rayas."
+   ],
+   "quiet": [
+    "Los pozos de la zona no contaminan los ríos de la provincia.",
+    "- Bought in 1987, the old locomotive now sits in the depot yard.",
+    "El agricultor riega con agua de los lagos cercanos al pueblo.",
+    "- Purchased from a private owner, this painting hangs in the east wing.",
+    "tokens = CountVectorizer(stop_words='english', lowercase=True)\nprint(tokens)\n",
+    "En verano los castillos romanos atraen a muchos turistas.",
+    "- Built by the navy in 1962, the ship served for ten years.",
+    "Vivimos cerca de un museo enorme con cuadros y esculturas."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split word-initial ' ac' piece",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "trigger": {
+  "tokens": [
+   " ac",
+   " Ac"
+  ]
+ }
+}
