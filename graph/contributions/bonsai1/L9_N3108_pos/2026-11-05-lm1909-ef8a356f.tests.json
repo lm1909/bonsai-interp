@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-ef8a356f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N3108+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:48:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N3108",
+   "pole": "+",
+   "label": "A digit that repeats the digit right before it, inside a phone number, code or similar digit string ('66', '44', '99'); the same strings with no adjacent repeat stay quiet.",
+   "fire": [
+    "Call us at 0341 / 77 40 12 today.",
+    "The fax is (212) 644-3310 in the city.",
+    "Phone 876-331-2288 for details.",
+    "The color is #226611 on the page.",
+    "Tel. 0491-8873 is open.",
+    "Our number is 020 7722 5019.",
+    "The office line is 253-0177 all day.",
+    "Dial 0810-1155 for support."
+   ],
+   "quiet": [
+    "Call us at 0341 / 78 40 12 today.",
+    "The fax is (212) 647-3510 in the city.",
+    "Phone 876-301-2748 for details.",
+    "The color is #216513 on the page.",
+    "Tel. 0491-8573 is open.",
+    "Our number is 020 7425 5019.",
+    "The office line is 253-0172 all day.",
+    "Dial 0810-1452 for support."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "digit repeating the previous digit",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Probes: 0.56-0.83 on repeats in number strings, under 0.13 without. 'Room 55' read only 0.21, so short standalone numbers are weaker. Every near miss was checked to have no adjacent repeat."
+}

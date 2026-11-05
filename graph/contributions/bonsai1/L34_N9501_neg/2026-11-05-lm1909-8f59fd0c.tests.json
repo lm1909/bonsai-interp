@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-8f59fd0c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N9501-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:48:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N9501",
+   "pole": "-",
+   "label": "A split-off word-opening 'b' piece, as ' b' in French words (' b|ateaux') or '-b' after a hyphen ('grey-b|rown'); other words in the same slot stay quiet.",
+   "fire": [
+    "On voyait sur le quai des bretteurs et des caisses.",
+    "Le village abrite un grand nombre de biches.",
+    "Il y avait des biches dans le bois.",
+    "The wall was painted a grey-brown shade.",
+    "The horse had a reddish-brown coat.",
+    "The leaves turn a yellowish-brown color in fall.",
+    "The bird has dark grey-brown wings.",
+    "Les marins aiment les bateaux de ce port."
+   ],
+   "quiet": [
+    "On voyait sur le quai des tonneaux et des caisses.",
+    "Le village abrite un grand nombre de cerfs.",
+    "Il y avait des cerfs dans le bois.",
+    "The wall was painted a dark shade.",
+    "The horse had a reddish coat.",
+    "The leaves turn a yellow color in fall.",
+    "The bird has dark grey wings.",
+    "Les marins aiment les navires de ce port."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off 'b' opening a word",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Probes: 0.42-0.74, with '-B' before a place name weaker (0.21). Whole-token words stay quiet. ' б' in the top examples is not tested.",
+ "trigger": {
+  "tokens": [
+   " b",
+   "-b"
+  ]
+ }
+}
