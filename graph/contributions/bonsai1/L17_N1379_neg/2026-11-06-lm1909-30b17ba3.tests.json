@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-30b17ba3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N1379-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:16:03+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L17/N1379",
+   "pole": "-",
+   "label": "the single capital letter that opens a name or abbreviation right after '(' or '-': (L|ipitor, (Z|antac, (N|asdaq, -F|DA",
+   "fire": [
+    "Atorvastatin (Lipitor) lowers cholesterol in most adults.",
+    "Ranitidine (Zantac) was withdrawn from sale.",
+    "Phenylephrine (Sudafed) is sold behind the counter.",
+    "The library is covered by the terms of the Lesser General Public License (LGPL) today.",
+    "Intel Corp. (Nasdaq: INTC) said profits rose.",
+    "The species is placed in a moth family (Nymphalidae) in Brazil.",
+    "Call the agency at 1-877-FDA-4040 to report it.",
+    "Barclays Group (LSE: BARC) reported on Tuesday."
+   ],
+   "quiet": [
+    "Atorvastatin lowers cholesterol in most adults (see the label).",
+    "Ranitidine was withdrawn from sale.",
+    "Phenylephrine is sold behind the counter (in most states).",
+    "The library is covered by the terms of a free license today.",
+    "Intel Corp. said profits rose.",
+    "The species is placed in a moth family (a large one) in Brazil.",
+    "Call the agency at the office to report it.",
+    "Barclays Group reported on Tuesday (after the close)."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "single capital opening a bracketed name",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.75,
+ "notes": "A second round: the same label idea failed in a sweep partly because two of its fire items started with multi-letter pieces, (ASL) and (NSE). All eight items here were checked with the tokenizer and open with a single letter or '-F'."
+}
