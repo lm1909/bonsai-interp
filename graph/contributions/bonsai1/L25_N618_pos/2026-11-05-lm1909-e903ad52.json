@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e903ad52",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N618+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:10:38+00:00",
+ "recipe": {
+  "toolchain_commit": "4235f5d35",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N618_pos/2026-11-05-lm1909-e903ad52.tests.json"
+ },
+ "label": "a verb presenting how something proves to be: appears, turned out, was found (before a description of a property)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N618_pos/2026-11-05-lm1909-e903ad52.tests.json",
+   "prereg_commit": "4235f5d35",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.663,
+     "peak": " appears"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.716,
+     "peak": " appear"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.558,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.122,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.238,
+     "peak": " appeared"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.464,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.334,
+     "peak": " appears"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.571,
+     "peak": " found"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.106,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.268,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.114,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.246,
+     "peak": " are"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.511,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4235f5d35",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "appears / turned out / was found",
+ "unit_kind": "semantic / function",
+ "confidence": "high",
+ "notes": "'seems to be' and 'looks' scored only 0.06 in one probe, so this is narrower than all seem-verbs.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e7e99237",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N3432+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:10:59+00:00",
+ "recipe": {
+  "toolchain_commit": "4235f5d35",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N3432_pos/2026-11-05-lm1909-e7e99237.tests.json"
+ },
+ "label": "the keyword argument ' save' in save_dir= or save_path= in code",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N3432_pos/2026-11-05-lm1909-e7e99237.tests.json",
+   "prereg_commit": "4235f5d35",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.312,
+     "peak": " save"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.223,
+     "peak": " save"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.099,
+     "peak": " save"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.382,
+     "peak": " save"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.186,
+     "peak": " save"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.169,
+     "peak": " save"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.273,
+     "peak": " save"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.381,
+     "peak": " save"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " retries"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " depth"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": "_FR"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "_table"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "URL"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.07,
+     "peak": "\","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.248,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4235f5d35",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' save' keyword argument (guess)",
+ "unit_kind": "code / contextual",
+ "confidence": "low",
+ "notes": "Weak guess from one top example. The other top examples are miscellaneous; 'before' in 'a final note before' reached 0.26 in a probe.",
+ "selection": "random draw"
+}

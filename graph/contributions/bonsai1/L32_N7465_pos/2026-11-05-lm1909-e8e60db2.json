@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e8e60db2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N7465+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:14+00:00",
+ "recipe": {
+  "toolchain_commit": "4235f5d35",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N7465_pos/2026-11-05-lm1909-e8e60db2.tests.json"
+ },
+ "label": "a modern artist's name or role word in an art-movement context (Bauhaus teacher Paul, Impressionist painter Claude)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N7465_pos/2026-11-05-lm1909-e8e60db2.tests.json",
+   "prereg_commit": "4235f5d35",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.526,
+     "peak": " Paul"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.434,
+     "peak": " Claude"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.4,
+     "peak": " K"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.407,
+     "peak": " Jacques"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.97,
+     "peak": " painter"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.315,
+     "peak": " Max"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.101,
+     "peak": " Hannah"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.183,
+     "peak": " Paul"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": " Paul"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " William"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " Jacques"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "Corporate"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": " work"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.097,
+     "peak": " Paul"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.42,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4235f5d35",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "modern artist name in art-movement context",
+ "unit_kind": "semantic / named entity",
+ "confidence": "medium",
+ "notes": "Direct logits promote ' sub' and suppress ' details'; I found no link between those and the art examples.",
+ "selection": "random draw"
+}

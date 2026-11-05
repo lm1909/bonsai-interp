@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-9866a989",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N7409+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:24+00:00",
+ "recipe": {
+  "toolchain_commit": "4235f5d35",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N7409_pos/2026-11-05-lm1909-9866a989.tests.json"
+ },
+ "label": "the verbs cut and pull as sudden physical action (they cut the fence, pull over)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N7409_pos/2026-11-05-lm1909-9866a989.tests.json",
+   "prereg_commit": "4235f5d35",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.305,
+     "peak": " cut"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.285,
+     "peak": " pull"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.61,
+     "peak": " cut"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.578,
+     "peak": " pull"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.345,
+     "peak": " cut"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.183,
+     "peak": " pull"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.086,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.464,
+     "peak": " pull"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " looked"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.253,
+     "peak": " folded"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " dawn"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " bikes"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.325,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4235f5d35",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verbs cut and pull (sudden action)",
+ "unit_kind": "lexical / semantic",
+ "confidence": "low",
+ "notes": "Weak: other verbs of throwing and kicking gave mixed results in the probes (' threw' peak ' in' 0.37, 'grabbed' 0.06, 'tossed' 0.02).",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "cut",
+   "pull",
+   "pulled",
+   "pulls"
+  ]
+ }
+}
