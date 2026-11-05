@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-9990811e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4476+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:58+00:00",
+ "recipe": {
+  "toolchain_commit": "eed3990d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N4476_pos/2026-11-06-lm1909-9990811e.tests.json"
+ },
+ "label": "' heart' as the body organ in medical compounds (heart attack, heart palpitations, heart disease), not 'by heart'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N4476_pos/2026-11-06-lm1909-9990811e.tests.json",
+   "prereg_commit": "eed3990d1",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.938,
+     "peak": " heart"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.906,
+     "peak": " heart"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.519,
+     "peak": " heart"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.488,
+     "peak": " pac"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.611,
+     "peak": " heart"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.661,
+     "peak": " heart"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.412,
+     "peak": " heart"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.453,
+     "peak": " heart"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": " fever"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.335,
+     "peak": " chest"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.102,
+     "peak": "out"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " cane"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " book"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.102,
+     "peak": " bad"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.565,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eed3990d1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "medical ' heart'",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' heart' x23 of the top 32. Probe: 0.71-1.05; 'learned by heart' 0.00; 'an accident' 0.13. 'heartache' as a top example and ' at', ',' are not claimed.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " heart"
+  ]
+ }
+}

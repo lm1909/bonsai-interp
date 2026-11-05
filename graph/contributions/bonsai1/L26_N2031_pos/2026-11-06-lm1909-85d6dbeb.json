@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-06-lm1909-85d6dbeb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2031+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:40+00:00",
+ "recipe": {
+  "toolchain_commit": "eed3990d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2031_pos/2026-11-06-lm1909-85d6dbeb.tests.json"
+ },
+ "label": "French predicate of attitude or obligation after être/avoir (fier, obligé, content, raison)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2031_pos/2026-11-06-lm1909-85d6dbeb.tests.json",
+   "prereg_commit": "eed3990d1",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.547,
+     "peak": " fier"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.686,
+     "peak": " oblig"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.498,
+     "peak": " raison"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.301,
+     "peak": " contents"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.645,
+     "peak": " fier"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.703,
+     "peak": " raison"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.568,
+     "peak": " oblig"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.294,
+     "peak": " contents"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.089,
+     "peak": " très"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.12,
+     "peak": " donc"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.151,
+     "peak": "i"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.073,
+     "peak": "ôtel"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.09,
+     "peak": " habit"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.111,
+     "peak": " bien"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.079,
+     "peak": " maison"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": "eurs"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.557,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eed3990d1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French attitude predicate",
+ "unit_kind": "semantic / language",
+ "confidence": "medium",
+ "notes": "Card: ' fier' x4, ' oblig' x3, ' raison' x2, 'iers' x2, ' danger' x2, ' proud' x2. Probe: obligés 0.94, fier 0.73, contents 0.63, raison 0.57; English 'proud' 0.38; 'Le train part' 0.02. Physical predicates are new in this test.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "fier",
+   "obligés",
+   "obligé",
+   "raison",
+   "contents",
+   "content"
+  ]
+ }
+}

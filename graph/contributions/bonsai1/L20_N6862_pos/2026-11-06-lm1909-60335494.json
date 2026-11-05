@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-60335494",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N6862+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:03:48+00:00",
+ "recipe": {
+  "toolchain_commit": "eed3990d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N6862_pos/2026-11-06-lm1909-60335494.tests.json"
+ },
+ "label": "a dash that adds an elaboration after a clause ('isn't news to scientists — evidence …'; output promotes '—he', ' especially', ' indeed')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N6862_pos/2026-11-06-lm1909-60335494.tests.json",
+   "prereg_commit": "eed3990d1",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.921,
+     "peak": " —"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.424,
+     "peak": " —"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.202,
+     "peak": " —"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.188,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.643,
+     "peak": " —"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.473,
+     "peak": " —"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.295,
+     "peak": " —"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.73,
+     "peak": " —"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.301,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.278,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.303,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.44,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.096,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.628,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.734,
+    "median_fire": 0.449,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eed3990d1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "elaborating dash",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Output direction promotes '—he', '—they', '—', '—all', ' especially', ' indeed'. Card: '.' x14, ' too' x4, ':' x3, ' –' x2. Probe: ' —' 0.90, ' –' case 0.36 on ' one'; comma version 0.22 on '.'; '.' in 'you probably know about.' 0.37. The '.' mass is not claimed.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " —",
+   " –",
+   "--"
+  ]
+ }
+}

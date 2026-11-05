@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e3453b56",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N8725-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:03:30+00:00",
+ "recipe": {
+  "toolchain_commit": "eed3990d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N8725_neg/2026-11-06-lm1909-e3453b56.tests.json"
+ },
+ "label": "pieces of Basque names (Etch|eg|aray, Ib|arr|uri, Zubi|arr|ain, Don|ost|ia)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N8725_neg/2026-11-06-lm1909-e3453b56.tests.json",
+   "prereg_commit": "eed3990d1",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.813,
+     "peak": "tx"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.269,
+     "peak": "bao"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.718,
+     "peak": "xea"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.689,
+     "peak": "ost"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.562,
+     "peak": "arr"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.492,
+     "peak": "ñ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.569,
+     "peak": "x"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.96,
+     "peak": "eg"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " ob"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " born"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " Ana"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " por"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": "ores"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "ó"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": " Mari"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " Baghdad"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.629,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eed3990d1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Basque name pieces",
+ "unit_kind": "token piece / semantic",
+ "confidence": "high",
+ "notes": "Card: 'que' x7, 'usk' x4, 'arr' x3, 'eg', 'ost', 'ia'. Probe: Etchegaray 1.00, Zubiarrain 0.78, Donostia 0.67, Ibarruri 0.56; 'Martin' 0.01, 'Moreno' 0.01. New Basque names are in this test.",
+ "selection": "random draw"
+}

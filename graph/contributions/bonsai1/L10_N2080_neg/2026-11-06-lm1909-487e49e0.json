@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-487e49e0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2080-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:03:36+00:00",
+ "recipe": {
+  "toolchain_commit": "eed3990d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2080_neg/2026-11-06-lm1909-487e49e0.tests.json"
+ },
+ "label": "a descriptive word right after vocative 'you' (you little …, you poor …, you big …, you lucky …)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2080_neg/2026-11-06-lm1909-487e49e0.tests.json",
+   "prereg_commit": "eed3990d1",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.579,
+     "peak": " little"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.438,
+     "peak": " poor"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.643,
+     "peak": " big"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.368,
+     "peak": " lucky"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.045,
+     "peak": " goose"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.505,
+     "peak": " little"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.146,
+     "peak": " clever"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.636,
+     "peak": " big"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.163,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": " over"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": "You"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.047,
+     "peak": " movie"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.472,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eed3990d1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "vocative 'you little'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' little' x5, ' big' x3, ' lucky', ' poor', ' dip'. Probe: 'you little rookies' 0.87, 'you big fool' 0.96, 'You poor little' 0.66, 'you lucky guy' 0.34; 'come on, kids' 0.02. Rude compounds in the card are not repeated in the test.",
+ "selection": "random draw"
+}
