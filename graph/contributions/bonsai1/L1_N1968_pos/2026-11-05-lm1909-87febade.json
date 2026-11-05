@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-87febade",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N1968+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:33:24+00:00",
+ "recipe": {
+  "toolchain_commit": "ac17563d6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N1968_pos/2026-11-05-lm1909-87febade.tests.json"
+ },
+ "label": "'.wikipedia', '.transpose' and Arabic 'ائل' tokens (guess, list only)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N1968_pos/2026-11-05-lm1909-87febade.tests.json",
+   "prereg_commit": "ac17563d6",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.745,
+     "peak": ".wikipedia"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.72,
+     "peak": ".wikipedia"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.826,
+     "peak": ".wikipedia"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.809,
+     "peak": ".transpose"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.924,
+     "peak": ".transpose"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.063,
+     "peak": ".transpose"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.405,
+     "peak": " ق"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.6,
+     "peak": "ائل"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.202,
+     "peak": " https"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.287,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.218,
+     "peak": " photo"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.213,
+     "peak": "(grid"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.1,
+     "peak": ".flatten"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.355,
+     "peak": " ق"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.208,
+     "peak": "تز"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.777,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ac17563d6",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": ".wikipedia, .transpose, ائل (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".wikipedia",
+   ".transpose",
+   "ائل"
+  ]
+ }
+}
