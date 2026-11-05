@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-78d2a440",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7835+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:05:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N7835",
+   "pole": "+",
+   "label": "code that reads or compares password form fields (password and its confirmation); the same code on username, email or other fields stays quiet",
+   "fire": [
+    "email = request.form['email']\npassword = request.form['password']\nrepeat = request.form['repeat']",
+    "def clean(self):\n    pw = self.cleaned_data.get('password')\n    pw2 = self.cleaned_data.get('password2')\n    return pw == pw2",
+    "if self.field('password') != self.field('confirm_password'):\n    self.error('Passwords differ')",
+    "user = self.params.get('user')\npassword = self.params.get('password')\nconfirm = self.params.get('confirm')",
+    "class SignupForm(Form):\n    password = PasswordField('Password')\n    confirm = PasswordField('Repeat', [EqualTo('password')])",
+    "old_password = data['old_password']\nnew_password = data['new_password']\nagain = data['new_password_again']",
+    "passwordEdit.textChanged.connect(self.check)\nself.confirmPassword.textChanged.connect(self.check)",
+    "new_password = self.get('new_password')\nif new_password != self.get('verify_password'):\n    return False"
+   ],
+   "quiet": [
+    "email = request.form['email']\ncity = request.form['city']\nphone = request.form['phone']",
+    "def clean(self):\n    a = self.cleaned_data.get('title')\n    b = self.cleaned_data.get('subtitle')\n    return a == b",
+    "if self.field('city') != self.field('billing_city'):\n    self.error('Cities differ')",
+    "user = self.params.get('user')\ncolor = self.params.get('color')\nsize = self.params.get('size')",
+    "class SignupForm(Form):\n    nickname = StringField('Nickname')\n    country = StringField('Country', [Length(max=20)])",
+    "old_price = data['old_price']\nnew_price = data['new_price']\ntotal = data['new_price_total']",
+    "nameEdit.textChanged.connect(self.check)\nself.addressBox.textChanged.connect(self.check)",
+    "new_title = self.get('new_title')\nif new_title != self.get('page_title'):\n    return False"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code reading password fields",
+ "unit_kind": "contextual",
+ "confidence": "high"
+}

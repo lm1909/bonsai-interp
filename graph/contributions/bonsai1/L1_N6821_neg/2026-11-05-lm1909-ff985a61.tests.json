@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-ff985a61",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N6821-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:05:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N6821",
+   "pole": "-",
+   "label": "the end of a parameter's type in a Python docstring: the newline after 'name : type' (NumPy style) or the colon closing ':param type name:' (Sphinx style); ordinary code and comments with the same words stay quiet",
+   "fire": [
+    "def fit(data, k):\n    \"\"\"Fit the model.\n\n    Parameters\n    ----------\n    data : ndarray\n        Input samples.\n    k : int\n        Number of parts.\n    \"\"\"\n    pass",
+    "def resize(img, w, h):\n    \"\"\"Resize an image.\n\n    Parameters\n    ----------\n    img : Image\n        The source.\n    w : int\n        New width.\n    \"\"\"\n    return img",
+    "def send(host, port):\n    \"\"\"Send a message.\n\n    :param str host: the server\n    :param int port: the port\n    \"\"\"\n    pass",
+    "def load(path, mode):\n    \"\"\"Load a file.\n\n    :param path: where the file lives\n    :param mode: how to open it\n    :return: the file\n    \"\"\"\n    return open(path, mode)",
+    "class Grid:\n    \"\"\"A grid of cells.\n\n    Parameters\n    ----------\n    rows : int\n        Row count.\n    cols : int\n        Column count.\n    \"\"\"",
+    "def score(y, p):\n    \"\"\"Compute a score.\n\n    Parameters\n    ----------\n    y : array\n        True values.\n    p : array\n        Predictions.\n    \"\"\"\n    return 0",
+    "def plot(xs, ys):\n    \"\"\"Draw a line.\n\n    :param list xs: horizontal values\n    :param list ys: vertical values\n    \"\"\"\n    pass",
+    "def merge(a, b, key):\n    \"\"\"Merge two tables.\n\n    :param a: left table\n    :param b: right table\n    :param key: the column\n    \"\"\"\n    return a"
+   ],
+   "quiet": [
+    "def fit(data, k):\n    # Fit the model on the input samples using k parts.\n    return data[:k]",
+    "def resize(img, w, h):\n    # Resize the image to the new width and height.\n    return img",
+    "def send(host, port):\n    \"\"\"Send a message to the server on the port.\"\"\"\n    pass",
+    "def load(path, mode):\n    \"\"\"Open the file where it lives and return it.\"\"\"\n    return open(path, mode)",
+    "class Grid:\n    \"\"\"A grid of cells with a row count and a column count.\"\"\"\n    rows = 3\n    cols = 4",
+    "settings = {'rows': 3, 'cols': 4}\nfor key in settings:\n    print(key)",
+    "Note to the reader: the width and height are integers, and the path is a string.",
+    "Ingredients:\nflour\nsugar\nTime: ten minutes\nServes: four people"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "docstring parameter declaration",
+ "unit_kind": "code syntax",
+ "confidence": "high"
+}
