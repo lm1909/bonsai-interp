@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-1a3be5cd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N2032-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:01:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N2032",
+   "pole": "-",
+   "label": "' another' or 'Trying' in an English message inside a Python string",
+   "fire": [
+    "msg = \"This name is already used by another device.\"",
+    "print(\"Waiting for another worker to finish.\")",
+    "raise RuntimeError(\"The port is held by another process.\")",
+    "log.info(\"Trying host %s on port %d\" % (h, p))",
+    "log.warning('Trying server %s' % name)",
+    "raise ValueError(\"Cannot move file to another disk.\")",
+    "print(\"Please choose another password.\")",
+    "error = \"Session was closed by another client.\""
+   ],
+   "quiet": [
+    "msg = \"This name is too short for the device.\"",
+    "print(\"Waiting for the worker to finish.\")",
+    "raise RuntimeError(\"The port is closed.\")",
+    "log.info(\"Host %s on port %d\" % (h, p))",
+    "log.warning('Server %s' % name)",
+    "raise ValueError(\"Cannot move file to the disk.\")",
+    "print(\"Please choose a password.\")",
+    "error = \"Session was closed by the client.\""
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' another'/'Trying' in code strings",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Probes also fired '.add' (0.18-0.36), not covered by this label.",
+ "trigger": {
+  "tokens": [
+   " another",
+   "Trying"
+  ]
+ }
+}
