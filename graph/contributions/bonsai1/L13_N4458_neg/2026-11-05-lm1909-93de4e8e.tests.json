@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-93de4e8e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N4458-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:06:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N4458",
+   "pole": "-",
+   "label": "In a code comment, the words of a descriptive comment (a noun phrase naming a thing, or a statement such as 'We need ...'), as opposed to an imperative comment that orders an action ('Keep the ...'); the + pole's top examples are the imperative side ('Configure', 'Merge').",
+   "fire": [
+    "rows = fetch()\n\n# We want only the unique entries\nkept = set(rows)\n",
+    "rows = fetch()\n\n# Index of the last valid row\nlast = len(rows) - 1\n",
+    "if not cache:\n    # the cache might be empty on startup\n    cache = {}\n",
+    "def run(job):\n    # Folder for the temporary output\n    tmp = job.tmp\n",
+    "total = 0\n\n# We already have a running sum here\ntotal += step\n",
+    "conn = connect()\n\n# database settings\nconn.setup(cfg)\n",
+    "def close(self):\n    # The socket has been closed by now\n    self.sock = None\n",
+    "names = []\n\n# List of the user names\nnames = load_names()\n"
+   ],
+   "quiet": [
+    "rows = fetch()\n\n# Keep only the unique entries\nkept = set(rows)\n",
+    "rows = fetch()\n\n# Find the last valid row\nlast = len(rows) - 1\n",
+    "if not cache:\n    # create the cache on startup\n    cache = {}\n",
+    "def run(job):\n    # Make a folder for the output\n    tmp = job.tmp\n",
+    "total = 0\n\n# Update the running sum here\ntotal += step\n",
+    "conn = connect()\n\n# apply the settings\nconn.setup(cfg)\n",
+    "def close(self):\n    # Close the socket and clear it\n    self.sock = None\n",
+    "names = []\n\n# Load the user names\nnames = load_names()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "descriptive, not imperative, code comment",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: '# Path for the log' 0.60, '# We have ...' 0.93, while '# Get the ...', '# Write it ...' stayed under 0.1. Near misses are imperative comments on the same code."
+}

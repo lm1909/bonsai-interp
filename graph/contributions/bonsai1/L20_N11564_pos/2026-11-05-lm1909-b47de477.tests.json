@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-b47de477",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11564+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:06:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N11564",
+   "pole": "+",
+   "label": "Sentence-opening ' Both' or ' All' that refers back to a group just named in the previous sentence; the same content joined with 'and', or a generic 'All'/'Both' with no earlier group, stays quiet.",
+   "fire": [
+    "Mary and Joe opened a bakery. Both loved getting up early.",
+    "The sisters grew up on a farm. Both of them studied law.",
+    "Kim and Raj joined the firm in May. Both left within a year.",
+    "We interviewed two doctors last week. Both declined to comment.",
+    "The two pilots survived the crash. Both were treated in hospital.",
+    "He had four daughters. All of them became nurses.",
+    "Five miners were trapped underground. All were rescued by morning.",
+    "The six founders were young. All had quit their jobs."
+   ],
+   "quiet": [
+    "Mary and Joe opened a bakery and loved getting up early.",
+    "The sisters grew up on a farm and then studied law.",
+    "Kim and Raj joined the firm in May and left within a year.",
+    "We interviewed two doctors last week, who declined to comment.",
+    "Both hands must stay on the wheel while driving.",
+    "All trains stop at the central station.",
+    "Five miners were trapped underground and rescued by morning.",
+    "The six founders were young and had quit their jobs."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Both/All resuming a named group",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "A sub-trigger: the pole's top examples also include code tokens, an Arabic title and 'at the time', which this test does not cover. 'All' was weaker and less even than 'Both' in probes."
+}

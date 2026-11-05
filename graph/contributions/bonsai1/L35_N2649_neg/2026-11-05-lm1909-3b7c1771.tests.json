@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-3b7c1771",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N2649-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:06:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N2649",
+   "pole": "-",
+   "label": "A separate 'a' piece opening a longer word: Korean '아' in 아침 and 체크아웃, and ' a' in German ' a|cht'; other words in the same frame stay quiet.",
+   "fire": [
+    "우리는 내일 아침 일찍 떠나기로 했다.",
+    "그 회사는 하루아침에 문을 닫았다.",
+    "손님은 어제 체크아웃을 마쳤다.",
+    "나는 어제 아침에 커피를 마셨다.",
+    "그는 하루아침에 유명해졌다.",
+    "Die Brücke wird von bis zu acht Motoren bewegt.",
+    "Wir brauchen mindestens sieben bis acht Stunden.",
+    "이 호텔의 체크아웃 시간은 정오다."
+   ],
+   "quiet": [
+    "우리는 내일 저녁 일찍 떠나기로 했다.",
+    "그 회사는 작년에 문을 닫았다.",
+    "손님은 어제 결제를 마쳤다.",
+    "나는 어제 오후에 커피를 마셨다.",
+    "그는 서서히 유명해졌다.",
+    "Die Brücke wird von bis zu neun Motoren bewegt.",
+    "Wir brauchen mindestens sieben bis zehn Stunden.",
+    "이 호텔의 입실 시간은 정오다."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off 'a' piece opening a word",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Probes were strongest in 하루아침 (0.66-0.96). The ' �' byte piece of 약 is in the top examples but read under 0.2 in probes, and is not covered here. At L35 this may reflect what comes next rather than the piece itself."
+}

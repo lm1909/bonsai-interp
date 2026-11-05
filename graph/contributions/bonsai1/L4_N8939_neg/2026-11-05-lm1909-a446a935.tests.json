@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-a446a935",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8939-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:06:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N8939",
+   "pole": "-",
+   "label": "The letters 'esc' as their own token, inside or opening a word (f|esc|ue, P|esc|ara, ' esc'|arpment, ' Esc'), not whole-word tokens such as ' escape'.",
+   "fire": [
+    "The meadow was sown with red fescue and bluegrass.",
+    "Steep escarpment walls ringed the old crater.",
+    "We drove through Pescara on the way south.",
+    "Hit the Esc button to close the menu.",
+    "Most tall fescues need deep soil to thrive.",
+    "A pescatarian diet includes fish but no meat.",
+    "A sand-colored escarpment overlooked the plain.",
+    "The salad had escarole and radish in it."
+   ],
+   "quiet": [
+    "The meadow was sown with red clover and bluegrass.",
+    "Steep basalt walls ringed the old crater.",
+    "We drove through Bologna on the way south.",
+    "Hit the Enter button to close the menu.",
+    "Most tall grasses need deep soil to thrive.",
+    "A vegetarian diet includes eggs but no meat.",
+    "A sand-colored plateau overlooked the plain.",
+    "The salad had spinach and radish in it."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "token 'esc' as a piece",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "The Eskimo piece 'imo'/'sk' also fired in the top examples and in one probe (0.75); this test does not cover it. Near misses swap the esc word for a word of the same kind.",
+ "trigger": {
+  "tokens": [
+   " esc",
+   "esc",
+   " Esc",
+   "ESC",
+   "Esc"
+  ]
+ }
+}
