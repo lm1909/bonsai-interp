@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-566a958c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N7952+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:19+00:00",
+ "recipe": {
+  "toolchain_commit": "1bec8dc51",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N7952_pos/2026-11-05-lm1909-566a958c.tests.json"
+ },
+ "label": "(sub-trigger of a broad pole) ' few' in the phrase 'to name a few' closing a list of names",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N7952_pos/2026-11-05-lm1909-566a958c.tests.json",
+   "prereg_commit": "1bec8dc51",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.479,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.413,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.258,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.162,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.55,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.292,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.263,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.187,
+     "peak": " few"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.389,
+     "peak": " others"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.056,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.6,
+     "peak": " others"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.052,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.083,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.797,
+    "median_fire": 0.277,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1bec8dc51",
+  "minutes": 33,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'to name a few'",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "The card flags this pole broad with mixed top tokens. Probes: ' few' in 'to name a few' 0.32, 'to mention only a few' 0.10, 'a few apples' 0.02. A small sub-trigger at best, near the threshold.",
+ "selection": "random draw"
+}

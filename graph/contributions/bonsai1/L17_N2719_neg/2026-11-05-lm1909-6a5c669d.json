@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-6a5c669d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N2719-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:42+00:00",
+ "recipe": {
+  "toolchain_commit": "1bec8dc51",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N2719_neg/2026-11-05-lm1909-6a5c669d.tests.json"
+ },
+ "label": "a repeat occurrence of a yearly event: German 'zum 29. Mal' and 'from last year'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N2719_neg/2026-11-05-lm1909-6a5c669d.tests.json",
+   "prereg_commit": "1bec8dc51",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.664,
+     "peak": " Mal"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.863,
+     "peak": " Mal"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.398,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.497,
+     "peak": " recalled"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.471,
+     "peak": " Mal"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.445,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.363,
+     "peak": " "
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.479,
+     "peak": " remembered"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.175,
+     "peak": " Jahr"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": " Mai"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " steep"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " food"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.038,
+     "peak": "ore"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " crowd"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.103,
+     "peak": " Mal"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.475,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1bec8dc51",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "nth repeat: 'zum 29. Mal', 'from last year'",
+ "unit_kind": "contextual / semantic",
+ "confidence": 0.5,
+ "notes": "Card: ' Mal' at the top, ' year' second. Probes: ' Mal' after a number 0.86, 'zum ersten Mal' 0.09, ' year' in 'remembered from last year' 0.73; the same sentences without a repeat under 0.08. The rest of the pole's top is unexplained.",
+ "selection": "random draw"
+}

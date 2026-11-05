@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-fc1133e2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N8366-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:35+00:00",
+ "recipe": {
+  "toolchain_commit": "1bec8dc51",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N8366_neg/2026-11-05-lm1909-fc1133e2.tests.json"
+ },
+ "label": "(guess) the words after a titled book or bill with a parenthesis: '(Bloomsbury, 2007) is a ...', '(Wales) Bill aims to'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N8366_neg/2026-11-05-lm1909-fc1133e2.tests.json",
+   "prereg_commit": "1bec8dc51",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.089,
+     "peak": " limits"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.168,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.089,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.155,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.212,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.22,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.198,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.438,
+     "peak": " book"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.076,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.087,
+     "peak": " fine"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.097,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.024,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.072,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.097,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.053,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.173,
+     "peak": " book"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.205,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1bec8dc51",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "after a parenthesised title (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "The card flags it broad with mixed top tokens ('0' 5, ' Bill' 1). Probes: 0.46-0.47 after such titles; 'a book about old buildings' 0.12, '200 dollars' 0.05. The - pole's code examples are not covered. Low confidence.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-3bf91e51",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8589-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:01+00:00",
+ "recipe": {
+  "toolchain_commit": "1bec8dc51",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N8589_neg/2026-11-05-lm1909-3bf91e51.tests.json"
+ },
+ "label": "an inner piece of a noun split by the tokenizer: Jew|els, no|zz|les, Ass|urance, al|ge|bras",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N8589_neg/2026-11-05-lm1909-3bf91e51.tests.json",
+   "prereg_commit": "1bec8dc51",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.556,
+     "peak": "els"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.614,
+     "peak": "zz"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.565,
+     "peak": "urance"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.703,
+     "peak": "ge"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.641,
+     "peak": "els"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.663,
+     "peak": "zz"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.295,
+     "peak": "urance"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.455,
+     "peak": "ge"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": " Crown"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " spray"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " tests"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": " teaches"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " showed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " valves"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": "Add"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " graded"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.589,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1bec8dc51",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "inner piece of a split noun",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "Card: mixed pieces. Probes: 'els' 0.84, 'zz' 0.68, 'urance' 0.52, 'ge' 0.36; a plain sentence 0.01. The fire tokenization was checked. I don't know why these pieces and not others.",
+ "selection": "random draw"
+}

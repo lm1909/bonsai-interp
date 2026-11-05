@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-f754c19e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1731-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:32+00:00",
+ "recipe": {
+  "toolchain_commit": "1bec8dc51",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N1731_neg/2026-11-05-lm1909-f754c19e.tests.json"
+ },
+ "label": "' a' or ' an' as a split-off word start in a list of nouns, where a noun is expected: 'uncles, a|unts', 'corals, an|emones'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N1731_neg/2026-11-05-lm1909-f754c19e.tests.json",
+   "prereg_commit": "1bec8dc51",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.069,
+     "peak": "Her"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.171,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.032,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.242,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.304,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.179,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.014,
+     "peak": "Our"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.251,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.069,
+     "peak": "Her"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " hide"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.086,
+     "peak": " star"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.083,
+     "peak": " barn"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.175,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1bec8dc51",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-off a/an in a noun list",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' a' 6, ' at' 4, ' an' 4 of the top 32, each a split-off start of a longer word. Probes: ' a' before unts 0.68, ' an' before emones 0.39; 'to stay a|float' 0.08, ' in'|activity 0.11, ' at'|olls under 0.13, real articles 0.04. The tests are the two list cases only.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-448a3848",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N8125-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:03+00:00",
+ "recipe": {
+  "toolchain_commit": "1bec8dc51",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N8125_neg/2026-11-05-lm1909-448a3848.tests.json"
+ },
+ "label": "spelling pieces of Peloponnes- ('op') and Penobscot ('ob'), and ' Lab' after Berkeley",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N8125_neg/2026-11-05-lm1909-448a3848.tests.json",
+   "prereg_commit": "1bec8dc51",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.918,
+     "peak": "op"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.031,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.96,
+     "peak": "op"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.016,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.963,
+     "peak": " Lab"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.975,
+     "peak": "op"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.868,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.948,
+     "peak": " Lab"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": "bec"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " campus"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.04,
+     "peak": "ides"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": " Bay"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.962,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1bec8dc51",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Pel|op|onnes-, Pen|ob|scot, Berkeley Lab",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: 'op' 6, 'ob' 2, ' Lab' 1. Probes: 'op' 0.91-0.96, 'ob' 1.03, ' Lab' 0.96; Trojan War 0.01, Hudson River 0.03. A list; I have no shared pattern.",
+ "selection": "random draw"
+}

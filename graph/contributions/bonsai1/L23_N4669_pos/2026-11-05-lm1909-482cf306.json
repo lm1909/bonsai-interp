@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-482cf306",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N4669+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:54+00:00",
+ "recipe": {
+  "toolchain_commit": "1bec8dc51",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N4669_pos/2026-11-05-lm1909-482cf306.tests.json"
+ },
+ "label": "disagreement and lack of settled answers: disagree, disagreement, no consensus, differ",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N4669_pos/2026-11-05-lm1909-482cf306.tests.json",
+   "prereg_commit": "1bec8dc51",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.61,
+     "peak": " disagree"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.524,
+     "peak": " consensus"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.301,
+     "peak": " differ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.271,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.664,
+     "peak": " disagree"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.5,
+     "peak": " differ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.494,
+     "peak": " consensus"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.375,
+     "peak": " disagreement"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.04,
+     "peak": " wrote"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.262,
+     "peak": " data"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.047,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.097,
+     "peak": " record"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.032,
+     "peak": " committee"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.497,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1bec8dc51",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "disagree, no consensus, differ",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.85,
+ "notes": "Card: ' differ' 6, ' disagree' 3, ' consensus' 3. Probes: ' disagree' 0.75, ' consensus' 0.45, ' disagreement' 0.43, ' differ' 0.24; ' agree' 0.14; neutral verbs under 0.04.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "disagree",
+   "disagreement",
+   "consensus",
+   "differ"
+  ]
+ }
+}
