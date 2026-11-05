@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c6005ac7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N10709-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:17+00:00",
+ "recipe": {
+  "toolchain_commit": "759be8157",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N10709_neg/2026-11-06-lm1909-c6005ac7.tests.json"
+ },
+ "label": "The leadership title of a legislative chamber, with the chamber named: Senate Majority Leader, House Speaker, Parliament Speaker",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N10709_neg/2026-11-06-lm1909-c6005ac7.tests.json",
+   "prereg_commit": "759be8157",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.851,
+     "peak": " Leader"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.675,
+     "peak": " Speaker"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.931,
+     "peak": " Speaker"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.674,
+     "peak": " President"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.262,
+     "peak": " Leader"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.544,
+     "peak": " Senate"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.497,
+     "peak": " Speaker"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.861,
+     "peak": " Speaker"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.073,
+     "peak": " chairman"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": " session"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": " leader"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.03,
+     "peak": " Ann"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " Hart"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": " Stone"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.157,
+     "peak": " speaker"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " Cooper"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.675,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "759be8157",
+  "minutes": 3,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "legislative chamber leader title",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Second round. The first label, 'U.S. congressional leaders', failed on AUROC 0.891 (sweep 3, seed 202611051603): 'Speaker Newt Gingrich' without a chamber read 0.05, and probes then showed Parliament Speaker at 0.93, so the chamber matters and the U.S. does not.",
+ "selection": "picked"
+}

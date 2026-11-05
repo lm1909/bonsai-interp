@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-dfcb6e29",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N10067-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:35+00:00",
+ "recipe": {
+  "toolchain_commit": "759be8157",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N10067_neg/2026-11-06-lm1909-dfcb6e29.tests.json"
+ },
+ "label": "The opening of a definition of a technical term set off by a bracket, dash, comma or quotes ((the wearing away of), – a buildup of, \"water\")",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N10067_neg/2026-11-06-lm1909-dfcb6e29.tests.json",
+   "prereg_commit": "759be8157",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.221,
+     "peak": " wearing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.115,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.428,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.509,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.128,
+     "peak": " rise"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.338,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.437,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.173,
+     "peak": " dark"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " chapter"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " –"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " aunt"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.28,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "759be8157",
+  "minutes": 3,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "start of a term's definition",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. The first test failed narrowly (AUROC 0.898, sweep 5, seed 202611051605) on the leak 'which is the one on the left'. The token cannot see ahead there, so this round drops the 'which is the' frame and states that in the label.",
+ "selection": "picked"
+}
