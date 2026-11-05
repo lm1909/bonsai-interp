@@ -1,0 +1,59 @@
+{
+ "contribution": "2026-11-05-lm1909-33906148",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1846-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N1846",
+   "pole": "-",
+   "label": "A word that dates a reported event to the recent past: a weekday or 'yesterday', 'last week' in news-style narration (published on Wednesday, last Sunday); the same report without a date stays quiet",
+   "fire": [
+    "The paper was published in Nature on Thursday.",
+    "Police arrested the suspect last Sunday in Ohio.",
+    "The storm hit the coast early this past Monday morning.",
+    "The company announced the merger on Tuesday in a statement.",
+    "As the judge noted in yesterday's hearing, the law is clear.",
+    "The bill was signed by the governor on Friday.",
+    "The museum reopened last week after a long repair.",
+    "A fire destroyed the old mill late last Saturday night."
+   ],
+   "quiet": [
+    "The paper was published in Nature in a short letter.",
+    "Police arrested the suspect in a motel in Ohio.",
+    "The storm hit the coast with strong winds and rain.",
+    "The company announced the merger in a statement to staff.",
+    "As the judge noted in his long ruling, the law is clear.",
+    "Church services are held on Fridays in the old hall.",
+    "The museum reopened after a long repair.",
+    "A fire destroyed the old mill and two barns nearby."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "weekday or recent date in a report",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' Saturday' x9, ' Wednesday' x5, ' Sunday' x4, ' week', ' last', ' posted', ' yesterday'. Probe: Wednesday 0.63, past Saturday 0.55, yesterday's 0.68, last week 0.33, Monday 0.20; 'Sunday school' 0.26, Saturdays 0.23; undated report 0.06. ' posted' 0.66 in 'recently posted' is not covered.",
+ "trigger": {
+  "words": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday",
+   "yesterday"
+  ]
+ }
+}

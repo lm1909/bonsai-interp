@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-93c9a61b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N10910+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N10910",
+   "pole": "+",
+   "label": "Dense, low-amplitude pole (max 0.26, 26% of tokens reach 0.1 of max, gate-closed); its clearest peaks are French nav-ires and navigate-ur, and ' those' before a relative clause",
+   "fire": [
+    "Les marins ont chargé leurs navires avant la tempête.",
+    "Mettez à jour votre navigateur pour voir cette page.",
+    "Plusieurs navires de guerre ont quitté Toulon hier.",
+    "Ce site ne fonctionne pas avec ce navigateur ancien.",
+    "The patent claims are clear to those skilled in the field.",
+    "Ses navires ont traversé l'océan en dix jours.",
+    "Ouvrez un nouvel onglet dans votre navigateur préféré.",
+    "Le port accueille des navires venus de toute l'Europe."
+   ],
+   "quiet": [
+    "Les marins ont chargé leurs camions avant la tempête.",
+    "Mettez à jour votre ordinateur pour voir cette page.",
+    "Plusieurs avions de guerre ont quitté Toulon hier.",
+    "Ce site ne fonctionne pas avec ce téléphone ancien.",
+    "The patent claims are clear to anyone in the field.",
+    "Ses avions ont traversé l'océan en dix heures.",
+    "Ouvrez un nouvel onglet dans votre logiciel préféré.",
+    "Le port accueille des bateaux venus de toute l'Europe."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; French navire, navigateur",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense and gate-closed. Peaks: 'ires' x3, ' navigate' x3, 規 x3, ' those' x2. Probe: ' navigate' of navigateur 0.94, 'ires' 0.51, ' those' 0.62; but ' b' of bateaux 0.35 and the floor is high, so near misses are likely close to the line."
+}

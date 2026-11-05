@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-dc241427",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3474-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N3474",
+   "pole": "-",
+   "label": "The Arabic prefix pieces ' والم' and ' بالم' (and/in + the + m-) that split off the start of a word beginning with m",
+   "fire": [
+    "زار الوزير فرنسا والمغرب في الأسبوع الماضي",
+    "يعمل أخي الآن بالمغرب منذ عشر سنوات",
+    "تحدث الرئيس عن الصين والمكسيك في خطابه",
+    "يسكن عمي بالمدينة منذ زمن طويل",
+    "اجتمع الطلاب والمعلمين في القاعة الكبيرة",
+    "تعاون العراق والمملكة في مشروع النفط",
+    "ولدت أمي بالمكسيك قبل الحرب",
+    "وصل وفد من مصر والمدينة إلى المؤتمر"
+   ],
+   "quiet": [
+    "زار الوزير فرنسا والصين في الأسبوع الماضي",
+    "يعمل أخي الآن بالهند منذ عشر سنوات",
+    "تحدث الرئيس عن الصين والهند في خطابه",
+    "يسكن عمي بالصين منذ زمن طويل",
+    "اجتمع الطلاب والأساتذة في القاعة الكبيرة",
+    "تعاون العراق والأردن في مشروع النفط",
+    "ولدت أمي بفرنسا قبل الحرب",
+    "وصل وفد من مصر والأردن إلى المؤتمر"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic prefix pieces ' والم', ' بالم'",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: ' والم' x5, ' m' x4, '(m' x4, ' الم' x4, ' пом' x3: a word-initial m family across scripts. Probe: ' والم' 0.70-0.97, ' بالم' 0.53; but Latin ' m' is erratic (midafternoon 0.82, mosaics 0.04) and Cyrillic ' м' 0.19, so the label stays with the Arabic pieces. Near misses use the same prefixes with other letters. Tokenizer checked for every fire word.",
+ "trigger": {
+  "tokens": [
+   " والم",
+   " بالم"
+  ]
+ }
+}

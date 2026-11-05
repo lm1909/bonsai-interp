@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-05-lm1909-0c66e9d6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N7032-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N7032",
+   "pole": "-",
+   "label": "The split-off final piece of a device noun, the agentive -er or -izer that the tokenizer separates (steril-izer, div-iders, analy-ser, ext-ender); device nouns that are one token stay quiet",
+   "fire": [
+    "The hospital's steam sterilizer broke down during the night shift.",
+    "Wooden dividers separate the desks in the open office.",
+    "Add a stabilizer to the mix so that the cream holds its shape.",
+    "Apply a light moisturizer to your face each morning.",
+    "A meat tenderizer hung on a hook above the stove.",
+    "The gas analyser measures carbon dioxide in the chamber.",
+    "The humidifier in the bedroom helps with her cough.",
+    "A wireless range extender boosts the signal upstairs."
+   ],
+   "quiet": [
+    "The hospital's steam boiler broke down during the night shift.",
+    "Wooden screens separate the desks in the open office.",
+    "Add a spoon of sugar to the mix so that the cream holds its shape.",
+    "Apply a light sunscreen to your face each morning.",
+    "A meat cleaver hung on a hook above the stove.",
+    "The gas sensor measures carbon dioxide in the chamber.",
+    "The blender in the kitchen helps with her soups.",
+    "A wireless transmitter boosts the signal upstairs."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off -izer/-er piece of a device noun",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'izer' x8, 'iders' x5, 'iter' x5, 'zers' x4, 'ser', 'ender'. The + pole has dr-'aper', ' baker', so it looks like one side of an -er split. Probe: 'ser' of analyser 1.04, 'iders' 0.81, 'ender' 0.65; whole tokens fertilizer 0.00, sanitizer 0.13, organizer 0.12, printer 0.00. Tokenizer checked for each fire word. ' humid'+'ifier' is the one fire word whose ending was not in the top examples.",
+ "trigger": {
+  "tokens": [
+   "izer",
+   "iders",
+   "zers",
+   "ser",
+   "ender",
+   "iter"
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-ab0a8724",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N11393+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N11393",
+   "pole": "+",
+   "label": "The slot before a word for detecting a contaminant or pathogen (been [detected], found at [dangerous levels], less than [N copies], [und]etectable): the output direction promotes ' detect', ' detected', ' trace'",
+   "fire": [
+    "Mercury from the old mine has now been detected in the local trout.",
+    "Lead was found at dangerous levels in the school's tap water.",
+    "Asbestos fibres were being found at low levels in the air of the ward.",
+    "After treatment her viral load dropped to less than 40 copies per millilitre.",
+    "Arsenic has recently been detected in rice grown near the smelter.",
+    "Plastic particles have been found in human blood for the first time.",
+    "Once the hepatitis virus becomes undetectable, the patient can stop the drug.",
+    "Traces of the banned steroid were detected at very low levels in his urine."
+   ],
+   "quiet": [
+    "Trout from the old pond have now been moved to the local river.",
+    "Lunch was served at long tables in the school's main hall.",
+    "Asbestos roofs were being replaced at low cost on the farms of the ward.",
+    "After treatment her blood pressure dropped to less than 120 over 80.",
+    "Rice has recently been planted in fields near the smelter.",
+    "Plastic chairs have been placed in the human resources office for the first time.",
+    "Once the hepatitis patient becomes stable, the doctor can stop the drug.",
+    "Packets of the new cereal were sold at very low prices in his shop."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "slot before 'detected' a contaminant",
+ "unit_kind": "prediction / contextual",
+ "confidence": "high",
+ "notes": "Card: ' was', ' than', ' been', ' contain', ' at' in dioxin, viral load, iron contexts; logit effect promotes ' detect', ' detection', ' detected', ' trace'. Probe (on truncated prompts): 'pesticide ... has recently been' 0.59, 'Dioxin is now being found at' 0.81, ' und' of undetectable 0.66, 'lead ... less than' 0.35; 'fish ... have recently been' 0.03, 'Dinner ... served at' 0.00, 'ticket ... less than' 0.00."
+}
