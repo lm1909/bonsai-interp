@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-96430251",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N2196+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:29:08+00:00",
+ "recipe": {
+  "toolchain_commit": "a06d920b8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N2196_pos/2026-11-05-lm1909-96430251.tests.json"
+ },
+ "label": "Computer-aided design and manufacture: CAD, CNC and computer-controlled tools in engineering text; hand-tool versions and everyday computers stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N2196_pos/2026-11-05-lm1909-96430251.tests.json",
+   "prereg_commit": "a06d920b8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.579,
+     "peak": " follow"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.959,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.613,
+     "peak": " computer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.287,
+     "peak": " CAD"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.021,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.706,
+     "peak": " using"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.089,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.279,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.081,
+     "peak": " cuts"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.083,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.04,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.06,
+     "peak": " use"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " bills"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.075,
+     "peak": " with"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.596,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a06d920b8",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "CAD/CNC, computer-controlled making",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "The output direction's top promoted tokens are ' computer' and variants. Probes: Computer Numerical Control 0.88, computer-aided 0.88, AutoCAD 0.59, FreeCAD 0.50, computer-controlled 0.48; computer science 0.01, buying a computer 0.00, simulation 0.07. So it isn't the word computer itself.",
+ "selection": "random draw"
+}

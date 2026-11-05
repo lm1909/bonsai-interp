@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-319d1828",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N476-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:27:39+00:00",
+ "recipe": {
+  "toolchain_commit": "a06d920b8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N476_neg/2026-11-05-lm1909-319d1828.tests.json"
+ },
+ "label": "No clear trigger; low-confidence guess: a child's age ('a 6-year-old') in a passage about how children learn.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N476_neg/2026-11-05-lm1909-319d1828.tests.json",
+   "prereg_commit": "a06d920b8",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.06,
+     "peak": "-year"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.12,
+     "peak": "-year"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.069,
+     "peak": "-old"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.049,
+     "peak": "-year"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.325,
+     "peak": "-year"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.035,
+     "peak": "-year"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.037,
+     "peak": "-old"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.089,
+     "peak": "-year"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": " where"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.041,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": "Regular"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.07,
+     "peak": "-year"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " common"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " real"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " their"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.065,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a06d920b8",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "unclear; child's age in schooling passage (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Top examples peak on unrelated tokens in reflective essays (-year, aggressive, via the, heavy, hideous), and most copies of the top contexts stayed under 0.11. I found no trigger; the test records the best guess.",
+ "selection": "random draw"
+}

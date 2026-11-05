@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-288f9bd1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N5341-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:25+00:00",
+ "recipe": {
+  "toolchain_commit": "a06d920b8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N5341_neg/2026-11-05-lm1909-288f9bd1.tests.json"
+ },
+ "label": "Stranded, stressed do / does / did in a spoken reply ('Yeah, it does', 'you do'): the auxiliary ending the clause, with its verb left out; do-support before a verb and main-verb do stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N5341_neg/2026-11-05-lm1909-288f9bd1.tests.json",
+   "prereg_commit": "a06d920b8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 5,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.499,
+     "peak": " does"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.52,
+     "peak": " does"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.569,
+     "peak": " do"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.391,
+     "peak": " do"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.529,
+     "peak": " does"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.354,
+     "peak": " does"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.366,
+     "peak": " did"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.507,
+     "peak": " do"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.21,
+     "peak": "Only"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.405,
+     "peak": " do"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.113,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.391,
+     "peak": " do"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.114,
+     "peak": " risky"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.702,
+     "peak": " does"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.366,
+     "peak": " did"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.507,
+     "peak": " do"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.695,
+    "median_fire": 0.503,
+    "near_misses_at_0.3": 5
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a06d920b8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "stranded do/does in spoken replies",
+ "unit_kind": "contextual / syntactic",
+ "confidence": 0.6,
+ "notes": "Probes: 'it does.' 0.45-0.56, 'you do,' 0.63, 'I do.' 0.20, 'he did' 0.09-0.22; 'You do need' 0.05, 'We do what' 0.03, 'does this' 0.02, but 'does the dishes' 0.19 and 'kinda did a' 0.50 is not stranded. So stranding is not the full story.",
+ "selection": "random draw"
+}

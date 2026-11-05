@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-29ed86d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3500+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:22+00:00",
+ "recipe": {
+  "toolchain_commit": "a06d920b8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N3500_pos/2026-11-05-lm1909-29ed86d1.tests.json"
+ },
+ "label": "The pieces ' Lob', ' lob' and 'ob' in lobo-words and names: Spanish lobos, Villa-Lobos, Lobachevsky, Lobanov.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N3500_pos/2026-11-05-lm1909-29ed86d1.tests.json",
+   "prereg_commit": "a06d920b8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.581,
+     "peak": " lob"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.777,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.548,
+     "peak": " Lob"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.792,
+     "peak": " lob"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.013,
+     "peak": " Lob"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.669,
+     "peak": " Lob"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.628,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.92,
+     "peak": " lob"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " baj"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " suite"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " Russian"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.043,
+     "peak": " tem"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.252,
+     "peak": " P"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.186,
+     "peak": " z"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.723,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a06d920b8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "token pieces of lob- (lobos, Lobachevsky)",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "Probes: lobos and Lobachevsky 0.67-1.00; Globo 0.09, lobby 0.03, Robles 0.13, 'Lobo' only 0.10 (peak on 'obo', a different split). Tokenization of the fire words was checked: ' lob'+'os', '-L'+'ob'+'os', ' Lob'+'an'+'ov', ' Lob'+'ato'.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " lob",
+   " Lob",
+   "ob"
+  ]
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-0869d6f6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N827+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:39+00:00",
+ "recipe": {
+  "toolchain_commit": "a06d920b8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N827_pos/2026-11-05-lm1909-0869d6f6.tests.json"
+ },
+ "label": "Machine-spun or garbled English: the token just after a broken grammatical join, in word salad that was once a normal sentence; grammatical versions stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N827_pos/2026-11-05-lm1909-0869d6f6.tests.json",
+   "prereg_commit": "a06d920b8",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.267,
+     "peak": " "
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.534,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.206,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.038,
+     "peak": " dose"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.513,
+     "peak": " $"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.407,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.127,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.357,
+     "peak": " differences"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " apply"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": " fine"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " mortgage"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " tablets"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " seeds"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.312,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a06d920b8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "garbled, machine-spun text",
+ "unit_kind": "register / contextual",
+ "confidence": 0.7,
+ "notes": "Top examples are article-spinner text in English, plus French and Arabic ones. Probes on my own garbled sentences 0.30-0.68, and their grammatical versions under 0.07. A 'distinction' reading: does the text still parse. Near misses are repaired forms with a different lead-in.",
+ "selection": "random draw"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-7ca390b8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N11796-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:12+00:00",
+ "recipe": {
+  "toolchain_commit": "a06d920b8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N11796_neg/2026-11-05-lm1909-7ca390b8.tests.json"
+ },
+ "label": "Low-confidence guess: the orientation of an object being moved or aimed, on the pointer word or pronoun before its direction ('arrow facing ...', 'move it up and down').",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N11796_neg/2026-11-05-lm1909-7ca390b8.tests.json",
+   "prereg_commit": "a06d920b8",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.351,
+     "peak": " facing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.098,
+     "peak": " forwards"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.138,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.241,
+     "peak": " pointing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.163,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.081,
+     "peak": " pointing"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.204,
+     "peak": " facing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.124,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " cheap"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": " buy"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.268,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": " red"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " store"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " white"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": "site"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " shared"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.151,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a06d920b8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "object's direction next (guess)",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.2,
+ "notes": "Top examples: facing, pointing, traded (down), trend (down), 'to the' (right), but also 'is True' in code. Probes: 'arrow facing' 0.58 once and 0.15 another time, 'move it up and down' 0.39 and 0.26. 'traded lower' and 'trending lower' under 0.10.",
+ "selection": "random draw"
+}

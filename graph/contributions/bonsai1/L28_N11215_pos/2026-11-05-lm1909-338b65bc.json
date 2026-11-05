@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-338b65bc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N11215+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:28:49+00:00",
+ "recipe": {
+  "toolchain_commit": "a06d920b8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N11215_pos/2026-11-05-lm1909-338b65bc.tests.json"
+ },
+ "label": "The German comma that opens a defining relative clause after a generic head ('Leute, die', 'etwas, das', 'in einem Maße, das'); commas before other clauses stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N11215_pos/2026-11-05-lm1909-338b65bc.tests.json",
+   "prereg_commit": "a06d920b8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.596,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.778,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.054,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.755,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.643,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.088,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.448,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.091,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " zu"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": "stoff"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.0,
+     "peak": " H"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.001,
+     "peak": " wollen"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "ach"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": " einmal"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": "unde"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " so"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.522,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a06d920b8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "German comma before defining relative",
+ "unit_kind": "syntactic / language",
+ "confidence": 0.55,
+ "notes": "Probes: 'Leute, die' 0.58, 'in einem Maße, das' 0.58, 'Umfang, der' 0.65, 'etwas, das' 0.37; 'Momente, in denen' 0.16; 'weiß, dass' and a comma before und under 0.01. English and French comma relatives 0.10 or less. The output promotes which/who.",
+ "selection": "random draw"
+}
