@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-abc7ebef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N2+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:51+00:00",
+ "recipe": {
+  "toolchain_commit": "6030b913c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N2_pos/2026-11-06-lm1909-abc7ebef.tests.json"
+ },
+ "label": "telling one kind of thing from another or identifying it by its features (tell a real coin from a fake, identify a wine, features that characterize a disease), as opposed to the same subjects doing something else",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N2_pos/2026-11-06-lm1909-abc7ebef.tests.json",
+   "prereg_commit": "6030b913c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.342,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.351,
+     "peak": " alone"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.127,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.291,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.468,
+     "peak": " tell"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.383,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.387,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.088,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.044,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.063,
+     "peak": " walk"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.097,
+     "peak": " help"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " carry"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.048,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.347,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6030b913c",
+  "minutes": 7,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "telling one kind of thing from another",
+ "unit_kind": "semantic / prediction",
+ "confidence": "medium",
+ "notes": "Output: promotes distinguish, uniquely, distinction, differentiate, distinctive; the - pole fires on 'used to identify' and marks. Probes: tell a coin from a fake 0.50, tell one species from another 0.50, identify a wine's region 0.53, mineral identification 0.56, characterize diseases 0.53, separate two diseases 0.25; carry the crate 0.14, paint each whale 0.09, attract a mate 0.25 on ' to'. 'identify each whale' reached 0.14, 'recognize faces' 0.12, 'sets apart' 0.03 and 'fairly unique' 0.03, so the claim is narrower than the output list suggests.",
+ "selection": "random draw"
+}

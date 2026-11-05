@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-4f46cdc7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4176-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:41+00:00",
+ "recipe": {
+  "toolchain_commit": "6030b913c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N4176_neg/2026-11-06-lm1909-4f46cdc7.tests.json"
+ },
+ "label": "a bare p piece that opens a split word (' P' in P|roust and P|ynch|on, '-p' in common|-p|ool, 'up' in Ba|up|rogram|m), as opposed to words starting with p that the tokenizer keeps in larger pieces (Push|kin, Past|ern|ak, Pl|ath)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N4176_neg/2026-11-06-lm1909-4f46cdc7.tests.json",
+   "prereg_commit": "6030b913c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.63,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.274,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.579,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.548,
+     "peak": "-p"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.103,
+     "peak": " state"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.39,
+     "peak": "up"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.368,
+     "peak": "-p"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.176,
+     "peak": " P"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.045,
+     "peak": " rivals"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.082,
+     "peak": " shared"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "I"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.379,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6030b913c",
+  "minutes": 6,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "bare p piece that opens a split word",
+ "unit_kind": "token / spelling",
+ "confidence": "high",
+ "notes": "Card: ' P' x9, 'P' x6, 'p' x4, ' п' x4, '-p' x2, 'up'. Tokenizer checked for the test words. Probes: common-pool 0.37-0.52, Proust (with Pushkin) 0.50, Proust alone 0.21, PWD 0.38, Bauprogramm 0.39-0.46; Tolstoy 0.00, Pasternak 0.00, sub-prime 0.01, up-front 0.00, puppy 0.01, Bauarbeiter 0.03. The declared tokens also occur in other uses, so measured coverage is an upper bound; the Cyrillic ' п' case is not tested here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " P",
+   "P",
+   "p",
+   "-p"
+  ]
+ }
+}

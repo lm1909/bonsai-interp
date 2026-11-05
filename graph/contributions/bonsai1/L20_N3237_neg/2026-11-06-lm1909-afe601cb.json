@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-afe601cb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N3237-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:27+00:00",
+ "recipe": {
+  "toolchain_commit": "6030b913c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N3237_neg/2026-11-06-lm1909-afe601cb.tests.json"
+ },
+ "label": "the end of a lead-in that names the evidence for an inference (based on your notes, to judge by his voice, from the reviews), peaking on the comma or ' that' before the conclusion, as opposed to lead-ins of time or place",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N3237_neg/2026-11-06-lm1909-afe601cb.tests.json",
+   "prereg_commit": "6030b913c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.42,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.922,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.669,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.587,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.554,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.66,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.231,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.599,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " work"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " guests"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " opens"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": " left"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.629,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6030b913c",
+  "minutes": 6,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "end of an evidential lead-in (based on X,)",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ',' x14, ' that' x10, ' suggest' x2. Probes: To judge by the sound of his voice, 1.09; Based on your observations, 0.76; From the reviews, 0.59; It would seem to anyone ... that 0.82; After your appointment 0.01, From the kitchen, 0.02, During the speeches 0.01. The + pole has 'results suggest' and 'upheld' on the verb itself; 'These results suggest' reached 0.16 here.",
+ "selection": "random draw"
+}

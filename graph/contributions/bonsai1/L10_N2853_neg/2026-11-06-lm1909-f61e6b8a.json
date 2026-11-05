@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f61e6b8a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2853-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:15+00:00",
+ "recipe": {
+  "toolchain_commit": "6030b913c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2853_neg/2026-11-06-lm1909-f61e6b8a.tests.json"
+ },
+ "label": "writing a numeric cut-off or bound that decides which values count (np.logical_and on ranges, inf bounds, a rejection region, a threshold test), in code or statistics, as opposed to ordinary code and the same words in everyday use",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2853_neg/2026-11-06-lm1909-f61e6b8a.tests.json",
+   "prereg_commit": "6030b913c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.836,
+     "peak": ".logical"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.598,
+     "peak": "inf"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.4,
+     "peak": " right"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.961,
+     "peak": " floor"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.383,
+     "peak": " when"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.346,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.481,
+     "peak": " left"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.834,
+     "peak": ".logical"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.159,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.237,
+     "peak": "high"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.059,
+     "peak": " right"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.063,
+     "peak": "keep"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": ":\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " stage"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": "()\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.539,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6030b913c",
+  "minutes": 6,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "a numeric cut-off or bound that selects values (guess)",
+ "unit_kind": "semantic / code",
+ "confidence": "low",
+ "notes": "Card: '0' x3, ' |=' x2, '.intersection', '.logical', ' inf', ' far', ' right'; the + pole is ' if' and ' else'. Probes: .logical 0.69-0.74, ' inf' 0.55-0.79, 'to the right of' a critical value 0.46-0.71, threshold ... when 0.62; append 0.04, float(text) 0.02, right of the road 0.01, name parameter 0.02. Also fired: |= 0.56, .intersection 0.50 (set logic, which this label does not cover); isdisjoint 0.21, &= 0.06. The shared pattern is my guess.",
+ "selection": "random draw"
+}

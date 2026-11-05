@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a42e82ab",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N1479+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:33:47+00:00",
+ "recipe": {
+  "toolchain_commit": "6030b913c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N1479_pos/2026-11-06-lm1909-a42e82ab.tests.json"
+ },
+ "label": "a conference, congress, workshop or summit as what the sentence is about (会议, congress of the society, a two-day workshop), peaking on 会议 or on punctuation after it, as opposed to family, school or leisure events in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N1479_pos/2026-11-06-lm1909-a42e82ab.tests.json",
+   "prereg_commit": "6030b913c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.059,
+     "peak": "会议"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.909,
+     "peak": "会议"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.42,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.502,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.32,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.309,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.104,
+     "peak": "会议"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.549,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.083,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.582,
+     "peak": "比赛"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.607,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.138,
+     "peak": " spent"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.191,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.152,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.283,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.21,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.526,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6030b913c",
+  "minutes": 6,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "a scholarly or diplomatic meeting as the topic",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: '.' x6, ',' x5, '会议' x2, ' summit' x2, ';' x2; the - pole is ' at' in 'paper presented at'. Probes: 国际会议 ... 会议 0.44-0.70, workshop 0.44, society meeting 0.45, congress 0.34, summit 0.23-0.27; school event 活动 0.29, picnic 0.18, birthday 0.17, trip 0.16, hike 0.15. Separation is modest, and near misses are not silent.",
+ "selection": "random draw"
+}

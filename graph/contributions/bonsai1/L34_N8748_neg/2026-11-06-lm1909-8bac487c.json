@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-8bac487c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N8748-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:34:05+00:00",
+ "recipe": {
+  "toolchain_commit": "6030b913c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N8748_neg/2026-11-06-lm1909-8bac487c.tests.json"
+ },
+ "label": "the slot right before an amount, duration or extent is given or asked (a total of, approximately, for how long, in welcher Höhe, 多长时间), across languages, as opposed to the same frames leading to a non-quantity",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N8748_neg/2026-11-06-lm1909-8bac487c.tests.json",
+   "prereg_commit": "6030b913c",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.389,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.294,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.127,
+     "peak": " roughly"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.423,
+     "peak": "是"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.405,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.267,
+     "peak": "了"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.17,
+     "peak": " approximately"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.36,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.047,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.099,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.052,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "的"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.171,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": "工作"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.103,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.097,
+     "peak": " from"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.327,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6030b913c",
+  "minutes": 7,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "slot right before an amount or extent",
+ "unit_kind": "prediction / contextual",
+ "confidence": "medium",
+ "notes": "Output: this pole promotes how, 如何, cómo, كيف. Card and look: 相距, 회원 수는, 工作了, 大约是, for how long, approximately, a total of, in welcher, в каком объеме. Probes: for how long 0.45, in welcher Höhe 0.39, a total of 0.39, 了 多长时间 0.38, 大约是多久 0.64, approximately 0.29, costs at least 0.25; with whom 0.10, a group of 0.03, must be reported 0.06, an welchem Tag 0.19. Not clean: 'costs less than' also 0.25 on ' costs', 住得习惯 0.43, Korean 회원 수는 only 0.07.",
+ "selection": "random draw"
+}
