@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-0669710d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N3975+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:48:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N3975",
+   "pole": "+",
+   "label": "token at a section or sentence break in instructions and lists (guess; broad, gate-closed)",
+   "fire": [
+    "To enter, follow the rules below by Friday June 3rd at 5:00 pm:\nYou MUST send one form per person.",
+    "Many cities ban bottled water, so it makes sense to carry a flask.\n12. Save Water\nFrom short showers",
+    "The ship sailed to Riga to load timber. On her way home the hold filled.",
+    "The bill had not been reintroduced in the new session. A Dutch firm bought several plants.",
+    "The list should look something like Table 14-2.\nYou can now pick a file.",
+    "The show follows two sisters and their strange neighbors.\n- \"Sabrina\"\n- \"Charmed\"",
+    "The results are good. However, the costs are high.\nNext steps follow.",
+    "Bring your own bag.\n13. Walk More\nFrom small trips"
+   ],
+   "quiet": [
+    "To enter, send one form per person to the office by Friday afternoon.",
+    "Many cities ban bottled water, so it makes sense to carry a flask with you.",
+    "The ship sailed to Riga to load timber and came home with a full hold.",
+    "The bill had not been reintroduced, and a Dutch firm bought several plants anyway.",
+    "The list should look something like a table that you can pick a file from.",
+    "The show follows two sisters and their strange neighbors over many seasons.",
+    "The results are good but the costs are high and the next steps are unclear.",
+    "Bring your own bag when you walk to the shop on small trips."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: every probe stayed under 0.10.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "section break (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (1.5%) and gate-closed (93% echo). Card: '.\\n' x6, '.' x3, ' However' x3. Four probes scored 0.06-0.09. A best guess."
+}

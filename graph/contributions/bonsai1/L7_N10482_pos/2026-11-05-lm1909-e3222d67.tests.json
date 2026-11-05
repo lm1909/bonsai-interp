@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e3222d67",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N10482+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:48:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N10482",
+   "pole": "+",
+   "label": "the closing word of a multi-word proper name (Katie Holmes, North Atlantic Treaty)",
+   "fire": [
+    "Her marriage to Tom Cruise ended in the summer of 2012.",
+    "The Warsaw Pact was signed by eight countries in 1955.",
+    "She studied law at Trinity College before moving to London.",
+    "His film with Meryl Streep opened in December.",
+    "The Kyoto Protocol was adopted by most nations that year.",
+    "Pope John Paul II visited the city in 1987.",
+    "The article by Robert Kaplan came out in July.",
+    "The Treaty of Versailles was signed in a palace near Paris."
+   ],
+   "quiet": [
+    "Her marriage to the actor ended in the summer of 2012.",
+    "The new pact was signed by eight countries in 1955.",
+    "She studied law at a small college before moving to London.",
+    "His film with the actress opened in December.",
+    "The new rules were adopted by most nations that year.",
+    "The old priest visited the city in 1987.",
+    "The article by the journalist came out in July.",
+    "The new agreement was signed in a palace near Paris."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same sentences without a proper name stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "last word of a name",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "A shared pattern for a list ('es', ' Holmes', ' Treaty', 'ski', 'man', ' College', ' VII'). Probe: Holmes 0.81, Treaty 0.66, 'Kankes' 0.74, 'Kukulski' 0.18; 'She signed the paper' 0.02. Other names are new cases."
+}

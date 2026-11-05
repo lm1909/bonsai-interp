@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-7c05043c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N6153-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:48:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N6153",
+   "pole": "-",
+   "label": "the colon after a field label in a profile or fact box ('Annual income:', 'HEADQUARTERS:', 'Institutions:')",
+   "fire": [
+    "Marcus Lee, 41, Denver, Colorado\nOccupation: Chef\nAnnual income: $62,000",
+    "1. CLOUD STORAGE: Dropbox\nHEADQUARTERS: San Francisco\n2014 REVENUE: $200 million",
+    "Ana Ruiz, 29, Austin, Texas\nJob: Nurse\nMonthly rent: $1,400",
+    "3. Sunny Face Cream\nPromises to last for: 8 hours\nOverall rating: 4/5",
+    "Genome Mapping: A Simple Method\nInstitutions: University of Utah\nFunding: NIH",
+    "2. CLEAN ENERGY: Vestas\nHEADQUARTERS: Aarhus\nEMPLOYEES: 20,000",
+    "Tom Hale, 55, Reno, Nevada\nOccupation: Pilot\nHome value: $310,000",
+    "Mission: Hayabusa\nLaunch: May 2003\nArrival: September 2005"
+   ],
+   "quiet": [
+    "Marcus Lee, a 41-year-old chef in Denver, Colorado, earns about $62,000 a year.",
+    "Dropbox, a cloud storage firm based in San Francisco, made $200 million in 2014.",
+    "Ana Ruiz, a 29-year-old nurse in Austin, Texas, pays $1,400 a month in rent.",
+    "This sunny face cream promises to last for eight hours and gets good reviews.",
+    "The University of Utah developed a simple method for genome mapping with NIH funding.",
+    "Vestas, a clean energy firm based in Aarhus, has about 20,000 employees.",
+    "Tom Hale, a 55-year-old pilot in Reno, Nevada, owns a house worth $310,000.",
+    "The Hayabusa mission launched in May 2003 and arrived in September 2005."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same facts in prose stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "fact-box field colon",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "notes": "Card: ':' x12, '\\n' x5, ',' x4, 'stitutions' x3. Probe: 'Annual income:' 0.48, 'REVENUE:' 0.30; 'My rating: 5 of 5' 0.09; prose 0.02.",
+ "trigger": {
+  "tokens": [
+   ":"
+  ]
+ }
+}

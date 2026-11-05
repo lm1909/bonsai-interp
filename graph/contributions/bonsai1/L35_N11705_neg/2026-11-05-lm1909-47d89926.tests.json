@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-47d89926",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11705-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:48:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N11705",
+   "pole": "-",
+   "label": "lone letter s / S that begins a word the tokenizer splits (' s|pongy', ' s|ienta', ' s|apos')",
+   "fire": [
+    "The doctor noted that his gums were spongy and bled easily.",
+    "Ese vestido le sienta muy bien a tu hermana.",
+    "Her gums looked spongy and pale after the long voyage.",
+    "Ese color te sienta mejor que el azul.",
+    "Les petits sapos sautent dans la mare au printemps.",
+    "The bread came out spongy and sour from the old oven.",
+    "El bosque está lleno de sapos después de la lluvia.",
+    "Un sillage de lumière bleue suit le bateau dans la nuit."
+   ],
+   "quiet": [
+    "The doctor noted that his gums were tender and bled easily.",
+    "Ese vestido le queda muy bien a tu hermana.",
+    "Her gums looked swollen and pale after the long voyage.",
+    "Ese color te queda mejor que el azul.",
+    "Les petites grenouilles nagent dans la mare au printemps.",
+    "The bread came out heavy and sour from the old oven.",
+    "El bosque está lleno de ranas después de la lluvia.",
+    "Une ligne de lumière bleue suit le bateau dans la nuit."
+   ]
+  }
+ ],
+ "predictions": "4/8 fire; the median may miss, since probes were 0.02-0.37",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off initial s",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Card: ' s' x20, ' S' x4, ' س' x4. Probe: 'sienta' 0.37, 'spongy' 0.20; 'sondée' 0.02 peak on ' sa'; 'tender' 0.00, 'sat' 0.00, sentence-initial 'Sext' 0.00. Which words split was not checked before commit.",
+ "trigger": {
+  "tokens": [
+   " s",
+   " S",
+   "S"
+  ]
+ }
+}
