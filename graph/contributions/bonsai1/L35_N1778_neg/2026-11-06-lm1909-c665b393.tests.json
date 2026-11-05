@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-c665b393",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1778-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:02:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N1778",
+   "pole": "-",
+   "label": "A subject pronoun in present-tense running speech full of contractions, where the next token is likely 'm, 're or 's; the same pronouns in past-tense narration stay quiet",
+   "fire": [
+    "\"Look,\" said Tom. \"You're the only one who knows; that's why I'm here. Right now I feel like you're my last hope.\"",
+    "When you're young and you're broke, it's tough. I know it's tough, and I think you're handling it well.",
+    "Don't worry about me. I'm fine, and we're nearly done. If it's late, I'll call and you'll know we're safe.",
+    "\"Why me?\" she asked. \"Because you're smart, and I'm not. That's why we're talking, and it's why I'm paying.\"",
+    "I can't stay long. We're leaving soon because it's getting dark, and I'm sure you're busy too.",
+    "He's late again. I guess it's the traffic, but you're right that we're wasting time and I'm tired.",
+    "\"Is that so?\" said Mara. \"Then you're wrong, and I'm glad. Now I think we're finished, and it's time.\"",
+    "If you're ready, we're going. I hope it's not far, because I'm hungry and you're slow."
+   ],
+   "quiet": [
+    "Tom looked up. He knew the man; that was why he came. At that time he felt that it was his last hope.",
+    "When he was young and he was broke, it was tough. He knew it was tough, and he thought she handled it well.",
+    "She did not worry about him. He was fine, and they were nearly done. When it was late, he called and she knew they were safe.",
+    "She asked why. Because he was smart, and she was not. That was why they talked, and it was why she paid.",
+    "He could not stay long. They left soon because it got dark, and he was sure she was busy too.",
+    "He was late again. She guessed it was the traffic, but he was right that they wasted time and she was tired.",
+    "Mara nodded. Then he was wrong, and she was glad. She thought they were finished, and it was time.",
+    "When he was ready, they went. She hoped it was not far, because she was hungry and he was slow."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "subject pronoun before a likely contraction",
+ "unit_kind": "contextual / prediction",
+ "confidence": "medium",
+ "notes": "Card: ' I' x8, ' you' x7, ' it' x3, ' he' x3, ' we' x2, each followed by a contraction; logit effect of the + pole promotes ' are', ' am', ' is', so the - pole suppresses them. Probe: one-sentence items reach only 0.07-0.19, multi-sentence dialogue 0.42-0.59; past narration 0.12, title 'When They Eat' 0.15. Test items are multi-sentence for that reason."
+}

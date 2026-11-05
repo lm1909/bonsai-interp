@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-bddb980c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N4352+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:02:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N4352",
+   "pole": "+",
+   "label": "The negation or exception in a multiple-choice question stem: 'Which ... is not ...', 'all of the following except'; the same negation in plain statements stays quiet",
+   "fire": [
+    "Which of these animals is not a reptile?\n(a) snake\n(b) lizard\n(c) frog",
+    "Which planet does not have any moons?",
+    "Which of the following does NOT describe a cell wall?",
+    "All of the following cause inflation except which one?",
+    "Which one of these countries is not in Africa?",
+    "Question 4: Which statement is not true of the French Revolution?",
+    "Which tool would not be useful for measuring length?",
+    "All of these are prime numbers except:\nA. 3\nB. 5\nC. 9"
+   ],
+   "quiet": [
+    "These animals are not reptiles, as the guide explained to us.",
+    "This planet does not have any moons, as far as anyone knows.",
+    "The cell wall does not describe a full barrier to water.",
+    "Many things cause inflation, and one of them is war.",
+    "One of these countries is in Africa, and the other is in Asia.",
+    "The French Revolution was not a single event but a long process.",
+    "This tool would not be useful for measuring length.",
+    "These are prime numbers:\nA. 3\nB. 5\nC. 7"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'not'/'except' in an exam question stem",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' not' x6, ' following' x2, ' would' x2, in exam-style text; the - pole also fires on '(b)', '(c)' answer labels. Probe: 'Which of the following is not' 1.93, 'following are true except' 2.07, 'Which simple machine does not' 1.22; 'The dog does not' 0.06, 'does NOT include' 0.15, 'Which would you rather' 0.05, embedded 'which of them had not yet' 0.52. Very sparse pole, so readings can exceed 1."
+}
