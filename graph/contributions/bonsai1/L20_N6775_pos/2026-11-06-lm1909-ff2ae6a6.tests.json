@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ff2ae6a6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N6775+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N6775",
+   "pole": "+",
+   "label": "'less' or a similar word comparing hardware parts ('uses less power than', 'three similar building blocks')",
+   "fire": [
+    "A hexa core design needs each core to use less power than a quad.",
+    "The board has four similar logic blocks along one edge.",
+    "Each new transistor draws less current than the older type.",
+    "The chip contains two similar memory blocks per channel.",
+    "A smaller die lets every core run at less voltage than before.",
+    "The system is built from eight similar processing units.",
+    "An eight core processor requires each core to draw less power than a single.",
+    "The router uses three similar switching stages in series."
+   ],
+   "quiet": [
+    "A hexa core design needs each core to use a heat sink like a quad.",
+    "The board has four green logic blocks along one edge.",
+    "Each new transistor sits next to the older type.",
+    "The chip contains two large memory blocks per channel.",
+    "A smaller die lets every core sit close to the cache.",
+    "The system is built from eight separate processing units.",
+    "An eight core processor requires each core to have its own cache.",
+    "The router uses three small switching stages in series."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "comparing parts",
+ "unit_kind": "contextual",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: broad (1.1%), ')\\n' x3, 'block' x2, '2' x2, '_element', ' similar', ' than', ' autonomous'. Probe: ' less' in 'each core uses less power' 0.593, then 'less memory than' 0.171 and 'less fuel' 0.052; ' similar' modules 0.101; code at 0.062-0.121."
+}

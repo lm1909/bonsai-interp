@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-58f05834",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N7450-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N7450",
+   "pole": "-",
+   "label": "dense and partly positional: ' the' after a preposition or 'where' early in the text, and 'OF' of 'HOF'",
+   "fire": [
+    "In the valley, farms are small and fields are narrow.",
+    "In the library where the shelves are tall, the ladders are long.",
+    "He won a place in the Rock and Roll HOF last year.",
+    "In the harbor, boats are old and nets are torn.",
+    "At the station, where the trains stop, the benches are cold.",
+    "The Pro Football HOF inducted him in 2011.",
+    "On the island, roads are rough and bridges are rare.",
+    "In the kitchen where the windows are open, the air is fresh."
+   ],
+   "quiet": [
+    "Valley farms are small and fields are narrow.",
+    "Tall shelves need long ladders for us to reach books.",
+    "He won a place in a good band last year.",
+    "Harbor boats are old and nets are torn.",
+    "Trains stop at this station, and benches are cold.",
+    "Pro football drafted him in 2011.",
+    "Island roads are rough and bridges are rare.",
+    "Kitchen windows are open and air is fresh."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; early ' the' (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card: FLAG dense 10.8%, FLAG positional (66% of peaks within the first 16 tokens), L 95%, ' the' x25, 'of' and 'OF' after H. Probe: 'OF' 0.835; ' the' 0.311-0.378 in 'In the city' and 'where the walls'; but 'Return the' 0.004 and 'As the' at most 0.071, so ' the' is not reliable."
+}

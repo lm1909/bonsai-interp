@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-725831cb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N2496-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N2496",
+   "pole": "-",
+   "label": "dense unit (89% of tokens reach 0.1 of max, 43% reach 0.3); best guess: ' of' after a noun and ' popular'",
+   "fire": [
+    "The old woman was the only living relative of the family.",
+    "The novel is by far the most popular book in the country.",
+    "He is a founding partner of the firm.",
+    "Soccer remains the most popular sport in Brazil.",
+    "She was the youngest daughter of the mayor.",
+    "They are among the most popular singers in Korea.",
+    "The bird is the last known survivor of its kind.",
+    "This is the most popular beach in Spain."
+   ],
+   "quiet": [
+    "The old woman lives by the sea with her family.",
+    "The novel is about a man and his horse.",
+    "He works late and comes home tired.",
+    "Soccer starts at noon on Saturday.",
+    "She met the mayor at lunch.",
+    "They sing well and travel a lot.",
+    "The bird flew off when it saw us.",
+    "This beach gets very crowded in June."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; ' of', ' popular' (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card: FLAG dense 89.4%, gate-closed regime 100%, max 0.99. An 8 + 8 test can hardly pass here, and I expect this to fail. Probe: ' of' 0.703; ' popular' 0.659; ' in' 0.497; ' not' 0.296; ' home' 0.269; a bare 'Yes' 0.168."
+}

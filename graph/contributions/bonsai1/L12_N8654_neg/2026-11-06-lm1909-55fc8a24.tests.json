@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-55fc8a24",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N8654-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N8654",
+   "pole": "-",
+   "label": "a preposition placing a body or object physically on, through or into something ('lay on the bed', 'run through the plaster', 'toss into')",
+   "fire": [
+    "The old man was sleeping on the hospital couch all night.",
+    "Stand with your palms pressed flat on the wall.",
+    "Copper pipes run through the concrete under the kitchen floor.",
+    "Neighbors dump broken chairs and trash into the vacant lot.",
+    "Water from the roof drains through a long tube beneath the yard.",
+    "The cat climbed onto the shelf and curled up beside the books.",
+    "He laid the injured dog gently on a blanket in the truck.",
+    "The workers poured wet cement into the deep holes by the road."
+   ],
+   "quiet": [
+    "The old man was thinking on the matter all night.",
+    "Stand by your decision and rely on your own judgment.",
+    "Copper prices rose through the first half of the year.",
+    "Neighbors looked into the matter and talked it over.",
+    "Word of the plan spread through a long chain of friends.",
+    "The cat came home on Friday and slept until the weekend.",
+    "He spoke kindly on behalf of the dog's owner in the town.",
+    "The workers went into debt during the long strike by the union."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "physical placement prepositions",
+ "unit_kind": "syntactic / semantic",
+ "confidence": 0.85,
+ "notes": "Card: ' on' x9, ' in' x5, ' through' x4, ' onto' x4, ' into' x2, ' enters', ' passes'. Probe: ' through' in 'cables run through the plaster' 0.805; ' on' in 'lay ... on the bed' 0.780; ' on' in 'flat on the floor' 0.733; ' into' 0.526; 'on Monday' 0.056; 'depends on' 0.003; 'through his whole life' 0.070. The near misses use the same prepositions in time or abstract senses."
+}

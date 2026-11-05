@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c5be22c9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N3091+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N3091",
+   "pole": "+",
+   "label": "marking written text by circling, crossing out, underlining or striking through",
+   "fire": [
+    "Ask your pupils to circle the verbs in each sentence.",
+    "Hand out the article and let them cross out every adjective.",
+    "Please underline the main idea in each paragraph of the essay.",
+    "The editor drew a strike through the last two lines of the draft.",
+    "On the worksheet, circle the correct answer with a pencil.",
+    "She read the contract and crossed out the clauses she disliked.",
+    "Have the class underline the rhyming words in the poem.",
+    "Use a red pen to circle any spelling mistakes in your notes."
+   ],
+   "quiet": [
+    "Ask your pupils to copy the verbs from each sentence.",
+    "Hand out the article and let them read aloud every paragraph.",
+    "Please summarize the main idea in each paragraph of the essay.",
+    "The union called a strike over the last two years of pay.",
+    "On the playground, form a circle with the other children.",
+    "She read the contract and crossed the street to the bank.",
+    "Have the class recite the rhyming words in the poem.",
+    "Use a red pen to sign your name at the top of your notes."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "marking up written text",
+ "unit_kind": "semantic",
+ "confidence": 0.85,
+ "notes": "Card: ' circle' x4, ' cross' x2, '-decoration' x2, ' underline' x2, 'strike', ' Out'. Probe: ' through' after 'a strike' 1.489; ' in' after 'circle the two words' 0.674; ' out' after 'cross' 0.642; 'circle it in red' 0.491; 'read out' and 'say the two words' 0.008; 'sat in a circle' 0.005; 'cross the river' 0.056. Near misses keep the same words in another sense or the same frames with another verb."
+}

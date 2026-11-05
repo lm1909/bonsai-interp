@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-cb7be3c8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N5686-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N5686",
+   "pole": "-",
+   "label": "a verb in a past subjunctive or conditional form, in an unreal or hypothetical clause ('como si estuviera', 'bien que ... fussent', 'сказал бы'), across languages",
+   "fire": [
+    "El niño lloraba como si tuviera un dolor muy fuerte.",
+    "Caminaba por la calle como si fuera el dueño del barrio.",
+    "Ojalá pudiera volver a ver a mi abuela este verano.",
+    "Bien qu'ils fussent très pauvres, ils donnaient du pain aux voisins.",
+    "Je voulais qu'il eût le temps de finir son livre.",
+    "Parlava di lei come se fosse sua madre.",
+    "Ele falava com o gerente como se fosse o chefe da empresa.",
+    "Если бы у меня были деньги, я купил бы новую машину."
+   ],
+   "quiet": [
+    "El niño lloraba porque tenía un dolor muy fuerte.",
+    "Caminaba por la calle porque es el dueño del barrio.",
+    "Mañana voy a volver a ver a mi abuela este verano.",
+    "Ils sont très pauvres, mais ils donnent du pain aux voisins.",
+    "Je sais qu'il a le temps de finir son livre.",
+    "Parlava di lei perché è sua madre.",
+    "Ele falava com o gerente porque é o chefe da empresa.",
+    "У меня есть деньги, и я купил новую машину."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unreal-clause verb forms",
+ "unit_kind": "grammatical",
+ "confidence": 0.85,
+ "notes": "Card: 'uv' of est|uv|iera, ' fuer', ' fuss', ' сказал', ' ser' of seroit; promotes ' shall', ' will', ' shows'. Probe: 'uv' 0.820; ' fuer' 0.560; ' fuss' 0.558; ' сказал' before 'бы' 0.413; English 'If I were rich' 0.280; the indicative in the same frames 0.003-0.019. New cases in the test: Italian and Portuguese 'fosse', Spanish 'tuviera' and 'pudiera', and French 'eût'."
+}

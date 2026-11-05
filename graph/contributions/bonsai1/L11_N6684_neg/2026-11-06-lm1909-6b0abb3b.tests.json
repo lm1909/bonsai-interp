@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-6b0abb3b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6684-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N6684",
+   "pole": "-",
+   "label": "Python machine-learning code in the scikit-learn style (estimators, fit, Regressor, clf)",
+   "fire": [
+    "from sklearn.ensemble import RandomForestClassifier\nclf = RandomForestClassifier()\nclf.fit(X, y)\n",
+    "from sklearn.svm import SVR\nregressor = SVR()\nregressor.fit(X_train, y_train)\n",
+    "pca = PCA(n_components=2)\nX = pca.fit_transform(X)\nmodel = GradientBoostingRegressor()\n",
+    "class Lasso(BaseEstimator, RegressorMixin):\n    def __init__(self, alpha):\n        self.alpha = alpha\n",
+    "class Forest(BaseEstimator, ClassifierMixin):\n    def fit(self, X, y):\n        return self\n",
+    "from sklearn.naive_bayes import GaussianNB\nclf = GaussianNB()\npreds = clf.predict(X)\n",
+    "grid = GridSearchCV(estimator=clf, param_grid=params)\ngrid.fit(X, y)\n",
+    "tree = DecisionTreeRegressor(max_depth=3)\ntree.fit(X, y)\nscore = tree.score(X, y)\n"
+   ],
+   "quiet": [
+    "from collections import OrderedDict\ntable = OrderedDict()\ntable.update(a, b)\n",
+    "from pathlib import Path\nfolder = Path()\nfolder.mkdir(parents=True)\n",
+    "log = Logger(name='app')\nline = log.format(line)\nserver = HttpServer()\n",
+    "class Button(BaseWidget, ClickMixin):\n    def __init__(self, label):\n        self.label = label\n",
+    "class Cart(BaseStore, SessionMixin):\n    def add(self, sku, qty):\n        return self\n",
+    "from datetime import datetime\nnow = datetime.now()\ntext = now.isoformat()\n",
+    "conn = connect(host=host, port=port)\nconn.send(data)\n",
+    "queue = TaskQueue(max_size=3)\nqueue.put(job)\nsize = queue.size()\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "scikit-learn style ML code",
+ "unit_kind": "topic / code",
+ "confidence": 0.85,
+ "notes": "Card: ' ----------\\n' x6, 'f' of clf, 'Regressor', 'Model', '_estimator', '.fit', 'Est' of BaseEstimator. Probe: 'self' in a BaseEstimator class 1.040; '()\\n' after MLPRegressor 0.966; 'clf' 0.853; the same class shape with BaseView and LoginMixin 0.053; os.listdir 0.013; prose about a regression model 0.154. Near misses are ordinary Python of the same shape."
+}

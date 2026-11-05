@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c65a2334",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N10897+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N10897",
+   "pole": "+",
+   "label": "the Python fallback after a failed optional import ('except ImportError:' and the line after it)",
+   "fire": [
+    "try:\n    import pandas\nexcept ImportError:\n    pandas = None\n",
+    "try:\n    import requests\nexcept ImportError:\n    has_requests = False\n",
+    "try:\n    import simplejson\nexcept ImportError:\n    simplejson = None\n",
+    "try:\n    import matplotlib\nexcept ImportError:\n    plotting = False\n",
+    "try:\n    import lxml\nexcept ImportError:\n    lxml = None\n",
+    "try:\n    import cython\nexcept ImportError:\n    compiled = False\n",
+    "try:\n    import redis\nexcept ImportError:\n    redis = None\n",
+    "try:\n    import ujson\nexcept ImportError:\n    fast_json = False\n"
+   ],
+   "quiet": [
+    "try:\n    value = int(text)\nexcept TypeError:\n    value = None\n",
+    "try:\n    item = table[key]\nexcept KeyError:\n    found = False\n",
+    "try:\n    result = 1 / count\nexcept ZeroDivisionError:\n    result = None\n",
+    "try:\n    handle = open(name)\nexcept OSError:\n    opened = False\n",
+    "try:\n    entry = rows[n]\nexcept IndexError:\n    entry = None\n",
+    "try:\n    score = float(raw)\nexcept ValueError:\n    valid = False\n",
+    "try:\n    page = fetch(url)\nexcept TimeoutError:\n    page = None\n",
+    "try:\n    data = load(path)\nexcept EOFError:\n    loaded = False\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "optional-import fallback in Python",
+ "unit_kind": "syntactic",
+ "confidence": 0.4,
+ "notes": "Card: broad (6.4%), ':\\n' x5, peaks after 'except ImportError'; other peaks on prose ', ' and ' certificate'. Probe: indent after 'except ImportError:' 0.354-0.581; 'except ValueError' 0.145. But plain 'import yaml' 0.322, 'not included in the bundle,' 0.741 and 'self-signed SSL certificate' 0.327, so this is a partial reading of a broad pole. Near misses are other except clauses in the same shape."
+}

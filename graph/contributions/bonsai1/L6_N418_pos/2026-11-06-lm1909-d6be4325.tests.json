@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-d6be4325",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N418+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N418",
+   "pole": "+",
+   "label": "'disability' or 'disabilities' in the phrase 'learning disability'",
+   "fire": [
+    "Her son was diagnosed with a learning disability last year.",
+    "Teachers met to discuss pupils with learning disabilities at the school.",
+    "Lead exposure in infancy may cause learning disabilities later on.",
+    "The charity supports adults with a learning disability across Wales.",
+    "He wrote a guide for parents about learning disabilities and reading.",
+    "Many inmates have an undiagnosed learning disability, the report says.",
+    "The National Center for Learning Disabilities funded the study.",
+    "A student with a learning disability may get more time on exams."
+   ],
+   "quiet": [
+    "Her son was diagnosed with a heart defect last year.",
+    "Teachers met to discuss pupils with hearing loss at the school.",
+    "Lead exposure in infancy may cause learning delays later on.",
+    "The charity supports adults with a physical disability across Wales.",
+    "He wrote a guide for parents about learning styles and reading.",
+    "Many inmates have an undiagnosed visual impairment, the report says.",
+    "The National Center for Veterans' Disability funded the study.",
+    "A student with a broken arm may get more time on exams."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'learning disability'",
+ "unit_kind": "lexical",
+ "confidence": 0.9,
+ "notes": "Card: ' disabilities' x6, ' disability' x5, ' Disabilit...', and a few ' health', ' Hall', ' organs'. Probe: 'learning disability' 0.997; 'Learning Disabilities' 0.953; 'learning disabilities' 0.744; 'physical disability' 0.099; bare 'a disability' 0.000; 'learning difference' 0.183; ' health' 0.061; ' organs' 0.047; ' Hall' 0.076. So the word needs 'learning' in front of it.",
+ "trigger": {
+  "words": [
+   "disability",
+   "disabilities"
+  ]
+ }
+}

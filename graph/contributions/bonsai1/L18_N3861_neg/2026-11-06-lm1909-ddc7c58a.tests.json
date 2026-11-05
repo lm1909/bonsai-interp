@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ddc7c58a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N3861-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N3861",
+   "pole": "-",
+   "label": "booking or renting a space or a time slot ('a room can be booked', 'reserve a spot', 'rented space', 'allotted')",
+   "fire": [
+    "For a small fee, a table can be reserved by any local trader.",
+    "Places are limited, so sign up early to book your spot.",
+    "The church offers rented space in its hall for yoga classes.",
+    "Each speaker is allotted a ten-minute slot on the second day.",
+    "Parents can reserve a place for the trip on the school website.",
+    "At the market, stalls are leased to farmers by the town.",
+    "Musicians can hire a room in the studio by the hour.",
+    "Interviews are by appointment, in twenty-minute slots each morning."
+   ],
+   "quiet": [
+    "For a small fee, a cake can be delivered to any local trader.",
+    "Tickets are cheap, so come early to enjoy your food.",
+    "The church offers warm soup in its hall for homeless visitors.",
+    "Each speaker is given a printed copy of the program on the second day.",
+    "Parents can read a note about the trip on the school website.",
+    "At the market, apples are sold to farmers by the crate.",
+    "Musicians can tune a guitar in the studio by ear.",
+    "Interviews are on television, with local reporters each morning."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "booking a space or slot",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' space' x3, ' allotted' x2, ' a' x2, ' spot' x2, ' room', ' slots', ' leased'. Probe: ' space' after 'rented' 0.555; ' room' 0.476; ' a' after 'reserve' 0.429; ' height' after 'allotted' 0.323; ' leased' 0.264; a meal and a menu in the same frames 0.006-0.052."
+}

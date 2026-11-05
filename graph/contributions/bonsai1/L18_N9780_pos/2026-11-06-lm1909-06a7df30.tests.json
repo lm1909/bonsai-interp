@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-06a7df30",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N9780+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N9780",
+   "pole": "+",
+   "label": "talk of preventing or reducing a health risk ('avoid eyestrain', 'can prevent', 'try to reduce your nausea')",
+   "fire": [
+    "Knowing your family history before pregnancy can prevent the heartache later.",
+    "To avoid backache, nurses should bend at the knees when lifting.",
+    "Regular testing can prevent complications in people with diabetes.",
+    "You can try to lower your blood pressure by eating less salt.",
+    "To avoid dehydration, older adults should drink water through the day.",
+    "Learning about the risks before surgery can prevent needless worry.",
+    "You can try to ease your migraine with a dark room.",
+    "Early treatment can prevent the disease from reaching the lungs."
+   ],
+   "quiet": [
+    "Knowing your family budget before a holiday can prevent the arguments later.",
+    "To avoid delays, drivers should stop at the bridge when loading.",
+    "Regular cleaning can prevent rust in machines with gears.",
+    "You can try to lower your gas bill by using less heat.",
+    "To avoid crowds, older visitors should tour the castle through the week.",
+    "Learning about the fees before moving can prevent needless spending.",
+    "You can try to ease your commute with a bicycle.",
+    "Early booking can prevent the tour from reaching its limit."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "preventing a health risk",
+ "unit_kind": "topic",
+ "confidence": 0.2,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ',' x4, 'M' of MCI, ' to', ' you', ' treatment', ' avoid', ' prevent'. Probe: ' prevent' after 'before having a baby' 0.754, but in other health sentences only 0.039-0.118, against 0.015-0.105 for non-health frames."
+}

@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-fe112fb7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N11616+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N11616",
+   "pole": "+",
+   "label": "the tokens '—all' (em dash glued to 'all'), the 'س' of Arabic هند|س|ية and the 'ado' of Spanish orient|ado",
+   "fire": [
+    "The river rose and swept away six bridges—all within a single night.",
+    "Her paintings were sold to three museums—all of them in Europe.",
+    "He collected stamps, coins and old maps—all kept in a shoebox.",
+    "The team lost its coach, its captain and its sponsor—all before the season began.",
+    "درس الطالب الرياضيات والعلوم الهندسية في الجامعة.",
+    "زارت اللجنة المشروع وناقشت التفاصيل الهندسية مع العمال.",
+    "Es un curso orientado a los jóvenes de la ciudad.",
+    "Presentó un plan orientado al ahorro de energía en las casas."
+   ],
+   "quiet": [
+    "The river rose and swept away six bridges, within a single night.",
+    "Her paintings were sold to three museums—two of them in Europe.",
+    "He collected stamps, coins and old maps, kept in a shoebox.",
+    "The team lost its coach, its captain and its sponsor—three before the season began.",
+    "درس الطالب الرياضيات والعلوم الطبيعية في الجامعة.",
+    "زارت اللجنة المشروع وناقشت التفاصيل الصغيرة مع العمال.",
+    "Es un curso para los jóvenes de la ciudad.",
+    "Presentó un plan para el ahorro de energía en las casas."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'—all', هند|س|ية, orient|ado",
+ "unit_kind": "token (list)",
+ "confidence": 0.6,
+ "notes": "This is a list: I found nothing the tokens share. The card flags the pole as broad (2.9%) with 71% echo-regime peaks and max 0.66. Probe: 'س' 0.925; '—all' 0.765-0.802; 'ado' 0.470; ', in a matter of days' 0.158; '—some' 0.072; the same Arabic and Spanish frames without the word 0.052-0.124.",
+ "trigger": {
+  "tokens": [
+   "—all",
+   "س",
+   "ado"
+  ]
+ }
+}

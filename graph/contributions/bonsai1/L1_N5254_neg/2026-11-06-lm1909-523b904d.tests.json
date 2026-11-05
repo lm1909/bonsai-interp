@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-523b904d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N5254-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:22:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N5254",
+   "pole": "-",
+   "label": "a capitalized word in the name of a broadcaster or a formal declaration, after a long lead-in ('NHK WORLD RADIO', 'Universal Islamic Declaration'), and ' version' after 'either' in a licence",
+   "fire": [
+    "You are listening to the evening report in Spanish from NHK WORLD RADIO JAPAN.",
+    "The African Charter and the Universal Islamic Declaration were discussed in Paris last week.",
+    "Redistributed under the licence published by the Free Software Foundation, either version 2 of it, or later.",
+    "This has been the weekend program in Hindi from NHK WORLD RADIO JAPAN.",
+    "Scholars compared the Universal Islamic Declaration with other human rights texts in the seminar.",
+    "You may modify it under the terms issued by the Free Software Foundation, either version 3, or newer.",
+    "Good morning and welcome to the latest headlines in Arabic from NHK WORLD RADIO JAPAN.",
+    "The first draft of the Universal Islamic Declaration was read aloud to delegates in Cairo."
+   ],
+   "quiet": [
+    "You are listening to the evening report in Spanish from the local station here.",
+    "The African Charter and the new trade agreement were discussed in Paris last week.",
+    "Redistributed under the licence published by the Free Software Foundation, with a copy of it, or later.",
+    "This has been the weekend program in Hindi from our studio in the city.",
+    "Scholars compared the old legal codes with other human rights texts in the seminar.",
+    "You may modify it under the terms issued by the Free Software Foundation, with credit, or newer.",
+    "Good morning and welcome to the latest headlines in Arabic from our team downtown.",
+    "The first draft of the annual budget was read aloud to delegates in Cairo."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' RADIO', ' Declaration', ' version' (guess)",
+ "unit_kind": "token (list)",
+ "confidence": 0.25,
+ "notes": "Low-confidence guess. Card: ' version' x13, ' Plan' x2, ' RADIO', ' Declaration'; L 99%; max 2.05. Probe: ' RADIO' 1.292 after a long lead-in, but 0.023 and 0.008 in short sentences; ' Declaration' 0.607 in 'Universal Islamic Declaration', 0.042 in 'Declaration of Independence'; ' version' 0.324 after the long licence line, 0.035 in a short one.",
+ "trigger": {
+  "tokens": [
+   " RADIO",
+   " Declaration",
+   " version"
+  ]
+ }
+}
