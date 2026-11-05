@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f8115739",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N6780-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:24:37+00:00",
+ "recipe": {
+  "toolchain_commit": "454eac5cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N6780_neg/2026-11-06-lm1909-f8115739.tests.json"
+ },
+ "label": "code constants, acronyms and CJK words (broad; output promotes runs of spaces and ' |'; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N6780_neg/2026-11-06-lm1909-f8115739.tests.json",
+   "prereg_commit": "454eac5cf",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.15,
+     "peak": "USE"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.525,
+     "peak": " C"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.259,
+     "peak": "娱乐"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.419,
+     "peak": " C"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.079,
+     "peak": "USE"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.19,
+     "peak": "娱乐"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.112,
+     "peak": " C"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.204,
+     "peak": "USE"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.015,
+     "peak": " mode"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.006,
+     "peak": " serve"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.003,
+     "peak": " hotels"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.014,
+     "peak": "Most"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.005,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.012,
+     "peak": " shops"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.02,
+     "peak": "Most"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.012,
+     "peak": " zone"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.197,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "454eac5cf",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tokens before table spacing (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (1.1%). Output direction promotes runs of spaces, ' |', '    \\n'. Card: '�' x5, ' �' x3, ' smart' x2, '.lines' x2, '_T'. Probe: ' C' in 'CMA-CEM' 0.32, '娱乐' 0.22, '_T' 0.19; 'Most ships' 0.00. I could not find a shared pattern.",
+ "selection": "random draw"
+}

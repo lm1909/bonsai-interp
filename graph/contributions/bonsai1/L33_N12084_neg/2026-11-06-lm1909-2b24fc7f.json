@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2b24fc7f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N12084-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:21+00:00",
+ "recipe": {
+  "toolchain_commit": "454eac5cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N12084_neg/2026-11-06-lm1909-2b24fc7f.tests.json"
+ },
+ "label": "chronic illness and risk in medical writing ('a chronic frustration', 'disease duration', 'development and progression')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N12084_neg/2026-11-06-lm1909-2b24fc7f.tests.json",
+   "prereg_commit": "454eac5cf",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.404,
+     "peak": " chronic"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.133,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.282,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.255,
+     "peak": "ronic"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.349,
+     "peak": "organ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.547,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.226,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.229,
+     "peak": "ronic"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " lab"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " come"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " often"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "Long"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " music"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.268,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "454eac5cf",
+  "minutes": 16,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "chronic disease risk",
+ "unit_kind": "semantic",
+ "confidence": "low",
+ "notes": "Output direction promotes ' contribute', ' contributing', ' involved', ' drive'. Card: ' chronic' x2, '-term' x2, ' systemic' x2, ' multi'. Probe: 'a chronic frustration' 0.45, 'development and progression' 0.40, 'further increase this risk' 0.29, 'long-term impact' 0.08; 'Age and height' 0.00.",
+ "selection": "random draw"
+}

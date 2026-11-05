@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0d4e0697",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N8770+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:49+00:00",
+ "recipe": {
+  "toolchain_commit": "454eac5cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N8770_pos/2026-11-06-lm1909-0d4e0697.tests.json"
+ },
+ "label": "code test just before 'or' is expected ('if x is None or …', 'if not item'; output promotes ' or' in many languages)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N8770_pos/2026-11-06-lm1909-0d4e0697.tests.json",
+   "prereg_commit": "454eac5cf",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.317,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.972,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.355,
+     "peak": " fields"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.393,
+     "peak": " row"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.293,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.219,
+     "peak": " opts"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.12,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.182,
+     "peak": " data"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": "for"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "(i"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "def"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " code"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "low"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "def"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "(path"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.305,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "454eac5cf",
+  "minutes": 17,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "before 'or' in a test",
+ "unit_kind": "prediction / code",
+ "confidence": "low",
+ "notes": "Output direction promotes ' or', ' или', '—or', ' Alternatively', ' oder', '或'. Card: ' None' x3, ' unable' x3, ' response' x2. Probe: ' None' 0.03, ' item' 0.04, ' filters' 0.20, ' unable' 0.16. Fire items are written as multi-line passages with earlier context.",
+ "selection": "random draw"
+}

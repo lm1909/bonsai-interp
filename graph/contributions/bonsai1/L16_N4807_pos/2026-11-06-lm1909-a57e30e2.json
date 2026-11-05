@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a57e30e2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N4807+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:28+00:00",
+ "recipe": {
+  "toolchain_commit": "454eac5cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N4807_pos/2026-11-06-lm1909-a57e30e2.tests.json"
+ },
+ "label": "failure to agree, or differing opinions ('could not agree', 'opinions can vary', 'as many opinions as')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N4807_pos/2026-11-06-lm1909-a57e30e2.tests.json",
+   "prereg_commit": "454eac5cf",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.718,
+     "peak": " agree"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.562,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.462,
+     "peak": " differ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.43,
+     "peak": " disagreement"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.161,
+     "peak": " agree"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.222,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.899,
+     "peak": " agree"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.365,
+     "peak": " divided"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " members"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.29,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " slowly"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " sides"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.606,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " ready"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.512,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "454eac5cf",
+  "minutes": 16,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "disagreement",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Output direction promotes ' varying', ' debate', ' diverse', ' differing'. Probe: 'could not agree' 1.00, 'as many opinions as' 0.73, 'opinions can vary' 0.52, 'disagreement among scholars' 0.34. 'as many chairs as' fired 0.29 on ' many', so one near miss keeps that frame. ' low' in code is not explained.",
+ "selection": "random draw"
+}

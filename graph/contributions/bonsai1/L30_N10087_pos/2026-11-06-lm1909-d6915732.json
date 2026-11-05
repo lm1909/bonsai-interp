@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d6915732",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N10087+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:59+00:00",
+ "recipe": {
+  "toolchain_commit": "454eac5cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N10087_pos/2026-11-06-lm1909-d6915732.tests.json"
+ },
+ "label": "something getting worse or harder ('gets more dangerous', 'has gotten a lot more complicated')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N10087_pos/2026-11-06-lm1909-d6915732.tests.json",
+   "prereg_commit": "454eac5cf",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.432,
+     "peak": " gets"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.554,
+     "peak": " lot"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.388,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.391,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.329,
+     "peak": " gets"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.638,
+     "peak": " gotten"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.486,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.226,
+     "peak": " gets"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " season"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " court"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.363,
+     "peak": " trip"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " comes"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " schedule"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " farm"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.05,
+     "peak": " him"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.411,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "454eac5cf",
+  "minutes": 17,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "getting worse",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Output direction promotes ' destructive', ' alarming', ' misleading', ' benign', ' odd'. Card: ' more' x3, ' lot' x2, ' feel' x2, ' particularly'. Probe: 'gets more dangerous' 0.72, 'gotten a lot more complicated' 0.58, 'particularly bad' 0.24; 'on Tuesday' 0.09; 'at noon' 0.00.",
+ "selection": "random draw"
+}

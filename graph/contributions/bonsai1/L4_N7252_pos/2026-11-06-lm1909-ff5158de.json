@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ff5158de",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N7252+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:24:20+00:00",
+ "recipe": {
+  "toolchain_commit": "454eac5cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N7252_pos/2026-11-06-lm1909-ff5158de.tests.json"
+ },
+ "label": "'ES' of GOES and 'ings' of goings (pieces after 'GO' / 'go'; gate-closed)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N7252_pos/2026-11-06-lm1909-ff5158de.tests.json",
+   "prereg_commit": "454eac5cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.807,
+     "peak": "ES"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.096,
+     "peak": "ES"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.479,
+     "peak": "ings"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.655,
+     "peak": "ings"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.701,
+     "peak": "ES"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.566,
+     "peak": "ings"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.405,
+     "peak": "ings"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.944,
+     "peak": "ES"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": " clock"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " crowd"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.045,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " warnings"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.038,
+     "peak": " boxes"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " maps"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.678,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "454eac5cf",
+  "minutes": 17,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "GO|ES, go|ings",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card flags gate-closed (100% echo); 'ES' x4, 'ug' x3, 'ings' x2, 'agi' x2, 'ō' x2. A list label. Probe: GOES 0.67, comings and goings 0.53, goings on 0.92; 'She goes' 0.03.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c82571f9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N635+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:24:06+00:00",
+ "recipe": {
+  "toolchain_commit": "454eac5cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N635_pos/2026-11-06-lm1909-c82571f9.tests.json"
+ },
+ "label": "naming a symbol or punctuation mark in prose, rather than using it ('commands (||, pipes)', 'using semicolons')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N635_pos/2026-11-06-lm1909-c82571f9.tests.json",
+   "prereg_commit": "454eac5cf",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.867,
+     "peak": " pipes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.488,
+     "peak": " dashes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.807,
+     "peak": " ||"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.527,
+     "peak": "icol"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.163,
+     "peak": "and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.443,
+     "peak": "icol"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.017,
+     "peak": " mean"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.317,
+     "peak": " pipes"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": "ges"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": "'t"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " bus"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " chapter"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "Use"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " stories"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " trains"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.466,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "454eac5cf",
+  "minutes": 17,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "mentioning a symbol",
+ "unit_kind": "contextual / semantic",
+ "confidence": "medium",
+ "notes": "Card: \"',\" x2, 's' x2, ' +', 'pipes', '||', ' <->', 'icol'. Probe: '(||, pipes, etc)' 0.80, 'semicolons' 0.51; '# test + operator' 0.08; 'x = a + b' 0.02; 'eating cookies' 0.01.",
+ "selection": "random draw"
+}
