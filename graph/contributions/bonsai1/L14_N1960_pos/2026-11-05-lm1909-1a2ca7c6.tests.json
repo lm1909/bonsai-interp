@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-1a2ca7c6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N1960+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:32:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N1960",
+   "pole": "+",
+   "label": "' =' in code when a variable already assigned earlier is reassigned, not when a new name is introduced",
+   "fire": [
+    "line = f.readline()\nline = line.rstrip()\nprint(line)\n",
+    "word = get_word()\nword = word.upper()\nreturn word\n",
+    "n = 5\nn = n * 2\nprint(n)\n",
+    "url = base + path\nurl = url.lower()\nfetch(url)\n",
+    "j = 0\nwhile j < 5:\n    j = j + 2\n",
+    "items = load()\nitems = sorted(items)\nshow(items)\n",
+    "let title = getTitle();\ntitle = title.trim();\nrender(title);\n",
+    "msg = read()\nmsg = msg.strip()\nmsg = msg.title()\n"
+   ],
+   "quiet": [
+    "line = f.readline()\nclean = line.rstrip()\nprint(clean)\n",
+    "word = get_word()\nbig = word.upper()\nreturn big\n",
+    "n = 5\nm = n * 2\nprint(m)\n",
+    "url = base + path\nlow = url.lower()\nfetch(low)\n",
+    "j = 0\nwhile j < 5:\n    k = j + 2\n",
+    "items = load()\nranked = sorted(items)\nshow(ranked)\n",
+    "let title = getTitle();\nlet short = title.trim();\nrender(short);\n",
+    "msg = read()\nbody = msg.strip()\nhead = body.title()\n"
+   ]
+  }
+ ],
+ "predictions": "The second ' =' on the same name fires; the same code with a new name stays quiet.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' =' reassigning a variable",
+ "unit_kind": "contextual",
+ "confidence": "medium"
+}
