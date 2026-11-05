@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-ebbdbc4d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N8680-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:09:33+00:00",
+ "recipe": {
+  "toolchain_commit": "bbb8bd396",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N8680_neg/2026-11-06-lm1909-ebbdbc4d.tests.json"
+ },
+ "label": "a Spanish or German function word before a journal or publication ('en la revista', 'in den wichtigsten Zeitschriften')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N8680_neg/2026-11-06-lm1909-ebbdbc4d.tests.json",
+   "prereg_commit": "bbb8bd396",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.747,
+     "peak": " la"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.432,
+     "peak": " en"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.286,
+     "peak": " una"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.609,
+     "peak": " una"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.841,
+     "peak": " la"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.361,
+     "peak": "ten"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.311,
+     "peak": " einer"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.33,
+     "peak": " en"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.297,
+     "peak": " en"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.24,
+     "peak": " esta"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " moto"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.103,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.225,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.068,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.098,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.029,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.396,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bbb8bd396",
+  "minutes": 7,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "before 'revista'/'Zeitschrift'",
+ "unit_kind": "contextual / prediction",
+ "confidence": "medium",
+ "selection": "random draw"
+}
