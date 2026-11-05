@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-e9dd2228",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N1296-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:59:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N1296",
+   "pole": "-",
+   "label": "the whitespace before a fresh assignment in deeply indented Python code (a guess)",
+   "fire": [
+    "class Scraper(object):\n    def run(self, item):\n        state = 's'\n        view = ''\n        view_list = []\n\n        for i, row in enumerate(item):\n            total = 0\n            name = row.name\n        return view_list",
+    "def load(item):\n    logger.info()\n\n    page = download(item.url).text\n    page = get_match(page, 'x')\n    rows = []\n    return rows",
+    "def setup(self):\n        self.count = 0\n        self.name = None\n        self.title = None\n        self.items = []\n        self.done = False",
+    "if __name__ == '__main__':\n    args = parse()\n    path = args.path\n    limit = args.limit\n    out = open(path)\n    out.close()",
+    "for key in config:\n        value = config[key]\n        result = compute(value)\n        total = total + result\n        count = count + 1",
+    "def make():\n    x = 1\n    y = 2\n    z = x + y\n    w = z * 2\n    return w",
+    "try:\n    conn = connect()\n    cursor = conn.cursor()\n    rows = cursor.fetchall()\n    size = len(rows)\nexcept Exception:\n    pass",
+    "class Item:\n    def __init__(self):\n        self.price = 1\n        self.color = 'red'\n        self.size = 2\n        self.tags = []"
+   ],
+   "quiet": [
+    "The scraper keeps its state and its view in two small variables, and it builds a list as it walks through each row of the item.",
+    "The loader writes a log line, downloads the page, and keeps only the rows that match the pattern it was given.",
+    "The setup step resets the count, clears the name and title, empties the list of items and marks the job as not done.",
+    "When run directly, the script reads its arguments, opens the path it was given, and closes the file when it finishes.",
+    "For every key in the config, the program looks up the value, computes the result and adds it to the running total.",
+    "The function adds one and two, doubles the sum and returns the answer to whoever asked for it.",
+    "The script connects to the database, reads every row, counts them, and ignores any error that happens along the way.",
+    "Each item starts with a price of one, the color red, a size of two and an empty list of tags."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "indent before an assignment (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Probes on Python snippets stayed at or under 0.03. The corpus peaks may need longer files; a failure is the likely outcome and is recorded as such."
+}
