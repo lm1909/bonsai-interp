@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-f0f0c1f5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N214-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:48:11+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N214",
+   "pole": "-",
+   "label": "a token in text about missing data and imputing it (multiple imputation, missing values, how to handle missing data)",
+   "fire": [
+    "Multiple imputation was used to fill in the missing responses.",
+    "Missing values in the survey are not counted in the total.",
+    "    filled = df.impute(strategy='mean')\n",
+    "We imputed the missing ages using the median of each group.",
+    "Data were missing at random, so we handled them by imputation.",
+    "Rows with missing observations were dropped before the regression.",
+    "Imputation of missing blood pressure values did not change the result.",
+    "How should analysts treat missing data in a long panel study?"
+   ],
+   "quiet": [
+    "Linear regression was used to fit the survey responses.",
+    "High values in the survey are shown in the total.",
+    "    filled = df.sort(order='mean')\n",
+    "We grouped the older ages using the median of each group.",
+    "Data were collected at random, so we checked them by hand.",
+    "Rows with large observations were printed before the regression.",
+    "Measurement of systolic blood pressure values did not change the result.",
+    "How should analysts present the results of a long panel study?"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "missing data and imputation",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' im' x9, ' to', ' Im', ' Multiple', '.im', 'am' in missingdatamethod, ' not' in 'Missing values ... not'. Probes: 'multiple imputation for' 1.431, 'Missing values ... are not' 0.919, '.im' in .impute 0.886, 'handle missing data' 0.227; 'handle heavy bags' 0.001, 'a small sample' 0.062. Near misses keep the statistics and survey topic."
+}

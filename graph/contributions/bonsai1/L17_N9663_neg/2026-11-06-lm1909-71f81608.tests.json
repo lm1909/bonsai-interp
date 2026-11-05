@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-71f81608",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N9663-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:48:11+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N9663",
+   "pole": "-",
+   "label": "a token that records or flags that a stored object changed, in code (self.changed = True, _p_changed = 1, session.add, session.commit)",
+   "fire": [
+    "            self._modified = True\n            return item\n",
+    "        self._p_changed = True\n\n",
+    "            db.session.add(user)\n            db.session.commit()\n",
+    "        self.dirty = True\n        self.changed = False\n",
+    "                self.session.commit()\n",
+    "        obj._p_changed = 1\n\n",
+    "            self.is_modified = True\n",
+    "        session.add(new_order)\n        session.commit()\n"
+   ],
+   "quiet": [
+    "            self._name = 'item'\n            return item\n",
+    "        self._title = title\n\n",
+    "            print(user)\n            print(user.name)\n",
+    "        self.size = 4\n        self.color = None\n",
+    "                self.logger.info('ok')\n",
+    "        obj.width = 1\n\n",
+    "            self.is_visible = False\n",
+    "        print(new_order)\n        print(total)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "flagging or saving a changed object",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: '.add' x2, '_changed' x2, '.changed' x2, ' False' x2, '_modified' x2, '\\n\\n', '.session'. Probes: 'self.changed = True' 0.659, '\\n' after _p_changed = 1 0.389, '.commit' 0.318, '.add' 0.181; plain print or name assignment under 0.02. Near misses are nearby code with no change flag."
+}
