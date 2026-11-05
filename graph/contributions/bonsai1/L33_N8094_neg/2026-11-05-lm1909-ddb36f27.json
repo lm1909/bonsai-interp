@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-ddb36f27",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N8094-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:42:51+00:00",
+ "recipe": {
+  "toolchain_commit": "143120889",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N8094_neg/2026-11-05-lm1909-ddb36f27.tests.json"
+ },
+ "label": "land, water or air as the first part of a compound naming a large mass or body (landmass, air mass, water body)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N8094_neg/2026-11-05-lm1909-ddb36f27.tests.json",
+   "prereg_commit": "143120889",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.963,
+     "peak": " air"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.176,
+     "peak": " water"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.395,
+     "peak": " land"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.688,
+     "peak": " air"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.498,
+     "peak": " land"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.387,
+     "peak": " water"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.157,
+     "peak": " land"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.583,
+     "peak": " air"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.186,
+     "peak": " cold"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": " lake"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.055,
+     "peak": " warm"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.059,
+     "peak": " hills"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": " river"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.216,
+     "peak": " air"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.447,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "143120889",
+  "minutes": 16,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "land/air/water before mass/body",
+ "unit_kind": "contextual / prediction",
+ "confidence": "medium",
+ "selection": "random draw"
+}
