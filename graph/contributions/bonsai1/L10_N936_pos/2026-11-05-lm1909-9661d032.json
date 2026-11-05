@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-9661d032",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N936+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:44+00:00",
+ "recipe": {
+  "toolchain_commit": "b55e150bd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N936_pos/2026-11-05-lm1909-9661d032.tests.json"
+ },
+ "label": "a dense unit with no clear trigger: 16% of tokens reach 0.1 of max, and the strongest readings are mid-word pieces (Russian 'ри', 'ality', 'ertation'); whole-word synonyms were expected to stay lower, but plain words also read weakly",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N936_pos/2026-11-05-lm1909-9661d032.tests.json",
+   "prereg_commit": "b55e150bd",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.468,
+     "peak": "ри"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.437,
+     "peak": "ри"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.16,
+     "peak": " taxes"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.168,
+     "peak": "ality"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.171,
+     "peak": " farming"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.098,
+     "peak": "Both"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.143,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.345,
+     "peak": "ality"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.116,
+     "peak": "П"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.127,
+     "peak": "С"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.163,
+     "peak": " taxes"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.176,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.153,
+     "peak": " farming"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.147,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.124,
+     "peak": " along"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.061,
+     "peak": " visited"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.17,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b55e150bd",
+  "minutes": 4,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "dense: mid-word pieces",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "selection": "random draw"
+}

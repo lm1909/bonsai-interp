@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-f2adc3b3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9527+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:28+00:00",
+ "recipe": {
+  "toolchain_commit": "b55e150bd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N9527_pos/2026-11-05-lm1909-f2adc3b3.tests.json"
+ },
+ "label": "the verb after 'as + pronoun' in the comparative or concessive frame ('as cold as it is', 'as fast as they are', 'based as it is on'), firing on ' is' / ' are' / ' was'; the same adjectives and verbs joined by 'and' stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N9527_pos/2026-11-05-lm1909-f2adc3b3.tests.json",
+   "prereg_commit": "b55e150bd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.891,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.965,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.747,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.729,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.965,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.89,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.673,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.756,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " they"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " abroad"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " they"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " sounds"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.823,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b55e150bd",
+  "minutes": 4,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "' is' in 'as X as it is'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " is",
+   " are",
+   " was",
+   " were"
+  ]
+ }
+}
