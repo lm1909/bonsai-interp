@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-261c942f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3529-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N3529",
+   "pole": "-",
+   "label": "'as yet' or 'previously' just before an un- word ('as yet unidentified', 'previously unknown'), and 'yet to be': the point where something is still not done; 'well known' and 'as usual' stay low.",
+   "fire": [
+    "The museum holds a third sketch, as yet unsigned, by the same hand.",
+    "She has written a long, as yet unfinished, history of the port.",
+    "The fossil belongs to an as yet undescribed genus of beetle.",
+    "Divers found a previously uncharted reef off the northern coast.",
+    "Dozens of letters are yet to be catalogued by the archive.",
+    "The cause of the fire is, as yet, undetermined.",
+    "The victim was a local man whose name is as yet unreleased.",
+    "The study reports previously unrecorded behaviour in wild otters."
+   ],
+   "quiet": [
+    "The museum holds a third sketch, carefully framed, by the same hand.",
+    "She has written a long, highly readable history of the port.",
+    "The fossil belongs to a common genus of beetle.",
+    "Divers found a beautiful coral reef off the northern coast.",
+    "Dozens of letters were catalogued last year by the archive.",
+    "The cause of the fire is, as usual, an electrical fault.",
+    "The victim was a local man whose name was well known.",
+    "The study reports familiar behaviour in wild otters."
+   ]
+  }
+ ],
+ "predictions": "8/8 fire, 0 near misses. The output direction suppresses un- words on the + side, so this - pole promotes them.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "as yet / previously + un- slot",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.8,
+ "notes": "Probes: as yet 0.72-0.97, previously unknown 0.64, yet to be 0.67; 'widely praised' 0.11, 'many well known' 0.01, 'as usual' 0.01. ' were' in 'were not evaluated' 0.16, against 'were' x3 in the card's top examples.",
+ "trigger": {
+  "tokens": [
+   " yet",
+   " previously"
+  ]
+ }
+}

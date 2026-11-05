@@ -1,0 +1,58 @@
+{
+ "contribution": "2026-11-05-lm1909-eb29c467",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N48+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N48",
+   "pole": "+",
+   "label": "The unspaced assignment token ('=', '=s', '=(', '=[') in multi-line code; the same code written with ' = ' stays low.",
+   "fire": [
+    "def emit(self):\n    out.write(('tag', start), sep=node)\n    out.write(('tag', stop), sep=node)\n    self.flush(sep=node)\n",
+    "for row in rows:\n\ttotal+=parse(row)\n\tv=parseField(row)\n\tv=v.lower()\n\tw=v\n",
+    "function box(p, q) {\nthis.size=(size==null?10:size);\nthis.q=q;\nthis.items=[];\n}\n",
+    "def setup(self):\n    self.ax.plot(xs, ys, color=col)\n    self.ax.plot(us, vs, color=col)\n    self.show(block=flag)\n",
+    "while running:\n\tk=read()\n\tk=k.strip()\n\tbuf=[]\n\tbuf=k\n",
+    "var a=(x>0?x:0);\nvar b=a;\nvar c=[];\nvar d=c;\n",
+    "def draw(self):\n    pen.move(('pos', left), speed=fast)\n    pen.move(('pos', right), speed=fast)\n    self.end(speed=fast)\n",
+    "for item in items:\n\tcount+=size(item)\n\tn=sizeOf(item)\n\tn=n+1\n\tm=n\n"
+   ],
+   "quiet": [
+    "def emit(self):\n    out.write(('tag', start), node)\n    out.write(('tag', stop), node)\n    self.flush(node)\n",
+    "for row in rows:\n\ttotal += parse(row)\n\tv = parseField(row)\n\tv = v.lower()\n\tw = v\n",
+    "function box(p, q) {\nthis.size = (size == null ? 10 : size);\nthis.q = q;\nthis.items = [];\n}\n",
+    "def setup(self):\n    self.ax.plot(xs, ys, col)\n    self.ax.plot(us, vs, col)\n    self.show(flag)\n",
+    "while running:\n\tk = read()\n\tk = k.strip()\n\tbuf = []\n\tbuf = k\n",
+    "var a = (x > 0 ? x : 0);\nvar b = a;\nvar c = [];\nvar d = c;\n",
+    "def draw(self):\n    pen.move(('pos', left), fast)\n    pen.move(('pos', right), fast)\n    self.end(fast)\n",
+    "for item in items:\n\tcount += size(item)\n\tn = sizeOf(item)\n\tn = n + 1\n\tm = n\n"
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses. Items are multi-line because one-line snippets scored 0.08-0.23.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unspaced = in code",
+ "unit_kind": "code / token",
+ "confidence": 0.75,
+ "notes": "Card flags a 98% echo regime. Probes: multi-line 0.46-0.74; matched code with spaces 0.09-0.11; 'x=5' in English prose 0.09.",
+ "trigger": {
+  "tokens": [
+   "=",
+   "=[",
+   "=%",
+   "=self",
+   "=s",
+   "=("
+  ]
+ }
+}

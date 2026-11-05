@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-6d376619",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N8303-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N8303",
+   "pole": "-",
+   "label": "A verb of informing or directing someone, where a pronoun object comes next ('told them', 'let them know', 'tell it to'); the same requests with no one addressed stay low.",
+   "fire": [
+    "We rang the airline right away and told them to cancel the booking.",
+    "Please email the front desk to let them know when you arrive.",
+    "The installer leaves your files alone unless you tell it to.",
+    "My neighbours were away, so I phoned and told them about the leak.",
+    "If you can't make it, call the office and let them know.",
+    "She went to the landlord and told him the heating had failed.",
+    "Walk up to the guard and tell him you have an appointment.",
+    "The kids were noisy until I finally told them to stop."
+   ],
+   "quiet": [
+    "We rang the airline right away and paid the booking fee.",
+    "Please email the front desk with your arrival time.",
+    "The installer leaves your files alone during the update.",
+    "My neighbours were away, so I fixed the leak myself.",
+    "If you can't make it, the office will close at five.",
+    "She went to the landlord's house and paid the rent in cash.",
+    "Walk up to the gate and sign in for your appointment.",
+    "The kids were noisy until the film finally started."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0-1 near miss. The output direction shows this pole promotes They/he/them.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "told/let/tell + pronoun slot",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.7,
+ "notes": "Probes: told 0.83, let 0.62, tell 0.46; cancelled the card 0.10, about your leaving date 0.04. The card also shows ',' x7 and ' but' ('I told them X, but' 0.26), so this covers only part of the pole."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-47a56244",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N7237-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N7237",
+   "pole": "-",
+   "label": "Low-confidence guess: the first token after the header in indented Python code (closing quote of a format string, indentation space after a comment); plain top-level lines stay low.",
+   "fire": [
+    "def report(model, a, b):\n    print('loss: %.3f' % model.loss(a, b))\n",
+    "import sys\n\n\ndef reopen_stderr():\n  # get a buffered stderr\n  old_fd, new_fd = os.pipe()\n",
+    "def summary(net, u, v):\n    print('acc: %.1f' % net.acc(u, v))\n",
+    "import time\n\n\ndef wait_for_lock():\n  # take a shared lock\n  lock_fd, lock_id = fcntl.open()\n",
+    "def show(clf, p, q):\n    print('f1: %.4f' % clf.f1(p, q))\n",
+    "import json\n\n\ndef load_cache():\n  # read a local cache\n  raw_data, raw_len = cache.read()\n",
+    "def trace(tree, m, n):\n    print('depth: %.0f' % tree.depth(m, n))\n",
+    "import math\n\n\ndef round_all():\n  # keep a running total\n  sum_a, sum_b = zero.pair()\n"
+   ],
+   "quiet": [
+    "a = 4\nb = 5\nc = a * b\nprint(c)\n",
+    "p = 1\nq = 3\nr = p - q\nprint(r)\n",
+    "names = []\nages = []\ntotal = 0\nprint(total)\n",
+    "u = 'x'\nv = 'y'\nw = u + v\nprint(w)\n",
+    "count = 9\nlimit = 2\nleft = count\nprint(left)\n",
+    "first = 10\nsecond = 20\nthird = first\nprint(third)\n",
+    "m = 7\nn = 8\no = m + n\nprint(o)\n",
+    "alpha = 0\nbeta = 1\ngamma = beta\nprint(gamma)\n"
+   ]
+  }
+ ],
+ "predictions": "Probably fails: probes on this pole never passed 0.25.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "early indented code tokens (guess)",
+ "unit_kind": "code / unclear",
+ "confidence": 0.1,
+ "notes": "Card: '\\n' x5 after '# comment' lines and ' =' x3, max 8.5. I rebuilt the top contexts: 0.04-0.25. One top example is prose ('install the new one', 0.12). I found no trigger; this records the best guess."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-b1a7a25a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11084-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N11084",
+   "pole": "-",
+   "label": "Low-confidence guess: a word placing something relative to another in a series or pair, before its noun ('the next time', 'an opposite direction').",
+   "fire": [
+    "The next week we took the train to the mountains.",
+    "The current pushes the boat in an opposite direction.",
+    "The next person in line can step up to the window.",
+    "The wheel turns in an opposite and equal way.",
+    "Before long, the next chapter of the story was written.",
+    "Each force has an opposite reaction on the body.",
+    "Maybe the next attempt will go better than this.",
+    "The two magnets move in an opposite sense."
+   ],
+   "quiet": [
+    "That week we took the train to the mountains.",
+    "The current pushes the boat in a southerly direction.",
+    "The tall person in line can step up to the window.",
+    "The wheel turns in a slow and steady way.",
+    "Before long, the final draft of the story was written.",
+    "Each force has a measured effect on the body.",
+    "Maybe this attempt will go better than that.",
+    "The two magnets move in a tight circle."
+   ]
+  }
+ ],
+ "predictions": "Probably fails. Only 'opposite' (0.27-0.54) and 'next' (0.28) got anywhere in probes.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "relative position words (guess)",
+ "unit_kind": "semantic",
+ "confidence": 0.2,
+ "notes": "Card peaks: new, next, another, previous, second, opposite. Probes: 'new widgets' 0.08, 'previous pose' under 0.01, 'second day' 0.03, 'opposite sides' under 0.01 against 'an opposite direction' 0.27-0.54. The output promotes new, shorter, old and versions, so a 'version of X' reading is also possible."
+}

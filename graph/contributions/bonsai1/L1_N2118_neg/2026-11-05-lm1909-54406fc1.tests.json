@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-54406fc1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N2118-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N2118",
+   "pole": "-",
+   "label": "Dense unit (66.6% of tokens reach 0.1 of a tiny max 0.23, 100% leak regime); best guess: words with the -ace and -ead rimes (pace, race, brace, tread).",
+   "fire": [
+    "The runners kept up a steady pace on the hill.",
+    "She wore an ankle brace after the fall.",
+    "Both boots have very little tread on the soles.",
+    "Our town holds three boat races in the summer.",
+    "Everyone moves at their own pace in this class.",
+    "Elves and dwarves are common fantasy races.",
+    "The worn tire had almost no tread on one side.",
+    "They slowed the pace near the end of the song."
+   ],
+   "quiet": [
+    "The runners kept up a steady rhythm on the hill.",
+    "She wore an ankle sock after the fall.",
+    "Both boots have very little mud on the soles.",
+    "Our town holds three boat shows in the summer.",
+    "Everyone moves to their own seat in this class.",
+    "Elves and dwarves are common fantasy creatures.",
+    "The worn tire had almost no air on one side.",
+    "They slowed the music near the end of the song."
+   ]
+  }
+ ],
+ "predictions": "Likely fails on near misses: plain tokens reached 0.28-0.43 in probes.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; -ace/-ead rime guess",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags dense. Probes: pace 0.88-0.91, tread 0.98, brace 0.75, races 0.65; but ' ate' 0.43, ' time' 0.43, ' walked' 0.31, 'There' 0.28."
+}
