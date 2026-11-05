@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-7c05043c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N6153-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:51:56+00:00",
+ "recipe": {
+  "toolchain_commit": "95cb2f25b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N6153_neg/2026-11-05-lm1909-7c05043c.tests.json"
+ },
+ "label": "the colon after a field label in a profile or fact box ('Annual income:', 'HEADQUARTERS:', 'Institutions:')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N6153_neg/2026-11-05-lm1909-7c05043c.tests.json",
+   "prereg_commit": "95cb2f25b",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.456,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.22,
+     "peak": " San"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.371,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.575,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.65,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.617,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.317,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.265,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " Francisco"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " NIH"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": " employees"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " September"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.413,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "95cb2f25b",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "fact-box field colon",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "notes": "Card: ':' x12, '\\n' x5, ',' x4, 'stitutions' x3. Probe: 'Annual income:' 0.48, 'REVENUE:' 0.30; 'My rating: 5 of 5' 0.09; prose 0.02.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ":"
+  ]
+ }
+}

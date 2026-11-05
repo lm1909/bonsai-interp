@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-47d89926",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11705-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:51:52+00:00",
+ "recipe": {
+  "toolchain_commit": "95cb2f25b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N11705_neg/2026-11-05-lm1909-47d89926.tests.json"
+ },
+ "label": "lone letter s / S that begins a word the tokenizer splits (' s|pongy', ' s|ienta', ' s|apos')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N11705_neg/2026-11-05-lm1909-47d89926.tests.json",
+   "prereg_commit": "95cb2f25b",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.5,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.383,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.427,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.177,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.266,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.343,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.331,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.059,
+     "peak": "ateau"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " el"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "illes"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " ligne"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.337,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "95cb2f25b",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-off initial s",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Card: ' s' x20, ' S' x4, ' س' x4. Probe: 'sienta' 0.37, 'spongy' 0.20; 'sondée' 0.02 peak on ' sa'; 'tender' 0.00, 'sat' 0.00, sentence-initial 'Sext' 0.00. Which words split was not checked before commit.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " s",
+   " S",
+   "S"
+  ]
+ }
+}

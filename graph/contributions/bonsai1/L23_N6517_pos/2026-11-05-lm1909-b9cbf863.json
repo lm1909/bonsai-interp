@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-b9cbf863",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N6517+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:51:40+00:00",
+ "recipe": {
+  "toolchain_commit": "95cb2f25b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N6517_pos/2026-11-05-lm1909-b9cbf863.tests.json"
+ },
+ "label": "'just' meaning merely, playing something down ('it's just talking heads', 'is just an ideal')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N6517_pos/2026-11-05-lm1909-b9cbf863.tests.json",
+   "prereg_commit": "95cb2f25b",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.696,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.301,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.348,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.181,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.879,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.567,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.199,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.072,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.048,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.212,
+     "peak": " begun"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": " ended"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.071,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.081,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.273,
+     "peak": " just"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": " about"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.325,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "95cb2f25b",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dismissive 'just'",
+ "unit_kind": "contextual / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' only' x8, ' just' x6, '中', ' others', ' qu'. Probe: 'it's just talking heads' 0.72, 'is just an ideal' 0.33; 'has just arrived' 0.03, 'only five dollars' 0.03, 'it was only a reflection' 0.04, so ' only' is not claimed here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " just"
+  ]
+ }
+}

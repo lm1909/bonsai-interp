@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-22d315b0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N7199-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:51:29+00:00",
+ "recipe": {
+  "toolchain_commit": "95cb2f25b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N7199_neg/2026-11-05-lm1909-22d315b0.tests.json"
+ },
+ "label": "two textbook phrases: 'raise the temperature' in a heat definition, and 'mind and body' in philosophy",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N7199_neg/2026-11-05-lm1909-22d315b0.tests.json",
+   "prereg_commit": "95cb2f25b",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.818,
+     "peak": " temperature"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.108,
+     "peak": " raise"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.215,
+     "peak": " raise"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.181,
+     "peak": " body"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.465,
+     "peak": " body"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.199,
+     "peak": " body"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.031,
+     "peak": " raise"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.36,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " side"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.309,
+     "peak": " raise"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.083,
+     "peak": "za"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " essay"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "ancers"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.641,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "95cb2f25b",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "heat definition; mind and body",
+ "unit_kind": "lexical / contextual",
+ "confidence": "low",
+ "notes": "A list label; I could not name a pattern for both (' ex', ' raise', ' body', ' temperature', 'ausal'). Probe: 'heat required to raise the temperature' 1.05, 'distinction of mind and body' 0.66, 'reducible to body' 0.29; 'raise the flag' 0.01, 'hurt her body' 0.01.",
+ "selection": "random draw"
+}
