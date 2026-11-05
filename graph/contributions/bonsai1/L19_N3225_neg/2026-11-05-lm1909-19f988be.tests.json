@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-19f988be",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N3225-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:57:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N3225",
+   "pole": "-",
+   "label": "(guess) code just before a short string literal argument: `.write(\"…\")`, `Word(\"x\")`",
+   "fire": [
+    "log.write(line)\nlog.write(\"\\n\")\nlog.write(footer)\nlog.write(\"\\n\")\n",
+    "digits = pyparsing.Word(pyparsing.nums, exact=3) +\n    pyparsing.Word(\"z\", exact=1) +\n    pyparsing.Word(\"q\", exact=1)\n",
+    "with open(dest, 'wb') as fh:\n    fh.write(payload)\n    fh.write(\"\\n\")\n    return 0\n",
+    "key = pyparsing.Word(pyparsing.alphas) +\n    pyparsing.Word(\"k\", exact=1)\n",
+    "sys.stdout.write(text)\nsys.stdout.write(\"\\n\")\nsys.stdout.flush()\n",
+    "token = pyparsing.Word(pyparsing.hexnums, exact=8) +\n    pyparsing.Word(\"h\", exact=1)\n",
+    "for row in rows:\n    report.write(row)\n    report.write(\",\")\n",
+    "stream.write(title)\nstream.write(\":\")\nstream.write(value)\n"
+   ],
+   "quiet": [
+    "log.write(line)\nlog.flush()\nlog.write(footer)\nlog.close()\n",
+    "digits = parse_number(text, base=3) +\n    parse_number(rest, base=1) +\n    parse_number(tail, base=1)\n",
+    "with open(dest, 'wb') as fh:\n    fh.write(payload)\n    fh.close()\n    return 0\n",
+    "key = lookup(table) +\n    lookup(index, exact=1)\n",
+    "sys.stdout.write(text)\nsys.stdout.flush()\nsys.exit(0)\n",
+    "token = int(value, base=8) +\n    int(other, base=2)\n",
+    "for row in rows:\n    report.append(row)\n    report.sort()\n",
+    "stream.write(title)\nstream.write(value)\nstream.close()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code before a short string literal (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": "low"
+}
