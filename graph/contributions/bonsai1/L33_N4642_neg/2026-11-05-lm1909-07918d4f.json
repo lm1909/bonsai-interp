@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-07918d4f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4642-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:55+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N4642_neg/2026-11-05-lm1909-07918d4f.tests.json"
+ },
+ "label": "names of soil textures and crop or lawn residue (clay, loam, silt, grass clippings, straw) in text about managing fields, lawns or land, as opposed to the same words in crafts, food, hair or the lab",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N4642_neg/2026-11-05-lm1909-07918d4f.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.456,
+     "peak": " cl"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.355,
+     "peak": " clay"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.729,
+     "peak": " lo"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.198,
+     "peak": " bean"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.562,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.284,
+     "peak": " turf"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.409,
+     "peak": " lo"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.506,
+     "peak": " into"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.057,
+     "peak": " clay"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.201,
+     "peak": " sandy"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " bean"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.441,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.068,
+     "peak": "ings"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": " clay"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": "After"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.432,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 4,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "soil and crop-residue material in field or lawn text",
+ "unit_kind": "semantic / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' cl' x7, ' lo' x3, ' corn', ' c'. Output promotes c, sil, till, lo, pl, cl, cob; the + pole promotes land, ground, stream and fires in lawn, slope and drainage text, so both poles live in this domain. Probes: silt loam 0.61, wheat straw 0.61, clays 0.64, grass clippings 0.41-0.63, corn stalk 0.46; modelling clay 0.00, potter 0.03, newspaper clippings 0.04, sweet corn 0.01, but thread clippings 0.25, hair clippings 0.31, silt in the lab 0.12.",
+ "selection": "random draw"
+}

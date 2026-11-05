@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-eaaa59a8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N3882-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:01:57+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N3882_neg/2026-11-05-lm1909-eaaa59a8.tests.json"
+ },
+ "label": "a web writer referring to their own post, blog, forum or comment section (this post, this blog, comment below, subscribe), as opposed to the same sentence frames about a shop, a book or a place",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N3882_neg/2026-11-05-lm1909-eaaa59a8.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.574,
+     "peak": " post"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.192,
+     "peak": " blog"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.379,
+     "peak": " forum"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.244,
+     "peak": " comment"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.215,
+     "peak": " know"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.226,
+     "peak": " post"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.431,
+     "peak": " so"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.387,
+     "peak": " forum"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.258,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": " neighbor"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.064,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": " love"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.067,
+     "peak": " previous"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.135,
+     "peak": " lock"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.264,
+     "peak": " this"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.311,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "writer talking about the web post or site itself",
+ "unit_kind": "semantic / style",
+ "confidence": "medium",
+ "notes": "Card: ' post' x5, ' is' after 'This blog', 'Hi', ' forum'. Probes: forum 0.66, leave a comment 0.53, This blog is 0.44, thread 0.55, latest post 0.38; This book is 0.14, this bridge 0.02, leave the plates 0.11, new to this town 0.04. Frames with 'Thanks for' fired on both sides (0.28-0.31), so I avoid them; greetings ('Hi all' 0.37) and 'Kudos' 0.45 also fire and are not covered by this label.",
+ "selection": "random draw"
+}

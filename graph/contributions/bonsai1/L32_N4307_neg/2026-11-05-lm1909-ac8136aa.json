@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-ac8136aa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N4307-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:42+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N4307_neg/2026-11-05-lm1909-ac8136aa.tests.json"
+ },
+ "label": "a medical procedure that ties, bands or closes off a vessel or tube (ligation, suture, clip, rubber band), firing up to the closing device, as opposed to procedures that open, widen or inspect the same vessels",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N4307_neg/2026-11-05-lm1909-ac8136aa.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.33,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.273,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.315,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.511,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.442,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.456,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.932,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.45,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.641,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.116,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.101,
+     "peak": " surgeon"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.791,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 1.125,
+     "peak": " then"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.065,
+     "peak": " scope"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.45,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.82,
+    "median_fire": 1.103,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "tying or closing off a vessel in a procedure",
+ "unit_kind": "semantic / prediction",
+ "confidence": "high",
+ "notes": "Card: tubal ligation, rubber band ligation, permanent suture, shunting, tourniquet on function words. Output: this pole promotes lig, cl, oc, emb, clamp, tying; the + pole promotes dilation, per-, percutaneous and fires on catheter text, so the two poles are the two sides of closing versus opening. Probes: tied off with a 1.42-1.52, closed off with a 1.02, tubes are 1.15, rubber band 0.86; opened with a 0.18, angioplasty 0.05, balloon 0.10, examined 0.02, plumber tied off 0.38.",
+ "selection": "random draw"
+}

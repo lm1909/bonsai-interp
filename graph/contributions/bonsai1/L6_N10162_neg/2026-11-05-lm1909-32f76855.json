@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-32f76855",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10162-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:03:04+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10162_neg/2026-11-05-lm1909-32f76855.tests.json"
+ },
+ "label": "the word right after a question noun or 'asked' that says who asks or what about (questions from, queries from, asked about, question about), as opposed to the same prepositions after letters, calls or money",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10162_neg/2026-11-05-lm1909-32f76855.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.907,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.816,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.118,
+     "peak": " about"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.028,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.25,
+     "peak": " about"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.16,
+     "peak": " about"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.333,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.181,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.043,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " guide"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.103,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " help"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.046,
+     "peak": " story"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.291,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 4,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "word right after question, query or asked",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' from' x6, ' about', ' asked' after questions; the + pole has 'question of', 'question becomes'. Probes: questions from 0.76-1.11, question about 0.47, asks you about 0.85, asked about 0.24, questions on 0.20; letters from 0.16, money from 0.01, told about 0.07. 'inquiries about' reached only 0.05, so the noun set is narrow.",
+ "selection": "random draw"
+}

@@ -1,0 +1,165 @@
+{
+ "id": "2026-11-05-lm1909-ce178878",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10563-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:35+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10563_neg/2026-11-05-lm1909-ce178878.tests.json"
+ },
+ "label": "the broken-byte token (shown as �) where the tokenizer splits a kana across two tokens, as after ー in ラーメン or し in 少しずつ; katakana words that are whole tokens stay quiet, and so do kanji split the same way (駅, 毎, 窓)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10563_neg/2026-11-05-lm1909-ce178878.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.461,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.464,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.544,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.517,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.171,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.338,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.334,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.697,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.085,
+     "peak": "ニュース"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.075,
+     "peak": "飲"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.135,
+     "peak": "弟"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.116,
+     "peak": "シャ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": "私は"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.057,
+     "peak": "を選"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": "いて"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": "日に"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.463,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "split kana (broken-byte token), not split kanji",
+ "unit_kind": "token / spelling",
+ "confidence": "high",
+ "notes": "Card: '�' x32 of the top 32, all Japanese, weak (max 2.09, leak regime 98%). Tokenizer checked: ニュ|ー�|�|ク style splits. Probes: split words 0.50-1.05 (チャーハン, ニューヨーク, バーベキュー, カーテン, 少しずつ); whole-token ニュース-type and plain Japanese 0.02-0.07; kanji split into the same kind of token stayed at 0.13 or less (駅, 毎週, 窓, 開発). The near misses keep such split kanji on purpose. The declared token also matches those kanji fragments, so measured coverage is an upper bound. Language scope outside Japanese is untested here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "�"
+  ]
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-1ffada56",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N4495-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:03:18+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N4495_neg/2026-11-05-lm1909-1ffada56.tests.json"
+ },
+ "label": "the opening of a Python dict literal ({ or {') assigned inside a function or method, as opposed to the same assignment made by a function call",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N4495_neg/2026-11-05-lm1909-1ffada56.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.284,
+     "peak": " {'"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.368,
+     "peak": " {\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.169,
+     "peak": " '"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.24,
+     "peak": " {'"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.148,
+     "peak": " {\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.491,
+     "peak": " '"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.441,
+     "peak": " {'"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.12,
+     "peak": "           "
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.115,
+     "peak": " self"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.09,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.109,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "(token"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.175,
+     "peak": "       "
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.058,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.057,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.262,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 4,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "opening a dict literal inside a Python method (guess)",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "notes": "Card: \" {'\" x5, ' {\\n' x3, \"({'\" x2. Probes are not clean: multi-line dict in a function 0.41-0.61, but an indented list literal also reached 0.26-0.67 and an assignment by a call 0.23-0.29. Top-level config dict only 0.06; s.dumps({' 0.03. I expect this may fail.",
+ "selection": "random draw"
+}

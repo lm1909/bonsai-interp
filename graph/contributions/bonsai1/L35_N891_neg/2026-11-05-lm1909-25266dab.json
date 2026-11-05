@@ -1,0 +1,165 @@
+{
+ "id": "2026-11-05-lm1909-25266dab",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N891-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:03:11+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N891_neg/2026-11-05-lm1909-25266dab.tests.json"
+ },
+ "label": "the Arabic piece ' ج' at the start of جرام (gram) right after كيلو or ميلي (kilo, milli), as opposed to other unit words after the same prefix or the spelling كجم",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N891_neg/2026-11-05-lm1909-25266dab.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.56,
+     "peak": " ج"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.824,
+     "peak": " ج"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.551,
+     "peak": " ج"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.627,
+     "peak": " ج"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.405,
+     "peak": " ج"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.782,
+     "peak": " ج"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.592,
+     "peak": " ج"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.646,
+     "peak": " ج"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.065,
+     "peak": " الأسبوع"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.178,
+     "peak": "يل"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.165,
+     "peak": " صباح"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.059,
+     "peak": "ح"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " صغيرة"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.206,
+     "peak": "يل"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.117,
+     "peak": "ين"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.105,
+     "peak": "يا"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.609,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 4,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "' ج' of جرام after a kilo or milli prefix",
+ "unit_kind": "token / spelling",
+ "confidence": "medium",
+ "notes": "Card: ' ج' x6, ' ا' x6, ' مج' x3, ' الإ' x2, all split Arabic pieces. Tokenizer checked: ' ج'|'رام'. Probes: كيلو جرام 0.81-1.04, ميلي جرام 0.42, but مائة جرام 0.06, 8 جنية 0.16; كيلو غرام 0.22; مجتمع 0.25-0.30 on ' مج'; كجم 0.07, لتر 0.03; كيلو متر 0.31 and كيلو واط 0.09 with the peak on 'يل' of كيلو itself, so two near misses keep كيلو متر on purpose and may reach 0.30. The label names one narrow strong use, not the pole; the ' ا' and ' مج' uses are not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " ج"
+  ]
+ }
+}

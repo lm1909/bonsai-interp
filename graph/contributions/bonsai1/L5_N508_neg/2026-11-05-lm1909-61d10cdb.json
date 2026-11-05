@@ -1,0 +1,166 @@
+{
+ "id": "2026-11-05-lm1909-61d10cdb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N508-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:03:13+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N508_neg/2026-11-05-lm1909-61d10cdb.tests.json"
+ },
+ "label": "the split-word piece ' ard' or ' Ard' at the start of a rarer word (ardor, ardently, ardillas, Ardagh), in any language; words where the tokenizer does not produce that piece stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N508_neg/2026-11-05-lm1909-61d10cdb.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.894,
+     "peak": " ard"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.967,
+     "peak": " ard"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.745,
+     "peak": " ard"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.828,
+     "peak": " ard"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.755,
+     "peak": " Ard"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.72,
+     "peak": " Ard"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.693,
+     "peak": " Ard"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.727,
+     "peak": " ard"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " praised"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " argued"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " r"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " failed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " train"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " along"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " def"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.75,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 4,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "the piece ' ard' / ' Ard' in split words",
+ "unit_kind": "token / spelling",
+ "confidence": "medium",
+ "notes": "Card: ' Ard' x8, ' ard' x5, 'rd', 'ARD', plus Ald|ous and Dol|om. Tokenizer checked. Probes: ardor 0.99, ardour 1.03, Ardmore 0.66, ardilla 0.82; other rare pieces also fire (Ald|ous 0.99, Dol|om|ites 0.86, ard|ua 0.49), so this label names part of the pole at most. Hard, thistles, bastard, Arduino as one token stayed under 0.03.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " ard",
+   " Ard"
+  ]
+ }
+}

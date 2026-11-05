@@ -1,0 +1,167 @@
+{
+ "id": "2026-11-05-lm1909-52c7f79b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N1990+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:47+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N1990_pos/2026-11-05-lm1909-52c7f79b.tests.json"
+ },
+ "label": "' instead' naming what was chosen in place of something (took a car instead, tablets instead of books), as opposed to the same sentences adding something with too, also or as well",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N1990_pos/2026-11-05-lm1909-52c7f79b.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.39,
+     "peak": " instead"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.399,
+     "peak": " instead"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.278,
+     "peak": " instead"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.089,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.358,
+     "peak": " instead"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.327,
+     "peak": " instead"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.457,
+     "peak": " instead"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.317,
+     "peak": " instead"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.352,
+     "peak": " around"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.051,
+     "peak": " oil"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.046,
+     "peak": " loaf"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.08,
+     "peak": " song"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.343,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "k",
+   "l",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "' instead' naming a replacement",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' instead' x10 of the top 32, also ' not', ' something', ' think'. Output suppresses not/non. Probes: instead 0.31-0.42. The same pivot fires without the word: \"I'm tired of black paint; I think\" 0.90, 'but for the people' 0.46, 'gave up sugar and started' 0.38, while \"I'm fond of the curtains; I think\" 0.03. This test covers only the word; the wider pivot is not tested here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " instead"
+  ]
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "id": "2026-11-05-lm1909-3781a0b9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N6212-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:02:34+00:00",
+ "recipe": {
+  "toolchain_commit": "4c69d10e9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N6212_neg/2026-11-05-lm1909-3781a0b9.tests.json"
+ },
+ "label": "the word ' effective' meaning that something works well for its purpose (an effective treatment, the most effective means), as opposed to synonyms like useful or strong in the same sentence",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N6212_neg/2026-11-05-lm1909-3781a0b9.tests.json",
+   "prereg_commit": "4c69d10e9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.631,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.576,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.381,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.369,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.505,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.639,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.861,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.29,
+     "peak": " effective"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.168,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.112,
+     "peak": " popular"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " rule"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.094,
+     "peak": " defense"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.043,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " schools"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.54,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   ",",
+   "a",
+   "b",
+   "c",
+   "d",
+   "e",
+   "o",
+   "p",
+   "quick-test",
+   "r"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c69d10e9",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "' effective': works well for its purpose",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' effective' x21, ' Effective' x3 of the top 32; the + pole predicts effective and fires before it. Probes: effective strategy 0.56, safe and effective 0.24, most effective and 0.82 on ' and', Effective leaders 0.41; useful strategy 0.02, efficient 0.06, ineffective 0.06, 'becomes effective on March 1' 0.12, efficacy 0.10, 'worked very well' 0.27 on ' very'.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " effective",
+   " Effective"
+  ]
+ }
+}
