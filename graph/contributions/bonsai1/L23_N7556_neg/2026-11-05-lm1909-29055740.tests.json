@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-29055740",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7556-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N7556",
+   "pole": "-",
+   "label": "deep indentation at the first body line of a Python for-loop inside a method (guess; probes stayed low)",
+   "fire": [
+    "class A:\n    def run(self):\n        out = {}\n        for key, value in self.items.items():\n            if value.tag == 'x':\n                out[key] = value",
+    "class B:\n    def walk(self):\n        for name, child in self.children.items():\n            for suffix in child:\n                yield name + suffix",
+    "class C:\n    def load(self, rows):\n        groups = None\n        for row in rows:\n            if row.valid:\n                groups = row.group",
+    "class D:\n    def build(self, n):\n        layers = []\n        for i in range(n):\n            kwargs = {'scope': str(i)}\n            layers.append(kwargs)",
+    "class E:\n    def scan(self):\n        for sg in self.groups:\n            if is_like(sg):\n                self.seen.add(sg)",
+    "class F:\n    def sort(self, cfg):\n        for var, opt in cfg.items():\n            assert opt in self.allowed\n            self.vars.append(var)",
+    "class G:\n    def slices(self, a, b):\n        for i in range(-a, b + 1):\n            if i == 0:\n                continue",
+    "class H:\n    def tree(self, nodes):\n        for sub in nodes:\n            self.children.append(sub)\n        return self"
+   ],
+   "quiet": [
+    "class A:\n    def run(self):\n        out = {}\n        if self.items:\n            value = self.items\n        return out",
+    "class B:\n    def walk(self):\n        name = self.name\n        child = self.child\n        return name + child",
+    "class C:\n    def load(self, rows):\n        groups = None\n        while rows:\n            groups = rows.pop()\n        return groups",
+    "class D:\n    def build(self, n):\n        layers = []\n        kwargs = {'scope': str(n)}\n        layers.append(kwargs)\n        return layers",
+    "class E:\n    def scan(self):\n        try:\n            self.seen.clear()\n        except KeyError:\n            pass",
+    "class F:\n    def sort(self, cfg):\n        var = cfg.get('var')\n        self.vars.append(var)\n        return var",
+    "class G:\n    def slices(self, a, b):\n        with open(a) as f:\n            f.write(b)\n        return a",
+    "class H:\n    def tree(self, nodes):\n        self.children = nodes\n        self.parent = None\n        return self"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first line of a for-loop body (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": 0.15,
+ "notes": "Card: ' ' x11 (runs of spaces after 'for ...:') and ' of' x10 in comments. Probe at shallow depth stayed at or below 0.035; 'the text of the button' 0.071. The top examples are deep inside classes, so the test uses that shape. Expect a failure."
+}

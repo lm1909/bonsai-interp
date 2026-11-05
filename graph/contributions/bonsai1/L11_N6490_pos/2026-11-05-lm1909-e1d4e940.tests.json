@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e1d4e940",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6490+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N6490",
+   "pole": "+",
+   "label": "the line break after a colon that introduces a list (':\\n' before bullets)",
+   "fire": [
+    "Stainless steels are used in:\n- Surgical tools\n- Kitchen sinks",
+    "The committee area includes:\n- Finance\n- Staffing",
+    "Common symptoms of the flu include:\n- Fever\n- Aching joints",
+    "Typical uses of the alloy are in:\n- Aircraft parts\n- Bicycle frames",
+    "The kit is supplied with:\n- Two brushes\n- One sponge",
+    "Our services cover:\n- Plumbing\n- Heating",
+    "The main duties of the post are:\n- Filing\n- Answering calls",
+    "Major exports of the region include:\n- Coffee\n- Copper"
+   ],
+   "quiet": [
+    "Stainless steels are used in surgical tools and kitchen sinks.",
+    "The committee area includes finance and staffing, as listed.",
+    "Common symptoms of the flu include fever and aching joints.",
+    "Typical uses of the alloy are in aircraft parts and bicycle frames.",
+    "The kit is supplied with two brushes and one sponge.",
+    "Our services cover plumbing and heating across the county.",
+    "The main duties of the post are filing and answering calls.",
+    "Major exports of the region include coffee and copper."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "':\\n' before a list",
+ "unit_kind": "format",
+ "confidence": 0.55,
+ "notes": "Card: '\\n' x10, ':\\n' x5, '.\\n' x3, ']\\n' x3, '?\\n' x2; gate-closed 73%, max 4. Probe: 'are used in:\\n-' 0.464; 'must consider:\\n-' 0.169 (peak elsewhere); heading line 0.140; no list 0.036; 'He went home.\\nShe stayed.' 0.103."
+}

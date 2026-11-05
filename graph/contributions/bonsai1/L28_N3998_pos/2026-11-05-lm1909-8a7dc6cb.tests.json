@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-8a7dc6cb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3998+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N3998",
+   "pole": "+",
+   "label": "a command-line option definition in code, just before its help text ('add_option(..., help='); strongest when it concerns output",
+   "fire": [
+    "parser.add_option('-o', '--out', help='Where to write results')",
+    "parser.add_argument('--output-dir', help='Directory for the files')",
+    "opts.add_option('-f', '--outfile', help='Name of the result file')",
+    "parser.add_argument('-o', '--output', help='Path of the report')",
+    "group.add_option('--output-format', help='Format of the results')",
+    "ap.add_argument('--outdir', help='Folder for the plots')",
+    "parser.add_option('--out-file', help='File for the log')",
+    "parser.add_argument('--output-file', help='Name of the csv')"
+   ],
+   "quiet": [
+    "parser.add_option('-q', '--quiet', help='Say less on screen')",
+    "parser.add_argument('--retries', help='Number of attempts')",
+    "opts.add_option('-t', '--timeout', help='Seconds before giving up')",
+    "parser.add_argument('-n', '--name', help='Name of the user')",
+    "group.add_option('--color', help='Colour of the bars')",
+    "ap.add_argument('--seed', help='Seed for the sampler')",
+    "parser.add_option('--debug', help='Turn on debug mode')",
+    "parser.add_argument('--port', help='Port of the server')"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "CLI option definitions",
+ "unit_kind": "contextual / code",
+ "confidence": 0.4,
+ "notes": "Card: ',' x4, \"['\" x3, '.create', \"('\", ' in'; promotes ' output', ' Output', ' input'. Scattered code. Probe: \"--output', help=\" 0.512; \"--verbose', help=\" 0.074; \"print('Output file:'\" 0.052; 'the output was fine' 0.008; arithmetic 0.004. The difference between output and verbose suggests the output direction matters more than the option form."
+}

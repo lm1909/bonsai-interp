@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-4bfce3b1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N10183-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N10183",
+   "pole": "-",
+   "label": "the point in a run of numbers where another number is due ('[2, 3, 4, 5],', '8/1|0', '5 cats, 3 dogs and')",
+   "fire": [
+    "We have 4 horses, 6 goats and 9 hens on the farm.",
+    "result = [[1, 2, 3, 4], [4, 3, 2, 1]]",
+    "Solve this equation for y: 3/y+2=6/10",
+    "She packed 2 shirts, 5 socks and 1 coat for the trip.",
+    "matrix = [[7, 8, 9], [1, 2, 3]]",
+    "Simplify the fraction: 12/x+5=9/15",
+    "There were 3 vans, 8 cars and 4 trucks in the lot.",
+    "box = [0, 0, 2, 2, 4, 4]"
+   ],
+   "quiet": [
+    "We have horses, goats and hens on the farm near town.",
+    "result = ['red', 'green', 'blue', 'white']",
+    "Solve this riddle for us: what has keys but no locks?",
+    "She packed her shirts, socks and a coat for the trip.",
+    "names = ['ann', 'bob', 'carl', 'dan']",
+    "Simplify the sentence: the dog that barks is loud.",
+    "There were vans, cars and trucks in the lot.",
+    "box = ['top', 'side', 'lid', 'base']"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before the next number in a sequence",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: '|' x5, ',' x2, ' ||' x2, ' x' x2, '3' x2, '],' in number lists and arithmetic; gate-closed 93%, max 3.73. Probe: '8/10' 0.753; '5 cats, 3 dogs and' 0.545; '[[2, 3, 4, 5],' 0.524; table of names 0.146; cat on the mat 0.074."
+}

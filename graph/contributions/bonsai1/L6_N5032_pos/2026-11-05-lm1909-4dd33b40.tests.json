@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-4dd33b40",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N5032+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N5032",
+   "pole": "+",
+   "label": "the end of 'FedEx' / 'Fedex' (and 'fe' of the name Metcalfe)",
+   "fire": [
+    "The package went out by Fedex from a depot in Memphis.",
+    "She has worked as a driver for Fedex since the spring.",
+    "I sent the forms via Fedex and they arrived the next day.",
+    "The bronze statue shows Sir Charles Metcalfe at his desk.",
+    "We rented a cottage in Metcalfe County for the summer.",
+    "He got a job loading planes at the Fedex hub downtown.",
+    "The courier van from Fedex waited outside the bakery.",
+    "His mother, Sarah Metcalfe, was born in Virginia."
+   ],
+   "quiet": [
+    "The package went out by truck from a depot in Memphis.",
+    "She has worked as a driver for Sears since the spring.",
+    "I sent the forms via UPS and they arrived the next day.",
+    "The bronze statue shows Sir Charles Dickens at his desk.",
+    "We rented a cottage in Madison County for the summer.",
+    "He got a job loading planes at the Delta hub downtown.",
+    "The courier van from Amazon waited outside the bakery.",
+    "His mother, Sarah Johnson, was born in Virginia."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "FedEx (and Metcal|fe)",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: '2' x14, 'ex' x3, ' FedEx' x3, 'Lean' x3, 'Ex' x2, 'fe' x2. Probe: 'Fedex' 1.080; 'Metcalfe' 0.932; ' FedEx' 0.363 (a whole token); UPS sentence 0.002; 'Python 2' 0.002; 'Lean' 0.010. I did not find what the '2' peaks are about.",
+ "trigger": {
+  "tokens": [
+   "ex",
+   "Ex",
+   " FedEx",
+   "fe"
+  ]
+ }
+}

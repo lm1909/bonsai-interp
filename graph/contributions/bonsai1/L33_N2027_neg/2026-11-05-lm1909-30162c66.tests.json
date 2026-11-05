@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-30162c66",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N2027-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N2027",
+   "pole": "-",
+   "label": "the architecture of cathedrals and churches ('nave, transept', 'called a cathedra', 'column capitals')",
+   "fire": [
+    "The bishop sat on a carved throne, called a cathedra, in the choir.",
+    "Visitors walk through the nave, transept and side chapels in silence.",
+    "The cathedral has a Gothic apse, a tall nave and a stone rood screen.",
+    "The pointed arches of the nave rest on carved column capitals.",
+    "A cathedral takes its name from the seat of the bishop, the cathedra.",
+    "Medieval masons built the choir, the ambulatory and the flying buttresses.",
+    "The abbey church has a Romanesque nave and a vaulted crypt.",
+    "The rose window above the transept fills the church with colour."
+   ],
+   "quiet": [
+    "The mayor sat on a plastic chair, called a stool, in the hall.",
+    "Visitors walk through the lobby, cafe and gift shops in a crowd.",
+    "The hotel has a modern lobby, a tall tower and a glass front door.",
+    "The steel beams of the garage rest on poured concrete blocks.",
+    "A hotel takes its name from the street of the city, the avenue.",
+    "Modern builders put up the offices, the car park and the loading docks.",
+    "The office tower has a marble lobby and a heated pool.",
+    "The large window above the entrance fills the store with light."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "cathedral architecture",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' a' x3, '-' x2, ',', 'a', 'is', 'Central', in cathedral and medieval Latin text, but also 'Central Artery' and 'such as the knees' lists. Probe: 'called a cathedra' 0.715; 'nave, transept' 0.389; 'Historiam ecclesiasticam' 0.208; Spanish 'naves' 0.065; shopping mall 0.010; 'the knees, ankles' 0.007.",
+ "trigger": {
+  "words": [
+   "nave",
+   "transept",
+   "cathedral",
+   "cathedra"
+  ]
+ }
+}

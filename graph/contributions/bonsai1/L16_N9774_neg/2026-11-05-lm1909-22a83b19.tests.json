@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-22a83b19",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N9774-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N9774",
+   "pole": "-",
+   "label": "getting the most out of something ('get the most money for', 'recapture heat', 'maximising the value', 'extract every last bit')",
+   "fire": [
+    "Our dealers help you get the most cash for your old boat.",
+    "The turbine recaptures waste steam so that no energy is lost.",
+    "He was resolved to squeeze every last drop of joy from the trip.",
+    "The solver searches for the point that maximises the profit of the firm.",
+    "Farmers can harness the wind as a cheap source of power.",
+    "Take full advantage of every opportunity the summer offers you.",
+    "The recipe uses a slow press to extract every drop of the oil.",
+    "She milked the moment for all that it was worth on stage."
+   ],
+   "quiet": [
+    "Our dealers help you register your old boat in a week.",
+    "The turbine stands behind a fence so that no one is hurt.",
+    "He was resolved to return home early from the trip.",
+    "The solver prints the point that lies on the edge of the map.",
+    "Farmers can watch the wind from a small wooden tower.",
+    "Take a look at every postcard the summer brings you.",
+    "The recipe uses a slow oven to warm a jar of the oil.",
+    "She stood on the stage for the moment before the curtain fell."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "extracting the most from something",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Card: ' opportunity' x5, ' of' x2, ' advantage' x2, ' convert' x2, ' potential' x2, ' value', ' money', 'apture', 'essed' of harnessed, ' every'. The shared pattern is extracting maximum value. Probe: 'recapture heat' 0.663; 'get the most money' 0.636; 'every last bit of pleasure' 0.633; 'maximising the value' 0.384; 'sell your junk car' 0.107; 'Heat exchangers are large' 0.075. New cases in the test: squeeze, milk, harness, take advantage."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-041f009d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N3936-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N3936",
+   "pole": "-",
+   "label": "the number base of a conversion (int(x, 16), 'base 16', hexadecimal), firing just before it; promotes ' digit'",
+   "fire": [
+    "value = int('0x' + token[3:], 16)",
+    "address = int(self.table.item(row, 1).text(), 16)",
+    "A number with the prefix 0x is written in hexadecimal (base 16).",
+    "Binary numbers are written in base 2, and octal ones in base 8.",
+    "code = int(hex_string, 16)",
+    "tip = int('0x' + block.hash() + 'L', 0)",
+    "Convert the value from decimal (base 10) to hexadecimal notation.",
+    "mask = int(flags[2:], 2)"
+   ],
+   "quiet": [
+    "value = str('0x' + token[3:]).lower()",
+    "address = str(self.table.item(row, 1).text()).strip()",
+    "A number with the prefix zero is written on the first line.",
+    "Short notes are written in pencil, and long ones in ink.",
+    "code = len(hex_string)",
+    "tip = str('0x' + block.hash() + 'L').upper()",
+    "Convert the file from text to spreadsheet format and save it.",
+    "mask = list(flags[2:])"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "number base / radix",
+ "unit_kind": "semantic / code",
+ "confidence": 0.7,
+ "notes": "Card: ':],', ',' x2, 'base', '(),' before 16, and also fatty-acid names (' as', 'C' of C18:1, ','); promotes ' digit', '-digit'. Probe: \"int('0x' + ent[2:], 16)\" 0.823; 'hexadecimal (base 16)' 0.737; 'int(text, 10)' 0.325; fatty acids 0.314, 0.328; 'written on the first page' 0.010. Fatty acids are a second reading that this label does not cover."
+}

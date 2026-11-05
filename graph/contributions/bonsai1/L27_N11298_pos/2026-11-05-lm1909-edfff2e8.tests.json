@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-edfff2e8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N11298+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N11298",
+   "pole": "+",
+   "label": "a pronoun addressing the reader or including them ('you', 'your', 'we') in a general claim about life or the body",
+   "fire": [
+    "Your lungs work all day, and while you may not feel it, your breathing slows at night.",
+    "Your skin is your largest organ, since your health depends on it in many ways.",
+    "Your eyes get tired, and although you rarely notice it, your focus drifts by evening.",
+    "Your bones keep changing, and even when you are resting, your body builds new ones.",
+    "Every time you eat, your brain gets a signal, because your gut talks to it.",
+    "Microbes live all over us, and we are learning that we need them to stay well.",
+    "Your heart beats without effort, so you can forget that your life depends on it.",
+    "The food that we eat shapes the cities we live in and the air we breathe."
+   ],
+   "quiet": [
+    "Her lungs work all day, and while she may not feel it, her breathing slows at night.",
+    "His skin is his largest organ, since his health depends on it in many ways.",
+    "Her eyes get tired, and although she rarely notices it, her focus drifts by evening.",
+    "His bones keep changing, and even when he is resting, his body builds new ones.",
+    "Every time a dog eats, its brain gets a signal, because its gut talks to it.",
+    "Microbes live all over them, and they are learning that they need them to stay well.",
+    "His heart beats without effort, so he can forget that his life depends on it.",
+    "The food that farmers grow shapes the towns they live in and the air they breathe."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "reader-addressing pronouns",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: ' you' x10, ' You' x4, ' your' x3, ' we' x3, and 你. Probe: 'while you might not notice' 0.195; 你 0.189; 'that we occupy and use' 0.157; 'Do you know that you' 0.078; third person version 0.008. Low activations; the median may not reach the line."
+}

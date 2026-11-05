@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-719663ca",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N11907-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N11907",
+   "pole": "-",
+   "label": "short pieces of acronyms and path segments ('-eei', 'TMX', '/atb/') (guess; probes stayed low)",
+   "fire": [
+    "https://www.example.org/documents/88-2013-eei-report/view",
+    "The TMX pipeline expansion was approved by the board.",
+    "www.usmint.gov/kids/lessonPlans/atb/index.cfm",
+    "http://www.journal.org/index.php/ijc/article/view/12",
+    "The DesignSkins brand sells phone cases online.",
+    "The VeriChip implant was offered to hospitals for free.",
+    "JOSE BEJAR CRUZ JR FILED THE FORM ON MONDAY.",
+    "The ATB program offers grants to small groups."
+   ],
+   "quiet": [
+    "https://www.example.org/documents/report/view",
+    "The large pipeline expansion was approved by the board.",
+    "www.usmint.gov/kids/lessons/coins/index.html",
+    "http://www.journal.org/index.php/physics/article/view/12",
+    "The new brand sells phone cases online.",
+    "The small implant was offered to hospitals for free.",
+    "JOHN SMITH WILL FILE THE FORM ON MONDAY.",
+    "The state program offers grants to small groups."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "acronym and URL pieces (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Card: 'ee', 'Chip', ' TM', 'AR', 'ij', 'kins', '/at': scattered; 0.68% reach 0.1 of max. Probe: 0.054 at best, the rest at or below 0.015, on my attempts to reproduce the top examples. Expect a failure."
+}

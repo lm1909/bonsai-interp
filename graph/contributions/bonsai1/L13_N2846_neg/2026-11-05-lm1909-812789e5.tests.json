@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-812789e5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N2846-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N2846",
+   "pole": "-",
+   "label": "jurisdiction and governing-law clauses in terms of sale, firing around the court or place ('exclusive jurisdiction of the courts of', 'la compétence des tribunaux')",
+   "fire": [
+    "You agree to submit to the exclusive jurisdiction of the courts of Ontario.",
+    "The place of jurisdiction for any dispute under this contract is Munich, Germany.",
+    "Tout différend sera soumis à la compétence exclusive des tribunaux de Paris.",
+    "This agreement is governed by the laws of the State of Delaware.",
+    "Any claim shall be settled by binding arbitration in the State of Oregon.",
+    "The governing law is that of the country where the buyer has its office.",
+    "Both parties accept the jurisdiction of the courts of England and Wales.",
+    "Für alle Streitigkeiten ist das Gericht in Hamburg zuständig, Deutschland."
+   ],
+   "quiet": [
+    "You agree to attend the annual meeting of the members in Ontario.",
+    "The place of delivery for any order under this deal is Munich, Germany.",
+    "Tout client sera accueilli à la réception principale de l'hôtel de Paris.",
+    "This festival is attended by the people of the State of Delaware.",
+    "Any guest shall be offered a free breakfast in the State of Oregon.",
+    "The largest lake is that of the country where the buyer has a cabin.",
+    "Both parties enjoy the beaches and the castles of England and Wales.",
+    "Für alle Besucher ist das Museum in Hamburg geöffnet, täglich."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "jurisdiction clauses",
+ "unit_kind": "semantic / legal",
+ "confidence": 0.8,
+ "notes": "Card: ',' x16, ')' x7, 'ence' of compétence, ' of', ' is', ' which', in governing-law text and also in copyright lines. Probe: 'jurisdiction of the courts of' 0.675; 'compétence des tribunaux' 0.615; 'place of jurisdiction ... Berlin,' 0.594; 'governing law ... located' 0.353; copyright line 0.267; 'place of the wedding' 0.137. Copyright lines are left out of the test."
+}

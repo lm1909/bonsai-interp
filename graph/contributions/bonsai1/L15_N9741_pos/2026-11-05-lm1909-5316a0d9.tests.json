@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-5316a0d9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N9741+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N9741",
+   "pole": "+",
+   "label": "a parenthetical or subordinate aside in the past, around ' when', ' after', ' was' (guess; probes stayed low)",
+   "fire": [
+    "When I bought my first bike in 1982, the neighbours had a good laugh.",
+    "He had been known as Duke since school, owing to his manners.",
+    "After we moved to the coast in 1975, my father was often ill.",
+    "When she was hired at the plant in 1990, the town was booming.",
+    "He'd been called Red since boyhood, because of his hair.",
+    "After the fire was put out in 1963, the mill was rebuilt.",
+    "When I bought that old farm in 1971, people thought it was mad.",
+    "She'd been known as Queenie since college, owing to her height."
+   ],
+   "quiet": [
+    "I ride my new bike in the park, and the neighbours wave at me.",
+    "He is known as a good man at school, for his manners.",
+    "We live on the coast, and my father is often out fishing.",
+    "She works at the plant, and the town is booming.",
+    "He has red hair and a loud voice, like his father.",
+    "The fire is out, and the mill will open on Monday.",
+    "I own an old farm, and people think it is lovely.",
+    "She is tall, and they call her a natural at tennis."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "past aside (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Card: broad (1% reach 0.1 of max), max 8.31; ' when' x4, ',' x3, ' after' x2, ' was' x2, ' even', with no shared pattern I could see. Probe: everything stayed at or below 0.116. Low-confidence guess; expect a failure."
+}

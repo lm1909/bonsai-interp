@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-b59105f9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N1810-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:26:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N1810",
+   "pole": "-",
+   "label": "offices and departments of local government ('local health department', 'Economic Development Corp.', 'County Ag Commissioner', 'Parks Office')",
+   "fire": [
+    "Ask the local zoning department for a copy of the building permit.",
+    "The Polk County Economic Development Board met on Tuesday night.",
+    "Applications are available from the Southside Parks and Recreation Office.",
+    "A spokesman for the county health department confirmed the outbreak.",
+    "The Mason County Tourism Bureau printed a new map of the trails.",
+    "The Regional Employment Exchange will hold a job fair in March.",
+    "He called the county agriculture agent about the dying wheat.",
+    "Residents can contact the city water and sewer department by phone."
+   ],
+   "quiet": [
+    "Ask the local bakery for a copy of the wedding cake recipe.",
+    "The Polk family held a reunion on Tuesday night.",
+    "Tickets are available from the Southside corner shop near the bridge.",
+    "A friend of the county sheriff's wife confirmed the wedding.",
+    "The Mason County fair printed a new poster of the rides.",
+    "The regional choir will hold a concert in March.",
+    "He called his brother about the dying wheat.",
+    "Residents can walk along the city river path at night."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "local-government offices",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Card: ' Employment' x2, ' economic' x2, ' Tourism' x2, ' Area', ' Development', ' agriculture', ' Ag', ' health' in county and city bodies. Probe: 'Economic Development' 0.770; 'local health department' 0.633; 'County Ag Commissioner' 0.451; 'North Area Parks Office' 0.411; 'your teacher' 0.117; 'his old truck' 0.001. Near misses keep local settings and drop the office."
+}
