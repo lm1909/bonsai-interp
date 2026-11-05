@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-e008fa4e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N6134-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:12+00:00",
+ "recipe": {
+  "toolchain_commit": "038f73ac6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N6134_neg/2026-11-06-lm1909-e008fa4e.tests.json"
+ },
+ "label": "A code token that bundles a quote mark at the edge of a string, especially quotes inside quotes (' '\"', '('\"', '\",\\n', ''>')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N6134_neg/2026-11-06-lm1909-e008fa4e.tests.json",
+   "prereg_commit": "038f73ac6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.679,
+     "peak": " '\""
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.641,
+     "peak": "('\""
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.68,
+     "peak": "\",\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.634,
+     "peak": "'>"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.664,
+     "peak": " '\""
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.737,
+     "peak": "('\""
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.207,
+     "peak": "=\""
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.669,
+     "peak": "'>"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.105,
+     "peak": " str"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.031,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.138,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.066,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.05,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.106,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.08,
+     "peak": " home"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.667,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "038f73ac6",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "quote-bundling tokens in code",
+ "unit_kind": "token",
+ "confidence": "low",
+ "selection": "random draw"
+}
