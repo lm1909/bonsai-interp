@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-92de3499",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10581+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:23:15+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N10581",
+   "pole": "+",
+   "label": "the two-letter consonant pieces 'ql' and 'pl' in the middle of a rare name (Mu|ql|a, E|ql|id, U|pl|ands), as opposed to names and words that keep 'pl' inside a longer token",
+   "fire": [
+    "He studied the script of Ibn Muqla in Baghdad.",
+    "The old road to Iqlim runs through the hills.",
+    "A farmer named Aqlan sold us the grapes.",
+    "The Haqlar family lived near the river.",
+    "Hikers often walk across the Uplands in spring.",
+    "Our team stayed in a hotel in Upland last year.",
+    "The poet Oqla wrote about the desert.",
+    "Rain fell over the Scottish Uplands all week."
+   ],
+   "quiet": [
+    "He studied the script of Ibn Battuta in Baghdad.",
+    "The old road to Lima runs through the hills.",
+    "A farmer named Aaron sold us the grapes.",
+    "The Harper family lived near the river.",
+    "Hikers often plan to walk across the plains in spring.",
+    "Our team stayed in a hotel in Portland last year.",
+    "The poet Omar wrote about the desert.",
+    "Rain fell over the Scottish Highlands all week."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "mid-word 'ql' / 'pl' piece",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked for most fire names. I did not get ' Uplands' and ' Upland' back from the tokenizer output, so those rely on the probe (peak 'pl')."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-5d5c456c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2955+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:23:15+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N2955",
+   "pole": "+",
+   "label": "'It' or 'If' as the first token of a new line in the middle of a text, as opposed to the same word later in a line",
+   "fire": [
+    "The storm passed over the harbor at night;\nIt left the boats in ruins.",
+    "How does this machine work?\nIt runs on steam and coal.",
+    "The minister denied the story again.\nIf the papers are right, he will resign.",
+    "The old bridge was closed in spring.\nIt reopened after the summer.",
+    "We asked her about the price.\nIf we pay today, it is lower.",
+    "What should you do first?\nIt depends on the weather.",
+    "Tickets go on sale this week.\nIf you hurry, you can get one.",
+    "He loved that small garden.\nIt reminded him of home."
+   ],
+   "quiet": [
+    "The storm passed over the harbor at night; it left the boats in ruins.",
+    "How does this machine work? It runs on steam and coal.",
+    "The minister denied the story again, but if the papers are right, he will resign.",
+    "The old bridge was closed in spring, and it reopened after the summer.",
+    "We asked her about the price, and if we pay today, it is lower.",
+    "What should you do first? It depends on the weather.",
+    "Tickets go on sale this week, so if you hurry, you can get one.",
+    "He loved that small garden, and it reminded him of home."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "'It' / 'If' at a line start",
+ "unit_kind": "format",
+ "confidence": "low",
+ "notes": "Tiny corpus max (1.41), 100% echo regime. The sentence-initial 'It' in a one-line probe reached 0.22, so 'start of a chunk' may be closer than 'new line'. In two near misses 'It' follows a question mark, a hard case."
+}

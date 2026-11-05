@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-8c54a46f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8017+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:23:15+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N8017",
+   "pole": "+",
+   "label": "numeric axis limits and ranges in plotting and editor code (setYRange, xlim, yLimits, extent = [...], Region(0, ...)), as opposed to titles and colors in the same code",
+   "fire": [
+    "self.chart.setXRange(-2.0, 2.0)",
+    "barplot.xLimits = (0, max(counts))",
+    "def plot_curve(ax=None, width=0.5, xlim=None, ylim=None):\n    pass",
+    "bounds = [xbins[0], xbins[-1], ybins[0], ybins[-1]]",
+    "ax.set_ylim(0, 100)\nax.set_xlim(-5, 5)",
+    "view.replace(edit, sublime.Region(0, view.size()), text)",
+    "plt.axis([0, 10, -1, 1])",
+    "self.graph.setYLimits(0.0, ymax)"
+   ],
+   "quiet": [
+    "self.chart.setTitle('Speed')",
+    "barplot.title = u'Counts'",
+    "def plot_curve(ax=None, label=None, title=None, color=None):\n    pass",
+    "names = [first[0], last[0], city[0], state[0]]",
+    "ax.set_title('Sales')\nax.set_xlabel('Year')",
+    "view.set_name(edit, name, text)",
+    "plt.legend(['a', 'b'])",
+    "self.graph.setColor('red', width)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "axis limits and ranges in code",
+ "unit_kind": "format",
+ "confidence": "high",
+ "notes": "In prose, 'The time range' reached 0.39 in a probe, so this may go beyond code. That case is not tested."
+}
