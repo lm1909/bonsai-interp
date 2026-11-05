@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-a43fdade",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6067+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:35:40+00:00",
+ "recipe": {
+  "toolchain_commit": "200a25bcd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N6067_pos/2026-11-06-lm1909-a43fdade.tests.json"
+ },
+ "label": "the letters 'ES' as a token or piece: ' AES', ' NES', ' Ches', and 'es' after 'Ch' (Mc|Ch|es|ney), as opposed to other acronyms and ' chess' or plural -es words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N6067_pos/2026-11-06-lm1909-a43fdade.tests.json",
+   "prereg_commit": "200a25bcd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.725,
+     "peak": " AES"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.728,
+     "peak": " NES"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.546,
+     "peak": " Ches"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.665,
+     "peak": "es"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.775,
+     "peak": " NES"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.829,
+     "peak": " AES"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.576,
+     "peak": " Nes"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.423,
+     "peak": " Ches"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " Gal"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "Crit"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " chess"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.695,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "200a25bcd",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "' AES', ' NES', ' Ches' tokens (list)",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "A list that shares letters, not a meaning. Tokenization checked: ' Chester' is whole and stays out of the trigger.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " AES",
+   " NES",
+   " Ches",
+   " aes",
+   " Nes"
+  ]
+ }
+}

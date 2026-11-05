@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5d5c456c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2955+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:35:30+00:00",
+ "recipe": {
+  "toolchain_commit": "200a25bcd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N2955_pos/2026-11-06-lm1909-5d5c456c.tests.json"
+ },
+ "label": "'It' or 'If' as the first token of a new line in the middle of a text, as opposed to the same word later in a line",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N2955_pos/2026-11-06-lm1909-5d5c456c.tests.json",
+   "prereg_commit": "200a25bcd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.315,
+     "peak": "It"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.347,
+     "peak": "It"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.378,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.3,
+     "peak": "It"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.339,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.324,
+     "peak": "It"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.339,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.308,
+     "peak": "It"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.103,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.098,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.146,
+     "peak": " if"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.108,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.155,
+     "peak": " if"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.115,
+     "peak": " first"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.12,
+     "peak": " if"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.084,
+     "peak": " it"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.332,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "200a25bcd",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "'It' / 'If' at a line start",
+ "unit_kind": "format",
+ "confidence": "low",
+ "notes": "Tiny corpus max (1.41), 100% echo regime. The sentence-initial 'It' in a one-line probe reached 0.22, so 'start of a chunk' may be closer than 'new line'. In two near misses 'It' follows a question mark, a hard case.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-49ff6b7c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N6939+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:35:51+00:00",
+ "recipe": {
+  "toolchain_commit": "200a25bcd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N6939_pos/2026-11-06-lm1909-49ff6b7c.tests.json"
+ },
+ "label": "' on' or ' of' after plan, intend or make a point, before a verb in -ing (planning on picking up, made a point of not wearing), as opposed to 'plan to' and other uses of ' on'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N6939_pos/2026-11-06-lm1909-49ff6b7c.tests.json",
+   "prereg_commit": "200a25bcd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.744,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.8,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.699,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.399,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.623,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.721,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.901,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.362,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.047,
+     "peak": " intends"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " located"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.71,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "200a25bcd",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "plan on / intend on + -ing",
+ "unit_kind": "syntactic",
+ "confidence": "high",
+ "notes": "'counting on getting' reached only 0.14 in a probe, so this is about plan-like verbs, not any verb + on.",
+ "selection": "random draw"
+}

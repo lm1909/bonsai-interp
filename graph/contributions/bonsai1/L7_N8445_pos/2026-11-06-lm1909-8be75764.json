@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8be75764",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N8445+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:35:26+00:00",
+ "recipe": {
+  "toolchain_commit": "200a25bcd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N8445_pos/2026-11-06-lm1909-8be75764.tests.json"
+ },
+ "label": "the header of a function definition (name and parameters after def or function), as opposed to calling the same function and to prose about it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N8445_pos/2026-11-06-lm1909-8be75764.tests.json",
+   "prereg_commit": "200a25bcd",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.219,
+     "peak": "_values"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.429,
+     "peak": " lookup"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.448,
+     "peak": "read"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.466,
+     "peak": "self"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.302,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.134,
+     "peak": " format"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.411,
+     "peak": " merge"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.42,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": "(key"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": " _"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.04,
+     "peak": " Loader"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " family"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.063,
+     "peak": "(userName"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " merges"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " _"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.415,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "200a25bcd",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "function definition header",
+ "unit_kind": "format",
+ "confidence": "high",
+ "notes": "The card's peaks vary: ',' after self, '(', the second word of the name. A tutorial-style 'def' example in a text is not tested.",
+ "selection": "random draw"
+}

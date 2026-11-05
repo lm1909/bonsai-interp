@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-92de3499",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10581+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:35:30+00:00",
+ "recipe": {
+  "toolchain_commit": "200a25bcd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10581_pos/2026-11-06-lm1909-92de3499.tests.json"
+ },
+ "label": "the two-letter consonant pieces 'ql' and 'pl' in the middle of a rare name (Mu|ql|a, E|ql|id, U|pl|ands), as opposed to names and words that keep 'pl' inside a longer token",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10581_pos/2026-11-06-lm1909-92de3499.tests.json",
+   "prereg_commit": "200a25bcd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.801,
+     "peak": "ql"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.763,
+     "peak": "ql"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.737,
+     "peak": "ql"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.708,
+     "peak": "ql"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.816,
+     "peak": "pl"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.744,
+     "peak": "pl"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.008,
+     "peak": "ql"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.79,
+     "peak": "pl"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": " Ibn"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " farmer"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.047,
+     "peak": "ikers"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": " Omar"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.035,
+     "peak": "Rain"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.776,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "200a25bcd",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "mid-word 'ql' / 'pl' piece",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked for most fire names. I did not get ' Uplands' and ' Upland' back from the tokenizer output, so those rely on the probe (peak 'pl').",
+ "selection": "random draw"
+}

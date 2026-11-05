@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-9e484341",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N5262+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:35:57+00:00",
+ "recipe": {
+  "toolchain_commit": "200a25bcd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N5262_pos/2026-11-06-lm1909-9e484341.tests.json"
+ },
+ "label": "the adjective for a named historical period, right before 'period' or '-time': межво|енный период, постсоветский период, Zwischenkrieg|s|zeit, as opposed to ordinary adjectives in those languages",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N5262_pos/2026-11-06-lm1909-9e484341.tests.json",
+   "prereg_commit": "200a25bcd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.98,
+     "peak": "енный"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.233,
+     "peak": "енный"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.763,
+     "peak": "ский"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.711,
+     "peak": "rieg"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.682,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.107,
+     "peak": "енный"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.447,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.964,
+     "peak": "енный"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.156,
+     "peak": "еч"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.102,
+     "peak": "ская"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": "В"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.089,
+     "peak": " der"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.19,
+     "peak": " der"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.079,
+     "peak": "В"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.234,
+     "peak": " der"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.333,
+     "peak": " этом"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.863,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "200a25bcd",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "named historical period (ru, de)",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "In one probe the peak moved to ' в' or a later token. Other languages and the card's Korean and Arabic peaks are not tested. The English 'the period of' reached 0.18.",
+ "selection": "random draw"
+}
