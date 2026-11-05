@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-c98b75a2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N11956+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:58:52+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L6/N11956",
+   "pole": "+",
+   "label": "Spanish third-person verb with a dropped subject ('dicen que tiene', 'creo que siente', 'a veces tiene')",
+   "fire": [
+    "Dicen que tiene un barco en el puerto.",
+    "Creo que siente mucho frío por las noches.",
+    "Parece que puede ganar la carrera este año.",
+    "A veces tiene problemas con el coche nuevo.",
+    "Según dicen tiene dos hijos en Madrid.",
+    "Creo que tiene razón en todo lo demás.",
+    "Dicen que siente miedo de volar en avión.",
+    "Parece que tiene ganas de volver pronto."
+   ],
+   "quiet": [
+    "Mi primo tiene un barco en el puerto.",
+    "Mi abuela siente mucho frío por las noches.",
+    "El corredor puede ganar la carrera este año.",
+    "Mi madre tiene problemas con el coche nuevo.",
+    "El señor Ruiz tiene dos hijos en Madrid.",
+    "Tu hermano tiene razón en todo lo demás.",
+    "Mi tía siente miedo de volar en avión.",
+    "La niña tiene ganas de volver pronto."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; the same verbs with an overt subject stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "Spanish verb, dropped subject",
+ "unit_kind": "contextual / language",
+ "confidence": "medium",
+ "notes": "Second round, narrowed after the first test. There, ' tiene' fired without a subject ('A veces tiene' 0.61) but not with one ('Mi vecina tiene' 0.03). Probe: 'Dicen que tiene' 0.50, 'Creo que siente' 0.56, 'Dicen que puede' 0.53; 'Mi hermano tiene' 0.02. Note that past-tense 'ó' also fires this pole (0.26-0.44), and I avoid it in this test on both sides."
+}

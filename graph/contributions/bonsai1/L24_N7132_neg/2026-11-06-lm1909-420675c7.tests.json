@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-420675c7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N7132-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:58:52+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L24/N7132",
+   "pole": "-",
+   "label": "' if' in a clipped conditional with no clause ('if any', 'if known', 'if available')",
+   "fire": [
+    "Give the page title to show at the top, if any.",
+    "The author's email is shown if known.",
+    "Please note your dietary needs, if any, below.",
+    "The year of purchase is listed if available.",
+    "Add any comments, if any, at the end.",
+    "The phone number is printed if known.",
+    "Enclose the old permits, if any, with this form.",
+    "The country of origin is stated if available."
+   ],
+   "quiet": [
+    "Give the page title to show at the top.",
+    "The author's email is shown on the page.",
+    "Please note your dietary needs below.",
+    "The year of purchase is listed if you bought it here.",
+    "Add your comments at the end.",
+    "The phone number is printed if you ask for it.",
+    "Enclose the old permits with this form.",
+    "The country of origin is stated on the label."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; full if-clauses and no-conditional versions stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "clipped ' if'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round, narrowed. The first test also claimed 'when necessary'; 'when' forms scored 0.02-0.06, while clipped ' if' scored 0.33-0.63, and full if-clauses reached 0.25. No new probes on this pole.",
+ "trigger": {
+  "tokens": [
+   " if"
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-da9e6b6d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N7907+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:58:52+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L35/N7907",
+   "pole": "+",
+   "label": "the token '-E' opening the second part of a hyphenated name ('Afro-Eurasian', 'Nord-Europe')",
+   "fire": [
+    "The Afro-Eurasian land mass is the largest on Earth.",
+    "A new Nord-Europe ferry began service in May.",
+    "African-Eurasian birds cross the desert twice a year.",
+    "The Sud-Europe rail link opened last spring.",
+    "Scholars study Afro-Eurasian trade before Rome.",
+    "The Nord-Est region voted on Sunday.",
+    "Her book covers Afro-Eurasian empires in depth.",
+    "The West-Europe office moved to Lyon."
+   ],
+   "quiet": [
+    "The Afro-Asian land bloc met for the first time.",
+    "A new Nord-Baltic ferry began service in May.",
+    "African-American birders cross the state twice a year.",
+    "The Sud-Ouest rail link opened last spring.",
+    "Scholars study Greco-Roman trade before Rome.",
+    "The Nord-Pas region voted on Sunday.",
+    "Her book covers Sino-Soviet disputes in depth.",
+    "The Anglo-Saxon office moved to Lyon."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; hyphenated names with other second parts stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "'-E' piece",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Second round, narrowed from a list. In the first test, ' -E' in 'Afro-Eurasian' reached 0.69 while 'Indo-European' and 'Euro-Asian' scored 0.02, so the split matters. Probe: 'Afro-Eurasian' 0.73, 'Nord-Europe' 0.70; 'Trans-Atlantic' 0.00. Card: '-E' x8. German 'le' and French \"'E\" are left out here. The tokenization of each new word was not checked before commit.",
+ "trigger": {
+  "tokens": [
+   "-E"
+  ]
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-c64d68b8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N10915+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:58:52+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L3/N10915",
+   "pole": "+",
+   "label": "the word 'fierce' / 'fiercely' / 'fiercest' when it is not the first token of a sentence (gate-closed)",
+   "fire": [
+    "The mayor became a fierce opponent of the toll road.",
+    "Rain and some of the fiercest gusts of the winter hit the coast.",
+    "Both clubs competed fiercely for the young striker.",
+    "There was a fierce argument about the budget last night.",
+    "My grandmother keeps a fierce pride in her village.",
+    "The neighbors disagreed fiercely about the old fence.",
+    "That was the fiercest fire the county had seen.",
+    "In this market, fierce rivalry keeps margins thin."
+   ],
+   "quiet": [
+    "The mayor became a vocal opponent of the toll road.",
+    "Rain and some of the coldest gusts of the winter hit the coast.",
+    "Both clubs competed openly for the young striker.",
+    "There was a brief argument about the budget last night.",
+    "My grandmother keeps a quiet pride in her village.",
+    "The neighbors disagreed politely about the old fence.",
+    "That was the biggest fire the county had seen.",
+    "In this market, steady demand keeps margins thin."
+   ]
+  }
+ ],
+ "predictions": "8/8 fire; other strong adjectives and adverbs stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "'fierce' (not sentence-initial)",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Second round. The first test (2026-11-05 sweep, seed 202611050508) failed at AUROC 0.891 only because one fire item opened a sentence with 'Fierce' and scored -0.03; the other seven scored 0.71-0.92. No test sentence here puts the trigger first.",
+ "trigger": {
+  "words": [
+   "fierce",
+   "fiercely",
+   "fiercest"
+  ]
+ }
+}
