@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-05-lm1909-2595e38a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N5313-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:38:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N5313",
+   "pole": "-",
+   "label": "the token '_name' in Django's related_name argument",
+   "fire": [
+    "author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')",
+    "groups = models.ManyToManyField(Group, blank=True, related_name='members')",
+    "parent = models.ForeignKey('self', null=True, related_name='children')",
+    "owner = ForeignKey(Person, related_name='pets')",
+    "profile = models.OneToOneField(Account, related_name='profile')",
+    "'team': ('django.db.models.fields.related.ForeignKey', [], {'related_name': \"'players'\", 'to': \"orm['app.Team']\"})",
+    "friends = models.ManyToManyField('self', symmetrical=False, related_name='friend_of')",
+    "order = models.ForeignKey(Order, null=True, blank=True, related_name='lines')"
+   ],
+   "quiet": [
+    "author = models.ForeignKey(Author, on_delete=models.CASCADE, db_column='author_id')",
+    "groups = models.ManyToManyField(Group, blank=True, verbose_name='members')",
+    "parent = models.ForeignKey('self', null=True, db_index=True)",
+    "display_name = models.CharField(max_length=40, blank=True)",
+    "profile = models.OneToOneField(Account, primary_key=True)",
+    "'team': ('django.db.models.fields.related.ForeignKey', [], {'to': \"orm['app.Team']\", 'null': 'True'})",
+    "friends = models.ManyToManyField('self', symmetrical=False, through='Friendship')",
+    "order_name = request.POST.get('order_name', '')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'_name' of Django related_name",
+ "unit_kind": "code / token",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   "_name"
+  ]
+ }
+}

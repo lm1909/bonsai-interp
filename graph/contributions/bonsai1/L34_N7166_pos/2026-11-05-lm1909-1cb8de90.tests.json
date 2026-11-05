@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-1cb8de90",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7166+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:38:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N7166",
+   "pole": "+",
+   "label": "in code that repeats a similar call on successive lines, the line start or argument separator of the next repeat",
+   "fire": [
+    "def setup():\n  RegisterPlugin(os.path.join(PLUGIN_DIR, 'alpha'), 'alpha')\n  RegisterPlugin(os.path.join(PLUGIN_DIR, 'beta'), 'beta')\n  RegisterPlugin(os.path.join(PLUGIN_DIR, 'gamma'), 'gamma')",
+    "class Upgrade:\n    def apply(apps, schema):\n        UserProfile = apps.get_model('accounts', 'UserProfile')\n        UserGroup = apps.get_model('accounts', 'UserGroup')\n        UserToken = apps.get_model('accounts', 'UserToken')",
+    "    Settings.setValue(\n        \"SERVER\",\n        \"host_name\",\n        config[\"HOST_NAME\"])\n\n    Settings.setValue(\n        \"SERVER\",\n        \"port_num\",\n        config[\"PORT_NUM\"])",
+    "def build():\n  CompileAsset(os.path.join(ASSET_ROOT, 'icons'), 'icons')\n  CompileAsset(os.path.join(ASSET_ROOT, 'fonts'), 'fonts')\n  CompileAsset(os.path.join(ASSET_ROOT, 'sounds'), 'sounds')",
+    "class Reset:\n    def run(registry, editor):\n        OrderLine = registry.get_model('shop', 'OrderLine')\n        OrderNote = registry.get_model('shop', 'OrderNote')\n        OrderTag = registry.get_model('shop', 'OrderTag')",
+    "def wire():\n  AddRoute(path.join(ROUTES_DIR, 'users'), 'users')\n  AddRoute(path.join(ROUTES_DIR, 'posts'), 'posts')\n  AddRoute(path.join(ROUTES_DIR, 'tags'), 'tags')",
+    "    Store.putItem(\n        \"CACHE\",\n        \"max_size\",\n        limits[\"MAX_SIZE\"])\n\n    Store.putItem(\n        \"CACHE\",\n        \"ttl_secs\",\n        limits[\"TTL_SECS\"])",
+    "def install():\n  LinkFile(os.path.join(HOME_DIR, 'vimrc'), 'vimrc')\n  LinkFile(os.path.join(HOME_DIR, 'bashrc'), 'bashrc')\n  LinkFile(os.path.join(HOME_DIR, 'zshrc'), 'zshrc')"
+   ],
+   "quiet": [
+    "def setup():\n  plugin = load_plugin(PLUGIN_DIR)\n  status = plugin.check()\n  print(status)",
+    "class Upgrade:\n    def apply(self, schema):\n        count = schema.tables()\n        total = sum(count)\n        return total",
+    "    value = Settings.read()\n    if value is None:\n        raise KeyError(\"missing\")\n\n    print(value)\n    return value",
+    "def build():\n  assets = list_assets(ASSET_ROOT)\n  sizes = [len(a) for a in assets]\n  return max(sizes)",
+    "class Reset:\n    def run(self, editor):\n        line = editor.current()\n        editor.clear()\n        return line",
+    "def wire():\n  app = create_app()\n  port = int(os.environ['PORT'])\n  app.listen(port)",
+    "    item = Store.first()\n    if item.expired():\n        Store.drop(item)\n\n    log.warning(\"dropped\")\n    return item",
+    "def install():\n  target = os.path.expanduser('~')\n  ok = os.path.isdir(target)\n  sys.exit(0 if ok else 1)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "next repeat of a similar code line",
+ "unit_kind": "code / repeat",
+ "confidence": "medium",
+ "notes": "The pole is broad (1.1% of tokens reach 0.1 of max), and some top examples are prose, so a hold would describe only the code part."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-0e6a7c4b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N1688-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:38:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N1688",
+   "pole": "-",
+   "label": "the ' =' of an assignment to a subscripted item (x['key'] =) in multi-line Python",
+   "fire": [
+    "for row in rows:\n    record = {}\n    record['title'] = row[0]\n    record['body'] = row[1]\n    out.append(record)",
+    "try:\n    text = raw.decode('utf-8')\nexcept ValueError:\n    text = raw.decode('latin-1')\n#\nentry['text'] = text\nentry['length'] = len(text)",
+    "        if node:\n            when = node.stamp\n        else:\n            when = None\n        sessions[name] = {\n            'last': when,\n        }",
+    "def update(cache, key):\n    value = fetch(key)\n    # keep the latest copy\n    cache[key] = value\n    return value",
+    "params = {}\nparams['page'] = 1\nparams['limit'] = 50\nresult = client.get(url, params)",
+    "    for user in users:\n        name = user.name\n        totals[name] = 0\n        counts[name] = 0",
+    "response = make_response(body)\nresponse.headers['Server'] = 'demo'\nresponse.headers['Age'] = '0'\nreturn response",
+    "def build(fields):\n    out = dict()\n    for f in fields:\n        out[f.name] = f.value\n    return out"
+   ],
+   "quiet": [
+    "for row in rows:\n    title = row[0]\n    body = row[1]\n    out.append((title, body))",
+    "try:\n    text = raw.decode('utf-8')\nexcept ValueError:\n    text = raw.decode('latin-1')\n#\nlength = len(text)\nprint(length)",
+    "        if node:\n            when = node.stamp\n        else:\n            when = None\n        last_seen = when\n        print(last_seen)",
+    "def update(cache, key):\n    value = fetch(key)\n    # keep the latest copy\n    store(cache, key, value)\n    return value",
+    "page = 1\nlimit = 50\nresult = client.get(url, page, limit)\nprint(result)",
+    "    for user in users:\n        name = user.name\n        total = 0\n        count = 0",
+    "response = make_response(body)\nserver = 'demo'\nage = '0'\nreturn response",
+    "def build(fields):\n    names = list()\n    for f in fields:\n        names.append(f.name)\n    return names"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' =' of subscript assignment in code",
+ "unit_kind": "code / contextual",
+ "confidence": "low",
+ "notes": "Fired only at 0.14-0.21 in the multi-line probes, below the 0.30 band; expect a fail or a narrow pass."
+}
