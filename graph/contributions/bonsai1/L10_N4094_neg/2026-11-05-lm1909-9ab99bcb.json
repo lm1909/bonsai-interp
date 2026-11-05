@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-9ab99bcb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N4094-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:37:58+00:00",
+ "recipe": {
+  "toolchain_commit": "b395fa20c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N4094_neg/2026-11-05-lm1909-9ab99bcb.tests.json"
+ },
+ "label": "'licensed' and 'granted' in a licence or permission statement ('is licensed under', 'permission is granted')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N4094_neg/2026-11-05-lm1909-9ab99bcb.tests.json",
+   "prereg_commit": "b395fa20c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.655,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.42,
+     "peak": " granted"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.426,
+     "peak": " licensed"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.579,
+     "peak": " licensed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.39,
+     "peak": " granted"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.748,
+     "peak": " licensed"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.304,
+     "peak": " licensed"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.428,
+     "peak": " license"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.12,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.267,
+     "peak": " needed"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": "-SA"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.324,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.087,
+     "peak": " licensed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " granted"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.206,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.427,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b395fa20c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "licensed / granted (licence text)",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.85,
+ "notes": "Card: ' licensed' 9 and ' granted' 9 of the top 32. Probes: licence statements 0.58-0.65; 'licensed electrician' 0.09, 'granted bail' 0.01, 'available under a Creative Commons license' 0.06. The near misses keep the licence topic and drop the two verbs, or keep the verbs and drop the licence.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "licensed",
+   "granted"
+  ]
+ }
+}

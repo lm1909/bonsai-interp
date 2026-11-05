@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-41773824",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N5812-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:37:55+00:00",
+ "recipe": {
+  "toolchain_commit": "b395fa20c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N5812_neg/2026-11-05-lm1909-41773824.tests.json"
+ },
+ "label": "a content noun used as a field name inside a Python identifier: 'title__count', 'get_language_count', 'date_diff', 'legendHeight'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N5812_neg/2026-11-05-lm1909-41773824.tests.json",
+   "prereg_commit": "b395fa20c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.343,
+     "peak": "_country"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.424,
+     "peak": " date"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.766,
+     "peak": "author"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.508,
+     "peak": " label"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.548,
+     "peak": "_tag"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.635,
+     "peak": " date"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.747,
+     "peak": "genre"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.394,
+     "peak": " legend"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "def"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.258,
+     "peak": " stop"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": "[i"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " -="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": " values"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " limit"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.108,
+     "peak": "[key"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " +="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.528,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b395fa20c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "field noun in a code identifier",
+ "unit_kind": "contextual / code",
+ "confidence": 0.5,
+ "notes": "Probes: 'title' in title__count 1.44, '_language' 0.94, ' date' in date_diff 0.68, ' legend' 0.46; Vapor pressure in prose 0.19; generic code 'total = sum(values)' 0.00, 'page_count = len(pages)' 0.02. The near misses are code that keeps the shape and drops the named field.",
+ "selection": "random draw"
+}

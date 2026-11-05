@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-7149238f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N6974-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:38:04+00:00",
+ "recipe": {
+  "toolchain_commit": "b395fa20c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N6974_neg/2026-11-05-lm1909-7149238f.tests.json"
+ },
+ "label": "(guess) the name ' Kim' right after a title such as Governor or Senator",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N6974_neg/2026-11-05-lm1909-7149238f.tests.json",
+   "prereg_commit": "b395fa20c",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.254,
+     "peak": " Kim"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.312,
+     "peak": " Kim"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.083,
+     "peak": " Kim"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.081,
+     "peak": " Kim"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.169,
+     "peak": " Kim"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.12,
+     "peak": " Kim"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.102,
+     "peak": " Kim"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.153,
+     "peak": " Kim"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": "Senator"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.139,
+     "peak": " Sam"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " opened"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": "Min"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " asked"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " dinner"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "Council"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.137,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b395fa20c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Kim' after a title (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "The top examples show no single pattern: ' Inter', ' self', ' Kam', ' Kim', ' society', Chinese 的. Probes: Governor Kim 0.31, Intercollegiate 0.52, Kim Jong 0.15, Inter Milan 0.02, self-love 0.23. Low confidence; the guess covers one small piece of the pole at most.",
+ "selection": "random draw"
+}

@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-b2187519",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N660-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:37:15+00:00",
+ "recipe": {
+  "toolchain_commit": "b395fa20c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N660_neg/2026-11-05-lm1909-b2187519.tests.json"
+ },
+ "label": "split-off word-initial f piece: the token ' ف' in Arabic words and ' F' in Arabic names (Fattah, Fadlallah)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N660_neg/2026-11-05-lm1909-b2187519.tests.json",
+   "prereg_commit": "b395fa20c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.838,
+     "peak": " ف"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.778,
+     "peak": " ف"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.689,
+     "peak": " ف"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.87,
+     "peak": " F"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.714,
+     "peak": " F"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.448,
+     "peak": " ف"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.556,
+     "peak": " ف"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.816,
+     "peak": " ف"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.108,
+     "peak": "زل"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.0,
+     "peak": " الط"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "ج"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.07,
+     "peak": " Marshal"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.06,
+     "peak": "r"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": " في"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " غ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "مل"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.746,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b395fa20c",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-off initial ف / F",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: ' ف' 17 of the top 32, 'ف' 7, ' F' 3. Probes: split ' ف' 0.67-0.92, ' F'attah 0.95, ' f' in fällt 0.64; whole tokens ' fan' and ' Fat' stay under 0.04, so the label is about the split-off letter. Near misses keep the Arabic sentence or the Arab name and swap the word.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " ف",
+   "ف",
+   " F"
+  ]
+ }
+}

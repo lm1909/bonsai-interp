@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-65f5fe41",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6057+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:37:34+00:00",
+ "recipe": {
+  "toolchain_commit": "b395fa20c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N6057_pos/2026-11-05-lm1909-65f5fe41.tests.json"
+ },
+ "label": "the piece 'انت' opening Arabic verbs after و (وانتقل, وانتهى, وانتظر, وانتشر)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N6057_pos/2026-11-05-lm1909-65f5fe41.tests.json",
+   "prereg_commit": "b395fa20c",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.322,
+     "peak": "انت"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.236,
+     "peak": "انت"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.423,
+     "peak": "انت"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.238,
+     "peak": "انت"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.338,
+     "peak": "انت"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.238,
+     "peak": "انت"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.181,
+     "peak": "انت"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.261,
+     "peak": "انت"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": "ذهب"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": "اعت"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "ت"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "طار"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "خ"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " الناس"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "تكلم"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " ابن"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.249,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b395fa20c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic onset piece انت",
+ "unit_kind": "token piece",
+ "confidence": 0.45,
+ "notes": "Card: 'نت' 6, ' Inter' 4, 'انت' 4 of the top 32. Probes: 'انت' 0.21-0.33; ' Int' of Intercollegiate 0.57, but ' Inter' of Interfraternity 0.06 and ' per' 0.14, so English is left out. Fire is expected near the median threshold.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "انت",
+   " انت",
+   "نت"
+  ]
+ }
+}

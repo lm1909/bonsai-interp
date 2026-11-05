@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-2d1d980a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N6536+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:37:18+00:00",
+ "recipe": {
+  "toolchain_commit": "b395fa20c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N6536_pos/2026-11-05-lm1909-2d1d980a.tests.json"
+ },
+ "label": "the unit foot after the number six: '6-foot', 'six-foot', 'six feet' (other numbers and other units are near misses)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N6536_pos/2026-11-05-lm1909-2d1d980a.tests.json",
+   "prereg_commit": "b395fa20c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.589,
+     "peak": "-foot"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.834,
+     "peak": "-foot"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.594,
+     "peak": " feet"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.684,
+     "peak": "-foot"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.744,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.649,
+     "peak": " feet"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.715,
+     "peak": " Foot"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.766,
+     "peak": " feet"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.081,
+     "peak": "-foot"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " defender"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.103,
+     "peak": " feet"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.065,
+     "peak": "-foot"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": "etre"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": "Gr"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " Foot"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.048,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.7,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b395fa20c",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "six feet / 6-foot",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.6,
+ "notes": "The card suggested height in feet. Probes point to the number six instead: 6-foot-3 0.81, six feet tall 0.74, six-foot wall 0.54; ten-foot fence 0.06, 40 feet 0.05, 7-foot 0.20, five feet 0.20, sixty feet 0.22; his foot and on foot about 0. The near misses test the number.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "-foot",
+   " feet",
+   " Foot"
+  ]
+ }
+}
