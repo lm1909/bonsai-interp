@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-8215fb3c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N9035+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:38:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N9035",
+   "pole": "+",
+   "label": "The word for an unwanted state a condition warns about (the crust would harden, soils too damp, a value <= 0 raises an error)",
+   "fire": [
+    "Without enough oil, the toffee would stiffen and stick to the tray.",
+    "Leave the lid off and the icing would crust before you serve it.",
+    "Do not overwater, because soggy compost invites fungus to the seedlings.",
+    "Without resting, the batter would toughen when you fry the pancakes.",
+    "if price <= 0 or qty <= 0:\n    raise ValueError('bad order')",
+    "Overly humid cellars force mould onto the stored apples.",
+    "If the spirit of the team should grow faint, the season is lost.",
+    "Without stirring, the custard would curdle as it cools in the pan."
+   ],
+   "quiet": [
+    "With enough oil, the toffee would lift and slide off the tray.",
+    "Leave the lid off and the kitchen would smell lovely when you serve it.",
+    "Do water regularly, because fresh compost brings food to the seedlings.",
+    "After resting, the batter would taste better when you fry the pancakes.",
+    "if price == 10 and qty == 3:\n    print('good order')",
+    "Pleasantly cool cellars keep flavour in the stored apples.",
+    "If the spirit of the team should stay high, the season is won.",
+    "With stirring, the custard would shine as it cools in the pan."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "warned-of bad state",
+ "unit_kind": "unclear / contextual",
+ "confidence": 0.3,
+ "notes": "A weak unification of a mixed card (or, <=, harden, damp, grow). Probes: harden 0.63-0.75 after 'would' but 0.03 in 'will harden when cooled'; ' <=' 0.42 before a raise."
+}

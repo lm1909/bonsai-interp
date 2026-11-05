@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-9f274274",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10581+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:38:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N10581",
+   "pole": "+",
+   "label": "Positional: in the corpus scan it saturates on the first token of a window, whatever the token; best-guess test of position 0 against the same text with a word before it",
+   "fire": [
+    "68 delegates attended, 19 of them from overseas.",
+    "60 centimetres of pipe should be added to the run.",
+    "(worker) start the server and wait for it.",
+    ".items\n        col = event.Col\n",
+    "prosthetic limbs were fitted to the young boy.",
+    "6. 2001\nThe next chapter begins here.",
+    "60. The Anglican Cathedral of St Paul stands nearby.",
+    "application forms must be returned by Friday."
+   ],
+   "quiet": [
+    "About 68 delegates attended, 19 of them from overseas.",
+    "Another 60 centimetres of pipe should be added to the run.",
+    "Next (worker) start the server and wait for it.",
+    "Then .items\n        col = event.Col\n",
+    "New prosthetic limbs were fitted to the young boy.",
+    "Chapter 6. 2001\nThe next chapter begins here.",
+    "Item 60. The Anglican Cathedral of St Paul stands nearby.",
+    "All application forms must be returned by Friday."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "window-initial token",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "The card flags 100% of top peaks at window position 0, all at the same saturated value 1136 across unrelated tokens ('6', '(agent', '.grid', ' prost'). Five exploratory sentences, including openings copied from the top peaks, scored only 0.002-0.006, so play probe does not reproduce the scan's reading and I do not know why. This test records the positional flag and is expected to fail."
+}

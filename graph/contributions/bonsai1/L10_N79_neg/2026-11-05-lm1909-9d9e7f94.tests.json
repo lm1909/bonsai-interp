@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-9d9e7f94",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N79-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:38:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N79",
+   "pole": "-",
+   "label": "The keyword 'if' opening a conditional statement in code (with SQL HAVING and FILTER as the same kind of condition clause); prose 'if' and inline ternaries stay quiet",
+   "fire": [
+    "def clip(v, hi):\n    total = v + 1\n    if total > hi:\n        return hi\n    return total\n",
+    "for row in rows:\n    name = row[0]\n    if not name:\n        continue\n    print(name)\n",
+    "int main() {\n    int n = read();\n    if (n < 0) {\n        return 1;\n    }\n}\n",
+    "var count = items.length;\ncount += 1;\nif (count > limit) {\n    reset();\n}\n",
+    "def load(path):\n    data = open(path).read()\n    if data:\n        return data\n",
+    "SELECT city, SUM(pop) FROM towns\nGROUP BY city\nHAVING SUM(pop) > 100\n",
+    "while True:\n    line = f.readline()\n    if line == '':\n        break\n",
+    "self.size = size\nself.items = []\nif size is None:\n    self.size = 8\n"
+   ],
+   "quiet": [
+    "def clip(v, hi):\n    total = v + 1\n    total = min(total, hi)\n    return total\n",
+    "for row in rows:\n    name = row[0]\n    name = name.strip()\n    print(name)\n",
+    "int main() {\n    int n = read();\n    n = n * 2;\n    return n;\n}\n",
+    "var count = items.length;\ncount += 1;\nreset();\nshow(count);\n",
+    "def load(path):\n    data = open(path).read()\n    value = data if data else None\n    return value\n",
+    "SELECT city, SUM(pop) FROM towns\nGROUP BY city\nORDER BY city\n",
+    "Please read the line below and tell me if it is empty, and stop if you are tired.",
+    "Call the office if the size is wrong, and we will send you a new one if needed."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code 'if' opening a condition",
+ "unit_kind": "code / contextual",
+ "confidence": 0.8
+}
