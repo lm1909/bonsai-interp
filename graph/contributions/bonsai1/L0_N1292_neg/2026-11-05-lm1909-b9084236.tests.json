@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-b9084236",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N1292-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N1292",
+   "pole": "-",
+   "label": "A word right after a period (a sentence boundary or an abbreviation such as 'U.S.'), other than the very common ' The', against the same word inside a sentence.",
+   "fire": [
+    "It was cold. Nobody answered the door.",
+    "The shop closed. then it rained.",
+    "He works at Acme Inc. Denver is home.",
+    "We are in the U.S. Texas is big.",
+    "She spoke last. thanks to all of you.",
+    "They left at dawn. Everyone was tired.",
+    "I read the memo. Nothing changed.",
+    "The vote was held in the U.K. Parliament was closed."
+   ],
+   "quiet": [
+    "It was cold and nobody answered the door.",
+    "The shop closed and then it rained.",
+    "He works at Acme in Denver and lives there.",
+    "We are in Texas and it is big.",
+    "She spoke last and thanks went to all of you.",
+    "They left at dawn and everyone was tired.",
+    "I read the memo and nothing changed.",
+    "The vote was held in the parliament that was closed."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word right after a period",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: ' Nobody' after a period 0.40, ' The' after a period 0.06, 'American foreign' 0.08 against 'U.S. foreign' 0.72. A flagged broad pole, and bare words at the very start of a text also read 0.24-0.26."
+}

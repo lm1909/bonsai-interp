@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-05-lm1909-08207c5a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N24-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N24",
+   "pole": "-",
+   "label": "Reordering a sequence in code: '.argsort', '.shuffle', '.perm(utation)', '.sort'; other numpy or list calls in the same slot stay quiet.",
+   "fire": [
+    "ranks = np.argsort(values)[::-1]\n",
+    "random.shuffle(deck)\nreturn deck\n",
+    "ids = np.random.permutation(total)[:10]\n",
+    "order = torch.argsort(scores)\n",
+    "np.random.shuffle(rows)\nprint(rows)\n",
+    "perm = rng.permutation(size)\n",
+    "top = data.argsort()[-5:]\n",
+    "values.sort()\nprint(values[0])\n"
+   ],
+   "quiet": [
+    "ranks = np.argmin(values)\n",
+    "random.randint(1, 6)\nreturn deck\n",
+    "ids = np.random.normal(total)[:10]\n",
+    "order = torch.max(scores)\n",
+    "np.random.seed(rows)\nprint(rows)\n",
+    "perm = rng.integers(size)\n",
+    "top = data.mean()\n",
+    "values.append(1)\nprint(values[0])\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code call that reorders a sequence",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Plain English 'sort' and 'shuffle' read 0.09, and 'frozen fruit' reached 0.50 in a probe, so the food top examples remain unexplained. '.sort' peaks late, on the closing token ('])\\n')."
+}

@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-dc227453",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N12119+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:40:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N12119",
+   "pole": "+",
+   "label": "The 'key' piece of an API key, in code ('_KEY', '_key') or prose (' key' after ' API'); other credentials and other keys stay quiet.",
+   "fire": [
+    "GITHUB_API_KEY = os.getenv('TOKEN')\n",
+    "params = {'api_key': token}\n",
+    "Paste your API key into the form.",
+    "self.api_key = api_key\n",
+    "You need an API key to call the service.",
+    "headers['X-API-KEY'] = value\n",
+    "def connect(host: str, api_key: str):\n    pass\n",
+    "Get a free API key from the dashboard."
+   ],
+   "quiet": [
+    "GITHUB_TOKEN = os.getenv('TOKEN')\n",
+    "params = {'user': token}\n",
+    "Paste your address into the form.",
+    "self.user = user\n",
+    "You need a house key to open the door.",
+    "headers['Accept'] = value\n",
+    "def connect(host: str, port: int):\n    pass\n",
+    "Get a free sample from the dashboard."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the key in 'API key'",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "Probes: 'API_KEY' 0.94, 'API key' 0.77, ' API' alone 0.18, 'SECRET' 0.02. A sub-trigger: the '-version' top examples did not fire in probes ('--python-version' 0.01) and are not covered.",
+ "trigger": {
+  "tokens": [
+   "_KEY",
+   "_key"
+  ]
+ }
+}
