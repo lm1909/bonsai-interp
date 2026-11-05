@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-afa46083",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N6814+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:30:32+00:00",
+ "recipe": {
+  "toolchain_commit": "cbdf8040b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N6814_pos/2026-11-05-lm1909-afa46083.tests.json"
+ },
+ "label": "' I' as a stand-alone capital letter inside names and references: a middle initial, the split start of a surname (' I|qbal'), or a roman numeral volume, as opposed to names with other letters",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N6814_pos/2026-11-05-lm1909-afa46083.tests.json",
+   "prereg_commit": "cbdf8040b",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.273,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.186,
+     "peak": " Im"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.067,
+     "peak": " Nad"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.508,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.091,
+     "peak": " Omar"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.045,
+     "peak": " Mark"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.734,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.606,
+     "peak": " I"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.067,
+     "peak": " Nad"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": " Omar"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": " Mark"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": "Letters"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.945,
+    "median_fire": 0.23,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cbdf8040b",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "' I' as a name initial or numeral",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "This covers only part of the pole. Probes also fired on ' to' (0.24, 0.34), 'ién' and other tokens, and the card lists ' will' and Spanish words. The first-person pronoun scored 0.16.",
+ "selection": "random draw"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-90ccd050",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N11243+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:30:23+00:00",
+ "recipe": {
+  "toolchain_commit": "cbdf8040b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N11243_pos/2026-11-05-lm1909-90ccd050.tests.json"
+ },
+ "label": "a relative pronoun (who, that, which) after a noun someone wants, seeks or needs (a king who would..., a remedy that would...); relatives on a specific, known noun stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N11243_pos/2026-11-05-lm1909-90ccd050.tests.json",
+   "prereg_commit": "cbdf8040b",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.432,
+     "peak": " would"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.498,
+     "peak": " who"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.391,
+     "peak": " who"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.269,
+     "peak": " would"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.36,
+     "peak": " could"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.258,
+     "peak": " had"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.365,
+     "peak": " who"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.372,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " met"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "Histor"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " earthquake"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " cheered"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.368,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cbdf8040b",
+  "minutes": 1,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "relative after a wanted or sought-for noun",
+ "unit_kind": "syntactic",
+ "confidence": "high",
+ "selection": "random draw"
+}
