@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-96c93aff",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N6869+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:26:36+00:00",
+ "recipe": {
+  "toolchain_commit": "ca01e71cb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N6869_pos/2026-11-05-lm1909-96c93aff.tests.json"
+ },
+ "label": "dense unit (on for much of all text in the gate-closed regime), peaking on pieces such as Russian 'иров' and 'Sure'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N6869_pos/2026-11-05-lm1909-96c93aff.tests.json",
+   "prereg_commit": "ca01e71cb",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.764,
+     "peak": "ров"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.658,
+     "peak": "Sure"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.723,
+     "peak": "ров"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.658,
+     "peak": "Sure"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.931,
+     "peak": "иров"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.658,
+     "peak": "Sure"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.673,
+     "peak": "ров"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.658,
+     "peak": "Sure"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.178,
+     "peak": " прод"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.231,
+     "peak": "Yes"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.194,
+     "peak": "О"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.312,
+     "peak": "Okay"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.272,
+     "peak": "К"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.152,
+     "peak": "Maybe"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.309,
+     "peak": "ч"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.316,
+     "peak": "Well"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.665,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ca01e71cb",
+  "minutes": 33,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "dense; 'иров', 'Sure' peaks",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "The card flags 22.7% of tokens above 0.1 of max and 99% gate-closed. An 8 + 8 test can hardly separate this; the test checks only the two peaks found in exploration.",
+ "selection": "random draw"
+}
