@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-7576d67a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N3924+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:28:05+00:00",
+ "recipe": {
+  "toolchain_commit": "1956fd991",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N3924_pos/2026-11-06-lm1909-7576d67a.tests.json"
+ },
+ "label": "' any', ' ever' or ' anything' in a yes/no question (Is there any hope?, Has he ever?); the same words in statements and other determiners in questions stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N3924_pos/2026-11-06-lm1909-7576d67a.tests.json",
+   "prereg_commit": "1956fd991",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.751,
+     "peak": " any"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.55,
+     "peak": " any"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.667,
+     "peak": " any"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.489,
+     "peak": " anyone"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.654,
+     "peak": " ever"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.648,
+     "peak": " any"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.63,
+     "peak": " anything"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.58,
+     "peak": " any"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": " there"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.06,
+     "peak": " there"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " someone"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " him"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.229,
+     "peak": " thing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " open"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.639,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1956fd991",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'any' / 'ever' in yes/no questions",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}

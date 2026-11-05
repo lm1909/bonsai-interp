@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-fac96c23",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N2897-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:27:56+00:00",
+ "recipe": {
+  "toolchain_commit": "1956fd991",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N2897_neg/2026-11-06-lm1909-fac96c23.tests.json"
+ },
+ "label": "The CJK token 头 / 頭 (head), in and out of compounds; Chinese sentences with other nouns in the same place stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N2897_neg/2026-11-06-lm1909-fac96c23.tests.json",
+   "prereg_commit": "1956fd991",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.88,
+     "peak": "头"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.565,
+     "peak": "头"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.84,
+     "peak": "头"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.828,
+     "peak": "头"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.619,
+     "peak": "头"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.733,
+     "peak": "头"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.858,
+     "peak": "頭"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.597,
+     "peak": "头"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.085,
+     "peak": "腿"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": "火车"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "这个人"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "主要"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "手"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.064,
+     "peak": "腿"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": "把手"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.042,
+     "peak": "用手"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.78,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1956fd991",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "CJK token 头 / 頭",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "头",
+   "頭"
+  ]
+ }
+}
