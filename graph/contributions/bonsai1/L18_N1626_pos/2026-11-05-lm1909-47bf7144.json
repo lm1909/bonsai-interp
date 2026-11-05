@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-47bf7144",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1626+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:23:18+00:00",
+ "recipe": {
+  "toolchain_commit": "492771a0a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N1626_pos/2026-11-05-lm1909-47bf7144.tests.json"
+ },
+ "label": "parameter names in a Python docstring (':param context:') (guess at a part of a broad pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N1626_pos/2026-11-05-lm1909-47bf7144.tests.json",
+   "prereg_commit": "492771a0a",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.358,
+     "peak": " session"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.301,
+     "peak": " image"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.47,
+     "peak": " user"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.252,
+     "peak": " path"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.464,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.117,
+     "peak": " matrix"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.495,
+     "peak": " cursor"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.394,
+     "peak": " message"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.232,
+     "peak": "_status"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.194,
+     "peak": " ratio"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.109,
+     "peak": "user"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.11,
+     "peak": " f"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.177,
+     "peak": "scope"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.235,
+     "peak": ".cursor"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.21,
+     "peak": " channel"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.376,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "492771a0a",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "docstring parameter names (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": 0.15,
+ "notes": "Card: broad (1.6% reach 0.1 of max), scattered code identifiers and ' syll'. Probe: ':param context' 0.380; ' syll' 0.335; 'self.refno' 0.109; 'output_delimiter' 0.085; prose about a dog 0.012. The one repeatable-looking reading I found; low confidence.",
+ "selection": "random draw"
+}

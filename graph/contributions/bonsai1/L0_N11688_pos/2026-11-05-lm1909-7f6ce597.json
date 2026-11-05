@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-7f6ce597",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11688+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:23:25+00:00",
+ "recipe": {
+  "toolchain_commit": "492771a0a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N11688_pos/2026-11-05-lm1909-7f6ce597.tests.json"
+ },
+ "label": "common Python tokens in code: ' return' as a statement, 'version' of __version__, Qt module names; the same words in prose stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N11688_pos/2026-11-05-lm1909-7f6ce597.tests.json",
+   "prereg_commit": "492771a0a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.512,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.976,
+     "peak": "version"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.377,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.915,
+     "peak": "version"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.451,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.572,
+     "peak": "QtCore"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.378,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.339,
+     "peak": "version"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.147,
+     "peak": "page"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": "pkg"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.045,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.077,
+     "peak": "core"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.165,
+     "peak": "(sum"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": " program"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.082,
+     "peak": " print"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.094,
+     "peak": "lib"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.482,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "492771a0a",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Python ' return', __version__",
+ "unit_kind": "token / code",
+ "confidence": 0.7,
+ "notes": "Card: ' return' x12, 'version' x4, '.Window' x3, '_APPS' x2, '.relu' x2, '/bin' x2. Probe: __version__ 0.838; QtCore 0.636; ' return' statement 0.488; print in the same function 0.095; prose 'return to the city' 0.041; prose 'new version' 0.051.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " return",
+   "version",
+   "QtCore"
+  ]
+ }
+}

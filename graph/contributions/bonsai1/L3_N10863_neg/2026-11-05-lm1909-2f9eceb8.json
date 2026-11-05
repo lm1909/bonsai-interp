@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-2f9eceb8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N10863-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:23:06+00:00",
+ "recipe": {
+  "toolchain_commit": "492771a0a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N10863_neg/2026-11-05-lm1909-2f9eceb8.tests.json"
+ },
+ "label": "the token 'return' or ' return' as coming back (going to/returning, return home), most strongly when glued to a slash (guess at a part of a broad pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N10863_neg/2026-11-05-lm1909-2f9eceb8.tests.json",
+   "prereg_commit": "492771a0a",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.748,
+     "peak": "return"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.68,
+     "peak": "return"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.581,
+     "peak": "return"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.617,
+     "peak": "return"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.275,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.289,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.34,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.345,
+     "peak": " return"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.093,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.089,
+     "peak": "aving"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.171,
+     "peak": "around"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.101,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.077,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.041,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.463,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "492771a0a",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'return' (coming back)",
+ "unit_kind": "token",
+ "confidence": 0.35,
+ "notes": "Card: ' return' x6, '路' x3, 'اع' x3, 'ition' x3, '常' x2, ' back' x2; broad. Probe: 'to/returning' 0.730; 'Please return the book' 0.160; code 'return x' 0.183 peaking on 'def'; 'walked home' 0.106; Chinese 0.065. The plain ' return' is under the bar, so half the fire items use the slash form.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "return",
+   "returning"
+  ]
+ }
+}

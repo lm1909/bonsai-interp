@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-5025d0b7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N7933-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:23:08+00:00",
+ "recipe": {
+  "toolchain_commit": "492771a0a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N7933_neg/2026-11-05-lm1909-5025d0b7.tests.json"
+ },
+ "label": "silk and satin, across languages ('satin', ' silk', French 'soie', Russian 'шёлк-')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N7933_neg/2026-11-05-lm1909-5025d0b7.tests.json",
+   "prereg_commit": "492771a0a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.713,
+     "peak": " satin"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.442,
+     "peak": " silk"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.679,
+     "peak": "ie"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.693,
+     "peak": "ков"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.661,
+     "peak": " satin"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.493,
+     "peak": " silk"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.884,
+     "peak": "ie"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.727,
+     "peak": " satin"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.167,
+     "peak": " lace"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.164,
+     "peak": " pure"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.173,
+     "peak": "aine"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.05,
+     "peak": "ня"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.072,
+     "peak": " soft"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " carried"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.252,
+     "peak": "oton"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.157,
+     "peak": " cotton"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.686,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "492771a0a",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "silk and satin",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.85,
+ "notes": "Card: ' satin' x5, ' silk' x5, 'in' of Sat|in x7, 'ie' of so|ie, 'ken', 'ков' of Шёл|ков. Probe: silk-satin 1.064; so|ie 0.766; duchess satin 0.567; Шёлковый 0.557; Silk Road 0.379; cotton 0.224; wool 0.159.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "silk",
+   "satin",
+   "soie"
+  ]
+ }
+}

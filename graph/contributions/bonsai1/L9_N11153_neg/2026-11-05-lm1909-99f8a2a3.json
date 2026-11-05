@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-99f8a2a3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N11153-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:22:49+00:00",
+ "recipe": {
+  "toolchain_commit": "492771a0a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N11153_neg/2026-11-05-lm1909-99f8a2a3.tests.json"
+ },
+ "label": "foreign-policy and security think tanks and their experts ('a senior fellow at', 'Council on Foreign Relations', 'Brookings', 'foreign policy')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N11153_neg/2026-11-05-lm1909-99f8a2a3.tests.json",
+   "prereg_commit": "492771a0a",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.74,
+     "peak": " fellow"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.31,
+     "peak": "ings"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.322,
+     "peak": " Relations"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.492,
+     "peak": " foreign"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.621,
+     "peak": " fellow"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.265,
+     "peak": " Council"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.257,
+     "peak": "owment"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.106,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.12,
+     "peak": " senior"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.31,
+     "peak": "ings"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.044,
+     "peak": " Society"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " American"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.085,
+     "peak": " senior"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " fines"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " Carnegie"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.079,
+     "peak": " at"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.93,
+    "median_fire": 0.316,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "492771a0a",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "foreign-policy think tanks",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Card: ' fellow' x4, ' foreign' x3, ' Security' x3, ' policy' x3, 'ings' of Brookings x2. Probe: 'senior fellow' 0.640; 'American foreign policy' 0.461; Brookings 0.375; Council on Foreign Relations 0.344; 'senior doctor' 0.087; 'Garden Club' 0.020.",
+ "selection": "random draw"
+}

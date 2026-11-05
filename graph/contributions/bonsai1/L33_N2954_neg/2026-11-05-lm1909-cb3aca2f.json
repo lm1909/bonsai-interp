@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-cb3aca2f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N2954-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:22:55+00:00",
+ "recipe": {
+  "toolchain_commit": "492771a0a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N2954_neg/2026-11-05-lm1909-cb3aca2f.tests.json"
+ },
+ "label": "the token ' bl' or ' Bl' when the tokenizer splits a word after it (' bl|azer', ' Bl|imp', ' Bl|uff')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N2954_neg/2026-11-05-lm1909-cb3aca2f.tests.json",
+   "prereg_commit": "492771a0a",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.636,
+     "peak": " bl"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.808,
+     "peak": " Bl"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.142,
+     "peak": " bl"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.575,
+     "peak": " Bl"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.565,
+     "peak": " Bl"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.154,
+     "peak": " bl"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.063,
+     "peak": " bl"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.457,
+     "peak": " bl"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.063,
+     "peak": " navy"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.137,
+     "peak": " Chevy"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " drifted"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": "ear"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " Eagle"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " cut"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.511,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "492771a0a",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' bl' / ' Bl' split piece",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Card: ' bl' x10, ' Bl' x4, ' fl' x2, ' t' x3, and ' Western' x3, ' China'. Probe: ' bl' in blazer 0.530; ' Bl' in Blazer and Blimp 0.758; ' China' 0.240; whole-token 'blue', 'blood' 0.014; ' jacket' sentence 0.092. Tokenization of each fire word checked: bl|azer, Bl|azer, bl|imp, Bl|imp, Bl|uff, bl|under, bl|izzard.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " bl",
+   " Bl"
+  ]
+ }
+}

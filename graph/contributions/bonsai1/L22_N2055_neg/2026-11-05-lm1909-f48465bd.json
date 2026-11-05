@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-05-lm1909-f48465bd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N2055-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:22:47+00:00",
+ "recipe": {
+  "toolchain_commit": "492771a0a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N2055_neg/2026-11-05-lm1909-f48465bd.tests.json"
+ },
+ "label": "negation and its kin: ' not', \"n't\", ' cannot', ' unlikely', ' no longer'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N2055_neg/2026-11-05-lm1909-f48465bd.tests.json",
+   "prereg_commit": "492771a0a",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.735,
+     "peak": "'t"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.342,
+     "peak": " unlikely"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.267,
+     "peak": "'t"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.44,
+     "peak": " cannot"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.467,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.275,
+     "peak": "'t"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.137,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.254,
+     "peak": " longer"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.281,
+     "peak": " shocked"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " bridge"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " sun"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": ".\""
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " needs"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.308,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "492771a0a",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "negation",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.8,
+ "notes": "Card: ' not' x10, '’t' x3, \"'t\" x3, ' cannot' x2, ' unlikely' x2, ' different', ' longer'. Probe: \"wouldn't\" 0.735; ' unlikely' 0.578; 'may not keep' 0.232; 'do not support' 0.177; 'no longer' 0.168; affirmative versions 0.001, 0.002. Note the plain ' not' reading is low, so the median may be close.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "not",
+   "cannot",
+   "unlikely"
+  ],
+  "tokens": [
+   "’t",
+   "'t"
+  ]
+ }
+}
