@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-f6df2c93",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3282+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N3282",
+   "pole": "+",
+   "label": "the token ' ball' and the character 球 (ball), in any sense",
+   "fire": [
+    "The goalkeeper caught the ball with one hand and threw it far.",
+    "Her son threw a ball at the window and broke the glass.",
+    "我的妹妹每天下午都打排球。",
+    "他们周末去公园打棒球。",
+    "Princes and countesses attended the ball at the palace last night.",
+    "他的爱好是打高尔夫球。",
+    "这个孩子把球踢到了河里。",
+    "We watched the dog chase a tennis ball across the yard."
+   ],
+   "quiet": [
+    "The goalkeeper caught the bottle with one hand and threw it far.",
+    "Her son threw a stone at the window and broke the glass.",
+    "我的妹妹每天下午都打扫房间。",
+    "他们周末去公园散步。",
+    "Princes and countesses attended the dinner at the palace last night.",
+    "他的爱好是看电影。",
+    "这个孩子把书放到了桌上。",
+    "We watched the dog chase a small rabbit across the yard."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' ball' / 球 tokens",
+ "unit_kind": "token",
+ "confidence": 0.85,
+ "notes": "Card: '球' x16, ' ball' x14, ' balls' x2. Probe: 球 0.771; ' ball' 0.286 and 0.272 (dance sense fires too, so it is the word, not the meaning); ' sphere' 0.122; ' rock' 0.011. Tokenization checked: 排|球, 棒|球, 高尔夫|球 keep 球 as its own token, 地球 and 篮球 merge and are avoided.",
+ "trigger": {
+  "words": [
+   "ball",
+   "balls",
+   "球"
+  ]
+ }
+}

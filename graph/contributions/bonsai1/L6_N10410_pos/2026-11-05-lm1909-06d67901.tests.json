@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-06d67901",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10410+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N10410",
+   "pole": "+",
+   "label": "the rest of a name beginning S- or Se- after the tokenizer splits it (Se|agate, S|ela, Sel|ah, Sel|ena)",
+   "fire": [
+    "My old laptop has a hard drive made by Seagate inside it.",
+    "The psalm ends with the single word Selah in most Bibles.",
+    "The journalist spoke with an Israeli pilot called Sela last week.",
+    "My favourite singer has always been Selena since I was a kid.",
+    "The novel was written by a young author named Segal in Toronto.",
+    "The film about the march on Selma won two prizes.",
+    "They read a letter by the Roman writer Seneca in class.",
+    "The Queen of Sheba appears in several old legends."
+   ],
+   "quiet": [
+    "My old laptop has a hard drive made by Toshiba inside it.",
+    "The psalm ends with the single word Amen in most Bibles.",
+    "The journalist spoke with an Israeli pilot called David last week.",
+    "My favourite singer has always been Madonna since I was a kid.",
+    "The novel was written by a young author named Brown in Toronto.",
+    "The film about the march on Washington won two prizes.",
+    "They read a letter by the Roman writer Cicero in class.",
+    "The Queen of England appears in several old legends."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tail of an S-/Se- name",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "Card: 'ela' x3, 'ah' x2, 'GA', 'agate' x2, 'un', 'ay', セ|ガ: Shel|ah, S|GA, S|ela, Seb|ela, Se|agate, Sel|achii, Seged|unum. Probe: Shelah 0.921; Sela 0.706; Seagate 0.591; セガ 0.530; Sega 0.321; Western Digital 0.008. Not one-letter specific yet: only S- starts seen at the top. Tokenization of each fire name checked."
+}

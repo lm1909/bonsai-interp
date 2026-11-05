@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-e4d3a0e6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N3401-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N3401",
+   "pole": "-",
+   "label": "the code token '.err' and the Arabic word-final pieces 'يع' and 'اع'",
+   "fire": [
+    "client = connect()\nif client.failed:\n    print(client.err)\n    raise SystemExit",
+    "res = run(cmd)\nif res.err:\n    log(res.err)",
+    "self.err = None\nself.out = None\nreturn self.err",
+    "ناقشنا المواضيع في الاجتماع أمس",
+    "تحسنت الأوضاع في البلاد هذا العام",
+    "زار الوزير المشاريع في الجنوب",
+    "stream = open(path)\nprint(stream.err)\nstream.close()",
+    "تغيرت الأوضاع بعد الحرب في المدينة"
+   ],
+   "quiet": [
+    "client = connect()\nif client.failed:\n    print(client.name)\n    raise SystemExit",
+    "res = run(cmd)\nif res.ok:\n    log(res.out)",
+    "self.out = None\nself.size = None\nreturn self.out",
+    "ناقشنا الكتب في الاجتماع أمس",
+    "تحسنت الحياة في البلاد هذا العام",
+    "زار الوزير المدارس في الجنوب",
+    "stream = open(path)\nprint(stream.out)\nstream.close()",
+    "تغيرت المدينة بعد الحرب في البلاد"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'.err' and Arabic -يع / -اع",
+ "unit_kind": "token piece",
+ "confidence": 0.4,
+ "notes": "Card: 'اع' x9, 'يع' x4, '.err' x3, '.Char' x3, 'err' x2; broad, gate-closed 98%, max 1.10. Probe: 'يع' 0.327; 'اع' 0.285; '.err' 0.182, 0.284; '.Char' 0.102; 'io.out' 0.043. Two unrelated-looking triggers, so this stays a token list. Arabic near misses avoid these two pieces.",
+ "trigger": {
+  "tokens": [
+   ".err",
+   "اع",
+   "يع"
+  ]
+ }
+}

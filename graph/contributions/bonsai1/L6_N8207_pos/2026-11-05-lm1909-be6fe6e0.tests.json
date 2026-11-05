@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-05-lm1909-be6fe6e0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N8207+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N8207",
+   "pole": "+",
+   "label": "the last piece of a Slavic surname or given name split by the tokenizer ('-ich', '-ik', '-ach', '-ak', '-osh')",
+   "fire": [
+    "An early painting by Malevich was sold in London at auction.",
+    "The goal was scored by the young striker Janik in the last minute.",
+    "My neighbour Kovach repairs old radios in his garage.",
+    "A paper by Tomasik and two colleagues appeared last spring.",
+    "Her uncle, a farmer named Gorbach, grew wheat near the river.",
+    "A defence lawyer named Milosevich spoke to the press on Friday.",
+    "The tennis final saw Novak beat his rival in three sets.",
+    "An early symphony by Dvorak opened the concert on Saturday."
+   ],
+   "quiet": [
+    "An early painting by Turner was sold in London at auction.",
+    "The goal was scored by the young striker Harris in the last minute.",
+    "My neighbour Walker repairs old radios in his garage.",
+    "A paper by Thompson and two colleagues appeared last spring.",
+    "Her uncle, a farmer named Wilson, grew wheat near the river.",
+    "A defence lawyer named Patterson spoke to the press on Friday.",
+    "The tennis final saw Murray beat his rival in three sets.",
+    "An early symphony by Elgar opened the concert on Saturday."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tail of a Slavic name",
+ "unit_kind": "token piece",
+ "confidence": 0.7,
+ "notes": "Card: 'ich' x4, 'ik' x4, 'ach' x3, 'osh' x2 (Voynich, Valachovic, Vitalik, Voroshilov). Probe: Voynich 0.886; Vitalik 0.534; Voroshilov 0.528; Dominik 0.409; John Smith 0.013. Tokenization of every fire name checked: Male|v|ich, Jan|ik, Kov|ach, Tomas|ik, G|orb|ach, Mil|ose|v|ich, Nov|ak, D|vor|ak. Pondicherry 0.403 suggests it may be the piece rather than the origin.",
+ "trigger": {
+  "pieces": [
+   "ich",
+   "ik",
+   "ach",
+   "ak",
+   "osh"
+  ]
+ }
+}

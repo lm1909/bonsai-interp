@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-ecef87c3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N3949-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N3949",
+   "pole": "-",
+   "label": "a requirement stated as minimal: 'need not', 'requires only', 'need have no' (promotes ' only' and ' no')",
+   "fire": [
+    "With our team on your side you need not worry about the paperwork.",
+    "A home kit that requires only a few drops of saliva arrived today.",
+    "Thanks to this new router, you need not call an engineer ever again.",
+    "We use a method which requires only tiny amounts of the sample.",
+    "With a good lawyer you need have no fear of the hearing next week.",
+    "Modern ovens clean themselves, so you need not scrub them by hand.",
+    "The patch is a simple fix which requires only a restart of the laptop.",
+    "With solar panels installed, you need not pay a large power bill."
+   ],
+   "quiet": [
+    "With our team on your side you must fill in the paperwork yourself.",
+    "A home kit that requires a trip to the clinic arrived today.",
+    "Thanks to this new router, you need to call an engineer to set it up.",
+    "We use a method which requires a large supply of the sample.",
+    "With a good lawyer you should prepare well for the hearing next week.",
+    "Modern ovens are large, so you need to measure your kitchen first.",
+    "The patch is a major change which requires a full rebuild of the laptop.",
+    "With solar panels installed, you still have to pay a small power bill."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "minimal requirement",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.4,
+ "notes": "Card: ' need' x3, ' requires' x3, ' needs' x3; the - pole promotes ' only', ' neither', ' merely', ' never', ' nothing'. Probe: 'you need not wait' 0.217; 'requires only a small drop' 0.185; 'needs no preparation' 0.113; 'needs little introduction' 0.045; 'requires a large machine' 0.025; 'You need a passport' 0.022. Weak, and it reads before the token that makes it minimal."
+}

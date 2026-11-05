@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-64db74b5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8834-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N8834",
+   "pole": "-",
+   "label": "the verb after the second of two contrasted subjects, in a parallel structure ('A is X, and B is Y'; 'whereas B refers to')",
+   "fire": [
+    "Django is a web framework written in Python, and Redis is an in-memory database.",
+    "Mitosis refers to division in body cells, whereas meiosis refers to division in sex cells.",
+    "The left chart is correct for small loads and the right chart is correct for big loads.",
+    "Baseball is popular in Japan, and cricket is popular in India.",
+    "Red wine is served with beef, while white wine is served with fish.",
+    "The first number is the height of the room, and the second number is its width.",
+    "Mercury is the closest planet to the Sun, and Neptune is the farthest.",
+    "Sodium makes the solution basic, whereas chlorine makes it acidic."
+   ],
+   "quiet": [
+    "Django is a web framework written in Python, and it is used by many large sites.",
+    "Mitosis refers to division in body cells, and it takes about an hour to finish.",
+    "The left chart is correct for small loads and it is printed on page nine.",
+    "Baseball is popular in Japan, and it is played at every school.",
+    "Red wine is served with beef, and it is best at room temperature.",
+    "The first number is the height of the room, and it is written in feet.",
+    "Mercury is the closest planet to the Sun, and it is very hot by day.",
+    "Sodium makes the solution basic, and it reacts quickly with water."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "verb of the second parallel subject",
+ "unit_kind": "contextual / syntactic",
+ "confidence": 0.6,
+ "notes": "Card: ' is' x4, ' will', ' as', ' others', ' part': 'Twisted is ..., and Tor is', 'Portugal, for its part', 'anemia refers'. Probe: 'and Tor is' 0.725; 'and the high plot is valid' 0.456; 'whereas aplastic refers' 0.425; 'for its part' 0.153; same clauses with a pronoun subject: 'and it is' 0.024, 'and it felt' 0.022."
+}

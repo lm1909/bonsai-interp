@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-84a198aa",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N5699-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N5699",
+   "pole": "-",
+   "label": "the start of a short answer or addition straight after a question or statement (guess)",
+   "fire": [
+    "How many came to the party that night? All of them, I think.",
+    "Who ate the last slice of the pie? None of us did, I swear.",
+    "What was the outcome of the vote? Prices rose again.",
+    "We kept the files safe from harm. Additionally, we made a copy.",
+    "How many of your friends agree with that? Most of them, sadly.",
+    "How much of the money is left? Some of it, at least.",
+    "The tool saves time at every step. Additionally, it costs nothing.",
+    "Which of the roads are closed? Both of them, until the spring."
+   ],
+   "quiet": [
+    "Many came to the party that night, and all of them stayed late.",
+    "The last slice of the pie went to the youngest of us at dinner.",
+    "The outcome of the vote came out on Monday, as prices rose again.",
+    "We kept the files safe from harm and made a copy on another disk.",
+    "Many of your friends agree with that, and they told me so sadly.",
+    "Much of the money is left in a box under the bed.",
+    "The tool saves time at every step and costs nothing at all.",
+    "Both of the roads are closed until the spring, the mayor said."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "answer after a question (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card: broad, gate-closed 90%, max only 5.12, scattered peaks (' of', ' one', ' more', 'He', 'for', 'Additionally'). Probe: 'All of you?' 0.518; 'Additionally' 0.174; ' exactly' 0.138; ' increased' 0.144. Low-confidence guess; expect a failure."
+}

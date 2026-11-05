@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-ef152bfe",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N7482-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N7482",
+   "pole": "-",
+   "label": "something made simpler or smaller for a less capable audience ('simple sentences', 'simpler version', 'half the adult dose', 'reading level')",
+   "fire": [
+    "The leaflet explains the disease in simple words for people with no training.",
+    "Teachers speak to the toddlers in short and simple phrases during story time.",
+    "There is also a simpler edition of the textbook for new learners.",
+    "For a small child, the nurse will give half the usual adult tablet.",
+    "These easy books for early readers use large print and few words.",
+    "The site lets you lower the reading level of any article for pupils.",
+    "We rewrote the contract in plain, simple English for our customers.",
+    "A smaller and easier version of the game is available for young kids."
+   ],
+   "quiet": [
+    "The leaflet explains the disease in technical terms for people with medical training.",
+    "Teachers speak to the toddlers in the hall before story time.",
+    "There is also an expanded edition of the textbook for graduate students.",
+    "For a large adult, the nurse will give two of the usual tablets.",
+    "These long novels for keen readers use tiny print and many footnotes.",
+    "The site lets you search the archive of any newspaper for pupils.",
+    "We rewrote the contract in formal legal language for our customers.",
+    "A longer and harder version of the game is available for adult experts."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "simplified for a less able audience",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.65,
+ "notes": "Card: ' simple' x5, ' simpler', ' easy', ' level', ' dose', ' smaller'. Probe: 'simple everyday language' 0.682; 'half the adult dose' 0.628; 'short and simple sentences' 0.530; 'simpler version' 0.303; 'dense legal language' 0.192; 'full version' 0.040. New cases in the test: easy readers, plain language.",
+ "trigger": {
+  "words": [
+   "simple",
+   "simpler",
+   "easy",
+   "easier"
+  ]
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "contribution": "2026-11-05-lm1909-bd8d78ff",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2742-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N2742",
+   "pole": "-",
+   "label": "stating a direction or angle in space ('at 30 degrees above', 'as an angle with', 'wind direction: north')",
+   "fire": [
+    "The rope pulls the sled at 25 degrees above the ground.",
+    "Find the angle that the ramp makes with the horizontal floor.",
+    "Forecast for Friday. Wind direction: south east, and light rain later.",
+    "The ball leaves the bat at an angle of 40 degrees to the field.",
+    "The river flows in a northerly direction through the old town.",
+    "Azimuth is the angle between true north and the line to the star.",
+    "The two runways are named for the direction in which planes land.",
+    "The plane heads 20 degrees west of north after leaving the coast."
+   ],
+   "quiet": [
+    "The rope pulls the sled with a force of 25 newtons on the ground.",
+    "Find the length of the ramp and the mass of the box on the floor.",
+    "Forecast for Friday. Wind speed: nine knots, and light rain later.",
+    "The ball leaves the bat at a speed of 40 metres per second over the field.",
+    "The river flows at a gentle pace through the old town.",
+    "Brightness is the amount of light that reaches us from the star.",
+    "The two runways are named for the pilots who first landed here.",
+    "The plane carries 20 tons of cargo after leaving the coast."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "stating a direction or angle",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' the' x5 and ' an' x2 before ' angle', ' north' x3, ' degrees' x2, ':' after 'Wind direction'; promotes ' direction', ' axis', ' align', ' along'. Probe: ' degrees' 0.322; ' angle' 0.331; ' north' 0.318; 'northeast orientation' 0.121; magnitude only 0.038, 0.011. The top activations are 'is' and 'the' before the direction word, so this may fire ahead of it.",
+ "trigger": {
+  "words": [
+   "direction",
+   "angle",
+   "degrees",
+   "north",
+   "northwest",
+   "northeast"
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-28d1b185",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N6591+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N6591",
+   "pole": "+",
+   "label": "the noun ' name' (or 'Name', 'ID') as the identifier of something, typically before ' of'",
+   "fire": [
+    "The river gave its name to the small county around it.",
+    "It turned out that Brant was the name of a very old rocket.",
+    "Please write down the name of your dentist on the form.",
+    "account : str\n    The name of the wallet that receives the funds.",
+    "Few of the guests could recall the names of the two authors.",
+    "By 1450 the word was the name of a kind of sweet bread.",
+    "user_id: the ID of the customer to fetch orders for",
+    "Only half of the patients could report the name of their pill."
+   ],
+   "quiet": [
+    "The river gave its colour to the small lake around it.",
+    "It turned out that Brant was the maker of a very old rocket.",
+    "Please write down the time of your appointment on the form.",
+    "account : str\n    The balance of the wallet that receives the funds.",
+    "Few of the guests could recall the ending of the two films.",
+    "By 1450 the word was the root of a kind of sweet bread.",
+    "user_age: the age of the customer to fetch orders for",
+    "Only half of the patients could report the size of their pill."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' name' as an identifier",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' name' x13, ' Name' x3, ' names' x2, 'ID' x2, ' index' x2, and promotes ' name' itself. Probe: 'the name of a town' 0.667; 'the name of a good counsellor' 0.677; 'The name of the account' 0.619; 'Name of the subject' 0.344; 'the capital of' 0.042; but 'the address of' 0.312, so other identifiers can fire.",
+ "trigger": {
+  "words": [
+   "name",
+   "names"
+  ]
+ }
+}

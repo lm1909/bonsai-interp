@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-9cb388b3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N6626-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N6626",
+   "pole": "-",
+   "label": "the second piece of a compound or rare name (Play|girl, Bath|gate, Lol|ita, Bal|och), not a name that is one token",
+   "fire": [
+    "A cottage near Highgate was left to her by an aunt.",
+    "The old fish market at Billingsgate moved east in 1982.",
+    "We went to see the musical Evita with my parents.",
+    "A newsagent in the village stocked an old copy of Playgirl.",
+    "Tribal leaders from the Balochi region met at the border.",
+    "The classic novel Lolita caused a scandal when it appeared.",
+    "A nomad from the Baluch people led us across the desert.",
+    "Our train stopped in Bathgate for almost an hour."
+   ],
+   "quiet": [
+    "A cottage near Oxford was left to her by an aunt.",
+    "The old fish market at Glasgow moved east in 1982.",
+    "We went to see the musical Hamilton with my parents.",
+    "A newsagent in the village stocked an old copy of Playboy.",
+    "Tribal leaders from the Kurdish region met at the border.",
+    "The classic novel Dracula caused a scandal when it appeared.",
+    "A nomad from the Bedouin people led us across the desert.",
+    "Our train stopped in Edinburgh for almost an hour."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tail of a compound name",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "Card: 'ita' x2, 'ney' x2, 'uch' x2, 'och', 'girl', '-Based', 'Art' after Play, 'gate' after Bath. Probe: 'och' 0.789; Playgirl 0.703; Bathgate 0.549; Lolita 0.465; ' Med' 0.357. Near misses are one-token names in the same position. This pole overlaps in kind with L6/N8207+ and L6/N10410+."
+}

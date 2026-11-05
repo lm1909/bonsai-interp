@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-85c91896",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N6514+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N6514",
+   "pole": "+",
+   "label": "' up' after 'stand' / 'stood' / 'standing', in the literal and the 'stand up to' sense",
+   "fire": [
+    "Sooner or later you must stand up to your older brother.",
+    "The old man stood up slowly and walked to the door.",
+    "The doctor recommends standing up every hour during long flights.",
+    "All the students stood up when the headmaster came in.",
+    "She has the courage to stand up for her beliefs at work.",
+    "The dog stands up on its back legs when it hears the bag.",
+    "It takes real nerve to stand up in court and say that.",
+    "He stood up to the mayor and demanded an answer."
+   ],
+   "quiet": [
+    "Sooner or later you must pick up your older brother.",
+    "The old man looked up slowly and walked to the door.",
+    "The doctor recommends standing still every hour during long flights.",
+    "All the students cheered up when the headmaster came in.",
+    "She has the courage to stand by her beliefs at work.",
+    "The dog sits down on its back legs when it hears the bag.",
+    "It takes real nerve to show up in court and say that.",
+    "He wrote up the mayor and demanded an answer."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' up' after stand",
+ "unit_kind": "token / contextual",
+ "confidence": 0.9,
+ "notes": "Card: ' up' x30 of the top 32, nearly all after stand/stood. Probe: 'stand up to a bully' 0.710; 'stood up' 0.813; 'Standing up' 0.676; 'woke up' 0.272; 'picked up' and 'went up' below 0.015; 'stand by' 0.016. Near misses keep ' up' after other verbs, or 'stand' with another particle.",
+ "trigger": {
+  "tokens": [
+   " up"
+  ]
+ }
+}

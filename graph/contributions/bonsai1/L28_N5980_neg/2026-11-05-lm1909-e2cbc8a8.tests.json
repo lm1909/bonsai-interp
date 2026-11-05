@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-e2cbc8a8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5980-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N5980",
+   "pole": "-",
+   "label": "the CJK morpheme for 'present' as its own token: 現 in Japanese and Chinese, 현 in Korean",
+   "fire": [
+    "しかし、現実はそれほど甘くありません。",
+    "実は現状では多くの問題が残っています。",
+    "彼はまだ現役の選手として活躍しています。",
+    "企業は現有のシステムを活用しています。",
+    "호텔은 현대적인 시설을 갖추고 있습니다.",
+    "파일의 시간은 현지 시간으로 표시됩니다.",
+    "가게에서는 현금으로만 결제할 수 있습니다.",
+    "今の現状について先生に相談しました。"
+   ],
+   "quiet": [
+    "しかし、人生はそれほど甘くありません。",
+    "実は学校では多くの問題が残っています。",
+    "彼はまだ若手の選手として活躍しています。",
+    "企業は新しいシステムを活用しています。",
+    "호텔은 깨끗한 시설을 갖추고 있습니다.",
+    "파일의 시간은 한국 시간으로 표시됩니다.",
+    "가게에서는 카드로만 결제할 수 있습니다.",
+    "今の授業について先生に相談しました。"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "現 / 현 (present-)",
+ "unit_kind": "token",
+ "confidence": 0.85,
+ "notes": "Card: '現' x18, ' 현' x8, '현' x4; max 438. Probe: 現実 0.816; 현대 0.636; 本当 0.022; 今天 0.000; but the merged token 現在 scored 0.009, so it needs 現 on its own. Tokenization checked: 現|実, 現|状, 現|役, 現|有, 현|대, 현|지, 현|금 split; 現在 and 現場 merge and are avoided.",
+ "trigger": {
+  "tokens": [
+   "現",
+   " 현",
+   "현"
+  ]
+ }
+}

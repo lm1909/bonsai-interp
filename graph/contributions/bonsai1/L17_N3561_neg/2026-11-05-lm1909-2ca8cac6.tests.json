@@ -1,0 +1,58 @@
+{
+ "contribution": "2026-11-05-lm1909-2ca8cac6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N3561-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:51:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N3561",
+   "pole": "-",
+   "label": "a noun for an interconnected set of things, before ' of' ('a network of', 'a web of', 'a chain of', 'a system of')",
+   "fire": [
+    "The empire was held together by a vast network of paved roads.",
+    "The fraud involved a tangled web of shell companies.",
+    "A long chain of events led to the closing of the mine.",
+    "The old city is cut through by a dense grid of narrow streets.",
+    "Beneath the forest lies a fine mesh of fungal threads.",
+    "The farmers built a system of canals to water the fields.",
+    "The hospital is linked to a network of rural clinics.",
+    "Visitors get lost in the maze of tunnels under the castle."
+   ],
+   "quiet": [
+    "The empire was held together by a large army of paid soldiers.",
+    "The fraud involved a huge sum of stolen money.",
+    "A long period of drought led to the closing of the mine.",
+    "The old city is cut through by a wide river with muddy banks.",
+    "Beneath the forest lies a thick layer of wet clay.",
+    "The farmers built a pair of barns to store the grain.",
+    "The hospital is next to a row of small houses.",
+    "Visitors get lost in the crowd of tourists near the castle."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "network / web of things",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' network' x7, ' web' x2, ' system' x2, ' chain' x2, ' cycle' x2, ' pattern', ' line of'. Probe: 'complex web of' 0.632; 'network of' 0.389, 0.349; 'chain of' 0.343; 'lattice of' 0.201; 'pile of' 0.066. New cases in the test: mesh, grid, tangle, maze.",
+ "trigger": {
+  "words": [
+   "network",
+   "web",
+   "chain",
+   "system",
+   "cycle",
+   "networks"
+  ]
+ }
+}
