@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-6a057caf",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N9181+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:34:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N9181",
+   "pole": "+",
+   "label": "An assignment inside a conditional or loop branch: the variable and ' =' in an indented block",
+   "fire": [
+    "if size > 3:\n    limit = 1\nelse:\n    limit = 2\n",
+    "if not home:\n    home = os.getcwd()\n",
+    "def g(a):\n    if a:\n        c = 1\n    return c\n",
+    "while True:\n    row = read()\n    if not row:\n        row = ''\n",
+    "if mode is None:\n    mode = 'r'\n",
+    "try:\n    port = int(text)\nexcept ValueError:\n    port = 0\n",
+    "if not token:\n    token = make_token(user)\n",
+    "for s in rows:\n    m = max(m, len(s))\n"
+   ],
+   "quiet": [
+    "size = 3\nlimit = 1\n",
+    "home = os.getcwd()\nprint(home)\n",
+    "def g(a):\n    c = 1\n    return c\n",
+    "row = read()\nprint(row)\n",
+    "mode = 'r'\nprint(mode)\n",
+    "port = 8080\nprint(port)\n",
+    "token = make_token(user)\nprint(token)\n",
+    "m = 0\nprint(m)\n"
+   ]
+  }
+ ],
+ "predictions": "The assignment in a branch fires; the same assignment at the top of the code stays quiet. Probes read about 0.21 to 0.35, close to the 0.20 median bar.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "assignment inside a branch",
+ "unit_kind": "contextual",
+ "confidence": "low"
+}
