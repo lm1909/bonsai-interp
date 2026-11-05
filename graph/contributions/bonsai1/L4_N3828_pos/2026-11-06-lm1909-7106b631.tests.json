@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-7106b631",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N3828+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:27:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N3828",
+   "pole": "+",
+   "label": "run-of-spaces token inside a doctest or aligned table (gate-closed; guess)",
+   "fire": [
+    "    >>> text = '''\n    ...      Here are some short notes.\n    ...      They are simple.\n    ... '''",
+    "names = [\n        'First',        # 1\n        'Second',       # 2\n       ]",
+    "#     .                .       \n#     .                 .      \n#     M_N",
+    "        jsmith@example.net    jsmith@example.com\n        jdoe@example.com      john_d@example.net\n       ",
+    "    :param bool raw: returns the direct response alongside the\n        deserialized response\n    :param op: the operation",
+    "rows = [\n        (u'A',      False),\n        (u'B',      False),\n       ]",
+    "    >>> s = '''\n    ...      A second block of text.\n    ... '''",
+    "vals = [\n        'Up',       # 5\n        'Down',     # 6\n       ]"
+   ],
+   "quiet": [
+    "The text has some short notes, and they are simple.",
+    "The names are First and Second in that order.",
+    "The dots mark the edge of the plot and the last label.",
+    "Mail for jsmith and jdoe goes to the same server.",
+    "This option returns the direct response and also the deserialized form.",
+    "The rows are A and B, and both of them are false.",
+    "This is a second block of text, with no special marks.",
+    "The values are Up and Down, in that order."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: probes stayed under 0.10.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "whitespace run (guess)",
+ "unit_kind": "format",
+ "confidence": "low",
+ "notes": "Card flags gate-closed (87% echo); '       ' x19 of the top 32, then other space runs. Max is only 2.62. Probe: 0.05-0.09 on neighbouring tokens. Fire items copy the doctest and table forms.",
+ "trigger": {
+  "tokens": [
+   "       ",
+   "      ",
+   "        "
+  ]
+ }
+}

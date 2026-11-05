@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-dc58695e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N7907+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:27:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N7907",
+   "pole": "+",
+   "label": "opening piece of a word after a hyphen or apostrophe, or a German verb stem ('-E|urasian', \"l'E|glise\", 'ref|le|ktieren', ' me|istern'; output promotes 'nd', 'rd', 'st')",
+   "fire": [
+    "Afro-Eurasian trade routes crossed the desert.",
+    "The Indo-European family is large.",
+    "Diese Bilder reflektieren nicht die Meinung der Redaktion.",
+    "Les paysans défendent l'Eglise du village.",
+    "The Euro-Asian treaty was signed in June.",
+    "Die Texte reflektieren oft die Haltung des Autors.",
+    "Elle a visité l'Eglise Saint-Pierre hier.",
+    "Sie können diese Aufgabe souverän meistern."
+   ],
+   "quiet": [
+    "African trade routes crossed the desert.",
+    "The Indian family is large.",
+    "Diese Bilder zeigen nicht die Meinung der Redaktion.",
+    "Les paysans aiment la place du village.",
+    "The Asian treaty was signed in June.",
+    "Die Texte zeigen oft die Haltung des Autors.",
+    "Elle a visité la place Saint-Pierre hier.",
+    "Sie können diese Aufgabe sofort lösen."
+   ]
+  }
+ ],
+ "predictions": "4/8 fire; a list label",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "E- / stem pieces",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Output promotes letter pieces 'nd', 'rd', 'st', 'nde', 'ru', 'pt'. Card: '-E' x8, 'E' x2, '/E' x2, ' э' x2. Probe: 'le' in reflektieren 0.75, '-E' 0.66, \"'E\" 0.31, ' me' 0.25; plain German 0.02."
+}

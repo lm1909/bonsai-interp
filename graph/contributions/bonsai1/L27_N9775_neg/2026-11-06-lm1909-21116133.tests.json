@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-21116133",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9775-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:27:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N9775",
+   "pole": "-",
+   "label": "the closing quote of a Python string with a format placeholder or file suffix ('report-{}.xml'., '%s.zip' %)",
+   "fire": [
+    "path = os.path.join(root, 'build-{}.log'.format(tag))",
+    "FILE_TAR = '%s.tar' % DIR_DATA",
+    "self.write_line(i, '<h3 class=\"%s\">%s</h3>' % (kind, text))",
+    "url = 'http://{}/items/{}.json'.format(host, key)",
+    "NAME_CSV = '%s_%s.csv' % (year, month)",
+    "out = open('results-{}.txt'.format(run), 'w')",
+    "msg = 'Loaded %d files' % count",
+    "link = '<a href=\"%s\">%s</a>' % (href, label)"
+   ],
+   "quiet": [
+    "path = os.path.join(root, 'build')",
+    "FILE_TAR = 'data'",
+    "self.write_line(i, text)",
+    "url = 'localhost'",
+    "NAME_CSV = 'results'",
+    "out = open('results', 'w')",
+    "msg = 'Loaded'",
+    "The link goes to a page that lists the results for each year."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; plain strings and prose stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "closing quote of format string",
+ "unit_kind": "code / format",
+ "confidence": "high",
+ "notes": "Card: \"'.\" x6, \"'\" x6, '\"' x5, '_fname'. Probe: \"'.format\" 0.90, \"'%s.zip' %\" 0.81, \"</h2>' %\" 0.95; \"name = 'report'\" 0.00; prose 0.03."
+}

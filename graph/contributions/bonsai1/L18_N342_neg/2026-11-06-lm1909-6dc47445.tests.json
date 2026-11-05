@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-6dc47445",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N342-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:27:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N342",
+   "pole": "-",
+   "label": "',\\n' after a keyword or dict value in a multi-line structure ('seconds=0.5,\\n', \"'img': img,\\n\")",
+   "fire": [
+    "yAxis = (\n    dict(minutes=0.5,\n         majorGridUnit=MIN,\n         format=2),)",
+    "_ = {'id': u.id, 'name': name,\n     'title': u.title}",
+    "configs = (\n    dict(hours=0.25,\n         labelUnit=HOUR,\n         step=1),)",
+    "row = {'pk': o.pk, 'url': url,\n       'text': o.text}",
+    "plots = (\n    dict(days=0.1,\n         minorUnit=DAY,\n         width=3),)",
+    "item = {'key': k.key, 'val': val,\n        'note': k.note}",
+    "axes = (\n    dict(weeks=0.5,\n         gridUnit=WEEK,\n         color=4),)",
+    "data = {'sku': p.sku, 'qty': qty,\n        'price': p.price}"
+   ],
+   "quiet": [
+    "yAxis = (dict(minutes=0.5, majorGridUnit=MIN, format=2),)",
+    "_ = {'id': u.id, 'name': name, 'title': u.title}",
+    "configs = (dict(hours=0.25, labelUnit=HOUR, step=1),)",
+    "row = {'pk': o.pk, 'url': url, 'text': o.text}",
+    "plots = (dict(days=0.1, minorUnit=DAY, width=3),)",
+    "item = {'key': k.key, 'val': val, 'note': k.note}",
+    "axes = (dict(weeks=0.5, gridUnit=WEEK, color=4),)",
+    "data = {'sku': p.sku, 'qty': qty, 'price': p.price}"
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; the same structures on one line stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "multi-line dict/kwargs comma",
+ "unit_kind": "code / format",
+ "confidence": "medium",
+ "notes": "Card: ',\\n' x10, '\\\\\\n' x2, \"',\\n\" x2, 'uer' x2, ' foster'. Probe: kwargs on lines 0.67, dict 0.20; one line 0.01. ' foster' (0.32 on 'fostered') is not claimed.",
+ "trigger": {
+  "tokens": [
+   ",\n"
+  ]
+ }
+}

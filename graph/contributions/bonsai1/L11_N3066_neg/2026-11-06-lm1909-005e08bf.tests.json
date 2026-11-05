@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-005e08bf",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N3066-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:27:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N3066",
+   "pole": "-",
+   "label": "an identifier repeated as a value right after its own name in code (\"accept\", accept; task_state … task_states)",
+   "fire": [
+    "headers['Host'] = self._serialize.header(\"host\", host, 'str')",
+    "params['Limit'] = self._serialize.query(\"limit\", limit, 'int')",
+    "vm.task_state not in (task_states.DELETING,)",
+    "headers['Range'] = self._serialize.header(\"range\", range, 'str')",
+    "node.power_state not in (power_states.RUNNING,)",
+    "params['Sort'] = self._serialize.query(\"sort\", sort, 'str')",
+    "self.frame.resize(None, max_size=self.max_size)",
+    "job.run_state not in (run_states.FAILED,)"
+   ],
+   "quiet": [
+    "headers['Host'] = 'localhost'",
+    "params['Limit'] = 100",
+    "vm.is_ready()",
+    "headers['Range'] = None",
+    "node.start()",
+    "params['Sort'] = True",
+    "self.frame.resize(None)",
+    "job.cancel()"
+   ]
+  }
+ ],
+ "predictions": "4/8 fire; the median may miss",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "repeated identifier",
+ "unit_kind": "code / contextual",
+ "confidence": "low",
+ "notes": "Card shows no repeating token ('_size', ' pid', 'task', ' accept', '2', 'coeff'). Probe: 'header(\"accept\", accept' 0.75, 'task_state not in (task_states' 0.49, 'min_size=self.min_size' 0.16; prose 0.01."
+}

@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-faaff862",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5254+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:27:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N5254",
+   "pole": "+",
+   "label": "',\\n' ending a line inside a long aligned call in code (guess)",
+   "fire": [
+    "                self.db.insert(event.record_id,\n                               family.name,\n                               place.name)",
+    "    result = compute_grid(lat_dim_size,\n                          lon_dim_size,\n                          level_count)",
+    "        response = client.verify(private_key,\n                                 remote_ip)",
+    "            copy_file(self.config['path'],\n                                    'backup')",
+    "        total = add_values(first_value,\n                           second_value,\n                           third_value)",
+    "    output = render(template_name,\n                    context_dict,\n                    request)",
+    "            logger.write(u'not found on any of the '\n                         u'interfaces')",
+    "        items = fetch_rows(table_name,\n                           where_clause)"
+   ],
+   "quiet": [
+    "self.db.insert(event.record_id, family.name, place.name)",
+    "result = compute_grid(lat_dim_size, lon_dim_size, level_count)",
+    "response = client.verify(private_key, remote_ip)",
+    "copy_file(self.config['path'], 'backup')",
+    "total = add_values(first_value, second_value, third_value)",
+    "output = render(template_name, context_dict, request)",
+    "logger.write(u'not found on any of the interfaces')",
+    "items = fetch_rows(table_name, where_clause)"
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: copies probed at 0.01-0.18, and the near-miss prose ' a' reached 0.26.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line-ending comma (guess)",
+ "unit_kind": "code / format",
+ "confidence": "low",
+ "notes": "Card: ',\\n' x16, \"',\\n\" x3, \" '\\n\" x2, ' a', '.path'. Peaks come with very deep indents. Probe: aligned call 0.18, 'uuid' copy 0.01; 'a particular food' 0.26.",
+ "trigger": {
+  "tokens": [
+   ",\n"
+  ]
+ }
+}
