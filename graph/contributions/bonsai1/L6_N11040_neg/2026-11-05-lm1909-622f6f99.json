@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-622f6f99",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N11040-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T21:47:08+00:00",
+ "recipe": {
+  "toolchain_commit": "371b0e2c2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N11040_neg/2026-11-05-lm1909-622f6f99.tests.json"
+ },
+ "label": "the German word family fertig: fert|ig, F|ert|igkeit, gef|ert|igt, Anf|ert|igung; English fertilizer stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N11040_neg/2026-11-05-lm1909-622f6f99.tests.json",
+   "prereg_commit": "371b0e2c2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.738,
+     "peak": " fert"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.291,
+     "peak": "ig"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.741,
+     "peak": "ert"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.713,
+     "peak": " fert"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.087,
+     "peak": "ert"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.806,
+     "peak": " fert"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.664,
+     "peak": "ert"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.965,
+     "peak": " fert"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " hin"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " Reg"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.082,
+     "peak": "statt"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " Ber"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": " Ver"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " Rep"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " longer"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.774,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "371b0e2c2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "German fertig / Fertigkeit / gefertigt",
+ "unit_kind": "token piece / lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   "ert",
+   " fert"
+  ]
+ }
+}
