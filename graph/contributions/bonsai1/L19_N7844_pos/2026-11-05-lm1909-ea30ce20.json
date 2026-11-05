@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-ea30ce20",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N7844+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:50:14+00:00",
+ "recipe": {
+  "toolchain_commit": "0a15b366e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N7844_pos/2026-11-05-lm1909-ea30ce20.tests.json"
+ },
+ "label": "a collective word for a category of consumer goods (' footwear', dinner|ware), as opposed to the specific items in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N7844_pos/2026-11-05-lm1909-ea30ce20.tests.json",
+   "prereg_commit": "0a15b366e",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.126,
+     "peak": " footwear"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.441,
+     "peak": "ware"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.061,
+     "peak": "ear"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.048,
+     "peak": " designer"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.072,
+     "peak": "stick"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.055,
+     "peak": " leather"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.109,
+     "peak": " apparel"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.068,
+     "peak": " furnishings"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.176,
+     "peak": " boots"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.077,
+     "peak": " shirts"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.045,
+     "peak": " designer"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": "stick"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " leather"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.049,
+     "peak": " jackets"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " lists"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.695,
+    "median_fire": 0.07,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0a15b366e",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "category word for consumer goods",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Based on two probes (0.46, 0.55). Other card peaks (' development', ' butcher', Korean '자') are not covered.",
+ "selection": "random draw"
+}

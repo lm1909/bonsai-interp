@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-1d3623f1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N5612+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:50:16+00:00",
+ "recipe": {
+  "toolchain_commit": "0a15b366e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N5612_pos/2026-11-05-lm1909-1d3623f1.tests.json"
+ },
+ "label": "Korean text, at the split-byte token ' �' and syllables such as 이 and 가, as opposed to the same content in Japanese, Chinese and English",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N5612_pos/2026-11-05-lm1909-1d3623f1.tests.json",
+   "prereg_commit": "0a15b366e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.708,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.499,
+     "peak": " 아"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.476,
+     "peak": " 가"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.736,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.463,
+     "peak": "할"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.527,
+     "peak": " 아"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.497,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.517,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.157,
+     "peak": "俳"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.115,
+     "peak": "事"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": "的"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.006,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " apples"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.072,
+     "peak": "サ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": "韩国"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.508,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0a15b366e",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "Korean text",
+ "unit_kind": "language",
+ "confidence": "high",
+ "notes": "Japanese reached 0.22 in a probe.",
+ "selection": "random draw"
+}

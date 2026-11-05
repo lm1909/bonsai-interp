@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-a6817eca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N3191-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:49:44+00:00",
+ "recipe": {
+  "toolchain_commit": "0a15b366e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N3191_neg/2026-11-05-lm1909-a6817eca.tests.json"
+ },
+ "label": "saving to or loading from a file, in code and in prose about code (.save, imwrite, .io, 'load and save ... from a file'), as opposed to the same shapes with other actions",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N3191_neg/2026-11-05-lm1909-a6817eca.tests.json",
+   "prereg_commit": "0a15b366e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.921,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.299,
+     "peak": "_config"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.858,
+     "peak": ".save"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.492,
+     "peak": "write"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.44,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.365,
+     "peak": " f"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.231,
+     "peak": " disk"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.348,
+     "peak": ".read"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.168,
+     "peak": ".weights"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.085,
+     "peak": "imshow"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " its"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "('"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0a15b366e",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "saving and loading files",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "'saved to a JSON file on disk' scored only 0.18 in a probe.",
+ "selection": "random draw"
+}

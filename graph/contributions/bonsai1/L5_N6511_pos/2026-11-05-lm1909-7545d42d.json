@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-7545d42d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N6511+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:50:18+00:00",
+ "recipe": {
+  "toolchain_commit": "0a15b366e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N6511_pos/2026-11-05-lm1909-7545d42d.tests.json"
+ },
+ "label": "the piece after 'Sw' in the surnames Swanson, Swanton and Swinton ('anson', 'anton', 'inton'), as opposed to Hanson, Manson and 'swan'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N6511_pos/2026-11-05-lm1909-7545d42d.tests.json",
+   "prereg_commit": "0a15b366e",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.885,
+     "peak": "anson"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.991,
+     "peak": "anson"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.764,
+     "peak": "anson"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.337,
+     "peak": "anton"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.254,
+     "peak": "inton"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.742,
+     "peak": "anson"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.321,
+     "peak": "anton"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.829,
+     "peak": "anson"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.063,
+     "peak": " Hanson"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "conom"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " Kate"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.069,
+     "peak": " Manson"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "Emma"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.044,
+     "peak": " Swan"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " tribes"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "Dr"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.753,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0a15b366e",
+  "minutes": 2,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "'anson' in Swanson and kin",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "The card also has Cyrillic 'еш' and 'уч' (10 and 3 of the top 32). Probes of those words stayed at or below 0.03, so the Cyrillic part is not explained.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "anson",
+   "anton",
+   "inton"
+  ]
+ }
+}
