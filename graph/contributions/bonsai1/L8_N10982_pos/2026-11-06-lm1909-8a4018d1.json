@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-8a4018d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N10982+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:49+00:00",
+ "recipe": {
+  "toolchain_commit": "3bf38bbb5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N10982_pos/2026-11-06-lm1909-8a4018d1.tests.json"
+ },
+ "label": "An adjective or intensifier right after 'some' or 'quelques' (some very, some great, some different)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N10982_pos/2026-11-06-lm1909-8a4018d1.tests.json",
+   "prereg_commit": "3bf38bbb5",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.378,
+     "peak": " very"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.59,
+     "peak": " great"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.485,
+     "peak": " special"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.33,
+     "peak": " really"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.408,
+     "peak": " bons"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.089,
+     "peak": " new"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.399,
+     "peak": " truly"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.621,
+     "peak": " different"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.087,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.174,
+     "peak": " great"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "This"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.012,
+     "peak": " made"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.235,
+     "peak": " bons"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "These"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.024,
+     "peak": " told"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.403,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3bf38bbb5",
+  "minutes": 3,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "adjective right after 'some'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}
