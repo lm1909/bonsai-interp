@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-98bc77a9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N6021+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:35:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N6021",
+   "pole": "+",
+   "label": "the word 'including' as the first word inside a parenthesis, introducing part of what was just named, as opposed to other parenthetical openers such as excluding, except or mainly",
+   "fire": [
+    "The whole coast (including the northern islands) was closed to fishing.",
+    "All members (including those who joined last year) may vote in May.",
+    "Several metals (including copper and zinc) were found in the water.",
+    "Every department (including the small ones) sent a report on time.",
+    "Most birds (including the local owls) nest here in early spring.",
+    "The trust owns many buildings (including two old mills) in the valley.",
+    "Local shops (including the bakery) will close on the holiday.",
+    "Each region (including remote areas) receives money from the fund."
+   ],
+   "quiet": [
+    "The whole coast (excluding the northern islands) was closed to fishing.",
+    "All members (except those who joined last year) may vote in May.",
+    "Several metals (mainly copper and zinc) were found in the water.",
+    "Every department (large or small) sent a report on time.",
+    "Most birds (about two hundred kinds) nest here in early spring.",
+    "The trust owns many buildings (some very old) in the valley.",
+    "Local shops (not the bakery) will close on the holiday.",
+    "Each region (roughly twenty) receives money from the fund."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'including' opening a parenthesis",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: 'including' x20, ' including' x6, 'also' x2, ' includes', ' Includes'. Output: promotes including, includes, encompasses, -even. Probes: (including 0.44-0.66, excluding 0.05, plain parenthetical 0.01-0.02; ' includes' 0.26, ', including' only 0.14, so the parenthesis form is what this test covers. Tokenizer: after a space, ' (' then 'including'.",
+ "trigger": {
+  "tokens": [
+   "including"
+  ]
+ }
+}

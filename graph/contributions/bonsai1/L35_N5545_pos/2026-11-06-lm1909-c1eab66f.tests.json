@@ -1,0 +1,63 @@
+{
+ "contribution": "2026-11-06-lm1909-c1eab66f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5545+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:35:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5545",
+   "pole": "+",
+   "label": "the stem of a negative contraction before 't or ’t (' don', ' didn', ' couldn', ' isn', ' wasn'), as opposed to the same negation written out (do not, did not) and ' don' as an ordinary word",
+   "fire": [
+    "I checked the barn twice but I didn't find the lamb.",
+    "Most of the villagers don't trust the new mayor.",
+    "She wanted to stay longer but she couldn't afford it.",
+    "That old bridge isn't safe for heavy trucks.",
+    "The bus wasn't running because of the snow.",
+    "My brother doesn't eat meat on Fridays.",
+    "They said the letter wouldn't arrive before the weekend.",
+    "Those shoes aren't what I ordered from the shop."
+   ],
+   "quiet": [
+    "I checked the barn twice but I did not find the lamb.",
+    "Most of the villagers do not trust the new mayor.",
+    "She wanted to stay longer and she could afford it.",
+    "That old bridge is not safe for heavy trucks.",
+    "The bus was not running because of the snow.",
+    "My brother does not eat meat on Fridays.",
+    "They said the letter would arrive before the weekend.",
+    "The actors don masks and bright robes before the show."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "contraction stem before 't (didn, couldn, isn)",
+ "unit_kind": "token / syntax",
+ "confidence": "high",
+ "notes": "Card: ' don' x10, ' couldn' x6, ' didn' x5, ' isn' x3, ' wasn' x3, and '\\begin' as the top single example. Output: promotes '{' tokens, which explains \\begin but not the contractions, and is not tested here. Tokenizer checked: ' don'|\"'t\", ' didn'|\"'t\". Probes: 0.42-0.56; did not 0.00, do not 0.00, could 0.00, 'don a hat' 0.01, Don Quixote 0.14.",
+ "trigger": {
+  "tokens": [
+   " don",
+   " didn",
+   " couldn",
+   " isn",
+   " wasn",
+   " doesn",
+   " wouldn",
+   " aren",
+   " weren",
+   " hasn",
+   " haven",
+   " shouldn"
+  ]
+ }
+}

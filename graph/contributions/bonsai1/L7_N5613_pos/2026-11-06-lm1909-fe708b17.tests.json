@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-fe708b17",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N5613+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:35:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N5613",
+   "pole": "+",
+   "label": "code or a command that asks what an object is (np.shape(x), type(x), dir(obj), the `dir` command), as opposed to calls that compute with or copy the object",
+   "fire": [
+    "rows, cols = np.shape(grid)\nprint(rows)\n",
+    "size = np.shape(image)[1]\nbuffer = zeros(size)\n",
+    "result = compute(values)\nprint(type(result))\n",
+    "for name in dir(module):\n    print(name)\n",
+    "value = load(path)\n# print(type(value))\nreturn value\n",
+    "Open the folder and do a listing (type `dir') to see what is there.\n",
+    "height = np.shape(frame)[0]\nscale = height / 2\n",
+    "methods = [m for m in dir(obj) if not m.startswith('_')]\n"
+   ],
+   "quiet": [
+    "rows, cols = np.sum(grid)\nprint(rows)\n",
+    "size = np.max(image)\nbuffer = zeros(size)\n",
+    "result = compute(values)\nprint(sorted(result))\n",
+    "for name in names:\n    print(name)\n",
+    "value = load(path)\n# print(value)\nreturn value\n",
+    "Open the folder and copy the files (press `enter') to save what is there.\n",
+    "height = np.copy(frame)\nscale = height / 2\n",
+    "methods = [m for m in names if not m.startswith('_')]\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code asking what an object is: shape, type, dir",
+ "unit_kind": "code / semantic",
+ "confidence": "high",
+ "notes": "Card: '.shape' x8, ' dir' x4, ' type' x3, '(type' x2, 'dir' x2; the - pole is about tolerance and leniency, not the other side of this. Probes: .shape 0.72-0.74, (type 1.00, dir 0.75-0.78; np.sum 0.14, np.copy 0.01, sorted 0.08, plain loop 0.03. `len` after isinstance reached 0.31, so length checks may belong to this and are not tested here.",
+ "trigger": {
+  "tokens": [
+   ".shape",
+   "(type",
+   " dir",
+   "dir"
+  ]
+ }
+}
