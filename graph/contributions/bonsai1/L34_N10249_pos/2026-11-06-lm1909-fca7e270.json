@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-fca7e270",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10249+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:48:07+00:00",
+ "recipe": {
+  "toolchain_commit": "a60f8508f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N10249_pos/2026-11-06-lm1909-fca7e270.tests.json"
+ },
+ "label": "the first piece 'sn' / 'Sn' of a split word: sn|ail, Sn|ipe, Sn|orkeling; whole-word ' snake' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N10249_pos/2026-11-06-lm1909-fca7e270.tests.json",
+   "prereg_commit": "a60f8508f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.633,
+     "peak": " sn"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.702,
+     "peak": " Sn"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.542,
+     "peak": "Sn"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.384,
+     "peak": " sn"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.553,
+     "peak": " sn"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.542,
+     "peak": "Sn"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.704,
+     "peak": " sn"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.542,
+     "peak": "Sn"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.069,
+     "peak": " Common"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.105,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.054,
+     "peak": "on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": "Sl"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.072,
+     "peak": " re"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.548,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a60f8508f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first piece sn / Sn",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "A tokenizer check shows ' snake', ' snorkel' and ' sneezed' do not split this way, so they are left out. Commas after medical symptoms are also on the card and are not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " sn",
+   " Sn",
+   "Sn",
+   "sn"
+  ]
+ }
+}

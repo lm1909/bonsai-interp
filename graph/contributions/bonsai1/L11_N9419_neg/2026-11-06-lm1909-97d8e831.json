@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-97d8e831",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N9419-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:48:35+00:00",
+ "recipe": {
+  "toolchain_commit": "a60f8508f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N9419_neg/2026-11-06-lm1909-97d8e831.tests.json"
+ },
+ "label": "the piece ention of .att|ention in model config identifiers (narrow; other card tokens are not covered)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N9419_neg/2026-11-06-lm1909-97d8e831.tests.json",
+   "prereg_commit": "a60f8508f",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.797,
+     "peak": "ention"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.024,
+     "peak": "head"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.332,
+     "peak": "_attention"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.054,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.706,
+     "peak": "ention"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.065,
+     "peak": "_window"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.19,
+     "peak": "_layers"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.213,
+     "peak": "ention"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.576,
+     "peak": ".hidden"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "head"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.164,
+     "peak": " config"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.285,
+     "peak": ".embed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": ".window"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.129,
+     "peak": "_layers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " ="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.703,
+    "median_fire": 0.202,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a60f8508f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "att|ention in config code",
+ "unit_kind": "token piece / code",
+ "confidence": 0.55,
+ "notes": "Of the card's top examples, only att|ention fired in a probe (0.75); _ERROR, .image and _LOOKUP stayed under 0.05 in short snippets. Coverage will be small.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ention"
+  ]
+ }
+}

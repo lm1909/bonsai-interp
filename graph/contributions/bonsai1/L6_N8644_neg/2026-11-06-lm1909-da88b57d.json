@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-da88b57d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N8644-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:48:20+00:00",
+ "recipe": {
+  "toolchain_commit": "a60f8508f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N8644_neg/2026-11-06-lm1909-da88b57d.tests.json"
+ },
+ "label": "a small list of name pieces: Hutch|ins, Neuro|Image, ' Hunt', -report|er (no shared pattern found)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N8644_neg/2026-11-06-lm1909-da88b57d.tests.json",
+   "prereg_commit": "a60f8508f",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.082,
+     "peak": "ins"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.548,
+     "peak": "Image"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.509,
+     "peak": " Hunt"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.034,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.062,
+     "peak": "ins"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.381,
+     "peak": "Image"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.152,
+     "peak": " Hunt"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.038,
+     "peak": "-report"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " book"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " Science"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.038,
+     "peak": "Howard"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.034,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.094,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.096,
+     "peak": " Mir"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "port"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.117,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a60f8508f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pieces: Hutchins, NeuroImage, Hunt, -report",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "I looked for a shared pattern and found none, so the label stays a list. 'Huth|art' at the top of the card is not tested.",
+ "selection": "random draw"
+}

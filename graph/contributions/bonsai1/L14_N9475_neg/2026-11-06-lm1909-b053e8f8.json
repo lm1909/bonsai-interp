@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b053e8f8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N9475-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:48:39+00:00",
+ "recipe": {
+  "toolchain_commit": "a60f8508f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N9475_neg/2026-11-06-lm1909-b053e8f8.tests.json"
+ },
+ "label": "wishing someone well in Spanish and French: 'Deseamos lo mejor', 'Je vous souhaite'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N9475_neg/2026-11-06-lm1909-b053e8f8.tests.json",
+   "prereg_commit": "a60f8508f",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.352,
+     "peak": " mejor"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.402,
+     "peak": " mejor"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.592,
+     "peak": " à"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.411,
+     "peak": " courage"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.356,
+     "peak": " futuro"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.104,
+     "peak": " best"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.481,
+     "peak": " bonne"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.338,
+     "peak": "a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": "amos"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": " tu"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.068,
+     "peak": " tous"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "ons"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " voiture"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " comida"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.379,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a60f8508f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "wishing someone well",
+ "unit_kind": "semantic / cross-language",
+ "confidence": 0.6,
+ "notes": "Probes: Spanish ' mejor' 0.33-0.34, French 0.59, English 'wish you the best' only 0.14. A near miss with ' bien' reached 0.24. The card's Arabic and Russian tokens are not covered.",
+ "selection": "random draw"
+}

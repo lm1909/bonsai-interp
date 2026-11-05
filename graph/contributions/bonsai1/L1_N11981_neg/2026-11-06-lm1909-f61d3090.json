@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f61d3090",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N11981-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:48:32+00:00",
+ "recipe": {
+  "toolchain_commit": "a60f8508f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N11981_neg/2026-11-06-lm1909-f61d3090.tests.json"
+ },
+ "label": "' over' in 'all over' and in Moreover, and the over preposition (best guess; the card flags the pole dense)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N11981_neg/2026-11-06-lm1909-f61d3090.tests.json",
+   "prereg_commit": "a60f8508f",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.857,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.223,
+     "peak": " often"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.473,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.801,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.46,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.87,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.626,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.675,
+     "peak": " over"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.381,
+     "peak": " part"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.213,
+     "peak": " often"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.26,
+     "peak": " ran"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.404,
+     "peak": "Across"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.124,
+     "peak": "It"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.646,
+     "peak": " Europe"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.232,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.265,
+     "peak": " Asia"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.651,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a60f8508f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' over' (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "The card flags this pole as dense (36% of tokens reach 0.1 of max, max 0.19) and the gate-closed regime as 100%. Probes on near misses reached 0.47, so this test will probably fail and mainly records the density.",
+ "selection": "random draw"
+}

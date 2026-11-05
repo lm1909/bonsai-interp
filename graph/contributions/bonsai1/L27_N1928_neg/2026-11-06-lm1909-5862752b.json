@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-5862752b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N1928-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:48:13+00:00",
+ "recipe": {
+  "toolchain_commit": "a60f8508f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N1928_neg/2026-11-06-lm1909-5862752b.tests.json"
+ },
+ "label": "' why' introducing a reason or a challenge: 'I will tell you why', 'If he had, why loan to him?'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N1928_neg/2026-11-06-lm1909-5862752b.tests.json",
+   "prereg_commit": "a60f8508f",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.27,
+     "peak": " chose"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.261,
+     "peak": " why"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.265,
+     "peak": " why"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.262,
+     "peak": " why"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.301,
+     "peak": " why"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.29,
+     "peak": " why"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.175,
+     "peak": " why"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.35,
+     "peak": " why"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.293,
+     "peak": " chose"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.205,
+     "peak": "If"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.202,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.111,
+     "peak": " what"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.096,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.069,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.135,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.18,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.268,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a60f8508f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' why' for reasons",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.45,
+ "notes": "The card flags the pole as broad. Near misses in probes reached 0.19, and the top tokens on the card also include 'On' and ' consists', which are not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " why",
+   " Why"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8bf42461",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N11652+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:47:58+00:00",
+ "recipe": {
+  "toolchain_commit": "a60f8508f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N11652_pos/2026-11-06-lm1909-8bf42461.tests.json"
+ },
+ "label": "the possessive or genitive marker before a favourite or defining trait: 'their favorite', 'mein Favorit', 'the 的 of 特色', 'the town's signature' (a guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N11652_pos/2026-11-06-lm1909-8bf42461.tests.json",
+   "prereg_commit": "a60f8508f",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.297,
+     "peak": "的"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.13,
+     "peak": "发展的"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.256,
+     "peak": " mein"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.048,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.232,
+     "peak": "公司的"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.233,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.016,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.038,
+     "peak": "の"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "需要"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " Sch"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " recipe"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.079,
+     "peak": "是一个"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": "された"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.181,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a60f8508f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "possessive before 'favorite' (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Probes on short sentences stayed at or under 0.08, so a failure is likely.",
+ "selection": "random draw"
+}
