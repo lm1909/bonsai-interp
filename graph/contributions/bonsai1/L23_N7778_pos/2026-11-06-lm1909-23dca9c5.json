@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-23dca9c5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7778+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:20:29+00:00",
+ "recipe": {
+  "toolchain_commit": "3f614e05f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N7778_pos/2026-11-06-lm1909-23dca9c5.tests.json"
+ },
+ "label": "the final '7' of DOI prefix 10.1007 (Springer journals); other publishers' DOI prefixes and ordinary numbers stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N7778_pos/2026-11-06-lm1909-23dca9c5.tests.json",
+   "prereg_commit": "3f614e05f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.689,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.801,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.744,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.718,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.732,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.612,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.711,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.768,
+     "peak": "7"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.173,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.043,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": "w"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": "-"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.079,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.09,
+     "peak": "doi"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.725,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3f614e05f",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "'7' in Springer DOI 10.1007",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "7"
+  ]
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-60b1a507",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N12054-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:20:43+00:00",
+ "recipe": {
+  "toolchain_commit": "3f614e05f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N12054_neg/2026-11-06-lm1909-60b1a507.tests.json"
+ },
+ "label": "gluten: the word ' gluten' or ' Gluten' and the 'free' after it (including 'Gl'+'uten'); other diet claims such as dairy-free or low-fat stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N12054_neg/2026-11-06-lm1909-60b1a507.tests.json",
+   "prereg_commit": "3f614e05f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.852,
+     "peak": " free"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.807,
+     "peak": " gluten"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.788,
+     "peak": " gluten"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.887,
+     "peak": " gluten"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.687,
+     "peak": " Gluten"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.891,
+     "peak": " gluten"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.777,
+     "peak": " gluten"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.824,
+     "peak": " gluten"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.047,
+     "peak": " bakery"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " patients"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " sugar"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " pasta"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.228,
+     "peak": "-Free"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " avoid"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.085,
+     "peak": " contains"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.816,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3f614e05f",
+  "minutes": 3,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "gluten / gluten-free",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "gluten",
+   "Gluten"
+  ]
+ }
+}
