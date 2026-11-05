@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-7ab57ee7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N7700+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:07:54+00:00",
+ "recipe": {
+  "toolchain_commit": "74da83934",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N7700_pos/2026-11-05-lm1909-7ab57ee7.tests.json"
+ },
+ "label": "The word 'population' in a count of the people of a place (a weak guess; the pole's top examples are otherwise unexplained)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N7700_pos/2026-11-05-lm1909-7ab57ee7.tests.json",
+   "prereg_commit": "74da83934",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.175,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.173,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.256,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.373,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.339,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.18,
+     "peak": " remained"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.07,
+     "peak": " northern"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.398,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.09,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.111,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.149,
+     "peak": " lived"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.259,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " marked"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.18,
+     "peak": " remained"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.043,
+     "peak": " northern"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.394,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.711,
+    "median_fire": 0.218,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "74da83934",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word population (weak guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Top examples are mixed (division, people, is, skin, reboot); ' population' is the only repeat. If this holds, coverage should show it explains little of the pole.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "population"
+  ]
+ }
+}

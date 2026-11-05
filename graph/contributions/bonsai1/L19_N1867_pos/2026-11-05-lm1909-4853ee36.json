@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-4853ee36",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N1867+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:08:05+00:00",
+ "recipe": {
+  "toolchain_commit": "74da83934",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N1867_pos/2026-11-05-lm1909-4853ee36.tests.json"
+ },
+ "label": "The name of a journal or news outlet cited as a source (Science, Lancet, American Family Physician, New York Times); the same common words used plainly stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N1867_pos/2026-11-05-lm1909-4853ee36.tests.json",
+   "prereg_commit": "74da83934",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.294,
+     "peak": " American"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.577,
+     "peak": "ology"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.913,
+     "peak": " Nature"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.401,
+     "peak": " Medicine"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.306,
+     "peak": " Times"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.787,
+     "peak": " Medicine"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.216,
+     "peak": " Reuters"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.76,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.04,
+     "peak": "ised"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.05,
+     "peak": "Details"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " raised"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.049,
+     "peak": " March"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.129,
+     "peak": " first"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": " did"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.489,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "74da83934",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "periodical name cited as source",
+ "unit_kind": "contextual / citation",
+ "confidence": 0.65,
+ "selection": "random draw"
+}

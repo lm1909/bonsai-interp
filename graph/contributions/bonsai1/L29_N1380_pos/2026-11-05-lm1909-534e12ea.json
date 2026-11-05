@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-534e12ea",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N1380+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:07:50+00:00",
+ "recipe": {
+  "toolchain_commit": "74da83934",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N1380_pos/2026-11-05-lm1909-534e12ea.tests.json"
+ },
+ "label": "Pieces of romanized Japanese place and company names in running text (Fuk|uoka, To|chigi, To|hoku, I|to|chu); non-Japanese place names in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N1380_pos/2026-11-05-lm1909-534e12ea.tests.json",
+   "prereg_commit": "74da83934",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.326,
+     "peak": " Fuk"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.234,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.222,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.695,
+     "peak": " Tok"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.722,
+     "peak": " Ts"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.59,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.251,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.88,
+     "peak": "uku"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " Mal"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " tour"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "d"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.318,
+     "peak": " Guang"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.135,
+     "peak": " Dar"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.077,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.458,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "74da83934",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese place-name pieces",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.6,
+ "selection": "random draw"
+}
