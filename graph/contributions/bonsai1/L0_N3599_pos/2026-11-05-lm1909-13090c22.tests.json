@@ -1,0 +1,61 @@
+{
+ "contribution": "2026-11-05-lm1909-13090c22",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3599+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N3599",
+   "pole": "+",
+   "label": "the ampersand as its own token or glued to preceding punctuation (' &', '>&', ' *)&') in code, shell and markup; '&&' and '&word' merged tokens stay quiet",
+   "fire": [
+    "Run the backup with tar czf out.tgz /srv > backup.log 2>&1 so that cron stays quiet.",
+    "void add(Node &head, const Item &item) { head.push(item); }",
+    "scanf(\"%d\", &total); printf(\"%d\", total);",
+    "mask = value & 0xff  # keep the low byte",
+    "nohup ./server --port 80 >server.log 2>&1 &",
+    "title = title.replace('&', 'and')\nhtml = '<b>Fish</b>&nbsp;Chips'",
+    "Smith & Wesson filed the suit against Procter & Gamble in Ohio last year.",
+    "mov eax, [buffer]\nint *ptr = (int *)&buffer;"
+   ],
+   "quiet": [
+    "Run the backup with tar czf out.tgz /srv > backup.log 2>/dev/null so that cron stays quiet.",
+    "void add(Node head, const Item item) { head.push(item); }",
+    "scanf(\"%d\", total); printf(\"%d\", total);",
+    "mask = value | 0xff  # set the low byte",
+    "nohup ./server --port 80 >server.log 2>/dev/null",
+    "title = title.replace('+', 'plus')\nhtml = '<b>Fish</b> Chips'",
+    "Smith and Wesson filed the suit against Procter and Gamble in Ohio last year.",
+    "if (ready && done) { int *ptr = (int *)buffer; }"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'&' token in code",
+ "unit_kind": "token / code",
+ "confidence": 0.8,
+ "notes": "Card: '>&' x9, \" '&\" x4, \"('&\" x3. Probe: 2>&1 0.756; int &a 0.432; flags & 0.339; 'if (a && b)' 0.019; '&page' 0.059; prose 'Rock & roll' 0.179.",
+ "trigger": {
+  "tokens": [
+   " &",
+   ">&",
+   " (&",
+   "('&",
+   " '&",
+   ";&",
+   ")&",
+   " *)&",
+   "&"
+  ]
+ }
+}

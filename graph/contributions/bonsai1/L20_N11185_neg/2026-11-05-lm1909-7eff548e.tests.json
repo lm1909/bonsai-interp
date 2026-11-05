@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-7eff548e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11185-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N11185",
+   "pole": "-",
+   "label": "the subject (' She', ' He', surname) in a present-tense biography of a living person, before 'has' or 'is'; dead people and institutions stay quiet",
+   "fire": [
+    "Anna Lindqvist is a senior lecturer in chemistry at Uppsala. For the past ten years, Lindqvist has led a team of twelve. She has won three grants.",
+    "Mark Ferris, 47, directs the choir at Oberlin. He has recorded four albums and regularly tours in Asia.",
+    "Priya Nair is an award-winning architect based in Pune. She has designed more than forty homes.",
+    "Dr. Hassan teaches surgery in Cairo. Over the years, Hassan has trained hundreds of residents. He is a fellow of the college.",
+    "Lucy Tran is a columnist for the Tribune. She also runs a small press, and she has edited two anthologies.",
+    "Carlos Mena, 61, is a volcanologist at the national institute. He has spent thirty years studying eruptions.",
+    "Ellen Park has coached rowing at Yale since 2005. Park has guided six crews to national titles.",
+    "David Osei is the author of five novels. He has taught writing in Accra, and he lives there with his family."
+   ],
+   "quiet": [
+    "Anna Lindqvist was a senior lecturer in chemistry at Uppsala until she died in 1871. For ten years, Lindqvist led a team of twelve. She won three grants.",
+    "Mark Ferris (1812-1870) directed the choir at Oberlin. He recorded nothing, of course, and never toured in Asia.",
+    "The firm is an award-winning practice based in Pune. It has designed more than forty homes.",
+    "The medical school teaches surgery in Cairo. Over the years, the school has trained hundreds of residents. It is a fine college.",
+    "The Tribune is a daily paper. It also runs a small press, and the press has edited two anthologies.",
+    "Pliny the Elder was a naturalist of ancient Rome. He spent years studying nature and died during an eruption.",
+    "The Yale rowing club has existed since 1852. The club has won six national titles.",
+    "Charles Dickens was the author of fifteen novels. He wrote in London, and he lived there with his family."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "subject of a living person's bio",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: ' He' x3, ' he' x3, ' She' x2, ' she' x2 and surnames, mostly before ' has' or ' is'; the output direction of the other pole promotes ' was', ' died', ' era'. Probe: Holt 'She has' 0.424; 'She has published' 0.271; 'He is' 0.240; Tom Reyes 0.187; Napoleon 0.035; Holt with death date 0.034; a department 0.031; Washington 0.014."
+}

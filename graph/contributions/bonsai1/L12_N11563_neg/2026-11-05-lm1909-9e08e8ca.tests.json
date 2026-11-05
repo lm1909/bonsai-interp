@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-9e08e8ca",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N11563-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N11563",
+   "pole": "-",
+   "label": "clause boundaries in machine-translated industrial product copy (' This', ', greatly', ' the', after a run of selling points)",
+   "fire": [
+    "This crusher has stable performance, low noise, long working life, greatly reducing the maintenance cost. This series is widely used in building materials.",
+    "Our factory has rich experience, the price is reasonable, welcome friends at home and abroad to order. This model valve is suitable for petroleum.",
+    "The cutting tool adopts imported alloy, high precision, greatly improving production efficiency. The product is widely used in aerospace.",
+    "The sieve has simple structure, convenient installation, the output is high. This equipment can greatly save labor.",
+    "The bearing surface treatment is advanced, the wear resistance is strong, in order to meet customer demand. This kind of bearing sell well all over the country.",
+    "The conveyor belt adopts high strength material, smooth operation, which can greatly reduce energy consumption.",
+    "Our company adheres to quality first, the service is considerate, customers are satisfied. This production line has passed ISO certification.",
+    "The laser welder is easy to operate, the weld seam is beautiful, greatly shortening the processing cycle. This machine enjoys high reputation."
+   ],
+   "quiet": [
+    "This crusher was bought second-hand in 2009 and has been noisy ever since. Its owner wants to replace it before winter.",
+    "Our factory closed last year, and the workers were sad to go. This valve was one of the last things we made.",
+    "The cutting tool broke on Tuesday, and the foreman sent it back. The supplier has not replied yet.",
+    "The sieve sat in the shed for years until my uncle found it. He sold it to a neighbour.",
+    "The bearing failed during the test, so the engineers took it apart. They found a crack in the outer ring.",
+    "The conveyor belt jammed twice this morning, and we had to call the mechanic.",
+    "Our company picnic was rained out, so people stayed home. The production line kept running as usual.",
+    "The laser welder in our lab is shared by three groups. Mine uses it on Fridays."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "translated product copy (clause starts)",
+ "unit_kind": "contextual / register",
+ "confidence": 0.7,
+ "notes": "Card: ' the', ' This', ' greatly', ' improving' in Chinglish tool and mill copy, and '，', '！', '。' in Chinese. Probe: 'widely used in metallurgy, greatly saving' 0.918; 'This series pump' 0.551, 0.527; ordinary mill sentence 0.051; family car 0.040; Chinese copy only 0.181, 0.277. Near misses keep the machines and drop the sales register."
+}

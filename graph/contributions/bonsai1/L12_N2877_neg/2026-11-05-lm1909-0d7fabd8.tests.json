@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-0d7fabd8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N2877-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N2877",
+   "pole": "-",
+   "label": "the key or argument 'user'/'USER' in code that reads configuration or the environment (guess; a small part of a scattered pole)",
+   "fire": [
+    "config = {}\nconfig['host'] = 'db1'\nconfig['user'] = 'admin'\nconfig['port'] = 5432",
+    "login = os.environ['USER']\npassword = os.environ['PASS']",
+    "params = dict(host=host)\nparams['user'] = name\nconnect(**params)",
+    "conn = psycopg2.connect(host='db1', user='reader', password=secret)",
+    "settings['USER'] = getpass.getuser()\nsettings['ROOT'] = '/srv'",
+    "def __init__(self, prefix, user, password):\n    self.prefix = prefix\n    self.user = user",
+    "data = request.json\nusername = data['user']\nsave(username)",
+    "env = os.environ.copy()\nenv['USER'] = 'build'\nenv['HOME'] = '/opt/build'"
+   ],
+   "quiet": [
+    "config = {}\nconfig['host'] = 'db1'\nconfig['color'] = 'blue'\nconfig['port'] = 5432",
+    "login = os.environ['LANG']\nshell = os.environ['TERM']",
+    "params = dict(host=host)\nparams['size'] = width\nconnect(**params)",
+    "conn = sqlite3.connect('local.db', timeout=5, isolation_level=None)",
+    "settings['THEME'] = pick_theme()\nsettings['ROOT'] = '/srv'",
+    "def __init__(self, prefix, width, height):\n    self.prefix = prefix\n    self.width = width",
+    "data = request.json\nquantity = data['count']\nsave(quantity)",
+    "env = os.environ.copy()\nenv['PATH'] = '/bin'\nenv['LANG'] = 'C'"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'user' config key (guess)",
+ "unit_kind": "unclear / code",
+ "confidence": 0.2,
+ "notes": "Card: scattered (' installation', ' jobs', ' installer', 'ros', '_date', ' user', ' tests'). Probe: os.environ['USER'] 0.360; kwargs['user'] 0.295; prose installer 0.002; expanduser 0.028; 'jobs' dict 0.020. The only repeatable reading I found.",
+ "trigger": {
+  "words": [
+   "user"
+  ]
+ }
+}

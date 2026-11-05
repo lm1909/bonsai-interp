@@ -1,0 +1,59 @@
+{
+ "contribution": "2026-11-05-lm1909-3d5967eb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N7499-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N7499",
+   "pole": "-",
+   "label": "a word-final suffix piece that completes a word split by the tokenizer ('-iles', '-es', '-ante', '-ains', '-ices', '-ants'), in English and French",
+   "fire": [
+    "The clerk reconciles the figures and then the editor compiles a short report.",
+    "The sailors and marines hauled the sardines into the hold.",
+    "Les conditions sont propices et la voix est vibrante pendant le concert.",
+    "Les élèves sont aptes et les soldats romains défilent dans la ville.",
+    "The builder applied sealants around the frame and put the ointments in a box.",
+    "Political exiles whistled as the sachets of tea were passed around.",
+    "La famille est dominante et la fille est vaillante dans cette histoire.",
+    "Des objets fragiles et des sachets de thé sont sur la table."
+   ],
+   "quiet": [
+    "The clerk checks the figures and then the editor writes a short report.",
+    "The sailors and students carried the sugar into the hold.",
+    "Les enfants sont contents et les hommes sont dans la ville.",
+    "Le chat est petit et la table est grande pendant le concert.",
+    "The builder applied paint around the frame and put the tools in a box.",
+    "Political prisoners smiled as the cups of tea were passed around.",
+    "La famille est grande et la fille est belle dans cette histoire.",
+    "Des enfants et des amis de la famille sont sur la table."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "suffix piece of a split word",
+ "unit_kind": "token piece",
+ "confidence": 0.7,
+ "notes": "Card: 'ante' x3, 'iles' x2, 'es', 'ains'; broad, max only 1.03. Probe: compiles 1.135; aptes 0.931; prépondérante 0.547; romains 0.425; barked 0.235; whole tokens stay low: looked 0.101, contaminants 0.192, chien 0.062. Tokenization of every fire word checked: reconc|iles, comp|iles, mar|ines, prop|ices, apt|es, rom|ains, seal|ants, ex|iles, domin|ante, frag|iles.",
+ "trigger": {
+  "pieces": [
+   "iles",
+   "es",
+   "ante",
+   "ains",
+   "ices",
+   "ants",
+   "ines"
+  ]
+ }
+}

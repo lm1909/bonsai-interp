@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-aee2eec8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N4028+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N4028",
+   "pole": "+",
+   "label": "setting a quantity against a reference ('compared to/with', 'relative to', 'in comparison', 'against', 'subtracted from')",
+   "fire": [
+    "The new battery lasts far longer when compared to older models from that brand.",
+    "Her salary looks modest compared with what peers at rival firms take home.",
+    "Rainfall was unusually low this spring relative to the thirty-year average.",
+    "Each sample was measured and then compared against the control group.",
+    "In comparison to rural clinics, city hospitals have shorter waiting lists.",
+    "Housing remains cheap here relative to incomes in the neighbouring counties.",
+    "Net profit is what is left after costs are subtracted from revenue.",
+    "The team's ratings were benchmarked against those of its main competitors."
+   ],
+   "quiet": [
+    "The new battery lasts far longer when stored in a cool and dry place.",
+    "Her salary looks modest given how long she has worked at the firm.",
+    "Rainfall was unusually low this spring across most of the southern plains.",
+    "Each sample was measured and then stored in the freezer overnight.",
+    "In rural clinics and city hospitals, waiting lists have grown this year.",
+    "Housing remains cheap here thanks to the new towns in the neighbouring counties.",
+    "Net profit is reported each quarter after the auditors sign the accounts.",
+    "The team's ratings were published alongside those of its main competitors."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "measured against a reference",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' compared' x13, ' -' x5, ' relative' x2, ' Compare' x2; 'subtracted' and code subtraction also peak, so the shared pattern is a comparison with a reference rather than the one word. Probe: compared 0.704; relative 0.724; checked against 0.421; subtracted 0.332; 'values[i] - baseline[i]' 0.492; 'during the same quarter' 0.019.",
+ "trigger": {
+  "words": [
+   "compared",
+   "compare",
+   "comparison",
+   "relative"
+  ]
+ }
+}

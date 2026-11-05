@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-b62fa039",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N1626-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N1626",
+   "pole": "-",
+   "label": "the end of a line or sentence of web-page boilerplate in listings and stubs ('Distance from you', 'is a stub.', 'upload your photo.')",
+   "fire": [
+    "Sandy Cove Motel\nNo reviews yet for this listing.\nAdd the first review of this motel.",
+    "Harbor County, Maine\nThis article is a stub. You can help by expanding it.",
+    "Kitchen Timer 3 Pack\nView 2 photos, or add your own photo.\nReport this listing",
+    "Free Dictionary\nMore than 100,000 extra definitions are available to members\nSee more entries",
+    "By posting a review, you agree to our Terms and Conditions as published here.\nThank you for your feedback.",
+    "Best Hotels in East Leeds - Book great rooms at low prices.\nDistance from city centre\nMap",
+    "2008 Honda Civic with 40k miles *MINT*\nTue Jun 3, 2014\nDistance from you\nContact the owner",
+    "This biography of a painter is a stub.\nPlease help improve it by adding sources."
+   ],
+   "quiet": [
+    "The motel by the cove was closed.\nWe wrote a review of it in our diary and drove on.",
+    "Harbor County in Maine is small.\nMy cousin wrote an article about its lighthouse for school.",
+    "She bought a kitchen timer at the market.\nHer brother took two photos of it and laughed.",
+    "The old dictionary sat on his shelf.\nHe looked up more than a hundred words that winter.",
+    "The judge read the terms of the deal aloud.\nThe parties agreed, and everyone went home.",
+    "We found a good hotel in East Leeds.\nThe room was cheap, and the city centre was close.",
+    "My brother drove his 2008 Honda Civic for years.\nHe sold it to his neighbour in June.",
+    "The painter's biography was short.\nMy sister read it on the train to work."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "end of web boilerplate line",
+ "unit_kind": "contextual / register",
+ "confidence": 0.5,
+ "notes": "Card: broad, gate-closed regime 99%; '\\n' x13, '.\\n' x5, on reviews, stubs and listings. Probe: 'upload your photo.' 0.527; 'for businesses in Rocky Point' 0.360; 'is a stub.' 0.330; 'No comments yet' 0.296; 'no reviews for this hotel.' 0.210; but 'Sign in to leave a comment.' -0.058, 'last edited' 0.071; narrative with a line break 0.044, 0.063."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-a39a4182",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N2262-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N2262",
+   "pole": "-",
+   "label": "second-person parenting advice, on pronouns and function words near the parent ('help you', 'you will', 'you and your child')",
+   "fire": [
+    "Keep bath time short and your newborn will sleep better. It will also give you a moment to breathe.",
+    "Cooking with your preschooler is messy, but you will both enjoy it. As a mom, I know how proud they feel.",
+    "When your kid is anxious about school, listen first. That helps you and your kid find a plan.",
+    "I pack lunches I know my kids will eat and that I feel fine about sending with them.",
+    "Talk with your daughter about bullying early; it gives you and her a chance to talk.",
+    "Bottles at bedtime can harm your infant's teeth. Not only will this help you avoid cavities, but it is easy.",
+    "Our family garden lets us teach our children patience and gives us time as a family.",
+    "Sing to your baby during feeds, and you will notice that your little one calms down."
+   ],
+   "quiet": [
+    "Keep meetings short and your staff will work better. It will also give you a moment to breathe.",
+    "Cooking with your roommate is messy, but you will both enjoy it. As a chef, I know how proud they feel.",
+    "When your client is anxious about cost, listen first. That helps you and your client find a plan.",
+    "I pack tools I know my crew will use and that I feel fine about sending with them.",
+    "Talk with your manager about deadlines early; it gives you and her a chance to talk.",
+    "Salt on the road can harm your truck's body. Not only will this help you avoid rust, but it is easy.",
+    "Our company garden lets us show our clients patience and gives us time as a team.",
+    "Sing to your plants during watering, and you will notice that your garden looks better."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "parenting advice (pronouns)",
+ "unit_kind": "contextual / topic",
+ "confidence": 0.35,
+ "notes": "Card: ' you' x4, ' I', ' us', ' will', ' be' in text for parents about children. Probe: 'help you keep them calm' 0.417; 'you and your child' 0.259; 'feel good about giving to them' 0.317; 'you will see' 0.245; but also weak: 'your baby sleep' 0.148, 'easy for parents' 0.094. Same frames without children: laptop 0.044, car 0.036, team 0.085, crew 0.150."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-2d76917d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N3027+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N3027",
+   "pole": "+",
+   "label": "granting someone freedom from supervision or restraint ('more freedom', 'left alone', 'released', 'let them have')",
+   "fire": [
+    "As your daughter matures, you can slowly hand her more freedom with her weekends.",
+    "My aunt would not allow the toddler to be left alone near the pool.",
+    "The court agreed that the defendant could be released while awaiting his appeal.",
+    "Should we let our twelve-year-old have a bank card of her own?",
+    "The warden granted the prisoner his freedom after twenty years behind bars.",
+    "Employers who give staff more autonomy and freedom find they stay longer.",
+    "He thinks they should never let anyone with a record have a gun.",
+    "The nurse said the patient was free to go home on his own after lunch."
+   ],
+   "quiet": [
+    "As your daughter matures, you can slowly hand her more homework for her weekends.",
+    "My aunt would not allow the toddler to be fed peanuts near the pool.",
+    "The court agreed that the defendant should be jailed while awaiting his appeal.",
+    "Should we buy our twelve-year-old a new coat of her own?",
+    "The warden sentenced the prisoner to solitary after twenty years behind bars.",
+    "Employers who give staff more training and pay find they stay longer.",
+    "He thinks they should always check anyone with a record for a job.",
+    "The nurse said the patient was ready for his second dose after lunch."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "granted freedom / left unsupervised",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' freedom' x4, ' free', ' released', ' alone', ' let'; promotes ' without', ' freedom', ' granted'. Probe: 'more freedom' 0.639; 'left alone' 0.493; 'released on bail' 0.813; 'more chores' 0.126; 'held in custody' 0.054; 'freedom of the press' 0.122, so political freedom is weak. Near misses keep the sentence and drop the grant."
+}

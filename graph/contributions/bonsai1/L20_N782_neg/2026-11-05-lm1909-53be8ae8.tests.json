@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-53be8ae8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N782-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N782",
+   "pole": "-",
+   "label": "a temporal anchor in historical narrative ('since the 1960s', 'after the end of', 'soon after the 1953 ...')",
+   "fire": [
+    "Doctors had known about the fever since the 1870s, though few studied it.",
+    "The suburb expanded quickly after the end of the Korean War, and shops followed.",
+    "Burr enlisted with the militia following the battle at Saratoga in the autumn of 1777.",
+    "The agency started its secret programme soon after the 1953 coup in Tehran.",
+    "The firm was established in 1908 by a pair of engineers from Glasgow.",
+    "Railways had been spreading across the region since the middle of the 19th century.",
+    "The league collapsed soon after the 1929 crash, and its clubs folded.",
+    "Interest in the ruins has grown steadily since the end of the Second World War."
+   ],
+   "quiet": [
+    "Doctors had many theories about the fever, though few studied it.",
+    "The suburb expanded quickly along the new railway line, and shops followed.",
+    "Burr enlisted with the militia because his brothers had joined it too.",
+    "The agency runs a secret programme from an office in Tehran.",
+    "The firm is owned by a pair of engineers from Glasgow.",
+    "Railways are spreading across the region, and the map keeps changing.",
+    "The league collapsed under heavy debts, and its clubs folded.",
+    "Interest in the ruins has grown steadily among students of archaeology."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "historical temporal anchors",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: broad; ' the', '0', '9', ' at', ' of' in dated history prose. Probe: 'since the 1960s' 0.289; 'after the end of' 0.202; 'skirmishes at' 0.385; '1914' 0.318; but 'began work in 1884' 0.090 and 'had begun a century before' 0.064; recipe 0.101; '1960s diner' 0.053."
+}

@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-612d26b3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N3589+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N3589",
+   "pole": "+",
+   "label": "' children' as the population affected by a health effect (guess; a small part of a scattered pole)",
+   "fire": [
+    "Folic acid lowers the chance of spinal defects in newborn children.",
+    "Too much sugar leads to tooth decay in children, the dentist warned.",
+    "The vaccine prevents serious ear infections in children under five.",
+    "Lead paint causes lasting brain damage in children who swallow flakes.",
+    "Doctors noted a sharp rise in asthma among children in the city.",
+    "Iron pills can relieve chronic tiredness in children of any age.",
+    "The study tracked hearing loss in children exposed to loud machines.",
+    "A lack of sunlight is linked to weak bones in children across the north."
+   ],
+   "quiet": [
+    "Folic acid lowers the chance of spinal defects in newborn lambs.",
+    "Too much sugar leads to tooth decay in adults, the dentist warned.",
+    "The vaccine prevents serious ear infections in dogs under five.",
+    "Lead paint causes lasting brain damage in workers who swallow flakes.",
+    "Doctors noted a sharp rise in asthma among smokers in the city.",
+    "Iron pills can relieve chronic tiredness in women of any age.",
+    "The study tracked hearing loss in miners exposed to loud machines.",
+    "A lack of sunlight is linked to weak bones in seniors across the north."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' children' after a health effect (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card: no single token (' knee', ' children', ' polymer', ' beer', 'Index', '_id'). Probe: only 'defects in children' reached 0.425; 'in patients' 0.084, 'in infants' 0.015, ' universities' 0.13, 'zz' 0.162, ' knee' 0.131. I did not find a shared pattern, so this tests the one thing that fired. Expect a low coverage at best.",
+ "trigger": {
+  "words": [
+   "children"
+  ]
+ }
+}

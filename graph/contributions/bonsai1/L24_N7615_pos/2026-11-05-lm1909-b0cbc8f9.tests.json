@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-b0cbc8f9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N7615+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N7615",
+   "pole": "+",
+   "label": "the second mention of a rare plural name or group (' ... ber|ks', ' Kat|cin|as'), firing inside the repeated word",
+   "fire": [
+    "The Hrabalks ruled the upper valley. In time, the Hrabalks built a stone bridge there.",
+    "We saw a row of Tuvkinas dancing. After that, those Tuvkinas sat by the fire.",
+    "The Dvorzaks owned three mills. Everyone knew the Dvorzaks paid their workers late.",
+    "Many Zemskis moved to the coast. Later on, the Zemskis opened a fish market.",
+    "Travellers feared the Karpiths of the north. Some said the Karpiths never slept.",
+    "The Ostrimbers kept bees for centuries. Even today, the Ostrimbers sell honey in town.",
+    "Old songs praise the Wolkenbers. According to them, the Wolkenbers defended the pass.",
+    "Many Chakinas appeared at dusk. Then, these Chakinas gave the girl a basket of corn."
+   ],
+   "quiet": [
+    "The Hrabalks ruled the upper valley. In time, the Lemonts built a stone bridge there.",
+    "We saw a row of Tuvkinas dancing. After that, those Perugals sat by the fire.",
+    "The Dvorzaks owned three mills. Everyone knew the Sandhoms paid their workers late.",
+    "Many Zemskis moved to the coast. Later on, the Ardelans opened a fish market.",
+    "Travellers feared the wolves of the north. Some said the wolves never slept.",
+    "The monks kept bees for centuries. Even today, the monks sell honey in town.",
+    "Old songs praise the soldiers. According to them, the soldiers defended the pass.",
+    "Many dancers appeared at dusk. Then, these dancers gave the girl a basket of corn."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "re-mention of a rare plural name",
+ "unit_kind": "contextual / repetition",
+ "confidence": 0.4,
+ "notes": "Card: no single token; many pieces inside unusual words, several re-mentions (Rožmberks, Katcinas, Rowans). Probe: repeated 'Rožmberks' 0.800 (single mention 0.036); repeated 'Katcinas' 0.731 (single 0.017); 'Rowans' 0.506; 'bee-be' 0.722; repeated common 'farmers' 0.009; different second name 0.016. But repeated singular 'Okonkwo' 0.032 and 'Zlatibor' 0.022 did not fire, so plurality is part of this guess. The first near misses have a new second name, the last four a common plural."
+}

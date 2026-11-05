@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-05-lm1909-6249cc9c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N9107-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:22:29+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N9107",
+   "pole": "-",
+   "label": "dense unit (35% of tokens reach 0.1 of max); best guess: ' break' and ' surrender' tokens",
+   "fire": [
+    "Nothing could break the silence in the old church that night.",
+    "They refused to surrender their weapons to the rebel army.",
+    "A sudden noise will break his focus when he is at the desk.",
+    "The general had to surrender the city to the enemy at dawn.",
+    "We were warned that breaking the seal would void the warranty.",
+    "Workers had to break the window to reach the trapped driver.",
+    "The rebels chose surrender over a long siege of the castle.",
+    "Waves keep breaking over the harbour wall during winter storms."
+   ],
+   "quiet": [
+    "Nothing could spoil the silence in the old church that night.",
+    "They refused to hand over their weapons to the rebel army.",
+    "A sudden noise will ruin his focus when he is at the desk.",
+    "The general had to leave the city to the enemy at dawn.",
+    "We were warned that removing the seal would void the warranty.",
+    "Workers had to open the window to reach the trapped driver.",
+    "The rebels chose peace over a long siege of the castle.",
+    "Waves keep crashing over the harbour wall during winter storms."
+   ]
+  }
+ ],
+ "predictions": "near misses probably fire: failure expected",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; ' break', ' surrender' (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card: FLAG dense 35.4%, max only 0.34, gate-closed regime 100%; peaks 'Breaking', 'Break', ' Surre', 'res'. Probe: 'Break' 1.012, ' break' 0.779, ' surrender' 0.832, but the baseline is high: 'Please' 0.294, ' leave' 0.365, ' mat' 0.335. An 8 + 8 test will probably fail on the near misses; written as a best guess.",
+ "trigger": {
+  "words": [
+   "break",
+   "breaking",
+   "surrender"
+  ]
+ }
+}
