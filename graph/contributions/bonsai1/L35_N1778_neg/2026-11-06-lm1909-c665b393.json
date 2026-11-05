@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c665b393",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1778-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:22:43+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N1778_neg/2026-11-06-lm1909-c665b393.tests.json"
+ },
+ "label": "A subject pronoun in present-tense running speech full of contractions, where the next token is likely 'm, 're or 's; the same pronouns in past-tense narration stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N1778_neg/2026-11-06-lm1909-c665b393.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.674,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.433,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.498,
+     "peak": " we"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.783,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.534,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.562,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.412,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.525,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.141,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.196,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.098,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " she"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.201,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.088,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " it"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.53,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "subject pronoun before a likely contraction",
+ "unit_kind": "contextual / prediction",
+ "confidence": "medium",
+ "notes": "Card: ' I' x8, ' you' x7, ' it' x3, ' he' x3, ' we' x2, each followed by a contraction; logit effect of the + pole promotes ' are', ' am', ' is', so the - pole suppresses them. Probe: one-sentence items reach only 0.07-0.19, multi-sentence dialogue 0.42-0.59; past narration 0.12, title 'When They Eat' 0.15. Test items are multi-sentence for that reason.",
+ "selection": "random draw"
+}

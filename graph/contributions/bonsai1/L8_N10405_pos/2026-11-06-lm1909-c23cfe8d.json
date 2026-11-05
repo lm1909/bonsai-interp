@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c23cfe8d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N10405+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:02+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N10405_pos/2026-11-06-lm1909-c23cfe8d.tests.json"
+ },
+ "label": "The recipient pronoun right after 'told' (told you, told him, told them): the addressee of reported speech; the same pronoun after give or send should stay under it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N10405_pos/2026-11-06-lm1909-c23cfe8d.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.599,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.602,
+     "peak": " him"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.412,
+     "peak": " them"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.552,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.247,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.574,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.099,
+     "peak": " them"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.788,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.153,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.031,
+     "peak": " began"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.117,
+     "peak": " them"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.095,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": " envelope"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.216,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.032,
+     "peak": " showed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.111,
+     "peak": " you"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.563,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "recipient pronoun after 'told'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' you' x6, ' me' x3, ' says' x2 in 'what we're telling you', 'Everything I told you', also Spanish señala 'ala', French nous dis-ons. Probe: told you 0.60-0.96, telling you 0.86, told them 0.49, told him 0.43; gave you 0.44 is a known risk, showing you 0.28, handed you 0.12, gave them 0.05. señala 0.96 and disons 0.98 fired but disent 0.05, so the Romance speech verbs are left out of this label.",
+ "selection": "random draw"
+}

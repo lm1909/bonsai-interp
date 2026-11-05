@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-914e8162",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N10765+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:22:55+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N10765_pos/2026-11-06-lm1909-914e8162.tests.json"
+ },
+ "label": "Dense, low-amplitude pole (max 1.31, 27% of tokens reach 0.1 of max, gate-closed); strongest on digits inside a scholarly or legal citation ((1907), 16 USC 1533)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N10765_pos/2026-11-06-lm1909-914e8162.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 5,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.538,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.223,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.631,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.461,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.563,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.378,
+     "peak": " Jones"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.741,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.482,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.395,
+     "peak": " Act"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.125,
+     "peak": " Moreno"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.324,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.219,
+     "peak": " text"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.379,
+     "peak": " series"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.315,
+     "peak": " Jones"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.392,
+     "peak": " book"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.119,
+     "peak": " Bar"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.51,
+    "near_misses_at_0.3": 5
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "dense; digits in a citation",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense and gate-closed; peaks on digits in citations and on ',', '.'. Probe: 16 USC 1533 0.70, (1907) 0.54, Larrea (1960) 0.45; plain numbers 1907 bricks 0.31, 16 people 0.17; ' dog' 0.15.",
+ "selection": "random draw"
+}

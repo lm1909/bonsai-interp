@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-77fdc99e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N332+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:11+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N332_pos/2026-11-06-lm1909-77fdc99e.tests.json"
+ },
+ "label": "' of' that introduces the person guiding or acting, after a noun of leadership or intervention (under the guidance of, the intervention of, under the leadership of); ' of' with things stays under it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N332_pos/2026-11-06-lm1909-77fdc99e.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.701,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.685,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.431,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.223,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.277,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.361,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.307,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.334,
+     "peak": " grew"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.129,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.167,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.055,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.072,
+     "peak": " succeeded"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.386,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.032,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.334,
+     "peak": " grew"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.867,
+    "median_fire": 0.348,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' of' before a guiding person or agent",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' of' x21 after guidance, intervention; also 虐待, 'vous', 'قيام'; broad and mixed regimes. Probe: intervention of 0.75, guidance of 0.70, direction of 0.45, leadership of 0.43, actions of 0.32; weight of 0.17, terms of 0.18, cup of 0.11, plenty of 0.07. 'help of' 0.28 and 'invitation of' 0.24 sit between.",
+ "selection": "random draw"
+}

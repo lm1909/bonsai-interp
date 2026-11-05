@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-005662ee",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N1056+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:17+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N1056_pos/2026-11-06-lm1909-005662ee.tests.json"
+ },
+ "label": "' in' that introduces a spatial configuration after a verb of arranging or spreading (arranged in a circle, spread out in a crescent); 'in' after other verbs stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N1056_pos/2026-11-06-lm1909-005662ee.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.958,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.355,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.509,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.749,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.524,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.191,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.466,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.371,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " grew"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " eaten"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.145,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " stored"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " snow"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.488,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' in' before a spatial arrangement",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' in' x22 after planted, spread out, arranged, scattered; ' into' x3. The - pole's logit effect relates to ' arrangement', ' distribution', ' layout'. Probe: spread out in a crescent 0.81, arranged in a nonlinear order 0.76, arranged in panicles 0.59; planted in front 0.20, scattered in the field 0.15, planted in groups 0.09; lived in, arrived in, interested in at most 0.02.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-89f8ed2e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N9022-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:22:51+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N9022_neg/2026-11-06-lm1909-89f8ed2e.tests.json"
+ },
+ "label": "' ray' of 'gamma ray', and ' population' as a modifier of a noun of growth or density (population growth, population density); ' ray' of light, X ray and 'most of the population' stay quiet: a list, no shared pattern",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N9022_neg/2026-11-06-lm1909-89f8ed2e.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.443,
+     "peak": " ray"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.843,
+     "peak": " ray"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.389,
+     "peak": " ray"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.365,
+     "peak": " ray"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.746,
+     "peak": " ray"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.314,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.504,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.166,
+     "peak": " population"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.148,
+     "peak": " flash"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.103,
+     "peak": " light"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.174,
+     "peak": " ray"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.132,
+     "peak": " gamma"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.113,
+     "peak": " galaxy"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.044,
+     "peak": " population"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.447,
+     "peak": " population"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.115,
+     "peak": " spread"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.416,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' ray' of gamma ray; attributive ' population'",
+ "unit_kind": "token / lexical",
+ "confidence": "medium",
+ "notes": "Card: broad; ' population' x4, ' come' x3, ' ray' x2, ' came' x2. Logit effect of the + pole suppresses ' explosive', ' burst', ' explosion', so the - pole reads toward them, which fits gamma ray bursts and population explosion but ' burst' itself does not fire. Probe: gamma ray 0.52-0.84, population growth 0.31-0.53; X ray 0.04, ray of light 0.10, gamma knife 0.20, population of each town 0.15, most of the population 0.03. But population densities only 0.14.",
+ "selection": "random draw"
+}

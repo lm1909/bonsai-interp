@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-bf03d205",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N8333+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:09+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N8333_pos/2026-11-06-lm1909-bf03d205.tests.json"
+ },
+ "label": "A date or time that rolls over into a new period: 1st after the 30th or 31st, Jan after Dec, am after midnight, enero after diciembre; the same sequences inside a period stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N8333_pos/2026-11-06-lm1909-bf03d205.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.943,
+     "peak": "st"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.455,
+     "peak": " Jan"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.587,
+     "peak": "am"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.427,
+     "peak": "ero"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.395,
+     "peak": "st"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.307,
+     "peak": " January"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.212,
+     "peak": " -"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.292,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.113,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.066,
+     "peak": " Apr"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.128,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": "th"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " Arena"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "0"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.411,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "calendar rollover to a new period",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: 'st' after 'Wednesday 30th - Thursday 1', 'Jan' after Dec, '12:32am', ' AM', 'ero' of enero, ' January', '1 -' after 31. Probe: 1st after 30th 0.98, 12:32am after 11:58pm 0.48, Jan after Dec 0.39, enero after diciembre 0.37; the same sequences inside a month or year 0.01-0.12.",
+ "selection": "random draw"
+}

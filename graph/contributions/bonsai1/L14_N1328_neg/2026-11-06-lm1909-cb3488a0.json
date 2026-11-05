@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-cb3488a0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N1328-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:23:05+00:00",
+ "recipe": {
+  "toolchain_commit": "585ef7caf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N1328_neg/2026-11-06-lm1909-cb3488a0.tests.json"
+ },
+ "label": "A noun for a compiled or pictorial record that is being presented: a list, a photo, a representation, a set of pictures (low confidence: readings in probes were uneven)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N1328_neg/2026-11-06-lm1909-cb3488a0.tests.json",
+   "prereg_commit": "585ef7caf",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.822,
+     "peak": " list"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.275,
+     "peak": " representation"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.27,
+     "peak": " photo"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.287,
+     "peak": " list"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.038,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.712,
+     "peak": " list"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.335,
+     "peak": " photo"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.076,
+     "peak": " pictures"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.141,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.081,
+     "peak": " draw"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.057,
+     "peak": " book"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": " ad"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.038,
+     "peak": "'s"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.281,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "585ef7caf",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "noun for a compiled or pictorial record",
+ "unit_kind": "semantic",
+ "confidence": "low",
+ "notes": "Card: ' List', ' list', representation ' of', ' set', ' plates', ' photo', ' pictures', ' table', ' characters'. Probe: uneven. 'a list with all authors' 0.65, 'representation of' 0.59, 'photo of' 0.35, 'list of' 0.23, table 0.15, picture 0.14, set of scripts 0.11, map 0.05. Quiet items 0.02-0.05. I expect this to be weak.",
+ "selection": "random draw"
+}
