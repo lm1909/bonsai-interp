@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-b0a3a78b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7360-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:52+00:00",
+ "recipe": {
+  "toolchain_commit": "96767dbf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N7360_neg/2026-11-06-lm1909-b0a3a78b.tests.json"
+ },
+ "label": "the point where the name of a US federal regulator begins or is expected: its first word (Environmental, Food, Securities), or ' the' after a verb like 'report to', 'approved by' in a compliance context",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N7360_neg/2026-11-06-lm1909-b0a3a78b.tests.json",
+   "prereg_commit": "96767dbf2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.721,
+     "peak": " federal"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.471,
+     "peak": " US"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.617,
+     "peak": " Drug"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.697,
+     "peak": " Securities"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.612,
+     "peak": " Environmental"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.71,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.892,
+     "peak": " Consumer"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.604,
+     "peak": " federal"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " opened"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": "Grand"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.159,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.089,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.062,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "Mus"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.657,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "96767dbf2",
+  "minutes": 3,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "where a US regulator's name begins",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. The first round (first word of the name) had 8/8 fire at median 0.689 but failed because 'must report delays to the' reached 0.714 on ' the', with no agency following. New probes: 'report injuries to the' 0.623, 'submit their filings to the' 0.613, 'approved by the' 0.376; 'Tourists must report to the' 0.080, 'gave the ball to the' 0.048, 'Complaints about the movie went to the' 0.160. So the pole anticipates the regulator. The label now says so, and near misses keep ' the' after a verb with no regulator in view.",
+ "selection": "picked"
+}

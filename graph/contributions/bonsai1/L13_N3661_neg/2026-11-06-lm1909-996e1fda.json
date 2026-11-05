@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-996e1fda",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N3661-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:46+00:00",
+ "recipe": {
+  "toolchain_commit": "96767dbf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N3661_neg/2026-11-06-lm1909-996e1fda.tests.json"
+ },
+ "label": "the past participle ' run' after have, has or had, in any sense (had run a race, has run the shop, had run home), as opposed to other forms of run or other participles",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N3661_neg/2026-11-06-lm1909-996e1fda.tests.json",
+   "prereg_commit": "96767dbf2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.433,
+     "peak": " run"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.051,
+     "peak": " little"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.181,
+     "peak": " run"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.302,
+     "peak": " several"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.627,
+     "peak": " run"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.199,
+     "peak": " run"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.071,
+     "peak": " couple"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.815,
+     "peak": " run"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.072,
+     "peak": " walked"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.047,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.102,
+     "peak": " vaccine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.126,
+     "peak": " ran"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " dog"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": " since"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.159,
+     "peak": " running"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.251,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "96767dbf2",
+  "minutes": 3,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "' run' as a perfect participle",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Second round. The first round claimed a non-motion sense and failed: near misses 'had run down the hill' and 'had run home' scored as high as the fire sentences (0.433, 0.702). New probes: 'She had run a marathon' 0.627, 'They have run many tests' 0.302, but 'had walked' 0.076, 'had eaten' 0.098, 'The trains run on time' 0.027. So this round's label is the perfect-tense form, in any sense. Near misses are other participles and other forms of run. 'We have run out of ideas' scored only 0.097 (peak on ' of'), so an out-of phrase is left out.",
+ "selection": "picked"
+}

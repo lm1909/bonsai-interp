@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-370d3e40",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N8247-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:59+00:00",
+ "recipe": {
+  "toolchain_commit": "96767dbf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N8247_neg/2026-11-06-lm1909-370d3e40.tests.json"
+ },
+ "label": "the word that sets a thing aside after a preparation step, to rest or finish by itself: left to, let stand, leave (it), let sit, in recipe-like and process text",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N8247_neg/2026-11-06-lm1909-370d3e40.tests.json",
+   "prereg_commit": "96767dbf2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.769,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.667,
+     "peak": " stand"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.768,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.647,
+     "peak": " sit"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.501,
+     "peak": " overnight"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.877,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.611,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.674,
+     "peak": " stand"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.086,
+     "peak": " minute"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.154,
+     "peak": " leave"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.047,
+     "peak": " jars"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " clay"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " know"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " gas"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.087,
+     "peak": " at"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.671,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "96767dbf2",
+  "minutes": 3,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "setting something aside to rest",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. The first round (' to'/' for' after leave/left/let) had AUROC 1.000 and median 0.758 but failed on 2 near misses that had a preparation step before 'leave' or 'left' (frames such as 'then leave for work' 0.612). New probes: 'then leave it on the rack' 0.406, 'let stand' 0.498, 'left to harden' 0.689, while 'Leave the keys' 0.134 and 'Please leave a message' 0.154 stayed low. So this round's label includes ' leave' after a preparation step, and near misses are preparation steps with no setting aside, plus leave/left in unrelated frames, with different lead-ins.",
+ "selection": "picked"
+}
