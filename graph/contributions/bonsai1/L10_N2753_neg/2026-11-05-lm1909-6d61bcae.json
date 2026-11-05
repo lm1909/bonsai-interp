@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-6d61bcae",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2753-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:17+00:00",
+ "recipe": {
+  "toolchain_commit": "2e2cdbc38",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2753_neg/2026-11-05-lm1909-6d61bcae.tests.json"
+ },
+ "label": "a piece of a digestive-tract medical term (es|ophage|al, per|itone|um, diverticul|itis, colitis), as opposed to terms for other body systems",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2753_neg/2026-11-05-lm1909-6d61bcae.tests.json",
+   "prereg_commit": "2e2cdbc38",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.621,
+     "peak": "al"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.564,
+     "peak": "al"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.863,
+     "peak": "itis"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.508,
+     "peak": " bleeding"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.24,
+     "peak": "oph"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.586,
+     "peak": "itone"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.016,
+     "peak": "Bar"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.341,
+     "peak": " es"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "Long"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": " reach"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.062,
+     "peak": " fever"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "um"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": "ard"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "ine"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " c"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.536,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2e2cdbc38",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "digestive-tract medical term",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Common words on the topic ('Coffee and cola can contribute to indigestion') were quiet in a probe, so the label is about technical term pieces rather than the topic.",
+ "selection": "random draw"
+}

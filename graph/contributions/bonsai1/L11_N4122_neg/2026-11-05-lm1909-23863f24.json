@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-23863f24",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N4122-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:59:46+00:00",
+ "recipe": {
+  "toolchain_commit": "2e2cdbc38",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N4122_neg/2026-11-05-lm1909-23863f24.tests.json"
+ },
+ "label": "the function word right after a named person or body, where a new phrase begins (a man named Maury Ginsberg to..., Araye of Benilloba on..., Pius VI by..., MLA now...), as opposed to the same phrase after a common noun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N4122_neg/2026-11-05-lm1909-23863f24.tests.json",
+   "prereg_commit": "2e2cdbc38",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.838,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.409,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.763,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.542,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.146,
+     "peak": " now"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.013,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.187,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.219,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.195,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.188,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.064,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.048,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.117,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.063,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": "ics"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.314,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2e2cdbc38",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "function word right after a name",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "A probe with no name ('a friend to the festival') reached 0.27, so a name may not be needed: an odd second 'to' could be enough. Chinese '有' after a name reached 0.85.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-5bb6cda2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N5668+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:00:00+00:00",
+ "recipe": {
+  "toolchain_commit": "2e2cdbc38",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N5668_pos/2026-11-05-lm1909-5bb6cda2.tests.json"
+ },
+ "label": "the point just before a bad consequence in a warning about behavior (can lead to the erosion..., may draw sympathy to your opponent, only further divide), as opposed to neutral statements using the same words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N5668_pos/2026-11-05-lm1909-5bb6cda2.tests.json",
+   "prereg_commit": "2e2cdbc38",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.525,
+     "peak": " drive"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.715,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.761,
+     "peak": " further"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.569,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.324,
+     "peak": " motivate"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.072,
+     "peak": " further"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.617,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.762,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.066,
+     "peak": " often"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " topic"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.214,
+     "peak": " further"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.088,
+     "peak": " fly"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "Co"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.072,
+     "peak": " require"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "This"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.086,
+     "peak": " guests"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.666,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2e2cdbc38",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "before a warned-against consequence",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Weak in probes: 'A good breakfast can often lead to a better mood' scored 0.44 and 'a recipe for pancakes' 0.21, so the word 'bad' in the label may be wrong. Near misses here are neutral, which leaves the positive-outcome reading untested.",
+ "selection": "random draw"
+}
