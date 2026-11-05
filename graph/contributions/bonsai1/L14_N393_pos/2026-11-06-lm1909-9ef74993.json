@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-9ef74993",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N393+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:55:32+00:00",
+ "recipe": {
+  "toolchain_commit": "8ff2ad2b3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N393_pos/2026-11-06-lm1909-9ef74993.tests.json"
+ },
+ "label": "The end of a media brand name in a dateline or byline (MarketWatch, CNNMoney, TheStreet)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N393_pos/2026-11-06-lm1909-9ef74993.tests.json",
+   "prereg_commit": "8ff2ad2b3",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.751,
+     "peak": "Watch"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.618,
+     "peak": "Watch"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.592,
+     "peak": "Money"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.425,
+     "peak": "Money"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.378,
+     "peak": "Street"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.289,
+     "peak": "Watch"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.514,
+     "peak": " CNN"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.383,
+     "peak": "Street"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.199,
+     "peak": "bert"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.073,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.07,
+     "peak": " YORK"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.068,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.163,
+     "peak": " Day"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " library"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.254,
+     "peak": " Cox"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.065,
+     "peak": " ("
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.47,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8ff2ad2b3",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "media brand in a dateline",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw"
+}
