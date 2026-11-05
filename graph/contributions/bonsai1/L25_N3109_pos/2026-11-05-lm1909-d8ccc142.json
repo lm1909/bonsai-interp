@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-d8ccc142",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3109+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:52:55+00:00",
+ "recipe": {
+  "toolchain_commit": "107645ce2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N3109_pos/2026-11-05-lm1909-d8ccc142.tests.json"
+ },
+ "label": "Low-confidence guess: the indentation token at the start of a commented-out code line.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N3109_pos/2026-11-05-lm1909-d8ccc142.tests.json",
+   "prereg_commit": "107645ce2",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.083,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.137,
+     "peak": "       "
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.107,
+     "peak": " '':\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.093,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.09,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.172,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.197,
+     "peak": "           "
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.15,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.063,
+     "peak": " '':\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " '':\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.04,
+     "peak": " '':\n"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": " '':\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " '':\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.091,
+     "peak": " '':\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.078,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.066,
+     "peak": "\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.122,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "107645ce2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "indent in commented-out code (guess)",
+ "unit_kind": "code / unclear",
+ "confidence": 0.1,
+ "notes": "Card: '.\\n', runs of spaces, ' pain', ' Criteria', ' fashion' with a max of 111; density 0.49%. Rebuilt contexts stayed at 0.16 or below. I found no trigger; this records the best guess.",
+ "selection": "random draw"
+}

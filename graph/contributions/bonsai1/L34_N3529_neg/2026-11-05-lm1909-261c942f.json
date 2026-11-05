@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-261c942f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3529-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:53:04+00:00",
+ "recipe": {
+  "toolchain_commit": "107645ce2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N3529_neg/2026-11-05-lm1909-261c942f.tests.json"
+ },
+ "label": "'as yet' or 'previously' just before an un- word ('as yet unidentified', 'previously unknown'), and 'yet to be': the point where something is still not done; 'well known' and 'as usual' stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N3529_neg/2026-11-05-lm1909-261c942f.tests.json",
+   "prereg_commit": "107645ce2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.148,
+     "peak": " yet"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.905,
+     "peak": " yet"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.829,
+     "peak": " yet"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.876,
+     "peak": " previously"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.7,
+     "peak": " yet"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.64,
+     "peak": " yet"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.711,
+     "peak": " yet"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.637,
+     "peak": " previously"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.098,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " highly"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": " genus"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "ivers"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.157,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.198,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.089,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.77,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "107645ce2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "as yet / previously + un- slot",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.8,
+ "notes": "Probes: as yet 0.72-0.97, previously unknown 0.64, yet to be 0.67; 'widely praised' 0.11, 'many well known' 0.01, 'as usual' 0.01. ' were' in 'were not evaluated' 0.16, against 'were' x3 in the card's top examples.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " yet",
+   " previously"
+  ]
+ }
+}

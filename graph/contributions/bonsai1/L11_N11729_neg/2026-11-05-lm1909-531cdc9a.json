@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-531cdc9a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N11729-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:52:50+00:00",
+ "recipe": {
+  "toolchain_commit": "107645ce2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N11729_neg/2026-11-05-lm1909-531cdc9a.tests.json"
+ },
+ "label": "The article ' an' before a data structure in an algorithm statement ('elements from an array A'); everyday 'from an/a' stays low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N11729_neg/2026-11-05-lm1909-531cdc9a.tests.json",
+   "prereg_commit": "107645ce2",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.802,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.418,
+     "peak": " k"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.954,
+     "peak": " array"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.29,
+     "peak": " U"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.908,
+     "peak": " array"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.911,
+     "peak": " stream"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.566,
+     "peak": " array"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.633,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": " seat"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.108,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.047,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.226,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.047,
+     "peak": " evening"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.05,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.718,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "107645ce2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'from an' + data structure",
+ "unit_kind": "code / contextual",
+ "confidence": 0.5,
+ "notes": "Probes: 'from an array A' 0.87, 'from an input S' 0.79; 'takes an integer' 0.12, apple in a basket 0.05. 'uint8' in code 0.52, 'int64' 0.30, 'float32' 0.16, which this test leaves out.",
+ "selection": "random draw"
+}

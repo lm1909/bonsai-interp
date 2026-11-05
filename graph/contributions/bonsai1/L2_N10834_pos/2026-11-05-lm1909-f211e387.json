@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-f211e387",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10834+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:52:31+00:00",
+ "recipe": {
+  "toolchain_commit": "107645ce2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N10834_pos/2026-11-05-lm1909-f211e387.tests.json"
+ },
+ "label": "The Arabic word ' مستوى' (level), in a gate-closed unit with a small max.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N10834_pos/2026-11-05-lm1909-f211e387.tests.json",
+   "prereg_commit": "107645ce2",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.417,
+     "peak": " مستوى"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.245,
+     "peak": " مستوى"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.448,
+     "peak": " مستوى"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.379,
+     "peak": " مستوى"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.35,
+     "peak": " مستوى"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.346,
+     "peak": " مستوى"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.278,
+     "peak": " مستوى"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.48,
+     "peak": " مستوى"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.15,
+     "peak": "س"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": "ان"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.286,
+     "peak": "شف"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "وزارة"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.068,
+     "peak": " المباراة"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": "وت"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "ود"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.079,
+     "peak": "اعدة"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.364,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "107645ce2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic مستوى (level)",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Card: the pole is 100% echo regime with max 2.17. Probes: مستوى 0.28-0.47; نوعية and كمية 0.08-0.09; ' melan' 0.42, 合 0.23. English 'level' 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " مستوى"
+  ]
+ }
+}

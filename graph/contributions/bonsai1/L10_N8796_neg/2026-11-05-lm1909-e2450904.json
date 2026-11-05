@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-e2450904",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N8796-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:52:02+00:00",
+ "recipe": {
+  "toolchain_commit": "107645ce2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N8796_neg/2026-11-05-lm1909-e2450904.tests.json"
+ },
+ "label": "Optical focus: focus and focusing of a lens or an eye (minimum focus distance, autofocus, focusing up close); metaphorical focus stays quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N8796_neg/2026-11-05-lm1909-e2450904.tests.json",
+   "prereg_commit": "107645ce2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.091,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.344,
+     "peak": " eyes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.694,
+     "peak": " focus"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.244,
+     "peak": " focusing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.14,
+     "peak": " range"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.92,
+     "peak": " focus"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.601,
+     "peak": " focus"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.675,
+     "peak": " focusing"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.062,
+     "peak": "photo"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.169,
+     "peak": " focus"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.194,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " focus"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.201,
+     "peak": "inder"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.033,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.807,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "107645ce2",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "optical focus (lens or eye)",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.8,
+ "notes": "Probes: lens focus distance 1.13, focusing up close 0.79, camera focusing 0.36; 'focus on the budget' 0.02, 'main focus' 0.01, 'lost focus' 0.08. The declared trigger counts every 'focus', so coverage may overstate the optical reading.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "focus",
+   "focusing"
+  ]
+ }
+}
