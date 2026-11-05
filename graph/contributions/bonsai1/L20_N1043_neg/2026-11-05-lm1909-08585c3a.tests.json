@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-08585c3a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N1043-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:58:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N1043",
+   "pole": "-",
+   "label": "the closing token '()).' of a call inside a method chain in code, as in set(d.keys()).union(x)",
+   "fire": [
+    "    keys = set(cfg.keys()).union(EXTRA)\n    return keys\n",
+    "    names = list(row.values()).index(target)\n",
+    "    total = len(set(a.items()).difference(b))\n",
+    "    seen = set(obj.keys()).intersection(wanted)\n    print(seen)\n",
+    "    out = tuple(map.values()).count(0)\n",
+    "    left = set(old.keys()).difference(new)\n    right = set(new.keys()).difference(old)\n",
+    "    size = list(table.items()).pop()\n",
+    "    both = set(x.keys()).issubset(y)\n"
+   ],
+   "quiet": [
+    "    keys = set(cfg.keys())\n    return keys\n",
+    "    names = list(row.values())\n",
+    "    total = len(set(a.items()))\n",
+    "    seen = set(obj.keys())\n    print(seen)\n",
+    "    out = tuple(map.values())\n",
+    "    left = set(old.keys())\n    right = set(new.keys())\n",
+    "    size = list(table.items())\n",
+    "    both = set(x.keys())\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "'()).' in a method chain",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' +', ' =', ' -', '_cases', '(*' and '()).' at the top, with prose outliers ('$5', 'including'). Probes of operators in code stayed under 0.06; the best was '()).' at 0.109. No distinction found, so this is a best guess at the top token, expected to fail."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-8a691b0c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N896-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:58:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N896",
+   "pole": "-",
+   "label": "a possessive determiner (our, its, their, her, my) in front of a noun",
+   "fire": [
+    "We shipped the parts because our supplier closed its plant in June.",
+    "Please send the form, since our office handles all their claims.",
+    "The virus can pass control to her own server after this step.",
+    "The firm is shrinking, with its sales down again this quarter.",
+    "Here is my own theory about how the old script spread.",
+    "Usually our team answers within a day, and their manager follows up.",
+    "The attacker hides her tools inside their own shared folder.",
+    "Most nations protect our oceans and guard their fishing waters."
+   ],
+   "quiet": [
+    "We shipped the parts because a supplier closed some plant in June.",
+    "Please send the form, since an office handles all such claims.",
+    "The virus can pass control to a remote server after this step.",
+    "The firm is shrinking, with sales down again this quarter.",
+    "Here is a new theory about how the old script spread.",
+    "Usually a clerk answers within a day, and a manager follows up.",
+    "The attacker hides some tools inside a shared folder.",
+    "Most nations protect the oceans and guard local fishing waters."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "possessive determiner",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' our' x5, ' its', ' their', ' her', ' nuestro', plus ' I' and name pieces. Probes were all weak: 'to her own' 0.119, 'My own' 0.092, 'Usually our' sentence 0.082, against 0.01-0.03 for 'some' or no determiner. A best-guess test of the most frequent tokens, expected to fail on the median."
+}

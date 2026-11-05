@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-6e9f2aac",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N11499-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:58:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N11499",
+   "pole": "-",
+   "label": "the letter 'o' or the hollow circle '○' used as a bullet marker at the start of a list line",
+   "fire": [
+    "Packing list for the trip:\no Two warm sweaters\no A rain jacket\no Sturdy boots",
+    "Applicants must meet these terms. Late forms are refused.\no Applicants who are abroad must call first.\no All copies must be signed.",
+    "Our office offers these services:\n○ Tax advice\n○ Payroll support\n○ Annual audits",
+    "Common causes of the outage were reviewed.\no Power loss at the main site\no A failed backup switch",
+    "Benefits of the plan are listed below.\n○ Lower monthly costs\n○ Free dental cover",
+    "Before you leave the house:\no Lock the back door\no Feed the cat\no Turn off the stove",
+    "Materials used in the kit:\no Polyester: straps and covers\no Nylon: the outer shell",
+    "Topics for the first meeting:\n○ The new budget\n○ Staff changes"
+   ],
+   "quiet": [
+    "Packing list for the trip:\nTwo warm sweaters\nA rain jacket\nSturdy boots",
+    "Applicants must meet these terms. Late forms are refused.\nApplicants who are abroad must call first.\nAll copies must be signed.",
+    "Our office offers these services:\nTax advice\nPayroll support\nAnnual audits",
+    "Common causes of the outage were reviewed.\nPower loss at the main site\nA failed backup switch",
+    "Benefits of the plan are listed below.\nLower monthly costs\nFree dental cover",
+    "Before you leave the house, lock the back door, feed the cat and turn off the stove.",
+    "Materials used in the kit:\nPolyester: straps and covers\nNylon: the outer shell",
+    "Topics for the first meeting:\nThe new budget\nStaff changes"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "'o' / '○' as a line bullet",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: '-' x20, 'o' x6, '○' x1 of the top 32, but the five strongest are 'o'. Probes: 'o' bullets 0.44, '○' 0.393, while '-' bullets stayed at 0.08 in two passages, so the label claims the hollow-bullet family only and may be partial. The same lines without a bullet were under 0.02.",
+ "trigger": {
+  "tokens": [
+   "o",
+   "○"
+  ]
+ }
+}

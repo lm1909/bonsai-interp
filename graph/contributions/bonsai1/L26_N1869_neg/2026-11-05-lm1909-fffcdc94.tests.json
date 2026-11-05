@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-fffcdc94",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N1869-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:58:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N1869",
+   "pole": "-",
+   "label": "tokens inside a code snippet or inline technical example (+=, printf, QString, 'for example' before a path), as opposed to plain prose on programming",
+   "fire": [
+    "I tried this in Xcode:\nprintf(\"%s\", name);\nmsg += word + ' ';",
+    "Then in the handler:\nout += chunk + '';\nprintf(\"done\");",
+    "    val = str(item.data()[QString(u'title')].toString())",
+    "    label = QString(u'name') + QString(u'value')",
+    "Absolute paths (for example, \"/usr/bin/env\") are resolved by the loader class.",
+    "Use the parser class. File names (for example, \"main.c\") are matched by the rule.",
+    "    test.assert_lines(result, rows, ['name', key])",
+    "    self.write_lines(result, rows, ['id', key])"
+   ],
+   "quiet": [
+    "I tried this in Xcode, and the program printed the name with a short message.",
+    "Then the handler added each chunk to the output and reported that it was done.",
+    "The function reads the title from the item and turns it into a plain string.",
+    "The label shows the name of the setting next to its current value.",
+    "Absolute paths are resolved by the loader, as most developers would expect.",
+    "Use the parser for this. File names are matched by a simple rule in the docs.",
+    "The test checks that each result has the right rows and the expected name.",
+    "The method writes each result to the rows and then records its identifier."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "token in a code context",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ',' x6, 'printf' x2, ' =' x2, 'pen', '.Http', 'Number', 'QString', ' example', all in code or API docs. Probes: ' +' in a snippet with += 1.068, QString 0.909, 'for example' before a path 0.369, ' =' or comma in code 0.31-0.32, but one '==' line only 0.074; plain prose under 0.02. Near misses are prose about software with no code."
+}

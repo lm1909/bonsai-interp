@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-05-lm1909-8cb49854",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10777-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:58:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N10777",
+   "pole": "-",
+   "label": "a word that opens a question or subordinate clause in Russian or Spanish (почему, что, если; que)",
+   "fire": [
+    "Вот отличный результат! Но почему об этом никто не пишет?",
+    "Мама спросила, почему дети опять не легли спать.",
+    "Учитель сказал, что экзамен перенесли на пятницу.",
+    "Я думаю, что этот фильм понравится всей семье.",
+    "Позвони мне вечером, если поезд снова опоздает.",
+    "Lee las instrucciones, ya que el aparato puede ser peligroso.",
+    "Me dijeron que la tienda cierra a las ocho.",
+    "Никто не понимает, почему цены выросли так быстро."
+   ],
+   "quiet": [
+    "Вот отличный результат! Об этом написали все газеты.",
+    "Мама уложила детей спать и выключила свет.",
+    "Учитель перенёс экзамен на следующую пятницу.",
+    "Этот фильм понравится всей нашей большой семье.",
+    "Позвони мне вечером после работы из дома.",
+    "Lee las instrucciones del aparato antes de la primera limpieza.",
+    "Me dijeron la hora de cierre de la tienda.",
+    "Цены выросли очень быстро в этом году."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "clause opener in Russian/Spanish",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' почему' x3, ' что' x3, ' que' x2, ' этого' x2, 'ока', 'ем', 'mente', mostly Russian and Spanish. Probes: ' почему' 0.80-0.89, ' что' 0.27-0.41, ' que' 0.15-0.29, 'Если' 0.236, 'mente' 0.332; plain Russian sentences reached 0.14-0.24 on '.', Spanish 0.02-0.18. The weak baseline may hurt AUROC: this is a language-sensitive pole.",
+ "trigger": {
+  "tokens": [
+   " почему",
+   " что",
+   " если",
+   " que"
+  ]
+ }
+}

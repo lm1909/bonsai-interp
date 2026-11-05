@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-2c9e880d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N7549+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:58:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N7549",
+   "pole": "+",
+   "label": "the bare space token ' ' before digits in a number or year, deep in a passage of ordinary prose",
+   "fire": [
+    "The harbor has been busy for decades, and cargo volumes keep climbing. A new crane arrived in March 2014, and dock workers praised it at a meeting in 2015 and again in 2016.",
+    "Reading habits have shifted in recent times, as the survey makes clear. In the past 24 months, 61% of adults borrowed a book, up from 48% in 2010, according to the report.",
+    "The museum has been expanding its galleries, and visitor numbers are rising. Its east wing opened in June 2009, and the trustees added a cafe in 2011 and a shop in 2012.",
+    "The committee met several times over the winter and reviewed the budget. It approved the top 20 projects in January 2018, and it published the list of 15 winners in 2019.",
+    "The river has flooded often in living memory, and residents remain nervous. Water reached the square in April 1998, and it came back in 2003 and once more in 2007.",
+    "Farmers across the valley have changed their crops, and yields are mixed. Wheat fell in October 2012, then recovered in 2013, though prices slipped again by 2014.",
+    "The team has been rebuilding for years, and its fans are getting restless. It won the cup in May 2006, then finished last in 2008 and second from bottom in 2009.",
+    "The college has grown steadily since the war, and its campus keeps spreading. Enrollment passed 9000 in fall 2001, and it reached 12000 in 2005 and 15000 in 2010."
+   ],
+   "quiet": [
+    "The harbor has been busy for decades, and cargo volumes keep climbing. A new crane arrived last March, and dock workers praised it at a meeting the next year and again the year after.",
+    "Reading habits have shifted in recent times, as the survey makes clear. In the past two years, most adults borrowed a book, up from under half a decade ago, according to the report.",
+    "The museum has been expanding its galleries, and visitor numbers are rising. Its east wing opened one June, and the trustees added a cafe soon after and a shop later on.",
+    "The committee met several times over the winter and reviewed the budget. It approved the top projects in January, and it published the list of winners the following year.",
+    "The river has flooded often in living memory, and residents remain nervous. Water reached the square one April, and it came back a few years later and once more after that.",
+    "Farmers across the valley have changed their crops, and yields are mixed. Wheat fell in October, then recovered the next spring, though prices slipped again by the end of summer.",
+    "The team has been rebuilding for years, and its fans are getting restless. It won the cup one May, then finished last two years later and second from bottom after that.",
+    "The college has grown steadily since the war, and its campus keeps spreading. Enrollment passed nine thousand one fall, and it reached twelve thousand soon after and fifteen thousand later."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "' ' before a number in prose",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: ' ' x15 of the top 32 (before 2011, 30, 12, 2009). The tokenizer splits numbers as ' ' + digits. Probes needed a long passage: 0.373 on ' ' in a three-clause passage with years, while short sentences stayed at 0.04-0.22 and peaked elsewhere; the top-30 passage only reached 0.162. Near misses are long passages with the numbers written as words. The median may fall short.",
+ "trigger": {
+  "tokens": [
+   " "
+  ]
+ }
+}
