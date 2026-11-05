@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1c8682a8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7187+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:21:11+00:00",
+ "recipe": {
+  "toolchain_commit": "d96eaab91",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N7187_pos/2026-11-06-lm1909-1c8682a8.tests.json"
+ },
+ "label": "verb-stem pieces in polite formal phrases: Japanese お過ごし, お役に and Korean 말씀",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N7187_pos/2026-11-06-lm1909-1c8682a8.tests.json",
+   "prereg_commit": "d96eaab91",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.976,
+     "peak": "過ご"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.823,
+     "peak": "過ご"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.496,
+     "peak": "役"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.5,
+     "peak": "役"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.74,
+     "peak": " 말씀"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.656,
+     "peak": " 말씀"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.872,
+     "peak": "過ご"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.672,
+     "peak": " 말씀"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "に出"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.215,
+     "peak": "快"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.21,
+     "peak": "元"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.076,
+     "peak": "安"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.175,
+     "peak": " 그렇게"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.383,
+     "peak": "용"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.114,
+     "peak": "ぞ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.122,
+     "peak": "때"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.706,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96eaab91",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "stems in polite phrases: 過ご, 役, 말씀",
+ "unit_kind": "token piece / semantic",
+ "confidence": 0.45,
+ "notes": "Card: ' 말씀' 5, also 過ご and 役 at the top. Probes: 過ご 0.97, 役 0.90, ' 말씀' 0.71; but plain 過ごした 0.53, plain ' 말' 0.41 and Spanish 'jud' 0.74, so this is not about politeness alone. Near misses drop the stem as well as the polite form, so a hold shows the stems, not the register.",
+ "selection": "random draw"
+}

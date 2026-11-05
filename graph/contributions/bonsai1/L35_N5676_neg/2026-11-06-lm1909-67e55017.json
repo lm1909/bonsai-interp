@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-67e55017",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5676-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:21:47+00:00",
+ "recipe": {
+  "toolchain_commit": "d96eaab91",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N5676_neg/2026-11-06-lm1909-67e55017.tests.json"
+ },
+ "label": "the space-prefixed first token of a Japanese word in a spaced list (レストラン ルームサービス プール)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N5676_neg/2026-11-06-lm1909-67e55017.tests.json",
+   "prereg_commit": "d96eaab91",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.625,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.776,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.523,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.668,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.648,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.618,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.637,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.563,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.055,
+     "peak": "プ"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": "ランド"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "ネ"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": "プ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "売"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.069,
+     "peak": "プ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "ネ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "プ"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.631,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96eaab91",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "space + word in a spaced Japanese list",
+ "unit_kind": "token / format",
+ "confidence": 0.7,
+ "notes": "Card: ' �' 20 of the top 32, often after a space in Japanese or Chinese. Probes: spaced katakana lists 0.72 and 0.53, spaced Chinese 0.20; the same words without spaces 0.04; Chinese unspaced 0.00. The + pole has ' z'.",
+ "selection": "random draw"
+}

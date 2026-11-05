@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3808a0b3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N4416-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:21:55+00:00",
+ "recipe": {
+  "toolchain_commit": "d96eaab91",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N4416_neg/2026-11-06-lm1909-3808a0b3.tests.json"
+ },
+ "label": "a medical finding described as harmless: 'harmless', 'not clinically significant', 'do not cause symptoms'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N4416_neg/2026-11-06-lm1909-3808a0b3.tests.json",
+   "prereg_commit": "d96eaab91",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.625,
+     "peak": " considered"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.366,
+     "peak": " significant"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.916,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.671,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.312,
+     "peak": " significant"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.834,
+     "peak": " cause"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.359,
+     "peak": " usually"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.841,
+     "peak": " relevant"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.454,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.218,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.56,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.153,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.089,
+     "peak": " statistically"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.355,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.359,
+     "peak": " usually"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.276,
+     "peak": " judged"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.867,
+    "median_fire": 0.648,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96eaab91",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "medically harmless",
+ "unit_kind": "semantic",
+ "confidence": 0.75,
+ "notes": "Probes: ' harmless' 0.80, ' not' in 'do not cause' 0.67, ' significant' 0.44; 'statistically significant' 0.14; 'paintings ... valuable' 0.04. 'dangerous' is a near miss to check whether the pole is about risk at all.",
+ "selection": "random draw"
+}

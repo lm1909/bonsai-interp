@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b4ea80a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N1923-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:21:01+00:00",
+ "recipe": {
+  "toolchain_commit": "d96eaab91",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N1923_neg/2026-11-06-lm1909-b4ea80a5.tests.json"
+ },
+ "label": "plant pests and their spread: insects or diseases attacking trees and crops (the + pole has what plants need)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N1923_neg/2026-11-06-lm1909-b4ea80a5.tests.json",
+   "prereg_commit": "d96eaab91",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.788,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.868,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.495,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.099,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.462,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.816,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.578,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.564,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.199,
+     "peak": " most"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.279,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.077,
+     "peak": " green"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.29,
+     "peak": " native"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.045,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.068,
+     "peak": " millions"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.048,
+     "peak": " grow"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.095,
+     "peak": " from"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.683,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96eaab91",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pests attacking plants",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Probes: 0.97 ' on' in 'arrived ... on chestnut trees', 0.82 and 0.79 in pest sentences, 0.41 ' green'; Japanese cars 0.01, tourist flight 0.02. Near misses keep plants and gardens and drop the pest.",
+ "selection": "random draw"
+}

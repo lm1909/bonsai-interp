@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4035efa2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N3529-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:22:12+00:00",
+ "recipe": {
+  "toolchain_commit": "d96eaab91",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N3529_neg/2026-11-06-lm1909-4035efa2.tests.json"
+ },
+ "label": "a Russian noun stem right after a feminine adjective or этой in an oblique case: 'на далекой план|ете', 'об этой установ|ке'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N3529_neg/2026-11-06-lm1909-4035efa2.tests.json",
+   "prereg_commit": "d96eaab91",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.871,
+     "peak": " план"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.507,
+     "peak": " машин"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.399,
+     "peak": " стать"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.132,
+     "peak": " площад"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.486,
+     "peak": " установ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.397,
+     "peak": " этой"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.402,
+     "peak": " фотограф"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.365,
+     "peak": " этой"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": " ост"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.116,
+     "peak": "ё"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.148,
+     "peak": "ё"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.148,
+     "peak": " больш"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.224,
+     "peak": " нов"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.071,
+     "peak": "ост"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.129,
+     "peak": "ним"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "ил"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.401,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96eaab91",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun stem after feminine -ой",
+ "unit_kind": "contextual / grammar",
+ "confidence": 0.7,
+ "notes": "Card: 'ной' 4, ' этой' 2, then noun pieces. Probes: ' план' after 'далекой' 0.75, ' установ' after 'этой' 0.51, 'ог' 0.57; masculine versions 0.00-0.10. Near misses switch the noun to masculine or neuter, which changes the adjective as well.",
+ "selection": "random draw"
+}
