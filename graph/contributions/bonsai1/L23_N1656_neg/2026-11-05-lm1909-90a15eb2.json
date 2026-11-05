@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-90a15eb2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N1656-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:32:56+00:00",
+ "recipe": {
+  "toolchain_commit": "3c3a2f3f6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N1656_neg/2026-11-05-lm1909-90a15eb2.tests.json"
+ },
+ "label": "the name piece ' Ren' (René, Renne, Renouf, Rennie)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N1656_neg/2026-11-05-lm1909-90a15eb2.tests.json",
+   "prereg_commit": "3c3a2f3f6",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.817,
+     "peak": " Ren"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.785,
+     "peak": " Ren"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.219,
+     "peak": "ennie"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.094,
+     "peak": " Ren"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.75,
+     "peak": " Ren"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.956,
+     "peak": " Ren"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.831,
+     "peak": " Ren"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.236,
+     "peak": " Renault"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " biologist"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.179,
+     "peak": " Anne"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "an"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.28,
+     "peak": " Renaissance"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.113,
+     "peak": " renew"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " More"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.801,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c3a2f3f6",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "name piece ' Ren'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "'Louis Renault' tests the surname reading: the brand ' Renault' tokenizes as one token and scored 0.21 in the probes, so it may stay quiet.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Ren"
+  ]
+ }
+}

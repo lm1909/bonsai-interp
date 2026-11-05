@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-c682ac7b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N6481+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:32:52+00:00",
+ "recipe": {
+  "toolchain_commit": "3c3a2f3f6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N6481_pos/2026-11-05-lm1909-c682ac7b.tests.json"
+ },
+ "label": "the word ' Clinical' repeated in a list under a 'Clinical Topics' heading",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N6481_pos/2026-11-05-lm1909-c682ac7b.tests.json",
+   "prereg_commit": "3c3a2f3f6",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.631,
+     "peak": " Clinical"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.945,
+     "peak": " Clinical"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.684,
+     "peak": " Clinical"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.537,
+     "peak": " Clinical"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.869,
+     "peak": " Clinical"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.778,
+     "peak": " Clinical"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.772,
+     "peak": " Clinical"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.966,
+     "peak": " Clinical"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " Care"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.139,
+     "peak": " Medicine"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": "ology"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " Topics"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.042,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.07,
+     "peak": "esthesia"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " Pain"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.17,
+     "peak": "ension"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.775,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c3a2f3f6",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "repeat of Clinical in a topic list",
+ "unit_kind": "lexical / repeat",
+ "confidence": "medium",
+ "notes": "A very narrow sub-trigger on a broad pole (1.2% of tokens reach 0.1 of max, and most of its activity is gate-closed). Medical and Sports in the same frame scored about 0.1 in the probes.",
+ "selection": "random draw"
+}

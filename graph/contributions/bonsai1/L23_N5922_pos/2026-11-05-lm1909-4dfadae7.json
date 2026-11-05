@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-4dfadae7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N5922+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:28+00:00",
+ "recipe": {
+  "toolchain_commit": "3c3a2f3f6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N5922_pos/2026-11-05-lm1909-4dfadae7.tests.json"
+ },
+ "label": "future-tense 'will' and the slot right after it (also French -ra, Russian будет), predicting what is going to happen",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N5922_pos/2026-11-05-lm1909-4dfadae7.tests.json",
+   "prereg_commit": "3c3a2f3f6",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.575,
+     "peak": " will"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.215,
+     "peak": " affect"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.522,
+     "peak": " will"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.33,
+     "peak": " convert"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.391,
+     "peak": " remembered"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.42,
+     "peak": " будет"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.243,
+     "peak": "ra"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.11,
+     "peak": " meet"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.001,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.001,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.001,
+     "peak": " metric"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " remembered"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.051,
+     "peak": " bien"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.361,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c3a2f3f6",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "future 'will'",
+ "unit_kind": "grammatical / semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}

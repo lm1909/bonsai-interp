@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-080ca6d7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N1398+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:33:24+00:00",
+ "recipe": {
+  "toolchain_commit": "3c3a2f3f6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N1398_pos/2026-11-05-lm1909-080ca6d7.tests.json"
+ },
+ "label": "the first finite verb when the text opens mid-sentence, within the first few tokens",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N1398_pos/2026-11-05-lm1909-080ca6d7.tests.json",
+   "prereg_commit": "3c3a2f3f6",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.363,
+     "peak": " became"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.417,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.168,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.153,
+     "peak": " often"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.248,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.543,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.225,
+     "peak": " acquired"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.303,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.265,
+     "peak": " serves"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.094,
+     "peak": " acquired"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.275,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3c3a2f3f6",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first verb in a text that opens mid-sentence",
+ "unit_kind": "positional",
+ "confidence": "medium",
+ "notes": "Fragments open the text as the corpus windows do; near misses are the same clause with its opening restored. A tiny change in the prefix is the whole difference, so a hold says this is about window position (the card flags 81% of top peaks within the first 16 tokens).",
+ "selection": "random draw"
+}
