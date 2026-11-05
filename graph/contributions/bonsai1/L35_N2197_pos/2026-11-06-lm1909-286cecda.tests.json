@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-286cecda",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N2197+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:13:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N2197",
+   "pole": "+",
+   "label": "the partial-byte token opening a Korean word with a rarer first syllable (앵커, 암살, 애착, 야당, 약속)",
+   "fire": [
+    "방송국 앵커가 소식을 전했다.",
+    "왕의 암살 계획이 드러났다.",
+    "그는 고향에 대한 애착이 크다.",
+    "우리는 야당 대표를 만났다.",
+    "국민과 한 약속은 지켜야 한다.",
+    "새로운 애인이 생겼다.",
+    "검은 암컷 표범이 나타났다.",
+    "농장에서 앵두가 익었다."
+   ],
+   "quiet": [
+    "우리는 집에 있다.",
+    "우리는 사람이다.",
+    "함께 공원에 있다.",
+    "우리는 대한 사람이다.",
+    "함께 집에 있다.",
+    "오늘 밥을 먹었다.",
+    "친구와 공원에 있다.",
+    "우리는 함께 간다."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "partial-byte token of rarer Korean syllables",
+ "unit_kind": "token piece / language",
+ "confidence": "medium",
+ "notes": "Common Korean also splits into a partial-byte token, but with low activation in the probes (' 공', ' 간' about 0.05, ' 먹' 0.02); ' 약국' gave 0.12 while ' 약속' gave 0.50, so the rule is not simply 'rare syllable'. The pole also fires on Japanese ' サーテ' and French ' ré'."
+}
