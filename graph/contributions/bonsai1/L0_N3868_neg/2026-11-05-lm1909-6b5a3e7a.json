@@ -1,0 +1,168 @@
+{
+ "id": "2026-11-05-lm1909-6b5a3e7a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3868-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:34:40+00:00",
+ "recipe": {
+  "toolchain_commit": "76e1ca460",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N3868_neg/2026-11-05-lm1909-6b5a3e7a.tests.json"
+ },
+ "label": "Reduplicated CJK adverb and adjective tokens (慢慢, 轻轻, 深深, 小小, 短短, 白白) and the repeat mark 々",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N3868_neg/2026-11-05-lm1909-6b5a3e7a.tests.json",
+   "prereg_commit": "76e1ca460",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.309,
+     "peak": "慢慢地"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.159,
+     "peak": "轻轻地"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.387,
+     "peak": "深深地"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.343,
+     "peak": "小小的"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.481,
+     "peak": "短短"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.521,
+     "peak": "白白"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.567,
+     "peak": "々"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.635,
+     "peak": "々"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": "老人"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": "抚摸"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.08,
+     "peak": "这片"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "小"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.053,
+     "peak": "他就"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.08,
+     "peak": "久しぶり"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.434,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "76e1ca460",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "CJK reduplication tokens",
+ "unit_kind": "token",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "々",
+   "深深",
+   "小小",
+   "短短",
+   "白白",
+   "重重",
+   "慢慢",
+   "轻轻",
+   "慢慢地",
+   "轻轻地",
+   "深深地",
+   "小小的"
+  ]
+ }
+}
