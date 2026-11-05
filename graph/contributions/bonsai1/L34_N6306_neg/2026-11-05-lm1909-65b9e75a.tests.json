@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-65b9e75a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6306-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N6306",
+   "pole": "-",
+   "label": "naming a past culture or people as the origin of art, writing or artefacts ('Arabic designs', 'early Greek works', 'Roman literature', 'Middle Saxon finds')",
+   "fire": [
+    "The carvings around the doorway reveal Byzantine craftsmanship.",
+    "The museum holds a rich hoard of early Celtic metalwork.",
+    "Next term we turn to the study of Etruscan tomb painting.",
+    "The saga survives as a fine example of Old Norse poetry.",
+    "These fragments preserve the oldest copy of a Hebrew prayer book.",
+    "The palace walls were covered with Assyrian reliefs of lions.",
+    "The monastery library still keeps its Coptic manuscripts.",
+    "Archaeologists uncovered a painted vase of Mayan origin in the cave."
+   ],
+   "quiet": [
+    "The carvings around the doorway reveal careful craftsmanship.",
+    "The museum holds a rich hoard of early metalwork.",
+    "Next term we turn to the study of oil painting.",
+    "The store is a good example of a Swedish furniture chain.",
+    "These fragments preserve the oldest copy of a prayer book.",
+    "The factory walls were painted by a German paint company.",
+    "The monastery library still keeps its handwritten manuscripts.",
+    "Tourists bought a painted vase from a Mexican airline shop in the terminal."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "culture as origin of art or writing",
+ "unit_kind": "semantic",
+ "confidence": 0.7,
+ "notes": "Card: ' Greek', ' Roman', ' Arabic', 'axon', ' Irish', ' Persian', ' Arab'. Probe: ' Arabic' 0.868, 'axon' 0.872, ' Roman' 0.753, ' Greek' 0.620; a Japanese car maker and a Canadian bank 0.045; 'strong influence' 0.065. But ' early' 0.266 and ' modern' 0.311 in the same art frames, so near misses in art frames carry the risk. New cultures in the test: Byzantine, Celtic, Etruscan, Norse, Hebrew, Assyrian, Coptic, Mayan."
+}

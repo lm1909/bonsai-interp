@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-0631c0c5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10187-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N10187",
+   "pole": "-",
+   "label": "the piece 'west' or 'western' after 'north' ('north|west', 'North|west', 'north|western')",
+   "fire": [
+    "The lighthouse stands nine miles north-northwest of the harbor.",
+    "The hikers walked north-northwest along the ridge until dark.",
+    "The tribe settled in the northwestern valleys of the island.",
+    "Rain is expected over the northwestern counties of the state.",
+    "Famine struck the northwestern provinces of the empire in 1812.",
+    "The wreck lies a mile north-northwest of the reef.",
+    "She drove across the northwestern plains of the country.",
+    "A storm moved north-northwest from the coast overnight."
+   ],
+   "quiet": [
+    "The lighthouse stands nine miles west of the harbor.",
+    "The hikers walked west along the ridge until dark.",
+    "The tribe settled in the northeastern valleys of the island.",
+    "Rain is expected over the northeastern counties of the state.",
+    "Famine struck the western provinces of the empire in 1812.",
+    "The wreck lies a mile north of the reef.",
+    "She drove across the western plains of the country.",
+    "A storm moved east from the coast overnight."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'west' after 'north'",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: 'west' x9, 'western' x8, ' Southwest' x3. Probe: 'north-northwest' 1.035, 'northwestern' 0.793, 'North|west Airlines' 0.739; ' Northeast' 0.229, 'northeastern' 0.083, plain ' west' 0.034, ' western' 0.066. 'theast' in 'north-northeast' read 0.303, so that form is not a near miss here.",
+ "trigger": {
+  "tokens": [
+   "west",
+   "western"
+  ]
+ }
+}

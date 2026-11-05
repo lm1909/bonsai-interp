@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-237b8ddc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N629+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N629",
+   "pole": "+",
+   "label": "the first piece of a non-English word for 'complex' (Arabic التعقيد, Korean 복잡, Japanese 複雑, German kompl-)",
+   "fire": [
+    "هذه القضية بالغة التعقيد في نظر القضاة.",
+    "يمثل هذا المرض حالة شديدة التعقيد لدى الأطباء.",
+    "إن بناء الجسر عملية غاية في التعقيد والصعوبة.",
+    "이 기계의 내부는 무척 복잡한 구조로 되어 있다.",
+    "도시의 교통 체계는 점점 더 복잡해지고 있다.",
+    "두 나라의 관계는 생각보다 훨씬 복잡한 편이다.",
+    "脳の働きはとても複雑なものです。",
+    "Die Steuerregeln in diesem Land sind leider sehr kompliziert."
+   ],
+   "quiet": [
+    "هذه القضية بالغة الأهمية في نظر القضاة.",
+    "يمثل هذا المرض حالة شديدة الخطورة لدى الأطباء.",
+    "إن بناء المدرسة يخدم التعليم في القرية والبلدة.",
+    "이 기계의 내부는 무척 깨끗한 상태로 되어 있다.",
+    "도시의 사회 복지 체계는 점점 더 좋아지고 있다.",
+    "두 나라의 관계는 생각보다 훨씬 좋은 편이다.",
+    "脳の働きはとても大切なものです。",
+    "Die Steuerregeln in diesem Land sind leider sehr streng."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'complex' in other languages",
+ "unit_kind": "semantic / token",
+ "confidence": 0.65,
+ "notes": "Card: ' التع', ' المع', ' 복', '複|雑', ' сл', 'pl', ' kom'. Output layer, so it fires where 'complex' is the next piece. Probe: ' التع' 0.531; Korean ' 복' 0.211-0.299; Japanese 0.127-0.139; German 'pl' 0.168; Russian ' сл' 0.044 or lower; 'simple' in the same frames 0.001-0.011; English 'complicated' and Spanish 'complicado' at most 0.015. Near misses include the same first pieces in other words: Arabic التعليم ('education') and Korean 복지 ('welfare')."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e9b74140",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N12188+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N12188",
+   "pole": "+",
+   "label": "the token that closes a block of code or markup (' end', '</ul>', ' }', ')')",
+   "fire": [
+    "class Account\n  def balance(owner)\n    @owner = owner\n  end\nend",
+    "module Parser\n  def read(line)\n    @line = line\n  end\nend",
+    ".menu { padding-left: 2px; background: white; }\n.item { color: blue; }",
+    "#footer { font-size: 12px; text-align: center; }\n#header { height: 40px; }",
+    "<ol><li>Rinse the wound</li><li>Apply a bandage</li></ol>\nCall a doctor if it bleeds.",
+    "<ul><li>Bring a coat</li><li>Pack some food</li></ul>\nThe hike starts at noon.",
+    "<div><p>Our shop opens at nine</p></div>\nParking is free on weekends.",
+    "class Stack\n  def push(item)\n    @items = item\n  end\nend"
+   ],
+   "quiet": [
+    "class Account\n  def balance(owner)\n    @owner = owner",
+    "module Parser\n  def read(line)\n    @line = line",
+    ".menu padding-left: 2px; background: white;\n.item color: blue;",
+    "The footer uses a small font and centered text, and the header is forty pixels high.",
+    "Rinse the wound, apply a bandage, and call a doctor if it bleeds.",
+    "Bring a coat and pack some food, because the hike starts at noon.",
+    "Our shop opens at nine and parking is free on weekends.",
+    "class Stack\n  def push(item)\n    @items = item"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "closing a code or markup block",
+ "unit_kind": "syntactic",
+ "confidence": 0.65,
+ "notes": "Card: 'ul' of '</ul>', ' end', 'p' of '</p>', '}', ' }\\', '.show'. Probe: ' end' in Ruby 0.868; ' }' in CSS 0.571; '</ul>' 0.445; 'utf-8' 0.467 (not a closer, not covered); plain prose 0.021-0.029. Near misses are the same code cut before the closer, or prose on the same subject."
+}

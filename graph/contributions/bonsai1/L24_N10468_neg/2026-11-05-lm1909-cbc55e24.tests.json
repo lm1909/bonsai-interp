@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-cbc55e24",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10468-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N10468",
+   "pole": "-",
+   "label": "a Chinese clause opening where a time expression comes next (…，而[到年底], 直至[22日], 只是[最近], 数据显示，[目前])",
+   "fire": [
+    "今年一月时，工厂共有五百名工人，而到七月已减少到三百名。",
+    "报告显示，目前全国的失业率仍在上升。",
+    "他始终没有回家，直至10日才给母亲打来电话。",
+    "这座桥曾是全省最长的桥，只是最近几年很少有人使用。",
+    "专家预计，到2040年城市人口将超过一亿。",
+    "去年春天时，学校约有两千名学生，而到秋天已增加到三千名。",
+    "调查显示，目前农村的网络用户持续增加。",
+    "她一直留在北京，直至5月才回到家乡。"
+   ],
+   "quiet": [
+    "工厂共有五百名工人，而工程师只有三十名左右。",
+    "报告显示，全国的失业率仍在上升。",
+    "他始终没有回家，也没有给母亲打来电话。",
+    "这座桥曾是全省最长的桥，只是桥面比较窄。",
+    "专家预计，城市人口将超过一亿。",
+    "学校约有两千名学生，而教师大约有一百名。",
+    "调查显示，农村的网络用户持续增加。",
+    "她一直留在北京，没有回到家乡。"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Chinese: a time expression comes next",
+ "unit_kind": "contextual / predictive",
+ "confidence": 0.4,
+ "notes": "Card: '，', '而', '只是', '直至', ' of', ' in'. In the top examples the next words are mostly times ('到去年年底', '最近一百多年', '目前', '到2030年', '22日'). Probe: '而' before '到年底' 0.458; '，' before '目前' 0.362; '直至' 0.320; '只是' before '最近' 0.257; but '。' at a sentence end 0.241, and '而' before '去年' only 0.002. English and German function words at most 0.207. Near misses keep the clause and put a non-time word next."
+}

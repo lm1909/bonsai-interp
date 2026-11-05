@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-4337401c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N210-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N210",
+   "pole": "-",
+   "label": "who or what a treatment or care product suits ('vaccinations for girls and boys', 'works on all skin types', 'socks for extra cushioning', 'treat many conditions')",
+   "fire": [
+    "Doctors advise flu shots for pregnant women and the elderly.",
+    "This shampoo works on all hair types and adds shine.",
+    "Some hikers prefer wider boots for better ankle support.",
+    "Antibiotics treat many infections, including pneumonia.",
+    "The clinic suggests a low-salt diet for people with kidney disease.",
+    "This lotion works on dry patches and sensitive areas.",
+    "Many cyclists choose padded shorts for long rides.",
+    "These drops treat most eye infections, including conjunctivitis."
+   ],
+   "quiet": [
+    "Doctors gave a talk at the town hall with the elderly.",
+    "This shampoo smells of lemon and has a green cap.",
+    "Some hikers wore wide boots on the mountain road.",
+    "Antibiotics were discovered in a London hospital in 1928.",
+    "The clinic opened a new wing with a large waiting room.",
+    "This lotion was sold out at the shop on Friday.",
+    "Many cyclists rode in padded shorts through the town.",
+    "These drops come in a small bottle with a white label."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "what a treatment or product suits",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Card: ' for' x15, ' on', ' treat', ' controlling'; promotes ' handle', ' deal', ' situations'. Probe: ' on' in 'works on all skin types' 0.684; ' for' after 'vaccinations' 0.572; ' for' after 'thicker socks' 0.548; ' treat' 0.401; 'parking rules for visitors' 0.122; 'thick socks along the river' 0.017. Near misses keep the health or product subject and drop the suitability."
+}

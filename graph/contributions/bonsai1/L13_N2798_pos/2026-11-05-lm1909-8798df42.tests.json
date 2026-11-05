@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-8798df42",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N2798+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N2798",
+   "pole": "+",
+   "label": "pieces of famous historical, biblical or composer names ('Tscha|ik|owsky', ' Cain', 'Arch|im|edes', 'Push|kin')",
+   "fire": [
+    "We heard a concert of Tchaikovsky at the town hall.",
+    "The sermon explained why Cain killed his brother in the field.",
+    "The history teacher told us how Archimedes shouted in the bath.",
+    "My grandfather kept an old recording of Tchaikovsky in the attic.",
+    "The Bible tells how Abel and Cain brought their offerings.",
+    "The professor's lecture on Lutoslawski filled the room.",
+    "They translated a long poem by Pushkin into English.",
+    "The composer Stravinsky admired the ballets of Tchaikovsky."
+   ],
+   "quiet": [
+    "We heard a concert of the school band at the town hall.",
+    "The sermon explained why Tom left his brother in the field.",
+    "The history teacher told us how Brian shouted in the hall.",
+    "My grandfather kept an old recording of the news in the attic.",
+    "The farmer tells how Mike and Steve brought their tractors.",
+    "The professor's lecture on rainfall filled the room.",
+    "They translated a long letter by a bumpkin into English.",
+    "The neighbor Jones admired the roses of Mrs. Clark."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "pieces of famous old names",
+ "unit_kind": "token piece",
+ "confidence": 0.4,
+ "notes": "Card: 'ik', 'kin', ' Cain', 'Joseph', 'im', ' يوسف', 'el', 'ski'. Probe: 'ik' of Tchaikovsky 0.600; ' Cain' 0.423; 'im' 0.221; 'kin' of Pushkin 0.125, and 'kin' of pumpkin 0.023; Joseph at sentence start 0.030; Dave 0.067. Mostly a list of names; I found no better pattern."
+}

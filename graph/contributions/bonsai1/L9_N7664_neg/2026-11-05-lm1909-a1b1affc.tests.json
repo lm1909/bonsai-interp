@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-a1b1affc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N7664-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N7664",
+   "pole": "-",
+   "label": "carbon credits and offsets as a traded instrument",
+   "fire": [
+    "Airlines may purchase carbon offsets to cover the emissions of each flight.",
+    "The forest project earns credits that are traded on the voluntary market.",
+    "Polluters that exceed their cap can buy carbon credits from cleaner firms.",
+    "The company offsets its remaining emissions by funding verified tree planting schemes.",
+    "Each carbon credit represents one tonne of avoided greenhouse gas.",
+    "Brokers sell offset credits from wind farms to European buyers.",
+    "The registry certifies the emission reductions and issues tradable carbon credits.",
+    "Critics doubt that buying forest offsets really cancels a firm's emissions."
+   ],
+   "quiet": [
+    "Airlines may fit lighter seats to lower the emissions of each flight.",
+    "The forest project protects birds that nest on the steep slopes.",
+    "Polluters that exceed their cap can be fined by the regulators.",
+    "The company cut its remaining emissions by replacing its old boilers.",
+    "Each kilogram of coal releases a large amount of greenhouse gas.",
+    "Engineers install turbines from wind farms for European utilities.",
+    "The agency measures the emission levels and publishes yearly climate reports.",
+    "Critics doubt that replacing old boilers really lowers a firm's emissions."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "carbon credits and offsets",
+ "unit_kind": "topic",
+ "confidence": 0.85,
+ "notes": "Card: ' credits' x4, ' projects' x3, ' carbon', ' offset', 'CS' of VCS, 'D' of REDD. Probe: ' market' after 'voluntary carbon' 0.874; ' credits' after 'carbon' 0.720; 'offset the remainder' 0.278; filters that cut emissions 0.038; a power market 0.092; course credits and film credits 0.002-0.014. Near misses keep emissions and climate and drop the trading instrument."
+}

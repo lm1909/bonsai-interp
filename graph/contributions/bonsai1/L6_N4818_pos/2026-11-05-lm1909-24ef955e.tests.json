@@ -1,0 +1,59 @@
+{
+ "contribution": "2026-11-05-lm1909-24ef955e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N4818+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N4818",
+   "pole": "+",
+   "label": "a mid-word piece of a rare name beginning with S ('Saty|a|jit', 'Sar|oy|an', 'Syc|am|ore', 'Sor|bon|ne', 'Sah|it|ya')",
+   "fire": [
+    "The school staged a one-act play by Saroyan last spring.",
+    "Critics still admire the early films of Satyajit Ray.",
+    "In the old story, the fisherman's daughter Satyavati crossed the river.",
+    "Farmers planted a row of sycamore along the lane.",
+    "She earned a doctorate at the Sorbonne before the war.",
+    "His poems won praise from the Sahitya Akademi in Delhi.",
+    "The students read about the Satyagraha campaign in class.",
+    "A young sycamore shaded the back of the church."
+   ],
+   "quiet": [
+    "The school staged a one-act play by Chekhov last spring.",
+    "Critics still admire the early films of Akira Kurosawa.",
+    "In the old story, the fisherman's daughter Gretel crossed the river.",
+    "Farmers planted a row of poplar along the lane.",
+    "She earned a doctorate at the Yale School before the war.",
+    "His poems won praise from the Royal Society in London.",
+    "The students read about the Solidarity campaign in class.",
+    "A young maple shaded the back of the church."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "mid pieces of rare S- names",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "Card: 'am', 'ya', 'an', 'av', 'aj', 'bon', and ' California' and ' Pacific' peaks. Probe: 'av' of Satyavati 0.984; 'an' of Saroyan 0.922 and 0.544; 'aj' 0.775; 'y' of Satyagraha 0.821; 'am' of Sycamore and sycamore 0.639-0.729; 'bon' 0.676; 'a' of Sahitya 0.737; Bagdasarian 0.014; Scorsese 0.011. ' California' and ' Pacific' read about 0.00 in my sentences, so those card peaks are not covered. I did not find what these names share beyond the S.",
+ "trigger": {
+  "words": [
+   "Saroyan",
+   "Satyajit",
+   "Satyavati",
+   "Sycamore",
+   "Sorbonne",
+   "Sahitya",
+   "Satyagraha"
+  ]
+ }
+}

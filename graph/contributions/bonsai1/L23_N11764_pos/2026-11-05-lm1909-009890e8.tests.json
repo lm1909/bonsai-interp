@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-009890e8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11764+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N11764",
+   "pole": "+",
+   "label": "':\\n' ending an 'else' line in Python, inside a method",
+   "fire": [
+    "class Order:\n    def status(self):\n        if self.paid:\n            status = self.state\n        else:\n            status = 'Open'\n        return status\n",
+    "def size(a):\n    if not a:\n        n = 0\n    else:\n        n = 5\n    return n\n",
+    "class Page:\n    def title(self):\n        if self.heading:\n            title = self.heading.text\n        else:\n            title = 'Untitled'\n        return title\n",
+    "def color(k):\n    if k > 3:\n        c = 'red'\n    else:\n        c = 'blue'\n    return c\n",
+    "class Item:\n    def price(self):\n        if self.sale:\n            price = self.sale.amount\n        else:\n            price = self.amount\n        return price\n",
+    "def sign(v):\n    if v < 0:\n        s = -1\n    else:\n        s = 1\n    return s\n",
+    "class User:\n    def name(self):\n        if self.nick:\n            name = self.nick.value\n        else:\n            name = 'Guest'\n        return name\n",
+    "def rate(t):\n    if not t:\n        r = 9\n    else:\n        r = 4\n    return r\n"
+   ],
+   "quiet": [
+    "class Order:\n    def status(self):\n        status = self.state\n        return status\n",
+    "def size(a):\n    n = 5\n    return n\n",
+    "class Page:\n    def title(self):\n        title = self.heading.text\n        return title\n",
+    "def color(k):\n    c = 'red'\n    return c\n",
+    "class Item:\n    def price(self):\n        price = self.amount\n        return price\n",
+    "def sign(v):\n    s = -1\n    return s\n",
+    "class User:\n    def name(self):\n        name = self.nick.value\n        return name\n",
+    "def rate(t):\n    r = 9\n    return r\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'else:\\n' in Python",
+ "unit_kind": "syntactic",
+ "confidence": 0.45,
+ "notes": "Card: ':\\n' x17 (after 'else' and 'if not ...' lines), ')\\n' x3. Probe: code with 'else:\\n' 0.295-0.322; 'for ... in items:\\n' 0.025; 'if not period:\\n' with no else 0.150; plain assignments 0.102; prose and HTML about 0.02. Near misses are the same methods with no else branch."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-e5c8594e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N6634-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:58:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N6634",
+   "pole": "-",
+   "label": "function words in text about electrical power equipment (transformers, flux, voltage, switching)",
+   "fire": [
+    "The leakage reactance of the second transformer must be matched to the first.",
+    "A rise in core flux may be smaller than the drop in the flux of the outer limb.",
+    "When the line voltage is high, the arc formed during breaker opening is hard to quench.",
+    "Two transformers may share the same high-voltage bus bars on the primary winding.",
+    "The rated current of the conductors is based on the temperature of the switchgear.",
+    "During switching, the surge in the winding can damage the insulation of the coil.",
+    "The magnetizing current in the core rises with the voltage on the primary side.",
+    "The circuit breaker interrupts the fault current during a short circuit on the feeder."
+   ],
+   "quiet": [
+    "The patience of the second teacher must be matched to the first.",
+    "A rise in bread prices may be smaller than the drop in the price of the flour.",
+    "When the tide is high, the path formed during the summer is hard to find.",
+    "Two brothers may share the same old farm houses on the northern hillside.",
+    "The price of the tickets is based on the length of the journey.",
+    "During dinner, the noise in the hall can spoil the mood of the guests.",
+    "The number of swans on the lake rises with the water on the southern side.",
+    "The shepherd moves the small flock during a cold spell on the moor."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "electrical power engineering prose",
+ "unit_kind": "topic",
+ "confidence": 0.5,
+ "notes": "Card: ' the', ' of', ' during', ' limited', '°C', ' in' in texts on transformers, flux density and plant rooms. Probe: 'arcing formed during' 0.336; 'flux density ... in the' 0.300; 'per unit impedance' 0.206; '3-phase electricity supply' 0.206; the same frames about rent, fishing and teachers 0.001-0.016. But 'heated during the baking step' reached 0.165 and 'sealed in appropriate packaging' 0.218, so this may be technical process text more than electricity."
+}
