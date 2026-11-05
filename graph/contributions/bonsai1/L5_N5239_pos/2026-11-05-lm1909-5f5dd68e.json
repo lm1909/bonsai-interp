@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-5f5dd68e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N5239+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:39:58+00:00",
+ "recipe": {
+  "toolchain_commit": "07ede78f8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N5239_pos/2026-11-05-lm1909-5f5dd68e.tests.json"
+ },
+ "label": "Short abbreviated names of command-line options and tools inside code or docs (--fast, --dry-run, 'lfn', bcdedit); ordinary words in the same frames stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N5239_pos/2026-11-05-lm1909-5f5dd68e.tests.json",
+   "prereg_commit": "07ede78f8",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.111,
+     "peak": "quiet"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.268,
+     "peak": "dry"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.22,
+     "peak": "-cache"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.206,
+     "peak": "b"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.213,
+     "peak": "chk"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.449,
+     "peak": "strict"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.219,
+     "peak": "fq"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.307,
+     "peak": "-re"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " don"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " Monday"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " trip"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " near"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.22,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "07ede78f8",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "CLI option and tool names",
+ "unit_kind": "code / contextual",
+ "confidence": 0.7,
+ "notes": "Probes: --fast 0.65, --auto-correct 0.75, bcd 0.68, lfn 0.57, --sos 0.39; plain versions under 0.01. Item tokenization checked: '--'+'fast', '--'+'dry'+'-run', \"'l\"+'fn', \"'b\"+'cp'.",
+ "selection": "random draw"
+}

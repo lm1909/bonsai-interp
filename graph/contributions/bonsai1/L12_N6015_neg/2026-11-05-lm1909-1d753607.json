@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-1d753607",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N6015-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:40:14+00:00",
+ "recipe": {
+  "toolchain_commit": "07ede78f8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N6015_neg/2026-11-05-lm1909-1d753607.tests.json"
+ },
+ "label": "The relative word after 'X and the Y' when Y is explained by what it does in relation to X ('businesses and the entrepreneurs who start them'); bare 'Y who' and conjunctions with no relative stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N6015_neg/2026-11-05-lm1909-1d753607.tests.json",
+   "prereg_commit": "07ede78f8",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.473,
+     "peak": " who"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.272,
+     "peak": " carry"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.316,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.507,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.2,
+     "peak": " who"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.319,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.372,
+     "peak": " who"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.647,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " Spain"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " cold"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.109,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " who"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " who"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " beaches"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.346,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "07ede78f8",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'X and the Y that' relative",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.8,
+ "notes": "Probes: who 0.73, that 0.57-0.71, they 0.53, ' associated' 0.50; no conjunction 'entrepreneurs who' 0.04, plain conjunctions under 0.01.",
+ "selection": "random draw"
+}

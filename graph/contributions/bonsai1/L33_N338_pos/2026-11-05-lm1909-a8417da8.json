@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-05-lm1909-a8417da8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N338+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:40:28+00:00",
+ "recipe": {
+  "toolchain_commit": "07ede78f8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N338_pos/2026-11-05-lm1909-a8417da8.tests.json"
+ },
+ "label": "Token pieces of words split unusually: 'th' in code and geology words (.th|roats, _th|roats, Over|th|rust, .th|resh), 'sth' in Passthru, and ' Geh' in Gehry. Where 'through', 'thrust' and 'throat' are whole tokens, it stays quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N338_pos/2026-11-05-lm1909-a8417da8.tests.json",
+   "prereg_commit": "07ede78f8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.83,
+     "peak": "sth"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.387,
+     "peak": "_th"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.331,
+     "peak": ".th"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.294,
+     "peak": "th"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.531,
+     "peak": "resh"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.664,
+     "peak": " Geh"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.364,
+     "peak": "th"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.958,
+     "peak": "sth"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " settings"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "_do"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " net"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " coastal"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": ".limit"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " range"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "Set"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.459,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "07ede78f8",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pieces: .th|roats, sth|ru, Geh|ry",
+ "unit_kind": "token piece",
+ "confidence": 0.7,
+ "notes": "Probes: Passthru 0.63, .throats 0.50, Overthrusting 0.32, .thresh 0.63, Gehry 0.61-0.77; 'Passthrough' (one 'sthrough' piece) under 0.01, whole-word thrust and through under 0.01-0.03. The output promotes 're' and 'rey'.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".th",
+   "_th",
+   "th",
+   "sth",
+   " Geh"
+  ]
+ }
+}

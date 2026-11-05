@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-11b7a8f7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N585+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:40:22+00:00",
+ "recipe": {
+  "toolchain_commit": "07ede78f8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N585_pos/2026-11-05-lm1909-11b7a8f7.tests.json"
+ },
+ "label": "The demonstratives ' this' and ' here' in running text; the same sentences with 'the', 'it' or 'there' stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N585_pos/2026-11-05-lm1909-11b7a8f7.tests.json",
+   "prereg_commit": "07ede78f8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.576,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.449,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.376,
+     "peak": " here"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.605,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.097,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.427,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.488,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.36,
+     "peak": " here"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " essay"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.069,
+     "peak": " chapter"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.041,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": " noted"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.438,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "07ede78f8",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the words this, here",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "Probes: 'in this article' 0.65, 'that this is' 0.48, ' here' 0.56, 'this place' 0.25, 'prevented this' 0.16; same sentences with the or it 0.00-0.06.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " this",
+   " This",
+   " here"
+  ]
+ }
+}
