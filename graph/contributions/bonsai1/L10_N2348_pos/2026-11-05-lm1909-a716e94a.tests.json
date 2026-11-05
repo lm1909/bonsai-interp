@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-05-lm1909-a716e94a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2348+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:10:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N2348",
+   "pole": "+",
+   "label": "Marking something as optional: the word optional in docs or prose, Optional[...] types and argparse nargs='?'; 'required' stays quiet",
+   "fire": [
+    "ap = argparse.ArgumentParser()\nap.add_argument('config', nargs='?', default='a.ini')\n",
+    "def f(a, b=None):\n    \"\"\"\n    b : int, optional\n        The size.\n    \"\"\"\n",
+    "    @property\n    def owner_id(self):\n        \"\"\"Optional[str]: The owner.\"\"\"\n",
+    "Attendance at the evening session is optional for all staff.",
+    "Leather seats are an optional upgrade on the basic model.",
+    "color : str or None, optional (default='red')\n    Line colour.\n",
+    "All fields marked with a star are required; the rest are optional.",
+    "Sunroof, optional, at extra cost, for the sports trim."
+   ],
+   "quiet": [
+    "ap = argparse.ArgumentParser()\nap.add_argument('config', type=str, default='a.ini')\n",
+    "def f(a, b=None):\n    \"\"\"\n    b : int\n        The size.\n    \"\"\"\n",
+    "    @property\n    def owner_id(self):\n        \"\"\"str: The owner.\"\"\"\n",
+    "Attendance at the evening session is mandatory for all staff.",
+    "Leather seats are a standard feature on the basic model.",
+    "color : str (default='red')\n    Line colour.\n",
+    "All fields marked with a star are required; the rest are hidden.",
+    "Sunroof, included, at no cost, for the sports trim."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "marked as optional",
+ "unit_kind": "semantic / code",
+ "confidence": 0.8,
+ "trigger": {
+  "words": [
+   "optional"
+  ]
+ }
+}
