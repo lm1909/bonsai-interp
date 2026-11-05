@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-3c082bdb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N10838+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:41:35+00:00",
+ "recipe": {
+  "toolchain_commit": "4564cc5eb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N10838_pos/2026-11-06-lm1909-3c082bdb.tests.json"
+ },
+ "label": "' a' or ' an' after a verb of filing something formal with an organization (submit a claim, lodge an inquiry, file a complaint), plus ' filed' itself; the same articles after everyday verbs stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N10838_pos/2026-11-06-lm1909-3c082bdb.tests.json",
+   "prereg_commit": "4564cc5eb",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.15,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.536,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.827,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.325,
+     "peak": " filed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.534,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.897,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.648,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.634,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " please"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " catch"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " company"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " an"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.641,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4564cc5eb",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "submit a claim / file a complaint",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " a",
+   " an",
+   " filed"
+  ]
+ }
+}

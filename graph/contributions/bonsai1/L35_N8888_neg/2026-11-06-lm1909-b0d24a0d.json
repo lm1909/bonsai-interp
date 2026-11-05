@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-b0d24a0d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N8888-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:41:29+00:00",
+ "recipe": {
+  "toolchain_commit": "4564cc5eb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N8888_neg/2026-11-06-lm1909-b0d24a0d.tests.json"
+ },
+ "label": "Arabic words beginning with the t-derived-form opening pieces (' مت', ' الت', ' ت', ' والت'), firing on that piece; Arabic sentences without such a word and English translations stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N8888_neg/2026-11-06-lm1909-b0d24a0d.tests.json",
+   "prereg_commit": "4564cc5eb",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.501,
+     "peak": " مت"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.352,
+     "peak": " ت"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.245,
+     "peak": " خ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.225,
+     "peak": " الت"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.402,
+     "peak": " الم"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.012,
+     "peak": "ن"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.005,
+     "peak": "ين"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.015,
+     "peak": " وال"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": "ر"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.098,
+     "peak": " ب"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.091,
+     "peak": " الق"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.328,
+     "peak": " ز"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": "حف"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.035,
+     "peak": "تب"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": "حلة"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " recent"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.641,
+    "median_fire": 0.235,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4564cc5eb",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "Arabic t-form word openings",
+ "unit_kind": "spelling piece",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " مت",
+   " المت",
+   " الت",
+   " ت",
+   " والت",
+   " التع"
+  ]
+ }
+}
