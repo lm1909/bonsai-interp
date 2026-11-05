@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-e4e8b884",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7906-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:00:35+00:00",
+ "recipe": {
+  "toolchain_commit": "5fcfabdcb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N7906_neg/2026-11-05-lm1909-e4e8b884.tests.json"
+ },
+ "label": "(guess) a split-off first syllable of a rarer word: ' poc'as, н'ум'измат, р'ог'овица, B'em'bine, ' vos'otros",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N7906_neg/2026-11-05-lm1909-e4e8b884.tests.json",
+   "prereg_commit": "5fcfabdcb",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.546,
+     "peak": " poc"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.361,
+     "peak": " poc"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.375,
+     "peak": "ум"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.578,
+     "peak": "ог"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.345,
+     "peak": "emb"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.074,
+     "peak": "o"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.386,
+     "peak": "ум"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.505,
+     "peak": "ог"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.317,
+     "peak": " bu"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.052,
+     "peak": " personas"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": "ий"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.213,
+     "peak": "ра"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.073,
+     "peak": "olars"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.063,
+     "peak": "o"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.057,
+     "peak": "ее"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.208,
+     "peak": "у"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.381,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5fcfabdcb",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-off syllable of rarer words (guess)",
+ "unit_kind": "token piece / unclear",
+ "confidence": 0.3,
+ "notes": "The top examples have no dominant token ('em', 'ум', 'ip' twice each). Probes: ' poc' 0.62, 'ум' 0.53, 'emb' 0.46, 'ог' 0.35, ' vos' 0.29. I have no shared rule beyond 'a syllable split off a rarer word', so this is a guess.",
+ "selection": "random draw"
+}

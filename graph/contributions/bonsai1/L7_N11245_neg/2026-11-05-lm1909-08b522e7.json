@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-08b522e7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N11245-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:01:43+00:00",
+ "recipe": {
+  "toolchain_commit": "5fcfabdcb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N11245_neg/2026-11-05-lm1909-08b522e7.tests.json"
+ },
+ "label": "(guess) the closing element of a compound name: the 2 of MoS2, regnal II, Studies in institute names",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N11245_neg/2026-11-05-lm1909-08b522e7.tests.json",
+   "prereg_commit": "5fcfabdcb",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.022,
+     "peak": " film"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.01,
+     "peak": " viz"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.014,
+     "peak": " Studies"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.821,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.016,
+     "peak": " war"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.609,
+     "peak": " Studies"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.708,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.037,
+     "peak": " II"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " film"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " viz"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " Leeds"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " oil"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " war"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "amm"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " stack"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " treaty"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.029,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5fcfabdcb",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "final element of a compound name (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.35,
+ "notes": "Card: '2' 5, ' Studies' 2, ' II' 2. Probes: '2' in MoS2 0.93, ' II' 0.85, ' pigment' 0.52, ' Studies' 0.43; 'the Institute' 0.01, 'the Sultan' 0.01. The + pole is Arabic-transliteration pieces.",
+ "selection": "random draw"
+}

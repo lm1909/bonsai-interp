@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-05-lm1909-4ad83d9f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N10078-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:01:34+00:00",
+ "recipe": {
+  "toolchain_commit": "5fcfabdcb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N10078_neg/2026-11-05-lm1909-4ad83d9f.tests.json"
+ },
+ "label": "adequacy or fitness for a purpose: suitable, ideal, enough, 適 (the + pole has need, needed, necessary)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N10078_neg/2026-11-05-lm1909-4ad83d9f.tests.json",
+   "prereg_commit": "5fcfabdcb",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.48,
+     "peak": " suitable"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.056,
+     "peak": " ideal"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.206,
+     "peak": " enough"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.629,
+     "peak": " suitable"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.026,
+     "peak": " short"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.055,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.367,
+     "peak": "適"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.289,
+     "peak": " suitable"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " logo"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " crowded"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " part"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " boots"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " film"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": " rice"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": "します"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.247,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5fcfabdcb",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "suitable / ideal / enough",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.7,
+ "notes": "Card: '適' 8, ' suitable' 3 of the top 32. Probes: ' enough' 0.40, ' suitable' 0.38, '適' 0.38, ' ideal' 0.31, ' sufficient' 0.10, 'popular for' 0.02. ' sufficient' is left out of the test since it was low.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "suitable",
+   "ideal",
+   "enough"
+  ],
+  "tokens": [
+   "適"
+  ]
+ }
+}

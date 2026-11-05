@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-05-lm1909-782be713",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10270+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:00:26+00:00",
+ "recipe": {
+  "toolchain_commit": "5fcfabdcb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N10270_pos/2026-11-05-lm1909-782be713.tests.json"
+ },
+ "label": "exception-raising options and docs in Python: ':raises:', 'raise_exception=', 'raise_on_', 'fail_on_' (English 'raises prices' stays quiet)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N10270_pos/2026-11-05-lm1909-782be713.tests.json",
+   "prereg_commit": "5fcfabdcb",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.681,
+     "peak": "raises"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.513,
+     "peak": "raise"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.108,
+     "peak": "_on"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.737,
+     "peak": "_on"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.727,
+     "peak": "raises"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.599,
+     "peak": "_exception"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.625,
+     "peak": "_on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.683,
+     "peak": "_on"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " :"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": "=True"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": "=False"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.056,
+     "peak": "=True"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.065,
+     "peak": "returns"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.048,
+     "peak": "=True"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " rent"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " school"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.682,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5fcfabdcb",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "raise_/fail_on options, :raises:",
+ "unit_kind": "token / code",
+ "confidence": 0.8,
+ "notes": "Probes: ':raises:' 0.67, 'raise' in raise_exception 0.53, '_on' in fail_on_error 0.59; bare 'Raises:' peaks at 0.30 on ' if'; 'raises prices' 0.00, 'raises cattle' 0.01. Near misses keep the code shape with other option names, and two keep the English verb.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "raises",
+   " Raises",
+   " raise",
+   "raise",
+   "Raises",
+   "_on"
+  ]
+ }
+}

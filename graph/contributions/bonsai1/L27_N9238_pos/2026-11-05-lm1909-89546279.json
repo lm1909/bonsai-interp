@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-89546279",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9238+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:01:01+00:00",
+ "recipe": {
+  "toolchain_commit": "5fcfabdcb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N9238_pos/2026-11-05-lm1909-89546279.tests.json"
+ },
+ "label": "words for a repeated rite or routine: the cue 'bedtime' and the words ceremonies, rituals (output promotes ritual, routine, ceremony)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N9238_pos/2026-11-05-lm1909-89546279.tests.json",
+   "prereg_commit": "5fcfabdcb",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.259,
+     "peak": " bedtime"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.407,
+     "peak": " bedtime"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.133,
+     "peak": " prayer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.189,
+     "peak": " performed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.405,
+     "peak": " still"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.707,
+     "peak": " bedtime"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.099,
+     "peak": " ceremonies"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.31,
+     "peak": " rituals"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": " night"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.106,
+     "peak": " evening"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " short"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " shrine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.067,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.124,
+     "peak": " summer"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.05,
+     "peak": "ation"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.095,
+     "peak": " daily"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.284,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5fcfabdcb",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'bedtime', rite words",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.45,
+ "notes": "Probes: ' bedtime' 0.71, ' ceremonies' 0.25, ' ritual' 0.19; 'ancient castle' 0.04, 'ancient oak' 0.01, 'Create a' 0.07 (the top example did not repeat). Rite words may land near the threshold.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "bedtime",
+   "ritual",
+   "rituals",
+   "ceremonies"
+  ]
+ }
+}

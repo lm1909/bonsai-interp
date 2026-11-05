@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-27bbbf80",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9598-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:01:15+00:00",
+ "recipe": {
+  "toolchain_commit": "5fcfabdcb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N9598_neg/2026-11-05-lm1909-27bbbf80.tests.json"
+ },
+ "label": "(sub-trigger of a broad pole) the opening quote of the message in 'raise XError(' or 'pytest.mark.skip('",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N9598_neg/2026-11-05-lm1909-27bbbf80.tests.json",
+   "prereg_commit": "5fcfabdcb",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.239,
+     "peak": "('"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.536,
+     "peak": "('"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.621,
+     "peak": "('"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.526,
+     "peak": "negative"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.127,
+     "peak": "('"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.621,
+     "peak": "('"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.716,
+     "peak": "('"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.283,
+     "peak": "('"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": "')\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.186,
+     "peak": "')\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.318,
+     "peak": " assert"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.123,
+     "peak": "('"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.091,
+     "peak": "')\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " '"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.063,
+     "peak": "('"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.174,
+     "peak": "('"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.531,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5fcfabdcb",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "message quote after raise / skip",
+ "unit_kind": "token / code",
+ "confidence": 0.6,
+ "notes": "The card flags this pole broad (2.8% of tokens reach 0.1 of max), so a hold can only be a sub-trigger. Probes: raise NotImplementedError(' 0.54, mark.skip(' 0.62, print(' 0.04, ' broken' in a comment 0.33. The Russian 'ление' and other top examples stay unexplained.",
+ "selection": "random draw"
+}

@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-31734e7f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N4596+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:00:22+00:00",
+ "recipe": {
+  "toolchain_commit": "5fcfabdcb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N4596_pos/2026-11-05-lm1909-31734e7f.tests.json"
+ },
+ "label": "what a work of art is about, as opposed to how it is made: 'subject matter', 'content', 'lyrics' in criticism (the - pole has means, process, effort)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N4596_pos/2026-11-05-lm1909-31734e7f.tests.json",
+   "prereg_commit": "5fcfabdcb",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.175,
+     "peak": " matter"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.871,
+     "peak": " matter"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.343,
+     "peak": " content"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.545,
+     "peak": " lyrics"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.719,
+     "peak": " content"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.212,
+     "peak": " matter"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.264,
+     "peak": " lyrics"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.312,
+     "peak": " content"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": " size"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.266,
+     "peak": "orial"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " link"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.104,
+     "peak": " its"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " length"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": " its"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.444,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5fcfabdcb",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "artwork's content vs its form",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.7,
+ "notes": "Probes: subject matter 0.87, content 0.56, lyrics 0.49; colour and brushwork 0.08, drums 0.01, journey and process 0.01. The test asks whether the what-versus-how reading holds, but all of its fire words are ones the card showed, so it shows the words, not the general meaning.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "matter",
+   "content",
+   "lyrics"
+  ]
+ }
+}
