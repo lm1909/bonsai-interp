@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-0efb6e99",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N10146-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:00:49+00:00",
+ "recipe": {
+  "toolchain_commit": "7dbf67cfb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N10146_neg/2026-11-05-lm1909-0efb6e99.tests.json"
+ },
+ "label": "' that' or ' which' opening a relative clause after a plural noun for things provided or developed (funds that enable, guidelines that helped); complement 'that' and the same nouns without the clause stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N10146_neg/2026-11-05-lm1909-0efb6e99.tests.json",
+   "prereg_commit": "7dbf67cfb",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.652,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.31,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.168,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.392,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.314,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.166,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.33,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.044,
+     "peak": " builds"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " overtime"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " applying"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " school"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "Engine"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": " patients"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " builds"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.312,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7dbf67cfb",
+  "minutes": 3,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "relative 'that' after plural things",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "that",
+   "which"
+  ]
+ }
+}

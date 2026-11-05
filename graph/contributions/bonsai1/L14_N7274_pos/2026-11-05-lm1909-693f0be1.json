@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-693f0be1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N7274+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:01:02+00:00",
+ "recipe": {
+  "toolchain_commit": "7dbf67cfb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N7274_pos/2026-11-05-lm1909-693f0be1.tests.json"
+ },
+ "label": "The word envelope(s); other stationery and containers in the same sentences stay quiet. Wider craft supplies (pencils, clay) probed low, so this is a word label",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N7274_pos/2026-11-05-lm1909-693f0be1.tests.json",
+   "prereg_commit": "7dbf67cfb",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.33,
+     "peak": " envelopes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.259,
+     "peak": " front"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.42,
+     "peak": " envelope"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.319,
+     "peak": " stacks"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.808,
+     "peak": " envelope"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.027,
+     "peak": " tucked"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.202,
+     "peak": " envelopes"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.194,
+     "peak": " gold"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.09,
+     "peak": " pens"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.132,
+     "peak": " front"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.059,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.319,
+     "peak": " stacks"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.585,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.052,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.185,
+     "peak": " gold"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.727,
+    "median_fire": 0.289,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7dbf67cfb",
+  "minutes": 4,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "' envelope' word",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "envelope",
+   "envelopes"
+  ]
+ }
+}

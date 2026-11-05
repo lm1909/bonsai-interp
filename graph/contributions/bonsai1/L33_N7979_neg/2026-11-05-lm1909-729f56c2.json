@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-729f56c2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N7979-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:01:29+00:00",
+ "recipe": {
+  "toolchain_commit": "7dbf67cfb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N7979_neg/2026-11-05-lm1909-729f56c2.tests.json"
+ },
+ "label": "The token before or inside a named drug in medical text (include sodium bicarbonate and, such as albuterol (ProAir)); the same list frames with ordinary things stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N7979_neg/2026-11-05-lm1909-729f56c2.tests.json",
+   "prereg_commit": "7dbf67cfb",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.027,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.138,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.441,
+     "peak": " including"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.248,
+     "peak": "v"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.683,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.496,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.158,
+     "peak": "avenous"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.195,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "Common"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " kitchen"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " visit"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "Common"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " rest"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " diet"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": "Her"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.222,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7dbf67cfb",
+  "minutes": 4,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "around named drugs",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}
