@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-38edbbc8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N6104-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:13:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N6104",
+   "pole": "-",
+   "label": "tokens meaning 'however' across languages: 然而, しかし, the embargo of Spanish sin embargo (English ' embargo' also fires)",
+   "fire": [
+    "他努力工作，然而结果并不好。",
+    "这个计划很好。然而，资金不够。",
+    "努力しました。しかし、結果は悪かったです。",
+    "とても寒い日でした。しかし、彼は来ました。",
+    "Trabajó mucho; sin embargo, no ganó nada.",
+    "Era muy caro. Sin embargo, lo compramos.",
+    "我们等了很久，然而他没有来。",
+    "雨でした。しかし、試合はありました。"
+   ],
+   "quiet": [
+    "他努力工作，因此结果很好。",
+    "这个计划很好。而且，资金足够。",
+    "努力しました。それで、結果は良かったです。",
+    "とても寒い日でした。そして、彼は来ました。",
+    "Trabajó mucho; por eso, ganó mucho.",
+    "Era muy caro. Por eso, no lo compramos.",
+    "我们等了很久，所以他来了。",
+    "雨でした。だから、試合はありませんでした。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'however': 然而, しかし, sin embargo",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.75,
+ "notes": "Card: 'しかし' 11, '然而' 10, ' embargo' 10. Probes: 然而 0.84, ' embargo' 0.34, しかし 0.28 (at the start of a sentence), 'However' 0.26; 因此 0.06, そして 0.12, ' tanto' 0.07. 'trade embargo' 0.21 fires too, as you would expect at layer 0, so it is the token first and the meaning by coincidence for that one.",
+ "trigger": {
+  "tokens": [
+   "しかし",
+   "然而",
+   " embargo"
+  ]
+ }
+}

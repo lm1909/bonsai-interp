@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-67e55017",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5676-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:13:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5676",
+   "pole": "-",
+   "label": "the space-prefixed first token of a Japanese word in a spaced list (レストラン ルームサービス プール)",
+   "fire": [
+    "アメニティ : ジム サウナ プール スパ",
+    "設備 : レストラン バー ランドリー",
+    "サービス : フィットネス ルームサービス 送迎",
+    "館内 : サウナ プール ジム バー",
+    "施設 : ラウンジ ビジネスセンター 売店",
+    "アメニティ : ランドリー レストラン プール",
+    "設備 : スパ バー フィットネス",
+    "サービス : プール ジム レストラン"
+   ],
+   "quiet": [
+    "アメニティはジムとサウナとプールとスパです。",
+    "設備はレストランとバーとランドリーです。",
+    "サービスはフィットネスとルームサービスと送迎です。",
+    "館内にはサウナとプールとジムとバーがあります。",
+    "施設にはラウンジとビジネスセンターと売店があります。",
+    "アメニティはランドリーとレストランとプールです。",
+    "設備はスパとバーとフィットネスです。",
+    "サービスはプールとジムとレストランです。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "space + word in a spaced Japanese list",
+ "unit_kind": "token / format",
+ "confidence": 0.7,
+ "notes": "Card: ' �' 20 of the top 32, often after a space in Japanese or Chinese. Probes: spaced katakana lists 0.72 and 0.53, spaced Chinese 0.20; the same words without spaces 0.04; Chinese unspaced 0.00. The + pole has ' z'."
+}

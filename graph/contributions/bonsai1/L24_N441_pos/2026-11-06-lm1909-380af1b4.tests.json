@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-380af1b4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N441+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:13:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N441",
+   "pole": "+",
+   "label": "(guess) the first indent of a Python block, or ' =' in a simple assignment after except",
+   "fire": [
+    "def login(name, token):\n    return api.Client(name)\n",
+    "if __name__ == '__main__':\n    main_loop('saver')\n",
+    "except KeyError:\n    value = self.cache[key]\n",
+    "def fetch(url):\n    return http.get(url)\n",
+    "if __name__ == \"__main__\":\n    app.run()\n",
+    "except ValueError:\n    result = self.items[name]\n",
+    "def close(self):\n    return self.conn.close()\n",
+    "if debug:\n    log.setup('verbose')\n"
+   ],
+   "quiet": [
+    "login(name, token)\nresult = api.Client(name)\n",
+    "run = '__main__'\nmain_loop('saver')\n",
+    "key = 3\nvalue = self.cache[key]\n",
+    "url = 'a'\nreply = http.get(url)\n",
+    "name = \"__main__\"\napp.run()\n",
+    "name = 'b'\nresult = self.items[name]\n",
+    "conn = self.conn\nconn.close()\n",
+    "debug = 1\nlog.setup('verbose')\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first indent of a Python block (guess)",
+ "unit_kind": "token / code",
+ "confidence": 0.2,
+ "notes": "Card: '   ' 19 of the top 32. But my probes stayed under 0.12, so I am missing what else it needs; near-copies of the top examples did not reproduce. Low confidence."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-5448f324",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N8665-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:13:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N8665",
+   "pole": "-",
+   "label": "(guess) ' pass' in an except block in Python",
+   "fire": [
+    "try:\n    os.remove(path)\nexcept:\n    pass\n",
+    "try:\n    shutil.copy(a, b)\nexcept OSError:\n    pass\n",
+    "try:\n    conn.close()\nexcept:\n    pass\n",
+    "for f in files:\n    try:\n        f.unlink()\n    except:\n        pass\n",
+    "try:\n    import yaml\nexcept ImportError:\n    pass\n",
+    "try:\n    lock.release()\nexcept:\n    pass\n",
+    "try:\n    os.mkdir(tmp)\nexcept OSError:\n    pass\n",
+    "try:\n    sock.send(data)\nexcept:\n    pass\n"
+   ],
+   "quiet": [
+    "try:\n    os.remove(path)\nexcept:\n    raise\n",
+    "try:\n    shutil.copy(a, b)\nexcept OSError:\n    raise\n",
+    "try:\n    conn.close()\nexcept:\n    log(path)\n",
+    "for f in files:\n    try:\n        f.unlink()\n    except:\n        raise\n",
+    "try:\n    import yaml\nexcept ImportError:\n    yaml = None\n",
+    "try:\n    lock.release()\nexcept:\n    log(lock)\n",
+    "try:\n    os.mkdir(tmp)\nexcept OSError:\n    raise\n",
+    "try:\n    sock.send(data)\nexcept:\n    log(data)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' pass' in except (guess)",
+ "unit_kind": "token / code",
+ "confidence": 0.2,
+ "notes": "Card: ' pass' 4 and no single token. Probes: ' pass' 0.18, ' pieces' 0.10, ' lead' 0.09; 'passed the ball' 0.03. Low confidence; expected to fall short of the median."
+}
