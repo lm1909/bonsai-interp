@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d9369666",
+ "kind": "qc",
+ "neuron": "bonsai1/L7/N5803-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:19:58+00:00",
+ "recipe": {
+  "toolchain_commit": "17c450e46",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N5803_neg/2026-11-06-lm1909-d9369666.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N5803_neg/2026-11-06-lm1909-d9369666.tests.json",
+   "prereg_commit": "17c450e46",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.78,
+     "peak": "-,"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.42,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.265,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.336,
+     "peak": " und"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.064,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.53,
+     "peak": "-,"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.223,
+     "peak": " und"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.332,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.048,
+     "peak": "-year"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": "seite"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": "-term"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " improved"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "-sized"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "arbeit"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " are"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.334,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "17c450e46",
+  "minutes": 3,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "the suspended (hanging) hyphen of a coordinated compound, where the shared second part is left out ('two-, three-', 'Ein- und Ausgang'); full compounds stay low"
+ },
+ "notes": "Fresh suspended hyphens in English and German; near misses are the same sentences with one full compound. Not probed before this test.",
+ "selection": "picked"
+}

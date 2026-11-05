@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-89269fd8",
+ "kind": "qc",
+ "neuron": "bonsai1/L8/N6265-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:20:00+00:00",
+ "recipe": {
+  "toolchain_commit": "17c450e46",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N6265_neg/2026-11-06-lm1909-89269fd8.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N6265_neg/2026-11-06-lm1909-89269fd8.tests.json",
+   "prereg_commit": "17c450e46",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.538,
+     "peak": "stone"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.266,
+     "peak": " filled"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.43,
+     "peak": " fan"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.122,
+     "peak": "ies"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.394,
+     "peak": " bars"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.571,
+     "peak": "stone"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.322,
+     "peak": " fill"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.452,
+     "peak": "stone"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": " filled"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.04,
+     "peak": " fan"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " delivery"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " station"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.08,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": "arse"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " alternate"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.441,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "17c450e46",
+  "minutes": 3,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "sedimentology and river-landform vocabulary (point bar, fluvial, sedimentary, alluvial fan, sandstone, facies), as against the same word pieces outside geology"
+ },
+ "notes": "Fresh sedimentology sentences; near misses reuse 'fan', 'bar', 'basin', 'deposits', 'logged' outside geology. Not probed before this test.",
+ "selection": "picked"
+}

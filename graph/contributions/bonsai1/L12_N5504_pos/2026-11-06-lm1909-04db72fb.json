@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-04db72fb",
+ "kind": "qc",
+ "neuron": "bonsai1/L12/N5504+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:19:24+00:00",
+ "recipe": {
+  "toolchain_commit": "17c450e46",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N5504_pos/2026-11-06-lm1909-04db72fb.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N5504_pos/2026-11-06-lm1909-04db72fb.tests.json",
+   "prereg_commit": "17c450e46",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.194,
+     "peak": " Practical"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.122,
+     "peak": " guide"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.279,
+     "peak": " practical"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.382,
+     "peak": " daily"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.771,
+     "peak": " practical"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.154,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.249,
+     "peak": " workbook"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.268,
+     "peak": " practical"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.059,
+     "peak": " Handbook"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": "Cook"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.12,
+     "peak": " daily"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.391,
+     "peak": " complete"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.145,
+     "peak": " Guide"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.199,
+     "peak": " handy"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " value"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.259,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "17c450e46",
+  "minutes": 3,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "The word 'practical' in titles and descriptions of books and guides ('A Practical Guide', 'practical, user-friendly text')"
+ },
+ "notes": "Fresh titles and blurbs; near misses swap 'practical' for another adjective in the same slot.",
+ "selection": "picked"
+}
