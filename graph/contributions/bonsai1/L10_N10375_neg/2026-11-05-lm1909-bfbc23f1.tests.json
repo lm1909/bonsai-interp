@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-bfbc23f1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10375-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:38:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N10375",
+   "pole": "-",
+   "label": "The method or field name being defined inside a Python class (def bark, price = models...); top-level script code with similar names stays quiet",
+   "fire": [
+    "class Circle:\n    def radius(self):\n        return self.r\n",
+    "class Dog:\n    def bark(self):\n        print('woof')\n",
+    "class Order(models.Model):\n    customer = models.CharField(max_length=50)\n    total = models.IntegerField()\n",
+    "class Account:\n    def withdraw(self, amt):\n        self.bal -= amt\n",
+    "class Car:\n    def drive(self):\n        pass\n",
+    "class Book(Base):\n    title = Column(String)\n    pages = Column(Integer)\n",
+    "class Robot:\n    def greetUser(self):\n        print('hello')\n",
+    "class Stack:\n    def peek(self):\n        return self.s[-1]\n"
+   ],
+   "quiet": [
+    "r = 3\nprint(r * 2)\n",
+    "print('woof')\nprint('bark')\n",
+    "total = 5\ncustomer = 'Ann'\nprint(customer, total)\n",
+    "bal = 100\nbal -= amt\nprint(bal)\n",
+    "import sys\nsys.exit(0)\n",
+    "rows = db.query(q)\nfor row in rows:\n    show(row)\n",
+    "name = input()\nprint('hello ' + name)\n",
+    "s = [1, 2]\nlast = s[-1]\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "member name in a Python class",
+ "unit_kind": "contextual",
+ "confidence": "high"
+}
