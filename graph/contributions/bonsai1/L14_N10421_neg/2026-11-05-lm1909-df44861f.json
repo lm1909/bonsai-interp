@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-df44861f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N10421-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:22:07+00:00",
+ "recipe": {
+  "toolchain_commit": "cb97bf6d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N10421_neg/2026-11-05-lm1909-df44861f.tests.json"
+ },
+ "label": "A short non-word letter chunk (abbreviation or code such as 'rb', 'NP', 'vc') inside a code string or identifier, as opposed to a whole English word in the same slot.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N10421_neg/2026-11-05-lm1909-df44861f.tests.json",
+   "prereg_commit": "cb97bf6d4",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.058,
+     "peak": "Z"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.058,
+     "peak": ")\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.04,
+     "peak": "')\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.032,
+     "peak": ")\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.083,
+     "peak": "F"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.249,
+     "peak": "BT"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.078,
+     "peak": "dp"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.025,
+     "peak": ".click"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.045,
+     "peak": "']\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.063,
+     "peak": "',"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.04,
+     "peak": "')\n"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.031,
+     "peak": "\")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.165,
+     "peak": "h"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.061,
+     "peak": "']\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": ".click"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.617,
+    "median_fire": 0.058,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb97bf6d4",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "non-word letter chunk in code",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Prose abbreviations (FBI, EEG in a sentence) stayed quiet in probes. Some chunks were weak ('XR' 0.17, 'QT' under 0.05), so the set is not uniform.",
+ "selection": "random draw"
+}

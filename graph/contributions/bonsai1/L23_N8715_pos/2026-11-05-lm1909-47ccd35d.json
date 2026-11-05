@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-47ccd35d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8715+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:22:42+00:00",
+ "recipe": {
+  "toolchain_commit": "cb97bf6d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N8715_pos/2026-11-05-lm1909-47ccd35d.tests.json"
+ },
+ "label": "Text about optimization methods seeking a best solution (hill climbing, gradient descent, 'minimize its costs'), firing on the words around the method's goal; the same phrasing outside optimization stays quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N8715_pos/2026-11-05-lm1909-47ccd35d.tests.json",
+   "prereg_commit": "cb97bf6d4",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.109,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.566,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.119,
+     "peak": " minimum"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.612,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.731,
+     "peak": " programming"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.438,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.348,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.529,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.054,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "Newton"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " until"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.054,
+     "peak": " roof"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " lower"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " its"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.484,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb97bf6d4",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "optimization methods seeking a best",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "The output direction promotes ' optimization', ' optimal', ' best', ' maximize'. 'not guaranteed to' read 1.28 for a greedy algorithm and 0.01 for a train.",
+ "selection": "random draw"
+}

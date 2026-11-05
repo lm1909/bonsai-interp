@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-aa22f39f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N4121+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:21:55+00:00",
+ "recipe": {
+  "toolchain_commit": "cb97bf6d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N4121_pos/2026-11-05-lm1909-aa22f39f.tests.json"
+ },
+ "label": "A statement that something modest is adequate for a stated use ('plenty for', 'good enough for', 'all you need for'), firing around the 'for' or the use; the same objects failing or merely described stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N4121_pos/2026-11-05-lm1909-aa22f39f.tests.json",
+   "prereg_commit": "cb97bf6d4",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.582,
+     "peak": " plenty"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.534,
+     "peak": " getting"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.812,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.376,
+     "peak": " most"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.825,
+     "peak": " do"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.544,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.153,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.46,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.045,
+     "peak": " listening"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " older"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.162,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " little"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.539,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb97bf6d4",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "adequate for a stated use",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "The output direction promotes ' enough', ' suffice', ' sufficient'. Near misses keep the object and setting and say it is too weak, broke, or was simply there.",
+ "selection": "random draw"
+}

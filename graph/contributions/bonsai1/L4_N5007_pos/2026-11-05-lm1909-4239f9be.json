@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-05-lm1909-4239f9be",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N5007+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:22:13+00:00",
+ "recipe": {
+  "toolchain_commit": "cb97bf6d4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N5007_pos/2026-11-05-lm1909-4239f9be.tests.json"
+ },
+ "label": "The Russian piece 'ел' (with 'ела', 'еля', 'ель') as its own token, chiefly in стрел- (shoot) words and смел- (brave), and 'съел'.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N5007_pos/2026-11-05-lm1909-4239f9be.tests.json",
+   "prereg_commit": "cb97bf6d4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.882,
+     "peak": "ела"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.689,
+     "peak": "еля"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.949,
+     "peak": "ел"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.363,
+     "peak": "ел"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.629,
+     "peak": "ел"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.946,
+     "peak": "ел"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.919,
+     "peak": "ел"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.049,
+     "peak": "ел"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.199,
+     "peak": "ал"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.394,
+     "peak": "ол"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " ч"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": "бл"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " стр"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": "а"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.05,
+     "peak": "ла"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.089,
+     "peak": "л"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.901,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb97bf6d4",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "Russian piece 'ел'",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "The peak token was 'ел' or an extension in nearly all the probes. ' цел' and ' стол' reached 0.3 and 0.26, so similar syllables leak weakly; 'хотел' and English '-el' stayed quiet.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ел",
+   "ела",
+   "еля",
+   "ель"
+  ]
+ }
+}
