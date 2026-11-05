@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-edd1068a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N6160-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:22:11+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N6160",
+   "pole": "-",
+   "label": "shell, CMake and Makefile syntax (while [ ... ], += with a backslash, flags like -rn, #!/bin/bash), as opposed to Python code and plain instructions on the same tasks",
+   "fire": [
+    "# keep polling until the file appears\nwhile [ ! -f /tmp/done ]; do sleep 2; done",
+    "Add this to your project:\n  set( CMAKE_CXX_STANDARD 17 )",
+    "LOCAL_SRC_FILES += \\\n    src/main.c \\\n    src/util.c",
+    "grep -v error app.log | sort -u | wc -l",
+    "#!/bin/sh\nexport PATH=$PATH:/usr/local/bin\nmake install",
+    "for f in *.txt; do mv \"$f\" \"${f%.txt}.md\"; done",
+    "if [ -z \"$HOME\" ]; then echo missing; exit 1; fi",
+    "tar -xzf release.tar.gz -C /opt && chmod +x /opt/run"
+   ],
+   "quiet": [
+    "# keep polling until the file appears\nwhile not os.path.exists(path):\n    time.sleep(2)",
+    "Add this to your project:\n  from setuptools import setup",
+    "source_files = [\n    'src/main.c',\n    'src/util.c',\n]",
+    "lines = [l for l in open('app.log') if 'error' not in l]",
+    "import os\nprint(os.environ.get('PATH'))",
+    "for name in names:\n    print(name.replace('.txt', '.md'))",
+    "if not user:\n    raise ValueError('missing')",
+    "Unpack the release archive into the folder and open the program."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "shell and build-script syntax",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "notes": "The card also has '--' in SQL (a probe scored 0.32) and a CSS colon, which this label does not cover."
+}
