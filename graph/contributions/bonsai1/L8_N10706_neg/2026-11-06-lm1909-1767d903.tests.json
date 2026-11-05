@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-1767d903",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N10706-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:06:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N10706",
+   "pole": "-",
+   "label": "a word piece inside a Muslim personal name split by the tokenizer (H|use|y|in, Mag|omed, H|aji, Abd|ulla), as opposed to split pieces of Polish, Greek, Japanese, Italian or other names in the same sentence",
+   "fire": [
+    "The contract was signed by the minister Abdulaziz Rahimi on Tuesday.",
+    "Our coach praised the young striker Khabib Omarov after the match.",
+    "The goalkeeper Rustam Akhmedov saved two penalties in the final.",
+    "A spokesman named Yusuf Haji confirmed that the talks had ended.",
+    "Her colleague Fatima Abdulrahman teaches chemistry at the college.",
+    "Police questioned the driver, Ramzan Magomedov, near the border.",
+    "The novelist Huseyin Kaya signed copies at the bookshop.",
+    "The surgeon Ismail Abdulla opened a clinic in the capital."
+   ],
+   "quiet": [
+    "The contract was signed by the minister Andrzej Kowalski on Tuesday.",
+    "Our coach praised the young striker Nikos Papadopoulos after the match.",
+    "The goalkeeper Hiroshi Tanaka saved two penalties in the final.",
+    "A spokesman named Piotr Nowak confirmed that the talks had ended.",
+    "Her colleague Giulia Rossini teaches chemistry at the college.",
+    "Police questioned the driver, Lars Andersson, near the border.",
+    "The novelist Bjorn Lindqvist signed copies at the bookshop.",
+    "The surgeon Pedro Figueroa opened a clinic in the capital."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split pieces of Muslim personal names",
+ "unit_kind": "token / named entity",
+ "confidence": "high",
+ "notes": "Card: 'ulla' x4, 'aj' x3, 'in', 'omed', 'h', Arabic 'يل'. Probes: Huseyin 0.87, Magomed 1.02, Abdulla 0.75, Haji 0.95, Abdulfattah 0.50; Kowalski 0.01, Gonzalez 0.01, Volkov 0.01, Campbell 0.01, Schmidt 0.01. Tokenizer checked for the test names. Whole-token names (Ibrahim, Hussein) are not tested here."
+}

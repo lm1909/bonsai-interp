@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-4f46cdc7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4176-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:06:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N4176",
+   "pole": "-",
+   "label": "a bare p piece that opens a split word (' P' in P|roust and P|ynch|on, '-p' in common|-p|ool, 'up' in Ba|up|rogram|m), as opposed to words starting with p that the tokenizer keeps in larger pieces (Push|kin, Past|ern|ak, Pl|ath)",
+   "fire": [
+    "We spent the winter reading long novels by Proust and his friends.",
+    "Her thesis compares the operas of Puccini with those of his rivals.",
+    "Critics still argue about the dense late novels of Pynchon.",
+    "Lakes and forests are classic examples of common-pool goods.",
+    "The state reserves extra posts for PWD candidates each year.",
+    "Das neue Bauprogramm der Regierung beginnt im nächsten Jahr.",
+    "The seminar on common-pool fisheries meets on Thursday afternoon.",
+    "I found an old essay on Pindar in the school library."
+   ],
+   "quiet": [
+    "We spent the winter reading long novels by Tolstoy and his friends.",
+    "Her thesis compares the operas of Mozart with those of his rivals.",
+    "Critics still argue about the dense late novels of Pasternak.",
+    "Lakes and forests are classic examples of shared public goods.",
+    "The state reserves extra posts for older candidates each year.",
+    "Das neue Arbeitsprogramm der Regierung beginnt im nächsten Jahr.",
+    "The seminar on coastal fisheries meets on Thursday afternoon.",
+    "I found an old essay on Pushkin in the school library."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "bare p piece that opens a split word",
+ "unit_kind": "token / spelling",
+ "confidence": "high",
+ "notes": "Card: ' P' x9, 'P' x6, 'p' x4, ' п' x4, '-p' x2, 'up'. Tokenizer checked for the test words. Probes: common-pool 0.37-0.52, Proust (with Pushkin) 0.50, Proust alone 0.21, PWD 0.38, Bauprogramm 0.39-0.46; Tolstoy 0.00, Pasternak 0.00, sub-prime 0.01, up-front 0.00, puppy 0.01, Bauarbeiter 0.03. The declared tokens also occur in other uses, so measured coverage is an upper bound; the Cyrillic ' п' case is not tested here.",
+ "trigger": {
+  "tokens": [
+   " P",
+   "P",
+   "p",
+   "-p"
+  ]
+ }
+}
