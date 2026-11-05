@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-150ca87e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11682-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:26:25+00:00",
+ "recipe": {
+  "toolchain_commit": "af89be516",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N11682_neg/2026-11-05-lm1909-150ca87e.tests.json"
+ },
+ "label": "dense weak pole; strongest on word pieces such as ' utter', 'reads' of B|reads and Arabic ض",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N11682_neg/2026-11-05-lm1909-150ca87e.tests.json",
+   "prereg_commit": "af89be516",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.563,
+     "peak": " utter"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.796,
+     "peak": "reads"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.498,
+     "peak": "ض"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.695,
+     "peak": " utter"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.723,
+     "peak": "reads"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.438,
+     "peak": "ض"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.555,
+     "peak": " utter"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.66,
+     "peak": "reads"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.144,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.185,
+     "peak": " Whole"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.118,
+     "peak": "لة"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.288,
+     "peak": " complete"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.167,
+     "peak": " Every"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.028,
+     "peak": " الم"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.148,
+     "peak": " nice"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.129,
+     "peak": "ads"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.611,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af89be516",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense, weak; utter, reads, ض",
+ "unit_kind": "dense / positional",
+ "confidence": "medium",
+ "selection": "random draw"
+}

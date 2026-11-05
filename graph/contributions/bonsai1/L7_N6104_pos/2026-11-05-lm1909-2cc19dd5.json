@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-05-lm1909-2cc19dd5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N6104+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:26:23+00:00",
+ "recipe": {
+  "toolchain_commit": "af89be516",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N6104_pos/2026-11-05-lm1909-2cc19dd5.tests.json"
+ },
+ "label": "the uppercase piece PH in capitalised words: PH.D, PHOTOS, PHILADELPHIA",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N6104_pos/2026-11-05-lm1909-2cc19dd5.tests.json",
+   "prereg_commit": "af89be516",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.941,
+     "peak": " PH"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.659,
+     "peak": "PH"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.58,
+     "peak": "O"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.616,
+     "peak": " PH"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.65,
+     "peak": "PH"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.931,
+     "peak": " PH"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.713,
+     "peak": "H"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.215,
+     "peak": " PHI"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.072,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": "VIDEO"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.072,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " Chef"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " headline"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.655,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af89be516",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "uppercase piece PH",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " PH",
+   "PH"
+  ]
+ }
+}
