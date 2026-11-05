@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-05-lm1909-4538078f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N1192-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:43:33+00:00",
+ "recipe": {
+  "toolchain_commit": "333294d82",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N1192_neg/2026-11-05-lm1909-4538078f.tests.json"
+ },
+ "label": "distributive ' each' after a plural subject ('my students each made ...')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N1192_neg/2026-11-05-lm1909-4538078f.tests.json",
+   "prereg_commit": "333294d82",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.704,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.689,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.441,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.985,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.372,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.679,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.379,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.553,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.105,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " own"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " contest"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.076,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " picked"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.684,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "333294d82",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "distributive 'each' after a plural",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " each"
+  ]
+ }
+}
