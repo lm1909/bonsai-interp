@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-acc1e5bc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4770+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:37:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N4770",
+   "pole": "+",
+   "label": "Korean ' 활' (the start of 활동, 활성, 활발) and its Japanese counterpart 活, as opposed to the same sentences with other words",
+   "fire": [
+    "이 사이트의 회원 활동이 일시 중단되었습니다.",
+    "우리는 지역 사회 활성 계획을 발표했다.",
+    "학생들은 방과 후 활동에 많이 참여한다.",
+    "시장의 거래가 다시 활발해지고 있다.",
+    "쿠키가 활성 상태인지 확인해 주세요.",
+    "朝は体の動きが活発になります。",
+    "この地域の火山は今も活発です。",
+    "그는 음악 분야에서 활동하고 있다."
+   ],
+   "quiet": [
+    "이 사이트의 회원 글이 일시 중단되었습니다.",
+    "우리는 지역 사회 교통 계획을 발표했다.",
+    "학생들은 방과 후 수업에 많이 참여한다.",
+    "시장의 거래가 다시 늘어나고 있다.",
+    "쿠키가 저장 상태인지 확인해 주세요.",
+    "朝は体の調子が良くなります。",
+    "この地域の火山は今も静かです。",
+    "그는 음악 학교에서 공부하고 있다."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "Korean 활 / Japanese 活",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "The Japanese tokens are split into bytes in some cases (活発 printed as five byte tokens), so '活' may not always be one token. Chinese 活跃 scored 0.04 in a probe.",
+ "trigger": {
+  "tokens": [
+   " 활",
+   "活"
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-25eca808",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5490+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:37:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N5490",
+   "pole": "+",
+   "label": "digits and identifiers in a chemical formula or registry number (C24H33N|3|O4, CAS no. 7439-|9|2-1), as opposed to plain text about the same substances",
+   "fire": [
+    "Its empirical formula is C21H23NO5 and it melts at 200 degrees.",
+    "Codeine and its hydrated form C18H21NO3.H2O are sold as tablets.",
+    "Benzene (CAS no.: 71-43-2) is on the banned list.",
+    "The compound C8H10N4O2 is better known as caffeine.",
+    "Zinc oxide (CAS 1314-13-2) is listed in the report.",
+    "The formula C6H12O6 describes glucose.",
+    "Toluene, CAS number 108-88-3, is a common solvent.",
+    "Its molecular formula, C10H15N, was confirmed by the lab."
+   ],
+   "quiet": [
+    "Its taste is bitter and it melts at 200 degrees.",
+    "Codeine and its close relatives are sold as tablets.",
+    "Benzene is on the banned list.",
+    "The compound is better known as caffeine.",
+    "Zinc oxide is listed in the report.",
+    "The sugar describes glucose.",
+    "Toluene is a common solvent.",
+    "Its bitter flavor was confirmed by the lab."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "chemical formula digits",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "I expect a fail on the median, because the corpus max (356) is one code example ('CC') far above everything else, and probes of formula digits were only 0.13–0.18 of it. AUROC may still be high."
+}
