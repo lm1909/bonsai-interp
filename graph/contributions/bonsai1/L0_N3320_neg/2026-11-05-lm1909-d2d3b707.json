@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-05-lm1909-d2d3b707",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3320-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:22:46+00:00",
+ "recipe": {
+  "toolchain_commit": "480fd9a56",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N3320_neg/2026-11-05-lm1909-d2d3b707.tests.json"
+ },
+ "label": "a vowel-cancelling mark as its own token: the split virama in Devanagari and Bengali conjuncts, and the Arabic sukun (conjuncts that the tokenizer merges, such as प्र, stay quiet)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N3320_neg/2026-11-05-lm1909-d2d3b707.tests.json",
+   "prereg_commit": "480fd9a56",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.163,
+     "peak": "्�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.855,
+     "peak": "्�"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.032,
+     "peak": "्�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.589,
+     "peak": "्�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.678,
+     "peak": "্�"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.9,
+     "peak": "্�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.287,
+     "peak": "ْ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.283,
+     "peak": "ْ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " hym"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " Sans"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": "Her"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " البيت"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.058,
+     "peak": "�"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.766,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "480fd9a56",
+  "minutes": 13,
+  "batch_size": 1,
+  "dtype": "float16"
+ },
+ "short": "split virama and sukun",
+ "unit_kind": "token / orthographic",
+ "confidence": "high",
+ "notes": "Second round. Round 1 (virama and sukun marks) failed at AUROC 0.898 on one sentence, प्रेम, where the tokenizer merges virama and ra. The new label excludes merged conjuncts and tests them as near misses.",
+ "selection": "second round after the failed label in sweep seed 202611050402"
+}
