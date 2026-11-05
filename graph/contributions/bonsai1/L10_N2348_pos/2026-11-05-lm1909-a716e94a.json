@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-05-lm1909-a716e94a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2348+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:45:38+00:00",
+ "recipe": {
+  "toolchain_commit": "d8a25b180",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2348_pos/2026-11-05-lm1909-a716e94a.tests.json"
+ },
+ "label": "Marking something as optional: the word optional in docs or prose, Optional[...] types and argparse nargs='?'; 'required' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2348_pos/2026-11-05-lm1909-a716e94a.tests.json",
+   "prereg_commit": "d8a25b180",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.902,
+     "peak": "?',"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.655,
+     "peak": " optional"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.555,
+     "peak": "Optional"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.301,
+     "peak": " optional"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.331,
+     "peak": " optional"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.424,
+     "peak": " optional"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.32,
+     "peak": " optional"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.377,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.042,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.375,
+     "peak": "=None"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": "='"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " required"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.4,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d8a25b180",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "marked as optional",
+ "unit_kind": "semantic / code",
+ "confidence": 0.8,
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "optional"
+  ]
+ }
+}

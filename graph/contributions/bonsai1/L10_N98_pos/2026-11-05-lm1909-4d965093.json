@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-4d965093",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N98+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:46:00+00:00",
+ "recipe": {
+  "toolchain_commit": "d8a25b180",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N98_pos/2026-11-05-lm1909-4d965093.tests.json"
+ },
+ "label": "Weak guess: words in descriptions of a prepared dish (smothered pork chops, scalloped potatoes, tossed with dressing)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N98_pos/2026-11-05-lm1909-4d965093.tests.json",
+   "prereg_commit": "d8a25b180",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.753,
+     "peak": "ed"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.18,
+     "peak": " bubb"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.201,
+     "peak": " tossed"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.067,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.229,
+     "peak": " honey"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.201,
+     "peak": " simmer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.836,
+     "peak": "other"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.682,
+     "peak": " into"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.087,
+     "peak": " hung"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " empty"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " sl"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": "led"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " early"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " sorted"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.215,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d8a25b180",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "prepared-dish words (weak guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "'smothered' reached 0.98, but other cooking participles only 0.09-0.24 in probes. Quota examples ('reserved for people of a certain race') and others are not covered. Likely to fall short of the median.",
+ "selection": "random draw"
+}

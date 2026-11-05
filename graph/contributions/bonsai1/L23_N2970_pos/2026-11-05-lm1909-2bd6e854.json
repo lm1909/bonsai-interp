@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-2bd6e854",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2970+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:45:17+00:00",
+ "recipe": {
+  "toolchain_commit": "d8a25b180",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N2970_pos/2026-11-05-lm1909-2bd6e854.tests.json"
+ },
+ "label": "A noun naming what a sensor, test or instrument detects, as the modifier in a compound (smell sensors, urine drug screens, pressure gauge); broad, so near misses fire weakly",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N2970_pos/2026-11-05-lm1909-2bd6e854.tests.json",
+   "prereg_commit": "d8a25b180",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.616,
+     "peak": " vibration"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.666,
+     "peak": " steroid"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.273,
+     "peak": " gauge"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.364,
+     "peak": " motion"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.378,
+     "peak": " test"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.336,
+     "peak": " moisture"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.517,
+     "peak": " oxygen"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.903,
+     "peak": "iffer"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.431,
+     "peak": " plate"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.265,
+     "peak": " breakfast"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.267,
+     "peak": " door"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.262,
+     "peak": " carpet"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.479,
+     "peak": " blanket"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.333,
+     "peak": " pen"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.539,
+     "peak": " friend"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.168,
+     "peak": " entrance"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.448,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d8a25b180",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "what a sensor or test detects",
+ "unit_kind": "contextual / broad",
+ "confidence": 0.5,
+ "notes": "The card flags it broad (7.2% of tokens over 0.1). A probe near miss reached 0.30 on ' sandwich' after 'The lab ordered a'.",
+ "selection": "random draw"
+}

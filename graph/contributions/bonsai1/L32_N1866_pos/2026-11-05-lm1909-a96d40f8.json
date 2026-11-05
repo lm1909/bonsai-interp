@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-a96d40f8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N1866+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:46:14+00:00",
+ "recipe": {
+  "toolchain_commit": "d8a25b180",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N1866_pos/2026-11-05-lm1909-a96d40f8.tests.json"
+ },
+ "label": "The first piece W or F of a romanized Chinese place name (W|uhan, W|uxi, F|oshan, F|uzhou); W and F names elsewhere stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N1866_pos/2026-11-05-lm1909-a96d40f8.tests.json",
+   "prereg_commit": "d8a25b180",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.623,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.387,
+     "peak": " F"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.689,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.4,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.468,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.624,
+     "peak": " F"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.52,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.666,
+     "peak": " W"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " high"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " Warsaw"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "ains"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " moved"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " river"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.572,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d8a25b180",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pinyin W-/F- place-name piece",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.75,
+ "notes": "Whole-token pinyin surnames (Fang 0.05) and sentence-initial citations did not fire in probes, so the label is limited to split place names.",
+ "selection": "random draw"
+}
