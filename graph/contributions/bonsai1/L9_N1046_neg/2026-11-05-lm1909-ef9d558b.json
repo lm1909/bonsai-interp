@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-05-lm1909-ef9d558b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N1046-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:56:24+00:00",
+ "recipe": {
+  "toolchain_commit": "ad74916b2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N1046_neg/2026-11-05-lm1909-ef9d558b.tests.json"
+ },
+ "label": "' year' or ' day' just after 'next' or 'new': next year, New Year, the next day",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N1046_neg/2026-11-05-lm1909-ef9d558b.tests.json",
+   "prereg_commit": "ad74916b2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.601,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.653,
+     "peak": " Year"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.516,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.766,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.616,
+     "peak": " day"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.419,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.459,
+     "peak": " año"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.596,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.214,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.063,
+     "peak": " birthday"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": " cold"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " countries"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.064,
+     "peak": " bright"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.061,
+     "peak": " birthday"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " ab"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " should"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.599,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad74916b2",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "next / new year",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.8,
+ "notes": "Probes: 'last year' 0.25 and 'a new semester' 0.24 (on ' new'), so 'last' and 'new' themselves leak a little.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " year",
+   " Year"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-3d46413f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N11238-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:57:11+00:00",
+ "recipe": {
+  "toolchain_commit": "ad74916b2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N11238_neg/2026-11-05-lm1909-3d46413f.tests.json"
+ },
+ "label": "the accrediting or ranking body of an education program: 'accredited by', 'accreditors', 'ranked by US News'; simply having lost accreditation stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N11238_neg/2026-11-05-lm1909-3d46413f.tests.json",
+   "prereg_commit": "ad74916b2",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.369,
+     "peak": " accredited"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.401,
+     "peak": " national"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.395,
+     "peak": " acc"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.685,
+     "peak": " AAC"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.256,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.496,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.352,
+     "peak": "redit"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.196,
+     "peak": " Association"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " nursing"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " wrote"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " taught"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " food"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " managers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.382,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad74916b2",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "accrediting body of a program",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.65,
+ "notes": "The + pole of this neuron is certificates (birth certificate, شهادة, сертификат), so accreditation and certification look like two sides of one area. Top examples with 'in collaboration with' are not covered.",
+ "selection": "random draw"
+}

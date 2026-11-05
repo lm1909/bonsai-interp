@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-fba4ac49",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10812+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:56:45+00:00",
+ "recipe": {
+  "toolchain_commit": "ad74916b2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N10812_pos/2026-11-05-lm1909-fba4ac49.tests.json"
+ },
+ "label": "the first piece of a split word naming an animal or creature: por|cupine, pang|olin, arm|adillo, wal|rus, Pap|agei; other split words stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N10812_pos/2026-11-05-lm1909-fba4ac49.tests.json",
+   "prereg_commit": "ad74916b2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.959,
+     "peak": " por"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.653,
+     "peak": " pang"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.095,
+     "peak": "ad"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.229,
+     "peak": " wal"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.236,
+     "peak": "yp"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.494,
+     "peak": " hipp"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.777,
+     "peak": " Pap"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.064,
+     "peak": "u"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.059,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.244,
+     "peak": " pap"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " arm"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " ice"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.167,
+     "peak": " Pap"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.365,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad74916b2",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first piece of a creature's name",
+ "unit_kind": "token piece / semantic",
+ "confidence": 0.75,
+ "notes": "The fire and near-miss items include the same first pieces in some cases (' Pap', ' arm', ' sal'), on purpose: it shows whether the piece alone is enough. The card also shows ' hip' in 'hippie' and ' Hob' in 'Hobgoblin'.",
+ "selection": "random draw"
+}

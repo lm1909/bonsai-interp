@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-05-lm1909-07b9ca8b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N1023-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:56:19+00:00",
+ "recipe": {
+  "toolchain_commit": "ad74916b2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N1023_neg/2026-11-05-lm1909-07b9ca8b.tests.json"
+ },
+ "label": "a small set of code tokens: .listdir, .readlines, .TextField, (TestCase, doctype, phinx (a list; no shared pattern found)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N1023_neg/2026-11-05-lm1909-07b9ca8b.tests.json",
+   "prereg_commit": "ad74916b2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.668,
+     "peak": "phinx"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.714,
+     "peak": ".TextField"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.705,
+     "peak": ".listdir"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.689,
+     "peak": ".readlines"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.457,
+     "peak": "(TestCase"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.712,
+     "peak": "doctype"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.514,
+     "peak": ".TextField"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.445,
+     "peak": ".listdir"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.087,
+     "peak": ".path"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": "(d"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.413,
+     "peak": ".CharField"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.149,
+     "peak": ".getcwd"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.144,
+     "peak": ".read"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.038,
+     "peak": "(object"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": "html"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.678,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad74916b2",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "code tokens: .listdir, .readlines ...",
+ "unit_kind": "token / code",
+ "confidence": 0.75,
+ "notes": "Corpus max is small (1.73). I looked for a shared pattern and did not find one, so the label stays a list. The + pole of this neuron is '.join' and '.parametrize'.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".listdir",
+   ".readlines",
+   ".TextField",
+   "(TestCase",
+   "doctype",
+   "phinx"
+  ]
+ }
+}

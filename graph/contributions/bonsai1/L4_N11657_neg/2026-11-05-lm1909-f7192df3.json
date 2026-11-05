@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-f7192df3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11657-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:56:55+00:00",
+ "recipe": {
+  "toolchain_commit": "ad74916b2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N11657_neg/2026-11-05-lm1909-f7192df3.tests.json"
+ },
+ "label": "the word authentic and its forms in any language: authentic, authentically, authenticity, authentisch, authentique",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N11657_neg/2026-11-05-lm1909-f7192df3.tests.json",
+   "prereg_commit": "ad74916b2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.955,
+     "peak": "ent"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.669,
+     "peak": " authentic"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.977,
+     "peak": "ent"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.473,
+     "peak": " authenticity"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.631,
+     "peak": " authentic"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.924,
+     "peak": "ent"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.701,
+     "peak": "ent"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.486,
+     "peak": " authentic"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " truly"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "aren"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "Experts"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " simple"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " that"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.685,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad74916b2",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word authentic",
+ "unit_kind": "lexical",
+ "confidence": 0.9,
+ "notes": "A probe with ' genuine' scored 0.44, so the synonym also fires; it is left out of these near misses and the label is at the word level.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "authentic",
+   "authentically",
+   "authenticity"
+  ]
+ }
+}
