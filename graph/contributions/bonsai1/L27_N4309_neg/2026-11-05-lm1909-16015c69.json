@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-05-lm1909-16015c69",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N4309-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:49:12+00:00",
+ "recipe": {
+  "toolchain_commit": "1ff572c3f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N4309_neg/2026-11-05-lm1909-16015c69.tests.json"
+ },
+ "label": "the article ' a' opening a fresh step or clause: 'In a small bowl,', 'Cut a narrow strip', 'With a little practice'; ' a' after a plain verb like 'has' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N4309_neg/2026-11-05-lm1909-16015c69.tests.json",
+   "prereg_commit": "1ff572c3f",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.516,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.431,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.205,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.438,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.102,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.202,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.025,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.586,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": "With"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": "Dr"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.073,
+     "peak": "With"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": "Add"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.93,
+    "median_fire": 0.318,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1ff572c3f",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' a' opening a step or clause",
+ "unit_kind": "contextual / token",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " a"
+  ]
+ }
+}

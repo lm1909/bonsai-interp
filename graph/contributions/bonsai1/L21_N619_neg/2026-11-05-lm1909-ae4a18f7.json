@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-ae4a18f7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N619-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:50:03+00:00",
+ "recipe": {
+  "toolchain_commit": "1ff572c3f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N619_neg/2026-11-05-lm1909-ae4a18f7.tests.json"
+ },
+ "label": "(guess) the article or copula that classifies something: 'as it is a solid', 'is an extremely', 'are'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N619_neg/2026-11-05-lm1909-ae4a18f7.tests.json",
+   "prereg_commit": "1ff572c3f",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.048,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.045,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.024,
+     "peak": " pass"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.347,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.028,
+     "peak": " title"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.018,
+     "peak": " groups"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.049,
+     "peak": " class"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " cache"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " cover"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": " list"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.617,
+    "median_fire": 0.037,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1ff572c3f",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "classifying article after a copula (guess)",
+ "unit_kind": "unclear / syntactic",
+ "confidence": "low",
+ "selection": "random draw"
+}
