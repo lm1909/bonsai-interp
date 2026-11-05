@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-6c0ab330",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10249-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:15:17+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L35/N10249",
+   "pole": "-",
+   "label": "a word-start piece that cannot stand alone: German ' gek' and 'inger', Arabic ' الد' and ' المنت', as opposed to whole or differently split words in those languages",
+   "fire": [
+    "Wir haben gestern ein neues Sofa gekauft.",
+    "Die Suppe wurde mit frischem Gemüse gekocht.",
+    "Die Zuschüsse wurden im letzten Jahr gekürzt.",
+    "Das Hotel ist modern und hell eingerichtet.",
+    "يساعد المشي على تنشيط الدورة في الجسم.",
+    "زرنا المنتزه القريب من البيت أمس.",
+    "تحمل الأوعية الدموية الأكسجين إلى القلب.",
+    "ارتفعت الأمراض المنتشرة في الصيف الماضي."
+   ],
+   "quiet": [
+    "Wir haben gestern ein neues Sofa gesehen.",
+    "Die Suppe wurde mit frischem Gemüse serviert.",
+    "Die Zuschüsse wurden im letzten Jahr erhöht.",
+    "Das Hotel ist modern und hell gebaut.",
+    "يساعد المشي على راحة العقل في الصباح.",
+    "زرنا الحديقة القريبة من البيت أمس.",
+    "تحمل الشاحنات البضائع إلى السوق.",
+    "ارتفعت الأسعار كثيرا في الصيف الماضي."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "incomplete word-start piece (de, ar)",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Second round, same idea with the tokenization checked first: in a sweep an item merged into '-dimensional' and could not fire. Tokens checked: ' gek', ' e|inger', ' الد', ' المنت'. Code ('.d') and English ('-d') are left out here."
+}

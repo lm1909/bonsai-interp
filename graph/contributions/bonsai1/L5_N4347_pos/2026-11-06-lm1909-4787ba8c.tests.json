@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-4787ba8c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N4347+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:15:17+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L5/N4347",
+   "pole": "+",
+   "label": "a stray ' that' right after a subject pronoun, where the verb should be ('it that nobody cares', 'and I that they tried'), as opposed to the same sentence with its verb",
+   "fire": [
+    "I really believe that it that was the cause.",
+    "The main risk, then, it that prices will fall.",
+    "We came and we that the door was open.",
+    "The harshest review, however, it that the film is dull.",
+    "You said you that the bus was late.",
+    "I love this town and I that it is quiet.",
+    "My point here it that we need more time.",
+    "They know they that the bridge is closed."
+   ],
+   "quiet": [
+    "I really believe that it was the cause.",
+    "The main risk, then, is that prices will fall.",
+    "We came and we saw that the door was open.",
+    "The harshest review, however, says that the film is dull.",
+    "You said you knew that the bus was late.",
+    "I love this town and I think that it is quiet.",
+    "My point here is that we need more time.",
+    "They know they said that the bridge is closed."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "stray ' that' in place of the verb",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. In a sweep, 'unexpected token after a pronoun' failed: split verbs were mostly quiet (0.01–0.32) while stray ' that' reached 0.46–0.81. A later probe of 'She knew she that' scored only 0.09. The near misses share most words with the fire items, so leakage counts against the label."
+}

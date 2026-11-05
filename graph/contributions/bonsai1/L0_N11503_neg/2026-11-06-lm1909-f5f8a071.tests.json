@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-f5f8a071",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11503-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:15:17+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L0/N11503",
+   "pole": "-",
+   "label": "Dutch text, as opposed to the same sentences in German, Danish, Swedish and English",
+   "fire": [
+    "Mijn oma bakt elke zondag een lekkere appeltaart.",
+    "Vanavond gaan wij naar de film met de buren.",
+    "De trein naar Amsterdam vertrekt om acht uur.",
+    "Ik heb mijn sleutels op de keukentafel laten liggen.",
+    "Zij werkt al tien jaar bij een grote bank.",
+    "Volgend jaar wil hij naar de universiteit in Leiden.",
+    "In de winter is het hier vaak koud en nat.",
+    "Waarom heb je gisteren niet even gebeld?"
+   ],
+   "quiet": [
+    "Meine Oma backt jeden Sonntag einen leckeren Apfelkuchen.",
+    "I aften går vi i biografen med naboerne.",
+    "The train to Amsterdam leaves at eight o'clock.",
+    "Jag har lämnat mina nycklar på köksbordet.",
+    "Sie arbeitet seit zehn Jahren bei einer großen Bank.",
+    "Next year he wants to go to the university in Leiden.",
+    "Om vinteren er det ofte koldt og vådt her.",
+    "Warum hast du gestern nicht kurz angerufen?"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "Dutch text",
+ "unit_kind": "language",
+ "confidence": "high",
+ "notes": "Second round. The first label on this pole, 'Dutch text; Russian ъ', failed in a sweep because the two Russian items scored 0.02–0.04 while the 6 Dutch items scored 0.28–0.52. This round drops ъ. ъ fired in probes but not there, and this test says nothing about it. Tiny corpus max (2.16)."
+}
