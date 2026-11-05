@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-d69de549",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N4347+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:51:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N4347",
+   "pole": "+",
+   "label": "the token after a pronoun when it is not the expected verb: a split verb start after ' I' (I a|woke, I in|haled, I F|elt) or a stray word (it that), as opposed to the ordinary verb after ' I'",
+   "fire": [
+    "I awakened to the sound of rain on the roof.",
+    "I exhaled slowly and put the cup down.",
+    "I Loved Every Minute of the show.",
+    "I admire this and I that they tried so hard.",
+    "I enrolled in the class during the fall.",
+    "The main problem, in short, it that it costs too much.",
+    "I overslept and missed the first train.",
+    "I unpacked my bag and I that it was empty."
+   ],
+   "quiet": [
+    "I heard the sound of rain on the roof.",
+    "I sat slowly and put the cup down.",
+    "I saw every minute of the show.",
+    "I admire this and I know that they tried so hard.",
+    "I took the class during the fall.",
+    "The main problem, in short, is that it costs too much.",
+    "I got up and missed the first train.",
+    "I opened my bag and I saw that it was empty."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "unexpected token after ' I' or 'it'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "'She awoke' reached 0.15, so the pronoun I or the split may matter. Other card peaks ('-temp', ' Ch', ' Chart') are not covered."
+}
