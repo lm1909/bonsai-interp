@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-eae6e169",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N12276-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:05:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N12276",
+   "pole": "-",
+   "label": "in Russian, French and Spanish, the token right before a number, time or age (до 18:00, около 8, старше 65, à 18 ans, a 23:00), as opposed to the same prepositions before a noun or place",
+   "fire": [
+    "Билеты стоят около 300 рублей за взрослого.",
+    "Поезд идет с 7:00 до 21:00 без перерыва.",
+    "Моей дочери недавно исполнилось семь лет.",
+    "В клуб пускают только старше 18 лет.",
+    "La limite a été fixée à 50 km/h dans le village.",
+    "Le musée est ouvert de 10 h à 18 h en semaine.",
+    "La tienda abre de 9:00 a 20:00 de lunes a viernes.",
+    "Las temperaturas llegaron a casi 40 grados ayer."
+   ],
+   "quiet": [
+    "Билеты продаются около вокзала в центре города.",
+    "Поезд идет до Москвы без всяких остановок.",
+    "Моей дочери недавно подарили новую куклу.",
+    "В клуб пускают только друзей хозяина.",
+    "La lettre a été envoyée à Lyon depuis le village.",
+    "Le musée est ouvert à tous en semaine.",
+    "La tienda está cerca de la plaza del pueblo.",
+    "Las familias llegaron a la playa ayer."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "token before a number (ru, fr, es)",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "English equivalents were weak in probes ('to 17:00' 0.19, 'until 11' 0.19, 'at least 12' 0.03), and ' ==' before 0 fired only sometimes (0.17 to 0.35), so the test covers the three languages where it was strong."
+}

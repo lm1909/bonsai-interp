@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-05-lm1909-4965d687",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11503-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:05:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N11503",
+   "pole": "-",
+   "label": "Dutch text (function words and word pieces such as ' om', 'ij', 'uk'), and separately the Russian hard sign ъ, as opposed to the same sentences in English or German and Russian without ъ",
+   "fire": [
+    "Mijn zus woont sinds vorig jaar in een klein dorp bij Utrecht.",
+    "We hebben vanmiddag lekker gewandeld door het bos.",
+    "De kinderen spelen elke zomer buiten in de tuin.",
+    "Hij vergat om zijn moeder op tijd te bellen.",
+    "Het weer wordt volgende week waarschijnlijk veel beter.",
+    "Ik moet morgen vroeg opstaan voor mijn werk.",
+    "Они поехали в объезд, потому что мост закрыт.",
+    "В этом объявлении есть ошибка, сказал он."
+   ],
+   "quiet": [
+    "My sister has lived in a small village near Utrecht since last year.",
+    "Wir sind heute Nachmittag schön durch den Wald gewandert.",
+    "The children play outside in the garden every summer.",
+    "Er vergaß, seine Mutter rechtzeitig anzurufen.",
+    "Das Wetter wird nächste Woche wahrscheinlich viel besser.",
+    "I have to get up early tomorrow for my work.",
+    "Они поехали другой дорогой, потому что мост закрыт.",
+    "В этой статье есть ошибка, сказал он."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "Dutch text; Russian ъ",
+ "unit_kind": "language",
+ "confidence": "low",
+ "notes": "A list, not a pattern: I found nothing that joins Dutch and ъ. Tiny corpus max (2.16), so small absolute values count; 16% of the pole's activations are in the leak regime."
+}

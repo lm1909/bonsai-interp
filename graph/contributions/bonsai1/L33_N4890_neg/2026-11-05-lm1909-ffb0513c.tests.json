@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-05-lm1909-ffb0513c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4890-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:05:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N4890",
+   "pole": "-",
+   "label": "a capital T or Т split off as its own token at the start of a name or word (' T|arek', ' Т|имур'), as opposed to names starting with another letter or staying whole",
+   "fire": [
+    "The committee met in Thimphu. Tshering gave the opening speech.",
+    "In the final climb, Tadej attacked and nobody could follow.",
+    "Everyone at the clinic trusts Tarek with the difficult patients.",
+    "Our neighbour Tunde brought soup when we were ill.",
+    "Мы долго ждали на вокзале. Тимур приехал только вечером.",
+    "Об этом вчера заявил Трамп на пресс-конференции.",
+    "Мы переехали прошлой осенью. Тверь нам очень нравится.",
+    "Все уже собрались в комнате. Тогда он начал рассказ."
+   ],
+   "quiet": [
+    "The committee met in Geneva. Maria gave the opening speech.",
+    "In the final climb, Luca attacked and nobody could follow.",
+    "Everyone at the clinic trusts Daniel with the difficult patients.",
+    "Our neighbour Kwame brought soup when we were ill.",
+    "Мы долго ждали на вокзале. Иван приехал только вечером.",
+    "Об этом вчера заявил министр на пресс-конференции.",
+    "Мы переехали прошлой осенью. Москва нам очень нравится.",
+    "Все уже собрались в комнате. Потом он начал рассказ."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split capital T / Т word start",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Tokenization checked for all fire names. Probes ranged 0.10 to 0.36, so the median rule is the risk. The card also lists 'た' pieces, which this label does not cover. One probe, 'Теперь' after a full Russian sentence, scored 0.00; I did not check how it tokenized.",
+ "trigger": {
+  "tokens": [
+   " T",
+   "T",
+   " Т",
+   "Т"
+  ]
+ }
+}
