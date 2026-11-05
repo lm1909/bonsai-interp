@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-3b699824",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N639+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:50:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N639",
+   "pole": "+",
+   "label": "the '...' that cuts off a truncated review snippet before a 'more' link",
+   "fire": [
+    "it is a nice phone but the battery died.. 2 times in w... more",
+    "love this game a lot.. played it all night and i th... more",
+    "Great hotel, clean rooms and very friendly sta... more",
+    "we bought this last summer.. works ok but it br... more",
+    "The food was tasty and the waiter was really ni... more",
+    "good price.. arrived on time but the box was da... more",
+    "my son loves it.. he plays with it every day an... more",
+    "Nice little shop near the station with lots of b... more"
+   ],
+   "quiet": [
+    "it is a nice phone but the battery died two times in one week",
+    "love this game a lot and played it all night with my brother",
+    "Great hotel, clean rooms and very friendly staff at the desk",
+    "we bought this last summer and it works ok but it broke once",
+    "The food was tasty and the waiter was really nice to us",
+    "good price and it arrived on time but the box was damaged",
+    "my son loves it and he plays with it every day after school",
+    "Nice little shop near the station with lots of books to read"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "'...' in truncated snippet",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has '1', '\\n', ' /', '...\\n', ' more', ' u', with footnotes, Python u-strings, a poem and quote/unquote. Probes: 0.447 on '...' in a truncated snippet, 'quote' 0.183, others under 0.04. A low-confidence guess at one sub-cluster; expected to explain little of the pole if it holds at all."
+}

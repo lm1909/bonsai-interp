@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-ae0c78ea",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N1321+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:50:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N1321",
+   "pole": "+",
+   "label": "the spelling piece ' cock' or ' Cock' at the start of a longer word (cockatoo, cockup, Cockburn, cockerel, cockroach)",
+   "fire": [
+    "A sulphur-crested cockatoo screamed from the top of the gum tree.",
+    "The whole election was a complete cockup from start to finish.",
+    "The historian Claud Cockburn wrote a famous memoir of the thirties.",
+    "A young cockerel strutted around the yard behind the barn.",
+    "We found a cockroach crawling behind the kitchen sink.",
+    "The report blames a series of cockups in the transport office.",
+    "Lord Cockburn wrote about Edinburgh in the last century.",
+    "Pet cockatoos can live for decades and need much attention."
+   ],
+   "quiet": [
+    "A sulphur-crested parrot screamed from the top of the gum tree.",
+    "The whole election was a complete failure from start to finish.",
+    "The historian Claud Hamilton wrote a famous memoir of the thirties.",
+    "A young rooster strutted around the yard behind the barn.",
+    "We found a beetle crawling behind the kitchen sink.",
+    "The report blames a series of errors in the transport office.",
+    "Lord Cameron wrote about Edinburgh in the last century.",
+    "Pet macaws can live for decades and need much attention."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "'cock-' word start",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' cock' x5, ' Cock' x3, 'ck', all in non-sexual uses (Cockburn, cockups, cockatoo), plus outliers ('한', '这种', ' the') at the top. Probes: cockups 0.725, cockatoo 0.638, cockerel 0.588, Cockburn 0.580; Fowler 0.041. Whole-token ' cockpit' and ' cocktail' are avoided since they do not contain the piece. Fire sentences use only bird, insect, surname and error senses.",
+ "trigger": {
+  "tokens": [
+   " cock",
+   " Cock"
+  ]
+ }
+}

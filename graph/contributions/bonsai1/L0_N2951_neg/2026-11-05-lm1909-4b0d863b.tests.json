@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-05-lm1909-4b0d863b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N2951-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:50:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N2951",
+   "pole": "-",
+   "label": "the Arabic letter piece 'ض' as its own token (إ|ض|افة), and the English adverb ' just'",
+   "fire": [
+    "إضافة إلى المشاريع السابقة تم بناء مدرسة جديدة.",
+    "وقد أعلنت الشركة عن إضافة خدمات جديدة للعملاء.",
+    "إضافة إلى ذلك زار الوزير المستشفى المركزي.",
+    "يقوم الفريق بإضفاء لمسة جديدة على التصميم.",
+    "He would just stand at the door and wait.",
+    "They just won't answer any of my letters.",
+    "إضافة الملح إلى الطعام أمر سهل.",
+    "She just looked at the sea for an hour."
+   ],
+   "quiet": [
+    "علاوة على المشاريع السابقة تم بناء مدرسة جديدة.",
+    "وقد أعلنت الشركة عن تقديم خدمات جديدة للعملاء.",
+    "علاوة على ذلك زار الوزير المستشفى المركزي.",
+    "يقوم الفريق بتقديم لمسة جديدة على التصميم.",
+    "He would often stand at the door and wait.",
+    "They never answer any of my letters.",
+    "وجود الملح في الطعام أمر سهل.",
+    "She looked at the sea for an hour."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "Arabic 'ض' piece / ' just'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: 'ض' x22, ' just' x4 of the top 32 (broad flag 2.2%, max 0.59). Probes: 'ض' in إضافة 0.591; ' just' 0.558 and 0.412; sentences where ض is part of a longer token 0.064-0.141. A list of two unrelated tokens; AGENTS.md says to keep a list if I can't find the pattern. Tokenization of every Arabic sentence was checked before commit.",
+ "trigger": {
+  "tokens": [
+   "ض",
+   " just"
+  ]
+ }
+}

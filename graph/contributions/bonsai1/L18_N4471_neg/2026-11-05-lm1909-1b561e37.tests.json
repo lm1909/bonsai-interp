@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-1b561e37",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N4471-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:50:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N4471",
+   "pole": "-",
+   "label": "the period ending a factual statement that sets up a topic (a definition or a dated fact), with more to come",
+   "fire": [
+    "Serotonin is a chemical messenger. It affects mood and sleep.",
+    "A heat pump is a device for moving thermal energy. It runs on electricity.",
+    "The Battle of Hastings was fought in October 1066. It changed England.",
+    "Photosynthesis is the process by which plants make sugar. It needs light.",
+    "The term habeas corpus needs to be defined first. Broadly, it protects liberty.",
+    "A glacier is a slow river of ice. Most lie near the poles.",
+    "The Treaty of Utrecht was signed in 1713. It ended a long war.",
+    "An enzyme is a protein that speeds up a reaction. Each has a target."
+   ],
+   "quiet": [
+    "Serotonin is a chemical messenger that affects mood and sleep in most mammals",
+    "A heat pump is a device for moving thermal energy that runs on electricity",
+    "The Battle of Hastings was fought in October 1066 and changed England for good",
+    "Photosynthesis is the process by which plants use light in making their sugar",
+    "The term habeas corpus needs to be defined first because it protects liberty",
+    "A glacier is a slow river of ice and most of them lie near the poles",
+    "The Treaty of Utrecht was signed in 1713 and ended a long and costly war",
+    "An enzyme is a protein that speeds up a reaction and each has its own target"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "period after a topic-setting fact",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: '.' x23 and '.\\n' x5 of the top 32, mostly after definitions and facts in encyclopedic prose. Probes: 'fought in 1915.' 0.400, 'energy conversion device.' 0.351, 'a neurotransmitter.' 0.277; 'The bus stopped.' 0.141, 'Hello there.' 0.078. Near misses carry the same facts on with a relative clause and no period, so a sentence-final token is the difference; the card shows '.' can fire on fiction too."
+}
