@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-dc58695e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N7907+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:51:36+00:00",
+ "recipe": {
+  "toolchain_commit": "8da338075",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N7907_pos/2026-11-06-lm1909-dc58695e.tests.json"
+ },
+ "label": "opening piece of a word after a hyphen or apostrophe, or a German verb stem ('-E|urasian', \"l'E|glise\", 'ref|le|ktieren', ' me|istern'; output promotes 'nd', 'rd', 'st')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N7907_pos/2026-11-06-lm1909-dc58695e.tests.json",
+   "prereg_commit": "8da338075",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.692,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.017,
+     "peak": " Indo"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.765,
+     "peak": "le"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.322,
+     "peak": "'E"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.018,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.564,
+     "peak": "le"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.306,
+     "peak": "'E"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.462,
+     "peak": " me"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": "frican"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " Red"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " treaty"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": "Die"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": "-P"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.073,
+     "peak": " lö"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.392,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8da338075",
+  "minutes": 24,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "E- / stem pieces",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "notes": "Output promotes letter pieces 'nd', 'rd', 'st', 'nde', 'ru', 'pt'. Card: '-E' x8, 'E' x2, '/E' x2, ' э' x2. Probe: 'le' in reflektieren 0.75, '-E' 0.66, \"'E\" 0.31, ' me' 0.25; plain German 0.02.",
+ "selection": "random draw"
+}

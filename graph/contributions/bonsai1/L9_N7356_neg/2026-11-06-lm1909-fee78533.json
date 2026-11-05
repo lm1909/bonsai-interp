@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fee78533",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N7356-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:51:38+00:00",
+ "recipe": {
+  "toolchain_commit": "8da338075",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N7356_neg/2026-11-06-lm1909-fee78533.tests.json"
+ },
+ "label": "dense gate-closed unit, strongest on island names (' Island', Galap|agos)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N7356_neg/2026-11-06-lm1909-fee78533.tests.json",
+   "prereg_commit": "8da338075",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.388,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.838,
+     "peak": " Gal"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.457,
+     "peak": " Island"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.556,
+     "peak": "ception"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.794,
+     "peak": "agos"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.614,
+     "peak": " Island"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.587,
+     "peak": " Island"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.763,
+     "peak": " Island"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.199,
+     "peak": " polar"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.191,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.232,
+     "peak": " seals"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.258,
+     "peak": " ship"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.221,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.285,
+     "peak": " th"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.092,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.303,
+     "peak": " county"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.601,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8da338075",
+  "minutes": 24,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; island names",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (10.1%) and gate-closed (100% leak); ' Island' x7, 'get' x3, 'pag' x2, ' Gal'. Probe: 'King George Island' 0.78, 'Galapagos' 0.84, but 'At the bay, penguins' 0.26.",
+ "selection": "random draw"
+}

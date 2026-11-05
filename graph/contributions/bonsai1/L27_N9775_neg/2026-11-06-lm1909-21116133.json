@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-21116133",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9775-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:51:04+00:00",
+ "recipe": {
+  "toolchain_commit": "8da338075",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N9775_neg/2026-11-06-lm1909-21116133.tests.json"
+ },
+ "label": "the closing quote of a Python string with a format placeholder or file suffix ('report-{}.xml'., '%s.zip' %)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N9775_neg/2026-11-06-lm1909-21116133.tests.json",
+   "prereg_commit": "8da338075",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.803,
+     "peak": "'."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.697,
+     "peak": "'"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.801,
+     "peak": ">'"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.924,
+     "peak": "'."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.702,
+     "peak": "'"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.774,
+     "peak": "'."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.459,
+     "peak": "'"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.505,
+     "peak": ">'"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": "build"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.046,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.088,
+     "peak": " text"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "url"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.047,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.002,
+     "peak": "',"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.092,
+     "peak": "'"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " each"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.738,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8da338075",
+  "minutes": 23,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "closing quote of format string",
+ "unit_kind": "code / format",
+ "confidence": "high",
+ "notes": "Card: \"'.\" x6, \"'\" x6, '\"' x5, '_fname'. Probe: \"'.format\" 0.90, \"'%s.zip' %\" 0.81, \"</h2>' %\" 0.95; \"name = 'report'\" 0.00; prose 0.03.",
+ "selection": "random draw"
+}

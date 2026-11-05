@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b14a154a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N2975+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:51:13+00:00",
+ "recipe": {
+  "toolchain_commit": "8da338075",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N2975_pos/2026-11-06-lm1909-b14a154a.tests.json"
+ },
+ "label": "saying that something is bad or wrong (horrendous, too soft, wrong, mistakes)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N2975_pos/2026-11-06-lm1909-b14a154a.tests.json",
+   "prereg_commit": "8da338075",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.645,
+     "peak": " dreadful"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.483,
+     "peak": " can"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.264,
+     "peak": " wrong"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.74,
+     "peak": "akes"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.293,
+     "peak": " horrible"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.263,
+     "peak": " awful"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.467,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.5,
+     "peak": "ious"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.11,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.139,
+     "peak": " neck"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": " diagnosis"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.102,
+     "peak": " Questions"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": " early"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.079,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " spelling"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.475,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8da338075",
+  "minutes": 24,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "negative evaluation",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card shows no repeating token (' and' x2, 'ous', ' too', ' wrong', 'akes', 'ization', 'ant'). Pattern from the top examples. Probe: Mistakes 0.92, 'too soft' 0.71, horrendous 0.63, wrong 0.36; 'detailed report' 0.04, 'firm' 0.02.",
+ "selection": "random draw"
+}

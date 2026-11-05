@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-a25db71c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N10702-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:51:36+00:00",
+ "recipe": {
+  "toolchain_commit": "8da338075",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N10702_neg/2026-11-06-lm1909-a25db71c.tests.json"
+ },
+ "label": "the character 萬 (ten thousand, traditional form; 万 weaker)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N10702_neg/2026-11-06-lm1909-a25db71c.tests.json",
+   "prereg_commit": "8da338075",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.631,
+     "peak": "萬"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.615,
+     "peak": "萬"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.354,
+     "peak": "萬"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.576,
+     "peak": "萬"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.12,
+     "peak": "萬元"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.615,
+     "peak": "萬"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.583,
+     "peak": "萬"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.27,
+     "peak": "萬"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": "每年"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": "不要"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": "城市"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "去年"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "每月"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "非常好"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.579,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8da338075",
+  "minutes": 24,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "萬",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: '萬' x17, '万' x14, '物' of '萬物' at the top. Probe: 上千萬 0.66, 千萬 0.62; 千万 as a single token 0.12; no 萬 0.01. Simplified forms that merge into one token may score low.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "萬",
+   "万"
+  ]
+ }
+}
