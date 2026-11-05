@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-05-lm1909-87febade",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N1968+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N1968",
+   "pole": "+",
+   "label": "'.wikipedia', '.transpose' and Arabic 'ائل' tokens (guess, list only)",
+   "fire": [
+    "For the history of the village, check https://de.wikipedia.org/wiki/Bergdorf today.",
+    "The source of this claim is https://fr.wikipedia.org/wiki/Fromage as far as I know.",
+    "A photo of the bridge is at http://en.wikipedia.org/wiki/Bridge if you want it.",
+    "import tensorflow as tf\n\nz = tf.transpose(batch)\nprint(z)\n",
+    "import numpy as np\n\nm = np.transpose(grid)\nprint(m)\n",
+    "import torch\n\ny = torch.transpose(x, 1, 2)\nprint(y)\n",
+    "تعيش هذه العائلة في قرية صغيرة قرب النهر",
+    "تزور الجدة عائلتها في نهاية كل أسبوع"
+   ],
+   "quiet": [
+    "For the history of the village, check https://de.dorfarchiv.org/wiki/Bergdorf today.",
+    "The source of this claim is https://fr.fromagerie.org/wiki/Fromage as far as I know.",
+    "A photo of the bridge is at http://en.bridgehub.org/wiki/Bridge if you want it.",
+    "import tensorflow as tf\n\nz = tf.flatten(batch)\nprint(z)\n",
+    "import numpy as np\n\nm = np.squeeze(grid)\nprint(m)\n",
+    "import torch\n\ny = torch.flatten(x, 1, 2)\nprint(y)\n",
+    "يعيش هذا الصياد في قرية صغيرة قرب النهر",
+    "تزور الجدة صديقتها في نهاية كل أسبوع"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": ".wikipedia, .transpose, ائل (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "trigger": {
+  "tokens": [
+   ".wikipedia",
+   ".transpose",
+   "ائل"
+  ]
+ }
+}

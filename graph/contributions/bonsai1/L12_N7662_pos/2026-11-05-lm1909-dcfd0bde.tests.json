@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-dcfd0bde",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N7662+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N7662",
+   "pole": "+",
+   "label": "Python built-in and standard-library helper names (len, super, timedelta, setdefault) in code",
+   "fire": [
+    "import unittest\n\nclass QueueTest(unittest.TestCase):\n    def test_size(self):\n        self.assertEqual(len(queue), 3, msg='Queue.__len__ failed')\n",
+    "from __future__ import print_function\nfrom builtins import super\n\nclass Child(Parent):\n    pass\n",
+    "import datetime\n\nstart = datetime.datetime.now()\nwindow = datetime.timedelta(hours=6)\nend = start + window\n",
+    "counts = {}\nfor word in words:\n    counts.setdefault(word, []).append(1)\nprint(counts)\n",
+    "class Cache(dict):\n    def setdefault(self, key, value):\n        return dict.setdefault(self, key, value)\n",
+    "import numpy as np\n\nbatch = np.expand_dims(image, axis=0)\nprint(batch.shape)\n",
+    "def __len__(self):\n    return len(self._rows)\n\ndef __iter__(self):\n    return iter(self._rows)\n",
+    "from datetime import datetime, timedelta\n\ndeadline = datetime.utcnow() + timedelta(minutes=30)\nprint(deadline)\n"
+   ],
+   "quiet": [
+    "import unittest\n\nclass QueueTest(unittest.TestCase):\n    def test_name(self):\n        self.assertEqual(queue.name, 'jobs', msg='wrong queue name')\n",
+    "from __future__ import print_function\nfrom shapes import Parent\n\nclass Child(Parent):\n    pass\n",
+    "import billing\n\nstart = billing.first_invoice()\nwindow = billing.grace_period(6)\nend = start + window\n",
+    "counts = {}\nfor word in words:\n    counts[word] = 1\nprint(counts)\n",
+    "class Cache(Store):\n    def lookup(self, key, value):\n        return self.fetch_row(key, value)\n",
+    "import imaging\n\nbatch = imaging.prepare_image(image, 0)\nprint(batch.label)\n",
+    "def total_cost(self):\n    return self.price + self.tax\n\ndef owner(self):\n    return self._owner\n",
+    "from orders import Order, make_order\n\ndeadline = make_order(customer) + 30\nprint(deadline)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python builtin/stdlib helper names",
+ "unit_kind": "token / code",
+ "confidence": "low"
+}

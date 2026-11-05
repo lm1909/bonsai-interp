@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-05-lm1909-57cbb8b9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N8900+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T21:23:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N8900",
+   "pole": "+",
+   "label": "Python module or namespace component just before a class name (tornado.web.RequestHandler, x_driver.LibvirtDriver)",
+   "fire": [
+    "import tornado.web\n\nclass StatusPage(tornado.web.RequestHandler):\n    def get(self):\n        self.write('ok')\n",
+    "import xenapi_driver\n\nconn = make_conn()\nhost = xenapi_driver.XenAPIDriver(conn)\nhost.init_host()\n",
+    "from neutron.agent import l3_agent\n\ninfo = l3_agent.L3NATAgent(host='a')\ninfo.after_start()\n",
+    "import twisted.internet.protocol\n\nclass Echo(twisted.internet.protocol.Protocol):\n    def dataReceived(self, data):\n        self.transport.write(data)\n",
+    "import django.views.generic\n\nclass BookList(django.views.generic.ListView):\n    model = Book\n",
+    "from nova.virt.libvirt import config as vconfig\n\nguest = vconfig.LibvirtConfigGuestDisk()\nguest.driver_name = 'qemu'\n",
+    "import flask.views\n\nclass Ping(flask.views.MethodView):\n    def get(self):\n        return 'pong'\n",
+    "import asyncore\n\nclass Dispatcher(asyncore.dispatcher):\n    def handle_accept(self):\n        pass\n"
+   ],
+   "quiet": [
+    "import math\n\nclass StatusPage:\n    def get(self):\n        return math.sqrt(16)\n",
+    "values = [3, 1, 2]\nvalues.sort()\nfor v in values:\n    print(v * 2)\n",
+    "name = 'router'\nsize = len(name)\nif size > 3:\n    print(name.upper())\n",
+    "class Echo:\n    def received(self, data):\n        self.data = data.strip()\n        return self.data\n",
+    "class BookList:\n    model = 'Book'\n    pages = 300\n    title = 'atlas'\n",
+    "guest = {}\nguest['driver'] = 'qemu'\nguest['disk'] = 20\nprint(guest)\n",
+    "def ping():\n    return 'pong'\n\nresult = ping()\nprint(result)\n",
+    "def accept(items):\n    kept = [i for i in items if i > 0]\n    return sum(kept)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python namespace before a class",
+ "unit_kind": "token / code",
+ "confidence": "medium"
+}
