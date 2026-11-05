@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-098e2a2e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N6801-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:52:48+00:00",
+ "recipe": {
+  "toolchain_commit": "adf06cc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N6801_neg/2026-11-05-lm1909-098e2a2e.tests.json"
+ },
+ "label": "A word naming the useful role something plays ('source of energy', 'crucial habitats', 'covered expenses', 'good for'), where a complement saying what it serves comes next; plain descriptions of the same things stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N6801_neg/2026-11-05-lm1909-098e2a2e.tests.json",
+   "prereg_commit": "adf06cc72",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.568,
+     "peak": " energy"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.678,
+     "peak": " habitats"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.329,
+     "peak": " costs"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.29,
+     "peak": " good"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.502,
+     "peak": " fuel"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.754,
+     "peak": " habitats"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.227,
+     "peak": " expenses"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.301,
+     "peak": " good"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " soft"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "W"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " training"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": "ger"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " corner"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.415,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "adf06cc72",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word naming a useful role",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "The output direction promotes ' in' across languages. Probes: ' habitats' 0.76, ' energy' 0.69, ' good' 0.42; 'common goal' read only 0.01 and 'beneficial' 0.19, so the boundary is rough.",
+ "selection": "random draw"
+}

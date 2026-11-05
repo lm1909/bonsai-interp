@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-ef8a356f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N3108+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:52:59+00:00",
+ "recipe": {
+  "toolchain_commit": "adf06cc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N3108_pos/2026-11-05-lm1909-ef8a356f.tests.json"
+ },
+ "label": "A digit that repeats the digit right before it, inside a phone number, code or similar digit string ('66', '44', '99'); the same strings with no adjacent repeat stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N3108_pos/2026-11-05-lm1909-ef8a356f.tests.json",
+   "prereg_commit": "adf06cc72",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.509,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.76,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.473,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.603,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.563,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.596,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.279,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.148,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " color"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.318,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "D"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.536,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "adf06cc72",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "digit repeating the previous digit",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Probes: 0.56-0.83 on repeats in number strings, under 0.13 without. 'Room 55' read only 0.21, so short standalone numbers are weaker. Every near miss was checked to have no adjacent repeat.",
+ "selection": "random draw"
+}
