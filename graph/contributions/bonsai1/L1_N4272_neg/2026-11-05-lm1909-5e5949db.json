@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-5e5949db",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N4272-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:13:46+00:00",
+ "recipe": {
+  "toolchain_commit": "ed329de5e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N4272_neg/2026-11-05-lm1909-5e5949db.tests.json"
+ },
+ "label": "dense weak pole; strongest on ' erfol' (German erfolgt), Korean 소 and Arabic ية",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N4272_neg/2026-11-05-lm1909-5e5949db.tests.json",
+   "prereg_commit": "ed329de5e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 5,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.735,
+     "peak": " erfol"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.719,
+     "peak": " erfol"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.874,
+     "peak": "소"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.908,
+     "peak": "소"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.86,
+     "peak": "ية"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.796,
+     "peak": "ية"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.763,
+     "peak": " erfol"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.886,
+     "peak": "소"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.338,
+     "peak": "ert"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.19,
+     "peak": "meldung"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.423,
+     "peak": "야"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.458,
+     "peak": "하고"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.149,
+     "peak": " الجديدة"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.316,
+     "peak": " الحديث"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.28,
+     "peak": " steht"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.342,
+     "peak": "하는"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.828,
+    "near_misses_at_0.3": 5
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ed329de5e",
+  "minutes": 16,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense, weak; erfol, 소, ية",
+ "unit_kind": "dense / positional",
+ "confidence": "medium",
+ "selection": "random draw"
+}

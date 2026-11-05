@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-05-lm1909-d44e5fed",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N2976+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:13:28+00:00",
+ "recipe": {
+  "toolchain_commit": "ed329de5e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N2976_pos/2026-11-05-lm1909-d44e5fed.tests.json"
+ },
+ "label": "the Spanish comparative ' mayor' before an abstract noun ('una mayor flexibilidad'); English 'mayor' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N2976_pos/2026-11-05-lm1909-d44e5fed.tests.json",
+   "prereg_commit": "ed329de5e",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.491,
+     "peak": " mayor"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.793,
+     "peak": " mayor"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.191,
+     "peak": " mayor"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.217,
+     "peak": " mayor"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.554,
+     "peak": " mayor"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.852,
+     "peak": " mayor"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.908,
+     "peak": " mayor"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.204,
+     "peak": " mayor"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.226,
+     "peak": " buena"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.272,
+     "peak": " gran"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " estos"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " puede"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.325,
+     "peak": " fácil"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.348,
+     "peak": "erta"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "Our"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.522,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ed329de5e",
+  "minutes": 16,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Spanish comparative 'mayor'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " mayor"
+  ]
+ }
+}

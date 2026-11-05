@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-3eb32ded",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11810+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:13:56+00:00",
+ "recipe": {
+  "toolchain_commit": "ed329de5e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N11810_pos/2026-11-05-lm1909-3eb32ded.tests.json"
+ },
+ "label": "(French) the split start of a word that continues with é: réfr|igérateur, -cor|éen, hyg|rométrie, ing|énieur; unaccented French and English cognates stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N11810_pos/2026-11-05-lm1909-3eb32ded.tests.json",
+   "prereg_commit": "ed329de5e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.595,
+     "peak": "fr"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.564,
+     "peak": "-cor"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.361,
+     "peak": "hy"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.327,
+     "peak": " ré"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.303,
+     "peak": " arch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.283,
+     "peak": "yn"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.65,
+     "peak": " di"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.21,
+     "peak": " pré"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.152,
+     "peak": " une"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.22,
+     "peak": " ont"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.21,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.323,
+     "peak": " ré"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.112,
+     "peak": " le"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " Lyon"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.115,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " refrigerator"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.93,
+    "median_fire": 0.344,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ed329de5e",
+  "minutes": 17,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French split word before é",
+ "unit_kind": "token piece / prediction",
+ "confidence": "low",
+ "selection": "random draw"
+}
