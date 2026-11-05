@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fc40cd2a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N2280+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:16+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N2280_pos/2026-11-06-lm1909-fc40cd2a.tests.json"
+ },
+ "label": "Clinical inclusion and classification language: meeting diagnostic or entry criteria, DSM and ICD, a study population; the same frames outside medicine stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N2280_pos/2026-11-06-lm1909-fc40cd2a.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.568,
+     "peak": " inclusion"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.203,
+     "peak": " diagnostic"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.246,
+     "peak": " International"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.194,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.095,
+     "peak": " DSM"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.11,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.342,
+     "peak": " several"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.167,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " sail"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": "Those"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " menu"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "ched"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.199,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "clinical criteria and classification",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "The output direction promotes ' differential', ' inclusion', ' exclusion'. Probes were weak (0.04-0.29), and 'who met the teacher' read 0.15, the same as 'who met the entry criteria'. The fire set may not reach the bar.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-273d1b3e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N4700-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:24+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N4700_neg/2026-11-06-lm1909-273d1b3e.tests.json"
+ },
+ "label": "The word giving the dimension or basis of a stated quantity ('inches in length', 'tall', 'year on year', 'YoY'); the same subjects with no quantity stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N4700_neg/2026-11-06-lm1909-273d1b3e.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.235,
+     "peak": " length"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.148,
+     "peak": " length"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.356,
+     "peak": " tall"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.909,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.854,
+     "peak": "Y"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.024,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.361,
+     "peak": " length"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.008,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.032,
+     "peak": " lakes"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": " pale"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " sharply"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": " slowly"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.358,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dimension of a stated quantity",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probes: 0.40-1.02. 'Profuse bleeding' read 0.005, so the card's bleeding and blood examples remain unexplained and are not covered.",
+ "selection": "random draw"
+}

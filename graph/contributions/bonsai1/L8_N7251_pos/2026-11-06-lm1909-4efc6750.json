@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4efc6750",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N7251+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:20+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N7251_pos/2026-11-06-lm1909-4efc6750.tests.json"
+ },
+ "label": "'Time to' saying that the moment has come for an action, firing on ' to', ' for', ' de' after 'time', 'temps', 'hora', 'momento'; 'de' and 'to' in other frames stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N7251_pos/2026-11-06-lm1909-4efc6750.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.65,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.742,
+     "peak": " momento"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.955,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.498,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.515,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.429,
+     "peak": " time"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.413,
+     "peak": " time"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.698,
+     "peak": " Zeit"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.123,
+     "peak": " el"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.224,
+     "peak": " el"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " plan"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": "Now"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": " ist"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.583,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'time to': the moment has come",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Across languages. Probes: 0.42-0.74 in French, Spanish and English; near misses under 0.18. The German item is new and untested here.",
+ "selection": "random draw"
+}

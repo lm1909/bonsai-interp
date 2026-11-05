@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-acecbd95",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N5832+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:52+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N5832_pos/2026-11-06-lm1909-acecbd95.tests.json"
+ },
+ "label": "The tokens ' Mitchell', ' Michelle' and ' Eisen', and Russian 'ик' as in 'электроник-', against other names and words in the same slot. A list, on a broad pole.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N5832_pos/2026-11-06-lm1909-acecbd95.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.397,
+     "peak": " Mitchell"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.554,
+     "peak": " Michelle"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.439,
+     "peak": " Mitchell"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.231,
+     "peak": "berg"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.189,
+     "peak": " Mitchell"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.732,
+     "peak": "ик"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.593,
+     "peak": " Michelle"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.277,
+     "peak": " Eisen"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.145,
+     "peak": " Parker"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": " Linda"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.078,
+     "peak": " report"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.127,
+     "peak": " Goldberg"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.146,
+     "peak": " sang"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.136,
+     "peak": "еб"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": " signed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.104,
+     "peak": "osen"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.418,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Mitchell', ' Michelle', ' Eisen' list",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "A flagged broad pole (3.5% of tokens reach 0.1 of max) whose top is all gate-closed, with a max of 1.19. Near misses read up to 0.28 in probes. 'os' tops the card but was not tested.",
+ "selection": "random draw"
+}

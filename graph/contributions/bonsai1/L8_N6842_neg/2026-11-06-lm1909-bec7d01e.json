@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-bec7d01e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N6842-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:49+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N6842_neg/2026-11-06-lm1909-bec7d01e.tests.json"
+ },
+ "label": "A short literal setting in code or a protocol line: '1' in 'border=1' or 'HTTP/1.1', '=True', '-c'; the same line without that literal stays quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N6842_neg/2026-11-06-lm1909-bec7d01e.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.372,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.614,
+     "peak": "=True"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.526,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.748,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.857,
+     "peak": "c"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.557,
+     "peak": "=True"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.995,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.898,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": ">\"\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.113,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": ".connect"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.0,
+     "peak": "POST"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.154,
+     "peak": " script"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.064,
+     "peak": ".png"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "HEAD"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.681,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "short literal setting in code",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Probes: 0.55-1.02; 'while 1:' read 0.24, and '1' and 'True' in prose 0.01. The '802.11b' example in the top examples is not tested.",
+ "selection": "random draw"
+}

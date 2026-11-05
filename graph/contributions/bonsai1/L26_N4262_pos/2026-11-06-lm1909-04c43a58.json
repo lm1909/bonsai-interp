@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-04c43a58",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N4262+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:10:58+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N4262_pos/2026-11-06-lm1909-04c43a58.tests.json"
+ },
+ "label": "The last digit of the volume number in a legal citation ('530 U.S.', '328 ITR'), against the same sentences without a citation.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N4262_pos/2026-11-06-lm1909-04c43a58.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.871,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.588,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.691,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.845,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.629,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.151,
+     "peak": " U"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.658,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.418,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.397,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.296,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " changed"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "iting"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "In"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.277,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " chart"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.643,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "last digit of a legal citation volume",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 0.81-0.89 in citations; '301 Russell' 0.55. Plain three-digit numbers also read 0.21-0.42 ('274 km' 0.42), so it may be more about a third digit than law. Two near misses keep such numbers on purpose.",
+ "selection": "random draw"
+}

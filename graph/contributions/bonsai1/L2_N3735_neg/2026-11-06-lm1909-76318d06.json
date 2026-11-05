@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-76318d06",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3735-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:12:22+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N3735_neg/2026-11-06-lm1909-76318d06.tests.json"
+ },
+ "label": "The Japanese polite ending piece 'きます' in 'いただきます', and 'ri' in 'kriya'; other Japanese endings and other words in the same slot stay quiet. A list, on a pole mostly in its gate-closed regime.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N3735_neg/2026-11-06-lm1909-76318d06.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.399,
+     "peak": "きます"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.337,
+     "peak": "きます"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.282,
+     "peak": "きます"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.391,
+     "peak": "きます"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.76,
+     "peak": "ri"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.01,
+     "peak": "ic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.278,
+     "peak": "きます"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.279,
+     "peak": "きます"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "金"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "はこちら"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": "了"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "ic"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "お"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": "け"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.309,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'きます' in いただきます, 'ri' in kriya",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Probes: 'いただきます' 0.39-0.46; plain '行きます' 0.01. 'saptapadikriya' 1.72 on 'ri' is the pole's top example. Korean ' 한', the commonest top token, read under 0.05 in probes and is not covered.",
+ "selection": "random draw"
+}

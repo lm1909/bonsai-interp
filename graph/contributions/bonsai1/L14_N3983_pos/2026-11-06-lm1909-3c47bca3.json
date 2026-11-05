@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3c47bca3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N3983+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:11:31+00:00",
+ "recipe": {
+  "toolchain_commit": "3e0eabc84",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N3983_pos/2026-11-06-lm1909-3c47bca3.tests.json"
+ },
+ "label": "An everyday activity during which something else goes on ('as I walk', 'on her way to work', 'in the car', 'while driving', 'while the child is asleep'); the same nouns as plain places or objects stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N3983_pos/2026-11-06-lm1909-3c47bca3.tests.json",
+   "prereg_commit": "3e0eabc84",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.826,
+     "peak": " jog"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.886,
+     "peak": " way"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.565,
+     "peak": " car"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.102,
+     "peak": " sleep"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.588,
+     "peak": " commuting"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.262,
+     "peak": " train"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.351,
+     "peak": " wait"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.162,
+     "peak": "es"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.062,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " bought"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " set"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": " bills"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " flea"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.458,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e0eabc84",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "activity during which something happens",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Probes: 0.35-0.55, ' commute' 0.19; near misses under 0.07.",
+ "selection": "random draw"
+}
