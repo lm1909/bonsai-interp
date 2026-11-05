@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e8e0fb09",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N5680+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:45:52+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N5680_pos/2026-11-06-lm1909-e8e0fb09.tests.json"
+ },
+ "label": "The tokens ' الأوسط' (Middle, as in the Middle East), 'ze' of German Flugzeuge and 'os' of Spanish secos: a list, no shared pattern",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N5680_pos/2026-11-06-lm1909-e8e0fb09.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.681,
+     "peak": " الأوسط"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.751,
+     "peak": " الأوسط"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.675,
+     "peak": " الأوسط"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.609,
+     "peak": " الأوسط"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.821,
+     "peak": "ze"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.612,
+     "peak": "ze"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.913,
+     "peak": "os"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.638,
+     "peak": "os"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.118,
+     "peak": "يم"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.089,
+     "peak": "يفة"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": "رس"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": "ور"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": "ur"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": "Ne"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.053,
+     "peak": "cas"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": "cas"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.678,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "' الأوسط'; Flug-ze-uge; sec-os",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: ' الأوسط' x6, 'os' x2, 車 x2, 'ze', '5', ' pads'. Probe: ' الأوسط' 0.82, 'ze' of Flugzeuge 0.80, 'os' of secos 0.64, ' pads' 0.36; English 'Middle East' 0.04, الشرق alone 0.04, but ' الأ' of الأقصى 0.37.",
+ "selection": "random draw"
+}

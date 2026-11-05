@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-ccce835a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N9146-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:15+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N9146_neg/2026-11-06-lm1909-ccce835a.tests.json"
+ },
+ "label": "The split-off opening piece ' bul' / ' Bul' of a word (bulleted, bulge, Bulky); bul- words that are one token (bulk, bulbs, bullet) stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N9146_neg/2026-11-06-lm1909-ccce835a.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.768,
+     "peak": " bul"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.011,
+     "peak": " bul"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.941,
+     "peak": " bul"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.489,
+     "peak": " bul"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.842,
+     "peak": " Bul"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.785,
+     "peak": " Bul"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.504,
+     "peak": " bul"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.021,
+     "peak": " bul"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " main"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.212,
+     "peak": " bullet"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " bubble"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " its"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " Bulk"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " Heavy"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " rock"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "Each"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.814,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "split-off ' bul' piece",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' Bul' x9, 'ul' x7, ' bul' x4, ' bal' x2. Probe: ' bul' of bulge 1.02, of bulleted 0.92; whole tokens bulky 0.09, bulbs 0.03, bullet 0.12, bull 0.11, ball 0.00. Tokenizer checked for each word. ' Bul' of 'Bulky' comes from the card and was not probed.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " bul",
+   " Bul"
+  ]
+ }
+}

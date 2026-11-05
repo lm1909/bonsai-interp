@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-899f13bc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N2520+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:07+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N2520_pos/2026-11-06-lm1909-899f13bc.tests.json"
+ },
+ "label": "A compound modifier naming the basis of an approach (evidence-based, patient-centered, historically informed, farm-to-table, physically based): 'X-based method'; plain adjectives in the same slot stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N2520_pos/2026-11-06-lm1909-899f13bc.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.417,
+     "peak": "-centered"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.61,
+     "peak": " informed"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.618,
+     "peak": "-based"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.367,
+     "peak": "plate"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.186,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.62,
+     "peak": " evidence"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.611,
+     "peak": "-based"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.425,
+     "peak": "-centered"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " trained"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.123,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " menu"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " reports"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": "ers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.611,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "compound naming an approach's basis",
+ "unit_kind": "contextual / lexical",
+ "confidence": "high",
+ "notes": "Card: '-centered' x3, ' evidence' x3, '-based' x3, ' informed' x2, '-to' x2, 'M' x4 of IPM, 'istic' of mechanistic-empirical. Logit effect promotes ' approach', '-based', '-driven'. Probe: IPM 0.90, -based 0.86, farm-to 0.84, -centered 0.57, informed 0.48; 'evidence ... in court' 0.01, city center 0.01, 'was informed' 0.01, plain adjectives 0.01.",
+ "selection": "random draw"
+}

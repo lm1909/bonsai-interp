@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2c7df22d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N4331-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:00+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N4331_neg/2026-11-06-lm1909-2c7df22d.tests.json"
+ },
+ "label": "Tourist lodging and travel words, across languages: lodge, resort, glamping, guesthouse, nights at a hotel (nuits), turístico, tour operator",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N4331_neg/2026-11-06-lm1909-2c7df22d.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.461,
+     "peak": " lodge"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.431,
+     "peak": " resort"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.585,
+     "peak": "amping"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.537,
+     "peak": "its"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.472,
+     "peak": " tur"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.422,
+     "peak": " operator"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.222,
+     "peak": "house"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.372,
+     "peak": " tout"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.107,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": "atri"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.066,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.099,
+     "peak": " arranged"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " bay"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": "lo"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.446,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "tourist lodging and travel",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card: ' tur' x3, 'its' of nuits x2, 'odge', 'inos' of destinos, 'amping', 'атор' of туроператор; logit effect of the + pole suppresses ' tourism', ' tourist', ' hotels', so the - pole points toward them. Probe: eco-lodge 0.81, turísticos 0.61, glamping 0.59, nuits 0.55, tour operator 0.54, bed and breakfast 0.51; factory, parking, voitures at most 0.04.",
+ "selection": "random draw"
+}

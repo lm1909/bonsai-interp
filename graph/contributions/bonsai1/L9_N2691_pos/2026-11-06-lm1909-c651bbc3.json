@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-c651bbc3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N2691+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:19+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N2691_pos/2026-11-06-lm1909-c651bbc3.tests.json"
+ },
+ "label": "Mineralogy: minerals and gems named as such, and their properties (Mohs hardness, monoclinic, beryl, 'the hardest of materials'); rocks, metals, dietary minerals and mineral water stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N2691_pos/2026-11-06-lm1909-c651bbc3.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.695,
+     "peak": " mineral"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.671,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.662,
+     "peak": " streak"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.133,
+     "peak": "eryl"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.541,
+     "peak": " natural"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.187,
+     "peak": " minerals"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.273,
+     "peak": " mineral"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.823,
+     "peak": " minerals"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.094,
+     "peak": " hard"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " sand"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.104,
+     "peak": " green"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.146,
+     "peak": " colour"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": "Steel"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " coins"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " mineral"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.219,
+     "peak": "est"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.667,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "mineralogy: minerals and their properties",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card: ' minerals' x5, ' mineral' x2, ' crystall' x2, ' Mineral' x2, 'eryl' x2, 's' of Mohs, ' hardest', 'ic' of monoclinic. Probe: Mohs 's' 1.21, hardest 0.98, beryl 0.82, ore 'mineral' 0.62; dietary minerals 0.14, mineral water 0.05, sandstone 0.01, granite 0.02, copper 0.02.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "mineral",
+   "minerals"
+  ]
+ }
+}

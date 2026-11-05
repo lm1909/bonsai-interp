@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-0f5e2b56",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4742+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:16+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N4742_pos/2026-11-06-lm1909-0f5e2b56.tests.json"
+ },
+ "label": "A section of a work that frames the main text from outside: prologue, epilogue, preamble, foreword, prelude; ordinary parts of a work stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N4742_pos/2026-11-06-lm1909-0f5e2b56.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.892,
+     "peak": "logue"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.641,
+     "peak": "ilogue"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.681,
+     "peak": " Prelude"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.803,
+     "peak": " preamble"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.352,
+     "peak": "word"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.006,
+     "peak": "logue"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.695,
+     "peak": "ilogue"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.803,
+     "peak": " preamble"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " early"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " jumps"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "z"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " text"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " editor"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " opens"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": " footnote"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " index"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.749,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "section framing a work (prologue, preamble...)",
+ "unit_kind": "semantic / lexical",
+ "confidence": "high",
+ "notes": "Card: 'ilogue' x6, 'logue' x5, ' Prelude' x4, 'reamble' x4, 'word' x4, ' preamble' x3, French préamb-ule. Probe: prologue 0.97, Prelude 0.90, preamble 0.80, epilogue 0.62, foreword 0.39; chapter, final scene, Concerto, index, appendix at most 0.01. Appendix being quiet means 'outside the main text' is not enough; the framing has to be at the start or the close.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "logue",
+   "ilogue",
+   " Prelude",
+   " preamble",
+   "reamble"
+  ]
+ }
+}

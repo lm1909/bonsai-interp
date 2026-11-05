@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-39f786ae",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8909+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:28+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N8909_pos/2026-11-06-lm1909-39f786ae.tests.json"
+ },
+ "label": "The attribution slot right after a quoted statement: ' (' opening a citation or ' said' after the closing quote; ' (' and ' said' elsewhere stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N8909_pos/2026-11-06-lm1909-39f786ae.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.426,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.629,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.487,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.705,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.469,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.684,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.411,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.508,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.089,
+     "peak": " survey"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.109,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": "Mor"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " spokesman"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.046,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.031,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.057,
+     "peak": "P"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.124,
+     "peak": " said"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.497,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "' (' or ' said' attributing a quote",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' (' x23 after a closing quote (with a source inside), ' said' x8; gate-closed echo regime. Probe: '...reference.\" (' 0.60, '...nutrition,\" said' 0.77, Spanish 0.30; the same without quotation marks 0.30 and 0.45, so a statement before it may be enough; 'The new model (' 0.05, 'He said' 0.06, 'She said goodbye' 0.05.",
+ "selection": "random draw"
+}

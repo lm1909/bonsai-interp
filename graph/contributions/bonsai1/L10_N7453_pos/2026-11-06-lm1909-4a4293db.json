@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4a4293db",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N7453+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:45:50+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N7453_pos/2026-11-06-lm1909-4a4293db.tests.json"
+ },
+ "label": "A value left open or not stated: unspecified, undisclosed, unnamed, 'that you choose', 'your choice', 'to be announced'; the same slot filled with a stated value stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N7453_pos/2026-11-06-lm1909-4a4293db.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.981,
+     "peak": " unspecified"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.581,
+     "peak": " undisclosed"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.612,
+     "peak": " choose"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.904,
+     "peak": " define"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.706,
+     "peak": " choice"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.372,
+     "peak": " named"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.33,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.442,
+     "peak": " unnamed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.078,
+     "peak": " later"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.054,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.066,
+     "peak": " temperature"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.116,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.155,
+     "peak": " named"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.051,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " investor"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.659,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "a value left open or unstated",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card: ' unspecified', ' choose', ' define', ' undisclosed', ' named' after 'to be', ' choice' after 'your'. Probe: unspecified 0.94, define 1.08, undisclosed 0.76, your choice 0.70, choose 0.52, 'to be announced' 1.48 on ' be'; filled versions (public, health, 'of ten') at most 0.09. Tested on 'unnamed', not on the card.",
+ "selection": "random draw"
+}

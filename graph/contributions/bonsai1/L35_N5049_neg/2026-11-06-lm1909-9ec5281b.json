@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-9ec5281b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5049-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:46:27+00:00",
+ "recipe": {
+  "toolchain_commit": "eaa2b27cf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N5049_neg/2026-11-06-lm1909-9ec5281b.tests.json"
+ },
+ "label": "Running Spanish prose, peaking on verbs such as puede, pueden and están; the same sentences in French, German or English stay quiet (Portuguese and Italian also fire, and are not tested)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N5049_neg/2026-11-06-lm1909-9ec5281b.tests.json",
+   "prereg_commit": "eaa2b27cf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.882,
+     "peak": " pueden"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.931,
+     "peak": " puede"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.924,
+     "peak": " están"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.743,
+     "peak": " puede"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.8,
+     "peak": " pueden"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.767,
+     "peak": " y"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.801,
+     "peak": " puede"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.801,
+     "peak": " pueden"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.221,
+     "peak": " bureau"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.161,
+     "peak": " zu"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.002,
+     "peak": " street"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.158,
+     "peak": "crire"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.197,
+     "peak": " oder"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.002,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.801,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "eaa2b27cf",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "running Spanish prose",
+ "unit_kind": "language / contextual",
+ "confidence": "medium",
+ "notes": "Card: broad (1.05% of tokens reach 0.3 of max); ' y' x7, ' puede' x2, ' pueden' x2, ' están' x2, ','. Probe: pueden 0.84, puede 0.94, Portuguese podem 0.66, Italian possono 0.51; French peuvent 0.15, English 0.00. I chose a language label because the pole is too broad for a single verb to separate within Spanish.",
+ "selection": "random draw"
+}
