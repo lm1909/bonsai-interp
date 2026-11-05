@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-86a8e5fe",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11075+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:02:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N11075",
+   "pole": "+",
+   "label": "surname and place-name tails in rarer names: 'insky', 'inka', 'ody' (gate-closed, broad pole)",
+   "fire": [
+    "The tank was built at the Kubinka range near Moscow.",
+    "The code was written by Pavel Lisinsky in 2015.",
+    "Coach Harangody praised the young forward.",
+    "Tests moved from Kubinka to a site in the Urals.",
+    "The composer Stravinsky lived in Paris for years.",
+    "An interview with Boris Malinsky appeared in May.",
+    "Luke Harangody signed with a team in Spain.",
+    "She visited her aunt in Dubinka last summer."
+   ],
+   "quiet": [
+    "The tank was built at the Dover range near London.",
+    "The code was written by Paul Smith in 2015.",
+    "Coach Johnson praised the young forward.",
+    "Tests moved from Dover to a site in Wales.",
+    "The composer Elgar lived in Worcester for years.",
+    "An interview with Bob Miller appeared in May.",
+    "Luke Walton signed with a team in Spain.",
+    "She visited her aunt in Leeds last summer."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "tails of rare names",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "The card flags it dense (11% of tokens reach 0.1 of max) in the gate-closed regime, so the test may fail on density, but probes separate well: 'inka' 0.88, 'ody' 0.76, 'insky' 0.60; a plain sentence 0.06. The tail tokens were checked."
+}

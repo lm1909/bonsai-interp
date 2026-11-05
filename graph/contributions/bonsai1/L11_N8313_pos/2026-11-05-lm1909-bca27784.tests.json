@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-bca27784",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N8313+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:02:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N8313",
+   "pole": "+",
+   "label": "(guess, positional) the newline of a wrapped line in the middle of a sentence",
+   "fire": [
+    "These new and unusual pesticides were found in\nthe river by the local survey team.",
+    "Please note that all of the attached forms\nmust be signed before the end of the month.",
+    "The old station was closed for repairs and\nreopened to passengers two years later.",
+    "You may copy this file in any form or as a\nprinted document, for any purpose at all.",
+    "Many of the early photographs taken by\nthe crew were later shown in a museum.",
+    "We tested these two methods using\nsmall samples of soil and clean water.",
+    "Remember that the first draft of a\nreport is rarely the one you should send.",
+    "It was all done with floppy disks using\na simple tool that came with the system."
+   ],
+   "quiet": [
+    "These new and unusual pesticides were found in the river by the local survey team.",
+    "Please note that all of the attached forms must be signed before the end of the month.",
+    "The old station was closed for repairs and reopened to passengers two years later.",
+    "You may copy this file in any form or as a printed document, for any purpose at all.",
+    "Many of the early photographs taken by the crew were later shown in a museum.",
+    "We tested these two methods using small samples of soil and clean water.",
+    "Remember that the first draft of a report is rarely the one you should send.",
+    "It was all done with floppy disks using a simple tool that came with the system."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "mid-sentence line wrap (guess, positional)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card: '\\n' 31 of the top 32, flagged positional (top peaks cluster near window position 8). But my probes of mid-sentence wraps all stayed under 0.07, including near-copies of top examples, so I don't know what else it needs. Expected to fail; recorded so the draw stays complete."
+}

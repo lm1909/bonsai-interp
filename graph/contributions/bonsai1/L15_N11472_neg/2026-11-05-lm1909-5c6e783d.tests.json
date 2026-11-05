@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-05-lm1909-5c6e783d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N11472-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:02:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N11472",
+   "pole": "-",
+   "label": "(guess) the line start after a code signature or footnote marker: '):\\n' after def, a leading '*' note",
+   "fire": [
+    "class Runner:\n    def stop( self, jobs ):\n        return jobs\n",
+    "class Store:\n    def clear( self, items ):\n        self.items = items\n",
+    "| Sample | Dilution * |\n* Working dilutions are only a guide.\n",
+    "| Assay | Titre * |\n* Values are given as a guide.\n",
+    "def add_file(self, path):\n    self.files.append(path)\n",
+    "def get_rows(self, table):\n    return table.rows\n",
+    "Notes on the chart.\n* Doses at intervals of one month.\n",
+    "Key to the tables.\n# Doses at intervals of two months.\n"
+   ],
+   "quiet": [
+    "class Runner:\n    name = 'stop'\n    jobs = []\n",
+    "class Store:\n    size = 10\n    items = []\n",
+    "| Sample | Dilution |\n| Blood | 1:500 |\n",
+    "| Assay | Titre |\n| Urine | 1:20 |\n",
+    "files = []\nfiles.append(path)\n",
+    "rows = table.rows\nprint(rows)\n",
+    "Notes on the chart.\nDoses come at intervals of one month.\n",
+    "Key to the tables.\nDoses come at intervals of two months.\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "'):\\n', leading footnote mark (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Card: '):\\n' 13, '1' 5, '*' 3. Probes of close copies stayed under 0.04 except a table footnote '*' at 0.19. Expected to fail; recorded so the draw stays complete."
+}
