@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-64ed7337",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N4416-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:41:39+00:00",
+ "recipe": {
+  "toolchain_commit": "7cae1c458",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N4416_neg/2026-11-06-lm1909-64ed7337.tests.json"
+ },
+ "label": "' are' or the next word when stating how a common medical finding usually turns out: 'Most thyroid nodules in adults are'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N4416_neg/2026-11-06-lm1909-64ed7337.tests.json",
+   "prereg_commit": "7cae1c458",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.394,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.779,
+     "peak": " symptoms"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.539,
+     "peak": " harmless"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.76,
+     "peak": " treated"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.376,
+     "peak": " mild"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.33,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.344,
+     "peak": "ules"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.583,
+     "peak": " fine"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": " chance"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": " cars"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " towns"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " never"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.07,
+     "peak": " mild"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " shallow"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " fine"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.467,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "7cae1c458",
+  "minutes": 4,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "how a medical finding usually turns out",
+ "unit_kind": "contextual / semantic",
+ "confidence": 0.7,
+ "notes": "Second round; the first ('medically harmless') failed because ' are' in plain medical statements fired in near misses, including 'usually dangerous'. Probes: ' are' after 'Most heart murmurs in children' 0.45, 'Many patients with small cysts' 0.59; 'Most paintings in museums' 0.02; 'Enzyme rises like this are usually' 0.04. Near misses keep the sentence frame in other topics.",
+ "selection": "picked"
+}

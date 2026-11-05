@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-518a77e9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N1580+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:41:26+00:00",
+ "recipe": {
+  "toolchain_commit": "7cae1c458",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N1580_pos/2026-11-06-lm1909-518a77e9.tests.json"
+ },
+ "label": "the time word linking a person's activity to a stage of their life: 'took up the cello during', 'became a doctor after', 'began singing while'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N1580_pos/2026-11-06-lm1909-518a77e9.tests.json",
+   "prereg_commit": "7cae1c458",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.681,
+     "peak": " during"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.206,
+     "peak": " while"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.356,
+     "peak": " after"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.551,
+     "peak": " during"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.167,
+     "peak": " while"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.22,
+     "peak": " after"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.382,
+     "peak": " during"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.236,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " during"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.054,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " began"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.035,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " during"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.296,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "7cae1c458",
+  "minutes": 4,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "time link in a life story",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.6,
+ "notes": "Second round; the first ('preposition expecting a school') failed because time words such as ' during' and ' while' fired in near misses about a person's life. Probes for this label: ' during' 0.56, ' after' 0.37, ' while' 0.28; 'The bridge was closed during' 0.01, 'The store opened in' 0.01. Near misses keep the time word and drop the person.",
+ "selection": "picked"
+}

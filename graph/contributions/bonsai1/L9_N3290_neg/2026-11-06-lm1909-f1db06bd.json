@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-f1db06bd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N3290-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:41:29+00:00",
+ "recipe": {
+  "toolchain_commit": "7cae1c458",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N3290_neg/2026-11-06-lm1909-f1db06bd.tests.json"
+ },
+ "label": "names of table games in play or lists: ' bridge', ' go', 'Codenames' (other game names stay low)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N3290_neg/2026-11-06-lm1909-f1db06bd.tests.json",
+   "prereg_commit": "7cae1c458",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.476,
+     "peak": " bridge"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.388,
+     "peak": " bridge"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.562,
+     "peak": " go"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.62,
+     "peak": " go"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.738,
+     "peak": "enames"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.624,
+     "peak": "enames"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.44,
+     "peak": " bridge"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.565,
+     "peak": " go"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.252,
+     "peak": " d"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": "Sen"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.274,
+     "peak": " x"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.22,
+     "peak": "ers"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.135,
+     "peak": "ades"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": " dice"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.457,
+     "peak": "asta"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.564,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "7cae1c458",
+  "minutes": 4,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "game names: bridge, go, Codenames",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Second round; the first ('go, Codenames') failed because ' bridge' fired in its near misses. Probes: ' bridge' 0.40, 'gam' in backgammon 0.19, ' Risk' 0.16; non-game lists under 0.03. Near misses are other game words, so this tests the specific names, not 'games'.",
+ "selection": "picked"
+}
