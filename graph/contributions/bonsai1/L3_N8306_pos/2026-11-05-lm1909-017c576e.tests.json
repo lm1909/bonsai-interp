@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-05-lm1909-017c576e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N8306+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T22:20:53+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N8306",
+   "pole": "+",
+   "label": "a token that glues a symbol to a word in URLs and code: ?type, ?id, ?action, ?page, @example",
+   "fire": [
+    "url = 'http://host.org/api/items?type=' + kind",
+    "view.php?id=7&action=delete",
+    "contact us at http://email@example.org today",
+    "write to admin@example.com today",
+    "GET /search?type=cats HTTP/1.1",
+    "link = base + '/list?page=' + str(n)",
+    "see items.php?id=9 for the list",
+    "index.php?action=login&lang=en"
+   ],
+   "quiet": [
+    "url = 'http://host.org/api/items/' + kind",
+    "view.php is the page that can delete it",
+    "contact us at http://example.org today",
+    "write to the admin at the office today",
+    "GET /search/cats HTTP/1.1",
+    "link = base + '/list/' + str(n)",
+    "see items.php for the list",
+    "index.php is the login page in English"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "symbol-plus-word tokens",
+ "unit_kind": "token / code",
+ "confidence": 0.8,
+ "trigger": {
+  "tokens": [
+   "?type",
+   "?id",
+   "?action",
+   "?page",
+   "@example",
+   "@update",
+   "?f"
+  ]
+ }
+}
