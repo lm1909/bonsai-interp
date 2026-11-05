@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-05-lm1909-440318cc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10172-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:19:07+00:00",
+ "recipe": {
+  "toolchain_commit": "70f7bfe9b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10172_neg/2026-11-05-lm1909-440318cc.tests.json"
+ },
+ "label": "the piece 'öt' or 'oden' / ' nod' in Germanic words and names: unnötig, benötigen, Noden, noden",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10172_neg/2026-11-05-lm1909-440318cc.tests.json",
+   "prereg_commit": "70f7bfe9b",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.409,
+     "peak": "öt"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.009,
+     "peak": "hm"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.914,
+     "peak": "oden"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.848,
+     "peak": "oden"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.735,
+     "peak": " nod"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.394,
+     "peak": "öt"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.852,
+     "peak": "oden"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.252,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": "ö"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "hm"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " solar"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": "idden"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " Unter"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " covers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": "pro"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.572,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "70f7bfe9b",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pieces öt / oden / nod",
+ "unit_kind": "token piece",
+ "confidence": 0.65,
+ "notes": "The Arabic piece 'الة' is among the top tokens on the card (x7) but scored 0.01 in a probe; this label does not cover it.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "öt",
+   "oden",
+   " nod"
+  ]
+ }
+}

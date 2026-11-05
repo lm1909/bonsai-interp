@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-05-lm1909-747fb9fa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N1249-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:19:11+00:00",
+ "recipe": {
+  "toolchain_commit": "70f7bfe9b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N1249_neg/2026-11-05-lm1909-747fb9fa.tests.json"
+ },
+ "label": "suffix pieces of biomedical names and identifiers: K252|a, CRF|0|2, MIR6|0|4, Epigen|omics",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N1249_neg/2026-11-05-lm1909-747fb9fa.tests.json",
+   "prereg_commit": "70f7bfe9b",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.146,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.39,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.036,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.058,
+     "peak": "omics"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.103,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.024,
+     "peak": "abol"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.157,
+     "peak": "v"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.628,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": "Bus"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " field"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "unding"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " snow"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " charity"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.025,
+     "peak": " milk"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " model"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.124,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "70f7bfe9b",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "biomedical identifier suffixes",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.65,
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-2a1ca82b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N2182-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:18:37+00:00",
+ "recipe": {
+  "toolchain_commit": "70f7bfe9b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N2182_neg/2026-11-05-lm1909-2a1ca82b.tests.json"
+ },
+ "label": "past-tense verb or auxiliary pointing back at something just experienced: 'That was', 'hope you found', 'hope you were', 'Did you'; the present-tense versions stay quieter",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N2182_neg/2026-11-05-lm1909-2a1ca82b.tests.json",
+   "prereg_commit": "70f7bfe9b",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.726,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.701,
+     "peak": " liked"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.922,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.399,
+     "peak": " Sunday"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.779,
+     "peak": " had"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.969,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.342,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.691,
+     "peak": " enjoyed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.111,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": " hope"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " Sundays"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.058,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.17,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.077,
+     "peak": " short"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.714,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "70f7bfe9b",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "past tense pointing back",
+ "unit_kind": "grammar / contextual",
+ "confidence": 0.8,
+ "notes": "The + pole of this neuron fires on the present-tense counterparts (have, has, is, 's), and its output direction suppresses ' last', ' yesterday', ' was', ' did', so tense looks like the distinction the neuron draws.",
+ "selection": "random draw"
+}

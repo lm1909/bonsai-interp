@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-05-lm1909-7a109063",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N10278+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T22:18:57+00:00",
+ "recipe": {
+  "toolchain_commit": "70f7bfe9b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N10278_pos/2026-11-05-lm1909-7a109063.tests.json"
+ },
+ "label": "the part that must fit inside something else: your foot in a shoe, a card in a slot, a key in a lock (a guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N10278_pos/2026-11-05-lm1909-7a109063.tests.json",
+   "prereg_commit": "70f7bfe9b",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.324,
+     "peak": " sits"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.216,
+     "peak": " foot"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.196,
+     "peak": " hand"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.08,
+     "peak": " before"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.032,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.121,
+     "peak": " fit"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.03,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.117,
+     "peak": " fit"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " walks"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " should"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " painted"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.119,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "70f7bfe9b",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the thing that must fit (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "The card's output direction promotes ' fits', ' fitting', ' fit', ' within', ' onto', and one top example is ' foot' inside shoes, but probes stayed under 0.31, so a failure is likely.",
+ "selection": "random draw"
+}
