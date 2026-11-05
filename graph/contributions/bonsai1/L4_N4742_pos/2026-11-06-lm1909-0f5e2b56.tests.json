@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-0f5e2b56",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4742+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:31:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N4742",
+   "pole": "+",
+   "label": "A section of a work that frames the main text from outside: prologue, epilogue, preamble, foreword, prelude; ordinary parts of a work stay quiet",
+   "fire": [
+    "Critics praised the prologue for setting the tone early.",
+    "The novel's epilogue jumps forward twenty years.",
+    "She played a Chopin Prelude at the recital.",
+    "The preamble to the treaty lists its aims.",
+    "The editor added a short foreword to the reprint.",
+    "The film opens with a prologue set in ancient Rome.",
+    "An epilogue explains what happened to the survivors.",
+    "The preamble of the charter was read aloud."
+   ],
+   "quiet": [
+    "Critics praised the ending for setting the tone early.",
+    "The novel's middle jumps forward twenty years.",
+    "She played a Chopin Waltz at the recital.",
+    "The text of the treaty lists its aims.",
+    "The editor added a short glossary to the reprint.",
+    "The film opens with a battle set in ancient Rome.",
+    "A footnote explains what happened to the survivors.",
+    "The index of the charter was read aloud."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "section framing a work (prologue, preamble...)",
+ "unit_kind": "semantic / lexical",
+ "confidence": "high",
+ "notes": "Card: 'ilogue' x6, 'logue' x5, ' Prelude' x4, 'reamble' x4, 'word' x4, ' preamble' x3, French préamb-ule. Probe: prologue 0.97, Prelude 0.90, preamble 0.80, epilogue 0.62, foreword 0.39; chapter, final scene, Concerto, index, appendix at most 0.01. Appendix being quiet means 'outside the main text' is not enough; the framing has to be at the start or the close.",
+ "trigger": {
+  "tokens": [
+   "logue",
+   "ilogue",
+   " Prelude",
+   " preamble",
+   "reamble"
+  ]
+ }
+}

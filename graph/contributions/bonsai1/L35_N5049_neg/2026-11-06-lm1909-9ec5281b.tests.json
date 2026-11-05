@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-9ec5281b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5049-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:31:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5049",
+   "pole": "-",
+   "label": "Running Spanish prose, peaking on verbs such as puede, pueden and están; the same sentences in French, German or English stay quiet (Portuguese and Italian also fire, and are not tested)",
+   "fire": [
+    "Los alumnos pueden inscribirse en la oficina y pagar con tarjeta.",
+    "Este proyecto puede mejorar la vida de muchas familias.",
+    "Las empresas están obligadas a informar a sus clientes.",
+    "El ayuntamiento puede cerrar la calle durante la feria.",
+    "Los médicos pueden recetar este fármaco a los adultos.",
+    "Sus padres son amables y están contentos con la escuela.",
+    "La gente puede votar en persona o por correo.",
+    "Las tiendas pueden abrir los domingos y festivos."
+   ],
+   "quiet": [
+    "Les élèves peuvent s'inscrire au bureau et payer par carte.",
+    "This project can improve the lives of many families.",
+    "Die Firmen sind verpflichtet, ihre Kunden zu informieren.",
+    "The town hall can close the street during the fair.",
+    "Les médecins peuvent prescrire ce médicament aux adultes.",
+    "His parents are kind and are happy with the school.",
+    "Die Leute können persönlich oder per Post wählen.",
+    "The shops can open on Sundays and holidays."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "running Spanish prose",
+ "unit_kind": "language / contextual",
+ "confidence": "medium",
+ "notes": "Card: broad (1.05% of tokens reach 0.3 of max); ' y' x7, ' puede' x2, ' pueden' x2, ' están' x2, ','. Probe: pueden 0.84, puede 0.94, Portuguese podem 0.66, Italian possono 0.51; French peuvent 0.15, English 0.00. I chose a language label because the pole is too broad for a single verb to separate within Spanish."
+}

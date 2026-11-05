@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-39f786ae",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8909+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:31:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N8909",
+   "pole": "+",
+   "label": "The attribution slot right after a quoted statement: ' (' opening a citation or ' said' after the closing quote; ' (' and ' said' elsewhere stay quiet",
+   "fire": [
+    "\"The river has always defined this town.\" (Harris, 2004)",
+    "\"We are delighted with the outcome,\" said Mary Chen, the director.",
+    "\"Nothing was ever the same after that.\" (Morris, 1977)",
+    "\"The figures are very encouraging,\" said a company spokesman.",
+    "\"Art is a form of memory.\" (Berger, Ways of Seeing)",
+    "\"Prices will keep rising this year,\" said the minister.",
+    "\"Nadie sabe cuándo terminará la crisis\" (Pérez, 1990)",
+    "\"The bridge will reopen in May,\" said Tom Lane, the engineer."
+   ],
+   "quiet": [
+    "The survey results (Harris, 2004) were published last spring.",
+    "Mary Chen, the director, said goodbye and went home.",
+    "An early study (Morris, 1977) has been widely used.",
+    "A company spokesman said nothing and left the room.",
+    "A new book (Berger, Ways of Seeing) sits on the shelf.",
+    "The minister said hello to the children.",
+    "Un estudio nuevo (Pérez, 1990) se publicó en Madrid.",
+    "Tom Lane, the engineer, said grace before the meal."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' (' or ' said' attributing a quote",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' (' x23 after a closing quote (with a source inside), ' said' x8; gate-closed echo regime. Probe: '...reference.\" (' 0.60, '...nutrition,\" said' 0.77, Spanish 0.30; the same without quotation marks 0.30 and 0.45, so a statement before it may be enough; 'The new model (' 0.05, 'He said' 0.06, 'She said goodbye' 0.05."
+}

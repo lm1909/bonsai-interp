@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-3db6a710",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8946+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:31:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N8946",
+   "pole": "+",
+   "label": "The exact tokens ' datetime' and ' permission' on a broad low-amplitude layer-0 pole: a word list, no shared pattern",
+   "fire": [
+    "import datetime\nprint(datetime.date.today())",
+    "The field is stored as a datetime in the table.",
+    "Convert the string to a datetime before saving.",
+    "def parse(value):\n    return datetime.strptime(value, fmt)",
+    "You need written permission from the owner.",
+    "She gave us permission to film the house.",
+    "if user has permission:\n    run()",
+    "Reprinted with permission of the publisher."
+   ],
+   "quiet": [
+    "import random\nprint(random.random())",
+    "The field is stored as a string in the table.",
+    "Convert the string to a number before saving.",
+    "def parse(value):\n    return float(value)",
+    "You need a written letter from the owner.",
+    "She gave us time to film the house.",
+    "if user has access:\n    run()",
+    "Reprinted with thanks to the publisher."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tokens ' datetime', ' permission'",
+ "unit_kind": "token / lexical",
+ "confidence": "medium",
+ "notes": "Card: broad (6.8% of tokens at 0.1 of max, max 0.28); ' datetime' x6, ' place' x4, ' la' x3, ' permission' x2, ' Sense'. Probe: ' datetime' 0.62, ' permission' 0.39-0.42, ' Sense' 0.40; ' time' 0.02-0.06. ' place' stayed quiet in 'took place' (0.02).",
+ "trigger": {
+  "tokens": [
+   " datetime",
+   " permission"
+  ]
+ }
+}

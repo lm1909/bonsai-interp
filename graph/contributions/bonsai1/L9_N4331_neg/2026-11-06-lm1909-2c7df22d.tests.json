@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-2c7df22d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N4331-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:31:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N4331",
+   "pole": "-",
+   "label": "Tourist lodging and travel words, across languages: lodge, resort, glamping, guesthouse, nights at a hotel (nuits), turístico, tour operator",
+   "fire": [
+    "The safari lodge offers guided walks at dawn and dusk.",
+    "Book a family resort on the coast before prices rise.",
+    "Many guests come back to this glamping site each summer.",
+    "Réservez trois nuits à l'hôtel et la quatrième est offerte.",
+    "La oferta turística de la región atrae a miles de viajeros.",
+    "Our tour operator arranged the transfers and the hotel.",
+    "The guesthouse has twelve rooms overlooking the bay.",
+    "Cette station balnéaire propose des séjours tout compris."
+   ],
+   "quiet": [
+    "The steel plant offers guided walks at dawn and dusk.",
+    "Book a family doctor on the coast before prices rise.",
+    "Many farmers come back to this market each summer.",
+    "Achetez trois pneus au garage et le quatrième est offert.",
+    "La oferta industrial de la región atrae a miles de obreros.",
+    "Our bus company arranged the repairs and the insurance.",
+    "The warehouse has twelve doors overlooking the bay.",
+    "Cette usine locale propose des emplois à temps plein."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tourist lodging and travel",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card: ' tur' x3, 'its' of nuits x2, 'odge', 'inos' of destinos, 'amping', 'атор' of туроператор; logit effect of the + pole suppresses ' tourism', ' tourist', ' hotels', so the - pole points toward them. Probe: eco-lodge 0.81, turísticos 0.61, glamping 0.59, nuits 0.55, tour operator 0.54, bed and breakfast 0.51; factory, parking, voitures at most 0.04."
+}
