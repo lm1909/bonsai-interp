@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-032811ff",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11448-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:02:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N11448",
+   "pole": "-",
+   "label": "a word inside a private function or variable name in code (_read_json, _check, error_msg) (guess)",
+   "fire": [
+    "def _load_json_example_from(self, tensor_list):\n    pass",
+    "msg, file_msg = get_status(status, result, error_msg, None)",
+    "def _check_payload(self, payload):\n    return True",
+    "self.drawCircle(x, y, boxSize, boxSize)\nself.flush()",
+    "def _parse_json_config_from(self, path):\n    pass",
+    "def _check_user(self, user):\n    return user",
+    "log, file_log = get_report(state, error_msg, None)",
+    "self.drawSquare(x, y, gridSize, gridSize)\nself.flush()"
+   ],
+   "quiet": [
+    "def load(self, tensor_list):\n    pass",
+    "msg = get_status()\nprint(msg)",
+    "def payload(self):\n    return True",
+    "self.flush()\nself.close()",
+    "def parse(self, path):\n    pass",
+    "def user(self):\n    return None",
+    "log = get_report()\nprint(log)",
+    "self.flush()\nself.reset()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word in a private name in code (guess)",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "notes": "Weak guess: the probes stayed under 0.05 on all these forms. Expect a fail."
+}

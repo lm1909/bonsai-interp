@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-f9a329c8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7864-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:02:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N7864",
+   "pole": "-",
+   "label": "the Chinese subject noun after 每, 任何 or 所有, before 都 (每一个字都, 任何事都)",
+   "fire": [
+    "每一位球队队员都会参加比赛。",
+    "每一個選擇不是對就是錯。",
+    "每一個詞都很準確。",
+    "生活中发生的任何情况都不是巧合。",
+    "所有作品在一起构成一个展览。",
+    "无论您是出差还是旅游，都可以找到房间。",
+    "每一位学校老师都要参加培训。",
+    "任何错误都会造成损失。"
+   ],
+   "quiet": [
+    "这位球队队员昨天参加了比赛。",
+    "这个选择是对的。",
+    "这个词很准确。",
+    "生活中发生了一件有趣的情况。",
+    "这些作品在一起构成一个展览。",
+    "您是出差还是旅游？",
+    "这位学校老师正在参加培训。",
+    "这个错误造成了损失。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Chinese subject after 每, 任何, 所有",
+ "unit_kind": "grammatical / prediction",
+ "confidence": "high",
+ "notes": "Direct logits suppress 都, 都是, 都可以 on the + pole, so this pole promotes them; it fires before 都 is visible."
+}

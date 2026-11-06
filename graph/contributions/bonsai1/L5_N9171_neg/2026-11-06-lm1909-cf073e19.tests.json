@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-cf073e19",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9171-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:02:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N9171",
+   "pole": "-",
+   "label": "a token that doubles as a word's first piece, not used as the preposition or whole word it looks like (من|ظمة, от|крытом, 校|准)",
+   "fire": [
+    "تحدث مندوب من منظمة الصحة العالمية",
+    "سكان من مناطق الجنوب المختلفة",
+    "Дом стоит на отшибе, у реки.",
+    "Кафе работает на открытом воздухе.",
+    "校准仪器需要专业人员。",
+    "学校的校舍很旧了。",
+    "القادمون من مناطق الشمال البعيدة",
+    "Концерт прошёл под открытым небом."
+   ],
+   "quiet": [
+    "تحدث مندوب من البيت إلى السوق",
+    "سكان من الجنوب يعملون هنا",
+    "Дом стоит у реки, от дороги далеко.",
+    "Письмо от друга пришло утром.",
+    "他去学校了，今天不回来。",
+    "我们学校很大，也很旧。",
+    "القادمون من البيت إلى الشمال",
+    "Концерт прошёл в большом зале."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "token as a word's first piece, not a preposition",
+ "unit_kind": "token piece / cross-language",
+ "confidence": "high",
+ "notes": "Arabic 'من' as a real preposition reached 0.15 and Russian 'от' 0.34 in the probes, against 0.49-0.75 as a first piece. ' hospital' reached 0.37, not explained. The token is the same in both uses and the model hasn't seen the next piece yet, so I don't know how it could tell them apart; that may be a problem for this label."
+}
