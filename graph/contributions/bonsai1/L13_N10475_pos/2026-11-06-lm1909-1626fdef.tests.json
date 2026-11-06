@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-1626fdef",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N10475+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:20:40+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L13/N10475",
+   "pole": "+",
+   "label": "Paper size values in a print or page setting: letter, legal, tabloid, A3, A5; the same words with other meanings ('a letter to her aunt', 'a legal team') and other print settings stay low.",
+   "fire": [
+    "Change the page size to legal in the printer settings.",
+    "latex_paper_size = 'letter'\nlatex_margin = 'wide'",
+    "Printing a map on A3 or A5 sheets costs extra.",
+    "page_format = 'tabloid'\nfont_size = 10",
+    "Open the print dialog and set the paper size to letter.",
+    "The copier accepts A3 and A5 paper in the upper tray.",
+    "Choose tabloid or legal from the paper size menu.",
+    "pagesize = 'legal'\norientation = 'landscape'"
+   ],
+   "quiet": [
+    "Change the ink colour to black in the printer settings.",
+    "latex_paper_color = 'cream'\nlatex_margin = 'wide'",
+    "Printing a map on glossy or matte sheets costs extra.",
+    "page_title = 'tabloid news'\nfont_size = 10",
+    "She opened the mail and read the letter from her son.",
+    "The firm accepts legal cases and pro bono work in the upper courts.",
+    "Choose tea or coffee from the drinks menu.",
+    "The tabloid printed a story about the legal team on Sunday."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-1 near miss. Second round: the first label (the digit in A4) failed because letter, legal, A5 and card fired too. No fire item contains A4.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "paper size values",
+ "unit_kind": "semantic",
+ "confidence": 0.65,
+ "notes": "Round 1 (sweep seed 202611050903) near misses: 'letter' in a config 0.44, A5 0.37, legal 0.32. Probes this round: 'paper size to letter' 0.44, 'legal' in config 0.42, A3 and A5 0.47, US Letter 0.20, B5 0.11; letter to an aunt under 0.01, legal team under 0.01, paper color 0.09. Other card peaks (IPv4, dense, RP) stay outside this label."
+}

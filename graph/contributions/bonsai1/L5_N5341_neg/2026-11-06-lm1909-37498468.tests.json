@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-37498468",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N5341-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:20:40+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L5/N5341",
+   "pole": "-",
+   "label": "Auxiliary do / does / did in a reply that confirms what the previous speaker just said, with or without the verb ('“He loves it.” “He does love it”'); the same auxiliary with no previous speaker, and replies with a different verb, stay lower.",
+   "fire": [
+    "“She adores that old piano.” “She does adore it,” he said.",
+    "“You really like this town.” “I do like it,” she told him.",
+    "“They bought a boat last year.” “They did buy one,” I said.",
+    "“It looks expensive to me.” “It does look expensive,” he agreed.",
+    "“He finished the whole report.” “He did finish it,” she said.",
+    "Rob: You seem worried about it. Ann: I do worry, yes.",
+    "“Your son plays very well.” “He does play well,” she smiled.",
+    "Tim: This soup tastes odd. Eve: It does taste odd, yeah."
+   ],
+   "quiet": [
+    "“She adores that old piano.” “She plays it daily,” he said.",
+    "“You really like this town.” “The people are kind,” she told him.",
+    "“They bought a boat last year.” “They sold it again,” I said.",
+    "“She does adore that old piano,” he wrote in the letter.",
+    "“He finished the whole report.” “His boss was pleased,” she said.",
+    "Rob: You seem worried about it. Ann: The bank called, yes.",
+    "“Your son plays very well.” “He practises a lot,” she smiled.",
+    "Tim: This soup tastes odd. Eve: Add some salt, then."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-1 near miss. Second round: the first label ('stranded') failed because 'He does love it' fired 0.70. This tests the reply context, not stress.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "do/does confirming the previous speaker",
+ "unit_kind": "contextual / discourse",
+ "confidence": 0.55,
+ "notes": "Round 1 (sweep seed 202611050901) had reply items with the verb at 0.37-0.70. Probes this round: the same emphatic sentences with no previous turn 0.07-0.28, 'does the shopping' 0.18, 'did her homework' 0.15, 'Do you think' under 0.01. 'I love that truck' 0.15 is a baseline in quoted speech. The mid- hyphen (0.39-0.59) stays outside this label."
+}
