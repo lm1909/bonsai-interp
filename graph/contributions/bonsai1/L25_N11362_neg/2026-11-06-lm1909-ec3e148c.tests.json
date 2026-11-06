@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ec3e148c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N11362-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:18:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N11362",
+   "pole": "-",
+   "label": "ordinary English sentence words inside a code string literal ('this is a test', 'Could not open file')",
+   "fire": [
+    "msg = \"this is a test\"\n",
+    "text = 'This is a short example.'\n",
+    "raise ValueError(\"Could not read file\")\n",
+    "print(\"This is not allowed\")\n",
+    "assert out == 'this is fine'\n",
+    "html = \"<p>this is a test</p>\"\n",
+    "sys.exit(\"Cannot open config file\")\n",
+    "log.info('This is a message')\n"
+   ],
+   "quiet": [
+    "msg = get_message()\n",
+    "text = load(path)\n",
+    "raise ValueError\n",
+    "print(count)\n",
+    "assert out == expected\n",
+    "html = render(page)\n",
+    "sys.exit(1)\n",
+    "log.info(value)\n"
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "sentence text in code strings",
+ "unit_kind": "contextual / code",
+ "confidence": "high"
+}
