@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-4e7673ee",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N8534-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:00:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N8534",
+   "pole": "-",
+   "label": "' =' or ' print' right after an if-test in code ('if x == y:\\n    z =', 'print(')",
+   "fire": [
+    "if tool == \"axe\":\n    hits = 3",
+    "if a == b:\n    print('equal')",
+    "if mode == \"fast\":\n    speed = 9",
+    "if x == y:\n    print('match')",
+    "if color == \"red\":\n    level = 2",
+    "if m == n:\n    print('same size')",
+    "if kind == \"cat\":\n    legs = 4",
+    "if p == q:\n    print('done')"
+   ],
+   "quiet": [
+    "The tool was an axe, and it took three hits.",
+    "We checked that a and b were equal.",
+    "The mode was fast, and the speed was high.",
+    "We saw that x and y matched.",
+    "The color was red, and the level was low.",
+    "They said that m and n were the same size.",
+    "The kind was cat, with four legs.",
+    "They said that p and q were done."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire; code with no if and prose stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first token in an if-body",
+ "unit_kind": "code",
+ "confidence": "medium",
+ "notes": "Card: ' =' x11, ' int' x4, ' \"' x3, ' print' x3, ' “' x3. Probe: 'damage = 5' 1.09, 'print('same')' 0.84; prose 0.02. ' \"' and ' “' in dialogue are not claimed."
+}

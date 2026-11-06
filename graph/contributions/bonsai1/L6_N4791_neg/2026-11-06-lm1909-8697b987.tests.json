@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-8697b987",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N4791-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:00:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N4791",
+   "pole": "-",
+   "label": "string-building variables in code ('csv_outstr + line', 'printString', 'warnstr =')",
+   "fire": [
+    "outstr = outstr + row",
+    "self.log(printString.format('y'))",
+    "errstr = utils.color('red', 'error')",
+    "htmlstr = htmlstr + cell",
+    "self.show(displayText.format('z'))",
+    "msgstr = utils.color('blue', 'note')",
+    "f.write(linestr + '\\n')",
+    "textstr = textstr + word"
+   ],
+   "quiet": [
+    "count = count + row",
+    "self.log(count)",
+    "rate = utils.scale(2, 3)",
+    "total = total + cell",
+    "self.show(size)",
+    "level = utils.scale(1, 4)",
+    "f.close()",
+    "width = width + word"
+   ]
+  }
+ ],
+ "predictions": "4/8 fire; 'total + line' probed at 0.07.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "string-building code",
+ "unit_kind": "code",
+ "confidence": "low",
+ "notes": "Card: '.write' x5, 'str' x2, 'Text' x2, 'Str' x2, ' Html', ' +' x2. Probe: 'printString.format' 0.44, 'csv_outstr +' 0.35, 'warnstr =' 0.30; 'total + line' 0.07; prose 0.09."
+}

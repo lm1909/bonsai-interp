@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-d4cd424c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N7342-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:00:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N7342",
+   "pole": "-",
+   "label": "' new' constructing an object in code ('= new pair<…>', '= new core.Mouse(')",
+   "fire": [
+    "vector<int> * vv = new vector<int>[n];",
+    "var m = new core.Timer({});",
+    "Node * head = new Node(key);",
+    "int * arr = new int[size];",
+    "List<String> xs = new ArrayList<>();",
+    "var b = new core.Button({});",
+    "Point * p = new Point(x, y);",
+    "Map<String, Integer> m = new HashMap<>();"
+   ],
+   "quiet": [
+    "vector<int> vv = make_vector(n);",
+    "var m = core.timer({});",
+    "Node head = make_node(key);",
+    "int arr = size + 1;",
+    "She bought a new bike in May.",
+    "var b = core.button({});",
+    "Point p = make_point(x, y);",
+    "We moved to a new house in June."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; prose 'new' and factory functions stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code ' new'",
+ "unit_kind": "lexical / code",
+ "confidence": "high",
+ "notes": "Card: ' new' x4, 'Layout' x3, ' layout' x3, 'Box' x3, '.value' x2. Probe: 'new pair<' 1.05, 'new core.Mouse' 0.29; 'a new car' 0.01; 'make_pair' 0.03. 'QLayout' 0.51 is not claimed."
+}
