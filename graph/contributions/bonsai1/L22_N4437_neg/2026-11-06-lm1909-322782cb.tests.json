@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-322782cb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N4437-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:27:16+00:00",
+ "selection": "second round after a failed first round",
+ "neighbours": [
+  {
+   "unit": "L22/N4437",
+   "pole": "-",
+   "label": "The closing noun of a negated claim about what something can do (can't solve the funding gap, won't remove the wrinkles); the same claim without negation stays low",
+   "fire": [
+    "This new budget can't close the staffing gap.",
+    "Their vitamin pills won't reverse the hair loss.",
+    "A short course can't replace the missing experience.",
+    "Stronger locks won't stop the rising crime.",
+    "That extra bus can't reduce the morning crowding.",
+    "This cheap paint won't hide the deeper cracks.",
+    "One small grant can't fix the housing crisis.",
+    "Better signs won't solve the parking problem."
+   ],
+   "quiet": [
+    "This new budget closes the staffing gap.",
+    "Their vitamin pills reverse the hair loss.",
+    "A short course replaces the missing experience.",
+    "Stronger locks stop the rising crime.",
+    "That extra bus reduces the morning crowding.",
+    "This cheap paint hides the deeper cracks.",
+    "One small grant fixes the housing crisis.",
+    "Better signs solve the parking problem."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "closing noun under negation",
+ "unit_kind": "contextual / grammatical",
+ "confidence": 0.5,
+ "notes": "Second round. Round 1 failed on median 0.190 with AUROC 0.938; 'doubt' and 'failed to' frames vary (0.11-0.45), so this round is limited to can't and won't."
+}

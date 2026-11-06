@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ea1b48e1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N768+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:27:16+00:00",
+ "selection": "second round after a failed first round",
+ "neighbours": [
+  {
+   "unit": "L25/N768",
+   "pole": "+",
+   "label": "The word after 'holds', 'serves' or 'appointed' where a position, record or membership follows (holds the title, serves on the board, appointed to the panel); similar verbs stay low",
+   "fire": [
+    "Mr. Vance holds the title of senior partner at the firm.",
+    "Since last year she serves on the parish council.",
+    "Dr. Ito was appointed to the review panel in March.",
+    "Ms. Reyes currently holds the post of treasurer.",
+    "He serves on the board of two local charities.",
+    "She was appointed to the bench by the governor.",
+    "Our coach holds the national record in the mile.",
+    "The senator serves in the armed services committee."
+   ],
+   "quiet": [
+    "Mr. Vance carries the bags of the senior partner at the firm.",
+    "Since last year she brings cakes to the parish hall.",
+    "Dr. Ito was invited to the review dinner in March.",
+    "Ms. Reyes currently likes the taste of mango.",
+    "He sits on the bench of two local parks.",
+    "She was driven to the station by the governor.",
+    "Our coach broke the wooden chair in the mess.",
+    "The senator serves soup at the armed forces shelter."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "holds the, serves on, appointed to",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.6,
+ "notes": "Second round. Round 1 ('occupying an office') failed because 'holds the ladder' (0.49) and 'serves soup' (0.32) fired. The label is lowered to the words: 'holds the' fires for any object, so one such near miss is not expected to separate and fire items use position-like objects. A probe of 'She serves tea' read 0.15."
+}

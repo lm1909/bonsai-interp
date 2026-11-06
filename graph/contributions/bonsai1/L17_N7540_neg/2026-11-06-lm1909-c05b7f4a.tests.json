@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c05b7f4a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N7540-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:27:16+00:00",
+ "selection": "second round after a failed first round",
+ "neighbours": [
+  {
+   "unit": "L17/N7540",
+   "pole": "-",
+   "label": "A separator in a numeric column-width list that follows a list of column names in code (['Id', 'PID', ...], sizes=[15, 7, 15, ...]); the same numbers alone or in prose stay low",
+   "fire": [
+    "header = ['Name', 'UID', 'State', 'Disk', 'Hosts', 'Jobs', 'Path']\nsizes = [20, 6, 12, 12, 12, 12, 12]\n",
+    "cols = ['Id', 'Host', 'Port', 'User', 'Mode', 'Time', 'Note']\nwidths = [8, 16, 8, 8, 8, 8, 8]\n",
+    "labels = ['Key', 'PID', 'Status', 'Mem', 'Tags', 'Size', 'File']\ncolumn_sizes = [15, 7, 15, 15, 15, 15, 15]\n",
+    "fields = ['Title', 'Year', 'Genre', 'Rate', 'Cast', 'Plot', 'Link']\nwidth = [30, 6, 10, 10, 10, 10, 10]\n",
+    "names = ['A', 'B', 'C', 'D', 'E', 'F', 'G']\nsizes = [4, 9, 4, 4, 4, 4, 4]\n",
+    "heads = ['Team', 'Won', 'Lost', 'Tied', 'Rank', 'Goal', 'Note']\nspans = [18, 5, 5, 5, 5, 5, 5]\n",
+    "table = make(['Id', 'Tag', 'Size', 'Age', 'Kind', 'Type', 'Link'],\n    sizes=[11, 8, 11, 11, 11, 11, 11])\n",
+    "titles = ['Step', 'Loss', 'Acc', 'Time', 'Rate', 'Norm', 'Note']\nwide = [6, 10, 6, 6, 6, 6, 6]\n"
+   ],
+   "quiet": [
+    "sizes = [20, 6, 12, 12, 12, 12, 12]\nprint(sizes)\n",
+    "widths = [8, 16, 8, 8, 8, 8, 8]\nshow(widths)\n",
+    "column_sizes = [15, 7, 15, 15, 15, 15, 15]\nsave(column_sizes)\n",
+    "We sold 30 books, 6 maps, 10 pens, 10 pads and 10 cards.",
+    "header = load(path)\nsizes = get_sizes(header)\n",
+    "heads = read(file)\nspans = compute(heads)\n",
+    "table = make(rows)\nsizes = table.sizes()\n",
+    "titles = fetch()\nwide = len(titles)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "column widths after column names",
+ "unit_kind": "code / repeat",
+ "confidence": 0.5,
+ "notes": "Second round. Round 1 failed on median 0.189 over any long list. A list of numbers alone probed 0.05, and after a list of names 0.51."
+}
