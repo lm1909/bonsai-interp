@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-8f28ff5d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N3377-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:43:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N3377",
+   "pole": "-",
+   "label": "' or' offering a switch between two settings ('Enable or disable', 'and 1 or -1'), firing on ' or' or ' disable', and ',' in contest rules ('to enter,'); ' or' between nouns stays quiet",
+   "fire": [
+    "dialog.ask('Enable or disable the filter', opts=f)",
+    "value = (kind == 'Sub' and 2 or -2)",
+    "Comment below to enter, one entry per household.",
+    "You can enable or disable this option at any time.",
+    "menu.add('Turn on or turn off the alarm', cb)",
+    "x = (flag and 1 or 0)",
+    "Use this switch to enable or disable the camera.",
+    "Leave a reply to enter, one reply per person."
+   ],
+   "quiet": [
+    "dialog.ask('Choose the filter', opts=f)",
+    "value = kind.lower()",
+    "Comment below to share your favorite recipe.",
+    "You can pick apples or pears at any time.",
+    "menu.add('Open the alarm settings', cb)",
+    "x = flag",
+    "Use this switch to light the camera.",
+    "Leave a reply in the box, and thank you."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' or' in 'enable or disable'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   " or",
+   " disable",
+   ","
+  ]
+ }
+}
