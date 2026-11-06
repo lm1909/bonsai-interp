@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-07dd27e4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5764+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:12:21+00:00",
+ "neighbours": [
+  {
+   "unit": "L29/N5764",
+   "pole": "+",
+   "label": "a claim or prediction being supported by later evidence ('was confirmed by', 'supported by the records', 'borne out by')",
+   "fire": [
+    "Her theory about the comet was later supported by telescope images.",
+    "The witness's account was confirmed by the security footage.",
+    "Their prediction of a mild winter was proved right by the data.",
+    "The old legend has been verified by recent excavations.",
+    "His suspicion was fully borne out by the lab results.",
+    "That estimate was backed up by an independent audit.",
+    "The doctor's diagnosis was confirmed by a second scan.",
+    "This hypothesis is supported by the tree-ring evidence."
+   ],
+   "quiet": [
+    "The heavy roof of the barn was later supported by steel beams.",
+    "The hotel booking was confirmed by the front desk clerk.",
+    "Their purchase of a small boat was paid for by the club.",
+    "The old passport has been stamped by border guards.",
+    "His wooden chair was fully covered by the blanket.",
+    "That hard drive was backed up by an office assistant.",
+    "The doctor's appointment was confirmed by a text message.",
+    "This tall shelf is supported by two iron brackets."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "claim supported by evidence",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Third round. Round 2 ('borne out') failed because other verbs of confirmation fired: supported by court records 0.82, verified by the blood tests 0.70. Near misses here keep 'supported by', 'confirmed by' and similar words, but what is supported is not a claim.",
+ "selection": "third round after the failed labels in sweep seed 202611050409 and the second-round PR"
+}
