@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-7fa5f866",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N1044+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:43:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N1044",
+   "pole": "+",
+   "label": "a capital E, H or Э split off as its own token at the start of a proper name (' E'|indhoven, ' H'|ainan, ' E'|dda, ' Э'|дуардович), as opposed to the same sentences without such a name",
+   "fire": [
+    "The team visited Ehingen and Eisenach last month.",
+    "He moved to Hanau after the war.",
+    "Friends like Peter Mann and Edda Stone attended.",
+    "Vielleicht kennt jemand von Euch dieses Haus.",
+    "Герман Эдуардович вышел из комнаты.",
+    "Institutions: Universität Bonn, Eindhoven University.",
+    "She gave a talk at the Eötvös University.",
+    "Андрей Эдуардович позвонил вчера вечером."
+   ],
+   "quiet": [
+    "The team visited Paris and London last month.",
+    "He moved to Berlin after the war.",
+    "Friends like Peter Mann and Mary Stone attended.",
+    "Vielleicht kennt jemand von uns dieses Haus.",
+    "Герман Иванович вышел из комнаты.",
+    "Institutions: Universität Bonn, Technical University.",
+    "She gave a talk at the local university.",
+    "Андрей Иванович позвонил вчера вечером."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split capital E / H / Э name start",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization not checked for the new names. A near-miss probe reached 0.18 on ' M' in Münster."
+}
