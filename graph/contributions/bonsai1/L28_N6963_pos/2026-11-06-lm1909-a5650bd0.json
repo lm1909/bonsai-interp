@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-06-lm1909-a5650bd0",
+ "kind": "qc",
+ "neuron": "bonsai1/L28/N6963+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:45:50+00:00",
+ "recipe": {
+  "toolchain_commit": "5d02a995e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N6963_pos/2026-11-06-lm1909-a5650bd0.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N6963_pos/2026-11-06-lm1909-a5650bd0.tests.json",
+   "prereg_commit": "5d02a995e",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.308,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.07,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.658,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.009,
+     "peak": " Earth"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.223,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.022,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.435,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.235,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.102,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.108,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " mountain"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " cheap"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " Rome"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " streets"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.229,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "5d02a995e",
+  "minutes": 17,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "'the' after a copula that introduces a unique-rank identity ('X is the capital / third-largest / first …', 'will be the death of'), versus 'the' after ordinary action verbs"
+ }
+}
