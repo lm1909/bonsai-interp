@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fa7cfbb8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N3517-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:53:20+00:00",
+ "recipe": {
+  "toolchain_commit": "42ef04d63",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N3517_neg/2026-11-06-lm1909-fa7cfbb8.tests.json"
+ },
+ "label": "the piece right after 'non' when it is a word for the usual kind or category (non|traditional, non|standard, non|farm, non|resident, non|essential, non|professional), as opposed to the same word without 'non'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N3517_neg/2026-11-06-lm1909-fa7cfbb8.tests.json",
+   "prereg_commit": "42ef04d63",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.62,
+     "peak": "traditional"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.701,
+     "peak": "standard"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.77,
+     "peak": "farm"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.411,
+     "peak": "resident"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.194,
+     "peak": "essential"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.214,
+     "peak": "professional"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.557,
+     "peak": "academic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.9,
+     "peak": "standard"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " classes"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " date"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": " May"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " visitor"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " kept"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " raise"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " warranty"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.589,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "42ef04d63",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "'non' + a category-of-norm word",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Second round. In a sweep, 'word after non- / non' failed on median (0.177): 'traditional', 'standard', 'farm' 0.59–0.79 and 'verbal', 'violent', 'fiction' at or below 0.10. Tokenization checked; hyphenated forms are left out.",
+ "selection": "second round after a failed label (picked)"
+}

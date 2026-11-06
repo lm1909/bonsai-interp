@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-1e1b5ae6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6776-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:53:16+00:00",
+ "recipe": {
+  "toolchain_commit": "42ef04d63",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N6776_neg/2026-11-06-lm1909-1e1b5ae6.tests.json"
+ },
+ "label": "the word-start pieces ' jav', ' sil', ' del' and ' gal' in javelin, silicate, delphinid and galley, as opposed to whole words in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N6776_neg/2026-11-06-lm1909-1e1b5ae6.tests.json",
+   "prereg_commit": "42ef04d63",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.568,
+     "peak": " jav"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.714,
+     "peak": " sil"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.378,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.483,
+     "peak": " gal"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.359,
+     "peak": " sil"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.721,
+     "peak": " jav"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.203,
+     "peak": " del"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.54,
+     "peak": " gal"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " iron"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.202,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " bay"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " hunts"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " ship"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.512,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "42ef04d63",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "' jav', ' sil', ' del', ' gal' pieces",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Second round. In a sweep, 'word-start piece of a rarer word' failed (AUROC 0.859): 'silica', 'silicone' and 'galleons' merged or split differently and stayed at or below 0.04. Tokens checked for every word here. Narrow by design; coverage will be small. ' Java' reached 0.09 in a probe.",
+ "selection": "second round after a failed label (picked)",
+ "trigger": {
+  "tokens": [
+   " jav",
+   " sil",
+   " del",
+   " gal"
+  ]
+ }
+}

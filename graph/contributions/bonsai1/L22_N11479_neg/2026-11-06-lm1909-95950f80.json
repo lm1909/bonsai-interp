@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-95950f80",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11479-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:53:04+00:00",
+ "recipe": {
+  "toolchain_commit": "42ef04d63",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N11479_neg/2026-11-06-lm1909-95950f80.tests.json"
+ },
+ "label": "a nationality or ethnic adjective, whether of a person, food or a thing (Russian, Chinese, Irish, Greek), as opposed to other adjectives in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N11479_neg/2026-11-06-lm1909-95950f80.tests.json",
+   "prereg_commit": "42ef04d63",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.447,
+     "peak": " Ukrainian"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.209,
+     "peak": " Chinese"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.254,
+     "peak": " Polish"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.283,
+     "peak": " Irish"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.21,
+     "peak": " Greek"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.228,
+     "peak": " Italian"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.361,
+     "peak": " Armenian"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.354,
+     "peak": " Scottish"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " street"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " stall"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "ives"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " rug"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.268,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "42ef04d63",
+  "minutes": 1,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "nationality adjective",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Second round. In a sweep, 'nationality or ethnicity of a person' failed (AUROC 0.906): food and object uses reached 0.19–0.36, so the person is not required. These near misses use other adjectives.",
+ "selection": "second round after a failed label (picked)"
+}

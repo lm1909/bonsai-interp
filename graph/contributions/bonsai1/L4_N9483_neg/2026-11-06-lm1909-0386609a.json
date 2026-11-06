@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-0386609a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9483-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:53:18+00:00",
+ "recipe": {
+  "toolchain_commit": "42ef04d63",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N9483_neg/2026-11-06-lm1909-0386609a.tests.json"
+ },
+ "label": "the URL pieces '?p' and '.org' (showthread.php?p=, www.w3.org), as opposed to '.com' URLs and to text without a URL",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N9483_neg/2026-11-06-lm1909-0386609a.tests.json",
+   "prereg_commit": "42ef04d63",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.397,
+     "peak": "?p"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.49,
+     "peak": ".org"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.346,
+     "peak": "?p"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.454,
+     "peak": ".org"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.547,
+     "peak": "?p"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.291,
+     "peak": "/?"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.461,
+     "peak": ".org"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.107,
+     "peak": ".org"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.124,
+     "peak": ".com"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.117,
+     "peak": ".com"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.087,
+     "peak": ".com"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.249,
+     "peak": ".com"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.076,
+     "peak": "/index"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": "/about"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.02,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.007,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.425,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "42ef04d63",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "URL pieces '?p' and '.org'",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Second round. In a sweep, 'URL pieces' failed (AUROC 0.875) with '?p' and '.org' at 0.25–0.74 and one https item at -0.03. Near misses here include '.com' URLs, a harder test. Tiny corpus max (4.19).",
+ "selection": "second round after a failed label (picked)",
+ "trigger": {
+  "tokens": [
+   "?p",
+   ".org",
+   "/?"
+  ]
+ }
+}

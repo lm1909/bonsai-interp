@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-2c38fd25",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8501+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:52:59+00:00",
+ "recipe": {
+  "toolchain_commit": "42ef04d63",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N8501_pos/2026-11-06-lm1909-2c38fd25.tests.json"
+ },
+ "label": "the word ' because', giving the reason for a fact, as opposed to although, until, and other connectives in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N8501_pos/2026-11-06-lm1909-2c38fd25.tests.json",
+   "prereg_commit": "42ef04d63",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.204,
+     "peak": " because"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.965,
+     "peak": " because"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.586,
+     "peak": " because"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.469,
+     "peak": " because"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.85,
+     "peak": " because"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.593,
+     "peak": " because"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.867,
+     "peak": " because"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.2,
+     "peak": " because"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.325,
+     "peak": " until"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.178,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.146,
+     "peak": " although"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.1,
+     "peak": " spite"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.617,
+     "peak": " when"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.445,
+     "peak": " after"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.859,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "42ef04d63",
+  "minutes": 1,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "the word 'because'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Second round. In a sweep, 'reason clause: because, explanatory when' failed (AUROC 0.891): ' because' 0.59–1.00, while my 'explanatory when' did not separate from time ' when'. One near miss here keeps ' when', and one ' after', both of which reached 0.34–0.39 before.",
+ "selection": "second round after a failed label (picked)",
+ "trigger": {
+  "tokens": [
+   " because",
+   "Because",
+   " Because"
+  ]
+ }
+}
