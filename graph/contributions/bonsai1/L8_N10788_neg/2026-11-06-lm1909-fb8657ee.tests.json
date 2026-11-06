@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-fb8657ee",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N10788-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:37:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N10788",
+   "pole": "-",
+   "label": "A word inside a CamelCase GUI method name (setHot|Spot, Set|Row|Attr, setScaled|Contents, setWord|Wrap); the same words in prose and plain calls stay quiet",
+   "fire": [
+    "item.setHotSpot(QtCore.QPoint(3, 4))\nitem.setWordWrap(True)\n",
+    "table.SetRowLabel(row, name)\ntable.Refresh()\n",
+    "image.setScaledContents(False)\nimage.show()\n",
+    "view.setColumnWidth(0, 40)\nview.setRowHeight(1, 20)\n",
+    "text.setWordWrap(False)\ntext.setAlignment(a)\n",
+    "grid.SetCellValue(row, col, v)\ngrid.ForceRefresh()\n",
+    "self.deleteRowButton.Disable()\nself.addRowButton.Enable()\n",
+    "edit.setPlainText(s)\nedit.setReadOnly(True)\n"
+   ],
+   "quiet": [
+    "x = point(3, 4)\ny = wrap(x)\n",
+    "z = foo(a, b)\nprint(z)\n",
+    "a = load(path)\nshow(a)\n",
+    "w = 40\nh = 20\narea = w * h\n",
+    "The hot spot on the map was near the old row of shops.",
+    "Each row of the table has a wide cell on the left.",
+    "Delete the old button from the coat and add a new one.",
+    "She wrote a plain text and read it to the class."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word in a GUI method name",
+ "unit_kind": "code / token piece",
+ "confidence": 0.8,
+ "notes": "Probes 0.69-0.90."
+}
