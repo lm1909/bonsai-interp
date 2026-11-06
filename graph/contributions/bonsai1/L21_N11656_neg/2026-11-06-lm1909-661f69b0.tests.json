@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-661f69b0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N11656-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:12:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N11656",
+   "pole": "-",
+   "label": "the indent at the start of a line following a long statement inside a Python function",
+   "fire": [
+    "    def merge(self, left_file, block_size):\n        print(\"Trying to merge BAM file %s into blocks of %i bytes\" % (left_file, block_size))\n        g = open(left_file, \"r\")\n        rows = g.read()\n",
+    "    def rebuild(self, table_name, page_size):\n        logger.info(\"Trying to rebuild table %s with pages of %i rows\" % (table_name, page_size))\n        h = connect(table_name)\n        rows = h.fetch()\n",
+    "    def upload(self, source_path, part_size):\n        print(\"Trying to upload archive %s in parts of %i bytes\" % (source_path, part_size))\n        s = open(source_path, \"rb\")\n        blob = s.read()\n",
+    "    def export(self, out_name, line_count):\n        print(\"Trying to write report %s with a total of %i lines\" % (out_name, line_count))\n        w = open(out_name, \"w\")\n        w.close()\n",
+    "    def scan(self, host_name, port_range):\n        print(\"Trying to scan server %s on a range of %i ports\" % (host_name, port_range))\n        c = connect(host_name)\n        c.close()\n",
+    "    def resize(self, image_path, max_side):\n        logger.debug(\"Trying to shrink image %s to a side of %i pixels\" % (image_path, max_side))\n        im = load(image_path)\n        im.close()\n",
+    "    def parse(self, log_path, tail_size):\n        print(\"Trying to parse log %s for the last %i lines\" % (log_path, tail_size))\n        fh = open(log_path, \"r\")\n        text = fh.read()\n",
+    "    def fetch(self, feed_url, item_limit):\n        print(\"Trying to fetch feed %s for up to %i items\" % (feed_url, item_limit))\n        r = get(feed_url)\n        items = r.json()\n"
+   ],
+   "quiet": [
+    "print(\"Trying to merge BAM file %s into blocks of %i bytes\" % (left_file, block_size))",
+    "logger.info(\"Trying to rebuild table %s with pages of %i rows\" % (table_name, page_size))",
+    "print(\"Trying to upload archive %s in parts of %i bytes\" % (source_path, part_size))",
+    "print(\"Trying to write report %s with a total of %i lines\" % (out_name, line_count))",
+    "print(\"Trying to scan server %s on a range of %i ports\" % (host_name, port_range))",
+    "logger.debug(\"Trying to shrink image %s to a side of %i pixels\" % (image_path, max_side))",
+    "print(\"Trying to parse log %s for the last %i lines\" % (log_path, tail_size))",
+    "print(\"Trying to fetch feed %s for up to %i items\" % (feed_url, item_limit))"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line-start indent in function body",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "The only probe that reached 0.3 was a four-line function; shorter code stayed at or below 0.12. The near misses are the same statement alone, with no following indented line."
+}

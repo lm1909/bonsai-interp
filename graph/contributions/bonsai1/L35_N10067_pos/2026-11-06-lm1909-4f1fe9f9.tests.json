@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-4f1fe9f9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10067+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:12:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N10067",
+   "pole": "+",
+   "label": "the split pieces ' comp' and ' conf' in French and ' вып' in Russian (complice, confus, выплач-)",
+   "fire": [
+    "Elle lui lança un sourire complice avant de partir.",
+    "Le garçon resta confus devant la classe.",
+    "Les employés sont confus après cette annonce.",
+    "Il cherchait un ami complice pour cette affaire.",
+    "Пенсии ежемесячно выплачиваются вдовам.",
+    "Зарплату обычно выплачивают в конце месяца.",
+    "Премии ежегодно выплачиваются сотрудникам.",
+    "Долги частично выплачены банку."
+   ],
+   "quiet": [
+    "Elle lui lança un sourire avant de partir.",
+    "Le garçon resta seul devant la classe.",
+    "Les employés sont partis après cette annonce.",
+    "Il cherchait un ami pour cette affaire.",
+    "Пенсии ежемесячно идут вдовам.",
+    "Зарплату обычно дают в конце месяца.",
+    "Премии ежегодно идут сотрудникам.",
+    "Долги частично отданы банку."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' comp', ' conf', ' вып' pieces",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "The card suggests any first piece of a split word in a non-English text, but this test claims only these three: the near misses keep other split pieces (' sour', ' gar', ' cher', ' employ'), so a general split-piece pole would fail it. ' tr' of 'triste' reached 0.24 in a probe.",
+ "trigger": {
+  "pieces": [
+   " comp",
+   " conf",
+   " вып"
+  ]
+ }
+}

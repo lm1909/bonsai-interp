@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-c18eb9d4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N12192-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:12:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N12192",
+   "pole": "-",
+   "label": "a type or attribute name being looked up: get_boolean, getboolean, @id",
+   "fire": [
+    "enabled = config.get_boolean('auto_save')",
+    "debug = parser.getboolean('main', 'debug')",
+    "show = prefs.get_boolean('show-icons')",
+    "strict = cfg.getboolean('lint', 'strict')",
+    "use_tls = settings.get_boolean('use-tls')",
+    "node = tree.find('.//span[@id=\"title\"]')",
+    "cell = root.find('.//td[@id=\"total\"]')",
+    "box = page.xpath('//div[@id=\"main\"]')"
+   ],
+   "quiet": [
+    "enabled = config.auto_save",
+    "debug = parser.main_debug",
+    "show = prefs.show_icons",
+    "strict = cfg.lint_strict",
+    "use_tls = settings.use_tls",
+    "node = tree.find('span')",
+    "cell = root.find('td')",
+    "box = page.first('div')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "type/attribute name in a lookup",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "'get_value' also reached 0.27 in a probe."
+}

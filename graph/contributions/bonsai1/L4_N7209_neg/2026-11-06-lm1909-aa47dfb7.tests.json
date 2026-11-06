@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-aa47dfb7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N7209-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:12:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N7209",
+   "pole": "-",
+   "label": "positional: fires on the first token of a window; no content trigger found",
+   "fire": [
+    "Switzerland borders France, Italy and Austria.",
+    "在学校的学生很多。",
+    "気持ちがいい朝です。",
+    "ASA guidelines were updated this year.",
+    "Roughly half of the voters stayed home.",
+    "Nevertheless the plan went ahead.",
+    "ّ وحِي فَقَع",
+    "Those who arrived late were turned away."
+   ],
+   "quiet": [
+    "France, Italy and Austria border Switzerland.",
+    "学校的学生很多，在那里。",
+    "とても気持ちがいい朝です。",
+    "This year the ASA guidelines were updated.",
+    "Half of the voters roughly stayed home.",
+    "The plan nevertheless went ahead.",
+    "فَقَع وحِي ّ",
+    "Late arrivals were turned away by those."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "window-initial token",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "91% of the top peaks sit at window position 0. Probes of sentence-initial tokens stayed at or below 0.03, so whatever the corpus window start does, a sentence start here does not reproduce it. Registered expecting a failure."
+}
