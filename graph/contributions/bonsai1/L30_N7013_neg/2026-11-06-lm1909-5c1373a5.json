@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-5c1373a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N7013-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:06:07+00:00",
+ "recipe": {
+  "toolchain_commit": "38df650ce",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N7013_neg/2026-11-06-lm1909-5c1373a5.tests.json"
+ },
+ "label": "recommending something as worth reading or visiting: 'a pleasure to read', 'well worth a read', 'worth a visit'; 'worth a million dollars' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N7013_neg/2026-11-06-lm1909-5c1373a5.tests.json",
+   "prereg_commit": "38df650ce",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.739,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.525,
+     "peak": " worth"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.439,
+     "peak": " worth"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.61,
+     "peak": " worth"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.336,
+     "peak": " worth"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.466,
+     "peak": " worth"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.772,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.376,
+     "peak": " worth"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " closed"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " Friday"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " wheat"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " grey"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.496,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "38df650ce",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'well worth a read', 'pleasure to read'",
+ "unit_kind": "contextual / prediction",
+ "confidence": "high",
+ "selection": "random draw"
+}
