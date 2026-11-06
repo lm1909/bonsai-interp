@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-27c38423",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N11489+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:31:47+00:00",
+ "recipe": {
+  "toolchain_commit": "daf12297c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N11489_pos/2026-11-06-lm1909-27c38423.tests.json"
+ },
+ "label": "extent of land or territory ('two acres of land', 'spread out over 120 square miles', 'the outskirts of')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N11489_pos/2026-11-06-lm1909-27c38423.tests.json",
+   "prereg_commit": "daf12297c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.234,
+     "peak": " acres"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.693,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.29,
+     "peak": " outskirts"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.408,
+     "peak": " covers"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.779,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.126,
+     "peak": " outskirts"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.396,
+     "peak": " across"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.508,
+     "peak": " runs"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " butter"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.059,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " text"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.06,
+     "peak": " over"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "Prices"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.027,
+     "peak": " book"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "daf12297c",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "extent of land",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' acres' x4, ' of' x3, ' outskirts' x2, ' a' x2, ' miles' x2, ' surrounding' x2. Probe: ' outskirts' 0.84, 'spread out over' 0.71, ' acres' 0.29; 'two books' 0.01; 'spread with butter' 0.02.",
+ "selection": "random draw"
+}

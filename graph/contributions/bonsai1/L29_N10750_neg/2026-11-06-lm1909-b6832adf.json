@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b6832adf",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10750-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:31:52+00:00",
+ "recipe": {
+  "toolchain_commit": "daf12297c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N10750_neg/2026-11-06-lm1909-b6832adf.tests.json"
+ },
+ "label": "'ven' inside French devenir / survenir forms ('de|ven|u', 'sur|ven|ant')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N10750_neg/2026-11-06-lm1909-b6832adf.tests.json",
+   "prereg_commit": "daf12297c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.035,
+     "peak": " fer"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.896,
+     "peak": "ven"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.703,
+     "peak": "ven"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.022,
+     "peak": " Paris"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.811,
+     "peak": "ven"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.72,
+     "peak": "ven"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.791,
+     "peak": "ven"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.682,
+     "peak": "ven"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.487,
+     "peak": " vend"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.159,
+     "peak": " arriv"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " lors"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " Paris"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.077,
+     "peak": " cal"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.099,
+     "peak": " chang"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " fr"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " pan"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.712,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "daf12297c",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French 'ven' piece",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'ven' x10, '7' x3, ' reven' x3, ' ven' x3, ' ten' x3. Probe: devenu 0.87-0.90, survenant 0.70; '1791' 0.61 on '7' (not claimed; '1891' 0.17); plain French 0.06.",
+ "selection": "random draw"
+}

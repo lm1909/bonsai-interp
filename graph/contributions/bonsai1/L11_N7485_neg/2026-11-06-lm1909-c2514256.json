@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c2514256",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N7485-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:31:29+00:00",
+ "recipe": {
+  "toolchain_commit": "daf12297c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N7485_neg/2026-11-06-lm1909-c2514256.tests.json"
+ },
+ "label": "dense gate-closed unit, stronger on pieces of rare words ('abb|as', 'sour|d|ough', 'UNF|PA')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N7485_neg/2026-11-06-lm1909-c2514256.tests.json",
+   "prereg_commit": "daf12297c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.921,
+     "peak": "as"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.599,
+     "peak": "d"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.632,
+     "peak": "PA"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.606,
+     "peak": "abb"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.633,
+     "peak": "d"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.628,
+     "peak": "PA"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.806,
+     "peak": "as"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.61,
+     "peak": "d"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.086,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.117,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.239,
+     "peak": " ab"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.066,
+     "peak": " Thomas"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.256,
+     "peak": " died"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.396,
+     "peak": " inform"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.122,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.273,
+     "peak": " rise"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.63,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "daf12297c",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense, rare-word pieces",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (36.7%) and gate-closed (100% leak). Card: 'abb' x2, 'ol', 'd', 'ай', 'PA', '1'. Probe: Barabbas 0.80, UNFPA 0.63, sourdough 0.60; 'Like most recipes' 0.36.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-427fba1a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N4770-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:31:22+00:00",
+ "recipe": {
+  "toolchain_commit": "daf12297c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N4770_neg/2026-11-06-lm1909-427fba1a.tests.json"
+ },
+ "label": "Chinese function word 于 / 於 / 會 before a time or predicate ('最快于2012年', '勝於無')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N4770_neg/2026-11-06-lm1909-427fba1a.tests.json",
+   "prereg_commit": "daf12297c",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.461,
+     "peak": "于"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.048,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.661,
+     "peak": "於"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.194,
+     "peak": "會"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.033,
+     "peak": "将于"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.15,
+     "peak": "於"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.345,
+     "peak": "會"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.021,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.145,
+     "peak": "在"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": "在"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.387,
+     "peak": "比"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.028,
+     "peak": "朋友"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": "明天"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": "他在"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.136,
+     "peak": "喜歡"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "在"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.172,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "daf12297c",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese 于, 於, 會",
+ "unit_kind": "token / language",
+ "confidence": "medium",
+ "notes": "Card: '會' x3, '于' x2, '於', ' ja', '遭'. Probe: 于 0.70, 於 0.41, 會 0.33; 在 0.05; German ' ja' 0.15 (not claimed).",
+ "selection": "random draw"
+}

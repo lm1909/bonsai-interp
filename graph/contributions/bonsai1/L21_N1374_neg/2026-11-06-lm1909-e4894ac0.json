@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e4894ac0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N1374-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:31:41+00:00",
+ "recipe": {
+  "toolchain_commit": "daf12297c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N1374_neg/2026-11-06-lm1909-e4894ac0.tests.json"
+ },
+ "label": "'even more' (a further increase in degree; output promotes ' further', ' becomes', ' additional')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N1374_neg/2026-11-06-lm1909-e4894ac0.tests.json",
+   "prereg_commit": "daf12297c",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.372,
+     "peak": " even"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.628,
+     "peak": " even"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.406,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.219,
+     "peak": " even"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.392,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.182,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.295,
+     "peak": " even"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.191,
+     "peak": " even"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " awkward"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.058,
+     "peak": " me"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": " frightening"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.03,
+     "peak": " divided"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " second"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " caught"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.053,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.334,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "daf12297c",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'even more'",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Card: ' even' x13, ' more' x8, ' odds' x2. Output promotes ' further', ' more', ' additional', '更是'. Probe: 'an even more difficult' 0.63, 'even more sad' 0.51, 'even more amusing' 0.37, 'much more faith' 0.13; 'Even the mayor' 0.03.",
+ "selection": "random draw"
+}

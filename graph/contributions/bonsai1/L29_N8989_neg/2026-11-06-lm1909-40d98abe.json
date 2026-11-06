@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-40d98abe",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N8989-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:32:03+00:00",
+ "recipe": {
+  "toolchain_commit": "daf12297c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N8989_neg/2026-11-06-lm1909-40d98abe.tests.json"
+ },
+ "label": "new items reaching you as they come out ('as soon as they arrive', 'as they are published', 'first new images to be released'; output promotes ' useful', ' relevant')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N8989_neg/2026-11-06-lm1909-40d98abe.tests.json",
+   "prereg_commit": "daf12297c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.775,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.375,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.62,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.685,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.122,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.192,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.534,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.435,
+     "peak": " they"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " pen"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " hotel"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " out"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": "Alert"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": "Fans"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": "You"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.485,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "daf12297c",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "as they are released",
+ "unit_kind": "semantic / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' they' x2, ' to' x2, ' data' x2, ' a' x2, ' Artikel', ' Conditions'. Output promotes ' useful', ' accurate', ' relevant', ' readable'. Probe: 'as soon as they arrive' 0.69, 'first new images to be' 0.63, 'as they are published' 0.34; 'when you arrive' 0.07; 'by mail' 0.00.",
+ "selection": "random draw"
+}
