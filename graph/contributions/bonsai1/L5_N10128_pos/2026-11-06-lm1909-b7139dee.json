@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-b7139dee",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10128+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:18:18+00:00",
+ "recipe": {
+  "toolchain_commit": "1c509a417",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10128_pos/2026-11-06-lm1909-b7139dee.tests.json"
+ },
+ "label": "the open back IPA vowels ɑ and ɒ in dictionary pronunciations",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10128_pos/2026-11-06-lm1909-b7139dee.tests.json",
+   "prereg_commit": "1c509a417",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.723,
+     "peak": "ɑ"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.685,
+     "peak": "ɑ"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.669,
+     "peak": "ɒ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.674,
+     "peak": "ɑ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.568,
+     "peak": "ɑ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.517,
+     "peak": "ɒ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.703,
+     "peak": "ɑ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.467,
+     "peak": "ɒ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.467,
+     "peak": "ə"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.074,
+     "peak": "ˈ"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.546,
+     "peak": "ɪ"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": "ˈ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " word"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.082,
+     "peak": "ˈ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.066,
+     "peak": "ˈ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.153,
+     "peak": "ɪ"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.671,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1c509a417",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "IPA vowels ɑ, ɒ",
+ "unit_kind": "token / orthographic",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ɑ",
+   "ɒ"
+  ]
+ }
+}
