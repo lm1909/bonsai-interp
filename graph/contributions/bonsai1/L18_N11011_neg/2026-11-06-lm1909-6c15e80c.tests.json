@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-6c15e80c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N11011-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:41:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N11011",
+   "pole": "-",
+   "label": "Closing out something in Python: '.close' on a file object and the trailing '# type: ignore'; reads and prose 'close' stay quiet",
+   "fire": [
+    "table = pickle.load(handle)\nhandle.close()\nreturn table\n",
+    "body = config_file.read()\nconfig_file.close()\nprint(body)\n",
+    "return Page(data=data, state=self._state) # type: ignore\n",
+    "f = open(path)\nlines = f.readlines()\nf.close()\n",
+    "s = socket.socket()\ns.send(msg)\ns.close()\n",
+    "out = open(name, 'w')\nout.write(text)\nout.close()\n",
+    "x = Foo(bar=1, baz=2) # type: ignore\nprint(x)\n",
+    "conn = db.connect()\nrows = conn.execute(q)\nconn.close()\n"
+   ],
+   "quiet": [
+    "table = pickle.load(handle)\nrows = len(table)\nreturn table\n",
+    "body = config_file.read()\nprint(body)\nprint(len(body))\n",
+    "return Page(data=data, state=self._state)\n",
+    "f = open(path)\nlines = f.readlines()\nprint(lines)\n",
+    "s = socket.socket()\ns.send(msg)\ns.flush()\n",
+    "He closed the shop early and went close to the river.",
+    "x = Foo(bar=1, baz=2) # make a foo\nprint(x)\n",
+    "Please ignore the noise and keep walking to the door."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": ".close() and type: ignore",
+ "unit_kind": "code / lexical",
+ "confidence": 0.7,
+ "trigger": {
+  "tokens": [
+   ".close",
+   " ignore"
+  ]
+ }
+}
