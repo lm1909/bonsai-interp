@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-1e0769bb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6345-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:58:23+00:00",
+ "recipe": {
+  "toolchain_commit": "a5801bddc",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N6345_neg/2026-11-06-lm1909-1e0769bb.tests.json"
+ },
+ "label": "the padding argument in neural-network layer code",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N6345_neg/2026-11-06-lm1909-1e0769bb.tests.json",
+   "prereg_commit": "a5801bddc",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.042,
+     "peak": " padding"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.258,
+     "peak": " padding"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.666,
+     "peak": " padding"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.753,
+     "peak": " padding"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.373,
+     "peak": " padding"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.164,
+     "peak": " padding"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.056,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.452,
+     "peak": " padding"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.398,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.057,
+     "peak": "="
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": ".Linear"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.314,
+     "peak": "(pool"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.05,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.031,
+     "peak": "def"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.559,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5801bddc",
+  "minutes": 4,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "'padding' in layer code",
+ "unit_kind": "code / lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "padding"
+  ]
+ }
+}

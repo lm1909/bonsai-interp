@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-5b59ba4a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N1511-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:58:20+00:00",
+ "recipe": {
+  "toolchain_commit": "a5801bddc",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N1511_neg/2026-11-06-lm1909-5b59ba4a.tests.json"
+ },
+ "label": "dense unit: weak on most tokens, a little stronger on 'k' pieces in names and in words like erkannt",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N1511_neg/2026-11-06-lm1909-5b59ba4a.tests.json",
+   "prereg_commit": "a5801bddc",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.121,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.403,
+     "peak": " Elk"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.387,
+     "peak": " Elk"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.708,
+     "peak": "ky"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.711,
+     "peak": "kk"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.366,
+     "peak": "nt"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.312,
+     "peak": " County"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.075,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.188,
+     "peak": " Hill"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.124,
+     "peak": " runs"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.171,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.116,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.066,
+     "peak": " talk"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.162,
+     "peak": " g"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.182,
+     "peak": " County"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.096,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.377,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5801bddc",
+  "minutes": 4,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "dense; 'k' pieces",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "selection": "random draw"
+}
