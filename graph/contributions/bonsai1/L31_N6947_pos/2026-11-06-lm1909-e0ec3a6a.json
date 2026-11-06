@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e0ec3a6a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6947+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:30:41+00:00",
+ "recipe": {
+  "toolchain_commit": "45ad1bc97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N6947_pos/2026-11-06-lm1909-e0ec3a6a.tests.json"
+ },
+ "label": "' use' in the Apache licence header 'you may not use this file' (in its full multi-line context)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N6947_pos/2026-11-06-lm1909-e0ec3a6a.tests.json",
+   "prereg_commit": "45ad1bc97",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.97,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.965,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.928,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.045,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.901,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.942,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.971,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.973,
+     "peak": " use"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 1.034,
+     "peak": " obtain"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 1.05,
+     "peak": " obtain"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.248,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.383,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.094,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.282,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.486,
+     "peak": " enter"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.968,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45ad1bc97",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' use' in the Apache licence header",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.85,
+ "notes": "Card: ' use' 30 of the top 32, all in this licence. Probes: 1.01 with the Licensed line before it; 'you may not use this file' alone 0.06; 'not use a phone' 0.11; 'not copy this file' 0.26. So the licence context matters. Near misses keep the licence or 'you may not', and drop the verb or the licence.",
+ "selection": "random draw"
+}

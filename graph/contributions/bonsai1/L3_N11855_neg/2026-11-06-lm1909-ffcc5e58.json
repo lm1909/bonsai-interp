@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ffcc5e58",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N11855-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:30:22+00:00",
+ "recipe": {
+  "toolchain_commit": "45ad1bc97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N11855_neg/2026-11-06-lm1909-ffcc5e58.tests.json"
+ },
+ "label": "(guess) Spanish ' que' after 'lo': 'en lo que', 'de lo que' (leak regime)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N11855_neg/2026-11-06-lm1909-ffcc5e58.tests.json",
+   "prereg_commit": "45ad1bc97",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.662,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.083,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.577,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.316,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.072,
+     "peak": " tú"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.408,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.146,
+     "peak": "uer"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.019,
+     "peak": " clase"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.151,
+     "peak": " ré"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.148,
+     "peak": " manera"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.075,
+     "peak": " hay"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.147,
+     "peak": " campo"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.078,
+     "peak": " historia"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.1,
+     "peak": "ció"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.146,
+     "peak": "uer"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.064,
+     "peak": "er"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.633,
+    "median_fire": 0.231,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45ad1bc97",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Spanish 'lo que' (guess)",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.2,
+ "notes": "Card: ' que' 31 of the top 32, gate-closed (-g +u leak 99%), weak. My probes reached at most 0.06 on ' que'; the top examples have 'en lo que' and 'de lo que', so the test uses those contexts. Low confidence.",
+ "selection": "random draw"
+}

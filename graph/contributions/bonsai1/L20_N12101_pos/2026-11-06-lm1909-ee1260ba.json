@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ee1260ba",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N12101+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:30:29+00:00",
+ "recipe": {
+  "toolchain_commit": "45ad1bc97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N12101_pos/2026-11-06-lm1909-ee1260ba.tests.json"
+ },
+ "label": "(sub-trigger of a broad pole) the disease word after 'prescribed for the treatment of'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N12101_pos/2026-11-06-lm1909-ee1260ba.tests.json",
+   "prereg_commit": "45ad1bc97",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.548,
+     "peak": " cancer"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.685,
+     "peak": " cancer"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.366,
+     "peak": " cancer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.181,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.53,
+     "peak": " cancer"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.54,
+     "peak": " cancer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.425,
+     "peak": " cancer"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.227,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.153,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.043,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.153,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.153,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.153,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.038,
+     "peak": " plastic"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.478,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45ad1bc97",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "disease after 'treatment of'",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "The card flags this pole broad; ' of' 4, ' is' 3. Probes: ' cancer' 0.75, ' of' after 'task' 0.55, ' is' 0.34, ' ability' 0.32; plain sentences 0.05-0.08. Only one piece of a broad pole.",
+ "selection": "random draw"
+}

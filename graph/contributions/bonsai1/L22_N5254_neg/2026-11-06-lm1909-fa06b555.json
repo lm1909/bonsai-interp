@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fa06b555",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N5254-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:30:57+00:00",
+ "recipe": {
+  "toolchain_commit": "45ad1bc97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N5254_neg/2026-11-06-lm1909-fa06b555.tests.json"
+ },
+ "label": "(guess) ' and' joining two phrases with the same head: 'two dimensions and higher dimensions', 'consensus of opinion and general consensus'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N5254_neg/2026-11-06-lm1909-fa06b555.tests.json",
+   "prereg_commit": "45ad1bc97",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.003,
+     "peak": " dimensions"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.121,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.128,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.207,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.151,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.028,
+     "peak": " crimes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.356,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.096,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " dimensions"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.005,
+     "peak": " free"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "It"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " itself"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.124,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45ad1bc97",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' and' between phrases with one head (guess)",
+ "unit_kind": "contextual",
+ "confidence": 0.25,
+ "notes": "Card: ' and' 28 of the top 32. Probes: ' and' 0.28, 0.13, 0.12; '3d5 and 3d10' 0.03; '3 meals and' 0.01 (that is the + pole). Fire is expected under the threshold.",
+ "selection": "random draw"
+}

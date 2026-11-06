@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ce167aa6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N8418-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:29:50+00:00",
+ "recipe": {
+  "toolchain_commit": "45ad1bc97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N8418_neg/2026-11-06-lm1909-ce167aa6.tests.json"
+ },
+ "label": "the moment before 'object': ' and' in 'subject and object', and ' Об' opening Ukrainian Об'єкт",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N8418_neg/2026-11-06-lm1909-ce167aa6.tests.json",
+   "prereg_commit": "45ad1bc97",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.495,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.562,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.336,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.51,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.728,
+     "peak": " Об"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.209,
+     "peak": "’"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.331,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.053,
+     "peak": " Об"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " between"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " sea"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.072,
+     "peak": "comes"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "и"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " Mode"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.061,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": "і"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.502,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45ad1bc97",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word before or opening 'object'",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.5,
+ "notes": "Card: ' an' 4, ' foreign' 2, ' Об', ' direct'. Probes: ' Об' 1.00, ' and' after 'subject' 0.62, ' direct' before object 0.12; 'the subject and the verb' 0.02. The pole sees only the prefix, so the word before is predicting. Other peaks are not covered.",
+ "selection": "random draw"
+}

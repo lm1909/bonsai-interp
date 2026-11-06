@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1257993c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3197+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:30:20+00:00",
+ "recipe": {
+  "toolchain_commit": "45ad1bc97",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N3197_pos/2026-11-06-lm1909-1257993c.tests.json"
+ },
+ "label": "(list) '引' in 取引 or 引導 and 'firm' in German -firmen",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N3197_pos/2026-11-06-lm1909-1257993c.tests.json",
+   "prereg_commit": "45ad1bc97",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.842,
+     "peak": "引"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.623,
+     "peak": "引"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.449,
+     "peak": "firm"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.533,
+     "peak": "引"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.315,
+     "peak": "引"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.477,
+     "peak": "firm"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.461,
+     "peak": "引"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.505,
+     "peak": "firm"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.047,
+     "peak": "金融"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.096,
+     "peak": "売"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.057,
+     "peak": " ab"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": "は"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "支持"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.104,
+     "peak": "iele"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.062,
+     "peak": "ました"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.075,
+     "peak": "fer"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.491,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45ad1bc97",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'引', '-firm'en",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "Card: '引' 6, 'firm' 3. Probes: '引' in 取引 0.96, in 引導 0.26; 'firm' in Zulieferfirmen 0.50; 'firmware' at most 0.07; 金融 alone 0.04. Max 0.56, a weak pole.",
+ "selection": "random draw"
+}
