@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b1d5fb3a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N10272+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:17:04+00:00",
+ "recipe": {
+  "toolchain_commit": "f85d07e3a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N10272_pos/2026-11-06-lm1909-b1d5fb3a.tests.json"
+ },
+ "label": "' like' in the promotional comparison 'like never before' or 'like no other', as opposed to ' like' in an ordinary comparison",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N10272_pos/2026-11-06-lm1909-b1d5fb3a.tests.json",
+   "prereg_commit": "f85d07e3a",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.14,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.257,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.6,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.174,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.698,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.241,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.694,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.091,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.14,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.122,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.529,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.174,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " friends"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " pool"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.091,
+     "peak": " like"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.836,
+    "median_fire": 0.249,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f85d07e3a",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "'like never before / no other'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "The card also has ' perhaps' before a superlative, ' wie' and ' than', which this label does not cover. 'She sang like no other singer' reached only 0.14 in a probe.",
+ "selection": "random draw"
+}

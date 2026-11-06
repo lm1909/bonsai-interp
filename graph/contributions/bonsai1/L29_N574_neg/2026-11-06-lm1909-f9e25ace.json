@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f9e25ace",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N574-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:17:16+00:00",
+ "recipe": {
+  "toolchain_commit": "f85d07e3a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N574_neg/2026-11-06-lm1909-f9e25ace.tests.json"
+ },
+ "label": "a connector or bracket right after a drug name, where another drug name comes next (lisinopril and, naproxen (, warfarin plus), as opposed to the same connectors after ordinary nouns",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N574_neg/2026-11-06-lm1909-f9e25ace.tests.json",
+   "prereg_commit": "f85d07e3a",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.411,
+     "peak": "op"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.366,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.379,
+     "peak": " plus"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.224,
+     "peak": "entin"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.287,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.328,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.15,
+     "peak": "it"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.13,
+     "peak": "ome"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": " together"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "Common"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.0,
+     "peak": " milk"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": "Treatment"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " marg"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.307,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f85d07e3a",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "connector after a drug name",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "The card also has ' n' and ' d', pieces that open a drug name, and the probe's peaks were ' and', ' plus' and ' as'.",
+ "selection": "random draw"
+}

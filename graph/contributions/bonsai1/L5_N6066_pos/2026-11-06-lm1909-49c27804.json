@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-49c27804",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N6066+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:16:57+00:00",
+ "recipe": {
+  "toolchain_commit": "f85d07e3a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N6066_pos/2026-11-06-lm1909-49c27804.tests.json"
+ },
+ "label": "the continuation piece of a rare name after an opening As-, Ag- or Ar- syllable (Ash|ken|azi, Ag|ass|iz, Ag|assi, Ar|akan, Are|z|ki, Ars|ene), as opposed to other names in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N6066_pos/2026-11-06-lm1909-49c27804.tests.json",
+   "prereg_commit": "f85d07e3a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.775,
+     "peak": "ken"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.701,
+     "peak": "ken"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.042,
+     "peak": "iz"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.903,
+     "peak": "assi"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.028,
+     "peak": "akan"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.739,
+     "peak": "z"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.975,
+     "peak": "ene"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.795,
+     "peak": "ken"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " Sep"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " Poland"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " glaciers"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " Kar"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " Mourinho"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " Sep"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.849,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f85d07e3a",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "rare names: Ashkenazi, Agassiz, Arakan",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "This is a word-level list. The opening syllable is a pattern read from the card; other names with these openings are not tested.",
+ "selection": "random draw"
+}
