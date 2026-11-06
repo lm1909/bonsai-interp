@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-23131999",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N178+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:06:01+00:00",
+ "selection": "second round after my own sweep",
+ "neighbours": [
+  {
+   "unit": "L23/N178",
+   "pole": "+",
+   "label": "a word right before 'University' in a university's name ('Ohio State', 'Virginia Commonwealth', 'Case Western Reserve'), where 'University' is the likely next word; the same words elsewhere stay quiet",
+   "fire": [
+    "She earned her law degree at Ohio State University.",
+    "He coaches soccer at Michigan State University now.",
+    "Nurses trained at Virginia Commonwealth University in Richmond.",
+    "Our speaker teaches at Case Western Reserve University.",
+    "Alumni of Santa Clara University gave a large gift.",
+    "Her brother attends Northern Illinois University.",
+    "They met as students at Western Washington University.",
+    "A study from Iowa State University tested the corn."
+   ],
+   "quiet": [
+    "My aunt Clara makes soup on Sundays.",
+    "The Federal Reserve raised rates again this week.",
+    "Deer live in the nature reserve near town.",
+    "Last spring she moved to Illinois with her two sons.",
+    "George Washington crossed the river at night.",
+    "Canada joined the Commonwealth of Nations long ago.",
+    "Lawmakers in the state of Ohio passed a new tax.",
+    "A police state has no free press."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "the word before 'University'",
+ "unit_kind": "predictive / contextual",
+ "confidence": 0.75,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep11-20261106, which failed at AUROC 0.891 because 'Northern Illinois' (0.61) and 'Eastern Washington' (0.34) in sentences with no university predict 'University' just as well, and the model cannot see the next word at those tokens. This round's near misses use the same words where 'University' is not the likely next word: 'Federal Reserve', 'nature reserve', 'aunt Clara', 'George Washington', 'moved to Illinois'. Not probed for this round: the sentences are all new."
+}
