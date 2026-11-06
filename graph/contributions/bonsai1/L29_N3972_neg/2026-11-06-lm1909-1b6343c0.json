@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-1b6343c0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N3972-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:35:07+00:00",
+ "recipe": {
+  "toolchain_commit": "9b9dafb23",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N3972_neg/2026-11-06-lm1909-1b6343c0.tests.json"
+ },
+ "label": "US county or state government agencies (sheriff, state troopers, bureau of motor vehicles, county jail)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N3972_neg/2026-11-06-lm1909-1b6343c0.tests.json",
+   "prereg_commit": "9b9dafb23",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.142,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.393,
+     "peak": " County"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.497,
+     "peak": " state"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.475,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.478,
+     "peak": "ention"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.381,
+     "peak": " state"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.204,
+     "peak": " Motor"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.548,
+     "peak": " County"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": " Ohio"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "ers"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.024,
+     "peak": " Book"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.145,
+     "peak": " Marion"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " space"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.07,
+     "peak": " Tourism"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " Valley"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.476,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9b9dafb23",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "US county/state agencies",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "selection": "random draw"
+}

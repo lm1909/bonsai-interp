@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-9fccf297",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N501-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:35:09+00:00",
+ "recipe": {
+  "toolchain_commit": "9b9dafb23",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N501_neg/2026-11-06-lm1909-9fccf297.tests.json"
+ },
+ "label": "'discovery' as a stage of litigation (e-discovery, document discovery)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N501_neg/2026-11-06-lm1909-9fccf297.tests.json",
+   "prereg_commit": "9b9dafb23",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.575,
+     "peak": " emails"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.821,
+     "peak": " discovery"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.429,
+     "peak": " discovery"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.455,
+     "peak": "covery"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.372,
+     "peak": " discovery"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.479,
+     "peak": " litigation"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.436,
+     "peak": " court"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.371,
+     "peak": " discovery"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.415,
+     "peak": " discovery"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": " security"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " limited"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " complex"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " asked"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.446,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9b9dafb23",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "legal discovery",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "The near misses keep one or two non-legal 'discovery' uses, which stayed at 0.04 or below in probes. The card's 'ige' of litige and 'ns' of forensics are not covered.",
+ "selection": "random draw"
+}

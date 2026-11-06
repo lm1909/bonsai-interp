@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c4cd3ffb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4650-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:35:25+00:00",
+ "recipe": {
+  "toolchain_commit": "9b9dafb23",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N4650_neg/2026-11-06-lm1909-c4cd3ffb.tests.json"
+ },
+ "label": "'series' across languages: the piece opening серия, 시리즈, séries, or the word before 'series'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N4650_neg/2026-11-06-lm1909-c4cd3ffb.tests.json",
+   "prereg_commit": "9b9dafb23",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.027,
+     "peak": " сер"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.709,
+     "peak": " сер"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.351,
+     "peak": "리"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.275,
+     "peak": "리"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.099,
+     "peak": " sé"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.245,
+     "peak": " sé"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.292,
+     "peak": "-part"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.18,
+     "peak": "-part"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.214,
+     "peak": "ую"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": "ит"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " TV"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "에"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " essay"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.283,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9b9dafb23",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'series' across languages",
+ "unit_kind": "token piece / semantic",
+ "confidence": "high",
+ "notes": "Miniserie (0.14) and 'dieser Reihe' (0.23) fired less in probes and are not tested.",
+ "selection": "random draw"
+}
