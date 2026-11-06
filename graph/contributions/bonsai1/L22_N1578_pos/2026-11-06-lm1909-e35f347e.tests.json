@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-e35f347e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N1578+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:55:57+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L22/N1578",
+   "pole": "+",
+   "label": "Russian discourse words in 'вот так и', 'вот и', 'и так': ' так', and ' и' after вот",
+   "fire": [
+    "Вот так и прошло наше лето.",
+    "Вот и наступила зима в деревне.",
+    "Ну вот и закончился этот день.",
+    "Он сказал, что так и будет.",
+    "Вот так и надо работать каждый день.",
+    "Вот и поезд подошёл к станции.",
+    "И так было всегда в нашем доме.",
+    "Ну вот и пришли мы к реке."
+   ],
+   "quiet": [
+    "Этим летом мы были на море.",
+    "Зимой в деревне очень холодно.",
+    "Сегодня вечером закончился этот фильм.",
+    "Он сказал, что завтра будет дождь.",
+    "Надо работать каждый день с утра.",
+    "Поезд подошёл к станции утром.",
+    "В нашем доме всегда было тепло.",
+    "Мы пришли к реке вечером."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "' так' and ' и' after вот",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.65,
+ "notes": "Second round; the first (Russian ' так') failed because ' и' after 'Вот' fired twice. Probes: ' так' 0.58-0.71, ' и' after вот 0.36-0.42; a plain sentence 0.00. Near misses drop the discourse words."
+}

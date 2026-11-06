@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-37af222c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6947+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:55:57+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L31/N6947",
+   "pole": "+",
+   "label": "the verb after 'you may' or 'you may not' in a software licence: use, obtain, modify, sublicense",
+   "fire": [
+    "Licensed under the Apache License, Version 2.0 (the \"License\");\nyou may obtain a copy of it online.",
+    "Licensed under the MIT License (the \"License\");\nyou may change this file freely.",
+    "Licensed under the GNU GPL (the \"License\");\nyou may not distribute this file.",
+    "# Licensed under the Apache License (the \"License\");\n# you may reuse the code.\n",
+    "Licensed under the BSD License (the \"License\");\nyou may copy this file.",
+    "// Licensed under the Apache License (the \"License\");\n// you may not sublicense the code.\n",
+    "Copyright 2012 Foo.\nLicensed under the Apache License (the \"License\");\nyou may obtain the terms here.",
+    "Licensed under the GNU GPL;\nyou may not sell this program."
+   ],
+   "quiet": [
+    "Written by staff at the Public Library (the \"Library\");\nyou may obtain a card at the desk.",
+    "Issued by the Water Board (the \"Board\");\nyou may change your meter date.",
+    "Signed by the school head (the \"Head\");\nyou may not leave this class.",
+    "# Written by staff at the Town Hall (the \"Hall\");\n# you may park at the back.\n",
+    "Issued by the Tourist Board (the \"Board\");\nyou may visit this museum.",
+    "// Written by the club captain (the \"Captain\");\n// you may not bring a dog.\n",
+    "Copyright 2012 Foo.\nWritten by the hotel manager (the \"Manager\");\nyou may obtain towels here.",
+    "Issued by the bus company;\nyou may not eat on this bus."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "verb after 'you may' in a licence",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Second round; the first (' use' in the Apache licence header) failed because ' obtain' in the same licence fired at 1.03-1.05. Probes: ' obtain' 1.01, ' sublicense' 0.54, ' modify' 0.43, ' share' after a non-licence contract 0.31; 'You may obtain a form' without a licence 0.03. Near misses keep 'you may' and a legal-looking line, and drop the software licence."
+}
