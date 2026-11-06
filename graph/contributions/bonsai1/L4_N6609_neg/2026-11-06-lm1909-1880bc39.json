@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1880bc39",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6609-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:39:10+00:00",
+ "recipe": {
+  "toolchain_commit": "bf8fed88f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N6609_neg/2026-11-06-lm1909-1880bc39.tests.json"
+ },
+ "label": "(list; very weak pole) tens|ile, al|gui|en, PropertyName",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N6609_neg/2026-11-06-lm1909-1880bc39.tests.json",
+   "prereg_commit": "bf8fed88f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.794,
+     "peak": "ile"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.985,
+     "peak": "gui"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.844,
+     "peak": "PropertyName"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.878,
+     "peak": "ile"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.985,
+     "peak": "gui"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.844,
+     "peak": "PropertyName"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.99,
+     "peak": "ile"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.985,
+     "peak": "gui"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.336,
+     "peak": " steel"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.407,
+     "peak": " dó"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.221,
+     "peak": "Literal"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.206,
+     "peak": " rope"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " sabe"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.19,
+     "peak": "Literal"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.304,
+     "peak": "ylon"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "él"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.931,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf8fed88f",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tensile, alguien, PropertyName",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "The card flags it broad and gate-closed, max 0.17. Probes: 'gui' 0.99, 'ile' 0.97, 'PropertyName' 0.84; plain sentence 0.23, so the floor is high. A list.",
+ "selection": "random draw"
+}

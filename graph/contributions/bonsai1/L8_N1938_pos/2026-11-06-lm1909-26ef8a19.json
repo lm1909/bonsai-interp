@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-26ef8a19",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N1938+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:39:44+00:00",
+ "recipe": {
+  "toolchain_commit": "bf8fed88f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N1938_pos/2026-11-06-lm1909-26ef8a19.tests.json"
+ },
+ "label": "' law' or ' Law' in canon law and natural law (not ordinary law)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N1938_pos/2026-11-06-lm1909-26ef8a19.tests.json",
+   "prereg_commit": "bf8fed88f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.019,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.609,
+     "peak": " Law"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.78,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.137,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.452,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.964,
+     "peak": " Law"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.523,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.775,
+     "peak": " law"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.108,
+     "peak": "inary"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.07,
+     "peak": " invalid"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.21,
+     "peak": "inas"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.075,
+     "peak": "ishops"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " law"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.115,
+     "peak": " Law"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.095,
+     "peak": " law"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " law"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.778,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf8fed88f",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "canon law, natural law",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.85,
+ "notes": "Card: ' Church' 13, ' law' 5, ' Law' 2. Probes: canon law 0.76-0.96, natural law 0.66, ' Church' 0.18; traffic law 0.01, criminal law 0.02. The Church tokens are left out because they were low in the probe.",
+ "selection": "random draw"
+}

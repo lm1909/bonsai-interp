@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-6354df0b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N10499+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:39:49+00:00",
+ "recipe": {
+  "toolchain_commit": "bf8fed88f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N10499_pos/2026-11-06-lm1909-6354df0b.tests.json"
+ },
+ "label": "the split-off onset ' ins', ' inf', ' Ins' or ' Inf' of a rarer word (ins|uperable, Inf|ante, inf|ectoria)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N10499_pos/2026-11-06-lm1909-6354df0b.tests.json",
+   "prereg_commit": "bf8fed88f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.707,
+     "peak": " ins"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.895,
+     "peak": " Inf"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.915,
+     "peak": " inf"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.59,
+     "peak": " ins"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.832,
+     "peak": " Inf"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.775,
+     "peak": " inf"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.649,
+     "peak": " ins"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.948,
+     "peak": " Inf"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.111,
+     "peak": " su"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " minister"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " India"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " leaves"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " crash"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.803,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf8fed88f",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-off onset ins- / inf-",
+ "unit_kind": "token piece",
+ "confidence": 0.85,
+ "notes": "Card: ' ins' 12, ' inf' 12, ' Ins' 4. Probes: ' Inf' 0.92, ' ins' 0.81, ' inf' 0.78, 'Ins' sentence-initial 0.38; ' inside' 0.00, ' in' 0.02.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " ins",
+   " inf",
+   " Ins",
+   " Inf"
+  ]
+ }
+}
