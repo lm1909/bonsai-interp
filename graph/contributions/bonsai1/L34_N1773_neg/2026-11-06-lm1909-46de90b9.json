@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-46de90b9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N1773-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:42+00:00",
+ "recipe": {
+  "toolchain_commit": "14432030c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N1773_neg/2026-11-06-lm1909-46de90b9.tests.json"
+ },
+ "label": "Contexts on their way to 'db' or 'dB': the digit of a decibel figure ('0.2 dB') and a name about to end in db or DATABASE in code; a list of two meanings of the same letters",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N1773_neg/2026-11-06-lm1909-46de90b9.tests.json",
+   "prereg_commit": "14432030c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.475,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.239,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.405,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.511,
+     "peak": "contacts"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.352,
+     "peak": " sqlite"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.172,
+     "peak": "DEV"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.027,
+     "peak": " range"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.446,
+     "peak": "('"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": ".read"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "fh"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": ".get"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": ".get"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.379,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "14432030c",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "before 'dB' or 'db' in figures and code",
+ "unit_kind": "token / contextual",
+ "confidence": "medium",
+ "notes": "Card: '0' x4 of '0.2 dB', ' MySQL' x2, 'avorites' of favoritesdb, 'DEV' of DEV_DATABASE_URL. Probe: 0.2 dB '0' 0.58, favoritesdb 0.49, DEV 0.33; 0.2 kg 0.00, open(favorites) 0.06, 'HOME' 0.01, 'uses MySQL' 0.04. Note the logit direction: the + pole promotes ' database', ' db', so the - pole suppresses them. So this is not a claim that the pole predicts db; I do not know why it fires here.",
+ "selection": "random draw"
+}

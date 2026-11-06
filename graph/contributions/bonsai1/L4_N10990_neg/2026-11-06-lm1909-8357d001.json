@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-8357d001",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N10990-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:55+00:00",
+ "recipe": {
+  "toolchain_commit": "14432030c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N10990_neg/2026-11-06-lm1909-8357d001.tests.json"
+ },
+ "label": "Font styling values in code: the size digit after a font name ('Helvetica', 15) and ' bold'; other numbers and style settings stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N10990_neg/2026-11-06-lm1909-8357d001.tests.json",
+   "prereg_commit": "14432030c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.84,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.532,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.856,
+     "peak": " bold"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.435,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.213,
+     "peak": ":bold"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.61,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.541,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.276,
+     "peak": "bold"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.003,
+     "peak": "Name"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": "-top"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": ".png"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "<span"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": ".set"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "Go"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "style"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.536,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "14432030c",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "font size digit and ' bold' in code",
+ "unit_kind": "code / token",
+ "confidence": "medium",
+ "notes": "Card: '4' x6, '5' x4, 'bold' x4, '6' x3 in font=('Helvetica', 15), also a button_width and a color tag. Probe: ' bold' 0.86, ('Helvetica', 15) 0.50, button_width 0.15, size=15 0.14, color tag 0.04, 'total = 17' 0.00.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " bold",
+   "bold"
+  ]
+ }
+}

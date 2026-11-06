@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-6d8f96d3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N4613+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:53+00:00",
+ "recipe": {
+  "toolchain_commit": "14432030c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N4613_pos/2026-11-06-lm1909-6d8f96d3.tests.json"
+ },
+ "label": "The end use of a substance or product: ' use', ' used', ' serving' ('for use by', 'used in factories', 'a serving bowl'); the same object in other situations stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N4613_pos/2026-11-06-lm1909-6d8f96d3.tests.json",
+   "prereg_commit": "14432030c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.874,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.517,
+     "peak": " used"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.542,
+     "peak": " serving"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.402,
+     "peak": " site"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.014,
+     "peak": " used"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.499,
+     "peak": " serving"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.122,
+     "peak": " use"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.333,
+     "peak": " use"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.279,
+     "peak": " tanks"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " chemicals"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " into"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.059,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.096,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.14,
+     "peak": " stored"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " engines"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.451,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "14432030c",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "end use of a product (use, used, serving)",
+ "unit_kind": "lexical / semantic",
+ "confidence": "medium",
+ "notes": "Card: ' used' x4, ' use' x3, ' display' x2, ' served' x2, ' store', ' serving'. Logit effect promotes ' practical', ' ready', ' final', ' deploying'. Probe: 'for use by' 0.84, 'manufactured or used' 0.83, 'serving container' 0.66, 'on display' 0.32 on ' on', 'at the store' 0.15; alternatives 0.04-0.24.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "use",
+   "used",
+   "serving"
+  ]
+ }
+}

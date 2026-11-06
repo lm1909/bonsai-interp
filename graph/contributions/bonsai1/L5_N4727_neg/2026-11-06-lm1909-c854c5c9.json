@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c854c5c9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N4727-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:59+00:00",
+ "recipe": {
+  "toolchain_commit": "14432030c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N4727_neg/2026-11-06-lm1909-c854c5c9.tests.json"
+ },
+ "label": "The ' a' of Spanish 'va a' and the ' to' of English 'going to': the marker of the periphrastic future ('va a hacer', 'going to rain', 'gonna'); motion 'went to', 'fue a' and 'wants to' stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N4727_neg/2026-11-06-lm1909-c854c5c9.tests.json",
+   "prereg_commit": "14432030c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.617,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.624,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.578,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.575,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.581,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.689,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.541,
+     "peak": " gonna"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.584,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.061,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": "ano"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " nuevo"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "unes"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " bridge"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " has"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.583,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "14432030c",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "marker of the 'going to' future (va a, going to)",
+ "unit_kind": "grammatical / contextual",
+ "confidence": "high",
+ "notes": "Card: ' a' x17, ' to' x13, ' gonna' x2, in Spanish 'va a', 'van a', 'vamos a', English 'going to'. Probe: 'va a' 0.59-0.75, 'vamos a' 0.58, 'going to' 0.58, 'gonna' 0.46; 'fue a' 0.02, 'went to' 0.08, 'wants to' 0.02, 'va al' 0.07. The same grammar across two languages; 'going' as motion was not tested in probes.",
+ "selection": "random draw"
+}

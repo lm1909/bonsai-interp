@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-23edcb04",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N4731-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:55:11+00:00",
+ "recipe": {
+  "toolchain_commit": "14432030c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N4731_neg/2026-11-06-lm1909-23edcb04.tests.json"
+ },
+ "label": "A statement of present state or whereabouts: ' currently', 'is held at', 'not on view'; 'recently', 'formerly', and past events stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N4731_neg/2026-11-06-lm1909-23edcb04.tests.json",
+   "prereg_commit": "14432030c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.441,
+     "peak": " currently"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.458,
+     "peak": " currently"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.659,
+     "peak": " held"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.564,
+     "peak": " hold"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.431,
+     "peak": "Currently"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.756,
+     "peak": " held"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.31,
+     "peak": " currently"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.707,
+     "peak": " held"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.087,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.117,
+     "peak": " hold"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.165,
+     "peak": "ly"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.062,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.511,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "14432030c",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "present state or whereabouts (' currently', ' held')",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' currently' x12, ' held' x5, ' Currently' x3, ' remains' x2, ' now' x2. The + pole promotes ' recently', ' newly', ' gradually', ' earlier', ' prior': the time-changing side. Probe: 'if currently playing' 0.68, 'held at' 0.57, 'don't currently' 0.52, 'on view' 0.51; recently 0.03, formerly 0.11, 'written at' 0.02, ' now' 0.09.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "currently"
+  ]
+ }
+}

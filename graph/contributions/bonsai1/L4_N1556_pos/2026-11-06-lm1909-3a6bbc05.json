@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3a6bbc05",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N1556+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:35+00:00",
+ "recipe": {
+  "toolchain_commit": "14432030c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N1556_pos/2026-11-06-lm1909-3a6bbc05.tests.json"
+ },
+ "label": "'オ' of 予約オプション (booking options) in Japanese hotel listings; other words in that slot stay quiet; a sub-trigger of a broad pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N1556_pos/2026-11-06-lm1909-3a6bbc05.tests.json",
+   "prereg_commit": "14432030c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.428,
+     "peak": "オ"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.463,
+     "peak": "オ"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.243,
+     "peak": "オ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.438,
+     "peak": "オ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.263,
+     "peak": "オ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.762,
+     "peak": "オ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.128,
+     "peak": "館"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.61,
+     "peak": "オ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.102,
+     "peak": "を見る"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.182,
+     "peak": "カ"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.114,
+     "peak": "レン"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.094,
+     "peak": "レン"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.119,
+     "peak": "レン"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.208,
+     "peak": "カ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.122,
+     "peak": "館"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.237,
+     "peak": "カ"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.433,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "14432030c",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "'オ' of 予約オプション in hotel listings",
+ "unit_kind": "token piece / contextual",
+ "confidence": "low",
+ "notes": "Card: broad, gate-closed; 'オ' x9 in 予約オプション, ' pool' x3, ' architecture', 的感觉, 'is' of Durchschnittspreis. Probe: 'オ' 0.46 in a hotel listing but 'オプション' in an ordinary sentence only under 0.15, floor 0.12-0.18. The test uses the listing format on both sides.",
+ "selection": "random draw"
+}
