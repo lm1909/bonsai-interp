@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-d6512bcc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5680-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:09:41+00:00",
+ "recipe": {
+  "toolchain_commit": "df2b27151",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N5680_neg/2026-11-06-lm1909-d6512bcc.tests.json"
+ },
+ "label": "the slot naming a microscope's type, before 'microscope' ('under an electron', 'under a light')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N5680_neg/2026-11-06-lm1909-d6512bcc.tests.json",
+   "prereg_commit": "df2b27151",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.509,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.537,
+     "peak": " light"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.445,
+     "peak": " optical"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.388,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.111,
+     "peak": " electron"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.736,
+     "peak": " optical"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.392,
+     "peak": "ing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.664,
+     "peak": " light"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": " glass"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " slide"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " brush"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.031,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " dusty"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " fib"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "df2b27151",
+  "minutes": 3,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "slot before 'microscope'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. In round 1 ' an' before 'electron microscope' fired at 0.32-0.41, so the type word was not the point. The electron case is now among the fire sentences.",
+ "selection": "picked"
+}

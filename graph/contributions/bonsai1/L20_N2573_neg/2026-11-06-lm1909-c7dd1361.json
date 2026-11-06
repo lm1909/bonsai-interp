@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-c7dd1361",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N2573-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:09:30+00:00",
+ "recipe": {
+  "toolchain_commit": "df2b27151",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N2573_neg/2026-11-06-lm1909-c7dd1361.tests.json"
+ },
+ "label": "the comma or hyphen separating the parts of a date in a post stamp, as against the same month and day in prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N2573_neg/2026-11-06-lm1909-c7dd1361.tests.json",
+   "prereg_commit": "df2b27151",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.761,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.346,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.728,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.292,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.789,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.458,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.777,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.303,
+     "peak": "-"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.045,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.063,
+     "peak": " opens"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.068,
+     "peak": " ship"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.079,
+     "peak": "1"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.593,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "df2b27151",
+  "minutes": 3,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "separator in a post-stamp date",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. In round 1 the near misses shared the 'Last Edit:' prefix, and ':' fired at 0.42 there. Here they share neither the prefix nor the format.",
+ "selection": "picked"
+}
