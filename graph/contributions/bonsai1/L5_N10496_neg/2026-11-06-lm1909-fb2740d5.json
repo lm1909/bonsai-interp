@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fb2740d5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10496-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:48:39+00:00",
+ "recipe": {
+  "toolchain_commit": "0053fd1ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10496_neg/2026-11-06-lm1909-fb2740d5.tests.json"
+ },
+ "label": "The digit after the dot in a version number ('V5.0', '1.0', 'Version/4.0', 'V5.1'), mostly '0'; a decimal in a price or score, and plain numbers, stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10496_neg/2026-11-06-lm1909-fb2740d5.tests.json",
+   "prereg_commit": "0053fd1ec",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.888,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.598,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.091,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.497,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.868,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.817,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.737,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.966,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.409,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": "return"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.035,
+     "peak": "api"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.058,
+     "peak": "S"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.03,
+     "peak": "USB"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": "{\""
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.448,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.069,
+     "peak": " requests"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.843,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0053fd1ec",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "digit after the dot in a version number",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Probes: 0.64-0.94 ('.1' 0.75); price and score decimals 0.23-0.28, a plain number about 0. The pole is broad (3.7%) and gate-closed. '.' in 'W. F.' 0.58 on the card and in probes is not covered, and near misses may leak.",
+ "selection": "random draw"
+}

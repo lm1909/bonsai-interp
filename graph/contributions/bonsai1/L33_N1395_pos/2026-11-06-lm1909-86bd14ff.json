@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-86bd14ff",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N1395+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:50:03+00:00",
+ "recipe": {
+  "toolchain_commit": "0053fd1ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N1395_pos/2026-11-06-lm1909-86bd14ff.tests.json"
+ },
+ "label": "A word-initial m piece in Russian and Arabic (' м', ' م', ' بم') and in the abbreviation 'M.D.'; other word openings in the same frames stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N1395_pos/2026-11-06-lm1909-86bd14ff.tests.json",
+   "prereg_commit": "0053fd1ec",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.163,
+     "peak": " м"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.465,
+     "peak": " м"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.2,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.406,
+     "peak": " م"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.638,
+     "peak": " بم"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.293,
+     "peak": " м"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.216,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.24,
+     "peak": " م"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.068,
+     "peak": "ли"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.113,
+     "peak": " на"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " Klein"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": " أمس"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.056,
+     "peak": " ب"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.062,
+     "peak": " ч"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " Hart"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "ية"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.266,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0053fd1ec",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word-initial 'm' piece (Russian, Arabic, M.D.)",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: 0.21-0.76 ('-M' 0.31). English ' M' only tried in 'M.D.'. Russian ' с' before a noun read 0.32 in a shared frame, so near misses vary the lead-in. The output direction promotes ' Gr', ' Ch', ' br', which doesn't help.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f98e2710",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N413-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:48:37+00:00",
+ "recipe": {
+  "toolchain_commit": "0053fd1ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N413_neg/2026-11-06-lm1909-f98e2710.tests.json"
+ },
+ "label": "The words ' toll', 'way' in 'Tollway' and ' lanes' on highways; taxes, plain roads and paths in the same frames stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N413_neg/2026-11-06-lm1909-f98e2710.tests.json",
+   "prereg_commit": "0053fd1ec",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.827,
+     "peak": " toll"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.508,
+     "peak": " toll"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.285,
+     "peak": " toll"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.662,
+     "peak": " Toll"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.409,
+     "peak": " lanes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.56,
+     "peak": " booths"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.501,
+     "peak": " toll"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.385,
+     "peak": " lanes"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.221,
+     "peak": " taxes"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.098,
+     "peak": " pay"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": " fer"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.113,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " highway"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.035,
+     "peak": " machines"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.152,
+     "peak": " interstate"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.534,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0053fd1ec",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "road tolling words",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Probes: ' toll' 0.54-0.90, 'way' in Tollway 0.54, ' lanes' 0.35, ' exit' 0.32; near misses 0.00-0.05. 'Vitalik' 0.74 and the card's 'gasPrice' and 'Rawtransactions' suggest a wider 'fee to pass' reading across roads and crypto, which this test doesn't cover.",
+ "selection": "random draw"
+}
