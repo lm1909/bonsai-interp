@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-537650fd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N11016+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:33:36+00:00",
+ "recipe": {
+  "toolchain_commit": "5c508823c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N11016_pos/2026-11-06-lm1909-537650fd.tests.json"
+ },
+ "label": "the slot before naming a carried tool or piece of gear (armed with a, along with a, batteries and a)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N11016_pos/2026-11-06-lm1909-537650fd.tests.json",
+   "prereg_commit": "5c508823c",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.604,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.237,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.648,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.266,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.24,
+     "peak": " waterproof"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.526,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.321,
+     "peak": " sturdy"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.116,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " students"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.403,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " friend"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " ideas"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": " couple"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.07,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.107,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.293,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c508823c",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "slot before a tool or gear",
+ "unit_kind": "prediction / contextual",
+ "confidence": "medium",
+ "notes": "Direct logits promote ' Tri', ' tri', ' triangular'; 'tripod' fits, the other words do not.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-604ef2d3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10258+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:32:56+00:00",
+ "recipe": {
+  "toolchain_commit": "5c508823c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10258_pos/2026-11-06-lm1909-604ef2d3.tests.json"
+ },
+ "label": "a subject word inside an institution's name (Department of Environmental, Institute of Heraldry, Institute for Biodiversity)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10258_pos/2026-11-06-lm1909-604ef2d3.tests.json",
+   "prereg_commit": "5c508823c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.835,
+     "peak": " Environmental"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.573,
+     "peak": " Herald"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.884,
+     "peak": "iod"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.624,
+     "peak": " Environmental"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.469,
+     "peak": " Herald"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.745,
+     "peak": "iod"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.589,
+     "peak": " Environmental"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.022,
+     "peak": " Herald"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.058,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.068,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " Javier"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.152,
+     "peak": " Tax"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": "unding"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.147,
+     "peak": "Environmental"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.684,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c508823c",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "subject word in an institution's name",
+ "unit_kind": "named entity / token",
+ "confidence": "medium",
+ "notes": "A list label. Other subject words ('Motor Vehicles') stayed low, so it isn't subject words in general; 'Failed' in code reached 0.31 in a probe, unexplained.",
+ "selection": "random draw"
+}

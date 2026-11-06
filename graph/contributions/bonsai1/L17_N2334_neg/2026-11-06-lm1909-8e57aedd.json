@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8e57aedd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N2334-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:32:41+00:00",
+ "recipe": {
+  "toolchain_commit": "5c508823c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N2334_neg/2026-11-06-lm1909-8e57aedd.tests.json"
+ },
+ "label": "' more' or ' further' right after a capitalized sentence-initial 'For' (For more information, For further details)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N2334_neg/2026-11-06-lm1909-8e57aedd.tests.json",
+   "prereg_commit": "5c508823c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.152,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.308,
+     "peak": " further"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.309,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.5,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.047,
+     "peak": " For"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.323,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.121,
+     "peak": " For"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.579,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": " paid"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " surgery"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " lived"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.174,
+     "peak": " More"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "ikers"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.191,
+     "peak": " Further"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": "ived"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.308,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c508823c",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' more' after sentence-initial For",
+ "unit_kind": "lexical / position",
+ "confidence": "high",
+ "notes": "Three different sentences scored the identical 0.430 in the probes because the pole peaks at the second token, before the rest of the sentence matters. So near misses vary the lead-in.",
+ "selection": "random draw"
+}

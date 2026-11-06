@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-f38a21bc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1954-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:33:06+00:00",
+ "recipe": {
+  "toolchain_commit": "5c508823c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N1954_neg/2026-11-06-lm1909-f38a21bc.tests.json"
+ },
+ "label": "the end of OCLC (OCL|C, oc|lc) in a library citation",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N1954_neg/2026-11-06-lm1909-f38a21bc.tests.json",
+   "prereg_commit": "5c508823c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.758,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.761,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.874,
+     "peak": "lc"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.746,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.825,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.781,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.885,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.747,
+     "peak": "C"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " visit"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " Society"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " libraries"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " cler"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " Volume"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.771,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c508823c",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "OCLC",
+ "unit_kind": "lexical / token piece",
+ "confidence": "high",
+ "notes": "The pole also fires hard on ' acid' in 'organic acid' and on the abbreviation (ODPP); ' Acid rain' stayed at 0.00. This label is one sub-trigger.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "OCLC"
+  ]
+ }
+}

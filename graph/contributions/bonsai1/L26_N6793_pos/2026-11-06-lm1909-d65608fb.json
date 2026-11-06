@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d65608fb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N6793+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:33:47+00:00",
+ "recipe": {
+  "toolchain_commit": "5c508823c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N6793_pos/2026-11-06-lm1909-d65608fb.tests.json"
+ },
+ "label": "the word MRI after 'an', and the piece 'onne' of French l'honneur",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N6793_pos/2026-11-06-lm1909-d65608fb.tests.json",
+   "prereg_commit": "5c508823c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.308,
+     "peak": " MRI"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.538,
+     "peak": " MRI"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.917,
+     "peak": "onne"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.431,
+     "peak": " MRI"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.664,
+     "peak": "onne"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.384,
+     "peak": " MRI"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.773,
+     "peak": "onne"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.575,
+     "peak": " MRI"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " doctor"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " sample"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " visite"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": " dental"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " rencontrer"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " tool"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "Nous"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "Save"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.556,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c508823c",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' MRI' after an; l'honneur",
+ "unit_kind": "token piece / list",
+ "confidence": "low",
+ "notes": "A list label after my first idea failed in the probes: words after 'an' with a vowel sound (FBI, MBA, X-ray, honor) mostly stayed under 0.06.",
+ "selection": "random draw"
+}
