@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-4e922370",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10468-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:13:07+00:00",
+ "selection": "second round after my own sweep",
+ "neighbours": [
+  {
+   "unit": "L24/N10468",
+   "pole": "-",
+   "label": "the Chinese comma right after a reporting clause ('数据显示，', '专家预计，', '报告认为，'), where the reported claim comes next",
+   "fire": [
+    "统计结果显示，城市人口继续增长。",
+    "有关专家预计，房价明年将会下降。",
+    "这份报告认为，气候变化正在加快。",
+    "该公司表示，新工厂将于春天开工。",
+    "最新调查显示，年轻人更喜欢网购。",
+    "分析人士指出，油价可能继续上涨。",
+    "研究人员发现，睡眠不足影响记忆。",
+    "警方称，事故原因还在调查之中。"
+   ],
+   "quiet": [
+    "今天天气很好，孩子们都去公园了。",
+    "我妈妈喜欢做饭，爸爸喜欢钓鱼。",
+    "这条河很长，水也很清。",
+    "他吃完早饭，就去学校上课了。",
+    "那家餐厅不大，菜却很好吃。",
+    "外面下着大雨，路上没有行人。",
+    "小狗跑得很快，猫跟在后面。",
+    "冬天来了，树叶都掉光了。"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "comma after a Chinese reporting clause",
+ "unit_kind": "syntactic",
+ "confidence": 0.65,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep5b-20261105, label 'a time expression comes next', failed at AUROC 0.734, and its same-prefix near misses could not test that. New reading from both rounds: '，' after 显示 or 预计 read 0.18-0.38 with or without a time next, while '，' after '这家工厂很有名' read 0.047 and '而' before 现在 0.047. Near misses here are commas after clauses that report nothing, with other openings."
+}

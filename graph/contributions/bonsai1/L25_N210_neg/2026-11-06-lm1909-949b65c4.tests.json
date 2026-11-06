@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-949b65c4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N210-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:13:07+00:00",
+ "selection": "second round after my own sweep",
+ "neighbours": [
+  {
+   "unit": "L25/N210",
+   "pole": "-",
+   "label": "' on' or ' for' naming who or what a care product or a medical recommendation is meant for ('works on oily skin', 'recommend the shot for adults')",
+   "fire": [
+    "This gentle toner works on acne-prone skin and calms redness.",
+    "Pediatricians advise the vaccine for children over six months.",
+    "A night cream that works on every skin type is rare.",
+    "Nurses suggest the booster for anyone over sixty.",
+    "Tea tree oil works on small cuts and insect bites.",
+    "Guidelines recommend this screening for women over forty.",
+    "My dermatologist says retinol works on fine lines.",
+    "The clinic recommends low-dose aspirin for some heart patients."
+   ],
+   "quiet": [
+    "This gentle toner comes in a blue bottle with a pump.",
+    "Children over six months crawled around the waiting room.",
+    "A night shift at the cream factory is long.",
+    "Anyone over sixty rides free on city buses.",
+    "Small cuts and insect bites bothered us on the hike.",
+    "Women over forty ran in the charity race.",
+    "My dermatologist moved her office to Main Street.",
+    "Some heart patients walked around the hospital garden."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "' on' / ' for': who a remedy is for",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.6,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep5b-20261105, label 'what a treatment or product suits', which failed at AUROC 0.891 with ' boots' and ' treat' low. This round narrows to the preposition. Probe: ' on' after 'works' 1.009; ' for' after 'recommend the shot' 0.420; ' with' after 'boots are better' 0.059; ' treat' 0.096; products sold or spilled at most 0.071."
+}

@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-06-lm1909-e6f4bded",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N55-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:13:07+00:00",
+ "selection": "second round after my own sweep",
+ "neighbours": [
+  {
+   "unit": "L23/N55",
+   "pole": "-",
+   "label": "Russian comparative words ' больше', ' чаще', ' лучше', ' меньше' ('more', 'more often', 'better', 'less')",
+   "fire": [
+    "Теперь отец больше не курит дома.",
+    "Этот фильм намного лучше старого.",
+    "Осенью дожди идут здесь чаще.",
+    "Весной мой брат меньше работает.",
+    "С тех пор я больше не видел её.",
+    "Новая дорога гораздо лучше прежней.",
+    "Зимой мы чаще сидим дома.",
+    "Сейчас люди меньше читают газеты."
+   ],
+   "quiet": [
+    "Вчера мама купила красные яблоки.",
+    "Наш дом стоит у реки.",
+    "Птицы поют в саду.",
+    "Кошка спит на диване.",
+    "Москва находится в России.",
+    "Мой отец работает врачом.",
+    "Летом мы ездим к бабушке.",
+    "Этот мальчик ходит в школу."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "Russian comparatives",
+ "unit_kind": "lexical / grammatical",
+ "confidence": 0.8,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep9-20261106, which failed despite AUROC 1.000 and median 0.811 because 5 near misses reached 0.30-0.35 on other Russian tokens, in frames that also held the fire item's words. This round's near misses are other simple Russian sentences with different openings. Probe: comparatives 0.518-0.792; simple Russian 0.143-0.245. The risk is the same: a Russian baseline may reach 0.30.",
+ "trigger": {
+  "tokens": [
+   " больше",
+   " чаще",
+   " лучше",
+   " меньше"
+  ]
+ }
+}

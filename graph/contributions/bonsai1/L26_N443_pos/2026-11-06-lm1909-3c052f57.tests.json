@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-3c052f57",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N443+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:13:07+00:00",
+ "selection": "second round after my own sweep",
+ "neighbours": [
+  {
+   "unit": "L26/N443",
+   "pole": "+",
+   "label": "the name of mathematical or engineering modelling software ('Geometric Supposer', 'Simulink', 'GeoGebra', 'Sketchpad')",
+   "fire": [
+    "Her lab built the whole control model in Simulink last year.",
+    "With GeoGebra you can plot the curve and move its points.",
+    "For the proof, pupils checked each case in Geometer's Sketchpad.",
+    "He solved the equations numerically using Mathematica.",
+    "Our class explores triangles with the Cabri program.",
+    "In Simulink, connect the two blocks with a line.",
+    "Teachers can download GeoGebra for free.",
+    "The professor wrote the integral in Maple and ran it."
+   ],
+   "quiet": [
+    "Her office kept the whole client list in Word last year.",
+    "With Photoshop you can crop the picture and fix its colors.",
+    "For the party, guests sent each photo in WhatsApp.",
+    "He booked the flights quickly using Expedia.",
+    "Our class reads novels with the Kindle program.",
+    "In Outlook, attach the two files to a message.",
+    "Teachers can download Zoom for free.",
+    "The professor wrote the letter in Gmail and sent it."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "maths and modelling software names",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.65,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep10-20261106, label 'geometry and drawing or modelling tools', which failed at AUROC 0.891: plain geometry words were weak and ' Excel' and ' Word' read mid-level. Probe: 'ink' of Simulink 0.652; 'ebra' of GeoGebra 0.617; 'Geometric Supposer' 0.321; ' Word' 0.214; 'Geometry' 0.246; 'drew a triangle' and 'drew a horse' both 0.157. New names in this test: Mathematica, Maple, Cabri, Sketchpad."
+}

@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-23173578",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N2823-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:13:07+00:00",
+ "selection": "second round after my own sweep",
+ "neighbours": [
+  {
+   "unit": "L6/N2823",
+   "pole": "-",
+   "label": "a broken limb or bone of a person or animal ('broke his leg', 'a broken wrist', 'bone fractures')",
+   "fire": [
+    "A climber slipped on the ice and broke her ankle.",
+    "Doctors set his broken arm after the bike crash.",
+    "During the match the striker fractured his shin.",
+    "An X-ray confirmed a broken collarbone in the boy.",
+    "Multiple rib fractures followed the fall from the roof.",
+    "Their old mare stumbled and broke a leg.",
+    "After the skiing accident she spent weeks with a broken femur.",
+    "Falling from the swing, Max snapped his wrist."
+   ],
+   "quiet": [
+    "Glass from the window shattered across the kitchen floor.",
+    "Nurses wrapped her sore knee after a long run.",
+    "My promise to them was broken within a week.",
+    "Long walks strengthen the legs of older dogs.",
+    "Someone broke the lock on the shed last night.",
+    "Each arm of the old chair was painted green.",
+    "A broken clock hung above the fireplace for years.",
+    "Her shoulder felt stiff when she woke up."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "a broken limb or bone",
+ "unit_kind": "semantic",
+ "confidence": 0.75,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep8-20261106, which failed with 2 near misses over the line: a chair's 'broken leg' 0.69 and ' his' 0.33 in a same-prefix near miss. This round keeps limbs and breaks apart with different openings and no furniture leg. Probe: ' leg' 0.837-0.878; ' wrist' 0.870; ' fractures' 0.793; 'a leg missing' on a sofa 0.078; ' leg' with no break 0.217; ' broke' before 'the vase' 0.240; 'broken fence' 0.163. The chair result stands: this round does not claim the pole separates a chair's leg from a person's."
+}
