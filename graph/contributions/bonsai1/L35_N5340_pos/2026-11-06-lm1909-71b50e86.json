@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-71b50e86",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5340+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:18:11+00:00",
+ "recipe": {
+  "toolchain_commit": "a1aee672b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N5340_pos/2026-11-06-lm1909-71b50e86.tests.json"
+ },
+ "label": "The first piece of a split Arabic word (' الص', ' ص', ' الش', ' الث', ' ب', ' الع', ' الم', ' والم'); the same kind of Arabic sentence made only of common whole-token words stays lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N5340_pos/2026-11-06-lm1909-71b50e86.tests.json",
+   "prereg_commit": "a1aee672b",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.324,
+     "peak": " إلى"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.134,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.252,
+     "peak": " البيت"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.165,
+     "peak": " في"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.195,
+     "peak": " ب"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.388,
+     "peak": " البيت"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.178,
+     "peak": " في"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.361,
+     "peak": " إلى"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.324,
+     "peak": " إلى"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.13,
+     "peak": " إلى"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.247,
+     "peak": " البيت"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.114,
+     "peak": " في"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.082,
+     "peak": "قال"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.388,
+     "peak": " البيت"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.178,
+     "peak": " في"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.361,
+     "peak": " إلى"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.594,
+    "median_fire": 0.224,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a1aee672b",
+  "minutes": 2,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "first piece of split Arabic words",
+ "unit_kind": "token piece / language",
+ "confidence": 0.45,
+ "notes": "Round 1 fire: ' ص' 0.31-0.75, ' الص' 0.38-0.89, ' ث' 0.42-0.59, ' الثن' 0.36, ' وال' 0.14. The card's top 32 also peak on whole ' في' once, so whole tokens can fire: this is the risk. Split-word tokenization of all 16 was checked with the tokenizer, without scoring. No probes this round.",
+ "selection": "picked"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-52be4ca9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3337+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:18:05+00:00",
+ "recipe": {
+  "toolchain_commit": "a1aee672b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N3337_pos/2026-11-06-lm1909-52be4ca9.tests.json"
+ },
+ "label": "A French or Spanish word in a fixed phrase that calls for 'de' next (en train, façon, plus, una serie, cantidad): the slot before de; sentences without such a phrase stay low, including 'le train' the vehicle and 'la serie' on television.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N3337_pos/2026-11-06-lm1909-52be4ca9.tests.json",
+   "prereg_commit": "a1aee672b",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.642,
+     "peak": " train"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.493,
+     "peak": " façon"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.473,
+     "peak": " plus"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.468,
+     "peak": " serie"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.446,
+     "peak": " cantidad"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.602,
+     "peak": " train"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.634,
+     "peak": " façon"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.386,
+     "peak": " serie"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.123,
+     "peak": "riers"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.178,
+     "peak": " fort"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.134,
+     "peak": "lée"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.148,
+     "peak": " serie"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.108,
+     "peak": "as"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": " le"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.137,
+     "peak": " partir"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.061,
+     "peak": " nuevos"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.483,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a1aee672b",
+  "minutes": 2,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "French/Spanish slot before de",
+ "unit_kind": "contextual / syntax",
+ "confidence": 0.5,
+ "notes": "Round 1 fire: en train 0.64-0.66, façon 0.89, serie 0.55, plus 0.40, cantidad 0.31, calidad 0.28, manière 0.17 at a later token. So calidad and manière are left out of this label. No probes this round. Three near misses keep the word in another use: 'le train', 'la serie' and 'plus peuplée'.",
+ "selection": "picked"
+}
