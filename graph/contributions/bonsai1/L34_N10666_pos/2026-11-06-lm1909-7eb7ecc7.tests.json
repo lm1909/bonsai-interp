@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-7eb7ecc7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10666+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N10666",
+   "pole": "+",
+   "label": "the piece ' Pl' split off at the start of a capitalized word in mid-sentence (Filter Pl|ugging, The Pl|anners, Pl|utarch), as opposed to whole tokens like Plaza, Plastic and Please",
+   "fire": [
+    "We saw Filter Plugging and spot fires in the report.",
+    "The town hired two Planners last spring.",
+    "Some Placing Agents charge a fee.",
+    "He read Plutarch on the train.",
+    "Check the Plugs and Outlets section.",
+    "Many Pls. were sent by readers.",
+    "The Plugging Tools are sold here.",
+    "Our Planners meet on Friday."
+   ],
+   "quiet": [
+    "We saw Low Visibility and spot fires in the report.",
+    "The town hired two Plumbing inspectors last spring.",
+    "Some Plastic bags cost a fee.",
+    "He read Homer on the train.",
+    "Check the Plaza section.",
+    "Many Pleases were sent by readers.",
+    "The Garden Tools are sold here.",
+    "Our Plans meet on Friday."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split ' Pl' word start",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked. At the start of a text these words give no leading-space token, and probes stayed at 0.00: fire items avoid that position.",
+ "trigger": {
+  "tokens": [
+   " Pl",
+   " pl",
+   " пл"
+  ]
+ }
+}
