@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-872e3174",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N4377+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:48:17+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L5/N4377",
+   "pole": "+",
+   "label": "the noun naming what a service or product is for, in sales copy (dog grooming, lawn care, your bathroom), as opposed to the same noun in plain statements",
+   "fire": [
+    "We offer gentle all-natural pet grooming at great prices.",
+    "Our experts provide affordable lawn mowing all year long.",
+    "Transform your home with our beautiful custom curtains.",
+    "We offer premium dog walking for busy families.",
+    "Protect your garden with our organic pest control.",
+    "Our company provides free home repair estimates.",
+    "Upgrade your bathroom with our luxury fittings.",
+    "We offer friendly hair care for the whole family."
+   ],
+   "quiet": [
+    "The gentle pet slept all morning in the sun.",
+    "Our neighbor's lawn looks brown all year long.",
+    "My home is two miles from the old mill.",
+    "The dog walked slowly with the family.",
+    "Her garden is full of weeds and old pots.",
+    "Our company is based in a small home in Ohio.",
+    "My bathroom is cold in the winter.",
+    "Her hair is long and dark like her mother's."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "noun of a service in sales copy",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. The first round claimed house and garden nouns, and failed (AUROC 0.812): 'all-natural dog grooming' reached 0.722 and 'your business' 0.387. New probes: 'all-natural dog' 0.702, 'covers ... your home' 0.392; 'We like the dog in the yard' 0.097, 'My business closed' 0.150; but 'new car wash kit' 0.104 and 'cheap laptop cases' 0.046 stayed low, so not all goods fire. Near misses use the same nouns in plain statements with no offer. Declared here as a sales-copy distinction, with confidence medium."
+}

@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-fb372625",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N9397-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:48:17+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L35/N9397",
+   "pole": "-",
+   "label": "a split inner piece of a word in French, German or Russian that the next piece will finish (cou|lo|irs, Ver|sto|ßes, end|ro|its, Ц|ер|кви)",
+   "fire": [
+    "Au bout des couloirs du lycée se trouve la bibliothèque.",
+    "Für jeden Verstoß gegen die Hausordnung gibt es eine Strafe.",
+    "Dans ces endroits, il fait très chaud en été.",
+    "Der Verstoß wurde vom Gericht sofort gemeldet.",
+    "Православная Церковь отметила большой праздник весной.",
+    "Les couloirs de cet immeuble sont sombres et étroits.",
+    "Plusieurs endroits du parc sont fermés cet hiver.",
+    "Эта Церковь стоит на холме над рекой."
+   ],
+   "quiet": [
+    "Au bout de la rue du lycée se trouve la bibliothèque.",
+    "Für jeden Fehler in der Arbeit gibt es eine Strafe.",
+    "Dans ce pays, il fait très chaud en été.",
+    "Der Fall wurde vom Gericht sofort gemeldet.",
+    "Большая страна отметила большой праздник весной.",
+    "Les murs de cet immeuble sont sombres et étroits.",
+    "Plusieurs parties du parc sont fermées cet hiver.",
+    "Этот дом стоит на холме над рекой."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "split inner piece of a European word",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Second round. The first round had 7/8 fire at median 0.831 and no near miss at 0.30, but failed at AUROC 0.883 because one of my fire sentences (Église) had no such split piece and scored 0.002. Same label, new sentences, and this time I checked every fire sentence for a split inner piece of the kinds that fired. Near misses keep the sentence with a whole-token word."
+}

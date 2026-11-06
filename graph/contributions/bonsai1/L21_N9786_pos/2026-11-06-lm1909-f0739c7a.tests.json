@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-f0739c7a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N9786+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:48:17+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L21/N9786",
+   "pole": "+",
+   "label": "the sentence-initial word 'Because' or 'Since' opening a reason clause, up to its subject and verb (Because public support is key, Since this lesson needs)",
+   "fire": [
+    "Because farmers need water, the dam was built.",
+    "Since this method has few steps, children like it.",
+    "Because the bridge is old, trucks avoid it.",
+    "Since these tools have sharp edges, keep them locked.",
+    "Because of the storm, the match was cancelled.",
+    "Since that road has many curves, drive slowly.",
+    "Because nurses are scarce, wards are closing.",
+    "Since this film has subtitles, anyone can watch."
+   ],
+   "quiet": [
+    "Farmers need water, and the dam was built.",
+    "This method has few steps, and children like it.",
+    "The bridge is old, and trucks avoid it.",
+    "These tools have sharp edges, and we keep them locked.",
+    "During the storm, the match was cancelled.",
+    "That road has many curves, and drivers go slowly.",
+    "Nurses are scarce, and wards are closing.",
+    "This film has subtitles, and anyone can watch."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "sentence-initial Because/Since clause",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. The first round placed the clause after an earlier sentence, and it narrowly failed on the median (0.191; AUROC 1.000). New probes as the first sentence of a text: 'Because' 0.311 in three frames, ' this' after 'Since' 0.338; the same content without the opener under 0.01. This round tests a text-initial reason clause; note that AGENTS.md warns sentence-initial tokens score differently, so this is a claim about that position."
+}
