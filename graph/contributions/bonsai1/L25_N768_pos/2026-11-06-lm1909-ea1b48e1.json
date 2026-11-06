@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-ea1b48e1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N768+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:39:34+00:00",
+ "recipe": {
+  "toolchain_commit": "b56946900",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N768_pos/2026-11-06-lm1909-ea1b48e1.tests.json"
+ },
+ "label": "The word after 'holds', 'serves' or 'appointed' where a position, record or membership follows (holds the title, serves on the board, appointed to the panel); similar verbs stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N768_pos/2026-11-06-lm1909-ea1b48e1.tests.json",
+   "prereg_commit": "b56946900",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.518,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.211,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.371,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.743,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.394,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.245,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.068,
+     "peak": " national"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.516,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.076,
+     "peak": " carries"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " brings"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.084,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.096,
+     "peak": " currently"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.115,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.236,
+     "peak": " serves"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.383,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "b56946900",
+  "minutes": 12,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "holds the, serves on, appointed to",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.6,
+ "notes": "Second round. Round 1 ('occupying an office') failed because 'holds the ladder' (0.49) and 'serves soup' (0.32) fired. The label is lowered to the words: 'holds the' fires for any object, so one such near miss is not expected to separate and fire items use position-like objects. A probe of 'She serves tea' read 0.15.",
+ "selection": "second round after a failed first round"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-c05b7f4a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N7540-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:39:14+00:00",
+ "recipe": {
+  "toolchain_commit": "b56946900",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N7540_neg/2026-11-06-lm1909-c05b7f4a.tests.json"
+ },
+ "label": "A separator in a numeric column-width list that follows a list of column names in code (['Id', 'PID', ...], sizes=[15, 7, 15, ...]); the same numbers alone or in prose stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N7540_neg/2026-11-06-lm1909-c05b7f4a.tests.json",
+   "prereg_commit": "b56946900",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.505,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.641,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.758,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.618,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.165,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.441,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.441,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.475,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.065,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.188,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "(header"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": "(head"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "(t"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.49,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "b56946900",
+  "minutes": 12,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "column widths after column names",
+ "unit_kind": "code / repeat",
+ "confidence": 0.5,
+ "notes": "Second round. Round 1 failed on median 0.189 over any long list. A list of numbers alone probed 0.05, and after a list of names 0.51.",
+ "selection": "second round after a failed first round"
+}

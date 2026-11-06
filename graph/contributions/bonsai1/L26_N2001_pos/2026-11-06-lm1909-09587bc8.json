@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-09587bc8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2001+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:39:45+00:00",
+ "recipe": {
+  "toolchain_commit": "b56946900",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2001_pos/2026-11-06-lm1909-09587bc8.tests.json"
+ },
+ "label": "The adjective that posits an unseen agent: unseen, invisible, unknown, undetected, mysterious, before a force, hand or substance; other adjectives before such nouns stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2001_pos/2026-11-06-lm1909-09587bc8.tests.json",
+   "prereg_commit": "b56946900",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.698,
+     "peak": " unseen"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.549,
+     "peak": " invisible"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.239,
+     "peak": " unknown"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.311,
+     "peak": "ected"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.398,
+     "peak": " force"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.406,
+     "peak": " powers"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.394,
+     "peak": " hand"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.455,
+     "peak": " unknown"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.163,
+     "peak": " strong"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.141,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " had"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.311,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.124,
+     "peak": " pull"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.099,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": " some"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "b56946900",
+  "minutes": 12,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "unseen, invisible, unknown (adjective)",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.6,
+ "notes": "Second round. Round 1 failed because ' a' after 'think' or 'suspect' read 0.31 in near misses; a probe repeated that (' a' 0.26-0.31). Near misses here keep one such frame, and the rest use other adjectives.",
+ "selection": "second round after a failed first round"
+}
