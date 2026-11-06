@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-605d9df6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8587+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:40:58+00:00",
+ "recipe": {
+  "toolchain_commit": "96a40a390",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N8587_pos/2026-11-06-lm1909-605d9df6.tests.json"
+ },
+ "label": "the letter naming a vitamin or a hepatitis type (vitamins A, hepatitis B)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N8587_pos/2026-11-06-lm1909-605d9df6.tests.json",
+   "prereg_commit": "96a40a390",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.89,
+     "peak": " A"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.154,
+     "peak": " C"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.034,
+     "peak": " morning"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.574,
+     "peak": " A"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.021,
+     "peak": "This"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.699,
+     "peak": " A"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.336,
+     "peak": " B"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.006,
+     "peak": " gives"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " rich"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.031,
+     "peak": " HIV"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.06,
+     "peak": " morning"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.177,
+     "peak": " vaccinated"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": "This"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": " high"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " gives"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.719,
+    "median_fire": 0.245,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "96a40a390",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "letter of a vitamin or hepatitis type",
+ "unit_kind": "token / contextual",
+ "confidence": "high",
+ "notes": "' eye' in 'membranes of the eye' reached 0.58, and ' on' in 'turn the LCD on' 0.47, in the probes; those are not covered.",
+ "selection": "random draw"
+}

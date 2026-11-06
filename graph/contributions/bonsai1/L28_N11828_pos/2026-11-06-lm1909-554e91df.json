@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-554e91df",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N11828+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:42:20+00:00",
+ "recipe": {
+  "toolchain_commit": "96a40a390",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N11828_pos/2026-11-06-lm1909-554e91df.tests.json"
+ },
+ "label": "a praising adjective or possessive just before 'work' or its like (keep up the good work, important work, their incredible efforts)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N11828_pos/2026-11-06-lm1909-554e91df.tests.json",
+   "prereg_commit": "96a40a390",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.404,
+     "peak": " important"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.833,
+     "peak": " good"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.95,
+     "peak": " great"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.461,
+     "peak": " amazing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.21,
+     "peak": " important"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.521,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.163,
+     "peak": " vital"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.165,
+     "peak": " excellent"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.161,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.423,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.139,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " road"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.076,
+     "peak": " vital"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " your"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.491,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "96a40a390",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "praise slot before 'work'",
+ "unit_kind": "prediction / semantic",
+ "confidence": "high",
+ "notes": "Direct logits promote ' work', ' important', ' done'. 'Keep up the speed' reached 0.42 on ' the', so ' keep up the' fires by itself; that is a near miss here too.",
+ "selection": "random draw"
+}

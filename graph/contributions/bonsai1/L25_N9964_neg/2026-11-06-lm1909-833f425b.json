@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-833f425b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N9964-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:42:10+00:00",
+ "recipe": {
+  "toolchain_commit": "96a40a390",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N9964_neg/2026-11-06-lm1909-833f425b.tests.json"
+ },
+ "label": "rare or unexpected tokens (_timestamp, 1,000TH, Anglic, фотограф) (guess; a broad pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N9964_neg/2026-11-06-lm1909-833f425b.tests.json",
+   "prereg_commit": "96a40a390",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.401,
+     "peak": "_timestamp"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.574,
+     "peak": "TH"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.401,
+     "peak": "ент"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.38,
+     "peak": " Anglic"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.343,
+     "peak": "_timestamp"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.619,
+     "peak": "TH"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.313,
+     "peak": "Э"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.245,
+     "peak": " Anglic"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.178,
+     "peak": " f"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.113,
+     "peak": " reach"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.401,
+     "peak": "ент"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.187,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.188,
+     "peak": "def"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.081,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.313,
+     "peak": "Э"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.124,
+     "peak": " aunt"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.391,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "96a40a390",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "rare tokens (guess, broad pole)",
+ "unit_kind": "unclear / list",
+ "confidence": "low",
+ "notes": "Weak guess, a list on a broad pole (7.5% of tokens reach 0.1 of max). Nothing links these that I can name.",
+ "selection": "random draw"
+}

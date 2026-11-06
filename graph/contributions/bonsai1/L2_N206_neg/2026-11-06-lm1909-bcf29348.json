@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-bcf29348",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N206-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:41:05+00:00",
+ "recipe": {
+  "toolchain_commit": "96a40a390",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N206_neg/2026-11-06-lm1909-bcf29348.tests.json"
+ },
+ "label": "' divide' and 'Div|iding', and Russian 'плани|ру|ет' (a broad, weak pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N206_neg/2026-11-06-lm1909-bcf29348.tests.json",
+   "prereg_commit": "96a40a390",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.916,
+     "peak": " divide"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.822,
+     "peak": "iding"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.822,
+     "peak": "iding"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.822,
+     "peak": "ру"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.906,
+     "peak": "ру"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.391,
+     "peak": " divide"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.931,
+     "peak": "ру"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.822,
+     "peak": "iding"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.078,
+     "peak": " farm"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.062,
+     "peak": " four"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.305,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.111,
+     "peak": " хочет"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.058,
+     "peak": " зав"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.058,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.074,
+     "peak": " хот"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "aking"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.822,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "96a40a390",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "divide, dividing; Russian планирует",
+ "unit_kind": "lexical / list",
+ "confidence": "medium",
+ "notes": "A list label. A broad pole with a tiny max (0.86), and ' Each' reached 0.31 in a probe. 'multiply' stayed at 0.05.",
+ "selection": "random draw"
+}

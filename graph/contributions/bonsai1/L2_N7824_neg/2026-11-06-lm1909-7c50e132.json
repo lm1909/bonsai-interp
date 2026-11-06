@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7c50e132",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N7824-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:42:22+00:00",
+ "recipe": {
+  "toolchain_commit": "96a40a390",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N7824_neg/2026-11-06-lm1909-7c50e132.tests.json"
+ },
+ "label": "the first word after a title's colon, or a function word in a title (Wirelessing the World: The, The Slave in the)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N7824_neg/2026-11-06-lm1909-7c50e132.tests.json",
+   "prereg_commit": "96a40a390",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.307,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.04,
+     "peak": "elling"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.277,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.089,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.219,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.019,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.078,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.104,
+     "peak": " The"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.038,
+     "peak": " colonial"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " bay"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " tower"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": "5"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.097,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "96a40a390",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "start of a title's subtitle",
+ "unit_kind": "format / contextual",
+ "confidence": "low",
+ "notes": "Weak-ish: the probes reached 0.09-0.60. Gate-closed in 94% of cases.",
+ "selection": "random draw"
+}
