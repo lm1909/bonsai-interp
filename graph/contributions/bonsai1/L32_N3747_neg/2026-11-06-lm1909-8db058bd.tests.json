@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-8db058bd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N3747-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N3747",
+   "pole": "-",
+   "label": "'you and your' on its way to a spouse, in a statement addressed to a married reader (usually about tax or accounts); a sentence without a marriage context stays quiet",
+   "fire": [
+    "If you are married, you and your spouse can file a joint return.",
+    "Since you're married, both you and your wife can open an account.",
+    "Married couples: you and your husband may each give ten thousand dollars.",
+    "Once you marry, you and your partner share the tax bill.",
+    "As a married couple, both you and your spouse must sign the form.",
+    "If you're married and both you and your spouse work, you can claim it.",
+    "Married taxpayers can deduct what you and your spouse paid.",
+    "When you are married, both you and your husband are liable."
+   ],
+   "quiet": [
+    "If you are single, you can file a simple return.",
+    "Since you're a student, you can open an account.",
+    "Retired people may each give ten thousand dollars.",
+    "Once you retire, you and your dog can share the house.",
+    "As a new customer, you must sign the form.",
+    "If you're young and you work, you can claim it.",
+    "Single taxpayers can deduct what they paid.",
+    "When you are renting, you and your friend are liable."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'you and your' before a spouse",
+ "unit_kind": "contextual / prediction",
+ "confidence": "low",
+ "notes": "Card: ' E' x4, ' your' x3, ' the' x3, ' and' x2, ' her' before spouse; the + pole's logit effect promotes ' partner', ' partners', so the - pole reads against that. Probe: 'married and both you and your' 0.62; 'Both you and your dog' 0.02, 'his or her spouse' 0.04, ' E' of E-mini 0.07. So this is one narrow slice and rests on one probe."
+}

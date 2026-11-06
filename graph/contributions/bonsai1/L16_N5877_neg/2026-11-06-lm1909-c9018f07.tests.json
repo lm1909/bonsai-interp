@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-c9018f07",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5877-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N5877",
+   "pole": "-",
+   "label": "A verb meaning 'is a sign of' (indicates, reflects, shows); verbs of doing or causing in the same frame stay quiet",
+   "fire": [
+    "His fever indicates that the infection has spread.",
+    "The growth in sales reflects the strength of the brand.",
+    "A red light indicates a problem with the engine.",
+    "These ruins show the wealth of the old city.",
+    "The low turnout reflected the anger of the voters.",
+    "Her handwriting indicates a careful nature.",
+    "Bare shelves show the depth of the shortage.",
+    "Rising prices indicate a shortage of wheat."
+   ],
+   "quiet": [
+    "His fever kept him in bed for a week.",
+    "The growth in sales paid for the new office.",
+    "A red light stopped the traffic near the engine shed.",
+    "These ruins draw tourists to the old city.",
+    "The low turnout disappointed the leaders of the party.",
+    "Her handwriting improved with careful practice.",
+    "Bare shelves annoy the shoppers at the store.",
+    "Rising prices hurt the buyers of wheat."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "verb meaning 'is a sign of'",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' indicates' x5, ' show' x3, ' shows' x3, ' showing' x2, ' indicate' x2, ' reflecting' x2, 表示. The + pole has the causal side (' make', ' result', ' destroy', 使), and its logit effect suppresses ' indicates', ' signifies', ' suggests'. Probe: indicates 0.14-0.42, reflected 0.34, show 0.15; helps, employed, annoys, make at most 0.04. Readings are modest.",
+ "trigger": {
+  "words": [
+   "indicates",
+   "indicate",
+   "reflects",
+   "reflected"
+  ]
+ }
+}

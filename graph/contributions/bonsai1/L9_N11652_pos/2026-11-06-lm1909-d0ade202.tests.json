@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-d0ade202",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N11652+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N11652",
+   "pole": "+",
+   "label": "A speech verb that reports an answer to a question just asked ('I asked him why, and he said', 'she told me'); the same verb with no question before it stays quiet",
+   "fire": [
+    "I asked the guard where the exit was, and he said it was closed.",
+    "We asked her about the plan and she said it was too late.",
+    "When she asked who was there, he told her it was only the cat.",
+    "I asked my father if he was tired, and he said yes.",
+    "She asks him what he wants, and Tom says he needs money.",
+    "They asked the driver why he stopped, and he said the road was blocked.",
+    "I asked the nurse how long it would take, and she told me an hour.",
+    "The teacher asked if anyone knew, and a boy said he did."
+   ],
+   "quiet": [
+    "I walked past the guard at the exit, and he said it was closed.",
+    "We finished the plan and she said it was too late.",
+    "When she came home, he told her it was only the cat.",
+    "I sat with my father on the porch, and he said it was cold.",
+    "She brings him a coffee, and Tom says he needs money.",
+    "They stopped near the driver, and he said the road was blocked.",
+    "I waited by the nurse for a while, and she told me an hour.",
+    "The teacher walked in, and a boy said hello."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "speech verb reporting an answer",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' said' x6, '—' x4, ' says' x2, ' told' x2, '“Oh' x2, after 'I asked'. Probe: 'asked him why, and he said' 0.85, 'asked her ... she said' 0.78, 'she told' 0.54, 'Orhan says' 0.44; no question before: 'and he said' 0.00, 'she said hello' 0.04, 'The manager said' 0.01. ' he' before ' left' after a question reached 0.42, so the pole already reads the pronoun."
+}
