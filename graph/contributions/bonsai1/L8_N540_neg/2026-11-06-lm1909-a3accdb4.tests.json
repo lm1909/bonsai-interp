@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-a3accdb4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N540-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:05:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N540",
+   "pole": "-",
+   "label": "A word that repeats a name just used: the argument in `str(self)`, `format(minutes)`, `rmtree(directory)`, or a unit in a formula ('5280 feet' after 'in feet'); a name used for the first time stays low.",
+   "fire": [
+    "    def __str__ (self):\n        return repr(self)\n",
+    "    if hours > 0:\n        parts.append('{} hours'.format(hours))\n",
+    "    if os.path.isfile(path):\n        os.remove(path)\n",
+    "How far is it in inches? (Remember- 1 foot=12 inches)",
+    "    if retries > 3:\n        log.append('{} retries'.format(retries))\n",
+    "    if os.path.islink(target):\n        os.unlink(target)\n",
+    "What is the mass in grams? (Remember- 1 kilo=1000 grams)",
+    "    def __len__ (self):\n        return count(self)\n"
+   ],
+   "quiet": [
+    "    def __str__ (self):\n        return repr(name)\n",
+    "    if hours > 0:\n        parts.append('{} days'.format(count))\n",
+    "    if os.path.isfile(path):\n        os.remove(other)\n",
+    "How far is it in inches? (Remember- 1 yard=3 feet)",
+    "    if retries > 3:\n        log.append('{} errors'.format(count))\n",
+    "    if os.path.islink(target):\n        os.unlink(source)\n",
+    "What is the mass in grams? (Remember- 1 kilo=1000 ounces)",
+    "    def __len__ (self):\n        return count(items)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word repeating a name just used",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Probes: 0.29-0.55 on repeats; other first uses 0.00-0.07, but ' position' 0.26 is a first use and counts against the label, and ' ' 0.24 in the volume formula repeats nothing. The card's examples include ' *', '{}' and '.column', not covered. This is a pattern I propose from a list, tested on new names; the near misses have the same shapes with new names, so it tests repetition, not code as such."
+}

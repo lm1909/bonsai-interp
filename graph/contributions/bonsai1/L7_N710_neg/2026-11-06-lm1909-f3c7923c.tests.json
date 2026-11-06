@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-f3c7923c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N710-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:05:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N710",
+   "pole": "-",
+   "label": "The line break right after a signature or attribution at the end of a paragraph ('... —NWS', '... -RJP', '- Adam Turner', '(Bauerlein)'); a line break after a plain sentence, or after a name inside a sentence, stays quiet.",
+   "fire": [
+    "Rain is expected across Iowa tonight. —AP\nRoads may flood by noon.",
+    "This is the one I would buy. -KLM\nJane Doe is not sure.",
+    "Nothing beats a short walk at lunch! – DB\nTry it with a friend.",
+    "\"We won fair and square,\" says Hall. - Mary Ortiz\nThe club meets Friday.",
+    "You get what you pay for, in the end. (Keynes)\nHere are some tips.",
+    "Fires are out across Utah today. —Reuters\nCrews went home.",
+    "That was a great read for the beach. -TW\nSam agrees.",
+    "\"It is a fine town,\" says Roy. - Tim Burke\nThe mayor left."
+   ],
+   "quiet": [
+    "Rain is expected across Iowa tonight.\nRoads may flood by noon.",
+    "This is the one I would buy.\nJane Doe is not sure.",
+    "Nothing beats a short walk at lunch!\nTry it with a friend.",
+    "\"We won fair and square,\" says Hall.\nThe club meets Friday.",
+    "You get what you pay for, in the end.\nHere are some tips.",
+    "We all went to see Mary Ortiz\nand her sister in town.",
+    "That was a great read for the beach.\nSam agrees.",
+    "They sent the letter to Tim Burke\nand his brother last week."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line break after a signature",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Probes: 0.56-0.87 on '\\n' or ')\\n'. Near misses end on the merged token '.\\n' (0.01-0.12). Because the token differs, two near misses end in a name and a bare '\\n' with no signature frame, which is the harder check."
+}

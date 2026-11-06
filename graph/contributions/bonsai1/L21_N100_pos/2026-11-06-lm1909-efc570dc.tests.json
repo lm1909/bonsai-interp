@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-efc570dc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N100+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:05:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N100",
+   "pole": "+",
+   "label": "The modal or auxiliary in a second clause after 'While' or 'but', just before an expected ' also' ('While it can work ..., it can', 'but it can', 'but we're'); the same word in a lone clause stays low.",
+   "fire": [
+    "While the tool can cut wood, it can also shape metal.",
+    "That may be true, but it can also be risky.",
+    "\"We're fixing the roof, but we're also painting the barn.\"",
+    "While she can sing opera, she can also rap.",
+    "It might save time, but it could also cost more.",
+    "While this drug can ease pain, it may also cause sleep.",
+    "He can be kind, but he can also be cruel.",
+    "\"They're cutting taxes, but they're also raising fees.\""
+   ],
+   "quiet": [
+    "The tool can cut wood, so it can save time.",
+    "That is true, and it is risky.",
+    "\"We're fixing the roof this week.\"",
+    "She can sing opera in French.",
+    "It might save time because it could run faster.",
+    "This drug can ease pain in the back.",
+    "He can be kind to the dogs.",
+    "\"They're cutting taxes in the spring.\""
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "modal before an expected ' also' after a contrast",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 0.49-0.68 in that frame; lone clauses 0.01-0.05; a second sentence 0.11-0.17. Two near misses keep a second clause with no contrast. The card has many cases outside this frame (' You can', ' He has'), so it is narrower than the pole. The output direction promotes ' also', ' aussi', ' también'."
+}
