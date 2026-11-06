@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e080ac11",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N10159-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:10:49+00:00",
+ "recipe": {
+  "toolchain_commit": "b430df178",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N10159_neg/2026-11-06-lm1909-e080ac11.tests.json"
+ },
+ "label": "A description of skin, at the point where another skin-type word comes next: 'dry, oily or', 'pale and', 'lighter-skinned and', Spanish 'de piel'; the same list frames about other things stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N10159_neg/2026-11-06-lm1909-e080ac11.tests.json",
+   "prereg_commit": "b430df178",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.04,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.426,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.33,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.553,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.738,
+     "peak": " piel"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.786,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.278,
+     "peak": " sun"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.267,
+     "peak": " piel"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.087,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.109,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.067,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.125,
+     "peak": " muy"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " candles"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.079,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.074,
+     "peak": " muy"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.49,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b430df178",
+  "minutes": 19,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "skin descriptions, next skin-type word",
+ "unit_kind": "semantic / prediction",
+ "confidence": 0.8,
+ "notes": "Probes: 'combination, or' 0.72, 'lighter-skinned and' 0.58, 'oily or' 0.37, 'pale and' 0.36, ' piel' 0.33; soap scents 0.08, 'dry, dusty' under 0.01.",
+ "selection": "random draw"
+}

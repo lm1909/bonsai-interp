@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-58ccd7d5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2475+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:10:51+00:00",
+ "recipe": {
+  "toolchain_commit": "b430df178",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N2475_pos/2026-11-06-lm1909-58ccd7d5.tests.json"
+ },
+ "label": "The Arabic piece 'عض' in الأعضاء (members).",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N2475_pos/2026-11-06-lm1909-58ccd7d5.tests.json",
+   "prereg_commit": "b430df178",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.65,
+     "peak": "عض"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.694,
+     "peak": "عض"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.485,
+     "peak": "عض"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.729,
+     "peak": "عض"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.503,
+     "peak": "عض"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.723,
+     "peak": "عض"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.638,
+     "peak": "عض"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.053,
+     "peak": " الج"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.088,
+     "peak": "اف"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": "قر"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": "سة"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " المجلس"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": "قار"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "عدد"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.25,
+     "peak": " السن"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.035,
+     "peak": " الج"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.644,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b430df178",
+  "minutes": 19,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic piece عض (members)",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Probes: 0.75-0.81 on الأعضاء; other Arabic plural nouns in the same frames at most 0.06. Tokenization checked: الأ|عض|اء is split, while أعضاء and لأعضاء are whole tokens, so all fire items use الأعضاء.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "عض"
+  ]
+ }
+}

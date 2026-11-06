@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ee208ba3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N1883+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:10:50+00:00",
+ "recipe": {
+  "toolchain_commit": "b430df178",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N1883_pos/2026-11-06-lm1909-ee208ba3.tests.json"
+ },
+ "label": "The final piece of a name or term ending in a sibilant: -us, -ss, -ez (Campus, rect|us, Priebus, Fortress, Vald|ez), in a gate-closed unit with max 2.52.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N1883_pos/2026-11-06-lm1909-ee208ba3.tests.json",
+   "prereg_commit": "b430df178",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.764,
+     "peak": " Campus"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.488,
+     "peak": " Lopez"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.773,
+     "peak": "us"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.763,
+     "peak": "us"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.833,
+     "peak": " Fortress"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.66,
+     "peak": "actus"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.607,
+     "peak": "quez"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.57,
+     "peak": "egasus"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.459,
+     "peak": "ighthouse"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.264,
+     "peak": " Rose"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.083,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.06,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.712,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b430df178",
+  "minutes": 19,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word-final -us, -ss, -ez names",
+ "unit_kind": "spelling / token",
+ "confidence": 0.6,
+ "notes": "Card: 100% echo regime, broad flag. Probes: Fortress 0.90, 'dez' 0.89, Campus 0.98, 'us' 0.78-0.86, 'actus' 0.63, Atlas 0.65, Nimbus 0.49; pronoun ' us' 0.11, castle 0.03. Near misses use names and terms ending in other sounds.",
+ "selection": "random draw"
+}

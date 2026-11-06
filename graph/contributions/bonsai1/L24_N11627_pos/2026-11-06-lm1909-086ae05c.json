@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-086ae05c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N11627+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:10:34+00:00",
+ "recipe": {
+  "toolchain_commit": "b430df178",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N11627_pos/2026-11-06-lm1909-086ae05c.tests.json"
+ },
+ "label": "Program memory and file-like objects in programming text: 'memory leak', buffers, '(e.g. a file handle)'; human memory and everyday 'must be' stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N11627_pos/2026-11-06-lm1909-086ae05c.tests.json",
+   "prereg_commit": "b430df178",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.617,
+     "peak": " memory"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.903,
+     "peak": " memory"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.333,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.415,
+     "peak": " pipe"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.654,
+     "peak": " memory"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.341,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.79,
+     "peak": " memory"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.145,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " even"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": "Because"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.039,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.0,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " instance"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.516,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b430df178",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "memory leak, file-like objects",
+ "unit_kind": "semantic / code",
+ "confidence": 0.6,
+ "notes": "Probes: memory leak 0.53-0.77, '(e.g. a file handle)' 0.55-0.58, StringIO 0.25-0.40; 'must be opened' 0.13-0.32, 'further escaping' 0.18-0.22; human memory 0.01-0.02.",
+ "selection": "random draw"
+}

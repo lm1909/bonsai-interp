@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b85b7567",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2996-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:10:26+00:00",
+ "recipe": {
+  "toolchain_commit": "b430df178",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N2996_neg/2026-11-06-lm1909-b85b7567.tests.json"
+ },
+ "label": "Low-confidence list: Arabic ' المزيد' and the plural 'ولات', and the pieces 'mer' in Nummer and 'imos' in mínimos; I have no shared pattern.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N2996_neg/2026-11-06-lm1909-b85b7567.tests.json",
+   "prereg_commit": "b430df178",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.16,
+     "peak": " المزيد"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.158,
+     "peak": " البلاد"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.25,
+     "peak": "ولة"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.554,
+     "peak": "mer"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.216,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.242,
+     "peak": "mer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.418,
+     "peak": "imos"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.419,
+     "peak": "imos"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.086,
+     "peak": "ائب"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.13,
+     "peak": " البلاد"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.202,
+     "peak": " الجنوب"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.085,
+     "peak": "in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " er"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " Land"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.185,
+     "peak": "brero"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": "ales"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.246,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b430df178",
+  "minutes": 18,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "المزيد, Nummer, mínimos (list)",
+ "unit_kind": "token piece / unclear",
+ "confidence": 0.25,
+ "notes": "Card peaks are mixed: ' way' x3, ' ways' x2, 'ولات', ' المزيد', 'وع', 'mer'. English way/ways scored only 0.02-0.15 in probes. Probes on the list: 0.14-0.46; the plain Arabic control 0.20, and the German control 0.02. The + output direction promotes where, that and which, so this - pole suppresses them.",
+ "selection": "random draw"
+}

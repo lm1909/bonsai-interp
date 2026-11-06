@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e519112e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3871-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:10:58+00:00",
+ "recipe": {
+  "toolchain_commit": "b430df178",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N3871_neg/2026-11-06-lm1909-e519112e.tests.json"
+ },
+ "label": "The stem piece of a French learned adjective, just before its ending: explic|ites, conc|r|ètes, hom|oph|obes, sat|an|iques; plain French stays lower and the English cognates stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N3871_neg/2026-11-06-lm1909-e519112e.tests.json",
+   "prereg_commit": "b430df178",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.846,
+     "peak": " explic"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.995,
+     "peak": "r"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.719,
+     "peak": "oph"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.59,
+     "peak": " sat"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.789,
+     "peak": "r"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.037,
+     "peak": " explic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.787,
+     "peak": "oph"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.358,
+     "peak": " con"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.417,
+     "peak": " très"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.26,
+     "peak": "res"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " après"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.238,
+     "peak": "urs"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " concrete"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " speeches"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.788,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b430df178",
+  "minutes": 19,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French adjective stems",
+ "unit_kind": "token piece / language",
+ "confidence": 0.65,
+ "notes": "Probes: explic 0.93, conc|r 0.76-0.84, oph 0.60, an 0.72; plain French 0.25-0.42; English 'explicit', 'concrete' 0.01. Half the near misses are French with no such adjective, and half are English cognates.",
+ "selection": "random draw"
+}
