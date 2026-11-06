@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-949b65c4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N210-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:23:07+00:00",
+ "recipe": {
+  "toolchain_commit": "10d908e13",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N210_neg/2026-11-06-lm1909-949b65c4.tests.json"
+ },
+ "label": "' on' or ' for' naming who or what a care product or a medical recommendation is meant for ('works on oily skin', 'recommend the shot for adults')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N210_neg/2026-11-06-lm1909-949b65c4.tests.json",
+   "prereg_commit": "10d908e13",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.639,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.406,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.741,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.165,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.545,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.044,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.411,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.333,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " ton"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": " months"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " cream"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.051,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " forty"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": "ologist"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.408,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "10d908e13",
+  "minutes": 8,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "' on' / ' for': who a remedy is for",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.6,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep5b-20261105, label 'what a treatment or product suits', which failed at AUROC 0.891 with ' boots' and ' treat' low. This round narrows to the preposition. Probe: ' on' after 'works' 1.009; ' for' after 'recommend the shot' 0.420; ' with' after 'boots are better' 0.059; ' treat' 0.096; products sold or spilled at most 0.071.",
+ "selection": "second round after my own sweep"
+}

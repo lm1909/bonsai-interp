@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-e6f4bded",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N55-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:22:56+00:00",
+ "recipe": {
+  "toolchain_commit": "10d908e13",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N55_neg/2026-11-06-lm1909-e6f4bded.tests.json"
+ },
+ "label": "Russian comparative words ' больше', ' чаще', ' лучше', ' меньше' ('more', 'more often', 'better', 'less')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N55_neg/2026-11-06-lm1909-e6f4bded.tests.json",
+   "prereg_commit": "10d908e13",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.684,
+     "peak": " больше"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.768,
+     "peak": " лучше"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.36,
+     "peak": " чаще"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.715,
+     "peak": " меньше"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.837,
+     "peak": " больше"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.822,
+     "peak": " лучше"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.697,
+     "peak": " чаще"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.619,
+     "peak": " меньше"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.171,
+     "peak": "В"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.243,
+     "peak": "аш"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.198,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.14,
+     "peak": " на"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.132,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.167,
+     "peak": " врач"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.171,
+     "peak": " мы"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.164,
+     "peak": " в"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.706,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "10d908e13",
+  "minutes": 8,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "Russian comparatives",
+ "unit_kind": "lexical / grammatical",
+ "confidence": 0.8,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep9-20261106, which failed despite AUROC 1.000 and median 0.811 because 5 near misses reached 0.30-0.35 on other Russian tokens, in frames that also held the fire item's words. This round's near misses are other simple Russian sentences with different openings. Probe: comparatives 0.518-0.792; simple Russian 0.143-0.245. The risk is the same: a Russian baseline may reach 0.30.",
+ "selection": "second round after my own sweep",
+ "trigger": {
+  "tokens": [
+   " больше",
+   " чаще",
+   " лучше",
+   " меньше"
+  ]
+ }
+}

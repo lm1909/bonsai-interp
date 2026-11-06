@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-4e922370",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10468-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:23:00+00:00",
+ "recipe": {
+  "toolchain_commit": "10d908e13",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N10468_neg/2026-11-06-lm1909-4e922370.tests.json"
+ },
+ "label": "the Chinese comma right after a reporting clause ('数据显示，', '专家预计，', '报告认为，'), where the reported claim comes next",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N10468_neg/2026-11-06-lm1909-4e922370.tests.json",
+   "prereg_commit": "10d908e13",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.3,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.33,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.092,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.266,
+     "peak": "将于"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.087,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.131,
+     "peak": "可能"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.124,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.188,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "都"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": "喜欢"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.087,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.056,
+     "peak": "他"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.031,
+     "peak": "那"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.006,
+     "peak": "得"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.004,
+     "peak": "掉"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.992,
+    "median_fire": 0.16,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "10d908e13",
+  "minutes": 8,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "comma after a Chinese reporting clause",
+ "unit_kind": "syntactic",
+ "confidence": 0.65,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep5b-20261105, label 'a time expression comes next', failed at AUROC 0.734, and its same-prefix near misses could not test that. New reading from both rounds: '，' after 显示 or 预计 read 0.18-0.38 with or without a time next, while '，' after '这家工厂很有名' read 0.047 and '而' before 现在 0.047. Near misses here are commas after clauses that report nothing, with other openings.",
+ "selection": "second round after my own sweep"
+}
