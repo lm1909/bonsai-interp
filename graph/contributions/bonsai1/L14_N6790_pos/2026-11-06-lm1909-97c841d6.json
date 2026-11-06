@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-97c841d6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N6790+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:22:28+00:00",
+ "recipe": {
+  "toolchain_commit": "d9f982626",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N6790_pos/2026-11-06-lm1909-97c841d6.tests.json"
+ },
+ "label": "TensorFlow in code or text (tf.xxx calls, tensorflow imports, the word TensorFlow); similar calls without tf stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N6790_pos/2026-11-06-lm1909-97c841d6.tests.json",
+   "prereg_commit": "d9f982626",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.535,
+     "peak": ".run"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.737,
+     "peak": " tf"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.559,
+     "peak": " tensorflow"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.456,
+     "peak": " tf"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.228,
+     "peak": " TensorFlow"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.942,
+     "peak": " tf"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.621,
+     "peak": ".placeholder"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.694,
+     "peak": " graph"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.355,
+     "peak": "(sess"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": ":\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "from"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.063,
+     "peak": "loss"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " wood"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": ".DataFrame"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " hang"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 1,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.59,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d9f982626",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "TensorFlow / tf",
+ "unit_kind": "code / lexical",
+ "confidence": 0.85,
+ "selection": "random draw"
+}

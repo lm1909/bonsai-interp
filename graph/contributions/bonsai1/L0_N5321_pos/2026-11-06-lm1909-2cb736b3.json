@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-2cb736b3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5321+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:22:16+00:00",
+ "recipe": {
+  "toolchain_commit": "d9f982626",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5321_pos/2026-11-06-lm1909-2cb736b3.tests.json"
+ },
+ "label": "The word abdominal and the character 腹 (belly), including idioms that contain 腹; chest and stomach stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5321_pos/2026-11-06-lm1909-2cb736b3.tests.json",
+   "prereg_commit": "d9f982626",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.626,
+     "peak": " abdominal"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.657,
+     "peak": " abdominal"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.783,
+     "peak": " abdominal"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.74,
+     "peak": " abdominal"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.896,
+     "peak": "腹"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.959,
+     "peak": "腹"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.354,
+     "peak": "腹部"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.748,
+     "peak": " abdominal"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " blade"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " cr"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.047,
+     "peak": " knee"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " muscles"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": "元"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "む"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": "头部"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " skin"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.744,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d9f982626",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "abdominal / 腹",
+ "unit_kind": "lexical / cross-language",
+ "confidence": 0.9,
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " abdominal",
+   "腹"
+  ]
+ }
+}

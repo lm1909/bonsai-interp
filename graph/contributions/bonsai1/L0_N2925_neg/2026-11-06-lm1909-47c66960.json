@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-47c66960",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N2925-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:22:25+00:00",
+ "recipe": {
+  "toolchain_commit": "d9f982626",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N2925_neg/2026-11-06-lm1909-47c66960.tests.json"
+ },
+ "label": "The words different, between and further",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N2925_neg/2026-11-06-lm1909-47c66960.tests.json",
+   "prereg_commit": "d9f982626",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.514,
+     "peak": " between"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.288,
+     "peak": " further"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.545,
+     "peak": " different"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.797,
+     "peak": " further"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.373,
+     "peak": " different"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.328,
+     "peak": " between"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.691,
+     "peak": " further"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.75,
+     "peak": " different"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.112,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.135,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.087,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " savings"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.11,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " investigate"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.145,
+     "peak": "Every"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.53,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d9f982626",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "different, between, further",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Flagged broad, but those three tokens dominate the top 32. ' what' read 0.32 in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "different",
+   "between",
+   "further"
+  ]
+ }
+}

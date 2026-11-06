@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-54ccae29",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N9077+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:22:04+00:00",
+ "recipe": {
+  "toolchain_commit": "d9f982626",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N9077_pos/2026-11-06-lm1909-54ccae29.tests.json"
+ },
+ "label": "The ' None' assigned to a variable in Python (self.count = None, a, b = None, None); other initial values and prose 'none' stay lower",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N9077_pos/2026-11-06-lm1909-54ccae29.tests.json",
+   "prereg_commit": "d9f982626",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.234,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.384,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.061,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.212,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.007,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.135,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.064,
+     "peak": " None"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.654,
+     "peak": " None"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.067,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.048,
+     "peak": "(key"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.195,
+     "peak": "self"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "try"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " us"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " '"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.067,
+     "peak": ".cache"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.184,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d9f982626",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "assigning None in Python",
+ "unit_kind": "code / lexical",
+ "confidence": 0.6,
+ "notes": "'self.x = 0 ... = 1' read 0.25 in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " None"
+  ]
+ }
+}

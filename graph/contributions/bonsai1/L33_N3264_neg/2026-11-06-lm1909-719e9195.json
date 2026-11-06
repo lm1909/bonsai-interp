@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-719e9195",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N3264-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:22:42+00:00",
+ "recipe": {
+  "toolchain_commit": "d9f982626",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N3264_neg/2026-11-06-lm1909-719e9195.tests.json"
+ },
+ "label": "The first digit of the upper price in a hotel listing range, in Japanese and Korean travel pages (2,165円 - 8,002円); the same layout with one price stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N3264_neg/2026-11-06-lm1909-719e9195.tests.json",
+   "prereg_commit": "d9f982626",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.638,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.559,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.568,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.624,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.51,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.542,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.722,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.563,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "ー�"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "）"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "ル"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": "본"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": "드"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "마"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.565,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d9f982626",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "upper price digit in hotel range",
+ "unit_kind": "format / number",
+ "confidence": 0.45,
+ "notes": "Probes: Japanese 0.65, Korean 0.10, English $120 - $340 0.003. '(self' and 'th' on the card are not covered.",
+ "selection": "random draw"
+}
