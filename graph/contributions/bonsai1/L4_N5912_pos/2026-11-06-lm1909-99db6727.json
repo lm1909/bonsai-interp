@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-99db6727",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N5912+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:21:01+00:00",
+ "recipe": {
+  "toolchain_commit": "279ae88e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N5912_pos/2026-11-06-lm1909-99db6727.tests.json"
+ },
+ "label": "the last piece of a short list of split words: to|il, to|iled, to|iling, Know|th, RW|TH, as opposed to other split words (Slo|th, an|vil, Ash|worth) and whole-token words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N5912_pos/2026-11-06-lm1909-99db6727.tests.json",
+   "prereg_commit": "279ae88e2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.637,
+     "peak": "il"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.802,
+     "peak": "iled"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.85,
+     "peak": "iling"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.18,
+     "peak": "il"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.841,
+     "peak": "th"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.757,
+     "peak": "th"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.705,
+     "peak": "TH"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.087,
+     "peak": "il"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " mill"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " common"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": "th"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " ETH"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " till"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.822,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "279ae88e2",
+  "minutes": 5,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "the end of toil, Knowth, RWTH",
+ "unit_kind": "spelling unit / list",
+ "confidence": "medium",
+ "notes": "Card: 'th' x17, 'il' x4, 'iling' x4, 'iled' x2, 'TH' x1. Probes: to|il 0.72-1.02, to|iled 0.92, to|iling 0.64, Know|th 0.89-0.91, RW|TH 0.62-0.81; Slo|th 0.01, Go|ths 0.06, ' Kenneth' 0.01, ' soil', ' coil', ' oil' 0.01 or less. Fire items are mostly toil (5/8), so a hold says little about RW|TH (one item). I found no shared pattern, so this is a list on purpose, and a hold does not show that one exists. Output promotes ' hard', ' harsh', which may fit toil and not the others; not tested.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-04343d20",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N10012+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:21:12+00:00",
+ "recipe": {
+  "toolchain_commit": "279ae88e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N10012_pos/2026-11-06-lm1909-04343d20.tests.json"
+ },
+ "label": "reading off what a high or low number on a graded scale means (a higher gauge number means a thinner wire), as opposed to the same 'higher X means Y' frame with a quantity that is not a grade, including a number of things",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N10012_pos/2026-11-06-lm1909-04343d20.tests.json",
+   "prereg_commit": "279ae88e2",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.407,
+     "peak": " means"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.467,
+     "peak": " means"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.377,
+     "peak": " indicates"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.302,
+     "peak": " means"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.517,
+     "peak": " means"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.266,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.318,
+     "peak": " mean"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.358,
+     "peak": " means"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " means"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.071,
+     "peak": " worse"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " fence"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.099,
+     "peak": " means"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.189,
+     "peak": " means"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.069,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": " mean"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.367,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "279ae88e2",
+  "minutes": 5,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "what a number on a scale means",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' magnitude' x2, ' greater', ' True', ' lowest', ' lower', on scales where direction needs explaining (star magnitude, f-numbers, film speed). Probes: 0.22-0.63 on gauge, Mohs, Richter, SPF, pH, f-numbers and golf, often peaking on ' means'; 'higher wage means' 0.06, 'larger house means' 0.02, 'lower taxes mean' 0.04, 'the lower the sun' 0.13, a dial listed without a reading 0.01. A reversed scale is not required (Richter 0.41), so that part of my first idea was dropped. 'Sirius has a magnitude' 0.18.",
+ "selection": "random draw"
+}

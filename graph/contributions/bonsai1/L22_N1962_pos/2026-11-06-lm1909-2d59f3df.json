@@ -1,0 +1,166 @@
+{
+ "id": "2026-11-06-lm1909-2d59f3df",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N1962+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:21:17+00:00",
+ "recipe": {
+  "toolchain_commit": "279ae88e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N1962_pos/2026-11-06-lm1909-2d59f3df.tests.json"
+ },
+ "label": "the word-class terms verb, noun, adjective and adverb (and 形容词), as opposed to other words about language in the same frames (word, phrase, term, full stop) and other grammar terms (plural, derivative)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N1962_pos/2026-11-06-lm1909-2d59f3df.tests.json",
+   "prereg_commit": "279ae88e2",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.304,
+     "peak": " verb"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.625,
+     "peak": " noun"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.324,
+     "peak": " adjective"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.438,
+     "peak": " adjective"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.692,
+     "peak": " noun"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.413,
+     "peak": "verb"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.567,
+     "peak": " noun"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.245,
+     "peak": "词"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " stop"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.071,
+     "peak": "'"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.055,
+     "peak": "als"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " phrase"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "Definitions"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "English"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.187,
+     "peak": " phrase"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "词语"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.425,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "279ae88e2",
+  "minutes": 5,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "word-class terms: verb, noun, adjective",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' verb' x5, 'verb' x5, ' adjective' x4, ' noun' x4, 'noun' x2, plus ' novel' x2 and 詞. Probes: 0.32-0.86 on the English terms, 0.24 on 形容词; ' word', ' definition', ' sentence' 0.06 or less, ' poem' 0.13, ' novel' 0.16. Output promotes ' form', '-form', ' version', which suggests 'form of a word'; not tested.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " verb",
+   "verb",
+   " noun",
+   "noun",
+   "oun",
+   " adjective",
+   "adjective",
+   " adverb",
+   "adverb"
+  ]
+ }
+}

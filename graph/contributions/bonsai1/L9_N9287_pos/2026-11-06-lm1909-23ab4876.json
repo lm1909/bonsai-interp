@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-23ab4876",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N9287+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:20:52+00:00",
+ "recipe": {
+  "toolchain_commit": "279ae88e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N9287_pos/2026-11-06-lm1909-23ab4876.tests.json"
+ },
+ "label": "the corridors, hallways and walls of a building, as opposed to roads and yards outside, and to other parts of the building or room in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N9287_pos/2026-11-06-lm1909-23ab4876.tests.json",
+   "prereg_commit": "279ae88e2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.208,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.333,
+     "peak": " runs"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.063,
+     "peak": " walls"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.544,
+     "peak": " corridor"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.28,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.151,
+     "peak": "D"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.509,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.352,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.093,
+     "peak": " runs"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.018,
+     "peak": " photos"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.156,
+     "peak": " road"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.134,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.057,
+     "peak": "D"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.131,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.094,
+     "peak": " table"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.306,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "279ae88e2",
+  "minutes": 5,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "corridors, hallways and walls in a building",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' walls' x6, ' wall' x6, ' clim' x3, ' hall', ' corridors'; low max (3.39). Probes: corridor 0.41-0.46, hallway 0.35, 'wall of the corridor' 0.33, walls 0.13-0.31; road 0.10, barn side 0.04, street 0.06, fence 0.08, beams 0.11, door 0.12; 'wall outside' 0.21, Berlin Wall 0.05, Wall Street 0.07, 'hall ... mansion' 0.03. ' clim' on the card (climb? climate?) is not explained.",
+ "selection": "random draw"
+}

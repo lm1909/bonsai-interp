@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-774f4e92",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N10975+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:21:47+00:00",
+ "recipe": {
+  "toolchain_commit": "279ae88e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N10975_pos/2026-11-06-lm1909-774f4e92.tests.json"
+ },
+ "label": "something being kept, stored or held in a place or condition over time (is kept at low temperature, keep it dry at all times), as opposed to other things done to it, and to 'keep' meaning continue or retain",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N10975_pos/2026-11-06-lm1909-774f4e92.tests.json",
+   "prereg_commit": "279ae88e2",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.316,
+     "peak": " kept"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.187,
+     "peak": " under"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.193,
+     "peak": " cool"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.244,
+     "peak": " kept"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.298,
+     "peak": " hours"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.336,
+     "peak": " chilled"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.237,
+     "peak": " dry"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.254,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.052,
+     "peak": " sealed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " glass"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.053,
+     "peak": " cool"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.096,
+     "peak": " cage"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.128,
+     "peak": " chilled"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " grain"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": " shelf"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.249,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "279ae88e2",
+  "minutes": 6,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "something kept in a maintained condition",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card flagged broad: ' kept' x2, ' storage' x2, ' the', ' in', ' at'. Probes: 'baby is kept' 0.87, 'kept at low temperature in' 0.56, 'dry at all times' 0.39, 'keeps food cold' 0.36, 'kept on a chain' 0.27, 'kept in a warm room' 0.27, 'stored in a cool dark' 0.25, 'held in a warm box' 0.21; 'born in a warm room' 0.05, 'made in a large plant' 0.02, 'sold in a small box' 0.01; 'kept talking' 0.01, 'kept the money' 0.01, 'Keep calm' 0.01. Most of the card's other examples (' sitting', ' it', ' for') are not explained, so expect `partial`.",
+ "selection": "random draw"
+}
