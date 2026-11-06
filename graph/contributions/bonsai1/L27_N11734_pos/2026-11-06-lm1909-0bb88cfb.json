@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0bb88cfb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N11734+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:26:16+00:00",
+ "recipe": {
+  "toolchain_commit": "8a48c1b32",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N11734_pos/2026-11-06-lm1909-0bb88cfb.tests.json"
+ },
+ "label": "(guess) ' to' after good or glad, before seeing or having someone",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N11734_pos/2026-11-06-lm1909-0bb88cfb.tests.json",
+   "prereg_commit": "8a48c1b32",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.024,
+     "peak": " nice"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.026,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.095,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.025,
+     "peak": " see"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.095,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.138,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.155,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.124,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " nice"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": " good"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "Are"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " good"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.095,
+     "peak": " happy"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.025,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.095,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8a48c1b32",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' to' after good or glad (guess)",
+ "unit_kind": "contextual",
+ "confidence": 0.15,
+ "notes": "Card: ' to' 6, ' of' 5, ' that' 3; output promotes ' welcoming', ' thanks', ' seeing'. Probes stayed at or under 0.11. Expected to fall short; recorded so the draw stays complete.",
+ "selection": "random draw"
+}

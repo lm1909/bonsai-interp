@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-39b0c74d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N1123+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:25:29+00:00",
+ "recipe": {
+  "toolchain_commit": "8a48c1b32",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N1123_pos/2026-11-06-lm1909-39b0c74d.tests.json"
+ },
+ "label": "units in writing advice: ' words' in 'N words long', ' bullet' points, 'power words'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N1123_pos/2026-11-06-lm1909-39b0c74d.tests.json",
+   "prereg_commit": "8a48c1b32",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.914,
+     "peak": " words"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.448,
+     "peak": " words"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.343,
+     "peak": " bullet"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.06,
+     "peak": " words"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.186,
+     "peak": " attention"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.595,
+     "peak": " bullet"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.082,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.562,
+     "peak": " vivid"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " pl"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.127,
+     "peak": " strong"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.007,
+     "peak": " shoe"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " use"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " bag"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " ripe"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.396,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8a48c1b32",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "words and bullet points in writing advice",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.7,
+ "notes": "Card: ' words' 5, ' bullet' 1, 'erte' 1, 'ante' 1. Probes: ' words' 1.00 and 0.33, ' bullet' 0.60, 'erte' 0.72 (not covered); 'inches long' 0.15, 'power tools' 0.01.",
+ "selection": "random draw"
+}
