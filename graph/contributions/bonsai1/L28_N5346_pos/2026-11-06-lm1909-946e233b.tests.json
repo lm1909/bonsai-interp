@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-946e233b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5346+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:01:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N5346",
+   "pole": "+",
+   "label": "deep-learning training code: `.optimizer`, `.step()`, `tf.train`, gradient updates",
+   "fire": [
+    "grads = tape.gradient(cost, net.weights)\nself.optimizer.apply_gradients(zip(grads, net.weights))\n",
+    "self.q_optimizer.zero_grad()\nloss.backward()\nself.q_optimizer.step()\n",
+    "trainer = tf.train.GradientDescentOptimizer(self.lr)\n",
+    "self.actor_optimizer.step()\nself.critic_optimizer.zero_grad()\n",
+    "gradients = tape.gradient(loss, self.model.trainable_variables)\nself.optimizer.apply_gradients(zip(gradients, self.model.trainable_variables))\n",
+    "opt = tf.train.RMSPropOptimizer(0.01)\ntrain_op = opt.minimize(loss)\n",
+    "config['v'] = config['beta2'] * config['v'] + (1 - config['beta2']) * dx * dx\n",
+    "self.optimizer.zero_grad()\nself.optimizer.step()\n"
+   ],
+   "quiet": [
+    "rows = cursor.fetchall()\nself.logger.info(len(rows))\n",
+    "self.db.commit()\nself.db.close()\n",
+    "reader = csv.DictReader(handle)\n",
+    "self.left_panel.show()\nself.right_panel.hide()\n",
+    "names = sorted(self.users.keys())\nself.logger.debug(names)\n",
+    "opt = dict(name='a', value=1)\nprint(opt)\n",
+    "config['host'] = config['host'] + ':8080'\n",
+    "self.queue.clear()\nself.queue.close()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "neural-network training code",
+ "unit_kind": "code / semantic",
+ "confidence": "medium"
+}
