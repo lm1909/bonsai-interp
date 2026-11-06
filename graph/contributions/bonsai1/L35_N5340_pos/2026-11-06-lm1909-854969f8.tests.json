@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-854969f8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5340+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:15:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5340",
+   "pole": "+",
+   "label": "The first piece of a split Arabic word (' ص', ' الص', ' ث', ' الثن', ' وال'); other languages stay quiet.",
+   "fire": [
+    "الطقس في بغداد حار صيفا وبارد شتاء.",
+    "تزداد الزراعة في الموسم الصيفي كل عام.",
+    "تستخدم الشركة طرف ثالث لتحصيل الديون.",
+    "جرى الاتفاق على المستوى الثنائي بين البلدين.",
+    "تعلم الأطفال الجمع والطرح والضرب والقسمة.",
+    "هذا المطعم مفتوح صيفا فقط في المدينة.",
+    "يعمل الموظفون في الفصل الصيفي بدوام كامل.",
+    "طلب العميل تدخل طرف ثالث في النزاع."
+   ],
+   "quiet": [
+    "The weather in Baghdad is hot in summer and cold in winter.",
+    "Farming grows in the summer season each year.",
+    "The firm uses a third party to collect debts.",
+    "An accord was reached at the bilateral level.",
+    "Τα παιδιά έμαθαν πρόσθεση και αφαίρεση.",
+    "Το εστιατόριο είναι ανοιχτό το καλοκαίρι.",
+    "Die Mitarbeiter arbeiten im Sommer ganztags.",
+    "Le client a demandé l'aide d'un tiers."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, near misses are the risk. Half of them are Arabic with whole-token words, which I didn't probe.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first piece of split Arabic words",
+ "unit_kind": "token piece / language",
+ "confidence": 0.6,
+ "notes": "Probes: ' ص' 0.85, ' الص' 0.59, ' ث' 0.50, ' الثن' 0.37, ' وال' 0.36; English and Greek at most 0.01. The output promotes '(' tokens. The density is broad (0.8%)."
+}

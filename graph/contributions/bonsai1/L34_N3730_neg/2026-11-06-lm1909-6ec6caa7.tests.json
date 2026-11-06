@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-6ec6caa7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3730-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:15:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N3730",
+   "pole": "-",
+   "label": "The lowercase token ' h' opening a word that the tokenizer splits (h|inders, h|aphazard, h|unch); whole-token words stay quiet.",
+   "fire": [
+    "Bad lighting distracts the driver and hinders vision.",
+    "Repairs were haphazard and costs were high.",
+    "She had only a vague hunch that it was a trap.",
+    "Too many rules annoy the staff and leave goals hazy.",
+    "Planning was haphazard and funding was low.",
+    "I had a little bit of a hunch that he lied.",
+    "Loud music tires the students and hinders learning.",
+    "The filing system was haphazard at best."
+   ],
+   "quiet": [
+    "Bad lighting distracts the driver and causes crashes.",
+    "Repairs were slow and costs were high.",
+    "She had only a vague idea that it was a trap.",
+    "Too many rules annoy the staff and leave goals vague.",
+    "Planning was poor and funding was low.",
+    "I had a little bit of a feeling that he lied.",
+    "Loud music tires the students and lowers grades.",
+    "The filing system was poor at best."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0 near misses. ' H' in an acronym scored only 0.03, though the card lists ' H' x11.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' h' opening a split word",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Probes: hinders 0.83, haphazard 0.53, hunch 0.31, hERG 0.24; HBP 0.03; plain 0.00-0.02. Tokenization of fire words checked with the tokenizer before the commit.",
+ "trigger": {
+  "tokens": [
+   " h"
+  ]
+ }
+}

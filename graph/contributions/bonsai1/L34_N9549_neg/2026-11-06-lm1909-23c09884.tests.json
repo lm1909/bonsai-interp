@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-23c09884",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N9549-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:15:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N9549",
+   "pole": "-",
+   "label": "Low-confidence guess: ' =' in a class-level constant assignment in Python (DATA_TYPE = 'x'); this broad unit also fires on ' if' and on import lines.",
+   "fire": [
+    "class CacheEvent(Event):\n  \"\"\"A record.\"\"\"\n  DATA_TYPE = 'chrome:cache:record'",
+    "class Record(Event):\n  DATA_TYPE = 'windows:prefetch:execution'",
+    "class Teaser(Block):\n    block_type = 'gallery'\n    area = 'main'",
+    "class LogEvent(Base):\n  \"\"\"A log.\"\"\"\n  DATA_TYPE = 'syslog:line'",
+    "class Form(Base):\n    field_type = 'select'\n    name = 'x'",
+    "class Video(Block):\n    block_type = 'video'\n    area = 'side'",
+    "class Mail(Event):\n  DATA_TYPE = 'mail:message:sent'",
+    "class Page(Base):\n    page_type = 'list'\n    size = 'small'"
+   ],
+   "quiet": [
+    "The event record says it was cached on Monday at noon.",
+    "The Windows machine ran the program at night.",
+    "The teaser for the gallery was on the main page.",
+    "The log has a line for each event on the server.",
+    "The form has a field for your name and address.",
+    "The video was shown on the side wall of the hall.",
+    "The mail was sent on Tuesday by the office.",
+    "The list on the page was small and easy to read."
+   ]
+  }
+ ],
+ "predictions": "Probably fails: probes reached 0.08-0.22.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "class constant ' =' (guess)",
+ "unit_kind": "code / unclear",
+ "confidence": 0.15,
+ "notes": "Card flags broad. Probes: 'DATA_TYPE =' 0.22, ' if' 0.19, ' import' 0.14, 'block_type =' 0.08; prose under 0.09."
+}

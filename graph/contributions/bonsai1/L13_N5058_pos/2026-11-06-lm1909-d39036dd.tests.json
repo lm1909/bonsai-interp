@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-d39036dd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N5058+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:15:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N5058",
+   "pole": "+",
+   "label": "Line items of a sales document in code: 'SO line', 'Invoice Item', 'for line in invoice.lines'; a drawn line and other computations stay quiet.",
+   "fire": [
+    "Compute the delivery status of a PO line. Possible values follow.",
+    "select sum(qty) from `tabPurchase Invoice Item`",
+    "for order in self:\n    for line in order.order_lines:\n        pass",
+    "Return the tax amount for each sale order line in the batch.",
+    "for bill in bills:\n    for line in bill.invoice_lines:\n        total += line.amount",
+    "select name from `tabSales Order Item` where parent = %s",
+    "Update the unit price on every invoice line before posting.",
+    "for move in self:\n    for line in move.line_ids:\n        pass"
+   ],
+   "quiet": [
+    "Compute the shortest path of a graph. Possible values follow.",
+    "select sum(age) from `tabStudent Group`",
+    "for student in self:\n    for grade in student.grades:\n        pass",
+    "Return the wind speed for each weather station in the region.",
+    "for page in pages:\n    for word in page.words:\n        total += word.count",
+    "select name from `tabUser` where parent = %s",
+    "Draw a straight line across the page before printing.",
+    "for frame in self:\n    for pixel in frame.pixels:\n        pass"
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0 near misses. Coverage partial: ' annotations' and 'ore' are on the card but scored at most 0.16 in probes.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "invoice line items in code",
+ "unit_kind": "code / semantic",
+ "confidence": 0.75,
+ "notes": "Probes: 'SO line' 0.54, 'for line in invoice' 0.34, ' Item' 0.30; a drawn line under 0.01, area of a circle 0.01."
+}
