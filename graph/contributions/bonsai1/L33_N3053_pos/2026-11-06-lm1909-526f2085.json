@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-526f2085",
+ "kind": "qc",
+ "neuron": "bonsai1/L33/N3053+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:15:43+00:00",
+ "recipe": {
+  "toolchain_commit": "85f196e5e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N3053_pos/2026-11-06-lm1909-526f2085.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N3053_pos/2026-11-06-lm1909-526f2085.tests.json",
+   "prereg_commit": "85f196e5e",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.562,
+     "peak": " York"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.78,
+     "peak": " York"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.285,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.403,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.634,
+     "peak": " NY"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.763,
+     "peak": " York"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.276,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.422,
+     "peak": " P"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.276,
+     "peak": " York"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " New"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.041,
+     "peak": " Port"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " our"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.268,
+     "peak": " NY"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.316,
+     "peak": " Pacific"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.081,
+     "peak": " Big"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.598,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "85f196e5e",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "a piece of a sports team or sports-figure name (New York| Mets, the P|ats, Big P|api), as against the same place name used for the city itself"
+ },
+ "notes": "QC confirm, no probing. The card fires on ' York' after 'New' in a hockey sentence, ' P' in 'Pats' and 'Papi', and ' T' in 'TBS'. The model can't see the team name after ' York', so fire has a sports lead-in before it, and near misses have the place name in a civic lead-in. Pairs diverge in the lead-in.",
+ "selection": "picked"
+}

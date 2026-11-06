@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a6faa679",
+ "kind": "qc",
+ "neuron": "bonsai1/L32/N3592-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:15:37+00:00",
+ "recipe": {
+  "toolchain_commit": "85f196e5e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N3592_neg/2026-11-06-lm1909-a6faa679.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N3592_neg/2026-11-06-lm1909-a6faa679.tests.json",
+   "prereg_commit": "85f196e5e",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.757,
+     "peak": " press"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.557,
+     "peak": " news"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.282,
+     "peak": " press"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.233,
+     "peak": " news"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.851,
+     "peak": " conf"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.524,
+     "peak": " Conf"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.447,
+     "peak": " press"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.193,
+     "peak": " news"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.193,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.061,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " morning"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.517,
+     "peak": "'une"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.246,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": " press"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " evening"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.486,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "85f196e5e",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "' press' and ' news' used as the journalism modifier of an event or item (press conference, news conference, press release), and French 'conf' in conférence: the media-briefing word, as opposed to journalism contexts without those words and 'press' as a machine or verb"
+ },
+ "notes": "QC confirm, no probing. Fire covers ' press' and ' news' as modifiers and French 'conférence'. Near misses keep the news setting with other nouns, ' press' as a verb and 'news' as a plain noun.",
+ "selection": "picked"
+}

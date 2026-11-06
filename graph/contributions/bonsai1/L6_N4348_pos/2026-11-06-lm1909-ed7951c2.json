@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ed7951c2",
+ "kind": "qc",
+ "neuron": "bonsai1/L6/N4348+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:15:45+00:00",
+ "recipe": {
+  "toolchain_commit": "85f196e5e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N4348_pos/2026-11-06-lm1909-ed7951c2.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N4348_pos/2026-11-06-lm1909-ed7951c2.tests.json",
+   "prereg_commit": "85f196e5e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.957,
+     "peak": "aland"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.036,
+     "peak": "aland"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.12,
+     "peak": "aland"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.936,
+     "peak": "aland"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.126,
+     "peak": "aland"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.102,
+     "peak": "aland"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.022,
+     "peak": "aland"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.191,
+     "peak": "aland"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": "ur"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": "Farm"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " Miz"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " Meg"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " fair"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " visit"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " Bihar"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 1.069,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "85f196e5e",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "The place name Nagaland, especially its final subword."
+ },
+ "notes": "QC confirm, no probing. Fire has 'Nagaland' in varied frames, and near misses have neighboring Indian states. The card has other pieces ('ald', 'cao', 'ister') that the label doesn't cover, which this test doesn't measure.",
+ "selection": "picked"
+}
