@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3adb6d36",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9435+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:59:53+00:00",
+ "recipe": {
+  "toolchain_commit": "e980ef3d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N9435_pos/2026-11-06-lm1909-3adb6d36.tests.json"
+ },
+ "label": "the Japanese token '作' in words like 作業, 作成, 作例",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N9435_pos/2026-11-06-lm1909-3adb6d36.tests.json",
+   "prereg_commit": "e980ef3d1",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.208,
+     "peak": "掃"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.358,
+     "peak": "議"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.163,
+     "peak": "例"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.324,
+     "peak": "曲"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.227,
+     "peak": "続け"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.233,
+     "peak": "してください"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.384,
+     "peak": "館"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.262,
+     "peak": "械"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.343,
+     "peak": "新聞"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.377,
+     "peak": "議"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.172,
+     "peak": "真"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.324,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": "を見て"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.137,
+     "peak": "ください"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.409,
+     "peak": "館"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.262,
+     "peak": "械"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.5,
+    "median_fire": 0.247,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e980ef3d1",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese '作'",
+ "unit_kind": "token",
+ "confidence": 0.1,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: broad (8.5%), 100% echo regime, '作' x10, '最新' x4, '략' x3. Probe: all Japanese sentences read 0.24-0.47 with or without '作', and the peak was never '作' ('サイト' 0.474, '最新' 0.363, '立て' 0.261). So I could not reproduce the card, and the Japanese baseline is high.",
+ "selection": "random draw"
+}

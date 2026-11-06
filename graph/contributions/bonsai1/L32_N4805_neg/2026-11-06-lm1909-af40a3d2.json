@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-af40a3d2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N4805-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:00:01+00:00",
+ "recipe": {
+  "toolchain_commit": "e980ef3d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N4805_neg/2026-11-06-lm1909-af40a3d2.tests.json"
+ },
+ "label": "pencils, drafting leads and similar fine tools for drawing or writing ('mechanical pencils or drafting leads', 'pencil grips')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N4805_neg/2026-11-06-lm1909-af40a3d2.tests.json",
+   "prereg_commit": "e980ef3d1",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.624,
+     "peak": " drafting"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.399,
+     "peak": " pencil"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.076,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.564,
+     "peak": " drafting"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.002,
+     "peak": " sketch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.533,
+     "peak": " drafting"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.248,
+     "peak": " pencil"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.056,
+     "peak": " pens"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.075,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": "akers"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.229,
+     "peak": " watering"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " begin"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.13,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.158,
+     "peak": " sharp"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "Warm"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.324,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e980ef3d1",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pencils and fine drawing tools",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.6,
+ "notes": "Card: ' a' x3, ' drafting', ' pen', ' pencil', ' small', 'ines', ' aluminum', ' or'; promotes ' mic', ' micro', ' magn', ' macro', ' brushes', ' fine'. Probe: ' drafting' 0.721; ' pencil' 0.715; ' telesc' 0.194; 'clock dial' 0.026; oil paints, coats, boats, a pot at most 0.043. The card's telescope and scope examples are not covered if ' telesc' stays low.",
+ "selection": "random draw"
+}

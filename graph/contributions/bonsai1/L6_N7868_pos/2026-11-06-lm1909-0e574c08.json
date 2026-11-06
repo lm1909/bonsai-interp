@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0e574c08",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7868+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:58:37+00:00",
+ "recipe": {
+  "toolchain_commit": "e980ef3d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N7868_pos/2026-11-06-lm1909-0e574c08.tests.json"
+ },
+ "label": "the token after 'crash' ('crash|-test', 'crash|_report', 'crash| reports') and the last digit of certain years or codes ('18|9|9', 'MH|3|70')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N7868_pos/2026-11-06-lm1909-0e574c08.tests.json",
+   "prereg_commit": "e980ef3d1",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.928,
+     "peak": "-test"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.809,
+     "peak": "_report"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.688,
+     "peak": " reports"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.426,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.401,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.674,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.806,
+     "peak": "-test"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.251,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " strapped"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " config"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " phone"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " truck"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.032,
+     "peak": "5"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.681,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e980ef3d1",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "after 'crash'; digits in 1899, MH370",
+ "unit_kind": "token (list)",
+ "confidence": 0.6,
+ "notes": "Card: '9' x12, '3' x2, 'star' x2, 'ang' x2, '-test', '_report', ' reports', ' Band'. Probe: '-test' 0.902; '3' of MH370 0.697; '_report' 0.685; ' reports' 0.671; '9' of 1899 0.587; rag doll, network_requires, sales reports, 1907 at most 0.032. Two different triggers, so a list.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-492541e7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N8784+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:59:20+00:00",
+ "recipe": {
+  "toolchain_commit": "e980ef3d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N8784_pos/2026-11-06-lm1909-492541e7.tests.json"
+ },
+ "label": "the age range that closes a children's book review ('(Picture book. 2-5)', '(Fiction. 7-10)')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N8784_pos/2026-11-06-lm1909-492541e7.tests.json",
+   "prereg_commit": "e980ef3d1",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.818,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.671,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.076,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.269,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.738,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.404,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.388,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.134,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.047,
+     "peak": " mitt"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.071,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.063,
+     "peak": " late"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.058,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.078,
+     "peak": " sale"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.057,
+     "peak": "1"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.538,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e980ef3d1",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "age range closing a children's book review",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Card: '!' x6, ' ©' x3, ' LLC' x2, '0', 'i', '-dimensional', ' colors', '5'. Probe: '5' of '(Picture book. 2-5)' 0.790; ' ©' 0.278; '0' of '(Fiction. 7-10)' 0.210; 'EurekAlert!' only 0.051. So the card's commonest token did not fire in a short sentence and is not covered. Near misses have number ranges in other settings.",
+ "selection": "random draw"
+}

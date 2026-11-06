@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-82965382",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N9373-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:59:38+00:00",
+ "recipe": {
+  "toolchain_commit": "e980ef3d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N9373_neg/2026-11-06-lm1909-82965382.tests.json"
+ },
+ "label": "the token ' m', '-m' or '_m': a separator glued to the first letter of a word beginning with m ('force| m|ajeure', 'Sauvez|-m|oi', 'scale|_m|ri', 'upper| m|olar')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N9373_neg/2026-11-06-lm1909-82965382.tests.json",
+   "prereg_commit": "e980ef3d1",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.561,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.333,
+     "peak": "-m"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.83,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.759,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.57,
+     "peak": "-m"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.042,
+     "peak": " lawn"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.089,
+     "peak": " upper"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.247,
+     "peak": "-m"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": "ide"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.0,
+     "peak": " dentist"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " party"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "Reg"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " lawn"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " upper"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "-l"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.447,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e980ef3d1",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "separator plus first letter 'm'",
+ "unit_kind": "token",
+ "confidence": 0.75,
+ "notes": "Card: ' m' x9, '-m' x5, ' м' x5, '_m' x3, ' M' x2, ' М'. Probe: ' m' of majeure 0.759; '-m' of moi 0.386; ' upper' before molar 0.280; '_mri' at the start of a line 0.023; 'Moksha' sentence 0.007; '-n' of nous 0.009. Tokenizer splits checked. Near misses have other first letters.",
+ "selection": "random draw"
+}

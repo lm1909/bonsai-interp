@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6378fbe3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N11052+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:59:11+00:00",
+ "recipe": {
+  "toolchain_commit": "e980ef3d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N11052_pos/2026-11-06-lm1909-6378fbe3.tests.json"
+ },
+ "label": "a reviewer praising a writer's sharpness or skill ('skewers it with', 'astutely', 'subtle and masterful', 'more perceptive'); the output promotes ' surgical', ' pinpoint', ' razor', ' precise'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N11052_pos/2026-11-06-lm1909-6378fbe3.tests.json",
+   "prereg_commit": "e980ef3d1",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.52,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.105,
+     "peak": " ast"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.522,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.212,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.081,
+     "peak": " surgical"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.237,
+     "peak": " jud"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.893,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.5,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " thousand"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.368,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e980ef3d1",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "praising a writer's sharp skill",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Card: ' with' x5, ' and' x5, ' ast' x3, ' per' x2, ' jud' x2, ' so' x2, '精'; promotes ' surgical', ' pinpoint', ' razor', ' precision', ' master'. Probe: ' with' after 'skewers it' 0.987; ' and' after 'subtle' 0.490; ' ast' 0.219; ' per' 0.212; the same frames about a dog, a clerk or a tractor at most 0.006. Near misses are plain facts about books and authors.",
+ "selection": "random draw"
+}

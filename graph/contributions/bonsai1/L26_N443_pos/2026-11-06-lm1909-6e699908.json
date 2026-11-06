@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6e699908",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N443+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:58:46+00:00",
+ "recipe": {
+  "toolchain_commit": "e980ef3d1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N443_pos/2026-11-06-lm1909-6e699908.tests.json"
+ },
+ "label": "geometry, shapes and tools for drawing or modelling them ('Geometric Supposer', 'shape riddles', 'Simulink', 'GeoTIFF', 'SmartArt')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N443_pos/2026-11-06-lm1909-6e699908.tests.json",
+   "prereg_commit": "e980ef3d1",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.501,
+     "peak": " Ge"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.703,
+     "peak": " Sim"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.175,
+     "peak": " shape"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.198,
+     "peak": " Geo"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.469,
+     "peak": " geometric"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.49,
+     "peak": "Art"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.082,
+     "peak": " triangle"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.674,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.209,
+     "peak": " Word"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.258,
+     "peak": " Excel"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " file"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " Spanish"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "Next"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.001,
+     "peak": " aloud"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.093,
+     "peak": " language"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.479,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e980ef3d1",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "geometry and drawing or modelling tools",
+ "unit_kind": "topic",
+ "confidence": 0.75,
+ "notes": "Card: 'D' x3, 'ometric' x2, ' slide' x2, ' Geometry' x2, ' Sim', ' drawing', ' Geo', 'Art', ' shape'; promotes ' diagrams', ' models', ' sketches', ' curves'. Probe: 'ometric' 1.160; ' Sim' 0.822; ' shape' 0.675; ' drawing' 0.196; other software and school frames at most 0.047. Near misses are school and software text without geometry.",
+ "selection": "random draw"
+}
