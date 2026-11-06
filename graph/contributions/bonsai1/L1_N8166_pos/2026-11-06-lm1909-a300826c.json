@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a300826c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8166+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:38:22+00:00",
+ "recipe": {
+  "toolchain_commit": "b2c7b8b3c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N8166_pos/2026-11-06-lm1909-a300826c.tests.json"
+ },
+ "label": "the first piece of Korean ' 힘' words (힘들, 힘쓴, 힘든) and Japanese '銘' words (銘柄, 銘板)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N8166_pos/2026-11-06-lm1909-a300826c.tests.json",
+   "prereg_commit": "b2c7b8b3c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.327,
+     "peak": "직"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.305,
+     "peak": "쓴"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.461,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.479,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.751,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.627,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.718,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.417,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.309,
+     "peak": "직"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.112,
+     "peak": " 일"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " 좋은"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.174,
+     "peak": "화"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.196,
+     "peak": "人"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.149,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.166,
+     "peak": "撮"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.47,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2c7b8b3c",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Korean ' 힘', Japanese '銘' first piece",
+ "unit_kind": "token piece (list)",
+ "confidence": 0.4,
+ "notes": "A list: the two characters share nothing I can see. Card: broad (8.9%), 100% echo regime, max 1.12; '�' x8, 'PE' x6, ' the' x4, 'ro' x3. Probe: Korean and Japanese first pieces 0.217-0.430; other sentences in those languages 0.043-0.127. But English ' the' read 0.386 in a plain sentence, so the English baseline is high and near misses are Korean and Japanese only.",
+ "selection": "random draw"
+}

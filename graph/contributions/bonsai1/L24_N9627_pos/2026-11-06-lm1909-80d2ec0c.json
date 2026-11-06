@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-80d2ec0c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N9627+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:38:48+00:00",
+ "recipe": {
+  "toolchain_commit": "b2c7b8b3c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N9627_pos/2026-11-06-lm1909-80d2ec0c.tests.json"
+ },
+ "label": "the capitalized token ' Fish', 'Fish' or ' Fisher', in any sense (agency, name, animal at a sentence start)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N9627_pos/2026-11-06-lm1909-80d2ec0c.tests.json",
+   "prereg_commit": "b2c7b8b3c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.807,
+     "peak": " Fish"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.528,
+     "peak": " Fisher"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.869,
+     "peak": " Fish"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.853,
+     "peak": "Fish"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.333,
+     "peak": " Fish"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.768,
+     "peak": " Fisher"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.39,
+     "peak": " fish"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.833,
+     "peak": " Fish"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " pier"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": "Late"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.113,
+     "peak": " ferry"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.066,
+     "peak": "out"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "-out"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.059,
+     "peak": "'s"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.788,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2c7b8b3c",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "capitalized 'Fish'",
+ "unit_kind": "lexical",
+ "confidence": 0.9,
+ "notes": "Card: ' Fish' x11, ' fish' x7, ' Fisher' x3, 'Fish' x3, 'sh' x2, 'isch'. Probe: ' Fishermen' piece 0.899; ' Fish' 0.884-0.890; 'Fish' 0.853; ' Fisher' 0.822; ' Forest' 0.022; ' Wolf' frame 0.020; ' salmon' 0.129. Lower-case ' fish' is on the card, so one fire item tests it.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Fish",
+   "Fish",
+   " Fisher",
+   " fish"
+  ]
+ }
+}

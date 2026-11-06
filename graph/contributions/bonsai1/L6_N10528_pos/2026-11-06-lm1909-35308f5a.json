@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-35308f5a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10528+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:38:54+00:00",
+ "recipe": {
+  "toolchain_commit": "b2c7b8b3c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10528_pos/2026-11-06-lm1909-35308f5a.tests.json"
+ },
+ "label": "a bill, charges or a law as a legal or legislative matter ('a transportation bill in the Senate', 'gun smuggling charges', 'anti-bullying laws')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10528_pos/2026-11-06-lm1909-35308f5a.tests.json",
+   "prereg_commit": "b2c7b8b3c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.497,
+     "peak": " bill"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.53,
+     "peak": " charges"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.287,
+     "peak": " laws"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.127,
+     "peak": " bill"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.565,
+     "peak": " bills"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.429,
+     "peak": " charges"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.351,
+     "peak": " lawsuits"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.421,
+     "peak": " laws"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " added"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " playground"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.349,
+     "peak": " bill"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " banker"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " state"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.425,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2c7b8b3c",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "legal bills, charges and laws",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.75,
+ "notes": "Card: ' bill' x5, ' bills' x4, ' charges' x3, ' laws' x3, ' lawsuit' x2, ' Bill' x2. Probe: ' bill' 0.708; ' charges' 0.569; ' bills' 0.446; ' lawsuits' 0.241; ' laws' 0.162; 'electric bills' 0.197; a bird's bill 0.007. The card's example 'energy bills' suggests the money sense also fires, and one near miss tests it.",
+ "selection": "random draw"
+}

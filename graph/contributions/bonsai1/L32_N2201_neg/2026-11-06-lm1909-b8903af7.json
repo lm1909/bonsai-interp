@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b8903af7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N2201-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:38:28+00:00",
+ "recipe": {
+  "toolchain_commit": "b2c7b8b3c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N2201_neg/2026-11-06-lm1909-b8903af7.tests.json"
+ },
+ "label": "the token that glues a separator to a word beginning with a hard c or k sound: ' C', '/C', '-C', '(C' and Arabic ' الك'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N2201_neg/2026-11-06-lm1909-b8903af7.tests.json",
+   "prereg_commit": "b2c7b8b3c",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.707,
+     "peak": "-C"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.931,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.409,
+     "peak": " الك"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.209,
+     "peak": "/C"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.466,
+     "peak": " الك"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.455,
+     "peak": " C"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.462,
+     "peak": "-C"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.548,
+     "peak": " الك"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " spring"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.172,
+     "peak": " ك"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "يرة"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " عن"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.464,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2c7b8b3c",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "separator plus hard 'c' or 'k'",
+ "unit_kind": "token",
+ "confidence": 0.7,
+ "notes": "Card: ' C' x8, ' الك' x5, ' K' x4, 'C' x3, 'erc' x2, 'k' x2. Probe: 'C' of (CME) 0.866; '-C' of Bi-City 0.750; ' الك' 0.447-0.566; '/C' 0.386; ' C' of Cane 0.302; ' Trek' 0.149; the same frames without it 0.013-0.033. Near misses use other first letters.",
+ "selection": "random draw"
+}

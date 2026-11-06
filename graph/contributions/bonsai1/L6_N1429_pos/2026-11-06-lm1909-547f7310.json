@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-547f7310",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1429+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:38:50+00:00",
+ "recipe": {
+  "toolchain_commit": "b2c7b8b3c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N1429_pos/2026-11-06-lm1909-547f7310.tests.json"
+ },
+ "label": "the line break after a full date line that heads a blog post ('Friday, September 30, 2011\\n')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N1429_pos/2026-11-06-lm1909-547f7310.tests.json",
+   "prereg_commit": "b2c7b8b3c",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.261,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.261,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.133,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.313,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.242,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.336,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.238,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.225,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.131,
+     "peak": " July"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.086,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.115,
+     "peak": " snow"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.083,
+     "peak": " April"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.055,
+     "peak": " election"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.252,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2c7b8b3c",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "line break after a blog dateline",
+ "unit_kind": "formatting / contextual",
+ "confidence": 0.8,
+ "notes": "Card: '\\n' x30 after dated lines. Probe: '\\n' after a dateline 0.350 and 0.265; a date in running text 0.135; the same post without the date line at most 0.086. Near misses have line breaks after other short lines, or the date in a sentence.",
+ "selection": "random draw"
+}

@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-3a5a1cca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10829+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:38:29+00:00",
+ "recipe": {
+  "toolchain_commit": "b2c7b8b3c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N10829_pos/2026-11-06-lm1909-3a5a1cca.tests.json"
+ },
+ "label": "the Japanese katakana token 'アウ' at the start of a word (アウトレット, アウター, アウクスブルク)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N10829_pos/2026-11-06-lm1909-3a5a1cca.tests.json",
+   "prereg_commit": "b2c7b8b3c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.1,
+     "peak": "アウ"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.983,
+     "peak": "アウ"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.579,
+     "peak": "アウ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.108,
+     "peak": "アウ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.921,
+     "peak": "アウ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.759,
+     "peak": "アウ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.369,
+     "peak": "アウ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.119,
+     "peak": "アウ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": "大"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "ました"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "ング"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "は"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "の"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "ました"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 1.042,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2c7b8b3c",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese token 'アウ'",
+ "unit_kind": "token",
+ "confidence": 0.9,
+ "notes": "Card: 'アウ' x6, 'су' x4, 'す' x3, '누' x2, 'く' x2, 'inus' x2; density at 0.1 of max is near zero. Probe: 'アウ' 0.761, 0.514 and 0.369; other katakana and plain Japanese 0.000; 'су' 0.092; ' Juventus' 0.089, so the other card tokens did not reproduce and are not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "アウ"
+  ]
+ }
+}

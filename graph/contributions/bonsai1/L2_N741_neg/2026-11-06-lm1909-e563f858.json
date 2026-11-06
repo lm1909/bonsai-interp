@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e563f858",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N741-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:38:51+00:00",
+ "recipe": {
+  "toolchain_commit": "b2c7b8b3c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N741_neg/2026-11-06-lm1909-e563f858.tests.json"
+ },
+ "label": "a preposition in an odd or unusual slot right after a verb or modal: ' of' in 'should of course' and 'comprise of', Arabic ' في' after a verb, sentence-initial 'Remove with'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N741_neg/2026-11-06-lm1909-e563f858.tests.json",
+   "prereg_commit": "b2c7b8b3c",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.236,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.61,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.715,
+     "peak": " في"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.157,
+     "peak": " water"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.185,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.683,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.302,
+     "peak": " في"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.263,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.072,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " hard"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.14,
+     "peak": " في"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.089,
+     "peak": " signed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.093,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.095,
+     "peak": " هذا"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.042,
+     "peak": " stood"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.282,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2c7b8b3c",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "preposition right after a verb",
+ "unit_kind": "syntactic",
+ "confidence": 0.45,
+ "notes": "Card: broad (2.6%), 52% L; ' في' x9, ' of' x6, ' as' x4, ' may' x2, '\"a', ' with'. Probe: ' of' after 'should' 0.894; ' في' 0.698 and 0.381; ' of' after 'comprise' 0.673; ' with' after 'Remove' 0.576; the same sentences without it 0.087 at most. Near misses use ' of' and ' في' in the ordinary slot after a noun, which is the real test of 'odd slot'.",
+ "selection": "random draw"
+}
