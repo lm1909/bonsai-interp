@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-4ec07339",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N2123+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:37:23+00:00",
+ "recipe": {
+  "toolchain_commit": "b4f84cf3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N2123_pos/2026-11-06-lm1909-4ec07339.tests.json"
+ },
+ "label": "the noun before 'yet' after a negated perfect ('hasn't received any reviews yet')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N2123_pos/2026-11-06-lm1909-4ec07339.tests.json",
+   "prereg_commit": "b4f84cf3d",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.312,
+     "peak": " ratings"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.041,
+     "peak": " awards"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.006,
+     "peak": " shop"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.214,
+     "peak": " comments"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.009,
+     "peak": " traffic"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.022,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.096,
+     "peak": " offers"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " film"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " bridge"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " published"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " attracted"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.836,
+    "median_fire": 0.032,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b4f84cf3d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun before 'not ... yet'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw"
+}
