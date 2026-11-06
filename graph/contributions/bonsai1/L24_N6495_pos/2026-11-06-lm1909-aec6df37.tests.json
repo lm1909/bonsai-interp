@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-aec6df37",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6495+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:00:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N6495",
+   "pole": "+",
+   "label": "the opening \"('\" of a string naming an app-qualified object in Django or Odoo code (reverse('app:view'), get_model('app', 'Model'), env.ref('app.id'))",
+   "fire": [
+    "class TeamDetailTests(TestCase):\n    url = reverse('members:team_detail')\n\n    @classmethod\n    def setUpClass(cls):\n        pass\n",
+    "def forwards(apps, schema_editor):\n    Host = apps.get_model('workshops', 'Host')\n    Host.objects.all().delete()\n",
+    "def _notify(self, ids):\n    group = self.env.ref('base.group_user')\n    for rid in ids:\n        self.send(group, rid)\n",
+    "class ForumTests(TestCase):\n    ReadTrack = get_model('forum_tracking', 'ReadTrack')\n    Post = get_model('forum', 'Post')\n",
+    "class LoginTests(TestCase):\n    url = reverse('accounts:login')\n\n    def test_get(self):\n        pass\n",
+    "def backwards(apps, schema_editor):\n    Tag = apps.get_model('blog', 'Tag')\n    Tag.objects.all().delete()\n",
+    "def _admins(self):\n    group = self.env.ref('base.group_system')\n    return group.users\n",
+    "class CartTests(TestCase):\n    url = reverse('shop:cart')\n    Item = get_model('shop', 'Item')\n"
+   ],
+   "quiet": [
+    "class TeamDetailTests(TestCase):\n    url = '/teams/'\n\n    @classmethod\n    def setUpClass(cls):\n        pass\n",
+    "def forwards(items, editor):\n    host = items[0]\n    host.delete()\n",
+    "def _notify(self, ids):\n    group = self.group\n    for rid in ids:\n        self.send(group, rid)\n",
+    "class ForumTests(TestCase):\n    read_track = None\n    post = None\n",
+    "class LoginTests(TestCase):\n    url = '/login/'\n\n    def test_get(self):\n        pass\n",
+    "def backwards(items, editor):\n    tag = items[1]\n    tag.delete()\n",
+    "def _admins(self):\n    group = self.group\n    return group.users\n",
+    "class CartTests(TestCase):\n    url = '/cart/'\n    item = None\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "\"('\" before an app-qualified name",
+ "unit_kind": "token / code",
+ "confidence": "low",
+ "notes": "One-line exploration snippets reached only 0.15. These items include more surrounding code."
+}

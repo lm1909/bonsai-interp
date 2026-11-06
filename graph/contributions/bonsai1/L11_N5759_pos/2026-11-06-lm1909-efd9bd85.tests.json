@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-efd9bd85",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N5759+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:00:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N5759",
+   "pole": "+",
+   "label": "a match-everything wildcard in code strings ('*', 0.0.0.0/0, reject *:*)",
+   "fire": [
+    "response['Access-Control-Allow-Origin'] = '*'\nreturn response\n",
+    "params['fields'] = '*'\nsend(params)\n",
+    "cmd = ('FORWARD', '-s 0.0.0.0/0 -j ACCEPT')\nrun(cmd)\n",
+    "@crossdomain(origin='*')\ndef index():\n    pass\n",
+    "policy = ExitPolicy(\"reject *:*\")\nprint(policy)\n",
+    "FILTERS[\"*lab\"] = {\"tag\": []}\n",
+    "headers['Allow-Origin'] = '*'\nprint(headers)\n",
+    "route = {'cidr': '0.0.0.0/0', 'gw': gw}\nadd(route)\n"
+   ],
+   "quiet": [
+    "response['Content-Type'] = 'text/plain'\nreturn response\n",
+    "params['fields'] = 'name'\nsend(params)\n",
+    "cmd = ('FORWARD', '-s 10.1.2.3 -j ACCEPT')\nrun(cmd)\n",
+    "@crossdomain(origin='example.org')\ndef index():\n    pass\n",
+    "policy = ExitPolicy(\"accept 80\")\nprint(policy)\n",
+    "FILTERS[\"lab\"] = {\"tag\": []}\n",
+    "headers['Accept'] = 'json'\nprint(headers)\n",
+    "route = {'cidr': '192.168.1.0', 'gw': gw}\nadd(route)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "match-all wildcard in code",
+ "unit_kind": "token / code",
+ "confidence": "high"
+}
