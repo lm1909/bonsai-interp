@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-613d9d9f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N982+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:09:12+00:00",
+ "recipe": {
+  "toolchain_commit": "18c85828c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N982_pos/2026-11-06-lm1909-613d9d9f.tests.json"
+ },
+ "label": "'ions' of German Aktions- compounds and 'OperationException' in .NET errors (list)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N982_pos/2026-11-06-lm1909-613d9d9f.tests.json",
+   "prereg_commit": "18c85828c",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.639,
+     "peak": "ions"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.719,
+     "peak": "ions"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.356,
+     "peak": "OperationException"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.719,
+     "peak": "ions"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.354,
+     "peak": "OperationException"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.682,
+     "peak": "ions"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.251,
+     "peak": "OperationException"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.693,
+     "peak": "ions"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.074,
+     "peak": "ellt"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": "ern"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " queue"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": "et"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.09,
+     "peak": " thread"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.029,
+     "peak": "aus"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.032,
+     "peak": " größer"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.661,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "18c85828c",
+  "minutes": 7,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "Aktions-, OperationException",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Second round. Round 1 also claimed 现象, which did not repeat (-0.01 to 0.01). This narrower list drops it.",
+ "selection": "second round after the failed label in sweep seed 202611050410"
+}

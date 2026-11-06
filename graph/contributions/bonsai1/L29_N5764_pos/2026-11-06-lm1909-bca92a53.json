@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-bca92a53",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5764+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:09:10+00:00",
+ "recipe": {
+  "toolchain_commit": "18c85828c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N5764_pos/2026-11-06-lm1909-bca92a53.tests.json"
+ },
+ "label": "the phrase 'borne out' (a claim supported by later evidence)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N5764_pos/2026-11-06-lm1909-bca92a53.tests.json",
+   "prereg_commit": "18c85828c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.546,
+     "peak": " borne"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.82,
+     "peak": " later"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.579,
+     "peak": " borne"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.697,
+     "peak": " fully"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.414,
+     "peak": " borne"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.553,
+     "peak": " borne"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.428,
+     "peak": " borne"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.313,
+     "peak": " borne"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.2,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.82,
+     "peak": " later"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.52,
+     "peak": " been"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.697,
+     "peak": " fully"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.332,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.098,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.101,
+     "peak": " been"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.719,
+    "median_fire": 0.55,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "18c85828c",
+  "minutes": 7,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "'borne out'",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Second round. Round 1 ('evidence confirming a claim') failed at median 0.142: 'borne out' fired (0.58-0.67), while 'have since confirmed' and 'appear to support' stayed at or below 0.15. Near misses here keep the meaning with other verbs.",
+ "selection": "second round after the failed label in sweep seed 202611050409"
+}
