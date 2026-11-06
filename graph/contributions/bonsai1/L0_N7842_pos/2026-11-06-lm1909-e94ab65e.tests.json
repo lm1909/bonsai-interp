@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-e94ab65e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7842+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:04:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N7842",
+   "pole": "+",
+   "label": "diet-label modifiers before a food word (whole grains, saturated fat, fermented cabbage)",
+   "fire": [
+    "A healthy diet has plenty of beans and whole grains.",
+    "Every extra gram of saturated fat raises your cholesterol.",
+    "Kimchi is a dish made from fermented vegetables.",
+    "Doctors advise swapping white bread for whole wheat.",
+    "Butter and cheese are high in saturated fats.",
+    "Yogurt and other fermented foods may help digestion.",
+    "Try brown rice and other whole grains at dinner.",
+    "Coconut oil is rich in saturated fat."
+   ],
+   "quiet": [
+    "A healthy diet has plenty of beans and rice.",
+    "Every extra gram of salt raises your blood pressure.",
+    "Kimchi is a dish made in many Korean homes.",
+    "He ate the whole loaf on the way home.",
+    "Butter and cheese are sold in the dairy aisle.",
+    "Yogurt and other snacks are on the top shelf.",
+    "We spent the whole evening at dinner.",
+    "Coconut oil is sold in glass jars."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; other uses of 'whole' and plain foods stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "food-label modifiers",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' whole' x15, ' saturated' x7, ' prescription' x3, ' conventional' x2, ' fermented', ' soy'. Probe: saturated 0.76, whole grains 0.62, fermented 0.51; 'whole cake' 0.06; 'vegetables and rice' 0.07. ' prescription' and ' LED' are not claimed.",
+ "trigger": {
+  "words": [
+   "whole",
+   "saturated",
+   "fermented"
+  ]
+ }
+}

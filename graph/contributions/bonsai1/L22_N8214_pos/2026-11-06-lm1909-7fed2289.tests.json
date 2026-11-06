@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-7fed2289",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N8214+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:04:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N8214",
+   "pole": "+",
+   "label": "item in a long enumerated list (guess)",
+   "fire": [
+    "'Amber', 'Beryl', 'Coral', 'Diamonds', 'Emeralds', 'Garnets', 'Jade', 'Moonstones', 'Opals', 'Pearls', 'Rubies', 'Sapphires'",
+    "Mallard, Teal, Pochard, Coot, Moorhen, Water Rail, Little Grebe, Great Crested Grebe, Little Egret, Grey Heron",
+    "1 Near Vision\nThe ability to read\n2 Far Vision\nThe ability to see signs\n3 Hearing\nThe ability to hear speech",
+    "'-- Ain (01)',\n'-- Aisne (02)',\n'-- Allier (03)',\n'-- Lozère (48)',",
+    "American Academy of Pediatrics\nAmerican Heart Association\nAmerican Academy of Neurology",
+    "'Ash', 'Beech', 'Cedar', 'Elm', 'Fir', 'Hazel', 'Larch', 'Maple', 'Oak', 'Pine', 'Spruce'",
+    "Robin, Wren, Blackbird, Song Thrush, Little Owl, Barn Owl, Tawny Owl, Long-eared Owl",
+    "4 Taste\nThe ability to taste food\n5 Smell\nThe ability to smell gas\n6 Touch\nThe ability to feel heat"
+   ],
+   "quiet": [
+    "The box held some amber, a little coral and a few pearls from her mother.",
+    "We saw a mallard and a coot on the pond behind the house.",
+    "He can read well and see road signs, and his hearing is good.",
+    "The town of Ain lies north of Lyon on the old road.",
+    "The doctors at the meeting talked about children and their hearts.",
+    "The trees here are mostly ash and beech, with an oak by the gate.",
+    "A robin and a wren sat on the fence near the barn.",
+    "She can taste food and smell gas, and she feels the heat."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: every probe stayed under 0.05.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "long-list item (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card shows no repeating token ('is' x2, '1' x2, 'S', ' Little', ' The', ' of'). Top examples are items in long lists, but copies scored 0.02-0.05 even with several items. A best guess, with longer lists."
+}

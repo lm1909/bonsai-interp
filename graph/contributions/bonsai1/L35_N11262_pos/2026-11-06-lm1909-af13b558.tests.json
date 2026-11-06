@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-af13b558",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11262+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:04:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N11262",
+   "pole": "+",
+   "label": "Arabic ' و' or ' ت' opening a word (broad; output promotes ' especially'; guess)",
+   "fire": [
+    "وقال الشيخ وابن عمه ذلك في المجلس.",
+    "وذكر الكاتب وأصحابه القصة في الكتاب.",
+    "قال المعلم، وابن الجيران، ذلك أمس.",
+    "وسأل الرجل وابنه عن الطريق إلى المدينة.",
+    "وزار الوزير والمحافظ القرية الصغيرة.",
+    "تحدث الطبيب، وزوجته، عن المرض.",
+    "وكتب الشاعر وصديقه قصيدة جميلة.",
+    "وجاء الأب وابنه إلى البيت في الصباح."
+   ],
+   "quiet": [
+    "قال الشيخ ذلك في المجلس أمس.",
+    "ذكر الكاتب القصة في الكتاب الجديد.",
+    "قال المعلم ذلك أمس في المدرسة.",
+    "سأل الرجل عن الطريق إلى المدينة.",
+    "زار الوزير القرية الصغيرة أمس.",
+    "تحدث الطبيب عن المرض في المؤتمر.",
+    "كتب الشاعر قصيدة جميلة في الليل.",
+    "جاء الأب إلى البيت في الصباح."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: probes stayed at or under 0.20.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic ' و' (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (1.2%). Output promotes ' especially', ' particularly', ' Especially', ' особе…'. Card: ' و' x11, ' ت' x4, ' F' x2, ' Be' x2. Probe: ' و' 0.20; other Arabic 0.02-0.03; English 0.03. A best guess."
+}

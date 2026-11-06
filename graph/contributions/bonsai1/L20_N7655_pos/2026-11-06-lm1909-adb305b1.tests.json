@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-adb305b1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N7655+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:04:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N7655",
+   "pole": "+",
+   "label": "' governing' in the Apache license line 'the specific language governing permissions and limitations'",
+   "fire": [
+    "# See the License for the specific language governing permissions and\n# limitations under the License.",
+    "# distributed under the License is distributed on an \"AS IS\" BASIS.\n# See the License for the specific language governing permissions.",
+    "// See the License for the specific language governing permissions and\n// limitations under the License.",
+    "implied. See the License for the specific language governing permissions and limitations.",
+    "* See the License for the specific language governing permissions and\n* limitations under the License.",
+    "# WITHOUT WARRANTIES OF ANY KIND. See the License for the specific language governing",
+    "See the License for the specific language governing permissions and limitations under the License.",
+    "# express or implied. See the License for the specific language governing permissions."
+   ],
+   "quiet": [
+    "# The rules governing the parking lot are posted\n# on the wall by the door.",
+    "# The club has a board governing its members.\n# See the office for the forms.",
+    "// The governing body of the sport meets each year\n// at the hotel in town.",
+    "The state passed a law governing the sale of raw milk and cheese.",
+    "* A new body governing water use was set up\n* by the county last year.",
+    "# The principles governing this design are simple and easy to apply.",
+    "The laws governing trade in the region were changed under the new king.",
+    "# The council governing the district met on Friday."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; ' governing' elsewhere stays quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Apache license line",
+ "unit_kind": "lexical / format",
+ "confidence": "high",
+ "notes": "Card: ' governing' x31 of the top 32 (also flagged by density 0.3%, so near-identical lines are common in the corpus). Probe: full line 0.65 (peak ' under'); 'rules governing permissions' 0.02; 'governing body' 0.00. 'See the License for the specific terms' reached 0.50, so license text itself leaks, and near misses avoid it.",
+ "trigger": {
+  "tokens": [
+   " governing"
+  ]
+ }
+}

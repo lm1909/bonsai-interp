@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-8928f3f6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N3873-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:04:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N3873",
+   "pole": "-",
+   "label": "first token of a corpus window (positional; not reproducible on complete sentences)",
+   "fire": [
+    "/hectare/month of grain being stored per season",
+    "/2015, it should also be fine",
+    "limit=limit)\n\n    def get_next(self):",
+    "/night/person of guests being served per week",
+    "/2009, they might also come",
+    "mode=mode)\n\n    def get_last(self):",
+    "/mile/day of track being laid per crew",
+    "/1998, we could also go"
+   ],
+   "quiet": [
+    "The hectare of grain was stored in 2015 for the season.",
+    "In 2015 it should also be fine for the group.",
+    "The limit was set by the office in the old system.",
+    "The guests were served at night in the main hall.",
+    "In 2009 they might also come for the wedding.",
+    "The mode was set by the user at the start.",
+    "The track was laid by a crew in one long day.",
+    "In 1998 we could also go on the old ferry."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: copies of the top windows probed at 0.00-0.06.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "window start (positional)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags positional: 81% of top peaks at window position 0, 97% within 16 tokens, with unrelated tokens ('/' x6, \"']\" x2, '.execute' x2). Probe: copies 0.00-0.02. Recorded as positional, with a best-guess test of fragment openings against sentence openings."
+}
