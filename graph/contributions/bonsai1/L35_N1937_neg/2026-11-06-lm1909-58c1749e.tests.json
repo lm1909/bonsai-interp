@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-58c1749e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1937-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:17:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N1937",
+   "pole": "-",
+   "label": "Arabic ' ن' / ' الن' opening a word",
+   "fire": [
+    "لكن العمل الناجح يتطلب صبرا.",
+    "مناخ البلدة بارد نسبيا.",
+    "هذا هو الطريق الناجح للجميع.",
+    "الجو هادئ نسبيا هذا الصباح.",
+    "يحب الأطفال النوم في الظهيرة.",
+    "كان الفريق قويا نسبيا.",
+    "تعمل الأم في النهار والليل.",
+    "قرأنا الكتاب النافع أمس."
+   ],
+   "quiet": [
+    "لكن العمل الجاد يتطلب صبرا.",
+    "مناخ البلدة بارد شتاء.",
+    "هذا هو الطريق الجديد للجميع.",
+    "الجو هادئ جدا هذا الصباح.",
+    "يحب الأطفال اللعب في الظهيرة.",
+    "كان الفريق قويا جدا.",
+    "تعمل الأم في البيت والمدرسة.",
+    "قرأنا الكتاب الجديد أمس."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; the same sentences with other openings stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic word-initial ن",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: ' ن' x11, ' الن' x10, 'ナ' x3, ' н' x3. Sounds like 'n' across scripts, but Katakana 'ナ' 0.28 and Russian 'Н' 0.12 are weak, so this tests Arabic only. Probe: ' ن' 0.70, ' الن' 0.57; ' ص' 0.08.",
+ "trigger": {
+  "tokens": [
+   " ن",
+   " الن",
+   " والن"
+  ]
+ }
+}

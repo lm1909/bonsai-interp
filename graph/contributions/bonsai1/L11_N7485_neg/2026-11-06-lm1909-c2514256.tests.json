@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c2514256",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N7485-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:17:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N7485",
+   "pole": "-",
+   "label": "dense gate-closed unit, stronger on pieces of rare words ('abb|as', 'sour|d|ough', 'UNF|PA')",
+   "fire": [
+    "The preacher told us about Barabbas on Sunday.",
+    "Like most sourdough loaves, it takes a day.",
+    "El UNFPA abrió dos clínicas en la región.",
+    "They chose Barabbas instead of the other man.",
+    "My sourdough starter died last week.",
+    "La UNFPA publicó un informe nuevo.",
+    "The story of Barabbas is read at Easter.",
+    "Good sourdough needs a long rise."
+   ],
+   "quiet": [
+    "The preacher told us about Peter on Sunday.",
+    "Like most white loaves, it takes an hour.",
+    "El gobierno abrió dos clínicas en la región.",
+    "They chose Thomas instead of the other man.",
+    "My tomato plant died last week.",
+    "La ONU publicó un informe nuevo.",
+    "The story of Moses is read at Easter.",
+    "Good bread needs a long rise."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail or marginal: 37% of tokens reach 0.1 of max, and plain text probed at 0.36.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense, rare-word pieces",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (36.7%) and gate-closed (100% leak). Card: 'abb' x2, 'ol', 'd', 'ай', 'PA', '1'. Probe: Barabbas 0.80, UNFPA 0.63, sourdough 0.60; 'Like most recipes' 0.36."
+}
