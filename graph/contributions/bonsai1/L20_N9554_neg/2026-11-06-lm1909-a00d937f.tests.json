@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-a00d937f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N9554-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:00:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N9554",
+   "pole": "-",
+   "label": "The opening quote of a string literal right after Python's % format operator (`'%s' % ' '.join(x)`, `% ('and '.join(m), y)`), as tested; the same line with a variable or tuple after % stays quiet. One near miss opens a string with no %.",
+   "fire": [
+    "        print '    children: %s' % ' '.join(kids)\n",
+    "        text = 'files: %s' % ' | '.join(paths)\n",
+    "    self.warn('Skipping %s' % (' '.join(tags)))\n",
+    "    print '  sum %s%s:' % ('+'.join(parts), y)\n",
+    "            title = '[%s]' % ' / '.join(crumbs)\n",
+    "    log.info('Found %s' % ' and '.join(hits))\n",
+    "        label = '%s:' % ' '.join(words)\n",
+    "    sys.stderr.write('bad: %s\\n' % ('; '.join(errs)))\n"
+   ],
+   "quiet": [
+    "        print '    children: %s' % kids\n",
+    "        text = ' '.join(paths)\n",
+    "    self.warn('Skipping %s' % (tag, ))\n",
+    "    print '  sum %s%s:' % (total, y)\n",
+    "            title = '[%s]' % crumb\n",
+    "    log.info('Found %s' % hit)\n",
+    "        label = '%s:' % word\n",
+    "    sys.stderr.write('bad: %s\\n' % (err, ))\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "string literal opening after % in Python",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Probes: 0.53-0.85 in indented code on \" '\" and \" ('\", unindented 0.16 (a merged \" ',\" token) and 0.28; `% cmds` 0.04, `% (a, b)` 0.05. Other string openers are weaker but real: `'>>' if append` 0.20-0.28, `(\"  \" * depth)` 0.49, so the pole is wider than the % slot, and this test does not measure that wider reading."
+}

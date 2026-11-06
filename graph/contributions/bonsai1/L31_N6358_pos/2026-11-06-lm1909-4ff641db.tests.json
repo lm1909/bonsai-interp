@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-4ff641db",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6358+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:00:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N6358",
+   "pole": "+",
+   "label": "The token ' sk' as tested in ski words (skier, skied, skis), and the Arabic ' مق' of 'مقاومة' and 'مقاضاة'; whole tokens such as ' skull', ' sketch' and ' skin', and other Arabic nouns, stay quiet.",
+   "fire": [
+    "My uncle was a champion skier in his youth.",
+    "Beginner skiers stay near the lodge all day.",
+    "We skied through the pines until dark.",
+    "Racers waxed their skis before the event.",
+    "قاد الشعب مقاومة طويلة ضد الغزاة.",
+    "أعلنت الوزارة مقاضاة الشركة في المحكمة.",
+    "تحدث الكاتب عن مقاومة الاحتلال في بلاده.",
+    "قررت النقابة مقاضاة المدير بعد الحادث."
+   ],
+   "quiet": [
+    "My uncle was a champion swimmer in his youth.",
+    "Beginner golfers stay near the lodge all day.",
+    "We drew a sketch of the pines until dark.",
+    "Racers wore skull caps before the event.",
+    "قاد الشعب ثورة طويلة ضد الغزاة.",
+    "أعلنت الوزارة معاقبة الشركة في المحكمة.",
+    "تحدث الكاتب عن تاريخ الاحتلال في بلاده.",
+    "قررت النقابة محاسبة المدير بعد الحادث."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' sk' of ski words; Arabic مق-",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Probes: ' sk' in skier 0.43-0.89, skied 0.75, skis 0.38; ' skiing' (one token) 0.05, skin and sky about 0; Arabic 0.53-0.87, peaking on ' مق' or the next 'ا'. Other words that split into ' sk' (such as skater) would read the same at that token by construction, so this test cannot say the token is about skiing. Whether the two parts are one distinction I don't know: a list."
+}

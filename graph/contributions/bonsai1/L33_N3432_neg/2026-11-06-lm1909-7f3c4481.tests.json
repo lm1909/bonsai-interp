@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-7f3c4481",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N3432-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:00:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N3432",
+   "pole": "-",
+   "label": "Best guess: the punctuation or space right before or inside a number in a source citation, a date or a percentage ('Laws of Gifts to the Poor 10:', 'on October ', 'almost '); the same text with the number in words, or with none, stays quiet.",
+   "fire": [
+    "“Give to the poor” (Mishneh Torah, Laws of Gifts to the Poor 9:2).",
+    "“Judge fairly” (Shulchan Aruch, Laws of Judges 17:3).",
+    "“Honor the old” (Sefer HaChinuch, Laws of Commandments 257:1).",
+    "“Feed the hungry first” (Guide for the Perplexed, Part Three 51:2).",
+    "“Be kind to strangers” (Mishneh Torah, Laws of Kings and Wars 10:12).",
+    "The house was added to the state's list of historic sites by the parks department on March 9, 1987.",
+    "The treaty was signed by both of the ministers at the old palace on June 15, 1921.",
+    "Sales in the northern region rose by almost 20% over the year before."
+   ],
+   "quiet": [
+    "“Give to the poor” (Mishneh Torah, Laws of Gifts to the Poor, chapter nine).",
+    "“Judge fairly” (Shulchan Aruch, Laws of Judges, chapter seventeen).",
+    "“Honor the old” (Sefer HaChinuch, Laws of Commandments, final section).",
+    "“Feed the hungry first” (Guide for the Perplexed, Part Three, near the end).",
+    "“Be kind to strangers” (Mishneh Torah, Laws of Kings and Wars, last chapter).",
+    "The house was added to the state's list of historic sites by the parks department last spring.",
+    "The treaty was signed by both of the ministers at the old palace in early summer.",
+    "Sales in the northern region rose by a fifth over the year before."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "slot before a number in a citation or date (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Probes were almost all under 0.1. One sentence read 0.76 on ':' ('Laws of Gifts to the Poor 10:1'), one 0.24 on ' ' before a date, but citations such as 'Genesis 1:1', 'Psalm 23:1' and 'Laws of Kings 11:4' read 0.03-0.04, and a long date 0.02-0.13. The card's '30%' and hex '0' are not covered by a firm reading either. Fire sentences use different sources so that the one 0.76 frame does not carry the test; near misses keep the citation. I have no firm reading of this pole; expected to fail."
+}

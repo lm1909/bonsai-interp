@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-e86ee055",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4745+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:00:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N4745",
+   "pole": "+",
+   "label": "Dense pole with no firm reading, gate-closed at the top. Best guess: specific content words (' celery', ' linen', ' cloudy', ' degli') read higher than plain common words.",
+   "fire": [
+    "She chopped parsley and fennel for the broth.",
+    "The drapes were sewn from coarse burlap.",
+    "A hazy dawn settled over the harbor.",
+    "He tuned the mandolin before the waltz.",
+    "Ivory and walnut lined the cabinet.",
+    "They sipped chamomile on the veranda.",
+    "An ornate trellis framed the gazebo.",
+    "The Villa dei Papiri was buried in ash."
+   ],
+   "quiet": [
+    "She cut some food and put it in the pot.",
+    "The drapes were made from a thick cloth.",
+    "A new day came over the town.",
+    "He played the music before the dance.",
+    "Wood and metal lined the box.",
+    "They had some tea on the porch.",
+    "A big fence went around the yard.",
+    "The old house was covered in dust."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; specific content words (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "The card flags this pole as dense (51% of tokens) and its top activations as gate-closed. Probes: 0.67-0.99 on these words, but also on ' cancel' and 'Ideally', which are not rare, so rarity is at best loose; ordinary sentences peak at 0.29-0.31 anyway, right at the near-miss bar. An 8 + 8 test can hardly pass here, and it is expected to fail on near misses."
+}

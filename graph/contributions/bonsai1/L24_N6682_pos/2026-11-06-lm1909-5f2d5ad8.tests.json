@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-5f2d5ad8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6682+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:00:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N6682",
+   "pole": "+",
+   "label": "Best guess: ' guess' or the end of a clause when two people take turns ('You and I take turns, and then you guess'); ' guess' with no turn-taking stays quiet.",
+   "fire": [
+    "You and your sister take turns, and then you guess the word.",
+    "Sit with a partner and take turns, then you guess the song.",
+    "My brother and I took turns, and then I guessed the name.",
+    "You and a friend take turns, and then you guess the winner.",
+    "The two of you alternate, and then you guess the number.",
+    "We swap roles each round, and then you guess the card.",
+    "Each of you goes in turn, and then you guess the color.",
+    "You two trade places, and then you guess the face."
+   ],
+   "quiet": [
+    "You and your sister sit down, and later you guess the word.",
+    "Sit with a book and relax, then you find the song.",
+    "My brother and I went home, and then I guessed the name.",
+    "You and a friend go shopping, and then you buy the shirt.",
+    "The two of you leave early, and then you phone the office.",
+    "We stay late each night, and then you lock the door.",
+    "Each of you has a map, and then you follow the road.",
+    "You two wash up, and then you set the table."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "turn-taking between two people (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "A sparse pole with no consistent token on the card: ' what', ' of', ' letting', ' on', ' other', ' which'. Apart from one ' on' (' capitalized on' read 0.44 once, then 0.01, so I dropped it), only two turn-taking sentences read above 0.3 in probes (0.31, 0.35), and 'switch places' read 0.08. The output direction promotes ' two', ' mutual', ' mutually' and suppresses ' everyone', ' people', ' others', which fits a two-party reading but is weak support. Expected to fail."
+}

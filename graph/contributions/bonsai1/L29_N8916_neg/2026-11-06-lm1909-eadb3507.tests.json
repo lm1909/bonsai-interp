@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-eadb3507",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N8916-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:00:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N8916",
+   "pole": "-",
+   "label": "' child' in policy or field talk ('in child psychology', 'on child poverty'), against ' child' naming a particular child, with or without that kind of topic.",
+   "fire": [
+    "She holds a degree in child nutrition from Ohio.",
+    "Our agency works on child welfare across the state.",
+    "The senator spoke about child hunger in rural areas.",
+    "New research on child obesity appeared this week.",
+    "Parents want better child safety rules for buses.",
+    "He teaches a seminar on child language at the college.",
+    "Experts on child abuse testified before the panel.",
+    "The charity funds child vaccination in poor districts."
+   ],
+   "quiet": [
+    "She lifted the child onto the bus in Ohio.",
+    "Our neighbor drives her child across the state.",
+    "The senator spoke about a child in rural areas.",
+    "Fresh studies of the child appeared this week.",
+    "Parents walked with their child to the bus.",
+    "He read a story to the child at the college.",
+    "Doctors examined the child before the operation.",
+    "The charity found this child a home in the district."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' child' in policy or field talk",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probes: 0.48-0.65 for the field use; 'a child-centered' 0.38. 'the child', 'my child' 0.05-0.11, but 'The child ran' 0.31. The model cannot see the next word, so the difference has to come from what precedes ' child'. The card also fires on 'a child-centered' and 'a child's natural curiosity', so a determiner alone does not silence it. Two near misses keep a policy-like lead-in with a determiner, to separate the two. The output direction fits (it promotes '-centered', ' center', ' family' on this pole)."
+}

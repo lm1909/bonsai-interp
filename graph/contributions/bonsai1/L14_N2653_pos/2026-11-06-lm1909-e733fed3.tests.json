@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-e733fed3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N2653+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:00:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N2653",
+   "pole": "+",
+   "label": "A submodule piece under django.contrib or django.core in an import path ('.hashers', 'urlresolvers', '.util', and others not seen in probing); the same shape in other Python packages stays quiet, even with the same path words.",
+   "fire": [
+    "from django.contrib.auth.hashers import check_password\n",
+    "from django.contrib.messages.storage import default_storage\n",
+    "from django.core.urlresolvers import resolve\n",
+    "from django.contrib.admin.util import quote\n",
+    "from django.contrib.auth.backends import ModelBackend\n",
+    "from django.contrib.auth.decorators import login_required\n",
+    "from django.core.cache.backends.base import BaseCache\n",
+    "from django.contrib.admin.helpers import AdminForm\n"
+   ],
+   "quiet": [
+    "from werkzeug.security import check_password_hash\n",
+    "from myapp.messages.storage import default_storage\n",
+    "from pyramid.url import resource_url\n",
+    "from urllib.parse import quote\n",
+    "from requests import structures as st\n",
+    "from myapp.contrib.auth.hashers import check_password\n",
+    "from flask.ext.cache.backends import BaseCache\n",
+    "from urllib.parse import unquote\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "submodule piece under django.contrib or django.core",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: hashers 0.48-0.60, admin.util 0.56, urlresolvers 0.34, django.contrib.auth.tokens 0.26, sessions.backends 0.20, django.utils.encoding 0.17; django.db and django.core.paginator about 0.01, so not all of Django, and sklearn.utils 0.20 outside it. Three fire sentences (hashers, urlresolvers, admin.util) share a prefix with a probed sentence through the firing token, so their values are known; the other five use modules not probed and carry the test. The card's Harry Potter pieces ('ron', 'un') read under 0.04 in probes and are not covered."
+}
