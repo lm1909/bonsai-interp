@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-0832ec41",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N800-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:19:43+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N800_neg/2026-11-06-lm1909-0832ec41.tests.json"
+ },
+ "label": "Electric current: the word ' current' in its electrical sense and 'A' for amps after a voltage; other senses of 'current', and voltage itself, stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N800_neg/2026-11-06-lm1909-0832ec41.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.685,
+     "peak": " current"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.127,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.818,
+     "peak": "A"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.459,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.628,
+     "peak": "A"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.057,
+     "peak": " current"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.426,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.025,
+     "peak": "ating"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " motor"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.127,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": " comes"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " paperwork"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " ocean"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.443,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "electric current (' current', amps 'A')",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' current' x8, 'A' x3, ' flow' x2, ' volume' x2, ' power'; the + pole has voltage. Probe: draw more current 0.89, 'at 1A' 0.94, '5V 1A' 0.73, 'resistance, current,' 0.21; current affairs 0.01, current president 0.02, river's current 0.01, voltage 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "current"
+  ]
+ }
+}

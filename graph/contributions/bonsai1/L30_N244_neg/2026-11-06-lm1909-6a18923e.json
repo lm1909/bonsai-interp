@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6a18923e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N244-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:20:35+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N244_neg/2026-11-06-lm1909-6a18923e.tests.json"
+ },
+ "label": "South Asian context: names of Indian or Nepali people, places and institutions in English prose (ashram of Sri ..., Chitwan National Park, Madras); the same frames with Western names stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N244_neg/2026-11-06-lm1909-6a18923e.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.809,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.303,
+     "peak": "anga"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.287,
+     "peak": "ras"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.376,
+     "peak": "ami"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.286,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.344,
+     "peak": " Bombay"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.314,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.335,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.021,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " Leeds"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": "itus"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "ims"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.325,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "South Asian names in English prose",
+ "unit_kind": "semantic / contextual",
+ "confidence": "low",
+ "notes": "Card: ' the' x6, ' V' x6, ',' x5, ' of' x3, ' Indian' x2, in Theosophical Society, Chitwan, Mahindra, Aurobindo contexts. The + pole is Indian state politics. Probe: 'ashram of' 0.87, 'in the Royal Chitwan' 0.43, Veluvolu 0.26, Mahindra 0.13; Western twins at most 0.04. Readings are uneven and often on function words before the name.",
+ "selection": "random draw"
+}

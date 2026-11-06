@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-38bdaaf7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N1609-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:20:22+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N1609_neg/2026-11-06-lm1909-38bdaaf7.tests.json"
+ },
+ "label": "The piece 'ett' of Rett (Rett syndrome, Andreas Rett); other eponymous syndromes stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N1609_neg/2026-11-06-lm1909-38bdaaf7.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.635,
+     "peak": "ett"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.271,
+     "peak": "ett"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.112,
+     "peak": "ett"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.091,
+     "peak": "ett"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.953,
+     "peak": "ett"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.837,
+     "peak": "ett"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.784,
+     "peak": "ett"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.744,
+     "peak": "ett"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": "ali"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.149,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": " Down"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " she"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " fragile"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.81,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'ett' of Rett",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' X' x5 of fragile X, 'ett' x3, ' Leigh', ' eight'. Probe: 'ett' 0.84 in Rett syndrome, 0.46 in 'a girl named Rett'; fragile X 0.02, Leigh 0.02, Down 0.07. I expected a neurogenetic-syndrome label, and the probes do not support it; only the 'ett' piece holds, and the name alone fires it.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ett"
+  ]
+ }
+}

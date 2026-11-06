@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-35562d03",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N2002+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:19:45+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N2002_pos/2026-11-06-lm1909-35562d03.tests.json"
+ },
+ "label": "The piece 'ob' of cyanobacteria / cyanobacterial; bacteria, algae and moss stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N2002_pos/2026-11-06-lm1909-35562d03.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.922,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.927,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.949,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.911,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.946,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.923,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.945,
+     "peak": "ob"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.928,
+     "peak": "ob"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": "eed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " nitrogen"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " green"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " released"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " bacteria"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "ites"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": " algae"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " by"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.927,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'ob' of cyanobacteria",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'ob' x9 of cyanobacteria, '-green' x9 of blue-green algae, 'acter', 'biology'. Probe: 'ob' 0.91-0.93; '-green' 0.27 in blue-green algae and 0.19 for a blue-green wall, so the -green half is weak and is left out. Bacteria, red algae, moss, Cyan ink at most 0.03.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ob"
+  ]
+ }
+}

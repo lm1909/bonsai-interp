@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e48a3a3f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N6957+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:19:59+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N6957_pos/2026-11-06-lm1909-e48a3a3f.tests.json"
+ },
+ "label": "Dense pole (43% of tokens reach 0.1 of max, 9% reach 0.3, gate-closed); no separable trigger found (chance, structure, twice are the top words)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N6957_pos/2026-11-06-lm1909-e48a3a3f.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.348,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.239,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.506,
+     "peak": " twice"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.307,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.224,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.294,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.297,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.238,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.348,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.247,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.35,
+     "peak": " once"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.392,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.232,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.31,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.297,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.239,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.414,
+    "median_fire": 0.295,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "dense; no separable trigger",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense and gate-closed; ' to' x6, ' chance', ' Conservation', ' structure', ' twice'. Probe: chance 0.30 vs risk 0.29, structure 0.39 vs layout 0.39, twice 0.38 vs once 0.38. I expect this test to fail. It is registered to record the dense unit honestly.",
+ "selection": "random draw"
+}

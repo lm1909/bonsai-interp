@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8230564f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N2483-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:20:07+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N2483_neg/2026-11-06-lm1909-8230564f.tests.json"
+ },
+ "label": "The slot just before 'industry' or 'industrial': ' пр' of Russian промышленности, ' Jones' of Dow Jones (Industrial); the logit effect reads toward ' industry', ' industrial'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N2483_neg/2026-11-06-lm1909-8230564f.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.872,
+     "peak": "ной"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.631,
+     "peak": " пр"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.388,
+     "peak": "ом"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.101,
+     "peak": "енной"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.821,
+     "peak": "ом"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.421,
+     "peak": " Jones"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.603,
+     "peak": " Jones"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.421,
+     "peak": " Jones"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.0,
+     "peak": " много"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.0,
+     "peak": " б"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.0,
+     "peak": "ил"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.0,
+     "peak": " о"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.277,
+     "peak": "ной"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": " Tom"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.06,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.091,
+     "peak": " film"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.617,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "slot before 'industry' / 'industrial'",
+ "unit_kind": "prediction / token",
+ "confidence": "medium",
+ "notes": "Card: ' Jones' x3, 'ro' x3, ' pre' x2, ' пр' x2, ' кино' x2; the + pole's logit effect suppresses ' industry', ' industrial', so the - pole reads toward them. Probe: ' пр' of промышленности 0.95, Dow Jones 0.42, ' pre' 0.28 both in preindustrial and in prewar, so ' pre' is left out; Tom Jones 0.00, film industry 0.02 (peak elsewhere).",
+ "selection": "random draw"
+}

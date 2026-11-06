@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-528a4836",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4981-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:20:17+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N4981_neg/2026-11-06-lm1909-528a4836.tests.json"
+ },
+ "label": "Dense, low-amplitude pole (max 0.77, 34% of tokens reach 0.1 of max, gate-closed); its commonest peak is the word ' resources'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N4981_neg/2026-11-06-lm1909-528a4836.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.768,
+     "peak": " resources"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.286,
+     "peak": " hire"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.631,
+     "peak": " Resources"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.838,
+     "peak": " resources"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.265,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.254,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.757,
+     "peak": " resources"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.761,
+     "peak": " resources"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.312,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.362,
+     "peak": " money"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.205,
+     "peak": "roll"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.266,
+     "peak": " attracted"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.177,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.269,
+     "peak": " students"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.184,
+     "peak": " region"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.164,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.694,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "dense; ' resources'",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense and gate-closed; ' resources' x14, 'ative' x3, ' Resources' x3. Probe: ' resources' 0.56-0.71; floor 0.14-0.17 in plain sentences; 'resources offering data' peaked on ' data' 0.48.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "resources",
+   "resource"
+  ]
+ }
+}

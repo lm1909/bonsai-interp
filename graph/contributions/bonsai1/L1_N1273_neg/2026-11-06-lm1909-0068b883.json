@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-0068b883",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N1273-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:19:40+00:00",
+ "recipe": {
+  "toolchain_commit": "ef9dfe698",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N1273_neg/2026-11-06-lm1909-0068b883.tests.json"
+ },
+ "label": "The piece 'ov' of Markov (Markov chain, hidden Markov model); ' Mark' itself and other mathematical names stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N1273_neg/2026-11-06-lm1909-0068b883.tests.json",
+   "prereg_commit": "ef9dfe698",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.087,
+     "peak": "ov"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.986,
+     "peak": "ov"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.075,
+     "peak": "ov"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.062,
+     "peak": "ov"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.039,
+     "peak": "ov"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.898,
+     "peak": "ov"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.389,
+     "peak": "ov"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.013,
+     "peak": "ov"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " model"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " walk"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " fit"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " proof"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " Monte"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " Hidden"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " Tw"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 1.026,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ef9dfe698",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'ov' of Markov",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'مار' x21 of Arabic ممارسة, 'ov' x7 of Markov, 'up', 'ow', 'course'. Probe: Markov chain 1.08, Gauss-Markov 0.39; Mark Antony 0.00, Berkowitz 0.00; 'مار' only 0.09 in my sentence, so the Arabic half is left out, though it is the card's commonest token, so this is likely partial.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ov"
+  ]
+ }
+}
