@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-863c5f6c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N5565+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:19:50+00:00",
+ "recipe": {
+  "toolchain_commit": "f16d5a414",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N5565_pos/2026-11-06-lm1909-863c5f6c.tests.json"
+ },
+ "label": "the ' have' / ' had' in 'did once have' / 'may once have had', away from planets and water (not plain past 'had', and not 'did once' with another verb)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N5565_pos/2026-11-06-lm1909-863c5f6c.tests.json",
+   "prereg_commit": "f16d5a414",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.216,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.145,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.406,
+     "peak": " had"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.237,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.106,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.153,
+     "peak": " had"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.076,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.648,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " getting"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.302,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " report"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.237,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.82,
+    "median_fire": 0.184,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "f16d5a414",
+  "minutes": 3,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "'did once have'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round, narrowed after a held first round (seed 202611050510) whose label was about planets and water. There, 'did once have' and 'may once have had' peaked on ' have' / ' had' at 0.52-1.02, while 'liquid water' reached only 0.14-0.34. This round drops planets and water, to test the construction without the topic. No new probes.",
+ "selection": "second round after a held sweep test"
+}

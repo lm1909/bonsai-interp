@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1e0b90fb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N6867+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:20:05+00:00",
+ "recipe": {
+  "toolchain_commit": "f16d5a414",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N6867_pos/2026-11-06-lm1909-1e0b90fb.tests.json"
+ },
+ "label": "Arabic-Indic digits in Arabic text (not the same numbers in Western digits or spelled out)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N6867_pos/2026-11-06-lm1909-1e0b90fb.tests.json",
+   "prereg_commit": "f16d5a414",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.658,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.647,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.289,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.67,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.438,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.331,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.488,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.194,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "ت"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " ي"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " و"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "ث"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.056,
+     "peak": "انت"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " السادس"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "امت"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.463,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "f16d5a414",
+  "minutes": 3,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "Arabic-Indic digits",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Second round, narrowed after a held first round (seed 202611050510) whose label also included a Japanese kanji. There, the Arabic-Indic ratios reached 0.64-0.77 and the kanji only about 0.11, so this round drops the kanji and tests digits outside the ratio form. No new probes.",
+ "selection": "second round after a held sweep test"
+}

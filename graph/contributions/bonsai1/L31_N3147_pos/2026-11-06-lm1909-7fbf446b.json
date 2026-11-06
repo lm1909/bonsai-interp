@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-7fbf446b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N3147+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:19:56+00:00",
+ "recipe": {
+  "toolchain_commit": "f16d5a414",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N3147_pos/2026-11-06-lm1909-7fbf446b.tests.json"
+ },
+ "label": "the token ' bacterial' outside phage and prey contexts (not 'bacteria', 'viral', 'fungal', 'microbial')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N3147_pos/2026-11-06-lm1909-7fbf446b.tests.json",
+   "prereg_commit": "f16d5a414",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.005,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.01,
+     "peak": " spring"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.005,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.009,
+     "peak": " thin"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.007,
+     "peak": " rich"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.002,
+     "peak": "Ant"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.005,
+     "peak": " days"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " pneumonia"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.383,
+    "median_fire": 0.005,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "f16d5a414",
+  "minutes": 3,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "' bacterial'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Second round, narrowed after a held but broad first round (seed 202611050511). There, ' bacterial' reached 0.41-0.72 while 'its nematode/insect/rodent prey' stayed at or below 0.19, so 'prey' looked wrong and the word looked right. All first-round hits were phage sentences, so this round tests the word away from phages and prey. No new probes.",
+ "selection": "second round after a held sweep test",
+ "trigger": {
+  "words": [
+   " bacterial"
+  ]
+ }
+}
