@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-e6f0ac5e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8847-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:03+00:00",
+ "recipe": {
+  "toolchain_commit": "208c44b6c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N8847_neg/2026-11-06-lm1909-e6f0ac5e.tests.json"
+ },
+ "label": "Russian past active participle endings: 'ший', 'ую', 'ших', 'шие', 'шая' after '-вш-' stems, firing on the ending; finite past verbs and plain noun or adjective endings in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N8847_neg/2026-11-06-lm1909-e6f0ac5e.tests.json",
+   "prereg_commit": "208c44b6c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.729,
+     "peak": "ший"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.97,
+     "peak": "ую"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.556,
+     "peak": "ших"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.773,
+     "peak": "ший"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.862,
+     "peak": "шая"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.796,
+     "peak": "шие"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.833,
+     "peak": "ший"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.925,
+     "peak": "ую"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " из"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " для"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": "их"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "итель"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.0,
+     "peak": " цвет"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "Л"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "ом"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "ил"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.815,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "208c44b6c",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "Russian past active participle endings",
+ "unit_kind": "spelling piece",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   "ший",
+   "ую",
+   "ших",
+   "шие",
+   "шая"
+  ]
+ }
+}

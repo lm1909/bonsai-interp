@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-ccdac612",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N7105+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:04+00:00",
+ "recipe": {
+  "toolchain_commit": "208c44b6c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N7105_pos/2026-11-06-lm1909-ccdac612.tests.json"
+ },
+ "label": "a dense unit (51.5% of tokens reach 0.1 of max, gate-closed echo), whose highest readings are the word ' scope'; other abstract nouns read about 0.3 in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N7105_pos/2026-11-06-lm1909-ccdac612.tests.json",
+   "prereg_commit": "208c44b6c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 6,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.948,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.806,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.797,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.822,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.738,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.809,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.806,
+     "peak": " scope"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.666,
+     "peak": " scope"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.349,
+     "peak": " review"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.348,
+     "peak": " project"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.445,
+     "peak": " date"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.322,
+     "peak": " report"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.471,
+     "peak": " limited"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.284,
+     "peak": "Nothing"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.47,
+     "peak": " demand"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.295,
+     "peak": " plans"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.806,
+    "near_misses_at_0.3": 6
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "208c44b6c",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "dense: word ' scope'",
+ "unit_kind": "dense / positional",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " scope"
+  ]
+ }
+}

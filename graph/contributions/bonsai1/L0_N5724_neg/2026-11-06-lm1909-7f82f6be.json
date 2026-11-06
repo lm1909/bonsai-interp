@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-7f82f6be",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5724-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:20+00:00",
+ "recipe": {
+  "toolchain_commit": "208c44b6c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5724_neg/2026-11-06-lm1909-7f82f6be.tests.json"
+ },
+ "label": "saturation in English and Chinese/Japanese: ' saturated', ' saturation', 飽 and 饱 (full, filled to the limit), firing on those tokens; other adjectives and verbs in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5724_neg/2026-11-06-lm1909-7f82f6be.tests.json",
+   "prereg_commit": "208c44b6c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.427,
+     "peak": " saturated"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.415,
+     "peak": " saturated"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.328,
+     "peak": "吃饱"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.881,
+     "peak": "飽"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.811,
+     "peak": "饱"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.451,
+     "peak": " saturated"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.831,
+     "peak": "飽"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.406,
+     "peak": " saturated"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.02,
+     "peak": " rich"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.081,
+     "peak": "吃饭"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": "同じ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": " crowded"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.032,
+     "peak": "ました"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " raises"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.439,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "208c44b6c",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "saturated / 飽 (full to the limit)",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " saturated",
+   " saturation",
+   "飽",
+   "饱",
+   "饱满"
+  ]
+ }
+}

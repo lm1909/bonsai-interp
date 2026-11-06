@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-dc65e27b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N5565+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:19+00:00",
+ "recipe": {
+  "toolchain_commit": "208c44b6c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N5565_pos/2026-11-06-lm1909-dc65e27b.tests.json"
+ },
+ "label": "the opening of a reported statement: Spanish ' que' after declarar, Russian ' что' after заявила, English ' confirming', ' simply' after replied, firing there; the same subjects with plain actions stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N5565_pos/2026-11-06-lm1909-dc65e27b.tests.json",
+   "prereg_commit": "208c44b6c",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.482,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.479,
+     "peak": " что"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.849,
+     "peak": " confirming"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.722,
+     "peak": " simply"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.234,
+     "peak": " que"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.347,
+     "peak": " что"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.537,
+     "peak": " confirming"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.36,
+     "peak": " simply"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " en"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.073,
+     "peak": " к"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " ha"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.096,
+     "peak": "га"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " bus"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.48,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "208c44b6c",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "opening a reported statement",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " que",
+   " что",
+   " confirming",
+   " simply"
+  ]
+ }
+}
