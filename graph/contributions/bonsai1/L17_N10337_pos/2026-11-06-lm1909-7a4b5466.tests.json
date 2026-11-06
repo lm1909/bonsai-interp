@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-7a4b5466",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N10337+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N10337",
+   "pole": "+",
+   "label": "'_from' or '_for' inside a Python function name ('dirpath_from_date', 'refresh_from_db', 'form_for_data')",
+   "fire": [
+    "path = path_from_date(day)\nname = name_from_date(day)\n",
+    "user.refresh_from_db()\nitem.refresh_from_db()\n",
+    "post_data = form_for_data.initial\nsave(post_data)\n",
+    "text = read_from_file(path)\ndata = load_from_disk(path)\n",
+    "row = row_from_query(q)\nkey = key_for_item(row)\n",
+    "cfg = config_from_env()\nlog = logger_for_app(cfg)\n",
+    "obj = build_from_dict(d)\nmsg = message_for_user(obj)\n",
+    "val = value_from_str(s)\nurl = url_for_page(val)\n"
+   ],
+   "quiet": [
+    "path = get_path(day)\nname = get_name(day)\n",
+    "user.save()\nitem.save()\n",
+    "post_data = form.initial\nsave(post_data)\n",
+    "text = read(path)\ndata = load(path)\n",
+    "row = fetch(q)\nkey = hash(row)\n",
+    "cfg = config()\nlog = logger(cfg)\n",
+    "obj = build(d)\nmsg = message(obj)\n",
+    "val = parse(s)\nurl = make_url(val)\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'_from' in function names",
+ "unit_kind": "syntactic",
+ "confidence": 0.1,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: '_from' x3, ' ' x2, '0', ' has', '9', '3', '_for'. Probe: all readings at most 0.121, and 'The cat sat on the mat' read the highest. I could not reproduce the card's peaks in short lines."
+}

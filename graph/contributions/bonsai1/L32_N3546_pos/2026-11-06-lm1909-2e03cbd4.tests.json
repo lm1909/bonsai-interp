@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-2e03cbd4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N3546+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N3546",
+   "pole": "+",
+   "label": "the token right after a famous cartoon or animated character ('characters like Woody,', 'Mickey Mouse and', 'a bar with Homer')",
+   "fire": [
+    "Kids adore cartoon friends like Buzz, Woody, and Rex.",
+    "At Disney World you can hug Donald Duck and other favorites.",
+    "My nephew collects toys of Elsa, Olaf, and Anna.",
+    "In the old shorts, Bugs Bunny and Daffy Duck argue a lot.",
+    "Her lunchbox shows Mickey, Goofy, and Pluto on a boat.",
+    "Young fans dress up as Shrek, Fiona, and Donkey.",
+    "The park parade features Minnie Mouse and dozens of others.",
+    "Everyone knows Bart, Lisa, and Maggie from television."
+   ],
+   "quiet": [
+    "Kids adore garden foods like beans, carrots, and peas.",
+    "At the county fair you can pet goats and other livestock.",
+    "My nephew collects stamps from Peru, Chile, and Brazil.",
+    "In the old days, farmers and millers argued a lot.",
+    "Her lunchbox holds bread, cheese, and fruit in a bag.",
+    "Young cooks work with flour, butter, and sugar.",
+    "The town parade features fire trucks and dozens of bands.",
+    "Everyone knows Paris, Rome, and Madrid from school."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "after a cartoon character",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: ',' x5, ' and' x4, ' of' x2, ' at', 'When', 'pa', ' with'. Probe: ',' after Woody 0.898; ' and' after Mickey Mouse 0.514; ' at' before a bar 0.228 (and 0.130 with friends); ' and' after Aquasar 0.121; vegetables and horses 0.011. Near misses list other things in similar frames. The supercomputer and 'When' peaks are not covered."
+}

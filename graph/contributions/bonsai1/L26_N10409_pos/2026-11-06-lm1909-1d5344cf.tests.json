@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-1d5344cf",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N10409+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N10409",
+   "pole": "+",
+   "label": "the first piece of a Malay or Indonesian name ('Jalan Medan| Set|ia', 'Ahmad| Sum|argono', '| Los|ong', '| Leg|ong')",
+   "fire": [
+    "Their shop is on Jalan Medan Setiawan near Kuala Lumpur.",
+    "The minister was Ahmad Sumarlin of Indonesia.",
+    "Bus routes link Kampung Baru and Losari each day.",
+    "Tourists in Bali often watch a Legong performance.",
+    "Our office is on Jalan Setia Budi in Jakarta.",
+    "He met the poet Sutan Sumardi in Medan.",
+    "Traders from Sumenep reached Losari by boat.",
+    "Young girls learn Legong in many Balinese villages."
+   ],
+   "quiet": [
+    "Their shop is on Green Street near central London.",
+    "The minister was James Baker of Texas.",
+    "Bus routes link Oxford and Reading each day.",
+    "Tourists in Vienna often watch a ballet performance.",
+    "Our office is on Park Avenue in Boston.",
+    "He met the poet Robert Frost in Vermont.",
+    "Traders from Genoa reached Tunis by boat.",
+    "Young girls learn ballet in many French towns."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first piece of Malay or Indonesian names",
+ "unit_kind": "token piece",
+ "confidence": 0.45,
+ "notes": "Card: '.' x5, ' Sum' x4, ' Set', ' Los', ' Sale', ' L', ' Nas', ' Leg'. Probe: ' Set' 0.931; ' Leg' 0.306; ' Los' 0.223; ' Sum' 0.192; the Nasution sentence peak elsewhere 0.076; other names 0.005-0.027. Readings vary widely."
+}

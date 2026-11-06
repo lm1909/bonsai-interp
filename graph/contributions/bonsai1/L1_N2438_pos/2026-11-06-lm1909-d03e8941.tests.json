@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-d03e8941",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N2438+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N2438",
+   "pole": "+",
+   "label": "dense unit (39% of tokens reach 0.1 of max); strongest on the token ' breath'",
+   "fire": [
+    "Every runner needs a slow breath before a race.",
+    "Mints help with bad breath in any office.",
+    "Most swimmers hold their breath under water.",
+    "Whales rise for a breath every few minutes.",
+    "Babies breathe faster than adults do.",
+    "She let out a long breath of relief.",
+    "Cold air turned his breath into small clouds.",
+    "Some patients struggle for breath at night."
+   ],
+   "quiet": [
+    "Every runner needs good shoes before a race.",
+    "Mints come in small tins in any store.",
+    "Most swimmers wear caps under water.",
+    "Whales eat tiny fish every few hours.",
+    "Babies sleep longer than adults do.",
+    "She let out a long sigh of relief.",
+    "Cold air turned his fingers into ice.",
+    "Some patients ask for water at night."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; ' breath'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.45,
+ "notes": "Card: FLAG dense 39.3%, 100% echo regime, max 0.22; ' breath' x14. Probe: ' breath' 0.825, 0.825 and 0.473; ' bow' 0.099; but ' the' in a plain sentence 0.393 and '.' 0.228, so the baseline is high and an 8 + 8 may fail. Near misses avoid ' the'.",
+ "trigger": {
+  "words": [
+   "breath",
+   "breathes",
+   "breathe"
+  ]
+ }
+}

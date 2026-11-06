@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-591c9ebd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N1429+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N1429",
+   "pole": "+",
+   "label": "the name of a query language or database tool, as a token or piece (' sql', 'QL' of MSSQL, 'ql' of GraphQL, '.sql')",
+   "fire": [
+    "We stored the logs in sql and wrote the site in Java.",
+    "import sql_utils\nimport sql_parser\n",
+    "Her team needs a person who knows MySQL and Linux.",
+    "from django_graph_api.graphql.types import Field\n",
+    "The backup script writes a dump.sql file every night.",
+    "Our new hire writes sql all day at the bank.",
+    "He moved the old tables from MSSQL to the cloud.",
+    "The client sends a GraphQL request to the server."
+   ],
+   "quiet": [
+    "We stored the logs on tape and wrote the site in Java.",
+    "import json_utils\nimport http_client\n",
+    "Her team needs a person who knows Photoshop and Linux.",
+    "from django_rest.views.base import Page\n",
+    "The backup script writes a notes.txt file every night.",
+    "Our new hire reads novels all day at the bank.",
+    "He moved the old photos from Dropbox to the cloud.",
+    "The client sends a thank-you card to the server."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "SQL-like names",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "Card: 'ク' x4, ' sql' x3, 'QL' x3, '.sql' x2, 'de' x2, 'able' x2; 100% echo regime. Probe: ' sql' 0.984 and 0.734; 'QL' 0.465; '_module' after 'scala' 0.278; flask and os 0.045; 'sqoop' 0.013. Near misses are other software and plain frames."
+}

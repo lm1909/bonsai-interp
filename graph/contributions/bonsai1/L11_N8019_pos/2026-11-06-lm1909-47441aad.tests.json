@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-47441aad",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N8019+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N8019",
+   "pole": "+",
+   "label": "the name imported in a Python import line ('from functools import update_wrapper', 'from googleapiclient import errors', 'import textwrap')",
+   "fire": [
+    "from functools import partial\n",
+    "from requests import exceptions\n",
+    "from django.db import models\n",
+    "import collections\nimport argparse\n",
+    "from flask import request, session\n",
+    "from scipy import sparse\n",
+    "from google.api_core import retry\n",
+    "import itertools\nimport shutil\n"
+   ],
+   "quiet": [
+    "fn = partial(g, 1)\nprint(fn)\n",
+    "exceptions = []\nerrors = 0\n",
+    "models = load_models()\nrun(models)\n",
+    "result = collections.get(key)\nprint(result)\n",
+    "user = request.form['name']\nprint(user)\n",
+    "matrix = sparse(rows)\nsave(matrix)\n",
+    "retry = 3\nwhile retry:\n    retry -= 1\n",
+    "copy_tree(src, dst)\nprint(dst)\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the imported name in Python",
+ "unit_kind": "syntactic",
+ "confidence": 0.9,
+ "notes": "Card: ' functools' x5, ' exceptions' x3, ' collections' x3, '\\n' x3, ' sp' x2, ' sparse', '_wrapper', ' errors'. Probe: ' status' 1.180; ' errors' 0.915; '_wrapper' 0.871; ' data' 0.847; 'wrap' 0.755; '_wrapper' in a call 0.032; 'errors = []' 0.025; prose 0.008. Near misses use the same names outside import lines, with other openings."
+}

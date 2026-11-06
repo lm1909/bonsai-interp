@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-c9580dd0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N72+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N72",
+   "pole": "+",
+   "label": "the Arabic prepositional pronouns ' فيها' and ' بها' ('in it', 'with it') after a verb in a relative clause",
+   "fire": [
+    "وصلوا إلى مدينة يعيشون فيها منذ سنوات.",
+    "هذه هي الغرفة التي نام فيها الطفل.",
+    "اشترى سيارة يذهب بها إلى العمل.",
+    "ذهبنا إلى قرية يكثر فيها الماء.",
+    "هذه هي الطريقة التي نكتب بها الرسائل.",
+    "زرت بلدا يتكلمون فيها لغات كثيرة.",
+    "قرأت القصة التي يؤمن بها الناس.",
+    "دخلت مدرسة تعلمت فيها القراءة."
+   ],
+   "quiet": [
+    "وصلوا إلى مدينة كبيرة منذ سنوات.",
+    "الغرفة نظيفة والطفل نائم الآن.",
+    "اشترى سيارة جديدة يوم الأحد.",
+    "ذهبنا إلى قرية صغيرة أمس.",
+    "الرسائل على الطاولة في البيت.",
+    "زرت بلدا جميلا الصيف الماضي.",
+    "الناس يحبون القصة الجميلة.",
+    "دخلت مدرسة جديدة هذا العام."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic ' فيها', ' بها'",
+ "unit_kind": "lexical / syntactic",
+ "confidence": 0.6,
+ "notes": "Card: 'ها' x3, 'ه' x3, ' بك' x2, ' بها' x2, ' hosted', ' فيها'. Probe: ' فيها' 0.893; 'ها' on a noun 0.054; plain Arabic 0.006-0.017; ' board' 0.169; ' hosted' sentence 0.069. The English peaks are not covered. Near misses are Arabic with no such pronoun.",
+ "trigger": {
+  "tokens": [
+   " فيها",
+   " بها"
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-45609765",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N2341+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N2341",
+   "pole": "+",
+   "label": "a clause break in a list of facts ('a son, David,', 'other deficiencies:\\n', 'also makes weekly appearances')",
+   "fire": [
+    "Thomas Reed had a son, Henry, who farmed in 1850.",
+    "The audit found other problems:\nFire doors were locked.",
+    "She also writes monthly columns for the paper.",
+    "William Hart had a daughter, Ann, in the spring of 1820.",
+    "The report listed further errors:\nSafety valves had failed.",
+    "He also gives weekly talks on the radio.",
+    "James Cole had a brother, Sam, who died in 1861.",
+    "The survey noted other faults:\nEmergency lights were dark."
+   ],
+   "quiet": [
+    "Dogs bark.",
+    "Birds fly over the barn.",
+    "She reads.",
+    "The sun rose early.",
+    "Fish swim in the pond.",
+    "He runs fast.",
+    "Trees grow tall here.",
+    "Snow fell all night."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "clause breaks in a list of facts",
+ "unit_kind": "contextual",
+ "confidence": 0.1,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: broad (1.5%), '.' x3, ',' x2, '2' x2, ' to' x2, '):\\n\\n', ' self'. Probe: ' missing' 0.215; '.' 0.121 and 0.100; plain lines at most 0.049; the class line 0.026. Far below the card's maximum of 8.12."
+}

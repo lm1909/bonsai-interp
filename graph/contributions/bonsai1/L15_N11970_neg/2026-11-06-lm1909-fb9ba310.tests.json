@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-fb9ba310",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N11970-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N11970",
+   "pole": "-",
+   "label": "'=True' as a keyword argument in a Python call ('shell=True', 'inline=True'), and the near-by '.flush' and 'DEVNULL'",
+   "fire": [
+    "result = subprocess.run(cmd, shell=True)\n",
+    "cell = Html('span', inline=True)\n",
+    "loss.backward(retain_graph=True)\n",
+    "sys.stdout.flush()\nsys.stdin.flush()\n",
+    "out = check_output(args, shell=True)\n",
+    "stdout=subprocess.DEVNULL,\n",
+    "table = Form(name, required=True)\n",
+    "proc = Popen(line, shell=True)\n"
+   ],
+   "quiet": [
+    "answer = compute(cmd, limit=5)\n",
+    "title = Text('span', size=12)\n",
+    "model.train(rate=0.1)\n",
+    "print(name)\nprint(age)\n",
+    "output = read_file(args)\n",
+    "width=subprocess_width,\n",
+    "flag = True\nready = False\n",
+    "worker = Pool(line, count=3)\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'=True' keyword in Python calls",
+ "unit_kind": "syntactic / lexical",
+ "confidence": 0.75,
+ "notes": "Card: '=True' x13, '.flush' x5, 'NULL', '.Queue', 'w', '4'. Probe: '=True' 0.591, 0.420 and 0.235; '.flush' 0.508; 'NULL' 0.383; '=False' 0.116; 'x = True' -0.004; a call with no keyword 0.027. Near misses are other keywords and values, with other openings."
+}

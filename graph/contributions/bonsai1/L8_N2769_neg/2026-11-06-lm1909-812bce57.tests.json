@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-812bce57",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N2769-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N2769",
+   "pole": "-",
+   "label": "an opening bracket glued to the start of an expression inside an index or call ('c[(e+1)', 'is_vcs(k', 'Ei(p')",
+   "fire": [
+    "x = a[(i+1) % len(a)]\n",
+    "if check_vcs(u) or check_vcs(k):\n    pass\n",
+    "y = b[(j-1) % n]\n",
+    "z = f(p) + f(k)\n",
+    "w = data[(n+2) * m]\n",
+    "if is_key(p) or is_key(k):\n    pass\n",
+    "v = grid[(r+1) % h]\n",
+    "t = g(k) - g(p)\n"
+   ],
+   "quiet": [
+    "x = a[0]\ny = b[1]\n",
+    "if ready or done:\n    pass\n",
+    "n = 5\nm = 6\n",
+    "total = count + 2\nprint(total)\n",
+    "w = 7\nname = 'n'\n",
+    "if flag:\n    pass\n",
+    "h = 3\nr = 1\n",
+    "t = 2\nvalue = 9\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "bracket opening a nested expression",
+ "unit_kind": "syntactic",
+ "confidence": 0.3,
+ "notes": "Low confidence. Card: '[(' x3, '(k' x2, '(p' x2, '[self' x2, '[len', '(\\n'. Probe: '[(' 0.541; '(k' 0.510; '[len' 0.064; '[self' sentence peak elsewhere 0.013; plain code at most 0.021. So only some of the card's tokens fired."
+}

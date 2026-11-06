@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-8cada69e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7755+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N7755",
+   "pole": "+",
+   "label": "the separator inside a tight enumeration of short items, where another item is due next ('heart, soul, and mind', 'My, your, his', 'death or mourning or crying')",
+   "fire": [
+    "Love the Lord with all your mind, strength, and spirit.",
+    "Your, his, her, its and their are all possessive words.",
+    "He sold the old farm for no profit or gain or credit or thanks.",
+    "THERE IS NO EXPRESS, IMPLIED, STATUTORY, OR OTHER WARRANTY.",
+    "The colors are red, blue, green, and yellow.",
+    "Each hero has three traits. Courage. Wisdom. Honor.",
+    "We, you, they, and she are subject pronouns.",
+    "There shall be no hunger or thirst or fear or sorrow."
+   ],
+   "quiet": [
+    "After the long storm had passed, we walked down to the river.",
+    "When she got to the office, her boss had already left.",
+    "He sold the old farm, and then he moved to the city.",
+    "IF YOU DO NOT AGREE WITH THESE TERMS, PLEASE RETURN IT.",
+    "The sky was clear, so the children played outside.",
+    "Each hero has a long story that is told in the village.",
+    "Because it was late, they took a taxi home.",
+    "There was bread on the table, and soup was on the stove."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "separator in a tight enumeration",
+ "unit_kind": "syntactic / predictive",
+ "confidence": 0.7,
+ "notes": "Card: ',' x15, ' and' x4, '.' x2, ' the' x2, ' or', '].'. Probe: ' and' 0.638 in 'heart, soul, and'; ',' 0.496 in 'DIRECT, INDIRECT,'; ',' 0.404 in 'My, your,'; '.' 0.362 in 'Strength. Dexterity.'; ' or' 0.331; a clause comma 0.002; plain frames at most 0.004. Near misses are commas and 'and' between clauses or long phrases."
+}

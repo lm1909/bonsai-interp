@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-d92e9b3d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N7380-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N7380",
+   "pole": "-",
+   "label": "a piece ending a word in -ller or -ers, and Japanese 'ッ' of ヨーロ|ッ|パ ('Keyt|roller', 'poll|er', 'jiggl|ers')",
+   "fire": [
+    "The dealer imports Keytroller parts from Ohio.",
+    "Run this poller script every five minutes.",
+    "ヨーロッパの国を旅行しました。",
+    "Kids love wiggly jigglers made with gelatin.",
+    "A pair of Keytroller units arrived today.",
+    "Each poller thread checks the queue again.",
+    "彼はヨーロッパに住んでいます。",
+    "Those orange jigglers melted in the sun."
+   ],
+   "quiet": [
+    "The dealer imports tractor parts from Ohio.",
+    "Run this cleanup script every five minutes.",
+    "日本の島を旅行しました。",
+    "Kids love warm bread made with honey.",
+    "A pair of wooden boxes arrived today.",
+    "Each night shift checks the gates again.",
+    "彼は東京に住んでいます。",
+    "Those orange flowers melted in the sun."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'-ller', '-ers' pieces, Japanese 'ッ'",
+ "unit_kind": "token piece (list)",
+ "confidence": 0.6,
+ "notes": "A list. Card: broad (6.4%), L 100%, max 1.05; 'ッ' x6, 'ers' x5, 'oll' x5, 'er' x3, 'roller', 'ter'. Probe: 'er' of poller 0.890; 'ッ' 0.865; 'roller' 0.768; 'ers' of jigglers 0.762; plain frames 0.017-0.078. Near misses avoid split -er pieces."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-90c54d6d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N1753-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:48:14+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N1753",
+   "pole": "-",
+   "label": "contrasting right and wrong ways: 'do's and don'ts', 'Correct / Incorrect' examples, 'This is BAD', 'the good, the bad'",
+   "fire": [
+    "Our guide has a list of do's and don'ts for new parents.",
+    "Before you travel, learn the Do's and Don'ts of tipping.",
+    "Exemple incorrect : la phrase est trop longue.",
+    "Correct usage: She has gone. Incorrect usage: She has went.",
+    "Leaving it unplugged is BAD! Always ground the case.",
+    "Readers sent in the good, the bad and the ugly of airline food.",
+    "This is the right way to lift. That is the wrong way.",
+    "Follow these Dos and Don'ts when you write a resume."
+   ],
+   "quiet": [
+    "Our guide has a list of hotels and restaurants for new visitors.",
+    "Before you travel, pack a few shirts and a warm coat.",
+    "Exemple suivant : la phrase parle du jardin.",
+    "Sample sentence: She has a dog. Her dog is brown.",
+    "Please keep it plugged in. The case is on the shelf.",
+    "Readers sent in photos, letters and recipes about airline food.",
+    "This is my brother. That is my sister.",
+    "I don't know when you will write that resume."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "right versus wrong ways",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Card: '’t' x4, ' #' x3, ' Do' x3, \"'t\" x2, 'Good' x2, ':\\n' x2, ' bad', ' correct', ' Incorrect', ' BAD'. Probe: \"'t\" of don'ts 0.934-1.007; ' BAD' 0.506; ' correct' 0.498; 'Incorrect' 0.488; ' good' 0.319; \"doesn't\" 0.019. Near misses are plain lists and advice with no right or wrong, and one ordinary 'don't'."
+}
