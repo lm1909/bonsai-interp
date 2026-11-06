@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6bca1776",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:11:12+00:00",
+ "recipe": {
+  "toolchain_commit": "e584b67d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N7_pos/2026-11-06-lm1909-6bca1776.tests.json"
+ },
+ "label": "a coach or player's quote after a game, about the team's effort (we have to play better, the challenge for us, our defense has to be), as opposed to news reports and quotes on other things",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N7_pos/2026-11-06-lm1909-6bca1776.tests.json",
+   "prereg_commit": "e584b67d2",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.57,
+     "peak": " starts"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.386,
+     "peak": " will"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.146,
+     "peak": " our"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.067,
+     "peak": " pride"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.025,
+     "peak": " but"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.094,
+     "peak": " harder"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.246,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.13,
+     "peak": " game"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.072,
+     "peak": " job"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.386,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " good"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": ",\""
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " visitors"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " ten"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.867,
+    "median_fire": 0.138,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e584b67d2",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "coach or player quote about the team",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "'that starts with me' in a domestic quote reached 0.37 in a probe, so the phrase may carry it, not the sport.",
+ "selection": "random draw"
+}

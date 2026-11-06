@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-06-lm1909-76be1880",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N8168+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:11:17+00:00",
+ "recipe": {
+  "toolchain_commit": "e584b67d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N8168_pos/2026-11-06-lm1909-76be1880.tests.json"
+ },
+ "label": "the word synthetic, synthes- and its Chinese and Japanese equivalent 合成, as opposed to natural materials and other adjectives in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N8168_pos/2026-11-06-lm1909-76be1880.tests.json",
+   "prereg_commit": "e584b67d2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.991,
+     "peak": " synthetic"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.983,
+     "peak": " Synthetic"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.817,
+     "peak": "合成"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.636,
+     "peak": " synthes"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.626,
+     "peak": " synthetic"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.805,
+     "peak": " synthetic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.019,
+     "peak": "合成"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.364,
+     "peak": " syn"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " stolen"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " works"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": "天然"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " sound"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " compound"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.811,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e584b67d2",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "synthetic / 合成",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "' polyester' reached 0.15 in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " synthetic",
+   " Synthetic",
+   " synth",
+   " Syn",
+   "thetic",
+   "合成",
+   " synthes"
+  ]
+ }
+}

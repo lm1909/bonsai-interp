@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f1babed7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N158+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:11:30+00:00",
+ "recipe": {
+  "toolchain_commit": "e584b67d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N158_pos/2026-11-06-lm1909-f1babed7.tests.json"
+ },
+ "label": "a byte-fragment token '�' from a rare Arabic letter with tanwin or a rare Hangul syllable (شابٌ, نٌ, 쫓, 쪼), as opposed to the same words without the diacritic or with common syllables",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N158_pos/2026-11-06-lm1909-f1babed7.tests.json",
+   "prereg_commit": "e584b67d2",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.479,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.951,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.42,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.263,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.433,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.474,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.449,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.198,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": " ص"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": "جب"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.035,
+     "peak": " 만나"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.183,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " ط"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "في"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " 보"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.071,
+     "peak": " �"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.441,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e584b67d2",
+  "minutes": 2,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "byte fragment of a rare Arabic or Hangul form",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Other card peaks include ' K' and whole Korean ' 쫓아', so the byte form varies by word. I checked this only by probing similar words.",
+ "selection": "random draw"
+}
