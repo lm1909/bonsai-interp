@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-1007f307",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N6432-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:56:40+00:00",
+ "recipe": {
+  "toolchain_commit": "d18338f41",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N6432_neg/2026-11-06-lm1909-1007f307.tests.json"
+ },
+ "label": "The word ' Republican' for the US party; other parties in the same frames stay quiet. ' Republic' and the single letter 'S' in (R)-/(S)- also fire and are not tested",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N6432_neg/2026-11-06-lm1909-1007f307.tests.json",
+   "prereg_commit": "d18338f41",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.378,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.322,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.451,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.44,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.539,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.329,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.465,
+     "peak": " Republican"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.207,
+     "peak": " Republican"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " signed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": " ran"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": " voters"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.021,
+     "peak": " nominee"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " senators"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " rival"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " president"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " Democratic"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.409,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d18338f41",
+  "minutes": 30,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "' Republican' word",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Republican"
+  ]
+ }
+}
