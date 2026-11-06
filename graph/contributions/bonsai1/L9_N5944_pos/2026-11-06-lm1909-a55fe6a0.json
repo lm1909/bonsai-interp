@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-a55fe6a0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N5944+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:06:42+00:00",
+ "recipe": {
+  "toolchain_commit": "7607319f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N5944_pos/2026-11-06-lm1909-a55fe6a0.tests.json"
+ },
+ "label": "The evaluative adjectives ' fair' and ' ironic' (fair allocation, it would be fair, an ironic twist); plain adjectives in the same frames stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N5944_pos/2026-11-06-lm1909-a55fe6a0.tests.json",
+   "prereg_commit": "7607319f2",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.327,
+     "peak": " fair"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.15,
+     "peak": " knows"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.337,
+     "peak": " ironic"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.085,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.07,
+     "peak": " will"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.412,
+     "peak": " ironic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.226,
+     "peak": " profits"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.296,
+     "peak": " ironic"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " fast"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": " knows"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " funds"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.04,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.061,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " growers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": " opened"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.261,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7607319f2",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the words fair, ironic",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Probes: ' ironic' 0.38, ' fair' 0.23-0.36; 'more diverse' 0.16, 'private sector' 0.12; 'good cooling' 0.02, 'easy to speculate' 0.02, 'larger supply' 0.04. Pole max is small (5.38).",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " fair",
+   " ironic",
+   " ironically"
+  ]
+ }
+}

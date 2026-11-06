@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a4f6c7b8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N5232+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:14+00:00",
+ "recipe": {
+  "toolchain_commit": "7607319f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N5232_pos/2026-11-06-lm1909-a4f6c7b8.tests.json"
+ },
+ "label": "Low-confidence guess: a scene-setting noun or verb at the start of a report ('this morning', 'in the image above', 'as he walked').",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N5232_pos/2026-11-06-lm1909-a4f6c7b8.tests.json",
+   "prereg_commit": "7607319f2",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.417,
+     "peak": " morning"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.246,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.182,
+     "peak": " walked"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.259,
+     "peak": " morning"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.274,
+     "peak": " image"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.171,
+     "peak": " walked"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.313,
+     "peak": " morning"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.037,
+     "peak": " chart"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.324,
+     "peak": " door"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.094,
+     "peak": " heard"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.038,
+     "peak": " boost"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.177,
+     "peak": " gate"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.063,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.05,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": " rainfall"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.253,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7607319f2",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "scene-setting words (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Card: no single token (' in' x2, then salle, walked, morning, structures, image, ceremony). Probes: ' morning' 0.29, ' image' 0.21, ' walked' 0.20, ceremony 0.07; plain 0.02. I found no trigger; this records the best guess.",
+ "selection": "random draw"
+}

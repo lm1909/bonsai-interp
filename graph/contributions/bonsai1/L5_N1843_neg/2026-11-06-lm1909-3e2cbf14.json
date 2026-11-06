@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3e2cbf14",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N1843-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:27+00:00",
+ "recipe": {
+  "toolchain_commit": "7607319f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N1843_neg/2026-11-06-lm1909-3e2cbf14.tests.json"
+ },
+ "label": "The first piece of a learned, academic-sounding word (Lit|igation, Zo|ology, syll|able, Liter|acy); everyday words in the same list frames stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N1843_neg/2026-11-06-lm1909-3e2cbf14.tests.json",
+   "prereg_commit": "7607319f2",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.429,
+     "peak": "igation"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.395,
+     "peak": "ology"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.028,
+     "peak": " explained"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.057,
+     "peak": " Modern"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.008,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.631,
+     "peak": " syll"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.032,
+     "peak": " Better"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.224,
+     "peak": " Liter"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.149,
+     "peak": " Dinner"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.324,
+     "peak": " cookies"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": "ears"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.141,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7607319f2",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "start of learned words",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "Probes: 'igation' 0.62, Zo 0.54, syll 0.45, 'iter' 0.36, Infrastructure 0.33, Veter 0.07; rice and pasta 0.21, plain 0.02-0.08. Pole max is small (3.20). The label is loose: I have no rule beyond 'learned word'.",
+ "selection": "random draw"
+}

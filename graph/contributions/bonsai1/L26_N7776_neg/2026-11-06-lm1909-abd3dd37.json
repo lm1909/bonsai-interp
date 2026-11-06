@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-abd3dd37",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7776-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:06+00:00",
+ "recipe": {
+  "toolchain_commit": "7607319f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N7776_neg/2026-11-06-lm1909-abd3dd37.tests.json"
+ },
+ "label": "The token ' self' opening a hyphenated compound (self-censorship, self-defense, self-harm); plain nouns in the same frames stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N7776_neg/2026-11-06-lm1909-abd3dd37.tests.json",
+   "prereg_commit": "7607319f2",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.863,
+     "peak": " self"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.233,
+     "peak": " self"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.258,
+     "peak": " self"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.222,
+     "peak": "-in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.63,
+     "peak": " self"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.452,
+     "peak": " self"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.11,
+     "peak": " self"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.066,
+     "peak": "-ass"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.151,
+     "peak": " practice"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.211,
+     "peak": " own"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.082,
+     "peak": " seriously"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " injury"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.101,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " toward"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " role"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.245,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7607319f2",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "self- compounds",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "Probes: ' self' 0.37-0.85; caution 0.14, national defense 0.08, damage 0.06. The card also has ' give' x2, which stays outside the label.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " self",
+   " Self"
+  ]
+ }
+}

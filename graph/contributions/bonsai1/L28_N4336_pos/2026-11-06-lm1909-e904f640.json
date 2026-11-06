@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e904f640",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N4336+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:11+00:00",
+ "recipe": {
+  "toolchain_commit": "7607319f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N4336_pos/2026-11-06-lm1909-e904f640.tests.json"
+ },
+ "label": "How a machine or system runs: operating modes and regimes ('Operating a generator at peak', 'this mode of operation', 'most efficient envelope'); surgeons operating and other modes stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N4336_pos/2026-11-06-lm1909-e904f640.tests.json",
+   "prereg_commit": "7607319f2",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.465,
+     "peak": " Operating"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.339,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.854,
+     "peak": " efficient"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.241,
+     "peak": " operating"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.293,
+     "peak": " Operating"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.634,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.501,
+     "peak": " efficient"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.212,
+     "peak": " operating"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.339,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " ran"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " weather"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.112,
+     "peak": " operating"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " get"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.945,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7607319f2",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "machine operating mode",
+ "unit_kind": "semantic",
+ "confidence": 0.6,
+ "notes": "The output promotes operating, operate and operation. Probes: 'most efficient envelope' 0.94, 'Operating a' 0.62, 'mode of operation' 0.34, 'When operating with' 0.21; surgeon 0.01, mode of transport 0.04; 'way of life' 0.22.",
+ "selection": "random draw"
+}

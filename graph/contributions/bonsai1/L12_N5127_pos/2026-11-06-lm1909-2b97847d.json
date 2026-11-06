@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2b97847d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N5127+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:18+00:00",
+ "recipe": {
+  "toolchain_commit": "7607319f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N5127_pos/2026-11-06-lm1909-2b97847d.tests.json"
+ },
+ "label": "A clause weighing whether something is feasible, safe or harmful: right after 'large enough to run', 'safe for', 'too risky to', 'concern that', 'if delay would'; plain facts stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N5127_pos/2026-11-06-lm1909-2b97847d.tests.json",
+   "prereg_commit": "7607319f2",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.692,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.472,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.514,
+     "peak": " send"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.224,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.453,
+     "peak": " would"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.332,
+     "peak": " buy"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.454,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.168,
+     "peak": " would"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "Your"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " doctor"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " use"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.031,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " due"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " pool"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " growing"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.454,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7607319f2",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "weighing feasibility or safety",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.65,
+ "notes": "Probes: 'large enough to run a' 0.77, 'safe for a' 0.76, 'delay ... would' 0.61, 'too risky ... to use' 0.52, 'concern that disclosure' 0.44; plain versions under 0.02. The peaks fall on the next word (a, use, would).",
+ "selection": "random draw"
+}
