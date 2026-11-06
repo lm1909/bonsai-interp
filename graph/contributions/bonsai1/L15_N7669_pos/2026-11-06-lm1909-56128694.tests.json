@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-56128694",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N7669+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:56:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N7669",
+   "pole": "+",
+   "label": "the method or test name in a Python unit test (test_update, objects.filter)",
+   "fire": [
+    "    def test_update(self, client):\n        \"\"\"Update a missing record.\"\"\"\n",
+    "        self.assertEqual(Item.objects.filter(kind=3).count(), 1)\n",
+    "    def test_get(self, client):\n        \"\"\"Get a missing record.\"\"\"\n",
+    "        self.assertEqual(User.objects.filter(age=20).count(), 4)\n",
+    "    def test_update_user(self, db):\n        \"\"\"Update one user.\"\"\"\n",
+    "        self.assertTrue(Post.objects.filter(pk=1).exists())\n",
+    "    def test_get_item(self, db):\n        \"\"\"Get one item.\"\"\"\n",
+    "        self.assertEqual(Tag.objects.filter(name='a').count(), 0)\n"
+   ],
+   "quiet": [
+    "    def run(self, client):\n        return client\n",
+    "        self.total = 3\n",
+    "    def stop(self, client):\n        return None\n",
+    "        self.age = 20\n",
+    "    def close(self, db):\n        return db\n",
+    "        self.pk = 1\n",
+    "    def open(self, db):\n        return db\n",
+    "        self.name = 'a'\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "test method name",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card: indentation x5, 'Update' x3, \"')\\n\" x2, '_get' x2, '.filter', \"'\\n\\n\", 50% echo. Probes: '_update' 0.248, '.filter' 0.200; others under 0.08. A guess; the median may be short."
+}

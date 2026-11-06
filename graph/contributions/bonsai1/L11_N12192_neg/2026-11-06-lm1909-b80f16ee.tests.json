@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b80f16ee",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N12192-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:56:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N12192",
+   "pole": "-",
+   "label": "a token of an HTML or XML tag being handled in code or comments (</pre>, starttag, rstrip('</'))",
+   "fire": [
+    "    # handle each closing tag, e.g. for </div> or </p>\n",
+    "        self.out.append(self.endtag(node))\n",
+    "    s = raw.split(\"%s>\" % key)[1].rstrip('</')\n",
+    "    def start_tag(self, tag):\n        # called for <span>\n",
+    "        html.append(self.starttag(item))\n",
+    "    text = text.replace('</b>', '')\n",
+    "    # matches </td> at the end of a line\n",
+    "    def handle_endtag(self, tag):\n        self.stack.pop()\n"
+   ],
+   "quiet": [
+    "    # handle each new row, e.g. for totals or averages\n",
+    "        self.out.append(self.total)\n",
+    "    s = raw.split(\",\")[1].rstrip()\n",
+    "    def start_job(self, job):\n        # called at noon\n",
+    "        rows.append(self.count)\n",
+    "    text = text.replace('a', '')\n",
+    "    # matches digits at the end of a line\n",
+    "    def handle_error(self, err):\n        self.stack.pop()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "HTML/XML tag handling in code",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: 'amping' x3, 'ref' x3, 'tag' x2, ' see' x2, ' </', ' >'. Probes: ' </' 0.669, 'tag' 0.653, \"('</\" 0.327, ' <' 0.133; rows and titles 0.021. Near misses keep the code without a tag."
+}
