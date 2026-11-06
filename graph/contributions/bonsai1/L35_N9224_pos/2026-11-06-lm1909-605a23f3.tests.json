@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-605a23f3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N9224+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:57:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N9224",
+   "pole": "+",
+   "label": "the first bytes of a Japanese or Korean word that follows a space",
+   "fire": [
+    "ダブルツリー スイーツ バイ ヒルトン へ行く。",
+    "ノース スコッツデール ロード の予約。",
+    "ミネラル ウォーター を飲む。",
+    "ビジネス ホテル の予約。",
+    "ホワイト ビーチ リゾート に泊まる。",
+    "이 앱과 외부 서비스를 연결한다.",
+    "그런데 왜 만들었는가.",
+    "파일을 외부 저장소에 둔다."
+   ],
+   "quiet": [
+    "ダブルツリーへ行く。",
+    "ノースロードの予約。",
+    "ミネラルウォーターを飲む。",
+    "ビジネスホテルの予約。",
+    "ホワイトビーチリゾートに泊まる。",
+    "이 앱과 연결한다.",
+    "그런데 만들었는가.",
+    "파일을 저장소에 둔다."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "CJK word after a space",
+ "unit_kind": "token / format",
+ "confidence": 0.65,
+ "notes": "Korean sentences keep some spaces in the near misses, because Korean is normally spaced, and a probe showed 0.26 on them, so those may leak."
+}
