@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-11e93b5f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N536+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:00:56+00:00",
+ "recipe": {
+  "toolchain_commit": "597f5ff24",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N536_pos/2026-11-06-lm1909-11e93b5f.tests.json"
+ },
+ "label": "A bibliographic reference line: publisher, entry or page slot in a citation (London: Collins, Pages 5-19 in ...); the same names in prose stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N536_pos/2026-11-06-lm1909-11e93b5f.tests.json",
+   "prereg_commit": "597f5ff24",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.387,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.258,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.497,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.397,
+     "peak": ".)."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.539,
+     "peak": " Encyclopedia"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.279,
+     "peak": " Harper"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.118,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.487,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.104,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.062,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " walked"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " slate"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " spring"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "Young"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " for"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.392,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "597f5ff24",
+  "minutes": 8,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "a bibliographic reference line",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Second round. My first test (citation of an entry in a reference work, sweep with seed 202611051807) failed because plain citations fired too: '.\"' of a journal citation 0.42, ' Collins' 0.33. So the pole reads reference lists in general. Probe: ' Collins' 0.36, ' Penguin' in a citation 0.23, journal citation 0.15; 'He bought a Penguin' 0.13, prose 0.00. The logit effect (' Encyclopedia', ' Dictionary', ' handbook') suggests a preference for reference works, which this label does not claim.",
+ "selection": "second round after a failed or too narrow sweep test"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-c2c39085",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10197-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:01:11+00:00",
+ "recipe": {
+  "toolchain_commit": "597f5ff24",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N10197_neg/2026-11-06-lm1909-c2c39085.tests.json"
+ },
+ "label": "Weather and temperature adjectives (hot, cold, warm, humid, damp); other adjectives in the same frames stay under them",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N10197_neg/2026-11-06-lm1909-c2c39085.tests.json",
+   "prereg_commit": "597f5ff24",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.482,
+     "peak": " hot"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.461,
+     "peak": " damp"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.257,
+     "peak": " warm"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.134,
+     "peak": " cold"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.191,
+     "peak": " humid"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.024,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.224,
+     "peak": " mild"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.309,
+     "peak": " icy"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": " busy"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " winter"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.12,
+     "peak": " quiet"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.181,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.034,
+     "peak": " narrow"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": " short"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.069,
+     "peak": " old"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.24,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "597f5ff24",
+  "minutes": 8,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "weather and temperature adjectives",
+ "unit_kind": "lexical / semantic",
+ "confidence": "medium",
+ "notes": "Second round. My first test (first half of a binomial, sweep with seed 202611051808) failed because the near miss ' humid' reached 0.35 with no pair at all. Probe: ' damp' 0.53 alone; 'bread and butter' 0.01 and 'law and order' 0.01, so binomials as such are not the point. Earlier: hot 0.39-0.55, heat 0.37-0.43, warm 0.33, cold 0.33; 'long' 0.10. The card's ' time' x6 and ' work' x3 are not covered, and the logit effect (' and') is not explained by this label.",
+ "selection": "second round after a failed or too narrow sweep test"
+}
