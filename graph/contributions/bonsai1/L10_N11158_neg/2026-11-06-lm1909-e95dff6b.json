@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-e95dff6b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N11158-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:16+00:00",
+ "recipe": {
+  "toolchain_commit": "e033518a9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N11158_neg/2026-11-06-lm1909-e95dff6b.tests.json"
+ },
+ "label": "' cent' in 'per cent' (percent written as two words)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N11158_neg/2026-11-06-lm1909-e95dff6b.tests.json",
+   "prereg_commit": "e033518a9",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.285,
+     "peak": " cent"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.074,
+     "peak": " cent"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.045,
+     "peak": " eighty"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.15,
+     "peak": " cent"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.206,
+     "peak": " cent"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.225,
+     "peak": " cent"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.048,
+     "peak": " cent"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.121,
+     "peak": " cent"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " him"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.102,
+     "peak": " percent"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.045,
+     "peak": " eighty"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.075,
+     "peak": "ill"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.04,
+     "peak": " grew"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.4,
+     "peak": "ence"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " percent"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": "He"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.136,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e033518a9",
+  "minutes": 33,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' cent' of 'per cent'",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' cent' x3, ' rural' x2, 'it' x2, ' business', ' wild', ' tiny', all in older prose. Probe: ' cent' 0.639; one-word ' percent' 0.085; ' rural' 0.160; ' tiny' 0.106; ' wild' 0.090. So this label is a small part of the pole: I expect coverage to be low, and the old-prose reading is untested here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " cent"
+  ]
+ }
+}

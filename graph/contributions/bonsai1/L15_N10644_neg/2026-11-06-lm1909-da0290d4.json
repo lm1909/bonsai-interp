@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-da0290d4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N10644-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:53:52+00:00",
+ "recipe": {
+  "toolchain_commit": "e033518a9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N10644_neg/2026-11-06-lm1909-da0290d4.tests.json"
+ },
+ "label": "the brain or nervous system named as a thing studied or imaged ('Einstein's brain', 'the brains of mice', 'the nervous system of larvae')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N10644_neg/2026-11-06-lm1909-da0290d4.tests.json",
+   "prereg_commit": "e033518a9",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.125,
+     "peak": " brain"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.235,
+     "peak": " brains"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.157,
+     "peak": " system"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.279,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.169,
+     "peak": " brains"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.191,
+     "peak": " brain"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.103,
+     "peak": " nervous"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.42,
+     "peak": " brain"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.106,
+     "peak": " kidneys"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " fish"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.114,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " musicians"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.088,
+     "peak": " one"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.078,
+     "peak": " fly"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.117,
+     "peak": " human"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.18,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e033518a9",
+  "minutes": 32,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the brain as an object of study",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' brains' x2, ' brain', ' Brain', ' system' after 'nervous', ' code' x2, ' working', ' factors'. Probe: ' brain' 0.730 and 0.344; ' brains' 0.373; ' system' after 'nervous' 0.295; ' digestive' 0.189; ' livers' sentence 0.092; ' house' 0.051. The ' code' and ' working' peaks are not covered.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-34294782",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N6749+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:55:06+00:00",
+ "recipe": {
+  "toolchain_commit": "e033518a9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N6749_pos/2026-11-06-lm1909-34294782.tests.json"
+ },
+ "label": "the last digit of the minutes in a clock time on a dateline or timestamp ('5:3|0 am', '8:1|5 am')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N6749_pos/2026-11-06-lm1909-34294782.tests.json",
+   "prereg_commit": "e033518a9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.818,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.589,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.627,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.55,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.414,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.483,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.52,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.613,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.274,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.195,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.156,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.077,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.062,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.227,
+     "peak": "7"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.186,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.241,
+     "peak": "5"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.57,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e033518a9",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "minutes digit in a timestamp",
+ "unit_kind": "token / contextual",
+ "confidence": 0.8,
+ "notes": "Card: '0' x6, '5' x4, '.gov' x2, ' de' x2, ' Machines' x2, 'o' of Davao. Probe: '0' of 5:30 and 6:30 0.670-0.673; '5' of 8:15 0.297; a dateline with no time 0.192; '5.30 dollars' 0.066. 'o' of Davao read 0.481 and is not covered.",
+ "selection": "random draw"
+}

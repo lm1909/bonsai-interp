@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0d542175",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N3412+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:59+00:00",
+ "recipe": {
+  "toolchain_commit": "e033518a9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N3412_pos/2026-11-06-lm1909-0d542175.tests.json"
+ },
+ "label": "a word after a run of South Asian names or terms ('Lucknow, Agra', 'Ek Doctor Ki Maut'), and ' surpassed' after a named record",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N3412_pos/2026-11-06-lm1909-0d542175.tests.json",
+   "prereg_commit": "e033518a9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.533,
+     "peak": " A"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.764,
+     "peak": " Ek"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.32,
+     "peak": " surpassed"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.378,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.418,
+     "peak": "ir"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.038,
+     "peak": "Way"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.503,
+     "peak": "ur"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.769,
+     "peak": " A"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " Paris"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.084,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.211,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " second"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": "Way"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.123,
+     "peak": " Oxford"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " Toledo"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.518,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e033518a9",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "after South Asian names (guess)",
+ "unit_kind": "contextual",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ' and' x4, ' South' x3, ' of', ' at', ' Doctor', 'F' of FDR, ' surpassed', ' Ch', ' A'. Probe: ' surpassed' 0.954; ' Doctor' 0.812; ' A' of Agra 0.765; 'FDR' 0.024; ' of' before 'Niels Bohr' 0.075. I found no shared pattern.",
+ "selection": "random draw"
+}

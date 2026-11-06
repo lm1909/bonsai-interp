@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0146e755",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N7232-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:55:02+00:00",
+ "recipe": {
+  "toolchain_commit": "e033518a9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N7232_neg/2026-11-06-lm1909-0146e755.tests.json"
+ },
+ "label": "words of public institutions and electoral politics ('National Health Service', 'Ministry of', 'proportional method', 'human rights')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N7232_neg/2026-11-06-lm1909-0146e755.tests.json",
+   "prereg_commit": "e033518a9",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.203,
+     "peak": " Service"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.172,
+     "peak": " groups"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.346,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.682,
+     "peak": " parliamentary"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.064,
+     "peak": " National"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.252,
+     "peak": " rights"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.346,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.188,
+     "peak": " proportional"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": "Young"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " baker"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.051,
+     "peak": " buses"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " leaving"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.035,
+     "peak": " card"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.025,
+     "peak": " cook"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.098,
+     "peak": " garden"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.299,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e033518a9",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "public institutions and elections",
+ "unit_kind": "topic",
+ "confidence": 0.55,
+ "notes": "Card: ' rights' x3, ' Sydney' x3, ' parliamentary' x2, ' Service', ' Center', ' of' after Ministry, ' proportional'. Probe: ' proportional' 0.942; ' Service' 0.455; ' of' after Ministry 0.346; ' rights' 0.244; bicycle repair shop 0.022; a friends' party 0.026. ' Sydney' read 0.372 and is not covered.",
+ "selection": "random draw"
+}

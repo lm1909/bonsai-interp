@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-d487a60d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N6134+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:55:03+00:00",
+ "recipe": {
+  "toolchain_commit": "e033518a9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N6134_pos/2026-11-06-lm1909-d487a60d.tests.json"
+ },
+ "label": "the token 'Gen' or ' Gen', whatever it abbreviates or begins ('Gen Z', 'Gen|etic', 'Gen8', 'Gen. 12')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N6134_pos/2026-11-06-lm1909-d487a60d.tests.json",
+   "prereg_commit": "e033518a9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.804,
+     "peak": " Gen"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.704,
+     "peak": " Gen"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.777,
+     "peak": " Gen"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.761,
+     "peak": " Gen"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.806,
+     "peak": " Gen"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.598,
+     "peak": " Gen"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.759,
+     "peak": " Gen"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.843,
+     "peak": " Gen"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " brands"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " server"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " preacher"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " console"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " often"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " general"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.769,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e033518a9",
+  "minutes": 34,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "token 'Gen'",
+ "unit_kind": "token",
+ "confidence": 0.95,
+ "notes": "Card: 'Gen' x20, ' Gen' x12. Probe: 'Gen' 0.848; ' Gen' 0.702-0.791; ' Generation' 0.048; ' gene' 0.018; ' general' 0.020.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "Gen",
+   " Gen"
+  ]
+ }
+}

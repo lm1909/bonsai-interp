@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-390bfa93",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N6215+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:44+00:00",
+ "recipe": {
+  "toolchain_commit": "e033518a9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N6215_pos/2026-11-06-lm1909-390bfa93.tests.json"
+ },
+ "label": "a line that restarts an outline: an item repeated from the list just above, opening the body after the table of contents",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N6215_pos/2026-11-06-lm1909-390bfa93.tests.json",
+   "prereg_commit": "e033518a9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.322,
+     "peak": " System"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.097,
+     "peak": " Period"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.401,
+     "peak": " Install"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.758,
+     "peak": " Cycle"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.515,
+     "peak": " Read"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.845,
+     "peak": " Layer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.198,
+     "peak": " Backup"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.604,
+     "peak": " Army"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " period"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " install"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " layer"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " backup"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " white"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.559,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e033518a9",
+  "minutes": 33,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "item restarting an outline",
+ "unit_kind": "formatting / contextual",
+ "confidence": 0.3,
+ "notes": "Card: '\\n' x4, 'Three', ' environments', 'PC', ' Encryption', ' Verify', 'ية', 'its', all at line starts in outlines. Probe: ' System' in a repeated list 0.515; '.' in a restarted numbered list 0.364; a plain two-line list 0.022; a plain sentence 0.015. Weak evidence.",
+ "selection": "random draw"
+}
