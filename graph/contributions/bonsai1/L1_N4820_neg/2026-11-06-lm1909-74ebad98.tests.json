@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-74ebad98",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N4820-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:53:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N4820",
+   "pole": "-",
+   "label": "copula or auxiliary near the start of a text (' was', ' is', ' be'; dense, positional, gate-closed)",
+   "fire": [
+    "Mom was a member of the choir.",
+    "Entry is based on age.",
+    "You will be asked to bring a pen.",
+    "Tom was a teacher at the school.",
+    "Access is limited to staff.",
+    "You will be told to wait outside.",
+    "Grandpa was a sailor in the navy.",
+    "Parking is free on Sunday."
+   ],
+   "quiet": [
+    "Mom sang with the choir for years.",
+    "Entry costs five dollars at the door.",
+    "You can bring a pen to the desk.",
+    "Tom taught at the school for years.",
+    "Staff can use the side door.",
+    "You can wait outside by the gate.",
+    "Grandpa sailed with the navy for years.",
+    "Parking costs less on Sunday."
+   ]
+  }
+ ],
+ "predictions": "Marginal: 29% of tokens reach 0.1 of max, and a no-copula probe reached 0.19.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "early copula (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (28.7%), positional (88% within 16 tokens) and gate-closed (100% leak), max 0.24. Card: ' was' x6, ' be' x6, ' is' x5, ' will' x3. Probe: ' was' 0.65, ' is' 0.51, ' be' 0.44; 'You can ask' 0.19."
+}

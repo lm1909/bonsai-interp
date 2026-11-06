@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-62ad8f8a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N2855+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:53:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N2855",
+   "pole": "+",
+   "label": "the dateline word or line break just after a web article title ('Posted: Sep 17th', 'Published January 15')",
+   "fire": [
+    "How To Teach Your Dog To Sit\nPosted: May 3rd, 2014\nWith summer coming, owners worry.",
+    "Rust is still a problem\nPublished March 12, 2013\nRust control matters.",
+    "Five Ways To Save On Heating\nPosted: Jan 9th, 2015\nWith winter here, bills rise.",
+    "Yield is still the goal\nPublished June 2, 2010\nCrop yield depends on rain.",
+    "What To Do About Ants\nPosted: Apr 21st, 2011\nWith spring here, they return.",
+    "Peace is still far away\nPublished August 8, 2012\nTalks broke down again.",
+    "Why Kids Need Sleep\nPosted: Oct 2nd, 2016\nWith school back, parents worry.",
+    "Water is still the issue\nPublished May 30, 2009\nWells are running dry."
+   ],
+   "quiet": [
+    "The dog sat down.\nIt looked up at her and wagged.",
+    "Rust is a problem on old cars, and rust control matters.",
+    "With winter here, bills rise.\nWe turned the heating down.",
+    "Crop yield depends on rain, and it rained in June.",
+    "The ants came back.\nWe swept them out of the door.",
+    "Talks broke down again, and peace is still far away.",
+    "With school back, parents worry about sleep and homework.",
+    "Wells are running dry, and water is still the issue."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; plain two-line text stays quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "article title dateline",
+ "unit_kind": "format",
+ "confidence": "high",
+ "notes": "Card: '\\n' x22, 'Published' x4, ':' x2, 'Posted'. Probe: 'Posted:' 0.64, 'Published' 0.48, plain title newline 0.18; 'The crowd waited.\\nThey got' 0.02. Fire items carry a dateline."
+}

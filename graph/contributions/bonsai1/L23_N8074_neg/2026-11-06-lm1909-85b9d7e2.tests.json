@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-85b9d7e2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8074-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:53:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N8074",
+   "pole": "-",
+   "label": "line-start indentation in code, and sentence-ending '.' before an instruction (broad; guess)",
+   "fire": [
+    "        sess.run([init()])\n        sess.close()",
+    "\t\tself.frame.grid(row=1)\n\t\tself.frame.bind('<Up>', g)",
+    "               value = show(x, f)\n               if isinstance(f, Form):",
+    "They attract many bees. Use as a tall border.",
+    "        lsz.Add(st)\n        lsz.Fit(st)",
+    "\t\tself.root.grid(row=2)\n\t\tself.root.bind('<Esc>', h)",
+    "They bloom in late summer. Use as a low hedge.",
+    "               name = get(x, f)\n               if isinstance(f, Item):"
+   ],
+   "quiet": [
+    "We run the session and then close it.",
+    "The frame is on the first row of the grid.",
+    "The value is shown when it is a form.",
+    "They attract many bees and a few wasps.",
+    "The sizer adds the text and fits it.",
+    "The root is on the second row of the grid.",
+    "They bloom in late summer and early fall.",
+    "The name is shown when it is an item."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: probes stayed under 0.15.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "indent / break (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (2.3%). Card: '       ' x11, ' there' x4, '.' x3, '\\t' x2. Output promotes '.', ' out', ' rather'. Probes 0.01-0.15. A best guess."
+}

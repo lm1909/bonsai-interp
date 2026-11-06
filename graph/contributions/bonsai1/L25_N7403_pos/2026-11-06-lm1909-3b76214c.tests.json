@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-3b76214c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N7403+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:53:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N7403",
+   "pole": "+",
+   "label": "first token of a multi-word name ('air conditioning', ' White|head', ' Ay|utthaya'; broad; guess)",
+   "fire": [
+    "The firm repairs heating and air conditioning systems.",
+    "Dr. Wu of the Whitehead Institute built a new tool.",
+    "We saw the old ruins of Ayutthaya in March.",
+    "Boats carried lumber through Puget Sound.",
+    "They sell ventilation and air conditioning units.",
+    "Her lab at the Whitehead Institute closed.",
+    "The tour stops at Ayutthaya for a day.",
+    "Ferries cross Puget Sound every hour."
+   ],
+   "quiet": [
+    "The firm repairs old doors and windows.",
+    "Dr. Wu of the local school built a new shed.",
+    "We saw the old town walls in March.",
+    "Boats carried lumber down the river.",
+    "They sell paint and floor tiles.",
+    "Her shop on the corner closed.",
+    "The tour stops at the lake for a day.",
+    "Ferries cross the bay every hour."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: 8.5% of tokens reach 0.1 of max, and a plain sentence probed at 0.27.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "name openings (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (8.5%). Card: ' Benjamin' x2, ' ARC' x2, ' Daniel' x2, ' Ay', ' White', 'lein', ' air'. Probe: ' air' 0.62, others 0.20-0.25; 'Here is a site about the old town' 0.27. A best guess."
+}
