@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-6faffe7b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N6149+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:10:00+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L15/N6149",
+   "pole": "+",
+   "label": "A later item of an alphabetically ordered list: the pole fires when the items so far have been in A-to-Z order; the same items reversed or shuffled stay low.",
+   "fire": [
+    "Guests: Adams, Baker, Carter, Davis, Evans, Foster, Hughes, and Walker.",
+    "apple, banana, cherry, date, elderberry, fig, grape, kiwi, lemon, mango, and plum",
+    "import abc, argparse, base64, csv, datetime, hashlib, itertools, pathlib, re, subprocess, tempfile",
+    "rivers: Amazon, Congo, Danube, Ganges, Indus, Mekong, Nile, Rhine, and Volga",
+    "from os.path import abspath, basename, dirname, exists, isfile, join, splitext",
+    "The committee includes Albania, Bolivia, Canada, Egypt, France, Ghana, Hungary, and Japan.",
+    "brass, bronze, chrome, copper, gold, iron, lead, nickel, silver, tin, and zinc",
+    "tools: axe, chisel, drill, file, hammer, level, pliers, saw, and wrench"
+   ],
+   "quiet": [
+    "Guests: Hughes, Adams, Walker, Davis, Foster, Baker, Evans, and Carter.",
+    "plum, mango, lemon, kiwi, grape, fig, elderberry, date, cherry, banana, and apple",
+    "import tempfile, csv, pathlib, abc, subprocess, hashlib, argparse, re, datetime, itertools, base64",
+    "rivers: Volga, Rhine, Nile, Mekong, Indus, Ganges, Danube, Congo, and Amazon",
+    "from os.path import splitext, dirname, join, abspath, isfile, basename, exists",
+    "The committee includes Hungary, Albania, Japan, Egypt, Bolivia, Ghana, Canada, and France.",
+    "zinc, tin, silver, nickel, lead, iron, gold, copper, chrome, bronze, and brass",
+    "tools: wrench, saw, pliers, level, hammer, file, drill, chisel, and axe"
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-1 near miss. Replication of the label that held in sweep seed 202611050907, with new items; four near misses are now the same list exactly reversed, the other four shuffled with no ascending run of three.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "later item of an alphabetical list",
+ "unit_kind": "contextual / discourse",
+ "confidence": 0.6,
+ "notes": "Round 1 (sweep seed 202611050907): fire 0.33-0.82 except a prose country list at 0.10; shuffled near misses at most 0.23. Prose lists fired lowest, so the prose items here (surnames, countries) are the weak spots. No probes this round."
+}

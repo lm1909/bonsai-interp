@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-52be4ca9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3337+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:10:00+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L34/N3337",
+   "pole": "+",
+   "label": "A French or Spanish word in a fixed phrase that calls for 'de' next (en train, façon, plus, una serie, cantidad): the slot before de; sentences without such a phrase stay low, including 'le train' the vehicle and 'la serie' on television.",
+   "fire": [
+    "Les ouvriers sont en train de réparer le vieux pont.",
+    "Mon oncle déteste cette façon de parler à table.",
+    "La ville a recensé cette année plus de 20 000 habitants.",
+    "Pasamos la tarde con una serie de ejercicios difíciles.",
+    "Recibimos una gran cantidad de cartas esta semana.",
+    "Ma sœur est en train de préparer le dîner ce soir.",
+    "Il faut trouver une autre façon de partir plus tôt.",
+    "La empresa lanzó una serie de productos nuevos."
+   ],
+   "quiet": [
+    "Les ouvriers ont pris le train pour réparer le vieux pont.",
+    "Mon oncle parle très fort à table.",
+    "La ville est cette année plus peuplée, avec 20 000 habitants.",
+    "Pasamos la tarde viendo la serie en la televisión.",
+    "Recibimos muchas cartas esta semana.",
+    "Ma sœur prépare le dîner ce soir.",
+    "Nous devons louer une autre voiture pour partir plus tôt.",
+    "La empresa vendió varios productos nuevos."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-2 near misses. Second round: in sweep seed 202611050906 the label failed on 0.49 at 'beaucoup', which itself takes de (a bad near miss of mine), and 0.31 at a clause-final 'politique'. Sentence-final nouns are the risk here too.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "French/Spanish slot before de",
+ "unit_kind": "contextual / syntax",
+ "confidence": 0.5,
+ "notes": "Round 1 fire: en train 0.64-0.66, façon 0.89, serie 0.55, plus 0.40, cantidad 0.31, calidad 0.28, manière 0.17 at a later token. So calidad and manière are left out of this label. No probes this round. Three near misses keep the word in another use: 'le train', 'la serie' and 'plus peuplée'."
+}

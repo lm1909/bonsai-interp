@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-71b50e86",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5340+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:10:00+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L35/N5340",
+   "pole": "+",
+   "label": "The first piece of a split Arabic word (' الص', ' ص', ' الش', ' الث', ' ب', ' الع', ' الم', ' والم'); the same kind of Arabic sentence made only of common whole-token words stays lower.",
+   "fire": [
+    "ذهب الرجل إلى السوق في الصيف.",
+    "كتب الرجل رسالة إلى صديقه.",
+    "ذهب الطلاب إلى البيت في الشتاء.",
+    "كتب الرئيس عن الثلج في المدينة.",
+    "قال الرجل إن البيت بارد جدا.",
+    "ذهب الأطفال إلى البيت مع العائلة.",
+    "قال أحمد إن الطعام في المدرسة جميل.",
+    "ذهب الأطفال إلى السوق والمدرسة."
+   ],
+   "quiet": [
+    "ذهب الرجل إلى السوق مع الأطفال.",
+    "كتب الرجل رسالة إلى الرئيس.",
+    "ذهب الطلاب إلى البيت مع أحمد.",
+    "كتب الرئيس عن الكتاب في المدينة.",
+    "قال الرجل إن البيت كبير جدا.",
+    "ذهب الأطفال إلى البيت مع الرجل.",
+    "قال أحمد إن الطعام في البيت جميل.",
+    "ذهب الأطفال إلى السوق مع الطلاب."
+   ]
+  }
+ ],
+ "predictions": "5/8 fire, 0-2 near misses. Second round: sweep seed 202611050908 held, but all its near misses were other languages, so it never separated the piece from Arabic as such. Here every near miss is Arabic, with word pieces only for whole tokens (tokenizer checked). ص and ث pieces may fire more than the others.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "first piece of split Arabic words",
+ "unit_kind": "token piece / language",
+ "confidence": 0.45,
+ "notes": "Round 1 fire: ' ص' 0.31-0.75, ' الص' 0.38-0.89, ' ث' 0.42-0.59, ' الثن' 0.36, ' وال' 0.14. The card's top 32 also peak on whole ' في' once, so whole tokens can fire: this is the risk. Split-word tokenization of all 16 was checked with the tokenizer, without scoring. No probes this round."
+}
