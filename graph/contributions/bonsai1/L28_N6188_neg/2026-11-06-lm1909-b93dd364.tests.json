@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-b93dd364",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N6188-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:25:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N6188",
+   "pole": "-",
+   "label": "The token just before a comparison operator in a Python condition ('if __name', '.strip() ==', '[:6] ==', 'count(...) >='); the same expression in an assignment stays quiet.",
+   "fire": [
+    "    if self.mode.lower() == 'r':\n        pass\n",
+    "if __package__ == None:\n    pass\n",
+    "    assert old_user_name == new_name\n",
+    "    if line[:4] == 'data':\n        pass\n",
+    "  if count %500==0:\n    print(count)\n",
+    "    if not ok or int(total) > 50:\n        pass\n",
+    "    if args.index('x') >= 2:\n        pass\n",
+    "    if accept and text.rstrip() == '':\n        pass\n"
+   ],
+   "quiet": [
+    "    self.mode = self.mode.lower()\n",
+    "if not args:\n    pass\n",
+    "    old_user_name = new_name\n",
+    "    head = line[:4]\n",
+    "  count = count + 500\n  print(count)\n",
+    "    while running:\n        pass\n",
+    "    pos = args.index('x')\n",
+    "    text = text.rstrip()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "token before a comparison in a condition",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Probes: 0.31-1.08; the same expressions outside a condition 0.02-0.04. The model cannot see ' ==' ahead, so the reading comes from the 'if' or 'assert' context. The output direction on this pole promotes ' ==', ' !=', ' >', ' <'."
+}

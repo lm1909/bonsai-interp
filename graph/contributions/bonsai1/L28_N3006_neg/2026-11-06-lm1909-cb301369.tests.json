@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-cb301369",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3006-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:25:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N3006",
+   "pole": "-",
+   "label": "In Chinese, the slot ending a topic, before the comment ('內容主要', '其實都', '也是', '缺點是'); plain Chinese with the same topics stays lower.",
+   "fire": [
+    "这款手机的缺点是电池不耐用。",
+    "这本书内容主要讲述一个农民的故事。",
+    "它的相机功能也是不错的。",
+    "这件衣服其实都挺好穿的。",
+    "有没有哪种水果是您最喜欢的？",
+    "这家店的优点是价格便宜。",
+    "本文内容主要介绍这种方法。",
+    "他的中文水平也是很高的。"
+   ],
+   "quiet": [
+    "这款手机昨天摔坏了。",
+    "这本书放在桌子上。",
+    "它的相机放在包里。",
+    "这件衣服挂在门后面。",
+    "这种水果放在冰箱里。",
+    "这家店开在学校旁边。",
+    "本文发给了我们。",
+    "他的中文书放在家里。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Chinese slot ending a topic",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Probes: 0.38-0.52 on these ('是', '也是', '主要', '都', '點'). Plain narrative 0.08-0.22 ('我今天去了北京' 0.22 on the final '。'). So near misses may leak. On this pole the output direction promotes ' relatively', '比较', ' comparatively', so the slot may be one that expects a degree word."
+}

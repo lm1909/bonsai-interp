@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-24e8490c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2705-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:25:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N2705",
+   "pole": "-",
+   "label": "A YAML block marker in an indented docker-compose-style config: the list dash ' -' or block sign ' |\\n' after a key; the same config with scalar values, and hyphens in prose or code, stay low.",
+   "fire": [
+    "    api:\n        image: redis\n        volumes:\n            - data\n    cache:\n        image: redis\n",
+    "    app:\n        image: python\n        env:\n        - DEBUG\n",
+    "    worker:\n        image: ubuntu\n        memory: 512\n        script: |\n            echo hi\n",
+    "    proxy:\n        image: haproxy\n        ports:\n            - 443/tcp\n",
+    "    db:\n        image: postgres\n        depends:\n        - cache\n",
+    "    job:\n        image: alpine\n        cpu: 1\n        command: |\n            run\n",
+    "    front:\n        image: node\n        networks:\n            - back\n",
+    "    task:\n        image: busybox\n        disk: 20\n        config: |\n            a=1\n"
+   ],
+   "quiet": [
+    "    api:\n        image: redis\n        volumes: data\n    cache:\n        image: redis\n",
+    "    app:\n        image: python\n        env: DEBUG\n",
+    "    worker:\n        image: ubuntu\n        memory: 512\n        script: run.sh\n",
+    "    proxy:\n        image: haproxy\n        ports: 443\n",
+    "    x = a - b\n    y = c - d\n    print(x, y)\n",
+    "    The well-known job - which ran daily - was done.\n",
+    "    front = node.networks\n    back = front - 1\n",
+    "    task = busybox\n    disk = 20\n    config = 'a'\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "YAML list dash or block marker",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 0.25-0.39; prose and Python 0.01-0.04. Fire items are multi-line, all in docker-compose style. The Russian 'Р', ' Profile', 'ar' (x4) and '#' (x3) on the card are not covered."
+}

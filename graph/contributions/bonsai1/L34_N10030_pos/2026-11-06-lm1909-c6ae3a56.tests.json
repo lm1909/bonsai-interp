@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-c6ae3a56",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10030+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:25:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N10030",
+   "pole": "+",
+   "label": "Dense pole, best guess: the last word of a place name, title or degree ending a stretch of plain text (' st', ' Place', ' Science', '.sc'); ordinary sentences stay lower.",
+   "fire": [
+    "The bakery moved to the corner of 42nd st last year.",
+    "She holds a B.sc. in Biology from the state college.",
+    "He was seen in the 300 block of East Maple Place.",
+    "Her paper appeared in Nature and later in Science.",
+    "We toured the Boston Museum of Science last week.",
+    "The cafe at 9th st and Pine closes early.",
+    "He earned his M.sc. at a school in Leeds.",
+    "It happened on the 700 block of North Oak Place."
+   ],
+   "quiet": [
+    "The bakery moved to a larger shop last year.",
+    "She has a sister in Biology at the state college.",
+    "He was seen in the morning by the lake.",
+    "Her paper appeared in print and later online.",
+    "We toured the Boston harbor last week.",
+    "The cafe by the river closes early.",
+    "He earned his living at a school in Leeds.",
+    "It happened on a cold night in the north."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; end of a place name or title (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.25,
+ "notes": "The card flags 13.6% density. Probes: 0.37-0.94; plain sentences 0.03-0.22. There is no clear reading, ' message' 0.50 and the card's commonest peak '.m' are not covered, and near misses may leak, so this is expected to fail."
+}

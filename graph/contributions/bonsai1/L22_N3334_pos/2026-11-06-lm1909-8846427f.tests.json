@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-8846427f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N3334+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:25:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N3334",
+   "pole": "+",
+   "label": "A digit inside the volume, page or DOI of a journal citation ('Lancet 356', 'doi:10.1158/1078-0432'); plain numbers in prose and other coded strings stay low.",
+   "fire": [
+    "Smith, J. \"Zinc and immunity\". Lancet 349 (9047): 112-20.",
+    "Clin. Chem. 44 (8 Pt 2): 1755-61. doi:10.1093/clinchem/44.8.1755.",
+    "Lancet March 3, 1994;343:532-6.",
+    "doi:10.1016/S0140-6736(05)74312-4.",
+    "Jones, K. \"Iron in pregnancy\". BMJ 321 (7265): 90-3.",
+    "Am. J. Med. 108 (3): 220-4. doi:10.1016/S0002-9343.",
+    "Nature June 8, 1995;375:483-7.",
+    "doi:10.1177/0002764205283426."
+   ],
+   "quiet": [
+    "Smith has 349 cows and 47 pigs on his farm.",
+    "The shop had 44 boxes and 8 crates for sale.",
+    "Flight 349 (gate 47): seats 112-20.",
+    "Call 555 0140 before six o'clock tonight.",
+    "Jones paid 321 dollars for 72 hats in town.",
+    "The bus holds 108 people and 3 dogs.",
+    "Invoice 10.1016/S0140, order 74312-4.",
+    "Room 200 is on the 2nd floor."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "digit inside a journal citation",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probes: 0.28-0.45 on digits; plain numbers 0.05-0.08. The card also has ':\\n', ' k' and ' (' in code, gate-closed examples, not covered. Peak digits vary."
+}
