@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1d31db74",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N2475+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:21:19+00:00",
+ "recipe": {
+  "toolchain_commit": "2c1815e1d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N2475_pos/2026-11-06-lm1909-1d31db74.tests.json"
+ },
+ "label": "the clause right after 'to whom' or 'with whom' (to whom they could speak, to whom you don't want ...)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N2475_pos/2026-11-06-lm1909-1d31db74.tests.json",
+   "prereg_commit": "2c1815e1d",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.448,
+     "peak": " could"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.364,
+     "peak": " want"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.572,
+     "peak": " would"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.209,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.188,
+     "peak": " could"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.217,
+     "peak": " must"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.192,
+     "peak": " could"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.428,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " could"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " want"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " listed"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " close"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " know"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " are"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.29,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2c1815e1d",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "clause after 'to whom'",
+ "unit_kind": "syntax / contextual",
+ "confidence": "medium",
+ "notes": "The direct logits promote ' impart', ' send', ' share', but 'want to tell him' and 'she tells you' stayed under 0.1 in the probes, so the communication reading did not hold.",
+ "selection": "random draw"
+}
