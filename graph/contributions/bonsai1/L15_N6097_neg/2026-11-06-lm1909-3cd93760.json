@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3cd93760",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N6097-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:12:40+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N6097_neg/2026-11-06-lm1909-3cd93760.tests.json"
+ },
+ "label": "Exactly one, as an emphasised count: 'just one', 'a single', '== 1'; other counts in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N6097_neg/2026-11-06-lm1909-3cd93760.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.01,
+     "peak": " layout"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.438,
+     "peak": " single"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.443,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.932,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.035,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.429,
+     "peak": " single"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.398,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.152,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " pages"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " down"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " =="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.105,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " people"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.189,
+     "peak": "]"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.413,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "emphasised count of exactly one",
+ "unit_kind": "semantic / contextual",
+ "confidence": "low",
+ "notes": "Card: '1' x5, ' single' x5, ' one' x4, ' field', ' blob', ' cell'. The + pole also has ' one' x3. Probe: 'actions of one individual' 0.35, '== 1' 0.28, 'just one field,' 0.26, 'single cell' 0.13, 'Only one blob' 0.02; other counts 0.01-0.08. Readings are low and I expect a marginal result.",
+ "selection": "random draw"
+}

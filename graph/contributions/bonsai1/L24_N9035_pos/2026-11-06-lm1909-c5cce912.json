@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c5cce912",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N9035+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:12:17+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N9035_pos/2026-11-06-lm1909-c5cce912.tests.json"
+ },
+ "label": "Theoretical or analytical research as a topic: theory, theoretical, analysis, calculations; other activities in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N9035_pos/2026-11-06-lm1909-c5cce912.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.217,
+     "peak": " theoretical"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.598,
+     "peak": " analysis"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.348,
+     "peak": " bargaining"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.086,
+     "peak": " calculations"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.882,
+     "peak": " theory"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.22,
+     "peak": " model"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.071,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.208,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " carry"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": "His"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " border"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " free"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": "Kind"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.218,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "theoretical or analytical research",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' theoretical' x3, ' analysis' x2, ' calculations' x2, ' theory' x2, ' studies' x2, ' paper' x2. Logit effect promotes ' assuming', ' analysis', ' assume', ' analytical'. Probe: plasticity theory 0.92, analysis 0.73, theoretical 0.33, calculations 0.15; plain alternatives 0.00-0.02, 'This paper shows' 0.18.",
+ "selection": "random draw"
+}

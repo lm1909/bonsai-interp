@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-9a26b7dd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N3194-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:13:21+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N3194_neg/2026-11-06-lm1909-9a26b7dd.tests.json"
+ },
+ "label": "' level' of 'grade level' in schooling; other uses of ' level', and 'grade' without it, stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N3194_neg/2026-11-06-lm1909-9a26b7dd.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.099,
+     "peak": " Level"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.266,
+     "peak": " level"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.251,
+     "peak": " level"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.713,
+     "peak": " Level"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.673,
+     "peak": " level"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.962,
+     "peak": " Level"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.772,
+     "peak": " level"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.829,
+     "peak": " level"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.079,
+     "peak": " Level"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " books"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.043,
+     "peak": " below"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " school"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.742,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' level' of 'grade level'",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Card: ' level' x6, ' Level' x4, 程度 x3, ' Class' x3, 合格; the + pole is ' grade' x14. Probe: Grade Level 0.92, grade level 0.71-0.76, 'Level Activities' 0.49; water level 0.02, top level 0.08, grade teachers 0.01, top class 0.05. A gate-closed pole, on a small range.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "level"
+  ]
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-bc2a5423",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N774+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:13:19+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N774_pos/2026-11-06-lm1909-bc2a5423.tests.json"
+ },
+ "label": "The piece after a split M- or Mil-: the sound 'mil' in names and French (Mil-a, De-M-ille, Mil-let, m-ille); other M- names stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N774_pos/2026-11-06-lm1909-bc2a5423.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.799,
+     "peak": "a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.855,
+     "peak": "ille"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.834,
+     "peak": "let"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.842,
+     "peak": "ille"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.939,
+     "peak": "ille"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.679,
+     "peak": "a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.642,
+     "peak": "let"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.868,
+     "peak": "ille"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " star"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " epic"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " painted"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "Merc"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.0,
+     "peak": " chore"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": " actress"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " saw"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " extras"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.838,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "continuation of a split M-/Mil- name",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' mil' x9, 'let' x6, 'ila' x4, 'ille' x2, 'ил' x2, 'a' x2. Probe: Mille 'ille' 0.97, Mila 'ila' 0.96, DeMille 0.91, Millet 0.83, миллионы 0.31; Mandela, Martin, Maria 0.00; mile, mill 0.06. Tokenizer checked for Mila, DeMille, Millet, mille.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ille",
+   "ila",
+   "let"
+  ]
+ }
+}

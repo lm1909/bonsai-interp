@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-3c086ef5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10538+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:12:21+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10538_pos/2026-11-06-lm1909-3c086ef5.tests.json"
+ },
+ "label": "The split-off adjective ending -ative, -atory or -ionate (prepar-ative, explor-atory, dispass-ionate); plain adjectives stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10538_pos/2026-11-06-lm1909-3c086ef5.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.903,
+     "peak": "ative"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.378,
+     "peak": "ative"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.32,
+     "peak": "atory"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.518,
+     "peak": "atory"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.818,
+     "peak": "ionate"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.388,
+     "peak": "ative"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.109,
+     "peak": "ative"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.823,
+     "peak": "ionate"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.042,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.047,
+     "peak": "bal"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": "Histor"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.668,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "split-off -ative, -atory, -ionate ending",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'ative' x5, 'atory' x5, 'ativ' x3, 'ionate' x2, 'ant', 'stantial', German 'iven'. The - pole has 'able', 'iz', 'izable'. Probe: 'ionate' 0.97, 'ative' 0.84, 'atory' 0.35-0.69; whole-token comparative 0.42, so the meaning-bearing form fires too; plain alternatives 0.02. Tokenizer checked.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ative",
+   "atory",
+   "ionate"
+  ]
+ }
+}

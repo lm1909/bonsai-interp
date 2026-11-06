@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-4ffd58ec",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N10682+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:12:56+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N10682_pos/2026-11-06-lm1909-4ffd58ec.tests.json"
+ },
+ "label": "' H' split off as the first letter of a place name (Hanoi, Huddersfield, Hertford); place names that are one token, including Helsinki and Havana, stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N10682_pos/2026-11-06-lm1909-4ffd58ec.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.764,
+     "peak": " H"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.453,
+     "peak": " H"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.791,
+     "peak": " H"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.831,
+     "peak": " H"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.713,
+     "peak": " H"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.604,
+     "peak": " H"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.676,
+     "peak": " H"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.852,
+     "peak": " H"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": "Fl"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " Havana"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.738,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "split-off ' H' of a place name",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' H' x26 in Harnham, Hanoi, Hertford, Huddersfield, Hopton. Probe: Harnham 0.79, Hanoi 0.77, Huddersfield 0.70, Hertford 0.67; ' H' of Helen 0.36 after 'Her friend', Leeds, Paris, Manchester at most 0.01. Tokenizer checked; Helsinki and Havana are one token and are used as near misses.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " H"
+  ]
+ }
+}

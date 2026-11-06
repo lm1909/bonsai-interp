@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-9e1b6486",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N8473-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:13:35+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N8473_neg/2026-11-06-lm1909-9e1b6486.tests.json"
+ },
+ "label": "Inner pieces of Khorasan / Khurasan ('hor', 'uras') and Sohag ('h'): place names from the Islamic world; other places in those regions stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N8473_neg/2026-11-06-lm1909-9e1b6486.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.776,
+     "peak": "hor"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.744,
+     "peak": "uras"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.927,
+     "peak": "hor"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.702,
+     "peak": "uras"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.792,
+     "peak": "hor"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.776,
+     "peak": "uras"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.354,
+     "peak": "h"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.649,
+     "peak": "h"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.52,
+     "peak": "f"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " Syria"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.111,
+     "peak": "u"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.173,
+     "peak": "ars"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.054,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.068,
+     "peak": " As"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.148,
+     "peak": "iza"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.76,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 5,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "Kh-or-asan, Kh-uras-an, So-h-ag",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: 'f' x3, 'hor' x2, 'ist' x2, 'ay' x2, 'ور' x2, 'uras', ' Law' of Lawami, 'un' of Sunna. Probe: 'uras' 0.80, 'hor' 0.71, 'h' of Sohag 0.56; France, Leeds, North 0.00-0.03. I did not test whether Isfahan, Cairo or Luxor would fire before registering; they are the near misses.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "hor",
+   "uras"
+  ]
+ }
+}

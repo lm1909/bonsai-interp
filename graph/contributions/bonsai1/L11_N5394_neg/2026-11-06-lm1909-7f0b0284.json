@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-7f0b0284",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N5394-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:13:17+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N5394_neg/2026-11-06-lm1909-7f0b0284.tests.json"
+ },
+ "label": "Verbs meaning 'to talk about' in French, Spanish and Russian (parler, hablaremos, говорить); other verbs in the same frames stay under it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N5394_neg/2026-11-06-lm1909-7f0b0284.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.824,
+     "peak": " parler"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.052,
+     "peak": " parler"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.199,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.489,
+     "peak": " parler"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.975,
+     "peak": "aremos"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.105,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.66,
+     "peak": "ить"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.149,
+     "peak": " этом"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " dem"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "ir"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": "ons"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.128,
+     "peak": "anger"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": "os"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " ese"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.395,
+     "peak": " этом"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": "ке"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.575,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'talk about' verbs (parler, hablar, говорить)",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' parler' x3, 'aremos', 'ai' of parlerai, 'ить' of говорить, ' hablar', 'cue'. Probe: parler 0.94-1.03, hablaremos 0.84, говорить 0.80; manger 0.13, lirai 0.03; English 'talk about' 0.01. But 'volveremos' 0.55 and 'спорить' 0.40 fired on the verb ending, so the ending carries some of this. Near misses avoid those exact words.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "parler",
+   "hablar"
+  ]
+ }
+}

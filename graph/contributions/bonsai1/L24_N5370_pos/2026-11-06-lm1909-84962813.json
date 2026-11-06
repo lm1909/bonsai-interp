@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-84962813",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N5370+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:12:33+00:00",
+ "recipe": {
+  "toolchain_commit": "664186c1e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N5370_pos/2026-11-06-lm1909-84962813.tests.json"
+ },
+ "label": "A relational adjective that names the domain of its noun (financial support, numerical estimate, geographic location, chemical composition); the same noun alone or with a plain adjective stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N5370_pos/2026-11-06-lm1909-84962813.tests.json",
+   "prereg_commit": "664186c1e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.308,
+     "peak": " chemical"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.378,
+     "peak": " financial"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.682,
+     "peak": " geographic"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.448,
+     "peak": " visual"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.591,
+     "peak": " logistical"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.543,
+     "peak": " numerical"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.5,
+     "peak": " monetary"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.507,
+     "peak": " financial"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " feed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "He"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.504,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "664186c1e",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "relational adjective naming a domain",
+ "unit_kind": "grammatical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' financial' x9, ' numerical' x4, ' geographic' x3, ' geographical' x2, ' chemical' x2, ' visual' x2, ' logistical', ' monetary'. Logit effect promotes ' representation', ' makeup', ' framework'. Probe: numerical 0.80, monetary 0.62, geographical 0.55, financial 0.45, logistical 0.45; 'strong support' 0.01, 'many resources' 0.01. The - pole has the same family ('ological', ' Economic').",
+ "selection": "random draw"
+}
