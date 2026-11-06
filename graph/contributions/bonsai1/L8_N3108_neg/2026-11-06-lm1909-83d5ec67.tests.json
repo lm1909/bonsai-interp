@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-83d5ec67",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N3108-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:45:45+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N3108",
+   "pole": "-",
+   "label": "The separator after a parameter name or key in code (:param bool name: ..., ['display'], ...); prose colons and plain code stay low",
+   "fire": [
+    ":param bool verbose: print the output\n:param str title: the title\n",
+    ":param (dict) layout_args: Options passed to\n    the layout.\n",
+    "self.assertEqual(items[0]['label'], 'All')\nself.assertEqual(items[1]['label'], 'No')\n",
+    "check(rows[0]['name'], 'x')\ncheck(rows[1]['name'], 'y')\n",
+    ":param int count: number of retries\n:param float wait: seconds\n",
+    "assert data[0]['kind'], 'first'\nassert data[1]['kind'], 'second'\n",
+    ":param list names: file names\n:param bool force: overwrite\n",
+    "self.assertEqual(res[0]['id'], 'a')\nself.assertEqual(res[1]['id'], 'b')\n"
+   ],
+   "quiet": [
+    "verbose = True\ntitle = 'x'\nprint(title)\n",
+    "layout = make()\nshow(layout)\n",
+    "first = items[0]\nprint(first)\nprint(items)\n",
+    "The name: John Smith. His job: baker.",
+    "count = 3\nwait = 1.5\nsleep(wait)\n",
+    "Her kind: gentle. Her age: thirty.",
+    "names = list()\nforce = False\nrun(names)\n",
+    "Result one: good. Result two: bad."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "separator after a param name or key",
+ "unit_kind": "code / format",
+ "confidence": 0.45,
+ "notes": "':param' read 0.16-0.37 and \"'],\" 0.67. Prose 'The name:' read 0.08."
+}
