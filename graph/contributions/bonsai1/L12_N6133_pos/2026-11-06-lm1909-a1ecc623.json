@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a1ecc623",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N6133+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:55:56+00:00",
+ "recipe": {
+  "toolchain_commit": "e8e8b3f74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N6133_pos/2026-11-06-lm1909-a1ecc623.tests.json"
+ },
+ "label": "the end of a concessive 'While ...' or 'Although ...' clause (While ubiquitous,; While X plays a critical role,; Although much of ...), as opposed to a temporal 'while' and plain sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N6133_pos/2026-11-06-lm1909-a1ecc623.tests.json",
+   "prereg_commit": "e8e8b3f74",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.895,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.637,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.524,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.348,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.729,
+     "peak": " role"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.203,
+     "peak": " most"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.182,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.179,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " pots"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.098,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " gene"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": " agree"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " expensive"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "He"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.436,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e8e8b3f74",
+  "minutes": 5,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "end of a concessive while-clause",
+ "unit_kind": "syntactic",
+ "confidence": "high",
+ "notes": "Temporal ' while' reached 0.02 in a probe.",
+ "selection": "random draw"
+}
