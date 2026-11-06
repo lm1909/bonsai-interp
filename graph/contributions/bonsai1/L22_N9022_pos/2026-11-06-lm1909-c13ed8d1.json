@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c13ed8d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N9022+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:19:19+00:00",
+ "recipe": {
+  "toolchain_commit": "446170324",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N9022_pos/2026-11-06-lm1909-c13ed8d1.tests.json"
+ },
+ "label": "the comma closing a concessive clause (Although, Despite), where the contrast is about to come",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N9022_pos/2026-11-06-lm1909-c13ed8d1.tests.json",
+   "prereg_commit": "446170324",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.292,
+     "peak": " many"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.201,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.148,
+     "peak": " apart"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.142,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.198,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.557,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.189,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.204,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.082,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.045,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.074,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.066,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.174,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.45,
+     "peak": " numbers"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.072,
+     "peak": " remains"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.134,
+     "peak": " often"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.2,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "446170324",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "comma after a concessive clause",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "The card also shows ' However' and ' But', which reached 0.12-0.19 in probes and are not tested here.",
+ "selection": "random draw"
+}

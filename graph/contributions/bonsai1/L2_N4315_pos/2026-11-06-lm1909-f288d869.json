@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-f288d869",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4315+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:18:33+00:00",
+ "recipe": {
+  "toolchain_commit": "446170324",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N4315_pos/2026-11-06-lm1909-f288d869.tests.json"
+ },
+ "label": "dense or positional: top peaks at the window start, ' be' most often; no content trigger found",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N4315_pos/2026-11-06-lm1909-f288d869.tests.json",
+   "prereg_commit": "446170324",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.125,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.166,
+     "peak": " home"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.073,
+     "peak": " posted"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.159,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.066,
+     "peak": " lunch"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.049,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.064,
+     "peak": " tired"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.086,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.169,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " today"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.069,
+     "peak": " lunch"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.071,
+     "peak": " tired"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.516,
+    "median_fire": 0.07,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "446170324",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "window-initial ' be' etc.",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "94% of top peaks sit at window position 0 and probes of ' be' in a sentence stayed at or below 0.08. Registered expecting a failure.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " be"
+  ]
+ }
+}

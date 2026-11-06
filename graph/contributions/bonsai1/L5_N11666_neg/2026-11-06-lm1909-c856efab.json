@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-c856efab",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N11666-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:19:21+00:00",
+ "recipe": {
+  "toolchain_commit": "446170324",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N11666_neg/2026-11-06-lm1909-c856efab.tests.json"
+ },
+ "label": "the syllable after a word-initial u-: 'ki' of ukiyo, 'ke' of uke, 'ule' of ukulele, キ of ウキウキ",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N11666_neg/2026-11-06-lm1909-c856efab.tests.json",
+   "prereg_commit": "446170324",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.08,
+     "peak": "ki"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.019,
+     "peak": "ki"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.71,
+     "peak": "ke"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.635,
+     "peak": "ke"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.443,
+     "peak": "ule"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.475,
+     "peak": "ule"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.761,
+     "peak": "キ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.835,
+     "peak": "キ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "do"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "ums"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "Her"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "しています"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "していた"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.736,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "446170324",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "syllable in uki-/uke-/ウキ",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Declared pieces are short and common, so measured coverage will be crude: 'ki' and 'ke' occur in many other words. The card also shows 'i', 'di' and 'o', not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   "ki",
+   "ke",
+   "ule",
+   "キ"
+  ]
+ }
+}

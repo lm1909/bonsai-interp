@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-1f286799",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N10113-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:19:30+00:00",
+ "recipe": {
+  "toolchain_commit": "446170324",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N10113_neg/2026-11-06-lm1909-1f286799.tests.json"
+ },
+ "label": "tokens ' potential' and ' non' as modifiers (a broad pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N10113_neg/2026-11-06-lm1909-1f286799.tests.json",
+   "prereg_commit": "446170324",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.711,
+     "peak": " potential"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.297,
+     "peak": " potential"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.478,
+     "peak": " potential"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.349,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.346,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.227,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.564,
+     "peak": " potential"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.501,
+     "peak": " non"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.581,
+     "peak": " tax"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.164,
+     "peak": " local"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.259,
+     "peak": " actual"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.157,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " pans"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.312,
+     "peak": " known"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.069,
+     "peak": " water"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.413,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "446170324",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' potential', ' non' modifiers",
+ "unit_kind": "token / lexical",
+ "confidence": "low",
+ "notes": "The pole is flagged broad, and ' is' reached 0.37 after 'productivity' in a probe, so I expect some near misses to read high.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " potential",
+   " non"
+  ]
+ }
+}

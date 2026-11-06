@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-08f77aa6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6257+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:18:39+00:00",
+ "recipe": {
+  "toolchain_commit": "446170324",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N6257_pos/2026-11-06-lm1909-08f77aa6.tests.json"
+ },
+ "label": "the split pieces ' M', ' Sch' and ' sk' opening a longer word",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N6257_pos/2026-11-06-lm1909-08f77aa6.tests.json",
+   "prereg_commit": "446170324",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.752,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.018,
+     "peak": "ili"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.482,
+     "peak": " sk"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.029,
+     "peak": " sk"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.353,
+     "peak": " Sch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.098,
+     "peak": " Sch"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.334,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.54,
+     "peak": " sk"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "rian"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": " began"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "ch"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.038,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.344,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "446170324",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' M', ' Sch', ' sk' split pieces",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Most other split pieces stayed quiet in probes (' H' 0.01, 'enguin' 0.02). 'マ' reached 0.05 in a short sentence, although the card shows it. So this is a list, and I could not find what these pieces share.",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   " M",
+   " Sch",
+   " sk"
+  ]
+ }
+}

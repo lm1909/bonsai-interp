@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-bccbd294",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N4792-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:18:51+00:00",
+ "recipe": {
+  "toolchain_commit": "446170324",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N4792_neg/2026-11-06-lm1909-bccbd294.tests.json"
+ },
+ "label": "an empty or zero value being assigned or listed: [], '', None, pass, $0",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N4792_neg/2026-11-06-lm1909-bccbd294.tests.json",
+   "prereg_commit": "446170324",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.061,
+     "peak": " [],\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.896,
+     "peak": " [],\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.417,
+     "peak": " ''\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.611,
+     "peak": " ''\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.939,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.803,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.121,
+     "peak": " [],\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.396,
+     "peak": " ''\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.092,
+     "peak": "}\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.198,
+     "peak": "}\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "file"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.03,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.045,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " $"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.067,
+     "peak": "}\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "_suffix"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.85,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "446170324",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "empty or zero value",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "' pass' and ' None' reached only 0.25 in probes and are not among the test sentences, though the label names them, so they are untested here.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8d865d7f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9587+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:18:32+00:00",
+ "recipe": {
+  "toolchain_commit": "446170324",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N9587_pos/2026-11-06-lm1909-8d865d7f.tests.json"
+ },
+ "label": "a vague catch-all noun after a descriptive adjective (mess, beings, blobs, units, affair)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N9587_pos/2026-11-06-lm1909-8d865d7f.tests.json",
+   "prereg_commit": "446170324",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.859,
+     "peak": " mess"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.758,
+     "peak": " beings"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.595,
+     "peak": " blobs"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.274,
+     "peak": " units"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.648,
+     "peak": " affair"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.479,
+     "peak": " beings"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.424,
+     "peak": " mess"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.485,
+     "peak": " units"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": " tangled"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.13,
+     "peak": " complex"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.113,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.164,
+     "peak": " crystals"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": " chaotic"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.056,
+     "peak": " gl"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.259,
+     "peak": " separate"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.54,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "446170324",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "catch-all noun after an adjective",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "' people' after an adjective stayed at 0.06 in a probe, and ' story' reached 0.25, so 'catch-all' is my reading of the list. The card's ' with' and ' process' are not covered.",
+ "selection": "random draw"
+}
