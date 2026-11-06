@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6aee13fa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N9659+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:05:18+00:00",
+ "recipe": {
+  "toolchain_commit": "0b8d73fb3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N9659_pos/2026-11-06-lm1909-6aee13fa.tests.json"
+ },
+ "label": "' load' in code and ' pickup' (a list; output promotes ' points', ' lower')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N9659_pos/2026-11-06-lm1909-6aee13fa.tests.json",
+   "prereg_commit": "0b8d73fb3",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.817,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.718,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.777,
+     "peak": " pickup"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.565,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.718,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.79,
+     "peak": " pickup"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.485,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.419,
+     "peak": " pickup"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": "_modules"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.081,
+     "peak": " reader"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " tractor"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": ".setup"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.5,
+     "peak": " fetch"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": " init"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.155,
+     "peak": " bought"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.718,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0b8d73fb3",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "code ' load', ' pickup'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Card: ' load' x10, ' up' x5, ' pickup' x3, '_load' x3, '救' x2. A list. Probe: 'load_plugins()' 0.82, 'load = loader(' 0.72, 'pickup truck' 0.78; 'carried a heavy load' 0.17; 'run_plugins()' 0.00.",
+ "selection": "random draw"
+}

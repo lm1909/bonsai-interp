@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ef04ac20",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N8271+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:05:30+00:00",
+ "recipe": {
+  "toolchain_commit": "0b8d73fb3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N8271_pos/2026-11-06-lm1909-ef04ac20.tests.json"
+ },
+ "label": "naming a hand-held tool or weapon ('a symbol/weapon', 'hold a writing utensil'; output promotes ' implement', ' implementation')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N8271_pos/2026-11-06-lm1909-ef04ac20.tests.json",
+   "prereg_commit": "0b8d73fb3",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.628,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.569,
+     "peak": " writing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.423,
+     "peak": " writing"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.773,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.497,
+     "peak": " writing"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.287,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.3,
+     "peak": " writing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.314,
+     "peak": " sharp"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " ted"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.061,
+     "peak": " bread"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.46,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0b8d73fb3",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "before 'implement'",
+ "unit_kind": "prediction / semantic",
+ "confidence": "medium",
+ "notes": "Output promotes ' implement', ' implementation', ' implemented', ' Implement'. Card: '.NOT' x2, ' writing' x2, '\\n' x2, '/', ' \"'. This reads 'implement' as the word for a tool, which is my guess. Probe: 'symbol/weapon' 0.99, 'writing utensil' 0.48, '\"potentially weaponizable\"' 0.21; 'holding a child' 0.00. 'http.NOT_FOUND' 0.39 is not claimed.",
+ "selection": "random draw"
+}

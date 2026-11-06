@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d8ac8703",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N3844+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:05:31+00:00",
+ "recipe": {
+  "toolchain_commit": "0b8d73fb3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N3844_pos/2026-11-06-lm1909-d8ac8703.tests.json"
+ },
+ "label": "'oss' and 'opp' after a first letter (F|oss|ils, M|opp|et, F|oss|ati)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N3844_pos/2026-11-06-lm1909-d8ac8703.tests.json",
+   "prereg_commit": "0b8d73fb3",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.869,
+     "peak": "oss"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.959,
+     "peak": "opp"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.95,
+     "peak": "oss"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.869,
+     "peak": "oss"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.914,
+     "peak": "opp"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.762,
+     "peak": "oss"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.135,
+     "peak": "ossil"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.9,
+     "peak": "opp"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " kitten"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "ina"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " Peter"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": "se"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " her"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.885,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0b8d73fb3",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "F|oss, M|opp",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'oss' x7, 'uri' x7, 'opp' x3, 'B' x3, 'less' x2. Probe: Fossati 0.95, Moppet 0.93, Fossils 0.87; 'Shells' 0.02. 'uri' is not tested. Tokenization of new forms was not checked before commit.",
+ "selection": "random draw"
+}

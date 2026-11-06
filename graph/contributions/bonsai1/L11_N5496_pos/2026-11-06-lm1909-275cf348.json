@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-275cf348",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N5496+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:05:58+00:00",
+ "recipe": {
+  "toolchain_commit": "0b8d73fb3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N5496_pos/2026-11-06-lm1909-275cf348.tests.json"
+ },
+ "label": "' insulin' in talk of blood sugar ('insulin sensitivity', 'insulin resistance')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N5496_pos/2026-11-06-lm1909-275cf348.tests.json",
+   "prereg_commit": "0b8d73fb3",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.371,
+     "peak": " insulin"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.546,
+     "peak": " resistance"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.281,
+     "peak": " insulin"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.132,
+     "peak": " insulin"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.269,
+     "peak": " resistance"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.046,
+     "peak": " insulin"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.344,
+     "peak": " sensitivity"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.546,
+     "peak": " resistance"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.035,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " loss"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": " weight"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.312,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0b8d73fb3",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' insulin'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Card: ' insulin' x5, ' health' x2, 'orative' x2, ' resistance' x2, 'less', 'atching'. Probe: 'Insulin resistance' 0.55 on ' resistance', 'insulin sensitivity' 0.53; 'improving sleep' 0.03. 'restorative' 0.31 and 'Dethatching' 0.35 are not claimed.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "insulin",
+   "Insulin"
+  ]
+ }
+}

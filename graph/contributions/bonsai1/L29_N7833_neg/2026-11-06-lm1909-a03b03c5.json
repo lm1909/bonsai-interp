@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a03b03c5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N7833-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:05:45+00:00",
+ "recipe": {
+  "toolchain_commit": "0b8d73fb3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N7833_neg/2026-11-06-lm1909-a03b03c5.tests.json"
+ },
+ "label": "digit of a year inside a named annual event ('Singapore Budget 2013') (and rare place pieces 'ind', 'ull')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N7833_neg/2026-11-06-lm1909-a03b03c5.tests.json",
+   "prereg_commit": "0b8d73fb3",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.977,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.078,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.884,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.186,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.952,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.074,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.849,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": -0.001,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.223,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " Malaysia"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.164,
+     "peak": " Singapore"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": "ailand"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.005,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "d"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.086,
+     "peak": " Singapore"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.0,
+     "peak": " many"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.517,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0b8d73fb3",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "year in an event name",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' Bur' x2, 'ind', '1', '0', 'ull', '9'. Probe: 'Singapore Budget 2013' 0.98 on '0', 'Eindawya' 0.40, 'Tullamarine' 0.34; 'Near the hill' 0.09. Similar to L30/N10891- in an earlier sweep, but not related by any test here.",
+ "selection": "random draw"
+}
