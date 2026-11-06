@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-1ae4180d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N1235+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:43:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N1235",
+   "pole": "+",
+   "label": "the line end after a reader's personal question or request for help ('What action should we take?\\n', 'Thanks for your help.\\n'), as opposed to dialogue or a quiz",
+   "fire": [
+    "My dog keeps scratching his ear. What should we do?\nYour dog may have mites.",
+    "I can't get this macro to run. Can anyone help?\nTry the debug tool.",
+    "Our daughter refuses to eat vegetables. Any advice?\nStart with small portions.",
+    "My tomato leaves are turning yellow. What can I do?\nCheck the watering.",
+    "I can't work out this formula.\nThanks in advance for any help.\nTom",
+    "My husband snores all night. Is that dangerous?\nIt can be a sign of apnea.",
+    "Our landlord won't return the deposit. What are our rights?\nYou may sue.",
+    "How do I remove red wine from a carpet?\nThanks for reading.\nAnn"
+   ],
+   "quiet": [
+    "\"Does your dog still scratch his ear?\"\nThe boy shook his head.",
+    "\"Can anyone help me with this box?\"\nJack ran over.",
+    "\"Do you want more vegetables, dear?\"\nShe said no.",
+    "What color are tomato leaves?\nGreen is the answer.",
+    "The formula worked.\nWe went home after that.\nIt rained.",
+    "\"Does he snore all night?\"\nI laughed at that.",
+    "What is the capital of Peru?\nLima is the capital.",
+    "The carpet was red.\nThe wine was white.\nIt was late."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "end of a reader's question",
+ "unit_kind": "format / contextual",
+ "confidence": 0.65,
+ "notes": "Card: '?\\n' 12, '.\\n' 8 of the top 32; the - pole is the same tokens in fiction dialogue. Probes: '?\\n' after a family problem 0.36, 'help.\\n' 0.34; dialogue 0.09 and 0.01; 'capital of France?\\n' 0.07. Near misses keep the line ends in dialogue, quizzes and narration."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-eaa873a1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10688+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:43:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N10688",
+   "pole": "+",
+   "label": "(gate-closed) the end of a multi-line Python header: '):\\n' after a wrapped argument list, and the line closing it",
+   "fire": [
+    "class B(Reader,\n        Writer):\n    size = 1\n",
+    "def run(self, a,\n        b, c):\n    return a\n",
+    "class C(Base,\n        Mixin):\n    name = 2\n",
+    "db.relation('y',\n        backref='z',\n    )\n",
+    "def fit(data,\n        labels):\n    return data\n",
+    "api.route('q',\n        method='GET',\n    )\n",
+    "class D(First,\n        Second):\n    kind = 3\n",
+    "def add(left,\n        right):\n    return left\n"
+   ],
+   "quiet": [
+    "class B(Reader):\n    size = 1\n",
+    "def run(self, a, b, c):\n    return a\n",
+    "class C(Base):\n    name = 2\n",
+    "db.relation('y', backref='z')\n",
+    "def fit(data, labels):\n    return data\n",
+    "api.route('q', method='GET')\n",
+    "class D(First):\n    kind = 3\n",
+    "def add(left, right):\n    return left\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "end of a wrapped Python header",
+ "unit_kind": "format / code",
+ "confidence": 0.45,
+ "notes": "Card: '):\\n' 5, blank or indent lines otherwise; gate-closed (-x- echo 94%), weak (max 4.47). Probes: 0.30-0.31 for wrapped headers, 0.04-0.09 for plain code. Near misses are the same headers on one line."
+}
