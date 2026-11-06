@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-54662e67",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N9638+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:43:05+00:00",
+ "recipe": {
+  "toolchain_commit": "8a28d5c40",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N9638_pos/2026-11-06-lm1909-54662e67.tests.json"
+ },
+ "label": "The noun 'conditions, circumstances' in Arabic and Chinese (ظروف, 条件); other nouns in the same frames stay lower, and English 'conditions' reads weakly",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N9638_pos/2026-11-06-lm1909-54662e67.tests.json",
+   "prereg_commit": "8a28d5c40",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.699,
+     "peak": "ظروف"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.292,
+     "peak": "ظروف"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.612,
+     "peak": "ظروف"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.54,
+     "peak": "条件"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.285,
+     "peak": "条件"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.892,
+     "peak": "ظروف"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.187,
+     "peak": "条件"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.453,
+     "peak": "ظروف"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": " التي"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " هذه"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.081,
+     "peak": "ات"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": "工资"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.06,
+     "peak": "工作"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.038,
+     "peak": " الجمعة"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": "老师们"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " السوق"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.497,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8a28d5c40",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "conditions in Arabic, Chinese",
+ "unit_kind": "lexical / cross-language",
+ "confidence": 0.7,
+ "notes": "Probes: ظروف 0.89, 条件 0.82, English ' conditions' 0.05, ' circumstances' 0.14. An Arabic near miss read 0.40 on ' الأيام' in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ظروف",
+   "条件"
+  ]
+ }
+}

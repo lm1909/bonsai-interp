@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-dfe3621f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8620+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:43:23+00:00",
+ "recipe": {
+  "toolchain_commit": "8a28d5c40",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N8620_pos/2026-11-06-lm1909-dfe3621f.tests.json"
+ },
+ "label": "Punctuation inside a journal reference (Abstracts 1992;43, vol. 139, no. 9, monographs, No.1); prose stays low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N8620_pos/2026-11-06-lm1909-dfe3621f.tests.json",
+   "prereg_commit": "8a28d5c40",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.685,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.434,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.202,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.353,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.303,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.223,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.072,
+     "peak": " University"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.467,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.083,
+     "peak": " medicine"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.148,
+     "peak": "bourne"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.109,
+     "peak": " rest"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.094,
+     "peak": " we"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.086,
+     "peak": " surgeon"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.112,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.086,
+     "peak": " back"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.328,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8a28d5c40",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "journal reference punctuation",
+ "unit_kind": "format / citation",
+ "confidence": 0.55,
+ "notes": "Gate-closed 97%, flagged broad. Max 4.84.",
+ "selection": "random draw"
+}

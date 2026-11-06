@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-0d2875e0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3255+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:43:53+00:00",
+ "recipe": {
+  "toolchain_commit": "8a28d5c40",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N3255_pos/2026-11-06-lm1909-0d2875e0.tests.json"
+ },
+ "label": "The first piece ' K' or '-K' of a German noun (K|äse, K|ategorie, VW-K|onzern); the same frames with another noun read lower",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N3255_pos/2026-11-06-lm1909-0d2875e0.tests.json",
+   "prereg_commit": "8a28d5c40",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.503,
+     "peak": " K"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.662,
+     "peak": " K"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.65,
+     "peak": "-K"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.019,
+     "peak": " K"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.233,
+     "peak": " gek"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.414,
+     "peak": "f"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.385,
+     "peak": " K"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.505,
+     "peak": "ines"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.339,
+     "peak": " das"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.244,
+     "peak": " eine"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.158,
+     "peak": " dem"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.373,
+     "peak": " eine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.345,
+     "peak": " ein"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.142,
+     "peak": " einen"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.22,
+     "peak": " großen"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.505,
+     "peak": "ines"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.867,
+    "median_fire": 0.504,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8a28d5c40",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "German noun piece K-",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "A sentence-initial 'K' read 0.07, so K words are not first here. Near misses reached 0.30 on other tokens in probes.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " K",
+   "-K"
+  ]
+ }
+}
