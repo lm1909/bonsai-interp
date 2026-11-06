@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fff60986",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10505+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:04:31+00:00",
+ "recipe": {
+  "toolchain_commit": "6ff8a55b3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10505_pos/2026-11-06-lm1909-fff60986.tests.json"
+ },
+ "label": "' today' or ' Today' setting the present against a past just described ('rebuilt in the thirteenth century, and today', 'still endures today'); ' today' as this calendar day stays low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10505_pos/2026-11-06-lm1909-fff60986.tests.json",
+   "prereg_commit": "6ff8a55b3",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.554,
+     "peak": " today"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.187,
+     "peak": " today"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.665,
+     "peak": " today"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.24,
+     "peak": " Today"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.381,
+     "peak": " today"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.264,
+     "peak": " today"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.541,
+     "peak": " today"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.201,
+     "peak": " today"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": "oned"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " dentist"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": " full"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": " work"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.092,
+     "peak": " today"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": " today"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.323,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6ff8a55b3",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'today' set against a past",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Probes: 0.58-0.74 for ' today' after a historical lead-in, 'Today,' 0.29, 'Even today' 0.12; calendar 'today' 0.01-0.06. The model cannot see ahead, so the difference must come from the words before ' today'. One near miss keeps a historical lead-in with calendar 'today'. 'application', 'guide' and 'inspire' on the card are not covered.",
+ "selection": "random draw"
+}

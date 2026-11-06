@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-a7a6f92c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N12217-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:04:53+00:00",
+ "recipe": {
+  "toolchain_commit": "6ff8a55b3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N12217_neg/2026-11-06-lm1909-a7a6f92c.tests.json"
+ },
+ "label": "The names and words 'Basil' / 'basil' (also in Basilica, Basilosaurus) and 'Francis' / 'Франциск-'; other herbs, saints and names stay quiet. A list of two.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N12217_neg/2026-11-06-lm1909-a7a6f92c.tests.json",
+   "prereg_commit": "6ff8a55b3",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.689,
+     "peak": " Basil"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.519,
+     "peak": " basil"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.732,
+     "peak": " Basil"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.63,
+     "peak": " Francis"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.726,
+     "peak": " Francis"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.616,
+     "peak": " Francis"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.616,
+     "peak": " basil"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.643,
+     "peak": "иск"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " uncle"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " end"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " Cathedral"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.048,
+     "peak": " Anthony"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.064,
+     "peak": " Frederick"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " Walter"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " peas"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": "ил"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.637,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6ff8a55b3",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'Basil', 'Francis'",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "Probes: 0.46-0.97. Parsley, thyme, Mary, Frank, Cathedral under 0.03. No pattern joins the two that I can see.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Basil",
+   "basil",
+   "Francis"
+  ]
+ }
+}

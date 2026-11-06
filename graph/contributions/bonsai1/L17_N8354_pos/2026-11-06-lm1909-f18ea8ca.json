@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f18ea8ca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N8354+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:05:42+00:00",
+ "recipe": {
+  "toolchain_commit": "6ff8a55b3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N8354_pos/2026-11-06-lm1909-f18ea8ca.tests.json"
+ },
+ "label": "An event still to come, on the word naming its arrival ('to be released later', 'we'll be announcing', 'new coach coming in', 'green light to begin', 'should he survive'); the same words for a past or settled thing stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N8354_pos/2026-11-06-lm1909-f18ea8ca.tests.json",
+   "prereg_commit": "6ff8a55b3",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.556,
+     "peak": " released"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.495,
+     "peak": " announcing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.296,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.332,
+     "peak": " green"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.219,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.149,
+     "peak": " arrive"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.525,
+     "peak": " announcing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.197,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.142,
+     "peak": " winners"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " leaving"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": " when"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": " well"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.082,
+     "peak": " announcing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.031,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.314,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6ff8a55b3",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "event still to come",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: 0.48-0.81; 'upcoming release' 0.25, 'war broke' 0.20. Past or settled sentences 0.01-0.04, but those probes did not contain the firing words, so this test is the first look at them. The peak token varies. The model can see only the frame before the word, so near misses change the frame.",
+ "selection": "random draw"
+}

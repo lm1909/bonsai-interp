@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b4a88d61",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N6716-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:04:44+00:00",
+ "recipe": {
+  "toolchain_commit": "6ff8a55b3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N6716_neg/2026-11-06-lm1909-b4a88d61.tests.json"
+ },
+ "label": "Best guess: a piece of a word that needs an ending to come (' soc' in 'sociaux', ' c' in 'c-KIT', 'яти' in 'занятий'); words in the same slot written as one token stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N6716_neg/2026-11-06-lm1909-b4a88d61.tests.json",
+   "prereg_commit": "6ff8a55b3",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.505,
+     "peak": " soc"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.323,
+     "peak": " soc"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.125,
+     "peak": " soc"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.435,
+     "peak": "яти"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.32,
+     "peak": "яти"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.022,
+     "peak": " mutant"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.097,
+     "peak": " c"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.313,
+     "peak": " soc"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": "ive"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": " des"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": " les"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": "ей"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": "ё"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": "ons"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.317,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6ff8a55b3",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "piece awaiting an ending (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Probes were weak and uneven: ' soc' 0.27, 'яти' 0.23, ' c' 0.15, ' Wildlife' 0.33 (a whole word, left out), and the card's ' d' in 'dyes', ' b' in 'bakers' and ' hairs' under 0.07. The output direction on this pole promotes 'ing', 'ers', 's', ''s and 'less', which is the only reason for the guess. Expected to fail.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-12a73d5c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N10626+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:04:36+00:00",
+ "recipe": {
+  "toolchain_commit": "6ff8a55b3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N10626_pos/2026-11-06-lm1909-12a73d5c.tests.json"
+ },
+ "label": "'Dominican' in any sense (the Republic, the Order, 'dominicana'), on ' Dominican' or 'ican' after 'Domin'; other nationality and order adjectives stay low, with Franciscan a possible leak.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N10626_pos/2026-11-06-lm1909-12a73d5c.tests.json",
+   "prereg_commit": "6ff8a55b3",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.677,
+     "peak": " Dominican"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.945,
+     "peak": " Dominican"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.814,
+     "peak": " Dominican"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.796,
+     "peak": " Dominican"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.716,
+     "peak": " Dominican"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.715,
+     "peak": "icana"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.031,
+     "peak": " Dominican"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.834,
+     "peak": " Dominican"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.313,
+     "peak": "an"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": "ican"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " priest"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": "ian"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": "icana"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.031,
+     "peak": " monk"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.805,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6ff8a55b3",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'Dominican'",
+ "unit_kind": "lexical",
+ "confidence": 0.9,
+ "notes": "Probes: 0.65-1.04. Mexican 0.02, Puerto Rican 0.02, Costa Rican 0.07, 'friars' 0.19, but 'Franciscan' 0.31 on 'an', so an order adjective can leak.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Dominican",
+   "dominicana"
+  ]
+ }
+}
