@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-72874812",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N11213-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:30:35+00:00",
+ "recipe": {
+  "toolchain_commit": "2b6cdb9ee",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N11213_neg/2026-11-06-lm1909-72874812.tests.json"
+ },
+ "label": "Realistic real-time game and 3D graphics engines (PhysX, RenderWare, dynamic soft shadows, MMORPG detail); engines and shadows outside graphics stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N11213_neg/2026-11-06-lm1909-72874812.tests.json",
+   "prereg_commit": "2b6cdb9ee",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.271,
+     "peak": " run"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.564,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.776,
+     "peak": " rendered"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.664,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.544,
+     "peak": " physics"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.343,
+     "peak": " animations"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.381,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.544,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.059,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " trip"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " comfortable"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " feel"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " morning"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.544,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2b6cdb9ee",
+  "minutes": 42,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "game graphics engines",
+ "unit_kind": "semantic / topic",
+ "confidence": 0.75,
+ "notes": "The other pole suppresses realistic, animation, physics. Peak token varies.",
+ "selection": "random draw"
+}
