@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-89fab88f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10421+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:39:36+00:00",
+ "recipe": {
+  "toolchain_commit": "5756a89b6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10421_pos/2026-11-06-lm1909-89fab88f.tests.json"
+ },
+ "label": "first pieces of split Spanish words: ' rit'|mo, ' vit'|amina, ' fil'|ósofo",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10421_pos/2026-11-06-lm1909-89fab88f.tests.json",
+   "prereg_commit": "5756a89b6",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.461,
+     "peak": " rit"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.098,
+     "peak": " vit"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.261,
+     "peak": "fo"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.082,
+     "peak": " rit"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.069,
+     "peak": " vit"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.261,
+     "peak": "fo"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.491,
+     "peak": " rit"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.225,
+     "peak": "of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.13,
+     "peak": "ón"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.068,
+     "peak": " fres"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " médico"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.065,
+     "peak": "inas"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.059,
+     "peak": " fr"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.088,
+     "peak": "bió"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.052,
+     "peak": " sang"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.107,
+     "peak": " antig"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.243,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5756a89b6",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Spanish first pieces rit, vit, fil",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Corpus max is 2.23. ' hip' and ' sint' are also on the card and are not tested.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " rit",
+   " vit",
+   " fil",
+   " hip",
+   " sint"
+  ]
+ }
+}

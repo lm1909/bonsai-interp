@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-93e5bde2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N9117-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:39:58+00:00",
+ "recipe": {
+  "toolchain_commit": "5756a89b6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N9117_neg/2026-11-06-lm1909-93e5bde2.tests.json"
+ },
+ "label": "' of' after 'health' or 'state': 'the health of our environment', 'the state of'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N9117_neg/2026-11-06-lm1909-93e5bde2.tests.json",
+   "prereg_commit": "5756a89b6",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.015,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.839,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.828,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.408,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.752,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.84,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.474,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.795,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.157,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.215,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.139,
+     "peak": " harms"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " economy"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.034,
+     "peak": " patients"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "Tests"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.061,
+     "peak": " our"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.393,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.811,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5756a89b6",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' of' after health / state",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.8,
+ "notes": "Corpus max is small (0.57), the card flags the pole broad, and the gate-closed regime is 66%. A probe with 'the height of' reached 0.23.",
+ "selection": "random draw"
+}
