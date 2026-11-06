@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-939c12c3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N3014+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:20:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N3014",
+   "pole": "+",
+   "label": "' |' and ' %' as binary operators in Python (flag combining, string formatting); other Python forms of the same lines, and ' |' or ' %' outside code, stay quiet",
+   "fire": [
+    "flags = os.O_RDWR | os.O_CREAT\n",
+    "mode = stat.S_IRUSR | stat.S_IWUSR\n",
+    "wx.Frame(None, style=wx.CAPTION | wx.CLOSE_BOX)\n",
+    "print(msg % (a, b))\n",
+    "path = \"img/%d.jpg\" % index\n",
+    "text = '%s: %s' % (key, value)\n",
+    "opts = re.I | re.M\n",
+    "log.write(fmt % args)\n"
+   ],
+   "quiet": [
+    "flags = [os.O_RDWR, os.O_CREAT]\n",
+    "mode = stat.S_IRUSR + 1\n",
+    "wx.Frame(None, style=wx.CAPTION)\n",
+    "print(msg, a, b)\n",
+    "path = base + index\n",
+    "text = ': '.join(key, value)\n",
+    "opts = re.compile(s)\n",
+    "log.write(fmt, args)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python ' |' and ' %' operators",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   " |",
+   " %"
+  ]
+ }
+}
