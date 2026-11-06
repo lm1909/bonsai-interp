@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-d370d6e2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3921-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:58:52+00:00",
+ "recipe": {
+  "toolchain_commit": "4328ce5b7",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N3921_neg/2026-11-06-lm1909-d370d6e2.tests.json"
+ },
+ "label": "renting or booking a room or dwelling (the honeymoon room, a four-bedroom, split the rent on)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N3921_neg/2026-11-06-lm1909-d370d6e2.tests.json",
+   "prereg_commit": "4328ce5b7",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.57,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.629,
+     "peak": "-bedroom"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.469,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.466,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.452,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.465,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.375,
+     "peak": "-bedroom"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.329,
+     "peak": " suite"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.216,
+     "peak": " place"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.181,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.484,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.263,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.293,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " used"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.025,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.058,
+     "peak": "Our"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.466,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4328ce5b7",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "renting or booking a room",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "selection": "random draw"
+}
