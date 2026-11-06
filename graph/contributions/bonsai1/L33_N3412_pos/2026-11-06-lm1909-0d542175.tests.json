@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-0d542175",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N3412+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N3412",
+   "pole": "+",
+   "label": "a word after a run of South Asian names or terms ('Lucknow, Agra', 'Ek Doctor Ki Maut'), and ' surpassed' after a named record",
+   "fire": [
+    "He toured Pune, Nagpur, Patna, Varanasi, Agra and Amritsar.",
+    "The Hindi film Ek Ladki Ki Kahani won the prize.",
+    "Willie Mays hit his 600th home run and surpassed Mel Ott's record.",
+    "The trains stop at Surat, Indore, Bhopal, Kanpur, Agra and Jaipur.",
+    "She acted in Ek Baar Phir, Masoom and Ardh Satya.",
+    "Wayne Gretzky scored his 802nd goal and surpassed Gordie Howe's record.",
+    "The match is at the Railway Colony ground, Chembur, on Sunday.",
+    "Their route passed Madras, Mysore, Goa, Bombay, Agra and Delhi."
+   ],
+   "quiet": [
+    "He toured Paris, Lyon, Nice, Bordeaux, Lille and Nantes.",
+    "The French film La Vie de Marie won the prize.",
+    "Willie Mays hit a long home run and thanked the fans.",
+    "The trains stop at Leeds, York, Hull, Derby, Bath and Crewe.",
+    "She acted in the first show, the second show and the last.",
+    "Wayne Gretzky scored a late goal and waved to the crowd.",
+    "The match is at the village cricket ground, Oxford, on Sunday.",
+    "Their route passed Madrid, Seville, Malaga, Toledo, Avila and Leon."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "after South Asian names (guess)",
+ "unit_kind": "contextual",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ' and' x4, ' South' x3, ' of', ' at', ' Doctor', 'F' of FDR, ' surpassed', ' Ch', ' A'. Probe: ' surpassed' 0.954; ' Doctor' 0.812; ' A' of Agra 0.765; 'FDR' 0.024; ' of' before 'Niels Bohr' 0.075. I found no shared pattern."
+}

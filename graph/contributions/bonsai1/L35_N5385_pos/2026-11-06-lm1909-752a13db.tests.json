@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-752a13db",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5385+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5385",
+   "pole": "+",
+   "label": "a code token that opens something nested inside a call or string: a backslash escape, '([' or '=('",
+   "fire": [
+    "raise ValueError('missing column \\'%s\\'' % name)",
+    "values = np.array([[1, 2], [3, 4]])",
+    "open(\"data\\raw\\items.csv\")",
+    "pattern = re.compile('price=(.*?)&amp;')",
+    "print('it\\'s not \\'ready\\' yet')",
+    "weights = torch.tensor([[0.5, 0.5]])",
+    "os.chdir(\"tools\\build\\bin\")",
+    "m = re.match('color=(.*?);', line)"
+   ],
+   "quiet": [
+    "raise ValueError('missing column %s' % name)",
+    "values = make_table(1, 2, 3, 4)",
+    "open(\"data.csv\")",
+    "pattern = compile_rule('price')",
+    "print('it is not ready yet')",
+    "weights = get_weights(0.5, 0.5)",
+    "os.chdir(\"build\")",
+    "m = find_color(line, 'blue')"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "opening nested code delimiters",
+ "unit_kind": "syntactic",
+ "confidence": 0.65,
+ "notes": "Card: '\\\\' x10, '([' x9, \"')\" x2, ' `' x2, '=(', ' ['. Probe: '\\\\' 1.037 and 0.658; '([' 0.411; '=(' 0.369; the same lines without them 0.046-0.063; prose 0.000."
+}

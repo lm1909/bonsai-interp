@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-e4ff229d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1114-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N1114",
+   "pole": "-",
+   "label": "the predicate inside a condition that may or may not hold ('if public transit is available', 'if the cure were discovered', 'if it could create a hazard')",
+   "fire": [
+    "Ask the nurse for a wheelchair, if a wheelchair is available.",
+    "Book the earlier flight, if an earlier flight is available.",
+    "What if a better drug were to be discovered next year?",
+    "If moving the patient could cause more harm, wait for help.",
+    "Use fresh herbs in the sauce, if fresh herbs are available.",
+    "If lowering the bridge could damage the cables, stop at once.",
+    "What if life on Mars were to be found tomorrow?",
+    "Stay in a hotel near the station, if a room is available."
+   ],
+   "quiet": [
+    "Ask the nurse for a wheelchair, because the wheelchair is here.",
+    "Book the earlier flight, because the earlier flight is cheap.",
+    "A better drug was reported by the lab last year.",
+    "Moving the patient took an hour, and we waited for help.",
+    "Use fresh herbs in the sauce, because fresh herbs are tasty.",
+    "Lowering the bridge took a day, and it stopped at noon.",
+    "A new photo of Mars was printed on the front page.",
+    "Stay in a hotel near the station, because the station is busy."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the predicate of an open condition",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' available' x2, ',' x2, ' could', ' developed', ' discovered', ' necess'; promotes ' available'. Probe: ' available' after 'if ... is' 0.679; ' discovered' 0.408; ' create' after 'could' 0.344; 'because ... is cheap' 0.038; ' necess' 0.145. Near misses state the same thing as a fact."
+}

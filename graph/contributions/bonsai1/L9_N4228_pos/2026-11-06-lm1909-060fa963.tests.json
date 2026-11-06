@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-060fa963",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N4228+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N4228",
+   "pole": "+",
+   "label": "the line break that ends the title of a medical or academic article, before its body",
+   "fire": [
+    "Effects of Knee Replacement on Walking Speed in Patients With Arthritis\nKnee replacement is widely performed in older adults.",
+    "Metformin and Kidney Function in Adults With Type 2 Diabetes Mellitus\nMetformin is the usual first drug for this disease.",
+    "Sleep Disorders and Depression in Patients With Chronic Heart Failure\nPoor sleep is common among those with heart failure.",
+    "Long-Term Outcomes of Hip Surgery in Patients With Osteoporosis\nHip fractures remain a major cause of disability.",
+    "Vitamin D Levels and Muscle Strength in Children With Cerebral Palsy\nLow vitamin D is frequent in this group.",
+    "Effects of Early Feeding on Weight Gain in Infants With Low Birth Weight\nEarly feeding has become standard in many units.",
+    "Asthma and Allergic Disorders in Patients With Immune Deficiency Syndromes\nAsthma often begins during the first years of life.",
+    "Impact of Exercise Training on Lung Function in Patients With Cystic Fibrosis\nExercise is recommended as part of routine care."
+   ],
+   "quiet": [
+    "We studied the effects of knee replacement on walking speed.\nKnee replacement is widely performed in older adults.",
+    "Metformin and kidney function were measured in adults with diabetes. Metformin is the usual first drug for this disease.",
+    "Many of our patients with heart failure sleep badly.\nPoor sleep is common among those with heart failure.",
+    "We followed the outcomes of hip surgery for ten years. Hip fractures remain a major cause of disability.",
+    "Vitamin D levels were low in many of the children.\nLow vitamin D is frequent in this group.",
+    "Early feeding led to more weight gain in small infants. Early feeding has become standard in many units.",
+    "Some patients had asthma and others had allergies.\nAsthma often begins during the first years of life.",
+    "Exercise training helped the lungs of these patients. Exercise is recommended as part of routine care."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line break after an article title",
+ "unit_kind": "formatting / contextual",
+ "confidence": 0.4,
+ "notes": "Card: '\\n' x18, nearly all after a long title in a paper-like record. Probe: '\\n' after 'Effects of Gastric Surgery ... in Patients With Obesity' 0.248; the same words as a sentence with a period 0.059; 'Survey of Birds ...' 0.093; 'Planning, Action and Review ...' 0.045. The ' ' peak before a citation year read 0.225 and is not covered."
+}

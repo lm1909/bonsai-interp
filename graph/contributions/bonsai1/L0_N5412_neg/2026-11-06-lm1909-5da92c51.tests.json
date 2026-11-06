@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-5da92c51",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5412-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N5412",
+   "pole": "-",
+   "label": "the tokens ' необходим' and ' 필요' (both 'necessary') and French ' puis' ('then')",
+   "fire": [
+    "Для этой работы необходимы хорошие знания языка.",
+    "Врач сказал, что мне необходим отдых на море.",
+    "Студентам необходимы новые книги по истории.",
+    "Elle a lavé la voiture, puis elle a pris un café.",
+    "Nous avons visité Rome, puis nous sommes rentrés chez nous.",
+    "이 약을 먹으려면 의사의 처방이 필요합니다.",
+    "그 집을 사려면 많은 돈이 필요하다.",
+    "Il a fermé la porte, puis il est sorti."
+   ],
+   "quiet": [
+    "Для этой работы важны хорошие знания языка.",
+    "Врач сказал, что мне нравится отдых на море.",
+    "Студентам нравятся новые книги по истории.",
+    "Elle a lavé la voiture, et elle a pris un café.",
+    "Nous avons visité Rome, et nous sommes rentrés chez nous.",
+    "이 약을 먹은 다음에 의사의 말을 들었다.",
+    "그 집을 보려고 많은 사람이 왔다.",
+    "Il a fermé la porte, et il est sorti."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' необходим', ' 필요', ' puis'",
+ "unit_kind": "token (list)",
+ "confidence": 0.6,
+ "notes": "Card: broad (9.3%), L 93%, max 0.28; ' необходим' x8, ' puis' x3, ' 필요' x3, ' Ramsey' x2, ' juris' x2. Probe: ' puis' 0.934; ' необходим' 0.776; ' 필요' 0.652; ' jurisdiction' 0.325; ' Ram' 0.136. The pole is broad: 'ir' of bouillir read 0.624, ' актив' 0.205 and ' 있습니다' 0.172. Two of the tokens share the meaning 'necessary', the third does not, so this stays a list.",
+ "trigger": {
+  "tokens": [
+   " необходим",
+   " 필요",
+   " puis"
+  ]
+ }
+}

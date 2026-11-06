@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-27eacb78",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N5687+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N5687",
+   "pole": "+",
+   "label": "the word 'region' in English prose, code identifiers and Russian ('реги|он')",
+   "fire": [
+    "The company sells its wine only in one small coastal region.",
+    "aws_region = config.region\nclient = connect(aws_region)\n",
+    "Мы доставляем посылки в любой регион страны.",
+    "Drought has hit the northern region hardest this summer.",
+    "self.view.erase(edit, sublime.Region(0, 10))\n",
+    "В этом регионе зимой часто идет снег.",
+    "Doctors divide the chest into several Regions for description.",
+    "def create(self, name, region):\n    self.region = region\n"
+   ],
+   "quiet": [
+    "The company sells its wine only in one small coastal town.",
+    "aws_key = config.key\nclient = connect(aws_key)\n",
+    "Мы доставляем посылки в любой город страны.",
+    "Drought has hit the northern farms hardest this summer.",
+    "self.view.erase(edit, sublime.Block(0, 10))\n",
+    "В этом городе зимой часто идет снег.",
+    "Doctors divide the chest into several Parts for description.",
+    "def create(self, name, color):\n    self.color = color\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'region' across languages and code",
+ "unit_kind": "lexical",
+ "confidence": 0.9,
+ "notes": "Card: ' region' x6, 'Region' x5, 'ions' x5, 'он' x4, '_region', '_REGION'. Probe: 'он' of регион 1.046; ' Regions' 0.670; 'region' in code 0.646; ' region' 0.459; 'area' in code 0.008; ' Zones' 0.012; ' дом' 0.007.",
+ "trigger": {
+  "words": [
+   "region",
+   "regions",
+   "регион"
+  ]
+ }
+}

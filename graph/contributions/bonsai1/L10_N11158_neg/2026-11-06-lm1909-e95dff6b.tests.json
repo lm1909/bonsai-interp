@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-e95dff6b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N11158-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N11158",
+   "pole": "-",
+   "label": "' cent' in 'per cent' (percent written as two words)",
+   "fire": [
+    "The bank charged him a rate of nine per cent on the loan.",
+    "Prices rose by about four per cent in the first quarter.",
+    "Nearly eighty per cent of the voters came to the polls.",
+    "The tax was raised to twelve per cent by the new king.",
+    "Only ten per cent of the seeds grew in that poor soil.",
+    "Money was then worth six per cent a year in the colony.",
+    "Sales fell by two per cent after the storm.",
+    "He offered the farmers fifteen per cent of the crop."
+   ],
+   "quiet": [
+    "The bank charged him a fee of nine dollars on the loan.",
+    "Prices rose by about four percent in the first quarter.",
+    "Nearly eighty thousand of the voters came to the polls.",
+    "The tax was raised to twelve shillings by the new king.",
+    "Only ten bags of the seeds grew in that poor soil.",
+    "Money was then worth six pence a year in the colony.",
+    "Sales fell by two percent after the storm.",
+    "He offered the farmers fifteen acres of the crop."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' cent' of 'per cent'",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' cent' x3, ' rural' x2, 'it' x2, ' business', ' wild', ' tiny', all in older prose. Probe: ' cent' 0.639; one-word ' percent' 0.085; ' rural' 0.160; ' tiny' 0.106; ' wild' 0.090. So this label is a small part of the pole: I expect coverage to be low, and the old-prose reading is untested here.",
+ "trigger": {
+  "tokens": [
+   " cent"
+  ]
+ }
+}

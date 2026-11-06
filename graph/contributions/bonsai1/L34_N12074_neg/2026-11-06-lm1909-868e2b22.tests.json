@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-868e2b22",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N12074-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N12074",
+   "pole": "-",
+   "label": "the token '-v': a hyphen glued to the start of a word beginning with v ('high-|voltage', 'non-|virulent', 'bluish-|violet')",
+   "fire": [
+    "The workers repaired a damaged low-voltage cable near the plant.",
+    "Doctors gave the sick child a multi-vitamin with breakfast.",
+    "The moth has dark wings with reddish-violet spots.",
+    "The firm makes non-volatile memory for small devices.",
+    "She bought an anti-virus program for the office computers.",
+    "Investors fled the high-volatility shares during the crash.",
+    "The clinic treats non-viral infections of the liver.",
+    "The anti-vaccine group marched along the road on Monday."
+   ],
+   "quiet": [
+    "The workers repaired a damaged low-density cable near the plant.",
+    "Doctors gave the sick child a multi-grain cereal with breakfast.",
+    "The moth has dark wings with reddish-brown spots.",
+    "The firm makes non-stick pans for small kitchens.",
+    "She bought an anti-glare screen for the office computers.",
+    "Investors fled the high-risk shares during the crash.",
+    "The clinic treats non-urgent infections of the liver.",
+    "The anti-tax group marched along the road on Monday."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'-v' after a hyphen",
+ "unit_kind": "token",
+ "confidence": 0.9,
+ "notes": "Card: '-v' x14, 'V' x5, 'v' x4, ' v' x4. Probe: '-v' 0.875, 0.833, 0.673 and 0.337; the same frames with -energy, -toxic, -term and -green at most 0.111.",
+ "trigger": {
+  "tokens": [
+   "-v"
+  ]
+ }
+}

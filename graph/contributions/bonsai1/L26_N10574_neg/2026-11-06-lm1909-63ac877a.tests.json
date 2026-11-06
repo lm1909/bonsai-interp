@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-63ac877a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N10574-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N10574",
+   "pole": "-",
+   "label": "' with' in 'associated with' stating a health outcome ('is associated with better health')",
+   "fire": [
+    "Regular walking is associated with lower blood pressure in older women.",
+    "Eating more fish was associated with reduced risk of stroke.",
+    "Moderate exercise is associated with better sleep and improved mood.",
+    "A high fiber diet was associated with less colon cancer in men.",
+    "Heavy smoking is associated with faster decline in lung function.",
+    "Frequent reading was associated with slower memory loss in the group.",
+    "Lower income is associated with worse outcomes after heart surgery.",
+    "Good dental care was associated with fewer infections among the residents."
+   ],
+   "quiet": [
+    "Regular walking is planned with local guides in the old town.",
+    "Eating more fish was common with families along the northern coast.",
+    "Moderate rain is forecast with some wind in the morning.",
+    "A high fence was built with old wood by the men.",
+    "The Whig party was associated with wealthy merchants in the cities.",
+    "His name was long associated with the old mill by the river.",
+    "Lower Street is lined with cafes near the city square.",
+    "This painter was associated with the Paris school among the critics."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'associated with' a health outcome",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Card: ' with' x7, ' have' x4, ' to' x4, ' had' x2, ' felt'. Probe: ' with' after 'associated' 0.326-0.543; 'served with' and 'working with' 0.005; ' have' after 'more active role' 0.662, but also 0.503 in 'more direct road and have time', so ' have' is not specific and the near misses avoid it. Near misses include 'associated with' outside health."
+}
