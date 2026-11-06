@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-f4c1dd5e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N9169-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:13:03+00:00",
+ "recipe": {
+  "toolchain_commit": "653c9f609",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N9169_neg/2026-11-06-lm1909-f4c1dd5e.tests.json"
+ },
+ "label": "a short list of tokens: _rows, _once, .views, ' link' (no shared pattern found)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N9169_neg/2026-11-06-lm1909-f4c1dd5e.tests.json",
+   "prereg_commit": "653c9f609",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.791,
+     "peak": "_rows"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.601,
+     "peak": "_once"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.539,
+     "peak": ".views"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.552,
+     "peak": " link"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.643,
+     "peak": "_rows"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.635,
+     "peak": "_once"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.372,
+     "peak": ".views"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.268,
+     "peak": " link"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.082,
+     "peak": ".rows"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.091,
+     "peak": "("
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.13,
+     "peak": " import"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.149,
+     "peak": " button"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.134,
+     "peak": ".values"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.101,
+     "peak": ".run"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " import"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " map"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.577,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "653c9f609",
+  "minutes": 16,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tokens: _rows, _once, .views, link",
+ "unit_kind": "token / code",
+ "confidence": 0.65,
+ "notes": "Corpus max is tiny (0.63), the card flags the pole broad, and the gate-closed regime is 80%. I found no pattern, so the label stays a list.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "_rows",
+   "_once",
+   ".views",
+   " link"
+  ]
+ }
+}

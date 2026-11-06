@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a6592ceb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N9429-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:12:53+00:00",
+ "recipe": {
+  "toolchain_commit": "653c9f609",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N9429_neg/2026-11-06-lm1909-a6592ceb.tests.json"
+ },
+ "label": "the geometry of a body's position or motion in space: angle, azimuth, maneuvers, motion over time",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N9429_neg/2026-11-06-lm1909-a6592ceb.tests.json",
+   "prereg_commit": "653c9f609",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.458,
+     "peak": " maneuvers"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.353,
+     "peak": " angle"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.407,
+     "peak": " motion"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.186,
+     "peak": " star"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.211,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.108,
+     "peak": " slow"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.049,
+     "peak": " Moon"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.267,
+     "peak": " swing"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.432,
+     "peak": " take"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.26,
+     "peak": " size"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": "It"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.322,
+     "peak": " take"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " across"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " fence"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.108,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.727,
+    "median_fire": 0.239,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "653c9f609",
+  "minutes": 16,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "position and motion in the sky",
+ "unit_kind": "semantic",
+ "confidence": 0.45,
+ "notes": "Probes: 0.34-0.57 against near misses up to 0.26. The + pole fires on instruments (weather instruments, warheads).",
+ "selection": "random draw"
+}
