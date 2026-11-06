@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0a63ba56",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8757-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:35:29+00:00",
+ "recipe": {
+  "toolchain_commit": "ea78cbb46",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N8757_neg/2026-11-06-lm1909-0a63ba56.tests.json"
+ },
+ "label": "The subject or verb of a temporal clause opened by 'by the time', 'from the moment' or 'until the moment' ('By the time the war ended', 'from the moment a guest walks'); the same verbs after a fronted time phrase or in a plain main clause stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N8757_neg/2026-11-06-lm1909-0a63ba56.tests.json",
+   "prereg_commit": "ea78cbb46",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.116,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.035,
+     "peak": " moment"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.119,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.082,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.061,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.142,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.312,
+     "peak": " moves"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.134,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": "Early"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.021,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.054,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": " moved"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.036,
+     "peak": " curtain"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.117,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ea78cbb46",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verb in a 'by the time' clause",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Probes: 0.15-0.28, against 0.01-0.06 for the same verbs in main clauses, so the median is at risk. Fronted time phrases also read 0.11-0.13 ('Early in his', 'In his early'), so two near misses use them. Fire sentences 1, 3 and 6 share 'By the time the' with probes, a known 0.16 on ' the'; the verb comes later. 'Not much was heard of him after that' read 0.14 and 'Little was known' 0.21, and the top examples also have ' was' in biography, which this test leaves out.",
+ "selection": "random draw"
+}

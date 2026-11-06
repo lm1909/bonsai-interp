@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a95f3f0f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N9239-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:35:37+00:00",
+ "recipe": {
+  "toolchain_commit": "ea78cbb46",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N9239_neg/2026-11-06-lm1909-a95f3f0f.tests.json"
+ },
+ "label": "The words ' shades', ' tones' and ' rays' and Russian 'оттенки' when about colour or light (peak on the noun or the following ' of'); the same words about something else stay low. Word-level: other words for colour or light are not tested.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N9239_neg/2026-11-06-lm1909-a95f3f0f.tests.json",
+   "prereg_commit": "ea78cbb46",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.791,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.487,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.506,
+     "peak": " rays"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.938,
+     "peak": "ки"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.926,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.544,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.588,
+     "peak": " rays"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.105,
+     "peak": "ки"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.02,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": " soft"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.211,
+     "peak": " rays"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 1.182,
+     "peak": "ки"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.116,
+     "peak": " shades"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.39,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": "ера"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.69,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ea78cbb46",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' shades', ' tones', ' rays' of colour or light",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 0.75-1.14 for shades, tones, rays and 'оттенки', and 'rays of' 0.48. 'His shades were on the table' 0.11, 'tone of her letter' 0.02, 'rows of houses' 0.13. ' rich' read 0.50 even in 'rich people', a separate leak this test leaves out. Spanish 'tonos' read 0.21 with or without colour, and 'nuances' 0.10, so those are not covered.",
+ "selection": "random draw"
+}

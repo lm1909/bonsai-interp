@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7c3c3dc7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10553-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:35:25+00:00",
+ "recipe": {
+  "toolchain_commit": "ea78cbb46",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N10553_neg/2026-11-06-lm1909-7c3c3dc7.tests.json"
+ },
+ "label": "The piece that begins or leads into the word for an accident on the road: ' Acc' in capitalized 'Auto Accidents', 'ного' in 'дорожно-транспортного', ' ав' in 'аварии'; road talk with no accident, and an accident off the road, stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N10553_neg/2026-11-06-lm1909-7c3c3dc7.tests.json",
+   "prereg_commit": "ea78cbb46",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.398,
+     "peak": " Acc"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.485,
+     "peak": " Acc"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.402,
+     "peak": "ного"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.725,
+     "peak": "ного"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.112,
+     "peak": "ного"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.418,
+     "peak": " ав"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.294,
+     "peak": " Acc"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.396,
+     "peak": " ав"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.087,
+     "peak": " Car"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.062,
+     "peak": " Acc"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.249,
+     "peak": " у"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.056,
+     "peak": "кой"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.187,
+     "peak": "ного"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": "а"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "Her"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " по"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.41,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ea78cbb46",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "piece leading into a road accident",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probes: 'ного' 0.61-0.96, ' Acc' 0.05-0.52, ' ав' 0.16-0.31. 'транспортного проекта' read 0.14, so 'ного' depends on the road-accident reading; ' traffic' before accident 0.26, ' car' before crash 0.25, and 'Satellite Accidents' only 0.05, so road matters. The output direction promotes ' accident', ' emergency', ' disaster'. 'Most Auto Magazines' leaked 0.21 on ' most'.",
+ "selection": "random draw"
+}
