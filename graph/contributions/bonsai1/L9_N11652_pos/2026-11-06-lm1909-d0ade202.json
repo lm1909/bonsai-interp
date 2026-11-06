@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d0ade202",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N11652+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:38:00+00:00",
+ "recipe": {
+  "toolchain_commit": "4046b8182",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N11652_pos/2026-11-06-lm1909-d0ade202.tests.json"
+ },
+ "label": "A speech verb that reports an answer to a question just asked ('I asked him why, and he said', 'she told me'); the same verb with no question before it stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N11652_pos/2026-11-06-lm1909-d0ade202.tests.json",
+   "prereg_commit": "4046b8182",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.695,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.637,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.344,
+     "peak": " told"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.73,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.339,
+     "peak": " says"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.517,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.732,
+     "peak": " told"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.38,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.101,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.037,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " only"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.168,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " said"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.577,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4046b8182",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "speech verb reporting an answer",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' said' x6, '—' x4, ' says' x2, ' told' x2, '“Oh' x2, after 'I asked'. Probe: 'asked him why, and he said' 0.85, 'asked her ... she said' 0.78, 'she told' 0.54, 'Orhan says' 0.44; no question before: 'and he said' 0.00, 'she said hello' 0.04, 'The manager said' 0.01. ' he' before ' left' after a question reached 0.42, so the pole already reads the pronoun.",
+ "selection": "random draw"
+}

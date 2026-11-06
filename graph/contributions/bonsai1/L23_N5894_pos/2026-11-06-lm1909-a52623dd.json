@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a52623dd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N5894+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:37:55+00:00",
+ "recipe": {
+  "toolchain_commit": "4046b8182",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N5894_pos/2026-11-06-lm1909-a52623dd.tests.json"
+ },
+ "label": "The word that introduces the dimension of a ranking or comparison ('closest rivals in terms of', 'ranks second in', 'without equal in', 'topped X for', Russian 'место по'): the output direction promotes ' sheer', ' magnitude', ' efficiency'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N5894_pos/2026-11-06-lm1909-a52623dd.tests.json",
+   "prereg_commit": "4046b8182",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.621,
+     "peak": " terms"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.684,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.936,
+     "peak": " terms"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.19,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.835,
+     "peak": " по"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.561,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.401,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.462,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.154,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " villages"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " without"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " находится"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " coffee"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " stays"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.591,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4046b8182",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "word naming the dimension of a ranking",
+ "unit_kind": "contextual / prediction",
+ "confidence": "high",
+ "notes": "Card: ' in' x14, ' by' x5, ' terms' x3, ' по' x3, ' for' x2, after rivals, ranks, equal, topped. Logit effect promotes ' sheer', ' magnitude', ' raw', ' intensity', ' popularity', ' size'. The - pole is ' than' and ' far': the comparison's other half. Probe: rivals in terms 0.91, without equal in terms 0.86, topped ... for 0.80, место по 0.69, ranks second in 0.59; friends in town 0.03, without paint 0.00, 'topped the cake' 0.20.",
+ "selection": "random draw"
+}

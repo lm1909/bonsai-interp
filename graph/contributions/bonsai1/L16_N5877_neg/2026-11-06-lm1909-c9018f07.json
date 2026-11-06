@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-c9018f07",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5877-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:38:08+00:00",
+ "recipe": {
+  "toolchain_commit": "4046b8182",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N5877_neg/2026-11-06-lm1909-c9018f07.tests.json"
+ },
+ "label": "A verb meaning 'is a sign of' (indicates, reflects, shows); verbs of doing or causing in the same frame stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N5877_neg/2026-11-06-lm1909-c9018f07.tests.json",
+   "prereg_commit": "4046b8182",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.404,
+     "peak": " indicates"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.282,
+     "peak": " reflects"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.108,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.445,
+     "peak": " wealth"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.405,
+     "peak": " reflected"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.192,
+     "peak": " nature"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.31,
+     "peak": " show"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.166,
+     "peak": " indicate"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.032,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": " tourists"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.296,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4046b8182",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "verb meaning 'is a sign of'",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' indicates' x5, ' show' x3, ' shows' x3, ' showing' x2, ' indicate' x2, ' reflecting' x2, 表示. The + pole has the causal side (' make', ' result', ' destroy', 使), and its logit effect suppresses ' indicates', ' signifies', ' suggests'. Probe: indicates 0.14-0.42, reflected 0.34, show 0.15; helps, employed, annoys, make at most 0.04. Readings are modest.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "indicates",
+   "indicate",
+   "reflects",
+   "reflected"
+  ]
+ }
+}

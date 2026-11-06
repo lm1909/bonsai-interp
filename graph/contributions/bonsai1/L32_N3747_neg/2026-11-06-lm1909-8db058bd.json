@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8db058bd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N3747-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:37:37+00:00",
+ "recipe": {
+  "toolchain_commit": "4046b8182",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N3747_neg/2026-11-06-lm1909-8db058bd.tests.json"
+ },
+ "label": "'you and your' on its way to a spouse, in a statement addressed to a married reader (usually about tax or accounts); a sentence without a marriage context stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N3747_neg/2026-11-06-lm1909-8db058bd.tests.json",
+   "prereg_commit": "4046b8182",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.518,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.526,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.313,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.403,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.394,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.622,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.84,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.564,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.082,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "Since"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " thousand"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.366,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " customer"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": "If"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.119,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.037,
+     "peak": "When"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.522,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4046b8182",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "'you and your' before a spouse",
+ "unit_kind": "contextual / prediction",
+ "confidence": "low",
+ "notes": "Card: ' E' x4, ' your' x3, ' the' x3, ' and' x2, ' her' before spouse; the + pole's logit effect promotes ' partner', ' partners', so the - pole reads against that. Probe: 'married and both you and your' 0.62; 'Both you and your dog' 0.02, 'his or her spouse' 0.04, ' E' of E-mini 0.07. So this is one narrow slice and rests on one probe.",
+ "selection": "random draw"
+}
