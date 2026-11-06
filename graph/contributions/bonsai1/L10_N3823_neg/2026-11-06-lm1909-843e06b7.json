@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-843e06b7",
+ "kind": "qc",
+ "neuron": "bonsai1/L10/N3823-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:04:27+00:00",
+ "recipe": {
+  "toolchain_commit": "2626ef183",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N3823_neg/2026-11-06-lm1909-843e06b7.tests.json"
+ },
+ "label": "The opening word of a correlative pair: 'both', 'either', 'not only', 'not just', which promises a second element to come",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N3823_neg/2026-11-06-lm1909-843e06b7.tests.json",
+   "prereg_commit": "2626ef183",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.165,
+     "peak": " both"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.675,
+     "peak": " either"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.337,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.104,
+     "peak": " both"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.105,
+     "peak": " just"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.371,
+     "peak": " either"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.326,
+     "peak": " both"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.316,
+     "peak": " only"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " report"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.031,
+     "peak": "'t"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " late"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.321,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "2626ef183",
+  "minutes": 7,
+  "batch_size": 1,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "refine",
+  "label_under_test": "'either' (or German entw|eder) opening an either...or choice between two options: the pole marks the start of a correlative disjunction; 'either' at the end of a negative clause, and the same choices written with plain 'or', stay low"
+ },
+ "short": "opening a correlative pair",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "QC refine. The current label names only 'either'. In its coverage round (seeded sample, 16 strong activations) 2 of 16 were 'either', while 6 were 'both' and 4 were 'not only' or 'not'. New sentences, none scored before this commit.",
+ "selection": "picked"
+}
