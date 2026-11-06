@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-ae33a6a4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N9583+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:04:17+00:00",
+ "recipe": {
+  "toolchain_commit": "534cdd5cb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N9583_pos/2026-11-06-lm1909-ae33a6a4.tests.json"
+ },
+ "label": "(gate-closed, weak) pieces of foreign names and words: Rash|ida, Tschaik|owski, P|ac|ini, DS|N_",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N9583_pos/2026-11-06-lm1909-ae33a6a4.tests.json",
+   "prereg_commit": "534cdd5cb",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.417,
+     "peak": " Khal"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.281,
+     "peak": "cha"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.464,
+     "peak": "ia"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.39,
+     "peak": "ash"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.302,
+     "peak": "ern"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.284,
+     "peak": "ac"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.46,
+     "peak": "OND"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.291,
+     "peak": " Rash"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.096,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.076,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.181,
+     "peak": "William"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.106,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.094,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.06,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.134,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.18,
+     "peak": " Reed"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.346,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "534cdd5cb",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "pieces of foreign names",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "Second round; the first recorded this pole as dense with a label about density and it held unexpectedly. The card still flags density (17% of tokens reach 0.1 of max), but probes separate: ' Rash' 0.46, 'cha' 0.29, 'ac' 0.28, 'DS' 0.23; plain sentences 0.07-0.09. This contribution sets a non-dense unit_kind on that evidence.",
+ "selection": "picked"
+}

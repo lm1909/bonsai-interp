@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-9e7d6c54",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N8366-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:04:21+00:00",
+ "recipe": {
+  "toolchain_commit": "534cdd5cb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N8366_neg/2026-11-06-lm1909-9e7d6c54.tests.json"
+ },
+ "label": "(sub-trigger of a broad pole) the digit after 20 in a year cited after a publisher: '(Penguin, 2008)', '(Faber, 2001)'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N8366_neg/2026-11-06-lm1909-9e7d6c54.tests.json",
+   "prereg_commit": "534cdd5cb",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.361,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.303,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.445,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.162,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.163,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.166,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.253,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.251,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.169,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.069,
+     "peak": " Road"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.124,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.125,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.156,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.188,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.157,
+     "peak": ")"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.252,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "534cdd5cb",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "year digit after a publisher",
+ "unit_kind": "token / numeric",
+ "confidence": 0.6,
+ "notes": "Second round; in the first (after a parenthesised title) a year digit fired at 1.17. Probes: '0' in '(Penguin, 2008)' 0.85, '(Faber, 2001)' 0.27; 'in 2007' 0.05, '2005 dollars' 0.07, '(Faber, 1987)' 0.08; '(Penguin)' 0.10. Card: '0' 5. The pole is broad, so this is one piece at most.",
+ "selection": "picked"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-37af222c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6947+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:03:59+00:00",
+ "recipe": {
+  "toolchain_commit": "534cdd5cb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N6947_pos/2026-11-06-lm1909-37af222c.tests.json"
+ },
+ "label": "the verb after 'you may' or 'you may not' in a software licence: use, obtain, modify, sublicense",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N6947_pos/2026-11-06-lm1909-37af222c.tests.json",
+   "prereg_commit": "534cdd5cb",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.034,
+     "peak": " obtain"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.286,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.485,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.715,
+     "peak": " reuse"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.271,
+     "peak": " copy"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.523,
+     "peak": " sublicense"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.132,
+     "peak": " obtain"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.357,
+     "peak": " sell"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.199,
+     "peak": " obtain"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.066,
+     "peak": "ued"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.039,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "Hall"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.064,
+     "peak": "ued"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": " bring"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.548,
+     "peak": " obtain"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.064,
+     "peak": "ued"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.504,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "534cdd5cb",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "verb after 'you may' in a licence",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Second round; the first (' use' in the Apache licence header) failed because ' obtain' in the same licence fired at 1.03-1.05. Probes: ' obtain' 1.01, ' sublicense' 0.54, ' modify' 0.43, ' share' after a non-licence contract 0.31; 'You may obtain a form' without a licence 0.03. Near misses keep 'you may' and a legal-looking line, and drop the software licence.",
+ "selection": "picked"
+}
