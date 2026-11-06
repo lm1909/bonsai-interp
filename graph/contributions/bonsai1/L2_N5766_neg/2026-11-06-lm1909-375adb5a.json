@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-375adb5a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N5766-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:55:37+00:00",
+ "recipe": {
+  "toolchain_commit": "8f69d73f5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N5766_neg/2026-11-06-lm1909-375adb5a.tests.json"
+ },
+ "label": "the name ' Luke' and the letter ü (list)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N5766_neg/2026-11-06-lm1909-375adb5a.tests.json",
+   "prereg_commit": "8f69d73f5",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.633,
+     "peak": " Luke"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.517,
+     "peak": " Luke"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.434,
+     "peak": "ü"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.248,
+     "peak": " Luke"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.666,
+     "peak": "ü"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.429,
+     "peak": " Luke"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.574,
+     "peak": "ü"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.187,
+     "peak": "Luke"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": "irma"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.286,
+     "peak": " für"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.079,
+     "peak": " John"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " Spiel"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.077,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.476,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8f69d73f5",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Luke', ü",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Luke",
+   "ü"
+  ]
+ }
+}
