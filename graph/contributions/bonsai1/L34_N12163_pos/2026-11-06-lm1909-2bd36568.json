@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-2bd36568",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N12163+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:22:08+00:00",
+ "recipe": {
+  "toolchain_commit": "adfc44d66",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N12163_pos/2026-11-06-lm1909-2bd36568.tests.json"
+ },
+ "label": "the slot just before the name of a language: ' in' after 'not in …, but', '(en', '(بال', ' (' in a '(German)' note, firing where a language name is expected; the same words before materials or formats stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N12163_pos/2026-11-06-lm1909-2bd36568.tests.json",
+   "prereg_commit": "adfc44d66",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.481,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.55,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.729,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.573,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.386,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.741,
+     "peak": "بال"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.334,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.199,
+     "peak": ")."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.117,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.55,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.054,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.36,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.098,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.564,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.327,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.129,
+     "peak": " available"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.805,
+    "median_fire": 0.516,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "adfc44d66",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "slot before a language name",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " in",
+   " (",
+   "en",
+   " بال",
+   "بال"
+  ]
+ }
+}

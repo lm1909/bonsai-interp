@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-32747d76",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10917-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:22:33+00:00",
+ "recipe": {
+  "toolchain_commit": "adfc44d66",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N10917_neg/2026-11-06-lm1909-32747d76.tests.json"
+ },
+ "label": "regions of the human trunk: ' upper' before body, ' down' after hips, ' pel'+'vis', ' torso', ' chest', firing on those words; 'upper' and 'down' in non-body senses stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N10917_neg/2026-11-06-lm1909-32747d76.tests.json",
+   "prereg_commit": "adfc44d66",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.463,
+     "peak": " body"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.127,
+     "peak": " waist"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.668,
+     "peak": "vis"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.494,
+     "peak": " torso"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.458,
+     "peak": " back"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.994,
+     "peak": " down"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.628,
+     "peak": "vis"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.567,
+     "peak": " torso"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " brakes"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "ors"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " village"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.028,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.597,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "adfc44d66",
+  "minutes": 3,
+  "batch_size": 14,
+  "dtype": "float16"
+ },
+ "short": "trunk and upper-body regions",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}
