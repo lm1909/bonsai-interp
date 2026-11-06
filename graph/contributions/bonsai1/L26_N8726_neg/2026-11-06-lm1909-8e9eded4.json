@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-8e9eded4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N8726-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:15:13+00:00",
+ "recipe": {
+  "toolchain_commit": "8e0eb32a5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N8726_neg/2026-11-06-lm1909-8e9eded4.tests.json"
+ },
+ "label": "hashtag slogan in prose, the ' #' or first piece ('#metoo', '#BeBoldForChange', 'always #movingtogether')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N8726_neg/2026-11-06-lm1909-8e9eded4.tests.json",
+   "prereg_commit": "8e0eb32a5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.517,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.461,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.521,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.474,
+     "peak": "Choose"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.623,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.512,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.731,
+     "peak": "Be"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.517,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " what"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": "Join"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "Help"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.04,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " shops"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.517,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8e0eb32a5",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "hashtag slogans",
+ "unit_kind": "token / format",
+ "confidence": "medium",
+ "notes": "Card: ' #' x12, '#' x3, 'Be' x2, ' Your' x2, ' be' x2. Probe: '#BeBold' 0.85, '#movingtogether' 0.69, '#metoo' 0.28; 'Find Your Passion' 0.17; no hashtag 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " #",
+   "#"
+  ]
+ }
+}

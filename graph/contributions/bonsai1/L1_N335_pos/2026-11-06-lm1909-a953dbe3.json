@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a953dbe3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N335+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:15:03+00:00",
+ "recipe": {
+  "toolchain_commit": "8e0eb32a5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N335_pos/2026-11-06-lm1909-a953dbe3.tests.json"
+ },
+ "label": "約 in Japanese 制約 ('constraint')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N335_pos/2026-11-06-lm1909-a953dbe3.tests.json",
+   "prereg_commit": "8e0eb32a5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.961,
+     "peak": "約"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.944,
+     "peak": "約"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.924,
+     "peak": "約"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.855,
+     "peak": "約"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.874,
+     "peak": "約"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.838,
+     "peak": "約"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.876,
+     "peak": "約"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.934,
+     "peak": "約"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": "に"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": "品"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": "、"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": "を"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": "数"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": "を"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": "を"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "を"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.9,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8e0eb32a5",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "制約",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: '度' x10, '約' x9, '도' x8, with the two top peaks on 約 in 制約 (7.6, others under 2). Probe: 制約 0.96; 節約 0.12; 一度 0.03; 規則 0.03. '度' and '도' are not claimed. Very sparse pole.",
+ "selection": "random draw"
+}

@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-e94ab65e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7842+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:15:19+00:00",
+ "recipe": {
+  "toolchain_commit": "8e0eb32a5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N7842_pos/2026-11-06-lm1909-e94ab65e.tests.json"
+ },
+ "label": "diet-label modifiers before a food word (whole grains, saturated fat, fermented cabbage)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N7842_pos/2026-11-06-lm1909-e94ab65e.tests.json",
+   "prereg_commit": "8e0eb32a5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.633,
+     "peak": " whole"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.504,
+     "peak": " saturated"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.432,
+     "peak": " fermented"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.546,
+     "peak": " whole"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.572,
+     "peak": " saturated"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.316,
+     "peak": " fermented"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.392,
+     "peak": " whole"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.617,
+     "peak": " saturated"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.042,
+     "peak": " beans"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.057,
+     "peak": " Korean"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.061,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.065,
+     "peak": " shelf"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": " spent"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.057,
+     "peak": " glass"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.525,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8e0eb32a5",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "food-label modifiers",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Card: ' whole' x15, ' saturated' x7, ' prescription' x3, ' conventional' x2, ' fermented', ' soy'. Probe: saturated 0.76, whole grains 0.62, fermented 0.51; 'whole cake' 0.06; 'vegetables and rice' 0.07. ' prescription' and ' LED' are not claimed.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "whole",
+   "saturated",
+   "fermented"
+  ]
+ }
+}

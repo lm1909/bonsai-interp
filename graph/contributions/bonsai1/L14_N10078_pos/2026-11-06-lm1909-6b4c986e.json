@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6b4c986e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N10078+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:15:18+00:00",
+ "recipe": {
+  "toolchain_commit": "8e0eb32a5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N10078_pos/2026-11-06-lm1909-6b4c986e.tests.json"
+ },
+ "label": "threshold phrasing in statistics ('at or above 25%')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N10078_pos/2026-11-06-lm1909-6b4c986e.tests.json",
+   "prereg_commit": "8e0eb32a5",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.586,
+     "peak": " above"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.117,
+     "peak": " above"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.453,
+     "peak": " above"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.027,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.435,
+     "peak": " above"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.089,
+     "peak": " above"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.184,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.138,
+     "peak": " above"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.107,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": " invited"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.097,
+     "peak": "%"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.082,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.074,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": " bonus"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.161,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8e0eb32a5",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'at or above'",
+ "unit_kind": "contextual / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' or' x6, ' all' x2, ' above', ' between', ' required', ' aware'. Probe: 'at or above 25%' 0.46, 'of 25%' 0.11, 'between 6 and 10' 0.10; 'judgements are required' 0.57 is not claimed.",
+ "selection": "random draw"
+}

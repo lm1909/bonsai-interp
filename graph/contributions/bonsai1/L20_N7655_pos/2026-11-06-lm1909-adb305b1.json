@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-adb305b1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N7655+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:15:40+00:00",
+ "recipe": {
+  "toolchain_commit": "8e0eb32a5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N7655_pos/2026-11-06-lm1909-adb305b1.tests.json"
+ },
+ "label": "' governing' in the Apache license line 'the specific language governing permissions and limitations'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N7655_pos/2026-11-06-lm1909-adb305b1.tests.json",
+   "prereg_commit": "8e0eb32a5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.697,
+     "peak": " governing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.86,
+     "peak": " governing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.795,
+     "peak": " governing"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.737,
+     "peak": " governing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.73,
+     "peak": " governing"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.788,
+     "peak": " governing"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.649,
+     "peak": " under"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.705,
+     "peak": " governing"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.034,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " county"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.063,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " district"
+    }
+   ],
+   "probed_before": {
+    "fire": 1,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.734,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8e0eb32a5",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Apache license line",
+ "unit_kind": "lexical / format",
+ "confidence": "high",
+ "notes": "Card: ' governing' x31 of the top 32 (also flagged by density 0.3%, so near-identical lines are common in the corpus). Probe: full line 0.65 (peak ' under'); 'rules governing permissions' 0.02; 'governing body' 0.00. 'See the License for the specific terms' reached 0.50, so license text itself leaks, and near misses avoid it.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " governing"
+  ]
+ }
+}
