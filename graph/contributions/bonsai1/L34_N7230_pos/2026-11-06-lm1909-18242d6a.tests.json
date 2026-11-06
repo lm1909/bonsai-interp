@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-18242d6a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7230+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:35:01+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N7230",
+   "pole": "+",
+   "label": "the piece right before a split-off 'h' (over|hang, hedge|hog, ip|hoto, compr|é|hension, de|hors)",
+   "fire": [
+    "The climbers rested under a huge overhang of rock.",
+    "The old branches overhanging the pond fell in winter.",
+    "A hedgehog crossed the garden at dusk.",
+    "Shrews, hedgehogs and moles eat slugs.",
+    "I lost those pictures when iphoto crashed.",
+    "Elle reste en dehors de la ville.",
+    "Cela facilite la compréhension du texte.",
+    "Son appréhension est compréhensible."
+   ],
+   "quiet": [
+    "The climbers rested under a huge shelf of rock.",
+    "The old branches over the pond fell in winter.",
+    "A rabbit crossed the garden at dusk.",
+    "Shrews, rabbits and moles eat slugs.",
+    "I lost those pictures when my iphone crashed.",
+    "Elle reste au centre de la ville.",
+    "Cela facilite la lecture du texte.",
+    "Son avis est très clair."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "piece before a split 'h'",
+ "unit_kind": "prediction / token piece",
+ "confidence": "medium",
+ "notes": "Direct logits promote 'h', ' h', 'hed', 'hog', 'hoe'. The pole fires before the 'h', so it looks like a next-token unit. ' cliff' reached 0.24 in a probe, unexplained."
+}
