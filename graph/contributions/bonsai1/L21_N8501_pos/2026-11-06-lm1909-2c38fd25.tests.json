@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-2c38fd25",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8501+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:51:26+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L21/N8501",
+   "pole": "+",
+   "label": "the word ' because', giving the reason for a fact, as opposed to although, until, and other connectives in the same sentences",
+   "fire": [
+    "We have leap years because the earth's orbit is not exact.",
+    "Bread rises because the yeast gives off gas.",
+    "It was because she had seen the letter.",
+    "They picked the small flat because it faced south.",
+    "Oil floats because it is lighter than water.",
+    "The match stopped because of the heavy rain.",
+    "He quit the team because the coach shouted.",
+    "Cats purr because they feel safe."
+   ],
+   "quiet": [
+    "We have leap years, and the earth's orbit is not exact.",
+    "Bread rises until the yeast stops giving off gas.",
+    "It was before she had seen the letter.",
+    "They picked the small flat although it faced south.",
+    "Oil floats, but it is lighter than water.",
+    "The match stopped in spite of the heavy rain.",
+    "He quit the team when the coach shouted.",
+    "Cats purr after they eat."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "quick-test",
+   "second-round",
+   "card"
+  ]
+ },
+ "short": "the word 'because'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Second round. In a sweep, 'reason clause: because, explanatory when' failed (AUROC 0.891): ' because' 0.59–1.00, while my 'explanatory when' did not separate from time ' when'. One near miss here keeps ' when', and one ' after', both of which reached 0.34–0.39 before.",
+ "trigger": {
+  "tokens": [
+   " because",
+   "Because",
+   " Because"
+  ]
+ }
+}

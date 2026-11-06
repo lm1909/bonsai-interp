@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-95950f80",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11479-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:51:26+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L22/N11479",
+   "pole": "-",
+   "label": "a nationality or ethnic adjective, whether of a person, food or a thing (Russian, Chinese, Irish, Greek), as opposed to other adjectives in the same frames",
+   "fire": [
+    "Mila is a famous Ukrainian actress in Los Angeles.",
+    "We ate Chinese noodles at the street fair.",
+    "She ordered a Polish sausage from the stall.",
+    "He has Irish parents and an old farm.",
+    "A small plate of Greek olives sat on the table.",
+    "They imported the finest Italian wines.",
+    "The Armenian rug hung in the den.",
+    "Her father was a Scottish teacher in Ohio."
+   ],
+   "quiet": [
+    "Mila is a famous young actress in Los Angeles.",
+    "We ate spicy noodles at the street fair.",
+    "She ordered a smoked sausage from the stall.",
+    "He has elderly parents and an old farm.",
+    "A small plate of green olives sat on the table.",
+    "They imported the finest white wines.",
+    "The woven rug hung in the den.",
+    "Her father was a strict teacher in Ohio."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "quick-test",
+   "second-round",
+   "card"
+  ]
+ },
+ "short": "nationality adjective",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Second round. In a sweep, 'nationality or ethnicity of a person' failed (AUROC 0.906): food and object uses reached 0.19–0.36, so the person is not required. These near misses use other adjectives."
+}

@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-0386609a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9483-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:51:26+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L4/N9483",
+   "pole": "-",
+   "label": "the URL pieces '?p' and '.org' (showthread.php?p=, www.w3.org), as opposed to '.com' URLs and to text without a URL",
+   "fire": [
+    "http://www.site.net/vb/showthread.php?p=8821#post",
+    "xmlns=\"http://www.w3.org/1999/xhtml\"",
+    "See http://www.foo.net/forum/viewtopic.php?p=31 for more.",
+    "schema=\"http://purl.org/rss/1.0/\"",
+    "Link: http://www.mine.net/index.php?p=99",
+    "http://www.bar.net/wp/?p=4121",
+    "Namespace: http://www.w3.org/2000/svg",
+    "Details: http://www.gnu.org/software/bash"
+   ],
+   "quiet": [
+    "http://www.site.com/news/today#post",
+    "xmlns=\"http://www.site.com/ns\"",
+    "See http://www.foo.com/forum/topic for more.",
+    "schema=\"http://example.com/rss/\"",
+    "Link: http://www.mine.com/index.html",
+    "http://www.bar.com/wp/about",
+    "The namespace is explained in a book.",
+    "Details are given in the next chapter."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "quick-test",
+   "second-round",
+   "card"
+  ]
+ },
+ "short": "URL pieces '?p' and '.org'",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Second round. In a sweep, 'URL pieces' failed (AUROC 0.875) with '?p' and '.org' at 0.25–0.74 and one https item at -0.03. Near misses here include '.com' URLs, a harder test. Tiny corpus max (4.19).",
+ "trigger": {
+  "tokens": [
+   "?p",
+   ".org",
+   "/?"
+  ]
+ }
+}

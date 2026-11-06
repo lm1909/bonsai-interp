@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-bb41d2f4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N9237+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:51:26+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L25/N9237",
+   "pole": "+",
+   "label": "the token ' \"\"\"' that opens a Python docstring, as opposed to the same functions without one and to ' \"' and other strings",
+   "fire": [
+    "def norm(v):\n    \"\"\" Scale a vector to unit length.\"\"\"\n    return v",
+    "class CacheMiddleware:\n    \"\"\"Store responses in memory.\"\"\"\n    size = 3",
+    "def read(path):\n    \"\"\"Read a file and return its text.\"\"\"\n    return open(path)",
+    "def start(self):\n    \"\"\"\n    Start the timer.\n    \"\"\"\n    self.t = 0",
+    "class Foo(Base):\n    \"\"\" A small helper class.\"\"\"\n    pass",
+    "def add(a, b):\n    \"\"\"Return the sum of two numbers.\"\"\"\n    return a + b",
+    "def stop():\n    \"\"\" Stop the loop now.\"\"\"\n    run = False",
+    "class Node:\n    \"\"\"One element of a linked list.\"\"\"\n    next = None"
+   ],
+   "quiet": [
+    "def norm(v):\n    # scale a vector to unit length\n    return v",
+    "class CacheMiddleware:\n    size = 3\n    name = 'cache'",
+    "def read(path):\n    text = open(path).read()\n    return text",
+    "def start(self):\n    print(\"Start the timer.\")\n    self.t = 0",
+    "class Foo(Base):\n    label = \"A small helper class.\"\n    count = 0",
+    "def add(a, b):\n    return a + b",
+    "def stop():\n    msg = \"Stop the loop now.\"\n    run = False",
+    "class Node:\n    next = None\n    value = 0"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "quick-test",
+   "second-round",
+   "card"
+  ]
+ },
+ "short": "opening ' \"\"\"' of a Python docstring",
+ "unit_kind": "format",
+ "confidence": "high",
+ "notes": "Second round. In a sweep, 'Python docstring and argument docs' failed (AUROC 0.891): ' \"\"\"' reached 0.34–0.70 but an argument-doc item stayed at 0.01. This round drops the argument docs and adds near misses with ordinary strings and comments.",
+ "trigger": {
+  "tokens": [
+   " \"\"\"",
+   "\"\"\""
+  ]
+ }
+}

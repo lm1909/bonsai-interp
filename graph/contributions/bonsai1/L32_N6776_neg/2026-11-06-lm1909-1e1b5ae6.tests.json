@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-1e1b5ae6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6776-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:51:26+00:00",
+ "selection": "second round after a failed label (picked)",
+ "neighbours": [
+  {
+   "unit": "L32/N6776",
+   "pole": "-",
+   "label": "the word-start pieces ' jav', ' sil', ' del' and ' gal' in javelin, silicate, delphinid and galley, as opposed to whole words in the same sentences",
+   "fire": [
+    "The coach taught her to throw the javelin far.",
+    "Many clays are rich in silicates and iron.",
+    "The delphinid family includes the orca.",
+    "Rowers pulled the galley out of the bay.",
+    "A calcium silicate board lines the oven.",
+    "He holds the school record in the javelin.",
+    "This delphinid species hunts in deep water.",
+    "A Roman galley sank near the island."
+   ],
+   "quiet": [
+    "The coach taught her to throw the ball far.",
+    "Many clays are rich in iron and lime.",
+    "The dolphin family includes the orca.",
+    "Rowers pulled the boat out of the bay.",
+    "A calcium chalk board lines the wall.",
+    "He holds the school record in the mile.",
+    "This whale species hunts in deep water.",
+    "A Roman ship sank near the island."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "quick-test",
+   "second-round",
+   "card"
+  ]
+ },
+ "short": "' jav', ' sil', ' del', ' gal' pieces",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Second round. In a sweep, 'word-start piece of a rarer word' failed (AUROC 0.859): 'silica', 'silicone' and 'galleons' merged or split differently and stayed at or below 0.04. Tokens checked for every word here. Narrow by design; coverage will be small. ' Java' reached 0.09 in a probe.",
+ "trigger": {
+  "tokens": [
+   " jav",
+   " sil",
+   " del",
+   " gal"
+  ]
+ }
+}
