@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-a5e4c1a7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N11140+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:06:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N11140",
+   "pole": "+",
+   "label": "word piece in Romance and other non-English prose (broad; guess)",
+   "fire": [
+    "En ese caso, se requerirán otros análisis clínicos.",
+    "Los últimos espectáculos musicales fueron buenos.",
+    "Se requerirá un permiso especial para entrar.",
+    "Hubo varios espectáculos gratuitos en la plaza.",
+    "Para ese trabajo se requerirán dos personas.",
+    "class Order(db.Model):\n    __tablename__ = 'Order'",
+    "Vimos muchos espectáculos durante el viaje.",
+    "class Item(db.Model):\n    __tablename__ = 'Item'"
+   ],
+   "quiet": [
+    "The doctor asked for two more tests that week.",
+    "The last few shows were good this year.",
+    "You will need a special permit to enter.",
+    "There were several free shows in the square.",
+    "That job will need two people to finish.",
+    "The order was placed by a man from the shop.",
+    "We saw many shows during the trip.",
+    "The item was sent by mail on Friday."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: 4.2% of tokens reach 0.1 of max, and a plain Spanish near miss probed at 0.33.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "non-English pieces (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (4.2%), no repeating token ('__' x3, 'ell' x2, 'ساس', ' requer', 'á', 'う'). Probe: 'á' 0.62, ' requer' 0.48, '__' 0.33; ' pr' in 'pruebas' 0.33; English 0.19. A best guess."
+}
