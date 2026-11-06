@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-07c55d56",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6328+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:43+00:00",
+ "recipe": {
+  "toolchain_commit": "f861d2166",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N6328_pos/2026-11-06-lm1909-07c55d56.tests.json"
+ },
+ "label": "math notation: ' -' after =, and LaTeX symbols (s = -b, \\nu, Energía = -13.6), as opposed to prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N6328_pos/2026-11-06-lm1909-07c55d56.tests.json",
+   "prereg_commit": "f861d2166",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.115,
+     "peak": " -"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.194,
+     "peak": "nu"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.425,
+     "peak": " -"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.8,
+     "peak": "beta"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.186,
+     "peak": " -"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.332,
+     "peak": " -"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.29,
+     "peak": " -"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.527,
+     "peak": " -"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.073,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.058,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.109,
+     "peak": "Energy"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.055,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.056,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.046,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 1.19,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f861d2166",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "minus and symbols in a formula",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "notes": "Card flags this as broad, 100% echo, max 1.52; Regex '{{' reached 0.30 in a probe. Near misses are prose.",
+ "selection": "random draw"
+}

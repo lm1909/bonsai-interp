@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a2a3fbb7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N99+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:47+00:00",
+ "recipe": {
+  "toolchain_commit": "f861d2166",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N99_pos/2026-11-06-lm1909-a2a3fbb7.tests.json"
+ },
+ "label": "a loose extender after a list or a time ('and more', 'and such', 'and up to', 'ごろ', 'or so'), as opposed to the same sentences with an exact end",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N99_pos/2026-11-06-lm1909-a2a3fbb7.tests.json",
+   "prereg_commit": "f861d2166",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.869,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.025,
+     "peak": " such"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.623,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.584,
+     "peak": "ろ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.043,
+     "peak": " paper"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.147,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.046,
+     "peak": " fox"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.329,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " hundred"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": "_DIR"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.047,
+     "peak": "川"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.035,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": " fox"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.0,
+     "peak": " two"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.945,
+    "median_fire": 0.457,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f861d2166",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "loose extender: and more, and such, ごろ",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "French ' qui' in a cleft reached 0.46 in a probe, unexplained.",
+ "selection": "random draw"
+}

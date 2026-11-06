@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0023a966",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N2013+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:39+00:00",
+ "recipe": {
+  "toolchain_commit": "f861d2166",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N2013_pos/2026-11-06-lm1909-0023a966.tests.json"
+ },
+ "label": "a dense pole in the echo regime (27% of tokens above 0.1 of max, corpus max 0.30); '/bin' in shebangs and ' List' rank near the top, and I do not claim a trigger",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N2013_pos/2026-11-06-lm1909-0023a966.tests.json",
+   "prereg_commit": "f861d2166",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.831,
+     "peak": "/bin"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.499,
+     "peak": "bin"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.667,
+     "peak": " List"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.551,
+     "peak": " typing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.831,
+     "peak": "/bin"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.717,
+     "peak": " List"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.571,
+     "peak": "所"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.7,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.411,
+     "peak": " os"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.301,
+     "peak": " /"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.162,
+     "peak": " str"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.316,
+     "peak": " pass"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.061,
+     "peak": "')"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.366,
+     "peak": " int"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": "很多"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.146,
+     "peak": " Ergebn"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.683,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f861d2166",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "dense echo pole; '/bin' peak",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Marked dense before the run, as the card's flag suggests. Not probed.",
+ "selection": "random draw"
+}
