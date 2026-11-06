@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b5f192d5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N3807-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:51:08+00:00",
+ "recipe": {
+  "toolchain_commit": "630c72ea8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N3807_neg/2026-11-06-lm1909-b5f192d5.tests.json"
+ },
+ "label": "the slot before the destination when a motor signal or a mechanical force is passed along a path (to the muscles, to the rear axle), as opposed to people, goods or papers moved along a path in the same setting",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N3807_neg/2026-11-06-lm1909-b5f192d5.tests.json",
+   "prereg_commit": "630c72ea8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.239,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.941,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.71,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.488,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.616,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.439,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.647,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.703,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " hospital"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.042,
+     "peak": " rear"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " mechanic"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": " drive"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.675,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "630c72ea8",
+  "minutes": 1,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "slot before where a motor signal or force goes",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round's label also claimed that inbound paths stay quiet, and it failed on two inbound nerve items. Sensory paths are not claimed now: they are uneven ('from the hand to the' 0.68, 'from the diaphragm to the' 0.59, 'from the eye to the' 0.08, 'from the gut to the' 0.03). Probes: 'commands to the' 0.78, 'relay the order to the' 0.69, 'transfers the force to the' 0.55, 'sends the power to the' 0.60, 'passes the motion to the' 0.27; 'sends letters to the', 'ships furniture to the', 'brought the children to the', 'passed the ball to the', 'road leads ... to the' 0.02 or less. Card also has network code (units=10 in a logits layer; 'output layer' 1.02, input layer 0.06), which this label does not test. Other flows also fired in probes ('Blood flows from the heart to the' 0.44, 'released by the gland into the' 0.33, 'current flows through the wire to the' 0.24) and may belong to the same pattern; they are not claimed either.",
+ "selection": "picked: round 2 after a failed round"
+}

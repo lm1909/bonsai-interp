@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d5be84a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6854+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:51:14+00:00",
+ "recipe": {
+  "toolchain_commit": "630c72ea8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N6854_pos/2026-11-06-lm1909-d5be84a5.tests.json"
+ },
+ "label": "a fiction scene of action and dialogue, as opposed to quotes and dialogue in news, interviews, transcripts, lessons and reviews (all items here run over several lines, so layout is not tested, and dialogue itself is present on both sides)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N6854_pos/2026-11-06-lm1909-d5be84a5.tests.json",
+   "prereg_commit": "630c72ea8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.249,
+     "peak": ".\"\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.343,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.278,
+     "peak": ".\"\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.722,
+     "peak": ".\"\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.341,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.276,
+     "peak": ".\"\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.353,
+     "peak": ".\"\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.336,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.102,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.104,
+     "peak": " says"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.04,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.146,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.129,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": ".\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.339,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "630c72ea8",
+  "minutes": 1,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "fiction scene in action and dialogue",
+ "unit_kind": "genre / contextual",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed the line break itself and failed, because a scene with no line breaks reached 0.48. Line breaks are not claimed now, and all items here have them, so this test does not separate them from genre. Earlier round's 4 non-fiction passages 0.07 or less; its 8 scenes 0.13-0.64, on line breaks, 'She', 'He'. Probes: fiction narration without dialogue 0.20-0.25, one-line lesson dialogue 0.04, Q and A 0.01, memoir 0.02, news 0.04, a fable 0.04, a romantic 2-sentence snippet 0.04. So the claim needs the dialogue scene over several lines. Peak tokens vary.",
+ "selection": "picked: round 2 after a failed round"
+}
