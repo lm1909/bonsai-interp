@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-832130cb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N51+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:05:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N51",
+   "pole": "+",
+   "label": "a short list of tokens: ' bed', ' MHz', صداع (headache), the katakana ヒ (no shared pattern found)",
+   "fire": [
+    "Put the baby to bed at eight.",
+    "The chip runs at 200 MHz.",
+    "أعاني من الصداع كل يوم.",
+    "シートヒーターは便利だ。",
+    "It's time for bed, kids.",
+    "The signal is at 900 MHz.",
+    "الصداع مؤلم جدا.",
+    "車にヒーターを付けた。"
+   ],
+   "quiet": [
+    "Put the baby in the car at eight.",
+    "The chip runs at full speed.",
+    "أعاني من الحر كل يوم.",
+    "シートカバーは便利だ。",
+    "It's time for lunch, kids.",
+    "The signal is very weak.",
+    "الحر مؤلم جدا.",
+    "車にカバーを付けた。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tokens: bed, MHz, صداع, ヒ",
+ "unit_kind": "token",
+ "confidence": 0.55,
+ "notes": "Corpus max is tiny (0.48), the card flags the pole broad, and the gate-closed regime is 69%. I did not find a pattern, so the label stays a list.",
+ "trigger": {
+  "tokens": [
+   " bed",
+   " MHz",
+   "داع",
+   "ヒ"
+  ]
+ }
+}
