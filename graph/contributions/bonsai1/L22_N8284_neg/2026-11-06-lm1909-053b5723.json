@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-053b5723",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N8284-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:16:19+00:00",
+ "recipe": {
+  "toolchain_commit": "73c54f238",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N8284_neg/2026-11-06-lm1909-053b5723.tests.json"
+ },
+ "label": "the end of a clause saying someone else could step in and do a job: 'another producer could walk in here and work' (a guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N8284_neg/2026-11-06-lm1909-053b5723.tests.json",
+   "prereg_commit": "73c54f238",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.576,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.148,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.3,
+     "peak": " cook"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.346,
+     "peak": " there"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.25,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.155,
+     "peak": " act"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.383,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.192,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.078,
+     "peak": " editor"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.386,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.095,
+     "peak": " another"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.215,
+     "peak": " else"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.234,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.175,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.289,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.703,
+    "median_fire": 0.275,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73c54f238",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "someone else could step in (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "The card's top tokens have no clear pattern, and this rests on one probe (0.40). A failure is the likely outcome.",
+ "selection": "random draw"
+}

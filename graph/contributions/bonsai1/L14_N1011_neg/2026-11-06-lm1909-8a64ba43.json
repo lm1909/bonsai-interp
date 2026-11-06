@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8a64ba43",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N1011-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:15:54+00:00",
+ "recipe": {
+  "toolchain_commit": "73c54f238",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N1011_neg/2026-11-06-lm1909-8a64ba43.tests.json"
+ },
+ "label": "the climate type after 'X has a': subtropical, equable, temperate, Mediterranean",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N1011_neg/2026-11-06-lm1909-8a64ba43.tests.json",
+   "prereg_commit": "73c54f238",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.744,
+     "peak": "ropical"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.656,
+     "peak": "ropical"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.464,
+     "peak": "able"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.261,
+     "peak": " climate"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.497,
+     "peak": "ate"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.19,
+     "peak": " climate"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.48,
+     "peak": " wet"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.408,
+     "peak": " mild"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.058,
+     "peak": "ima"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.057,
+     "peak": " busy"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.074,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": "Ath"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.051,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.036,
+     "peak": " wine"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.472,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73c54f238",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "named climate type",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 'subtropical' 0.78-0.89, 'equable' 0.39. ' perpetual' (inventory system) reached 0.34 in a probe and is on the card, and is not covered.",
+ "selection": "random draw"
+}

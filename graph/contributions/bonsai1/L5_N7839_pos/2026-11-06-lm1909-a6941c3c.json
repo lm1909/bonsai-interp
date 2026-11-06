@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-a6941c3c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N7839+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:16:25+00:00",
+ "recipe": {
+  "toolchain_commit": "73c54f238",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N7839_pos/2026-11-06-lm1909-a6941c3c.tests.json"
+ },
+ "label": "the pieces of Parma and parmesan: Par|ma, par|mes|an",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N7839_pos/2026-11-06-lm1909-a6941c3c.tests.json",
+   "prereg_commit": "73c54f238",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.925,
+     "peak": "mes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.022,
+     "peak": "mes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.944,
+     "peak": "ma"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.898,
+     "peak": "ma"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.95,
+     "peak": "ma"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.945,
+     "peak": "mes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.93,
+     "peak": "mes"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.942,
+     "peak": "ma"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " ch"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " Pad"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " ham"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " basil"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " r"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " led"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.943,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73c54f238",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Parma and parmesan",
+ "unit_kind": "token piece",
+ "confidence": 0.9,
+ "notes": "The - pole of this neuron is the other split after ' par': par|ab|ens, par|ab|ola.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ma",
+   "mes"
+  ]
+ }
+}

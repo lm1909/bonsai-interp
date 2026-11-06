@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-06c9f883",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N1447+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:16:27+00:00",
+ "recipe": {
+  "toolchain_commit": "73c54f238",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N1447_pos/2026-11-06-lm1909-06c9f883.tests.json"
+ },
+ "label": "an ellipsis that truncates a title or headline in a list, often mid-word: 'Equal p...', 'crushing... 3', 'most future...'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N1447_pos/2026-11-06-lm1909-06c9f883.tests.json",
+   "prereg_commit": "73c54f238",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.36,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.211,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.249,
+     "peak": "...\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.419,
+     "peak": " ..."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.287,
+     "peak": "..."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.486,
+     "peak": "...\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.313,
+     "peak": "...\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.38,
+     "peak": "..."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " Sony"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": "Popular"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "-"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " Review"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "Related"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "rending"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.337,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73c54f238",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "ellipsis truncating a title",
+ "unit_kind": "format / contextual",
+ "confidence": 0.6,
+ "notes": "Probes: 0.14-0.33 on truncated titles, 0.005 on 'He paused...'. The readings are low, so the median may be close to the line.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "...",
+   "…",
+   " ...",
+   "...\n"
+  ]
+ }
+}

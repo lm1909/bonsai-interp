@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-f3758b81",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N11366-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:16:29+00:00",
+ "recipe": {
+  "toolchain_commit": "73c54f238",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N11366_neg/2026-11-06-lm1909-f3758b81.tests.json"
+ },
+ "label": "a short list of pieces: Аб|ак|умов, таб|ач|ный, колбас|ка, and -acus in Baracus, Abacus (no shared pattern found)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N11366_neg/2026-11-06-lm1909-f3758b81.tests.json",
+   "prereg_commit": "73c54f238",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.882,
+     "peak": "ак"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.729,
+     "peak": "ач"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.29,
+     "peak": "б"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.482,
+     "peak": "acus"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.705,
+     "peak": "acus"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.547,
+     "peak": "ач"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.957,
+     "peak": "ак"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.537,
+     "peak": "ка"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.064,
+     "peak": "ал"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.379,
+     "peak": "ах"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.183,
+     "peak": "аг"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.111,
+     "peak": "Bob"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": "arden"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.425,
+     "peak": "аб"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.218,
+     "peak": "ал"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.111,
+     "peak": "кус"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.626,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "73c54f238",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pieces: ак, ач, ка, acus",
+ "unit_kind": "token piece",
+ "confidence": 0.55,
+ "notes": "The gate-closed regime is 100% on the card and corpus max is 1.35. I did not find a pattern, so the label stays a list.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ак",
+   "ач",
+   "ка",
+   "acus"
+  ]
+ }
+}
