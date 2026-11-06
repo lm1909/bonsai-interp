@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-7a0951a1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N425-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:39:28+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N425",
+   "pole": "-",
+   "label": "HTTP status code digit and word pieces ('40|4', 'iP|SC'; broad, gate-closed; guess)",
+   "fire": [
+    "reasons = {\n\t200: 'OK',\n\t304: 'Not Modified',\n\t404: 'Not Found'}",
+    "if raise_exc and resp.status_code >= 400:\n    raise exceptions.Error()",
+    "codes = {\n\t201: 'Created',\n\t403: 'Forbidden',\n\t404: 'Missing'}",
+    "if resp.status_code >= 500:\n    raise exceptions.Server()",
+    "iPSCs are cells that have been reprogrammed.",
+    "printer.out(\"not found\", printer.ERROR)\nreturn 1",
+    "New iPSCs may change therapeutic practice.",
+    "if r.status_code == 404:\n    return None"
+   ],
+   "quiet": [
+    "reasons = {\n\t'a': 'one',\n\t'b': 'two',\n\t'c': 'three'}",
+    "if raise_exc:\n    print(resp)",
+    "codes = {\n\t'x': 'left',\n\t'y': 'right',\n\t'z': 'up'}",
+    "if resp.ok:\n    print(resp)",
+    "Plants are cells that have been grown in soil.",
+    "printer.out(\"done\")\nreturn 1",
+    "New shoes may change your walk.",
+    "if r.ok:\n    return None"
+   ]
+  }
+ ],
+ "predictions": "Expect a fail. Not probed.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "status codes (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (4.4%) and gate-closed (95% leak), no repeating token ('SC', 'iones', '4', ' rains', '0', '.ERROR'). Not probed before this test."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-4df3639d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N7462-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:39:28+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N7462",
+   "pole": "-",
+   "label": "code that writes to a dict entry after a membership test ('if k in d:\\n    d[k] = …'; guess)",
+   "fire": [
+    "if row.key in row_dict:\n    row_dict[row.key] = 1",
+    "if item.name in item_map:\n    item_map[item.name] = 0",
+    "if user.id in user_table:\n    user_table[user.id] = None",
+    "if node.tag in node_dict:\n    node_dict[node.tag] = 2",
+    "if word.text in counts:\n    counts[word.text] = 1",
+    "if file.path in cache:\n    cache[file.path] = True",
+    "if col.title in col_map:\n    col_map[col.title] = 3",
+    "if job.uid in jobs:\n    jobs[job.uid] = False"
+   ],
+   "quiet": [
+    "for row in rows:\n    print(row.key)",
+    "name = item.name\nshow(name)",
+    "uid = user.id\nreturn uid",
+    "for node in nodes:\n    print(node.tag)",
+    "text = word.text\nshow(text)",
+    "path = file.path\nreturn path",
+    "for col in cols:\n    print(col.title)",
+    "uid = job.uid\nreturn uid"
+   ]
+  }
+ ],
+ "predictions": "Likely a fail: one probe reached 0.35, another 0.08.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dict membership code (guess)",
+ "unit_kind": "code",
+ "confidence": "low",
+ "notes": "Card: ' it' x3, ' be' x2, ' out' x2, ' that' x2, ':\\n', 'ids'. Probe: 'if table.index in table_dict:' 0.35; 'not in xits' 0.08; prose 0.02. A best guess. Prose peaks on the card are not explained."
+}

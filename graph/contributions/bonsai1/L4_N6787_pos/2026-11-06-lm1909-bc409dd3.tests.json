@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-bc409dd3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6787+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:39:28+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N6787",
+   "pole": "+",
+   "label": "nearly always on (82% of tokens reach 0.1 of max; gate-closed, tiny max)",
+   "fire": [
+    "The study was written by Jefferson Currie and two others.",
+    "Drug Treatment Programs in Jefferson, MD are listed here.",
+    "They drove to Jefferson for the fair.",
+    "Jefferson County has three high schools.",
+    "A new road was built in Jefferson last year.",
+    "Thomas Jefferson wrote the first draft.",
+    "The bank is on Jefferson Street near the park.",
+    "She teaches at Jefferson Elementary."
+   ],
+   "quiet": [
+    "The study was written by Peter Currie and two others.",
+    "Drug Treatment Programs in Frederick, MD are listed here.",
+    "They drove to Baltimore for the fair.",
+    "Orange County has three high schools.",
+    "A new road was built in Dover last year.",
+    "John Adams wrote the first draft.",
+    "The bank is on Main Street near the park.",
+    "She teaches at Lincoln Elementary."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: this unit is on for most text. Not probed.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "always on",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (82.6%) and gate-closed (100% echo), max 0.28. Top peaks are tiny (' Jefferson' x11, ' home' x2). Best-guess test on ' Jefferson'."
+}
