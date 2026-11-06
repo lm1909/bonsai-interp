@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-17cd6bcb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5377-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:25:45+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N5377",
+   "pole": "-",
+   "label": "a unit or size right after a number: 124′, 24-inches, 60미터, and the last digit of String(128)",
+   "fire": [
+    "The dock is 210′ long.",
+    "My oven is only 30-inches wide.",
+    "The wall was 40미터 high.",
+    "name = db.Column(db.String(64))",
+    "The beam is 18′ wide.",
+    "The shelf is 12-inches deep.",
+    "The tower is 90미터 tall.",
+    "key = db.Column(db.String(256))"
+   ],
+   "quiet": [
+    "The dock is long.",
+    "My oven is only small.",
+    "The wall was high.",
+    "name = db.Column(db.Text)",
+    "The beam is wide.",
+    "The shelf is deep.",
+    "The tower is tall.",
+    "key = db.Column(db.Integer)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unit after a number",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.7,
+ "notes": "Near misses drop the number too, so this does not separate a number from its unit. Arabic ' سنوات' on the card is not tested."
+}

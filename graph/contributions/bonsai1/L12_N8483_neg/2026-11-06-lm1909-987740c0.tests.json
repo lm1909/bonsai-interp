@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-987740c0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N8483-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:25:45+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N8483",
+   "pole": "-",
+   "label": "the space token before a number after 'page' or in a date: 'OCR for page 215', 'August 24th, 2011'",
+   "fire": [
+    "OCR for page 318",
+    "OCR for page 402\nMethods:",
+    "See page 215 of the report",
+    "on June 12th, 2014 at 9 am",
+    "Turn to page 66 now",
+    "on May 3rd, 2009 at 10 pm",
+    "OCR for page 97\nNotes:",
+    "Go to page 12 next"
+   ],
+   "quiet": [
+    "The page is on the left",
+    "Methods for page layout",
+    "See the report of the group",
+    "on June 12th at 9 am",
+    "Turn to the page now",
+    "on May 3rd at 10 pm",
+    "Notes on page layout",
+    "Go to the next page"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "space before a page number or year",
+ "unit_kind": "token / contextual",
+ "confidence": 0.5,
+ "notes": "Probes reached 0.20-0.22 on these items, so the median is close to the line. A probe with 'on August 24th at 11 am' reached 0.06. The gate-closed regime is 69% on the card.",
+ "trigger": {
+  "tokens": [
+   " "
+  ]
+ }
+}
