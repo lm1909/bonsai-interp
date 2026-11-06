@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-22c2a556",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9138+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N9138",
+   "pole": "+",
+   "label": "the split word-ending piece 'gen', 'ogen', 'en' or 'ens' (Bi|ogen, All|erg|ens, Reg|en, code|gen, Ellenb|ogen), as opposed to whole words",
+   "fire": [
+    "New pathogens spread quickly in warm water.",
+    "Biogen reported strong sales this quarter.",
+    "Common allergens include nuts and milk.",
+    "The tool uses codegen for its bindings.",
+    "Dr. Ellenbogen spoke to the parents.",
+    "Regens University opened a new campus.",
+    "He found the host so uncongenial that he left.",
+    "The pathogen was found in the water."
+   ],
+   "quiet": [
+    "New fish spread quickly in warm water.",
+    "Pfizer reported strong sales this quarter.",
+    "Common foods include nuts and milk.",
+    "The tool uses Python for its bindings.",
+    "Dr. Stone spoke to the parents.",
+    "Yale University opened a new campus.",
+    "He found the host so rude that he left.",
+    "The hydrogen was found in the water."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split ending 'ogen', 'gen', 'ens'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization partly checked: ' estrogen', ' collagen' and ' hydrogen' are whole. 'Regens' and 'uncongenial' are not checked. Tiny corpus max (1.12), 100% echo.",
+ "trigger": {
+  "tokens": [
+   "gen",
+   "ogen",
+   "en",
+   "ens"
+  ]
+ }
+}

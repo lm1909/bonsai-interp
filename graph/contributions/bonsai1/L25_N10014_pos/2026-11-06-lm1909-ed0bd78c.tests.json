@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-ed0bd78c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N10014+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:59+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N10014",
+   "pole": "+",
+   "label": "the piece ' Er', ' er' or ' ER' split off at a word start (' Er'|win, ' Er'|ichsen, ' er'|pnext, ' ER'|AP), as opposed to whole tokens like Eric and Erik and names with other starts",
+   "fire": [
+    "The article was written by Peter Erb and a colleague.",
+    "This was reported by Fuchs and Erhardt, 2010.",
+    "Her uncle Lars Erichsen lived in Oslo.",
+    "Tom Erwin is running for the school board.",
+    "import numpy, erpnext, json",
+    "Even the scandal around Mayor ERAP got worse.",
+    "The Erwin family moved there in 1920.",
+    "Erhardt was a student of Max Weber."
+   ],
+   "quiet": [
+    "The article was written by Peter Hall and a colleague.",
+    "This was reported by Fuchs and Eric Lee, 2010.",
+    "Her uncle Erik Hansen lived in Oslo.",
+    "Tom Muller is running for the school board.",
+    "import numpy, pandas, json",
+    "Even the scandal around Mayor Jones got worse.",
+    "The Lake Erie family moved there in 1920.",
+    "Muller was a student of Max Weber."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split ' Er' / ' er' word start",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked: ' Eric', ' Erik' and ' Erie' are whole tokens, in the near misses on purpose. Spoken 'er,' also reached 0.76 in a probe.",
+ "trigger": {
+  "tokens": [
+   " Er",
+   " er",
+   " ER",
+   "Er"
+  ]
+ }
+}
