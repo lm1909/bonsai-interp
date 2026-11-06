@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2958855c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N3311+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:28:08+00:00",
+ "recipe": {
+  "toolchain_commit": "6780d7072",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N3311_pos/2026-11-06-lm1909-2958855c.tests.json"
+ },
+ "label": "the second '#' in a line of commented-out code ('# #')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N3311_pos/2026-11-06-lm1909-2958855c.tests.json",
+   "prereg_commit": "6780d7072",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 6,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.633,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.304,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.523,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.444,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.586,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.655,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.711,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.655,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.377,
+     "peak": "    "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.169,
+     "peak": "#"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.314,
+     "peak": "#"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.298,
+     "peak": " import"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.371,
+     "peak": "    "
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.332,
+     "peak": "#"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.32,
+     "peak": "#"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.326,
+     "peak": "#"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.609,
+    "near_misses_at_0.3": 6
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6780d7072",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "second '#' in commented code",
+ "unit_kind": "token / contextual",
+ "confidence": "high",
+ "notes": "The pole is flagged broad; the card's whitespace, 'BEGIN' and date digits are not covered.",
+ "selection": "random draw"
+}

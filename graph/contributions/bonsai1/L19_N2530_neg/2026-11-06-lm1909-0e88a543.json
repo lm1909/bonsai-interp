@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0e88a543",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N2530-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:28:48+00:00",
+ "recipe": {
+  "toolchain_commit": "6780d7072",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N2530_neg/2026-11-06-lm1909-0e88a543.tests.json"
+ },
+ "label": "the digit opening a second dollar amount in a comparison ('$2.11 and premium $2.86')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N2530_neg/2026-11-06-lm1909-0e88a543.tests.json",
+   "prereg_commit": "6780d7072",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.077,
+     "peak": " $"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.246,
+     "peak": " $"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.11,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.131,
+     "peak": " $"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.067,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.087,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.231,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.223,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " premium"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " we"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " we"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.12,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6780d7072",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "second dollar amount",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Probes reached only 0.13-0.21, so this is likely to fail on the median. The card's ranges ('$38,315 to') did not reproduce (at most 0.03).",
+ "selection": "random draw"
+}

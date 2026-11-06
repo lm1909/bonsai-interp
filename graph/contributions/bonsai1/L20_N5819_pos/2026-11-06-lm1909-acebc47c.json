@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-acebc47c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N5819+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:27:52+00:00",
+ "recipe": {
+  "toolchain_commit": "6780d7072",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N5819_pos/2026-11-06-lm1909-acebc47c.tests.json"
+ },
+ "label": "a nonstandard spelling of a word: Arabic final ه for ة, dropped letters in dialect writing, 'PH' for 'pH'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N5819_pos/2026-11-06-lm1909-acebc47c.tests.json",
+   "prereg_commit": "6780d7072",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.334,
+     "peak": "نه"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.26,
+     "peak": "ه"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.283,
+     "peak": "ه"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.388,
+     "peak": " PH"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.112,
+     "peak": " PH"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.113,
+     "peak": "fas"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.266,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.25,
+     "peak": "ه"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": "الم"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": "ال"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": "ال"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " pH"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " weekly"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " went"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " sun"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "ال"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.263,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6780d7072",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "nonstandard spelling",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "A shared-pattern label, tested on new words instead of the card's. 'C{str}' reached 0.32 in a probe and is not covered; it is not a spelling variant.",
+ "selection": "random draw"
+}
