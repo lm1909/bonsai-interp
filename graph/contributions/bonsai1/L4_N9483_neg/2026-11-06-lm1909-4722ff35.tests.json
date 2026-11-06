@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-4722ff35",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9483-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:35:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N9483",
+   "pole": "-",
+   "label": "pieces of a URL and web address (showthread.php?p=, www.w3.org), as opposed to plain sentences about the same sites",
+   "fire": [
+    "http://www.example.com/vb/showthread.php?p=2045#post",
+    "xmlns=\"http://www.w3.org/1999/xhtml\"",
+    "See http://www.foo.org/forum/viewtopic.php?p=881 for more.",
+    "schema=\"http://purl.org/dc/terms/\"",
+    "Link: http://www.mysite.com/index.php?p=77",
+    "The spec is at https://www.ietf.org/rfc/rfc2616.txt",
+    "http://www.bar.org/wp/?p=4121",
+    "Namespace: http://www.w3.org/2000/svg"
+   ],
+   "quiet": [
+    "The forum has a long thread about this post.",
+    "The XML standard is written by a committee.",
+    "See the forum page for more about the topic.",
+    "The terms are listed on the second page.",
+    "Our site has a page about the old index.",
+    "The spec is printed in a thick red binder.",
+    "The blog had 4121 readers last month.",
+    "Namespaces are explained in the second chapter."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "URL pieces (?p=, .org)",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "notes": "Card also has 'app', ' app' and ' componente', not explained; Spanish ' componente' reached 0.70 in a probe. Tiny corpus max (4.19)."
+}
