@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e9370ee8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N1792-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:21+00:00",
+ "recipe": {
+  "toolchain_commit": "f195b61f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N1792_neg/2026-11-06-lm1909-e9370ee8.tests.json"
+ },
+ "label": "the end piece of a compound organisation or brand name (I|stat, Eir|com, U|Connect, Euro|stat, Ros|stat)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N1792_neg/2026-11-06-lm1909-e9370ee8.tests.json",
+   "prereg_commit": "f195b61f2",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.887,
+     "peak": "stat"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.774,
+     "peak": "stat"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.218,
+     "peak": "acom"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.579,
+     "peak": "stat"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.317,
+     "peak": "Connect"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.613,
+     "peak": "stat"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.359,
+     "peak": "el"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.248,
+     "peak": "stat"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " showed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.075,
+     "peak": " Reuters"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " Google"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.254,
+     "peak": " Moodle"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " Boeing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " used"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.469,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f195b61f2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "end piece of an organisation name",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: ',' x8, 'in' x2, 'stat', 'com', '\"', 'Connect', 'ron', 'inin'. Probes: 'stat' in Istat 1.015, 'com' in Eircom 0.465, 'Connect' in UConnect 0.364; 'istle' 0.160, ' Reuters' 0.099. Tokens are checked for each fire sentence. Near misses use whole-token organisations.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e578f35c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N9970+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:49+00:00",
+ "recipe": {
+  "toolchain_commit": "f195b61f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N9970_pos/2026-11-06-lm1909-e578f35c.tests.json"
+ },
+ "label": "a piece of an all-caps acronym built from the letters S, C, D, L and M (S|CL|C, SM|C, SC|D, CM|C)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N9970_pos/2026-11-06-lm1909-e578f35c.tests.json",
+   "prereg_commit": "f195b61f2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.697,
+     "peak": "CL"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.694,
+     "peak": "C"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.702,
+     "peak": "CD"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.7,
+     "peak": "MC"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.439,
+     "peak": "CL"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.673,
+     "peak": "SM"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.512,
+     "peak": "MC"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.769,
+     "peak": "CL"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " answered"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.066,
+     "peak": " happen"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.034,
+     "peak": " met"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " UN"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.029,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " BBC"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.128,
+     "peak": " run"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.696,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f195b61f2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "acronym pieces from S, C, D, L, M",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: ' SM' x6, 'CL' x5, 'SM' x3, 'CD' x2, '.M' x2, 'MC' x2. Probes: 'CL' 0.848, 'C' in SMC 0.694, 'SM' 0.672, 'CD' 0.586; ordinary words 0.03-0.04. Near misses use acronyms from other letters that are whole tokens, or plain words.",
+ "selection": "random draw"
+}

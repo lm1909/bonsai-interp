@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-aeb0c3a7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N4504-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:46+00:00",
+ "recipe": {
+  "toolchain_commit": "f195b61f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N4504_neg/2026-11-06-lm1909-aeb0c3a7.tests.json"
+ },
+ "label": "the word desire or its pieces (des|ire, ' desire') and its Spanish form (des|eo)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N4504_neg/2026-11-06-lm1909-aeb0c3a7.tests.json",
+   "prereg_commit": "f195b61f2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.579,
+     "peak": " desire"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.831,
+     "peak": "ire"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.585,
+     "peak": " desire"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.501,
+     "peak": "eo"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.413,
+     "peak": " desire"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.624,
+     "peak": "eo"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.537,
+     "peak": " desire"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.488,
+     "peak": "eo"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "erte"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " buena"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.558,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f195b61f2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word 'desire' / 'deseo'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: 'eo' x7, ' desire' x7, 'iring' x6, 'ir' x5, 'ire' x3. Probes: 'ire' 0.832, ' desire' 0.545-0.657, 'eo' in deseo 0.609; 'Hunger' 0.002, 'la paz' 0.002. Near misses keep the frames with a different noun.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "desire",
+   "deseo"
+  ]
+ }
+}

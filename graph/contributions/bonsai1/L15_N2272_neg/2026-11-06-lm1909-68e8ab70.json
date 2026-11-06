@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-68e8ab70",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N2272-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:10+00:00",
+ "recipe": {
+  "toolchain_commit": "f195b61f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N2272_neg/2026-11-06-lm1909-68e8ab70.tests.json"
+ },
+ "label": "the verb in a backgrounded clause giving a prior or current state before the main clause (after being denied, having indicated, Après avoir vécu, when you know)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N2272_neg/2026-11-06-lm1909-68e8ab70.tests.json",
+   "prereg_commit": "f195b61f2",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.271,
+     "peak": " refused"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.512,
+     "peak": " avoir"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.178,
+     "peak": " having"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.393,
+     "peak": " realize"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.467,
+     "peak": " told"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.512,
+     "peak": " avoir"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.276,
+     "peak": " heard"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.76,
+     "peak": " know"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.131,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.05,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.028,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": "is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "?"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.43,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f195b61f2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verb of a backgrounded clause",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' being' x4, ' know' x2, ' having' x2, ' to' x2, ' unable' x2, ' if' x2, ' avoir', 'ant', 'اف'. Probes: 'when you know' 0.792, 'Après avoir' 0.512, 'having indicated' 0.419, 'After being' 0.248; 'Unable to find' 0.053, 'After the flood' 0.049, plain clause 0.010. Near misses keep the topic with a noun phrase or a plain clause.",
+ "selection": "random draw"
+}

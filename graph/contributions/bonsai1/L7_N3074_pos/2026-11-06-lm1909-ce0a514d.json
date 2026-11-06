@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-ce0a514d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N3074+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:14+00:00",
+ "recipe": {
+  "toolchain_commit": "f195b61f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N3074_pos/2026-11-06-lm1909-ce0a514d.tests.json"
+ },
+ "label": "the words ' Jewish' and ' Jews', often after a nationality (Australian Jewish, Portuguese Jews), and ' Greece' as a named organisation's branch (WWF Greece)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N3074_pos/2026-11-06-lm1909-ce0a514d.tests.json",
+   "prereg_commit": "f195b61f2",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.486,
+     "peak": " Jewish"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.803,
+     "peak": " Jews"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.614,
+     "peak": " Jews"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.22,
+     "peak": " Jewish"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.565,
+     "peak": " Greece"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.649,
+     "peak": " Jews"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.554,
+     "peak": " Jewish"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.23,
+     "peak": " Greece"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.04,
+     "peak": " Congress"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.041,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " across"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " Medical"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " warned"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " sailors"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.064,
+     "peak": " farming"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "Am"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.559,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f195b61f2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Jewish', ' Jews', ' Greece'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Card: ' Jews' x3, ' Japan' x3, ' Jewish' x2, 'aml' x2, 'AN' x2, ' Greece'. Probes: ' Jewish' 0.767, ' Greece' 0.566, ' Jews' 0.459, ' Japan' 0.147; 'Australian Football' 0.014, 'young boys' 0.009. A list; I did not find one pattern, and ' Japan' is not claimed. Near misses keep the sentence frames with other groups.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Jewish",
+   " Jews",
+   " Greece"
+  ]
+ }
+}

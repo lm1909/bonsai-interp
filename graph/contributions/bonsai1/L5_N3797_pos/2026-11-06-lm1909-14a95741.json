@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-14a95741",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N3797+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:12+00:00",
+ "recipe": {
+  "toolchain_commit": "f195b61f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N3797_pos/2026-11-06-lm1909-14a95741.tests.json"
+ },
+ "label": "the letter piece at the end of a letter range (-f, -F, -G in [a-fA-F0-9], A-F, A-G)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N3797_pos/2026-11-06-lm1909-14a95741.tests.json",
+   "prereg_commit": "f195b61f2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.722,
+     "peak": "-f"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.646,
+     "peak": "-F"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.41,
+     "peak": "-F"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.689,
+     "peak": "-G"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.654,
+     "peak": "-f"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.428,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.832,
+     "peak": "-F"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.385,
+     "peak": "-F"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " rejects"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " cards"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " top"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " made"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.65,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f195b61f2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "end letter of a letter range",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: ' AF' x6, '.E' x3, ' F' x2, ' BE' x2, 'H' x2, ' E' x2, '-f' and '-G' in the top examples. Probes: '-f' 1.091, '-G' 0.681, '-F' 0.545, 'FE' in AFE 0.530, '.F' 0.345; 'lowercase characters' 0.003. Other F-initial cases (AFE, A.F.) are outside this label. Near misses keep the topic without a range.",
+ "selection": "random draw"
+}

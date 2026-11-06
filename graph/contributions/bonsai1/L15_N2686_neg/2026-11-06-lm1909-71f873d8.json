@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-71f873d8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N2686-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:24+00:00",
+ "recipe": {
+  "toolchain_commit": "f195b61f2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N2686_neg/2026-11-06-lm1909-71f873d8.tests.json"
+ },
+ "label": "the last digit of a year in a statement of when something began (began only as late as 1958)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N2686_neg/2026-11-06-lm1909-71f873d8.tests.json",
+   "prereg_commit": "f195b61f2",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.015,
+     "peak": " records"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.001,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.019,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.013,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.029,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.016,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.018,
+     "peak": " started"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.028,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " records"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " r"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "atic"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " river"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " counts"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.562,
+    "median_fire": 0.017,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f195b61f2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "last digit of a start year",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' children' x3, ' frogs' x2, '8' x2, ' calcium' x2, '0' x2, ' birds'. Probes: '8' in 1958 0.430, ' frogs' 0.169, ' birds' 0.103, others under 0.08. A guess at the strongest probe; the noun cluster is not claimed.",
+ "selection": "random draw"
+}
