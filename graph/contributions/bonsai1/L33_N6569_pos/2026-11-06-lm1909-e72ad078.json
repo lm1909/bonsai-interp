@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e72ad078",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N6569+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:34:16+00:00",
+ "recipe": {
+  "toolchain_commit": "87752bbbe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N6569_pos/2026-11-06-lm1909-e72ad078.tests.json"
+ },
+ "label": "The last word before an expected 'as well', 'too' or 'also', after a frame that sets up an addition ('not only by peers but by staff', 'We hope yours was Wonderful', 'helps in other ways'); the same word with no addition expected stays low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N6569_pos/2026-11-06-lm1909-e72ad078.tests.json",
+   "prereg_commit": "87752bbbe",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.465,
+     "peak": " coaches"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.485,
+     "peak": " paintings"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.571,
+     "peak": " lovely"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.479,
+     "peak": " ways"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.454,
+     "peak": " prison"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.547,
+     "peak": " Friday"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.169,
+     "peak": " gym"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.395,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " coaches"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.126,
+     "peak": " paintings"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.096,
+     "peak": " lovely"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " harms"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": " prison"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": " great"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " storm"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.472,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "87752bbbe",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word before an expected 'as well' or 'too'",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probes: 0.44-0.56 for 'not only ... but' and 'hope yours was'; 'in other ways' 0.54; ' year' 0.20, ' stuff' 0.16, ' them' 0.07. The same words with no addition 0.00-0.05. The output direction promotes ' as', ' too'.",
+ "selection": "random draw"
+}

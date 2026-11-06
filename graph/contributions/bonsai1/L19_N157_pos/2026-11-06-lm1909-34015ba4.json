@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-34015ba4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N157+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:34:02+00:00",
+ "recipe": {
+  "toolchain_commit": "87752bbbe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N157_pos/2026-11-06-lm1909-34015ba4.tests.json"
+ },
+ "label": "A verb reporting a change of status at some point ('when the ADA was revised', 'Oklahoma became a state', 'have survived those years'); the same subjects with a static verb stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N157_pos/2026-11-06-lm1909-34015ba4.tests.json",
+   "prereg_commit": "87752bbbe",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.456,
+     "peak": " state"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.164,
+     "peak": " code"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.365,
+     "peak": " vanished"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.235,
+     "peak": " map"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.125,
+     "peak": " repealed"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.149,
+     "peak": " became"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.351,
+     "peak": " vanished"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.159,
+     "peak": " law"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.056,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.164,
+     "peak": " code"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.135,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.081,
+     "peak": " map"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " room"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.141,
+     "peak": " south"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " listed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.1,
+     "peak": " park"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.2,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "87752bbbe",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verb reporting a change of status",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Probes: ' became' 0.55, ' revised' 0.45, ' have' 0.30; 'Festival' after 'recently-revived' 0.17, ' not' 0.17, 'no longer' 0.08. 'When the ADA was open' read 0.19, so a past frame leaks; two near misses keep such a frame. ' have' peaks before the verb is visible. On this pole the output direction suppresses ' now', ' today', ' modern', ' obsolete'.",
+ "selection": "random draw"
+}

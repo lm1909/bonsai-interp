@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c6ae3a56",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10030+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:33:46+00:00",
+ "recipe": {
+  "toolchain_commit": "87752bbbe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N10030_pos/2026-11-06-lm1909-c6ae3a56.tests.json"
+ },
+ "label": "Dense pole, best guess: the last word of a place name, title or degree ending a stretch of plain text (' st', ' Place', ' Science', '.sc'); ordinary sentences stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N10030_pos/2026-11-06-lm1909-c6ae3a56.tests.json",
+   "prereg_commit": "87752bbbe",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.541,
+     "peak": " st"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.741,
+     "peak": ".sc"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.715,
+     "peak": " Place"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.337,
+     "peak": " Science"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.363,
+     "peak": " Science"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.629,
+     "peak": " st"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.808,
+     "peak": ".sc"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.511,
+     "peak": " Place"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.422,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.371,
+     "peak": " college"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.21,
+     "peak": " lake"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.288,
+     "peak": " later"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.255,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.15,
+     "peak": " early"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.182,
+     "peak": " school"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.357,
+     "peak": " night"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.585,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "87752bbbe",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; end of a place name or title (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.25,
+ "notes": "The card flags 13.6% density. Probes: 0.37-0.94; plain sentences 0.03-0.22. There is no clear reading, ' message' 0.50 and the card's commonest peak '.m' are not covered, and near misses may leak, so this is expected to fail.",
+ "selection": "random draw"
+}

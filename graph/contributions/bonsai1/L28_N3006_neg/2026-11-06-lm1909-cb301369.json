@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-cb301369",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3006-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:33:31+00:00",
+ "recipe": {
+  "toolchain_commit": "87752bbbe",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N3006_neg/2026-11-06-lm1909-cb301369.tests.json"
+ },
+ "label": "In Chinese, the slot ending a topic, before the comment ('內容主要', '其實都', '也是', '缺點是'); plain Chinese with the same topics stays lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N3006_neg/2026-11-06-lm1909-cb301369.tests.json",
+   "prereg_commit": "87752bbbe",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.411,
+     "peak": "缺点"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.389,
+     "peak": "主要"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.424,
+     "peak": "也是"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.504,
+     "peak": "其实"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.324,
+     "peak": "是"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.192,
+     "peak": "的优点"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.383,
+     "peak": "内容"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.147,
+     "peak": "也是"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.193,
+     "peak": "手机"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.176,
+     "peak": "这本书"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.173,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.226,
+     "peak": "衣服"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.223,
+     "peak": "水果"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.227,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.3,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.17,
+     "peak": "。"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.797,
+    "median_fire": 0.386,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "87752bbbe",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese slot ending a topic",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Probes: 0.38-0.52 on these ('是', '也是', '主要', '都', '點'). Plain narrative 0.08-0.22 ('我今天去了北京' 0.22 on the final '。'). So near misses may leak. On this pole the output direction promotes ' relatively', '比较', ' comparatively', so the slot may be one that expects a degree word.",
+ "selection": "random draw"
+}
