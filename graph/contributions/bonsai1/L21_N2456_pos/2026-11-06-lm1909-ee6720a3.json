@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-ee6720a3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N2456+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:13:53+00:00",
+ "recipe": {
+  "toolchain_commit": "7c51dd72f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N2456_pos/2026-11-06-lm1909-ee6720a3.tests.json"
+ },
+ "label": "the first letter or initial after a first name in a study author's attribution (Jane C. Tan, Steven Houser)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N2456_pos/2026-11-06-lm1909-ee6720a3.tests.json",
+   "prereg_commit": "7c51dd72f",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.522,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.605,
+     "peak": " R"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.202,
+     "peak": " Laura"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.61,
+     "peak": " K"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.426,
+     "peak": " J"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.398,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.475,
+     "peak": " T"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.408,
+     "peak": " G"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " doctors"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " J"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " agreed"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.451,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7c51dd72f",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "initial in author attribution",
+ "unit_kind": "token / contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}

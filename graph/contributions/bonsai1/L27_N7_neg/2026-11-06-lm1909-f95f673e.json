@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-f95f673e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N7-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:13:34+00:00",
+ "recipe": {
+  "toolchain_commit": "7c51dd72f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N7_neg/2026-11-06-lm1909-f95f673e.tests.json"
+ },
+ "label": "the piece ' Good' at the start of a surname (Goodell, Goodall, Goodwin), not the adjective",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N7_neg/2026-11-06-lm1909-f95f673e.tests.json",
+   "prereg_commit": "7c51dd72f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.761,
+     "peak": " Good"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.574,
+     "peak": " Good"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.98,
+     "peak": " Good"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.807,
+     "peak": " Good"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.525,
+     "peak": " Good"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.753,
+     "peak": " Good"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.743,
+     "peak": " Good"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.488,
+     "peak": " Good"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.081,
+     "peak": " Silver"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.071,
+     "peak": " F"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.092,
+     "peak": "uch"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.082,
+     "peak": " good"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "enz"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " good"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.748,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7c51dd72f",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' Good' in surnames",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Good"
+  ]
+ }
+}
