@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-c4ef37b9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N11744+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:29:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N11744",
+   "pole": "+",
+   "label": "Queue operations in code and FIFOs: '.put', '.get' on a queue, Queue.Empty, FIFO",
+   "fire": [
+    "self._work_queue.put(item)\n",
+    "job = self.queue.get()\n",
+    "msg = self.inbox_queue.get_nowait()\n",
+    "except Queue.Empty:\n    break\n",
+    "Testing that we can flush the FIFO.\n",
+    "self.queue_rx.put('Stop')\n",
+    "task = work_queue.get(timeout=1)\n",
+    "The buffer is a simple FIFO of samples.\n"
+   ],
+   "quiet": [
+    "self._work_list.append(item)\n",
+    "job = self.table.lookup()\n",
+    "msg = self.inbox.read()\n",
+    "except ValueError:\n    break\n",
+    "Testing that we can clear the screen.\n",
+    "self.label_rx.show('Stop')\n",
+    "task = work_dict.get('t')\n",
+    "The buffer is a simple list of samples.\n"
+   ]
+  }
+ ],
+ "predictions": "Queue operations fire; list and dict operations stay quiet. English 'the queue at the bank' read 0.40 in a probe.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "queue operations, FIFO",
+ "unit_kind": "semantic",
+ "confidence": "high"
+}
