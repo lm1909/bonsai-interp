@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4ae4fcd9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7936-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:26:47+00:00",
+ "recipe": {
+  "toolchain_commit": "5e7d552e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N7936_neg/2026-11-06-lm1909-4ae4fcd9.tests.json"
+ },
+ "label": "the first syllable of a Korean or Chinese given name, right after the surname (김|경승, 박|창열, 李|秀安)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N7936_neg/2026-11-06-lm1909-4ae4fcd9.tests.json",
+   "prereg_commit": "5e7d552e8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.895,
+     "peak": "영"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.832,
+     "peak": "정"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.426,
+     "peak": "상"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.766,
+     "peak": "강"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.753,
+     "peak": "晓"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.698,
+     "peak": "秀"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.22,
+     "peak": "경"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.749,
+     "peak": "晓"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.068,
+     "peak": "림"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": "했다"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "다"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": "경"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "到了"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "这个"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": "았다"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "这位"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.751,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5e7d552e8",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "given name after an East Asian surname",
+ "unit_kind": "contextual",
+ "confidence": 0.95,
+ "notes": "Card: '영' x4, '경' x3, '정' x2, '秀' x2, '晓' x2, '상'. Probe: '창' 1.005; '강' 0.867; '경' 0.832 after 김, but the same '경' in 경기도 0.018; '秀' 0.816; ' Jong' after 'Kim' 0.339; sentences without a name at most 0.010.",
+ "selection": "random draw"
+}

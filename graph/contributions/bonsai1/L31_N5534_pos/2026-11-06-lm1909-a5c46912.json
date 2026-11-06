@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a5c46912",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N5534+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:26:58+00:00",
+ "recipe": {
+  "toolchain_commit": "5e7d552e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N5534_pos/2026-11-06-lm1909-a5c46912.tests.json"
+ },
+ "label": "function words in prose on Tibetan, Khmer or Buddhist history ('saints such as', 'the new Khmer king (')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N5534_pos/2026-11-06-lm1909-a5c46912.tests.json",
+   "prereg_commit": "5e7d552e8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.044,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.626,
+     "peak": "S"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.632,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.449,
+     "peak": " general"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.851,
+     "peak": " under"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.821,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.636,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.54,
+     "peak": " high"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.081,
+     "peak": "with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.063,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.092,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.063,
+     "peak": " board"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": " doctors"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": " bishop"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.634,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5e7d552e8",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Tibetan and Khmer history prose",
+ "unit_kind": "topic",
+ "confidence": 0.55,
+ "notes": "Card: ' by' x5, ' the' x4, ' and' x2, ' (' x2, ' King' x2, ' of' x2, in Tibetan, Khmer, Hungarian and tech history. Probe: ' as' in 'Indian saints such as' 0.909; ' (' after 'Khmer king' 0.690; 'with Indian traders' 0.667; 'Khmer army (with' 0.335; Hungarian 'King Bela' 0.127 and 'Stephen' 0.209, so the Hungarian peaks are not covered. Near misses move the same frames to other places.",
+ "selection": "random draw"
+}

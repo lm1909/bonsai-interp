@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3e4785eb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2122+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:26:07+00:00",
+ "recipe": {
+  "toolchain_commit": "5e7d552e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2122_pos/2026-11-06-lm1909-3e4785eb.tests.json"
+ },
+ "label": "fixed slogans built by repeating a word or frame ('first-come, first-served', 'buy one get one', 'pay as you go', 'use it or lose it', 'first in, first out')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2122_pos/2026-11-06-lm1909-3e4785eb.tests.json",
+   "prereg_commit": "5e7d552e8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.899,
+     "peak": "ome"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.035,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.431,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.856,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.478,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.932,
+     "peak": " come"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.111,
+     "peak": " pain"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.854,
+     "peak": " one"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.102,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " gym"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "L"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " clinic"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " are"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.855,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5e7d552e8",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "repeating-frame slogans",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.9,
+ "notes": "Card: ' come' x2, ' as' x2, 'one' x2, 'ome', ' One', ' in', ' it'. Probe: ' one' 1.036; 'ome' of first-come 0.920; ' it' 0.659; ' as' 0.575; ' out' 0.372; the plain frames 0.015-0.049. The test repeats these slogans in new frames plus two new ones: 'last in, first out' and 'no pain, no gain'.",
+ "selection": "random draw"
+}

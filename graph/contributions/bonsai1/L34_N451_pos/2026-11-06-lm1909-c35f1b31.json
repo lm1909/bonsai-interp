@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c35f1b31",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N451+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:27:04+00:00",
+ "recipe": {
+  "toolchain_commit": "5e7d552e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N451_pos/2026-11-06-lm1909-c35f1b31.tests.json"
+ },
+ "label": "the last letter of an acronym in parentheses after its spelled-out name ('Short Course Yards Pool (SCY)') and a digit before 'MP'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N451_pos/2026-11-06-lm1909-c35f1b31.tests.json",
+   "prereg_commit": "5e7d552e8",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.75,
+     "peak": "M"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.097,
+     "peak": " Quad"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.589,
+     "peak": "M"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.056,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.332,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.227,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": -0.0,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.346,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " Quad"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " wide"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": " national"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " top"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": " international"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": " has"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.28,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5e7d552e8",
+  "minutes": 16,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "acronym letter; digit before MP (guess)",
+ "unit_kind": "token",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ',' x4, ' dec' x3, 'SC', '8', ' CL', ' HD'; promotes ' DP', ' MP', ' BP', ' CP', ' FP'. Probe: 'Y' of (SCY) 0.509; '8' of 48MP 0.294; CL&P, HDHP and SM&P at most 0.056; plain 0.000-0.031.",
+ "selection": "random draw"
+}
