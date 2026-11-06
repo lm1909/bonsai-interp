@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-0bda5474",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N6597+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:41:41+00:00",
+ "recipe": {
+  "toolchain_commit": "5a52e9c74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N6597_pos/2026-11-06-lm1909-0bda5474.tests.json"
+ },
+ "label": "'fixed' in English and Chinese/Japanese: ' fixed', 固定, 固定的, firing on those tokens; other verbs and adjectives in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N6597_pos/2026-11-06-lm1909-0bda5474.tests.json",
+   "prereg_commit": "5a52e9c74",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.341,
+     "peak": " fixed"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.304,
+     "peak": " fixed"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.862,
+     "peak": "固定"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.867,
+     "peak": "固定"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.306,
+     "peak": " fixed"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.922,
+     "peak": "固定"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.276,
+     "peak": " fixed"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.432,
+     "peak": "固定的"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " network"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": "で"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": "在家里"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " years"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "置いて"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " hours"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "座位"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.387,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5a52e9c74",
+  "minutes": 2,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "' fixed' / 固定",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " fixed",
+   "固定",
+   "固定的"
+  ]
+ }
+}
