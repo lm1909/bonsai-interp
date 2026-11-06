@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-fb8703e7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N3710-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:53:56+00:00",
+ "recipe": {
+  "toolchain_commit": "6af6d3990",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N3710_neg/2026-11-06-lm1909-fb8703e7.tests.json"
+ },
+ "label": "' Bike' or ' bike' after Mountain or in the name of a cycling group, firing on that word; other sports and team names in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N3710_neg/2026-11-06-lm1909-fb8703e7.tests.json",
+   "prereg_commit": "6af6d3990",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.832,
+     "peak": " Bike"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.727,
+     "peak": " Bike"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.875,
+     "peak": " bike"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.986,
+     "peak": " Bike"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.728,
+     "peak": " Bike"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.643,
+     "peak": " bikes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.789,
+     "peak": " Bike"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.841,
+     "peak": " bike"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " took"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.073,
+     "peak": " Race"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " club"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " Horse"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " lodge"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": " Club"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " parks"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.81,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6af6d3990",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "' Bike' in Mountain Bike names",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Bike",
+   " bike",
+   " bikes",
+   " biking"
+  ]
+ }
+}

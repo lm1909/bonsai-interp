@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-8f28ff5d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N3377-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:53:33+00:00",
+ "recipe": {
+  "toolchain_commit": "6af6d3990",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N3377_neg/2026-11-06-lm1909-8f28ff5d.tests.json"
+ },
+ "label": "' or' offering a switch between two settings ('Enable or disable', 'and 1 or -1'), firing on ' or' or ' disable', and ',' in contest rules ('to enter,'); ' or' between nouns stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N3377_neg/2026-11-06-lm1909-8f28ff5d.tests.json",
+   "prereg_commit": "6af6d3990",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.564,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.349,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.687,
+     "peak": " entry"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.333,
+     "peak": " disable"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.63,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.331,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.597,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.645,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.002,
+     "peak": " opts"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.002,
+     "peak": " kind"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " share"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " pick"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " alarm"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.051,
+     "peak": " flag"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.154,
+     "peak": " switch"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.05,
+     "peak": " reply"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.581,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6af6d3990",
+  "minutes": 1,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "' or' in 'enable or disable'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " or",
+   " disable",
+   ","
+  ]
+ }
+}
