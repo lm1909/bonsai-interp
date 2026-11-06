@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-9b7e05a3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N163+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:32:31+00:00",
+ "recipe": {
+  "toolchain_commit": "a140ab741",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N163_pos/2026-11-06-lm1909-9b7e05a3.tests.json"
+ },
+ "label": "' three', ' two' or ' several' in a small count before ' different' or a plural noun (three different views, several different values), firing on the count word; other determiners stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N163_pos/2026-11-06-lm1909-9b7e05a3.tests.json",
+   "prereg_commit": "a140ab741",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.039,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.193,
+     "peak": " several"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.248,
+     "peak": " two"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.017,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.036,
+     "peak": " college"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.126,
+     "peak": " two"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.045,
+     "peak": " three"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.024,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " plan"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": " get"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " own"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": " college"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " bridge"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.711,
+    "median_fire": 0.042,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a140ab741",
+  "minutes": 2,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "small count before 'different'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " three",
+   " two",
+   " several",
+   " Two"
+  ]
+ }
+}
