@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-cfbbeb51",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N51+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:53:04+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L1/N51",
+   "pole": "+",
+   "label": "a short list of tokens: ' bed', ' MHz', 'داع' of الص|داع (headache), the katakana ヒ",
+   "fire": [
+    "Put the kids to bed at nine.",
+    "The radio runs at 300 MHz.",
+    "أعاني من الصداع كل يوم.",
+    "シートヒーターは高い。",
+    "We went to bed late.",
+    "The clock is at 800 MHz.",
+    "يسبب التوتر الصداع أحيانا.",
+    "部屋にヒーターを置いた。"
+   ],
+   "quiet": [
+    "Put the kids in the car at nine.",
+    "The radio runs at full volume.",
+    "أعاني من الحر كل يوم.",
+    "シートカバーは高い。",
+    "We went to lunch late.",
+    "The clock is on the wall.",
+    "يسبب التوتر الحر أحيانا.",
+    "部屋にカバーを置いた。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tokens: bed, MHz, داع, ヒ",
+ "unit_kind": "token",
+ "confidence": 0.6,
+ "notes": "A new round: the sweep test failed at AUROC 0.891 because one Arabic item split the word as صد|اع. Whole sentences here were tokenized before the commit.",
+ "trigger": {
+  "tokens": [
+   " bed",
+   " MHz",
+   "داع",
+   "ヒ"
+  ]
+ }
+}

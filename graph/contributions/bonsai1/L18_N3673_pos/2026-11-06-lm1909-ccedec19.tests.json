@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-ccedec19",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N3673+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:53:04+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L18/N3673",
+   "pole": "+",
+   "label": "' to' in the older GPL header 'if not, write to the Free Software Foundation', inside a full multi-line licence header; the newer 'if not, see <http...>' stays quiet",
+   "fire": [
+    "# This program is distributed in the hope that it will be useful,\n# but WITHOUT ANY WARRANTY.\n# You should have received a copy of the GNU General Public License\n# along with this program; if not, write to the Free Software\n# Foundation, Inc.",
+    "// This program is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY.\n// You should have received a copy of the GNU General Public License\n// along with this program; if not, write to the Free Software\n// Foundation, Inc.",
+    " * This library is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY.\n * You should have received a copy of the GNU Lesser General Public License\n * along with this library; if not, write to the Free Software\n * Foundation, Inc.",
+    ";; This file is distributed in the hope that it will be useful,\n;; but WITHOUT ANY WARRANTY.\n;; You should have received a copy of the GNU General Public License\n;; along with this file; if not, write to the Free Software\n;; Foundation, Inc.",
+    "-- This program is distributed in the hope that it will be useful,\n-- but WITHOUT ANY WARRANTY.\n-- You should have received a copy of the GNU General Public License\n-- along with this program; if not, write to the Free Software\n-- Foundation, Inc.",
+    "% This program is distributed in the hope that it will be useful,\n% but WITHOUT ANY WARRANTY.\n% You should have received a copy of the GNU General Public License\n% along with this program; if not, write to the Free Software\n% Foundation, Inc.",
+    "This software is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY.\nYou should have received a copy of the GNU General Public License\nalong with this software; if not, write to the Free Software\nFoundation, Inc.",
+    "# This module is distributed in the hope that it will be useful,\n# but WITHOUT ANY WARRANTY.\n# You should have received a copy of the GNU General Public License\n# along with this module; if not, write to the Free Software\n# Foundation, Inc."
+   ],
+   "quiet": [
+    "# This program is distributed in the hope that it will be useful,\n# but WITHOUT ANY WARRANTY.\n# You should have received a copy of the GNU General Public License\n# along with this program. If not, see <http://www.gnu.org/licenses/>.",
+    "// This program is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY.\n// You should have received a copy of the GNU General Public License\n// along with this program. If not, see <http://www.gnu.org/licenses/>.",
+    " * This library is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY.\n * You should have received a copy of the GNU Lesser General Public License\n * along with this library. If not, see <http://www.gnu.org/licenses/>.",
+    ";; This file is distributed in the hope that it will be useful,\n;; but WITHOUT ANY WARRANTY.\n;; You should have received a copy of the GNU General Public License\n;; along with this file. If not, see <http://www.gnu.org/licenses/>.",
+    "-- This program is distributed in the hope that it will be useful,\n-- but WITHOUT ANY WARRANTY.\n-- You should have received a copy of the GNU General Public License\n-- along with this program. If not, see <http://www.gnu.org/licenses/>.",
+    "% This program is distributed in the hope that it will be useful,\n% but WITHOUT ANY WARRANTY.\n% You should have received a copy of the GNU General Public License\n% along with this program. If not, see <http://www.gnu.org/licenses/>.",
+    "This software is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY.\nYou should have received a copy of the GNU General Public License\nalong with this software. If not, see <http://www.gnu.org/licenses/>.",
+    "# This module is distributed in the hope that it will be useful,\n# but WITHOUT ANY WARRANTY.\n# You should have received a copy of the GNU General Public License\n# along with this module. If not, see <http://www.gnu.org/licenses/>."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "GPL 'write to the FSF', full header",
+ "unit_kind": "lexical / boilerplate",
+ "confidence": 0.8,
+ "notes": "A new round: the sweep test failed (AUROC 0.742) because short one-line versions did not fire; only a full multi-line header did (0.67). Near misses here are the same headers with the newer ending, so they are hard.",
+ "trigger": {
+  "tokens": [
+   " to"
+  ]
+ }
+}
