@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-ddd8f1c3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10377-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:02:19+00:00",
+ "recipe": {
+  "toolchain_commit": "af78a5b62",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N10377_neg/2026-11-06-lm1909-ddd8f1c3.tests.json"
+ },
+ "label": "' a' or ' an' after 'X is' when defining an electronic part ('A capacitor is an')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N10377_neg/2026-11-06-lm1909-ddd8f1c3.tests.json",
+   "prereg_commit": "af78a5b62",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.529,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.208,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.145,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.163,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.777,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.336,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.23,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.617,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " drives"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " block"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " road"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.058,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " orch"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "bar"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.283,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "af78a5b62",
+  "minutes": 3,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "'a/an' defining an electronic part",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. In the first round the peak was on ' a' or ' an' in definitions and other electronics sentences stayed low.",
+ "selection": "picked"
+}

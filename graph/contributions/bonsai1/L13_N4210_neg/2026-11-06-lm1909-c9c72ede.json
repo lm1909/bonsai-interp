@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-c9c72ede",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N4210-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:59+00:00",
+ "recipe": {
+  "toolchain_commit": "af78a5b62",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N4210_neg/2026-11-06-lm1909-c9c72ede.tests.json"
+ },
+ "label": "the digit of a miles figure in a kilometres-to-miles conversion ('120 kilometers (75 miles)')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N4210_neg/2026-11-06-lm1909-c9c72ede.tests.json",
+   "prereg_commit": "af78a5b62",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.602,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.542,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.492,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.666,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.561,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.643,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.727,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.515,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.05,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.061,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.219,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " gallons"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.355,
+     "peak": "1"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.582,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "af78a5b62",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "digit in a km-to-miles conversion",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. The first round's km-to-miles sentences read 0.51-0.65 and metres-to-feet stayed at 0.01. Near misses are other unit conversions, so a general conversion pole would fail.",
+ "selection": "picked"
+}
