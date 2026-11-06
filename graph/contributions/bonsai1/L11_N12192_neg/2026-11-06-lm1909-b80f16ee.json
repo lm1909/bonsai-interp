@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b80f16ee",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N12192-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:08:05+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N12192_neg/2026-11-06-lm1909-b80f16ee.tests.json"
+ },
+ "label": "a token of an HTML or XML tag being handled in code or comments (</pre>, starttag, rstrip('</'))",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N12192_neg/2026-11-06-lm1909-b80f16ee.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.781,
+     "peak": " </"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.496,
+     "peak": "tag"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.317,
+     "peak": "('</"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.22,
+     "peak": " <"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.453,
+     "peak": "tag"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.44,
+     "peak": "('</"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.248,
+     "peak": " </"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.318,
+     "peak": "tag"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": "       "
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": "rstrip"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": "       "
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": " end"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " handle"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.379,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "HTML/XML tag handling in code",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: 'amping' x3, 'ref' x3, 'tag' x2, ' see' x2, ' </', ' >'. Probes: ' </' 0.669, 'tag' 0.653, \"('</\" 0.327, ' <' 0.133; rows and titles 0.021. Near misses keep the code without a tag.",
+ "selection": "random draw"
+}

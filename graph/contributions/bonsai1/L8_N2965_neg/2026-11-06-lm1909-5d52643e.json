@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5d52643e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N2965-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:27+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N2965_neg/2026-11-06-lm1909-5d52643e.tests.json"
+ },
+ "label": "' to' or ' à' after going or gone to a place or event (going to the beach, allé à Vancouver), or ' attend'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N2965_neg/2026-11-06-lm1909-5d52643e.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.639,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.686,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.488,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.712,
+     "peak": " à"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.871,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.44,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.681,
+     "peak": " à"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.705,
+     "peak": " attend"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": " reading"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.127,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.129,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.105,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": " vais"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " house"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.683,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "going to a place or event",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' to' x16, ' attend' x4, ' a' x3, ' à' x2, ' the' x2, ' of'. Probes: ' à' 1.021, ' to' 0.916, 0.686, 0.448, ' attend' 0.529; 'going to fix' 0.127, 'reading novels' 0.019. Near misses keep ' going to' as a future auxiliary, so the token alone can't pass.",
+ "selection": "random draw"
+}

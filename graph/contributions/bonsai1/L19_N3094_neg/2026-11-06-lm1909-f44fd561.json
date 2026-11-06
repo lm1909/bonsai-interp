@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f44fd561",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N3094-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:55+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N3094_neg/2026-11-06-lm1909-f44fd561.tests.json"
+ },
+ "label": "a plural or field-like noun naming a configuration or record field, in code or docs (statuses, _bucket, _qty)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N3094_neg/2026-11-06-lm1909-f44fd561.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.697,
+     "peak": " statuses"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.53,
+     "peak": "_gs"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.555,
+     "peak": "_qty"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.272,
+     "peak": " disks"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.34,
+     "peak": " statuses"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.423,
+     "peak": "_bucket"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.532,
+     "peak": "_qty"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.373,
+     "peak": " cpu"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.268,
+     "peak": " sum"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.211,
+     "peak": "_name"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.038,
+     "peak": "See"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.196,
+     "peak": " memory"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.317,
+     "peak": " Print"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.196,
+     "peak": "_name"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.051,
+     "peak": "Refer"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.327,
+     "peak": " cpu"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "config or record field name",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card flags broad (3.7%): '_qty', '_bucket', ' disks', '谢', ' statuses', \"'\\n\". Probes: ' statuses' 0.936, '_bucket' 0.581, '_qty' 0.269; ' dog' 0.026, 'Refer' 0.051. Near misses keep the docs and code frames without such a field.",
+ "selection": "random draw"
+}

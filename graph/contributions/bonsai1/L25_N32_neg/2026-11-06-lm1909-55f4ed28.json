@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-55f4ed28",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N32-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:08:03+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N32_neg/2026-11-06-lm1909-55f4ed28.tests.json"
+ },
+ "label": "' immediate' in 'his immediate future'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N32_neg/2026-11-06-lm1909-55f4ed28.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.351,
+     "peak": " immediate"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.321,
+     "peak": " immediate"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.234,
+     "peak": " immediate"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.266,
+     "peak": " future"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.151,
+     "peak": " future"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.219,
+     "peak": " future"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.288,
+     "peak": " immediate"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.124,
+     "peak": " immediate"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.092,
+     "peak": " salary"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.057,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " lived"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.064,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " loss"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.045,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.25,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' immediate' future",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' economically' x2, ' nicht' x2, ' is' x2, ' BBC' x2, ' immediate', ' evolutionary'. Probes: ' immediate' 0.365, ' be' 0.189, others under 0.08. A guess at one probe.",
+ "selection": "random draw"
+}

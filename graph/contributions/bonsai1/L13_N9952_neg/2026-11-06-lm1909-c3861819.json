@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c3861819",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N9952-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:43+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N9952_neg/2026-11-06-lm1909-c3861819.tests.json"
+ },
+ "label": "' sustainability' or ' proper' as an evaluative noun or adjective on doing something well (economic sustainability, the proper charge)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N9952_neg/2026-11-06-lm1909-c3861819.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.248,
+     "peak": " sustainability"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.334,
+     "peak": " proper"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.314,
+     "peak": " sustainability"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.131,
+     "peak": " proper"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.504,
+     "peak": " sustainability"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.125,
+     "peak": " proper"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.544,
+     "peak": " sustainability"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.041,
+     "peak": " proper"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " topic"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": " politics"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.078,
+     "peak": " leave"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " history"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": "ags"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " debates"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " him"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.281,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "sustainability / proper",
+ "unit_kind": "lexical",
+ "confidence": "low",
+ "notes": "Card: ' sustainability' x5, ' responsible' x2, ' sound' x2, ' behind' x2, '_inputs', ' proper'; 53% gate-open. Probes: ' proper' 0.511, ' sustainability' 0.351, ' properly' sentence 0.069. A list.",
+ "selection": "random draw"
+}

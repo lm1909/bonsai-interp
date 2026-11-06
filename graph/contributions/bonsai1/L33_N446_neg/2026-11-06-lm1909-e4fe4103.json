@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e4fe4103",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N446-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:23+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N446_neg/2026-11-06-lm1909-e4fe4103.tests.json"
+ },
+ "label": "the split first letter ' S' or ' H' of a place or proper name (' S'|utherland)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N446_neg/2026-11-06-lm1909-e4fe4103.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.536,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.053,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.004,
+     "peak": " bus"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.162,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.344,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.008,
+     "peak": "ers"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.16,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.056,
+     "peak": " S"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " ran"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " bus"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " drove"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.105,
+     "peak": " north"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " hour"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.108,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split first letter of a name",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' we' x4, ' H' x4, 'H' x3, ' h' x3, ' are' x2, 'S' x2. Probes: ' S' in Sutherland 0.564, ' we' in 'as we move' 0.330; others under 0.12. A guess on one cluster; ' we' is not claimed. Tokens checked.",
+ "selection": "random draw"
+}

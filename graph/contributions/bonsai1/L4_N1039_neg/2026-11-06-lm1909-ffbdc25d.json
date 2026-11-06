@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ffbdc25d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N1039-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:08:09+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N1039_neg/2026-11-06-lm1909-ffbdc25d.tests.json"
+ },
+ "label": "the name of a hardware control signal (write enable, reset, sense)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N1039_neg/2026-11-06-lm1909-ffbdc25d.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.712,
+     "peak": " enable"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.512,
+     "peak": " enable"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.221,
+     "peak": " high"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.106,
+     "peak": " data"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.109,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.443,
+     "peak": " enable"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.113,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.014,
+     "peak": " pin"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " green"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " board"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " cable"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " metal"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " close"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " holes"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " board"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.167,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "hardware control signal",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' clock' x4, ' enable' x3, ' reset' x3, ' on' x2, ' sense', 'CK', 'IG'. Probes: ' enable' 0.617, ' sense' 0.187, ' reset' 0.172, 'CK' 0.058; 'The clock on the wall' 0.041. Median may sit near the bar. Near misses keep the electronics topic.",
+ "selection": "random draw"
+}

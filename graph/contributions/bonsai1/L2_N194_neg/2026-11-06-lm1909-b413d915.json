@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-b413d915",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N194-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:40+00:00",
+ "recipe": {
+  "toolchain_commit": "97317786e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N194_neg/2026-11-06-lm1909-b413d915.tests.json"
+ },
+ "label": "the noun ' panel' or ' panels' (legal panel, body panels, expert panel), on a broad pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N194_neg/2026-11-06-lm1909-b413d915.tests.json",
+   "prereg_commit": "97317786e",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.774,
+     "peak": " panel"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.559,
+     "peak": " panels"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.319,
+     "peak": " panel"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.351,
+     "peak": " panels"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.191,
+     "peak": " panel"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.276,
+     "peak": " panels"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.216,
+     "peak": " panel"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.349,
+     "peak": " panel"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.067,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.175,
+     "peak": "Tr"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.047,
+     "peak": "Thin"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": "Green"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.086,
+     "peak": " month"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.334,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "97317786e",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word ' panel'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Card flags broad (3.0%) and gate-closed (86%): ' panel' x13, ' Panel' x3, ' panels' x2, '伝' x2, 'Panel' x2, ' kept' x2. Probes: 0.35-0.76; but 'legal chief' reached 0.412, so near misses may fire.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "panel"
+  ]
+ }
+}
