@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-fa2f1c98",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N8909-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:49:40+00:00",
+ "selection": "picked: round 2 after a failed round",
+ "neighbours": [
+  {
+   "unit": "L24/N8909",
+   "pole": "-",
+   "label": "a word piece starting with u + vowel inside a name (F|uego, N|ueva, C|uyo, C|ui|jk), as opposed to a piece starting with u + consonant after the same letter, from similar places (M|ula, N|ules, C|ull|era, P|unt|arenas)",
+   "fire": [
+    "The island of Tierra del Fuego lies south of Chile.",
+    "The novelist Carlos Fuentes wrote about Mexico City.",
+    "The province of Nueva Ecija grows most of the rice.",
+    "The castle of Muiden lies east of Amsterdam.",
+    "The wines of Cuyo come from western Argentina.",
+    "The town of Cuijk lies on the Maas.",
+    "The Nuer people live along the White Nile.",
+    "The old pier, called Muelle de Oro, stretches into the bay."
+   ],
+   "quiet": [
+    "The port of Puntarenas lies south of Nicoya.",
+    "The novelist Joan Fuster wrote about Mexico City.",
+    "The town of Nules grows most of the rice.",
+    "The town of Mula lies west of Murcia.",
+    "The sheep of Cumbria come from northern England.",
+    "The city of Cullera sits on the Jucar River.",
+    "The people of Puno live along Lake Titicaca.",
+    "The old road, called Camino del Cusco, stretches into the hills."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "name piece starting u + vowel, not u + consonant",
+ "unit_kind": "spelling unit",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed names opening in Hu- and failed, because R|uis|dael reached 0.68 on the same kind of piece, and Gu| names 0.34-0.40. Probes: C|uen|ca 0.43, P|ue|bla 0.38, C|ui 0.41, L|uis| and R|uis| 0.60-0.68, H|uar| 0.31. Not everything fits: Zhuhai's 'uh' 0.25 is u + consonant; Q|uito 0.01, K|uito 0.06, R|ueil 0.17; Hu|iz and Hu|ys are high (0.74-0.90) and are not u + vowel pieces, so this label does not cover them, and earlier H|ux| reached 0.24-0.33. So this covers part of the pole only. Pieces checked with the tokenizer."
+}
