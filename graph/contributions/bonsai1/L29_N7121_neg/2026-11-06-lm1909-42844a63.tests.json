@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-42844a63",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N7121-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:16:31+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N7121",
+   "pole": "-",
+   "label": "Python's struct module: '.pack' and '.unpack' on struct, binary packing of values",
+   "fire": [
+    "import struct\nblob = struct.pack('<HH', x, y)\n",
+    "length = struct.unpack('>I', data[:4])[0]\nprint(length)\n",
+    "def read_u8(f):\n    return struct.unpack('B', f.read(1))[0]\n",
+    "out.write(struct.pack('>h', len(body)))\n",
+    "header = struct.pack('<QQ', a, b)\nsock.send(header)\n",
+    "vals = struct.unpack('<ff', chunk)\nprint(vals)\n",
+    "def write_u16(f, n):\n    f.write(struct.pack('>H', n))\n",
+    "offset = struct.unpack('<L', s)[0]\nf.seek(offset)\n"
+   ],
+   "quiet": [
+    "import json\nblob = json.dumps([x, y])\n",
+    "length = len(data[:4])\nprint(length)\n",
+    "def read_line(f):\n    return f.readline().strip()\n",
+    "out.write(str(len(body)))\n",
+    "header = make_header(a, b)\nsock.send(header)\n",
+    "vals = list(map(float, chunk))\nprint(vals)\n",
+    "def write_text(f, n):\n    f.write(str(n))\n",
+    "offset = int(s)\nf.seek(offset)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "struct.pack, struct.unpack",
+ "unit_kind": "code / lexical",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   ".pack",
+   ".unpack"
+  ]
+ }
+}
