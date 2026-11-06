@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-812bce57",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N2769-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:51+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N2769_neg/2026-11-06-lm1909-812bce57.tests.json"
+ },
+ "label": "an opening bracket glued to the start of an expression inside an index or call ('c[(e+1)', 'is_vcs(k', 'Ei(p')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N2769_neg/2026-11-06-lm1909-812bce57.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.023,
+     "peak": "i"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.629,
+     "peak": "(k"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.057,
+     "peak": "j"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.456,
+     "peak": "(k"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.023,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.145,
+     "peak": "(k"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.015,
+     "peak": "+"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.826,
+     "peak": "(p"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": " done"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " count"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " pass"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " ="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.101,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "bracket opening a nested expression",
+ "unit_kind": "syntactic",
+ "confidence": 0.3,
+ "notes": "Low confidence. Card: '[(' x3, '(k' x2, '(p' x2, '[self' x2, '[len', '(\\n'. Probe: '[(' 0.541; '(k' 0.510; '[len' 0.064; '[self' sentence peak elsewhere 0.013; plain code at most 0.021. So only some of the card's tokens fired.",
+ "selection": "random draw"
+}

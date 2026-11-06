@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-47441aad",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N8019+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:30+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N8019_pos/2026-11-06-lm1909-47441aad.tests.json"
+ },
+ "label": "the name imported in a Python import line ('from functools import update_wrapper', 'from googleapiclient import errors', 'import textwrap')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N8019_pos/2026-11-06-lm1909-47441aad.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.224,
+     "peak": " partial"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.653,
+     "peak": " exceptions"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.374,
+     "peak": " models"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.644,
+     "peak": " collections"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.399,
+     "peak": " request"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.636,
+     "peak": " sparse"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.473,
+     "peak": " retry"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.534,
+     "peak": " shutil"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "(g"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": " []\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": "_models"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.042,
+     "peak": " collections"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": ".form"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.042,
+     "peak": " sparse"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " retry"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "_tree"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.504,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the imported name in Python",
+ "unit_kind": "syntactic",
+ "confidence": 0.9,
+ "notes": "Card: ' functools' x5, ' exceptions' x3, ' collections' x3, '\\n' x3, ' sp' x2, ' sparse', '_wrapper', ' errors'. Probe: ' status' 1.180; ' errors' 0.915; '_wrapper' 0.871; ' data' 0.847; 'wrap' 0.755; '_wrapper' in a call 0.032; 'errors = []' 0.025; prose 0.008. Near misses use the same names outside import lines, with other openings.",
+ "selection": "random draw"
+}

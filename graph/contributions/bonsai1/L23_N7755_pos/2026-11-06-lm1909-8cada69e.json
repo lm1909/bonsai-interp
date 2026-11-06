@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8cada69e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7755+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:19+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N7755_pos/2026-11-06-lm1909-8cada69e.tests.json"
+ },
+ "label": "the separator inside a tight enumeration of short items, where another item is due next ('heart, soul, and mind', 'My, your, his', 'death or mourning or crying')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N7755_pos/2026-11-06-lm1909-8cada69e.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.348,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.482,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.178,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.197,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.09,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.117,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.185,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.632,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": "When"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " THESE"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "Because"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.191,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "separator in a tight enumeration",
+ "unit_kind": "syntactic / predictive",
+ "confidence": 0.7,
+ "notes": "Card: ',' x15, ' and' x4, '.' x2, ' the' x2, ' or', '].'. Probe: ' and' 0.638 in 'heart, soul, and'; ',' 0.496 in 'DIRECT, INDIRECT,'; ',' 0.404 in 'My, your,'; '.' 0.362 in 'Strength. Dexterity.'; ' or' 0.331; a clause comma 0.002; plain frames at most 0.004. Near misses are commas and 'and' between clauses or long phrases.",
+ "selection": "random draw"
+}

@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-d03e8941",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N2438+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:36+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N2438_pos/2026-11-06-lm1909-d03e8941.tests.json"
+ },
+ "label": "dense unit (39% of tokens reach 0.1 of max); strongest on the token ' breath'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N2438_pos/2026-11-06-lm1909-d03e8941.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.609,
+     "peak": " breath"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.418,
+     "peak": " breath"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.486,
+     "peak": " breath"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.822,
+     "peak": " breath"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.521,
+     "peak": " breathe"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.531,
+     "peak": " breath"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.562,
+     "peak": " breath"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.764,
+     "peak": " breath"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.292,
+     "peak": " race"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.185,
+     "peak": " any"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.202,
+     "peak": "immers"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.25,
+     "peak": " eat"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.183,
+     "peak": " sleep"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.142,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.112,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.231,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.546,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; ' breath'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.45,
+ "notes": "Card: FLAG dense 39.3%, 100% echo regime, max 0.22; ' breath' x14. Probe: ' breath' 0.825, 0.825 and 0.473; ' bow' 0.099; but ' the' in a plain sentence 0.393 and '.' 0.228, so the baseline is high and an 8 + 8 may fail. Near misses avoid ' the'.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "breath",
+   "breathes",
+   "breathe"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-05a57885",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N6353-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:28+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N6353_neg/2026-11-06-lm1909-05a57885.tests.json"
+ },
+ "label": "a noun for a specific work or period right after a name or a number ('his 13th edition', 'Sima Qian's history', 'the Davinci Code', 'ShipIt days')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N6353_neg/2026-11-06-lm1909-05a57885.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.44,
+     "peak": " edition"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.444,
+     "peak": " history"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.227,
+     "peak": " Identity"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.272,
+     "peak": " days"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.235,
+     "peak": " edition"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.366,
+     "peak": "y"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.196,
+     "peak": "hecy"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.537,
+     "peak": " days"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": "Sch"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.186,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": "This"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": "ics"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.319,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun after a name or ordinal",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Low confidence. Card: ' edition' x2, ' days', ' month', ' Code', ' coupling', ' history', ' hormones', ' exploration'. Probe: ' edition' 0.639; ' history' 0.443; ' days' 0.426; ' Code' 0.352; \"'s\" after 'month' 0.241; plain frames at most 0.039. The shared idea is my guess.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fb9ba310",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N11970-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:46+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N11970_neg/2026-11-06-lm1909-fb9ba310.tests.json"
+ },
+ "label": "'=True' as a keyword argument in a Python call ('shell=True', 'inline=True'), and the near-by '.flush' and 'DEVNULL'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N11970_neg/2026-11-06-lm1909-fb9ba310.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.59,
+     "peak": "=True"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.35,
+     "peak": "=True"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.244,
+     "peak": "=True"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.477,
+     "peak": ".flush"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.18,
+     "peak": "=True"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.487,
+     "peak": "NULL"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.134,
+     "peak": "=True"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.411,
+     "peak": "=True"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.123,
+     "peak": " limit"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.28,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": ".train"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": "print"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "(args"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.002,
+     "peak": "_width"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": "flag"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.028,
+     "peak": "3"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.38,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'=True' keyword in Python calls",
+ "unit_kind": "syntactic / lexical",
+ "confidence": 0.75,
+ "notes": "Card: '=True' x13, '.flush' x5, 'NULL', '.Queue', 'w', '4'. Probe: '=True' 0.591, 0.420 and 0.235; '.flush' 0.508; 'NULL' 0.383; '=False' 0.116; 'x = True' -0.004; a call with no keyword 0.027. Near misses are other keywords and values, with other openings.",
+ "selection": "random draw"
+}

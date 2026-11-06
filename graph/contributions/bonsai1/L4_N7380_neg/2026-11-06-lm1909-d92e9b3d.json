@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d92e9b3d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N7380-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:56+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N7380_neg/2026-11-06-lm1909-d92e9b3d.tests.json"
+ },
+ "label": "a piece ending a word in -ller or -ers, and Japanese 'ッ' of ヨーロ|ッ|パ ('Keyt|roller', 'poll|er', 'jiggl|ers')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N7380_neg/2026-11-06-lm1909-d92e9b3d.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.894,
+     "peak": "roller"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.003,
+     "peak": "er"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.865,
+     "peak": "ッ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.713,
+     "peak": "ers"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.702,
+     "peak": "roller"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.945,
+     "peak": "er"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.863,
+     "peak": "ッ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.72,
+     "peak": "ers"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.159,
+     "peak": " dealer"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.081,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.076,
+     "peak": "島"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": "Kids"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.099,
+     "peak": " wooden"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.109,
+     "peak": " checks"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.163,
+     "peak": "んで"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.036,
+     "peak": " flowers"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.864,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'-ller', '-ers' pieces, Japanese 'ッ'",
+ "unit_kind": "token piece (list)",
+ "confidence": 0.6,
+ "notes": "A list. Card: broad (6.4%), L 100%, max 1.05; 'ッ' x6, 'ers' x5, 'oll' x5, 'er' x3, 'roller', 'ter'. Probe: 'er' of poller 0.890; 'ッ' 0.865; 'roller' 0.768; 'ers' of jigglers 0.762; plain frames 0.017-0.078. Near misses avoid split -er pieces.",
+ "selection": "random draw"
+}

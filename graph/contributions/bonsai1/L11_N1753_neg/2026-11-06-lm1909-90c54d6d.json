@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-90c54d6d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N1753-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:33+00:00",
+ "recipe": {
+  "toolchain_commit": "fd41193ba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N1753_neg/2026-11-06-lm1909-90c54d6d.tests.json"
+ },
+ "label": "contrasting right and wrong ways: 'do's and don'ts', 'Correct / Incorrect' examples, 'This is BAD', 'the good, the bad'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N1753_neg/2026-11-06-lm1909-90c54d6d.tests.json",
+   "prereg_commit": "fd41193ba",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.829,
+     "peak": "'t"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.897,
+     "peak": "'t"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.868,
+     "peak": " :"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.648,
+     "peak": " Incorrect"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.326,
+     "peak": " BAD"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.071,
+     "peak": " bad"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.419,
+     "peak": " wrong"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.016,
+     "peak": "'t"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " guide"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.102,
+     "peak": "Before"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.266,
+     "peak": " par"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.12,
+     "peak": " sentence"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.045,
+     "peak": "Please"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": "This"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.738,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd41193ba",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "right versus wrong ways",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Card: '’t' x4, ' #' x3, ' Do' x3, \"'t\" x2, 'Good' x2, ':\\n' x2, ' bad', ' correct', ' Incorrect', ' BAD'. Probe: \"'t\" of don'ts 0.934-1.007; ' BAD' 0.506; ' correct' 0.498; 'Incorrect' 0.488; ' good' 0.319; \"doesn't\" 0.019. Near misses are plain lists and advice with no right or wrong, and one ordinary 'don't'.",
+ "selection": "random draw"
+}
