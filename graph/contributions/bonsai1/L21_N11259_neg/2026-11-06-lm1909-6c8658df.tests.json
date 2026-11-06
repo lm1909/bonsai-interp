@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-6c8658df",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N11259-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:16:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N11259",
+   "pole": "-",
+   "label": "the quote or comma between strings in a membership test: if x in ['a', 'b']; the same list in an assignment stays quieter",
+   "fire": [
+    "if mode in ['read', 'write', 'both']:\n    pass",
+    "if x in ('-v', '--verbose'):\n    v = 1",
+    "if name in [\"foo\", \"bar\"]:\n    pass",
+    "if val in ['yes', 'y', 'true']:\n    return 1",
+    "if key in ('a', 'b', 'c'):\n    pass",
+    "elif arg in ['0', 'false']:\n    value = False",
+    "if kind in ('up', 'down'):\n    go()",
+    "if opt in ['-h', '--help']:\n    usage()"
+   ],
+   "quiet": [
+    "modes = ['read', 'write', 'both']",
+    "flags = ('-v', '--verbose')",
+    "names = [\"foo\", \"bar\"]",
+    "vals = ['yes', 'y', 'true']",
+    "keys = ('a', 'b', 'c')",
+    "args = ['0', 'false']",
+    "kinds = ('up', 'down')",
+    "opts = ['-h', '--help']"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "strings in 'if x in [...]'",
+ "unit_kind": "code / contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 0.13-0.46 against 0.05-0.12 for the same lists in an assignment."
+}
