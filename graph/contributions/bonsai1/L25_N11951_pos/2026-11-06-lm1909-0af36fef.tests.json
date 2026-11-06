@@ -1,0 +1,50 @@
+{
+ "contribution": "2026-11-06-lm1909-0af36fef",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N11951+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:02:31+00:00",
+ "selection": "second round after a failed test",
+ "neighbours": [
+  {
+   "unit": "L25/N11951",
+   "pole": "+",
+   "label": "the digits of a kilometre conversion after miles ('120 miles (193 km)'), not the reverse and not feet, metres or kilos",
+   "fire": [
+    "The highway stretches 120 miles (193 km) across the plains.",
+    "Swallows migrate up to 50 miles (80 km) in a day.",
+    "The island lies 15 miles (24 km) off the coast.",
+    "The fault runs for 90 miles (145 km) inland.",
+    "The tunnel is 31 miles (50 km) long.",
+    "It moved 9.3 mi (15.0 km) overnight.",
+    "The course covers 26.2 miles (42.2 km) in all.",
+    "The wolves travel 30 miles / 48 km each day."
+   ],
+   "quiet": [
+    "The highway stretches 120 km (75 miles) across the plains.",
+    "Swallows migrate up to 50 miles in a day.",
+    "The island lies 15 km (9 miles) off the coast.",
+    "The fault runs for 90 miles inland.",
+    "The tunnel is 31 feet (9 m) wide.",
+    "It moved 9.3 feet (2.8 m) overnight.",
+    "The course covers 26.2 miles in all.",
+    "The wolves travel 30 miles each day."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "km digits after miles",
+ "unit_kind": "format / contextual",
+ "confidence": "high",
+ "notes": "Second round: the first round's miles-to-km sentences fired (0.32-0.42) and feet, kg and lb conversions did not."
+}
