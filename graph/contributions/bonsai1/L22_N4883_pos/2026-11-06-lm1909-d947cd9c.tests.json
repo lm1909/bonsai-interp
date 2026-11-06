@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-d947cd9c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N4883+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:24:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N4883",
+   "pole": "+",
+   "label": "the newline or indent right before a Python for loop, after a setup line (guess)",
+   "fire": [
+    "def build(items):\n    mapper = routes.Mapper()\n    for route, target in items.items():\n        mapper.add(route, target)\n    return mapper\n",
+    "def parse(nodes):\n    members = collections.OrderedDict()\n    for node in nodes:\n        members[node.id] = node\n    return members\n",
+    "def total(forces):\n    force = np.matrix(np.zeros((3, 1)))\n    for f in forces:\n        force += f\n    return force\n",
+    "def write(sheet, header):\n    col = 0\n    for h in header:\n        sheet.write(0, col, h)\n        col += 1\n",
+    "def scan(rows):\n    seen = set()\n    for row in rows:\n        seen.add(row[0])\n    return seen\n",
+    "def merge(parts):\n    out = dict()\n    for part in parts:\n        out.update(part)\n    return out\n",
+    "def names(people):\n    result = list()\n    for p in people:\n        result.append(p.name)\n    return result\n",
+    "def count(words):\n    freq = collections.Counter()\n    for w in words:\n        freq[w] += 1\n    return freq\n"
+   ],
+   "quiet": [
+    "def build(items):\n    mapper = routes.Mapper()\n    mapper.add_all(items)\n    mapper.freeze()\n    return mapper\n",
+    "def parse(nodes):\n    members = collections.OrderedDict()\n    members.update(nodes)\n    return members\n",
+    "def total(forces):\n    force = np.matrix(np.zeros((3, 1)))\n    force.fill(1)\n    return force\n",
+    "def write(sheet, header):\n    col = 0\n    sheet.write(0, col, header)\n    return col\n",
+    "def scan(rows):\n    seen = set()\n    seen.add(rows[0])\n    return seen\n",
+    "def merge(parts):\n    out = dict()\n    out.update(parts)\n    return out\n",
+    "def names(people):\n    result = list()\n    result.append(people)\n    return result\n",
+    "def count(words):\n    freq = collections.Counter()\n    freq.update(words)\n    return freq\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "newline before a for loop (guess)",
+ "unit_kind": "token / code",
+ "confidence": "low",
+ "notes": "The card shows 70% gate-closed. Short exploration snippets scored at most 0.09, so I expect this to fail."
+}
