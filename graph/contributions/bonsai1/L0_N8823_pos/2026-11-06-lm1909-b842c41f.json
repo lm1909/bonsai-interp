@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-b842c41f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8823+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:33:33+00:00",
+ "recipe": {
+  "toolchain_commit": "d1f41d9b0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N8823_pos/2026-11-06-lm1909-b842c41f.tests.json"
+ },
+ "label": "The tokens '.\\n', '.\"\\n' and ' ...\\n' ending a paragraph; a plain '.' inside a paragraph stays lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N8823_pos/2026-11-06-lm1909-b842c41f.tests.json",
+   "prereg_commit": "d1f41d9b0",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.241,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.123,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.053,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.387,
+     "peak": " ...\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.092,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.281,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.364,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.251,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.156,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.208,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.069,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.191,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.158,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.197,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.181,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.195,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.656,
+    "median_fire": 0.246,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d1f41d9b0",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'.\\n' ending a paragraph",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "23 of the top 32 peak on '.\\n'. But my short probes read only 0.06-0.16, about the same as sentences with no line break, so this may need longer paragraphs. Fire items are two-sentence paragraphs and a following line. Near misses keep the same text with a plain '.' or ','. Peak values are low for this pole in the preamble's frame, so the median is at risk.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".\n",
+   ".\"\n",
+   " ...\n"
+  ]
+ }
+}

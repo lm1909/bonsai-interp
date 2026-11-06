@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c6c6d09a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N1513+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:33:55+00:00",
+ "recipe": {
+  "toolchain_commit": "d1f41d9b0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N1513_pos/2026-11-06-lm1909-c6c6d09a.tests.json"
+ },
+ "label": "' going' after an industry or system as subject ('The global economy is going', 'Japanese tea is going'); ' going' after a person or vehicle stays lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N1513_pos/2026-11-06-lm1909-c6c6d09a.tests.json",
+   "prereg_commit": "d1f41d9b0",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.951,
+     "peak": " going"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.577,
+     "peak": " going"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.599,
+     "peak": " going"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.915,
+     "peak": " going"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.798,
+     "peak": " going"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.821,
+     "peak": " going"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.497,
+     "peak": " going"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.81,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.176,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.136,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.117,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.101,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.153,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.163,
+     "peak": " going"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.804,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d1f41d9b0",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' going' after an industry or system",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: ' going' 0.25-0.94. 'The store was going to close' 0.35, so ' going' of a business leaks. 'bus going through' 0.12, 'going to the store' 0.07. ' has' 0.19-0.20 did not separate and is commoner on the card than ' going', so expect `partial`; ' literature' 0.53 is not covered. The model can't see 'through' at ' going', so only the subject differs. The output direction promotes ' undergo', ' experience'.",
+ "selection": "random draw"
+}

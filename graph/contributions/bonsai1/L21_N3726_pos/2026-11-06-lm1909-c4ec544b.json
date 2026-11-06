@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c4ec544b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N3726+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:16+00:00",
+ "recipe": {
+  "toolchain_commit": "d1f41d9b0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N3726_pos/2026-11-06-lm1909-c4ec544b.tests.json"
+ },
+ "label": "What someone should do differently or do more of ('needed to change my life', 'necessary to drink more', 'suggest you start', 'get off my'); the same actions reported as plain facts stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N3726_pos/2026-11-06-lm1909-c4ec544b.tests.json",
+   "prereg_commit": "d1f41d9b0",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.575,
+     "peak": " diet"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.844,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.138,
+     "peak": " start"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.604,
+     "peak": " off"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.991,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.379,
+     "peak": " little"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.434,
+     "peak": " sleep"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.287,
+     "peak": " soon"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.048,
+     "peak": " cold"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.226,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.111,
+     "peak": " fiber"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " bed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " he"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.504,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d1f41d9b0",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "what someone should change or do more of",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 0.17-0.57, peak tokens vary. 'He drank more fluids yesterday' 0.19, others 0.01. The output direction promotes ' improve', ' better', ' less', and suppresses ' keep', ' maintain'.",
+ "selection": "random draw"
+}

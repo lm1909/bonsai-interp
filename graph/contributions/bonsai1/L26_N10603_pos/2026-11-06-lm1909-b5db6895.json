@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b5db6895",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N10603+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:40+00:00",
+ "recipe": {
+  "toolchain_commit": "d1f41d9b0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N10603_pos/2026-11-06-lm1909-b5db6895.tests.json"
+ },
+ "label": "The preposition or word placing a person's hands, arms, fists, fingers or elbows ('punched his fists in', 'threw her hands in', 'her hands were on', 'elbows on'); the same prepositions with objects or feet, and hands doing something else, stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N10603_pos/2026-11-06-lm1909-b5db6895.tests.json",
+   "prereg_commit": "d1f41d9b0",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.562,
+     "peak": " fists"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.614,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.508,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.862,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.621,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.631,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.452,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.733,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.189,
+     "peak": " hands"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.271,
+     "peak": " behind"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.131,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.345,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.112,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.054,
+     "peak": " ready"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.252,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.617,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d1f41d9b0",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word placing hands or arms on the body or in space",
+ "unit_kind": "contextual",
+ "confidence": 0.9,
+ "notes": "Probes: 0.42-0.99; objects 0.00-0.09. The model cannot see ahead, so the reading comes from the body part before the preposition. The output direction suppresses ' grasp', ' hands', ' fingers' on this + pole.",
+ "selection": "random draw"
+}

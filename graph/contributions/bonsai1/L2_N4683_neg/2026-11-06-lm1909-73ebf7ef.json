@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-73ebf7ef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4683-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:11+00:00",
+ "recipe": {
+  "toolchain_commit": "d1f41d9b0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N4683_neg/2026-11-06-lm1909-73ebf7ef.tests.json"
+ },
+ "label": "A list on a broad, mostly gate-closed pole: '人' closing a Chinese noun ('年輕人'), 'ush' in '(Hush)', 'Chinese' after a bracket, and '5' in a verse reference; plain sentences stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N4683_neg/2026-11-06-lm1909-73ebf7ef.tests.json",
+   "prereg_commit": "d1f41d9b0",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.762,
+     "peak": "人"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.247,
+     "peak": "人"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.771,
+     "peak": "ush"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.377,
+     "peak": "Chinese"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.59,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.723,
+     "peak": "ush"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.176,
+     "peak": "人在"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.241,
+     "peak": "Chinese"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.116,
+     "peak": "是一個"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": "有很多"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.11,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.163,
+     "peak": "itan"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.089,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": " out"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.07,
+     "peak": "在"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.058,
+     "peak": " harbor"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.483,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d1f41d9b0",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'人', 'ush', '(Chinese', verse '5'",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "The card flags 5.5% density and a gate-closed regime. Probes: '人' 0.86, 'ush' 0.80, 'Chinese' 0.51, '5' 0.13-0.43; plain English 0.02-0.07. No pattern. Near misses may leak.",
+ "selection": "random draw"
+}
