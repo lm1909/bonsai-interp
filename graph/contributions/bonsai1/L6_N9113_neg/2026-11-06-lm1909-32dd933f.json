@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-32dd933f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9113-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:59:43+00:00",
+ "recipe": {
+  "toolchain_commit": "e4d3495d6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N9113_neg/2026-11-06-lm1909-32dd933f.tests.json"
+ },
+ "label": "' a', ' an' or ' your' right after an imperative to consult someone (Ask a, Talk to your, Consult a, See your), firing on the determiner; the same determiners after verbs of reading, buying or making stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N9113_neg/2026-11-06-lm1909-32dd933f.tests.json",
+   "prereg_commit": "e4d3495d6",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.733,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.768,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.434,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.582,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.498,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.398,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.595,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.813,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.091,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.068,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.07,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.081,
+     "peak": "Our"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.589,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "e4d3495d6",
+  "minutes": 1,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "determiner after 'Ask' / 'Consult' / 'Talk to'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "picked: second round after 2026-11-06-lm1909-43043b45",
+ "trigger": {
+  "tokens": [
+   " a",
+   " an",
+   " your"
+  ]
+ }
+}

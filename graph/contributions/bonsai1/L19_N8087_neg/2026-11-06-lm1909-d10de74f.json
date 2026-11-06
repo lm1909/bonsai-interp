@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d10de74f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8087-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:59:47+00:00",
+ "recipe": {
+  "toolchain_commit": "e4d3495d6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N8087_neg/2026-11-06-lm1909-d10de74f.tests.json"
+ },
+ "label": "the adverb after 'stir' in a recipe step (stir gently, stir occasionally, stir lightly), firing on the adverb; adverbs after other imperatives in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N8087_neg/2026-11-06-lm1909-d10de74f.tests.json",
+   "prereg_commit": "e4d3495d6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.46,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.518,
+     "peak": " occasionally"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.582,
+     "peak": " lightly"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.255,
+     "peak": " so"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.326,
+     "peak": " thoroughly"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.418,
+     "peak": " constantly"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.805,
+     "peak": "ly"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.548,
+     "peak": " occasionally"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.083,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.105,
+     "peak": " minutes"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.32,
+     "peak": " lightly"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.036,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.549,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.152,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.489,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "e4d3495d6",
+  "minutes": 1,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "adverb after 'stir' in a recipe",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "picked: second round after 2026-11-05-lm1909-993db08b"
+}
