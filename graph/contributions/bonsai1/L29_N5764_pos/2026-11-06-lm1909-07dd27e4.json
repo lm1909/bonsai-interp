@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-07dd27e4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5764+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:14:35+00:00",
+ "recipe": {
+  "toolchain_commit": "292f8aea2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N5764_pos/2026-11-06-lm1909-07dd27e4.tests.json"
+ },
+ "label": "a claim or prediction being supported by later evidence ('was confirmed by', 'supported by the records', 'borne out by')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N5764_pos/2026-11-06-lm1909-07dd27e4.tests.json",
+   "prereg_commit": "292f8aea2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.746,
+     "peak": " later"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.167,
+     "peak": " confirmed"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.455,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.469,
+     "peak": " been"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.595,
+     "peak": " borne"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.069,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.088,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.013,
+     "peak": "-ring"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.049,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " been"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "That"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": " appointment"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "This"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.311,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "292f8aea2",
+  "minutes": 2,
+  "batch_size": 1,
+  "dtype": "float16"
+ },
+ "short": "claim supported by evidence",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Third round. Round 2 ('borne out') failed because other verbs of confirmation fired: supported by court records 0.82, verified by the blood tests 0.70. Near misses here keep 'supported by', 'confirmed by' and similar words, but what is supported is not a claim.",
+ "selection": "third round after the failed labels in sweep seed 202611050409 and the second-round PR"
+}
