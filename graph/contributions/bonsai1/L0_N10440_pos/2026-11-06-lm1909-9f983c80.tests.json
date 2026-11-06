@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-9f983c80",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10440+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:12:28+00:00",
+ "selection": "picked: round 2 after a failed round",
+ "neighbours": [
+  {
+   "unit": "L0/N10440",
+   "pole": "+",
+   "label": "the token '.function', as opposed to sibling tokens such as '.method', '.name', '.value' and '.callback' in the same lines",
+   "fire": [
+    "if self.function is None:\n    stop()\n",
+    "handler = event.function\nrun(handler)\n",
+    "print(task.function)\nprint(task.id)\n",
+    "job.function = work\nstart(job)\n",
+    "wrapper.function = target\nreturn wrapper\n",
+    "assert node.function == name\ncheck(node)\n",
+    "name = frame.function\nlog(name)\n",
+    "cb = item.function\ncb()\n"
+   ],
+   "quiet": [
+    "if self.method is None:\n    stop()\n",
+    "handler = event.name\nrun(handler)\n",
+    "print(task.value)\nprint(task.id)\n",
+    "job.method = work\nstart(job)\n",
+    "wrapper.target = target\nreturn wrapper\n",
+    "assert node.name == name\ncheck(node)\n",
+    "name = frame.name\nlog(name)\n",
+    "cb = item.callback\ncb()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the token '.function'",
+ "unit_kind": "token / code",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed a list ('.function', 'ί', 'كن') and failed, on the Greek 'μ' (0.84-0.89) and the Arabic item (0.06 or less). '.function' was the part that worked: 0.09-0.36 against 0.03-0.05 for the sibling sentences, and 0.35-0.43 in probes. So this round is only that token. The earlier 'y = obj.function(1)' reached only 0.09, so a call right after an assignment may be weak. An L0 pole, so this is about the token. The rest of the card (' بين', 'ί', 'كن', ' SharePoint') is not covered.",
+ "trigger": {
+  "tokens": [
+   ".function"
+  ]
+ }
+}

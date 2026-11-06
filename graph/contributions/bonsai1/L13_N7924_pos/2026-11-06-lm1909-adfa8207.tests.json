@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-adfa8207",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N7924+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:12:28+00:00",
+ "selection": "picked: round 2 after a failed round",
+ "neighbours": [
+  {
+   "unit": "L13/N7924",
+   "pole": "+",
+   "label": "' default' as a name in code (a parameter or a returned value), as opposed to other names in the same places, and ' default' as an ordinary word in a code comment",
+   "fire": [
+    "def fetch(url, default):\n    data = get(url)\n    return data or default\n",
+    "def parse(text, default=0):\n    print(text)\n    return default\n",
+    "def pick(items, default):\n    print(items)\n    return default\n",
+    "value = config.get('port', default)\nprint(value)\n",
+    "def scale(x, default=1.0):\n    print(x)\n    return x * default\n",
+    "name = args.name or default\nprint(name)\n",
+    "def read_int(s, default):\n    log(s)\n    return default\n",
+    "def choose(a, b, default):\n    log(a, b)\n    return default\n"
+   ],
+   "quiet": [
+    "def fetch(url, timeout):\n    data = get(url)\n    return data or timeout\n",
+    "def parse(text, limit=0):\n    print(text)\n    return limit\n",
+    "def pick(items, count):\n    print(items)\n    return count\n",
+    "value = config.get('port', number)\nprint(value)\n",
+    "def scale(x, factor=1.0):\n    print(x)\n    return x * factor\n",
+    "name = args.name or title\nprint(name)\n",
+    "def parse(text):\n    # the default is zero\n    return 0\n",
+    "# By default, use both sides.\nprint(text)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' default' as a name in code",
+ "unit_kind": "token / code",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed fallback values in code, and failed at AUROC 0.766: ' return' on the normal path reached 0.39-0.47. The strong part there was ' default' (0.74-1.22, and 0.38 in a signature with no fallback), so this round is token level, and no claim about fallback is made. Probes: 'return default' 0.96, 'd.get(key, None)' 0.20, prose 'The default setting' 0.04. Near misses here also use ' return', so its 0.39-0.47 may well show up, and a test with two of those at 0.30 or more would fail. Card: ' default' x4, ' =', '1', '2', ' value', ' that'; the rest is not covered.",
+ "trigger": {
+  "tokens": [
+   " default"
+  ]
+ }
+}
