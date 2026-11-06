@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ffd75183",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N4193+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:10:49+00:00",
+ "recipe": {
+  "toolchain_commit": "79910eb5b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N4193_pos/2026-11-06-lm1909-ffd75183.tests.json"
+ },
+ "label": "Boilerplate of an online dictionary page: ' you' and ' want' in 'What made you want to look up', and ' other' in 'Look at other dictionaries'; the same words outside it stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N4193_pos/2026-11-06-lm1909-ffd75183.tests.json",
+   "prereg_commit": "79910eb5b",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.308,
+     "peak": " want"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.77,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.587,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.105,
+     "peak": " other"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.309,
+     "peak": " want"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.606,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.66,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.176,
+     "peak": "Look"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.137,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.05,
+     "peak": "First"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.088,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": " boys"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": "How"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.606,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.387,
+     "peak": " anyone"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "xford"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.836,
+    "median_fire": 0.448,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "79910eb5b",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "online dictionary page boilerplate",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: 0.23-0.44; near misses 0.00-0.16 ('Look at the other boys' 0.16, 'What made you cry' 0.13). ' you' is 12 of the card's top 32, from Merriam-Webster pages. Fire sentences carry the page's lead-in.",
+ "selection": "random draw"
+}

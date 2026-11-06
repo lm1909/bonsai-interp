@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-195dcc45",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N84+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:36+00:00",
+ "recipe": {
+  "toolchain_commit": "79910eb5b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N84_pos/2026-11-06-lm1909-195dcc45.tests.json"
+ },
+ "label": "The tokens ' Bild' (German, also in Bildung, where it does not mean a picture), ' image' and Korean ' 이미'; other German nouns and ' picture' stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N84_pos/2026-11-06-lm1909-195dcc45.tests.json",
+   "prereg_commit": "79910eb5b",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.84,
+     "peak": " Bild"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.409,
+     "peak": " Bild"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.872,
+     "peak": " Bild"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.422,
+     "peak": " Bild"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.267,
+     "peak": " 이미"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.386,
+     "peak": " image"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.362,
+     "peak": " image"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.472,
+     "peak": " Bild"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.104,
+     "peak": "in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " Ha"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.045,
+     "peak": "ange"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.268,
+     "peak": " Arch"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.194,
+     "peak": "명"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": "-f"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.232,
+     "peak": " picture"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.075,
+     "peak": "in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.415,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "79910eb5b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Bild', ' image', ' 이미'",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "Probes: ' Bild' 0.77-1.05, ' 이미' 0.61, ' image' 0.21-0.59; ' picture' 0.13, others 0.00-0.15. Output direction gives no help. ' Journal' read 0.15. The card's '駐' and 'ign' are not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Bild",
+   " image",
+   " 이미"
+  ]
+ }
+}

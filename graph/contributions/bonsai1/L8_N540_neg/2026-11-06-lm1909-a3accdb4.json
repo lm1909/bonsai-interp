@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a3accdb4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N540-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:10:16+00:00",
+ "recipe": {
+  "toolchain_commit": "79910eb5b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N540_neg/2026-11-06-lm1909-a3accdb4.tests.json"
+ },
+ "label": "A word that repeats a name just used: the argument in `str(self)`, `format(minutes)`, `rmtree(directory)`, or a unit in a formula ('5280 feet' after 'in feet'); a name used for the first time stays low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N540_neg/2026-11-06-lm1909-a3accdb4.tests.json",
+   "prereg_commit": "79910eb5b",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.299,
+     "peak": ")\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.22,
+     "peak": " hours"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.14,
+     "peak": "(path"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.513,
+     "peak": " foot"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.212,
+     "peak": "('{}"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.099,
+     "peak": "(target"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.363,
+     "peak": " grams"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.229,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.288,
+     "peak": "(name"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.138,
+     "peak": "('{}"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.367,
+     "peak": " feet"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.212,
+     "peak": "('{}"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": "(source"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.54,
+     "peak": " ounces"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.292,
+     "peak": ")\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.555,
+    "median_fire": 0.225,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "79910eb5b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word repeating a name just used",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Probes: 0.29-0.55 on repeats; other first uses 0.00-0.07, but ' position' 0.26 is a first use and counts against the label, and ' ' 0.24 in the volume formula repeats nothing. The card's examples include ' *', '{}' and '.column', not covered. This is a pattern I propose from a list, tested on new names; the near misses have the same shapes with new names, so it tests repetition, not code as such.",
+ "selection": "random draw"
+}

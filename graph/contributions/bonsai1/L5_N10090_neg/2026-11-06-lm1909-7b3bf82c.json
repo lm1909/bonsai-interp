@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7b3bf82c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10090-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:10:13+00:00",
+ "recipe": {
+  "toolchain_commit": "79910eb5b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10090_neg/2026-11-06-lm1909-7b3bf82c.tests.json"
+ },
+ "label": "Best guess, a list on a broad pole: ' phase' after 'single', 'ip' in 'snip', 'Notification' in a class name; other words in those slots stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10090_neg/2026-11-06-lm1909-7b3bf82c.tests.json",
+   "prereg_commit": "79910eb5b",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.191,
+     "peak": " phase"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.145,
+     "peak": " phase"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.53,
+     "peak": "ip"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.566,
+     "peak": "ip"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.338,
+     "peak": "Notification"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.286,
+     "peak": "Notification"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.191,
+     "peak": " phase"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.505,
+     "peak": " phase"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": " motor"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.046,
+     "peak": " gas"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.136,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.195,
+     "peak": "Snippet"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "(Base"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.029,
+     "peak": "(Base"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.184,
+     "peak": " phase"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.032,
+     "peak": " winding"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.312,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "79910eb5b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' phase', 'ip' in snip, 'Notification' (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Probes: ' phase' 0.75, 'ip' 0.53, 'Notification' 0.28, ' fake' 0.20 (in the 'fake_fip_id' line, not on 'ip'); 'multicast' 0.13, TD 0.11. No pattern I can see; the top examples are varied code and technical text.",
+ "selection": "random draw"
+}

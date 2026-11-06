@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-01ad919e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N10211-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:45+00:00",
+ "recipe": {
+  "toolchain_commit": "79910eb5b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N10211_neg/2026-11-06-lm1909-01ad919e.tests.json"
+ },
+ "label": "' heating', and the digits of a temperature reading after 'temperatures from', 'reading over', 'temperature of'; the same frames with other quantities, and ' cooling', stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N10211_neg/2026-11-06-lm1909-01ad919e.tests.json",
+   "prereg_commit": "79910eb5b",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.427,
+     "peak": " heating"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.274,
+     "peak": " heating"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.398,
+     "peak": " heating"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.324,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.35,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.112,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.095,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.313,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " iron"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.092,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.379,
+     "peak": " cooling"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.147,
+     "peak": " at"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.319,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "79910eb5b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' heating' and temperature readings",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probes: ' heating' 0.54-0.59, ' during' before colder weather 0.35; temperature digits 0.20-0.29 (one 0.27 on ' as'); 'hot pan' 0.06, so not heat in general; '2,000 times the intensity' 0.04. Near misses 0.01-0.06. The output direction on this pole suppresses ' thermal', ' temperature', ' heat', oddly for a label about heat.",
+ "selection": "random draw"
+}
