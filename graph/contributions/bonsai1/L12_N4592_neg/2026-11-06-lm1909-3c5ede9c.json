@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-3c5ede9c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N4592-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:29:53+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N4592_neg/2026-11-06-lm1909-3c5ede9c.tests.json"
+ },
+ "label": "the Chinese comma after a terse slogan-style phrase (投资房产，发展经济，), as opposed to the comma after an ordinary clause in the same topics, with a subject or without one",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N4592_neg/2026-11-06-lm1909-3c5ede9c.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.298,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.248,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.08,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.443,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.547,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.259,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.253,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.332,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": "很"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": "从小"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.119,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.095,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.181,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.113,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": "老板"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.121,
+     "peak": "，"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.278,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "，after a terse slogan-style phrase",
+ "unit_kind": "token / syntax",
+ "confidence": "medium",
+ "notes": "Card: '，' x27 of the top 32. Probes: 投资房产， 0.55, 买房投资， 0.82, 读书学习， 0.47, 发展经济， 0.35, 身体健康， 0.33, 工作认真， 0.24; 如果你愿意， 0.04, 天气这么冷， 0.04, 我喜欢喝茶， 0.02, 吃得太多， 0.14, 、 0.01. Semicolons in football line-ups (0.19-0.27) are on the card and not covered. The declared token is every Chinese comma, so coverage is an upper bound. Most near misses are longer than the fire items; the three short ones (睡得太晚，, 她睡得早，, 吃得太咸，) control for length, and two of those have no subject.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "，"
+  ]
+ }
+}

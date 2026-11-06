@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-d03bd5fc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N7729+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:17+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N7729_pos/2026-11-06-lm1909-d03bd5fc.tests.json"
+ },
+ "label": "the piece ' pre' where the tokenizer splits it off a longer word (pre|front|al, pre|war, pre|existing), as opposed to the same stems with another prefix or none",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N7729_pos/2026-11-06-lm1909-d03bd5fc.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.496,
+     "peak": " pre"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.579,
+     "peak": " pre"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.519,
+     "peak": " pre"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.654,
+     "peak": " pre"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.508,
+     "peak": " pre"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.487,
+     "peak": " pre"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.667,
+     "peak": " pre"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.442,
+     "peak": " pre"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "al"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " brother"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": "wash"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.514,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' pre' as its own piece of a longer word",
+ "unit_kind": "spelling unit",
+ "confidence": "high",
+ "notes": "Card: ' pre' x16, 'Pre' x3, ' Pre' x3, ' prec' x2, 'pre' x2. Probes: ' pre' 0.37-0.96 on prefrontal, preheated, preadolescent, preloaded and on the bare word; prenatal and prefabricated tokenize differently (' prenatal', ' pref') and stay under 0.01. ' post' 0.08, ' super' 0.01. 'Pre' and capitals fire too (0.36-0.87) but are not tested here. Pieces checked with the tokenizer.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " pre"
+  ]
+ }
+}

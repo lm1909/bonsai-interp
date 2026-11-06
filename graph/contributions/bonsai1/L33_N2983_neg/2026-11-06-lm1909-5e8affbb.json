@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5e8affbb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N2983-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:29:50+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N2983_neg/2026-11-06-lm1909-5e8affbb.tests.json"
+ },
+ "label": "tokens just after a word for money (money, cash, funds, savings), as opposed to the same frame with a noun that is not money, including banking words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N2983_neg/2026-11-06-lm1909-5e8affbb.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.8,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.408,
+     "peak": " money"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.473,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.425,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.419,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.627,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.322,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.303,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.102,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.208,
+     "peak": " bank"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " trust"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " evenings"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.422,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "tokens just after a word for money",
+ "unit_kind": "contextual / semantic",
+ "confidence": "high",
+ "notes": "Card peaks are on ' be', ' to', ' was' next to money words, and the output promotes ' money', ' capital', ' funds'. Probes: 'money to be' 0.82, 'money was' 0.79, 'cash was' 0.80, 'dollars were' 0.67, 'savings will be' 0.44; same frames with fish, luggage, grain, children at 0.02 or less. 'budget was' 0.09, Bitcoin 0.11, 'earned a lot of money last' 0.12, 'I have some money in' 0.51, so money need not be the subject, though 'money last' was weak. Near misses do not test money as an object.",
+ "selection": "random draw"
+}

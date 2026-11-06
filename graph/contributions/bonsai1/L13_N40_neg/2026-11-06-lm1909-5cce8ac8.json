@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-5cce8ac8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N40-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:29:28+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N40_neg/2026-11-06-lm1909-5cce8ac8.tests.json"
+ },
+ "label": "' position' or ' positions' as the measured location of a thing that a sensor or model tracks, as opposed to a job, a stance or a posture, and to other measured quantities in the same sentence",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N40_neg/2026-11-06-lm1909-5cce8ac8.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.363,
+     "peak": " position"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.179,
+     "peak": " position"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.242,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.374,
+     "peak": " position"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.219,
+     "peak": " positions"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.265,
+     "peak": " position"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.142,
+     "peak": " position"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.434,
+     "peak": " positions"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " estimates"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.036,
+     "peak": " air"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " explained"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": " algorithm"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": " captain"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": " birds"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.254,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 1,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "' position' as a measured location",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' position' x5, ' positions' x2, ' a' x5, with low max (4.41). Probes: sensors and tracking 0.34-0.58; particle 0.19; job, stance, posture and player at 0.06 or less; 'the moon's position' 0.04 is a counterexample. ' coordinates' and ' location' stayed at 0.03 or less. Other top tokens (' a', ' on', ' snow') are not explained.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " position",
+   " positions"
+  ]
+ }
+}

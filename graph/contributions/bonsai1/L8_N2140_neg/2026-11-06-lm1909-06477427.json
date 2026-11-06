@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-06477427",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N2140-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:01+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N2140_neg/2026-11-06-lm1909-06477427.tests.json"
+ },
+ "label": "the setup of a school maths exercise with quantities (word problems, area of a shape), as opposed to plain sentences about the same people and objects, with or without numbers, and to a question outside maths",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N2140_neg/2026-11-06-lm1909-06477427.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.842,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.207,
+     "peak": " its"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.479,
+     "peak": "?"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.076,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.19,
+     "peak": " its"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.484,
+     "peak": "?"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.513,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.537,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.091,
+     "peak": " cutting"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " expected"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.03,
+     "peak": " class"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.172,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.073,
+     "peak": " Its"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.498,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "setup of a school maths exercise",
+ "unit_kind": "topic / format",
+ "confidence": "medium",
+ "notes": "Card: ' that' x6, ' of', ' the', 'ote', ' its', nearly all in maths exercises; gate-closed regime dominates and max is low (3.28). Probes: 0.38-0.76 on word problems, ' its' in shape problems 0.40-0.51; the same objects in plain prose 0.03-0.08. Pure maths statements are weaker: 'hypotenuse' 0.10, 'derivative' 0.04, 'Let x be' 0.15, tangent 0.18, and a train problem 0.14. 'asymptote' 0.52-1.31 is a separate strong token, not covered. The peak token varies and can come before any question (Oscar and Tom probes), so the label is about the setup, not about asking.",
+ "selection": "random draw"
+}

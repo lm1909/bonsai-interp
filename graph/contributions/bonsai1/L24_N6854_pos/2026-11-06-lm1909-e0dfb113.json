@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e0dfb113",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6854+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:07+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N6854_pos/2026-11-06-lm1909-e0dfb113.tests.json"
+ },
+ "label": "the line break that ends a line of a fiction scene, as opposed to line breaks in news or instructions and to the same kind of scene run together with no line breaks",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N6854_pos/2026-11-06-lm1909-e0dfb113.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.395,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.453,
+     "peak": ".\"\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.499,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.368,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.166,
+     "peak": " head"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.131,
+     "peak": "He"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.275,
+     "peak": ".\"\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.643,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.073,
+     "peak": "Check"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.188,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.286,
+     "peak": ".\""
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.476,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.098,
+     "peak": " After"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.382,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "line break in a fiction scene",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Card: '.\\n' x13, '.\"\\n' variants x9 and '\\n' x5, all from fiction with named characters. Probes: 2 multi-line scenes 0.32-0.33; council news with a quote 0.03, router steps 0.02; a scene without line breaks 0.13. A multi-line pole, so fire items are multi-line passages with their context. Short 2-3 line scenes were lower (0.18-0.29). ' nodded' peaks by itself with or without line breaks (0.27-0.29), so it is kept out of the test. All fire items have dialogue, so narration without dialogue is not tested.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-835a88cd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3844+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:08+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N3844_pos/2026-11-06-lm1909-835a88cd.tests.json"
+ },
+ "label": "the word ' solar' or ' Solar', as opposed to other energy words and to the sun and sunlight named without it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N3844_pos/2026-11-06-lm1909-835a88cd.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.67,
+     "peak": " solar"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.543,
+     "peak": " solar"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.414,
+     "peak": " Solar"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.722,
+     "peak": " Solar"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.377,
+     "peak": " solar"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.376,
+     "peak": " solar"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.636,
+     "peak": " Solar"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.42,
+     "peak": " solar"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.055,
+     "peak": " Storage"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.047,
+     "peak": " National"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " energy"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": " observ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.096,
+     "peak": "-P"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.482,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "the word ' solar' / ' Solar'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' Solar' x14, ' solar' x5, of the top 32, in a pole flagged broad. Probes: ' Solar' 0.81-1.05, ' solar' 0.28-0.44; wind 0.07, sun 0.04, lunar 0.05, photovoltaic 0.03. A word-level label; meaning without the word stays quiet in probes, so the near misses check that.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " solar",
+   " Solar"
+  ]
+ }
+}

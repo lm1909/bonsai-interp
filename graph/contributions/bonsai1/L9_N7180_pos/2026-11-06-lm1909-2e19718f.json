@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-2e19718f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N7180+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:11+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N7180_pos/2026-11-06-lm1909-2e19718f.tests.json"
+ },
+ "label": "the verb ' download', as opposed to other things you can do with the same file (upload, print, read, stream) and to the noun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N7180_pos/2026-11-06-lm1909-2e19718f.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.206,
+     "peak": " download"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.027,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.189,
+     "peak": " download"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.399,
+     "peak": " download"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.077,
+     "peak": " download"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.217,
+     "peak": " download"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.073,
+     "peak": " download"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.167,
+     "peak": " download"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.032,
+     "peak": " request"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": "You"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": " download"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.065,
+     "peak": " full"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": " worksheets"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " night"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.076,
+     "peak": " first"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.178,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "the verb ' download'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Card: ' user' x7, ' download' x7, 'Download' x2, ' Download' x2, ' ملف' x2. Probes: verb ' download' 0.27-0.50; ' upload' 0.11, noun 'download took' 0.09, 'downloads' 0.09; ' from' after print reached 0.26. ' user' was erratic (user-friendly 0.38, 'Every user' 0.01), so I found no shared pattern with ' download' and ' user' is not claimed. The declared token also includes the noun, so coverage is an upper bound.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " download"
+  ]
+ }
+}

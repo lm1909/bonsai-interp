@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1aee86cb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N7599-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:23+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N7599_neg/2026-11-06-lm1909-1aee86cb.tests.json"
+ },
+ "label": "the comma that closes a second-person wish-style hypothetical (If you could ..., If you had to ...), as opposed to the comma after a real condition or a when-clause, including a real 'could' or 'had to'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N7599_neg/2026-11-06-lm1909-1aee86cb.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.38,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.378,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.494,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.275,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.185,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.154,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.515,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.49,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.063,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.031,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " office"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.379,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "comma after an 'if you could / had to' hypothetical",
+ "unit_kind": "contextual / syntax",
+ "confidence": "low",
+ "notes": "Card: scattered function words (' and', ',', ' of', '-', ' then', ' but'). Probes: 'If you had to give up one of your senses,' 0.72, 'If you could live anywhere in the world,' 0.58, 'If you had to part with a piece of your body,' 0.55; 'If you lost one of your senses,' 0.23, 'If you were stuck on an island,' 0.11, 'When you were stuck' 0.08. A broader reading (the join before a wh-word) was uneven: 'who will drive and' 0.37, 'how the engine works and' 0.16, 'who owns the land and' 0.10. So only the hypothetical comma is claimed, and it covers a small part of the pole. Peak is on the comma, before the question starts ('..., I would be surprised' scored the same 0.58), so no claim is made about what comes next, and the near misses differ before it. Other hypotheticals were weak ('If you were stuck' 0.11, 'If you lost' 0.23).",
+ "selection": "random draw"
+}

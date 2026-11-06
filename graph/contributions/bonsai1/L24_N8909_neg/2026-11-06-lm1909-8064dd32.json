@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8064dd32",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N8909-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:29:58+00:00",
+ "recipe": {
+  "toolchain_commit": "118ebd805",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N8909_neg/2026-11-06-lm1909-8064dd32.tests.json"
+ },
+ "label": "the word piece that continues some rare names opening in Hu- (Hu|ila, H|ues|ca, H|ux|table), as opposed to rare names with another opening, even when they share the piece (Gu|iz|hou, R|uis|dael)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N8909_neg/2026-11-06-lm1909-8064dd32.tests.json",
+   "prereg_commit": "118ebd805",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.54,
+     "peak": "uel"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.566,
+     "peak": "ues"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.468,
+     "peak": "uar"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.9,
+     "peak": "iz"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.07,
+     "peak": " Hu"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.74,
+     "peak": "ys"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.467,
+     "peak": "izing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.244,
+     "peak": "ux"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.123,
+     "peak": "ar"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.05,
+     "peak": "adal"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.397,
+     "peak": "aya"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.341,
+     "peak": "iz"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.129,
+     "peak": "k"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.681,
+     "peak": "uis"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.166,
+     "peak": "ek"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.148,
+     "peak": "obb"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.504,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "118ebd805",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "piece after Hu- in some rare names",
+ "unit_kind": "spelling unit",
+ "confidence": "medium",
+ "notes": "Card tops: Hue|h|uetenango, Hu|ap|ai, Hu|ic|ui, Hu|ah|ua, HU|AN|UNI, H|uis|man. Probes: 'ual', 'ich', 'uy', 'uis', 'uan' 0.46-0.96, 'ux' 0.33; Quetzaltenango, Tegucigalpa, Kahului, Hmong 0.04 or less. Not all Hu names fire: Hu|mberto 0.06, Hut|u 0.16, and Hu|iling peaked at ' Hu' 0.05. Single-token names such as ' Huang' or ' Hudson' are quiet. Pieces checked with the tokenizer.",
+ "selection": "random draw"
+}
