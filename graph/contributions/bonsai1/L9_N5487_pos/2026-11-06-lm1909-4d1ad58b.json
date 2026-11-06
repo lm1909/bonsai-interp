@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4d1ad58b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N5487+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:59:17+00:00",
+ "recipe": {
+  "toolchain_commit": "c99b42f08",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N5487_pos/2026-11-06-lm1909-4d1ad58b.tests.json"
+ },
+ "label": "anatomy of the pharyngeal arches and their derivatives (gills, branchial, aortic arch, parathyroid)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N5487_pos/2026-11-06-lm1909-4d1ad58b.tests.json",
+   "prereg_commit": "c99b42f08",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.819,
+     "peak": "ills"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.82,
+     "peak": "ial"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.303,
+     "peak": " arch"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.369,
+     "peak": "athy"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.344,
+     "peak": " arch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.119,
+     "peak": "ills"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.087,
+     "peak": "ial"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.12,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.078,
+     "peak": " shark"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": " embryo"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.156,
+     "peak": " kidney"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.071,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.315,
+     "peak": " tail"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.092,
+     "peak": " swim"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.035,
+     "peak": " lar"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": " pressed"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.819,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c99b42f08",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pharyngeal-arch anatomy (gills, aortic arch)",
+ "unit_kind": "semantic / anatomy",
+ "confidence": "medium",
+ "notes": "I tried this as a shared pattern behind the list (AGENTS.md 'a verb, not a list of nouns'). If it holds, the new cases are the test: 'pharyngeal arches' and 'branchial cleft' were not in the top examples.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-29db66ad",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6607+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:58:38+00:00",
+ "recipe": {
+  "toolchain_commit": "c99b42f08",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N6607_pos/2026-11-06-lm1909-29db66ad.tests.json"
+ },
+ "label": "the ending piece of 'moniker' (mon|iker) and Russian -ик (Мон|ик, от|к|лик)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N6607_pos/2026-11-06-lm1909-29db66ad.tests.json",
+   "prereg_commit": "c99b42f08",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.551,
+     "peak": "iker"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.532,
+     "peak": "iker"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.769,
+     "peak": "ик"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.36,
+     "peak": "лик"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.463,
+     "peak": "iker"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.025,
+     "peak": "ех"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.726,
+     "peak": "iker"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.34,
+     "peak": "лик"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": " Sky"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " driver"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": "ит"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "мо"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " decades"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": "ех"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " label"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " выз"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.498,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c99b42f08",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "moniker; Russian -ик",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "A list label. 'Valmiki' gave only 0.14 in a probe. Both the Latin and Cyrillic endings share the sound -ik, which is the only link I found.",
+ "selection": "random draw"
+}

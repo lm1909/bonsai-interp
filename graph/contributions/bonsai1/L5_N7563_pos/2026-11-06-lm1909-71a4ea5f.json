@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-71a4ea5f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N7563+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:58:36+00:00",
+ "recipe": {
+  "toolchain_commit": "c99b42f08",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N7563_pos/2026-11-06-lm1909-71a4ea5f.tests.json"
+ },
+ "label": "a short token in a code format or usage string (%A, <tnum>, cp -f)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N7563_pos/2026-11-06-lm1909-71a4ea5f.tests.json",
+   "prereg_commit": "c99b42f08",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.627,
+     "peak": "A"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.11,
+     "peak": "=<"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.3,
+     "peak": "r"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.531,
+     "peak": "B"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.228,
+     "peak": "um"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.467,
+     "peak": "cp"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.252,
+     "peak": "H"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.15,
+     "peak": "=<"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": "(day"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.046,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": " Back"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": "month"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.051,
+     "peak": " Restore"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": "hour"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.037,
+     "peak": " high"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.276,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c99b42f08",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "short token in a format or usage string (guess)",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "notes": "Weak guess on a broad, mostly gate-closed pole (1.2% of tokens reach 0.1 of max; 76% echo). Top examples also include letters in prose (' E' of Eindhoven).",
+ "selection": "random draw"
+}

@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-bf4d4d59",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N1490-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:59:04+00:00",
+ "recipe": {
+  "toolchain_commit": "c99b42f08",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N1490_neg/2026-11-06-lm1909-bf4d4d59.tests.json"
+ },
+ "label": "the piece 'FG' inside an acronym (S|FG|ate, S|FG|H, T|FG, W|FG|D), also 'sg' of dfsg",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N1490_neg/2026-11-06-lm1909-bf4d4d59.tests.json",
+   "prereg_commit": "c99b42f08",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.853,
+     "peak": "FG"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.877,
+     "peak": "FG"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.736,
+     "peak": "FG"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.527,
+     "peak": "FG"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.767,
+     "peak": "FG"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.93,
+     "peak": "FG"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.779,
+     "peak": "FG"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.729,
+     "peak": "FG"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": "T"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " plant"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "F"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "Reuters"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "Staff"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " capital"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.773,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c99b42f08",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the piece FG in an acronym",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "FG"
+  ]
+ }
+}
