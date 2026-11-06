@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-9334a0e9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8034+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:07:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N8034",
+   "pole": "+",
+   "label": "the loop variable after 'while' when compared to a length: 'while n < len(m)'",
+   "fire": [
+    "n = 0\nwhile n < len(glyphs):\n    n += 1\n",
+    "i = 0\nwhile i < len(items):\n    i += 1\n",
+    "k = 2\nwhile k < len(rows):\n    k += 2\n",
+    "j = 0\nwhile j < len(names):\n    j += 1\n",
+    "pos = 0\nwhile pos < len(text):\n    pos += 1\n",
+    "m = 1\nwhile m < len(keys):\n    m *= 2\n",
+    "c = 0\nwhile c < len(data):\n    c += 4\n",
+    "p = 0\nwhile p < len(pages):\n    p += 1\n"
+   ],
+   "quiet": [
+    "n = 0\nfor n in glyphs:\n    print(n)\n",
+    "i = 0\nfor i in items:\n    print(i)\n",
+    "k = 2\nfor k in rows:\n    print(k)\n",
+    "j = 0\nif j < len(names):\n    j += 1\n",
+    "pos = 0\nif pos < len(text):\n    pos += 1\n",
+    "m = 1\nfor m in keys:\n    print(m)\n",
+    "c = 0\nif c < len(data):\n    c += 4\n",
+    "p = 0\nfor p in pages:\n    print(p)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "variable in 'while n < len(...)'",
+ "unit_kind": "token / code",
+ "confidence": 0.5,
+ "notes": "Card: ' i' 3, then ' tries', ' size', ' n', after while. Probes: ' n' in 'while n < len' 0.46; but 'while tries > 0' 0.02, 'while size > 0' 0.03, so it is not any while. Unsure."
+}

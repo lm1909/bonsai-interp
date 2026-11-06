@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-6ffd266c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N10520-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:07:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N10520",
+   "pole": "-",
+   "label": "the opening quote of a Python string that begins with a markup or special character: ' \"<', ' \"_'",
+   "fire": [
+    "def __str__(self):\n    return \"<{kind}>\".format(kind=2)\n",
+    "def __repr__(self):\n    return \"<User {id}>\".format(id=3)\n",
+    "msg = \"_load: No rows\"\n",
+    "xml = \"<items>\" + body\n",
+    "def __repr__(self):\n    return \"<Node>\"\n",
+    "err = \"_save: bad path\"\n",
+    "return \"<a href={0}>\".format(url)\n",
+    "tag = \"<br>\" + text\n"
+   ],
+   "quiet": [
+    "def __str__(self):\n    return \"{kind}\".format(kind=2)\n",
+    "def __repr__(self):\n    return \"User {id}\".format(id=3)\n",
+    "msg = \"load: No rows\"\n",
+    "xml = \"items\" + body\n",
+    "def __repr__(self):\n    return \"Node\"\n",
+    "err = \"save: bad path\"\n",
+    "return \"a {0}\".format(url)\n",
+    "tag = \"br\" + text\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "opening quote before < or _",
+ "unit_kind": "token / code",
+ "confidence": 0.7,
+ "notes": "Card: ' \"<' 8, \" '\" 7, ' \"' 5. Probes: ' \"<' in __repr__ 0.79, elsewhere 0.23; ' \"_' 0.29; plain code 0.03-0.08. Near misses keep the code and open a string with a letter."
+}
