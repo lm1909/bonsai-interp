@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-eea58af4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N8127-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:08:20+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L17/N8127",
+   "pole": "-",
+   "label": "a preposition piece inside a code identifier (send_to_server, based_on, wait_for, saveItemsTo), against identifiers without one",
+   "fire": [
+    "ok = send_to_server(host, data)",
+    "rows = filter_based_on_date(table, day)",
+    "sock = wait_for_reply(conn, timeout)",
+    "count = store.saveItemsToDisk(path, rows)",
+    "name = map_to_label(code, table)",
+    "text = sort_based_on_size(files, limit)",
+    "data = poll_for_status(job, delay)",
+    "size = cache.writeBytesToFile(path, blob)"
+   ],
+   "quiet": [
+    "ok = send_data(host, data)",
+    "rows = filter_rows(table, day)",
+    "sock = wait_reply(conn, timeout)",
+    "count = store.saveItems(path, rows)",
+    "name = map_label(code, table)",
+    "text = sort_files(files, limit)",
+    "data = poll_status(job, delay)",
+    "size = cache.writeBytes(path, blob)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "preposition inside an identifier",
+ "unit_kind": "code / token piece",
+ "confidence": "high",
+ "notes": "Second round of my sweep 9 label. That round failed because near misses fired on the first word after `def _` (`_make` 0.36, `_build` 0.31). This round has no `def _` frames and no probes; the first round is the only evidence."
+}
