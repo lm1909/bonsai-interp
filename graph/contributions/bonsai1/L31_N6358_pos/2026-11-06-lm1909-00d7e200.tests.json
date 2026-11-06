@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-00d7e200",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6358+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:56:29+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L31/N6358",
+   "pole": "+",
+   "label": "Arabic word-opening pieces containing qaf (' مق', ' النق', ' الق' in nouns like 'مقاومة', 'النقابة', 'القضاء'), and ' sk' in ski words; other Arabic openings stay low.",
+   "fire": [
+    "نظمت النقابة مسيرة كبيرة في العاصمة.",
+    "تحدث الوزير عن النقل في المدن الكبرى.",
+    "نشر الكاتب مقالة في الصحيفة أمس.",
+    "أصدر القاضي حكما مقاوما للفساد.",
+    "شارك الطلاب في مقاطعة البضائع المستوردة.",
+    "My sister became a keen skier at school.",
+    "Local skiers love the north face.",
+    "They skied to the village at noon."
+   ],
+   "quiet": [
+    "نظمت الحكومة مسيرة كبيرة في العاصمة.",
+    "تحدث الوزير عن التعليم في المدن الكبرى.",
+    "نشر الكاتب رواية في الصحيفة أمس.",
+    "أصدر الرئيس حكما عادلا للجميع.",
+    "شارك الطلاب في تنظيف الحدائق العامة.",
+    "My sister became a keen dancer at school.",
+    "Local anglers love the north bank.",
+    "They walked to the village at noon."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic pieces with qaf; ' sk' of ski words",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Second round. The first test (branch nightshift/claude-15/sweep7-20261105) failed because near misses with 'معاقبة' (0.40) and 'النقابة' (0.54 on ' النق') fired. So I test the idea that qaf is what matters on the Arabic side, without probing. I have no reason yet to link it to ' sk'; a list. Sentence-initial 'قاد' read at most 0.05 in round one, a counterexample to any qaf reading, so this is word-opening pieces only; near miss 5 has qaf mid-word ('الحدائق') as a control. Tokens checked."
+}
