@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-e1f35920",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N538-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:31:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N538",
+   "pole": "-",
+   "label": "' \\' with a space before it, opening an escape such as \\n inside a string: `\"Description: \\n\"`",
+   "fire": [
+    "print('\\n \\n')\nprint('end')\n",
+    "text = \"Summary: \\n\" + body\n",
+    "log.write('#Run \\n#\\n')\n",
+    "msg = \"Warnings: \\n\" + warn\n",
+    "help_text = (\"name = \\n\"\n             \"path = \\n\")\n",
+    "print(\"Done \\n\")\n",
+    "header = 'Results \\n' + title\n",
+    "out.write('Total: \\n')\n"
+   ],
+   "quiet": [
+    "print('hello')\nprint('end')\n",
+    "text = \"Summary: \" + body\n",
+    "log.write('#Run')\n",
+    "msg = \"Warnings: \" + warn\n",
+    "help_text = (\"name\"\n             \"path\")\n",
+    "print(\"Done\")\n",
+    "header = 'Results' + title\n",
+    "There is a backslash key on my keyboard."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "space + backslash escape in a string",
+ "unit_kind": "code / token",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   " \\",
+   " \"\\"
+  ]
+ }
+}
