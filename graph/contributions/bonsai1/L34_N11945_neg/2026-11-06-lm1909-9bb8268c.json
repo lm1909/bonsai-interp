@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-9bb8268c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N11945-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:52:19+00:00",
+ "recipe": {
+  "toolchain_commit": "5ad051079",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N11945_neg/2026-11-06-lm1909-9bb8268c.tests.json"
+ },
+ "label": "(list) word-start pieces: ' P' of Big Papi, ' conf' of Spanish confesar and confío, В|оп|рос, and 大 in 大碗",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N11945_neg/2026-11-06-lm1909-9bb8268c.tests.json",
+   "prereg_commit": "5ad051079",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.673,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.991,
+     "peak": " conf"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.617,
+     "peak": "оп"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.584,
+     "peak": "大"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.601,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.698,
+     "peak": " conf"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.617,
+     "peak": "оп"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.583,
+     "peak": "大"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.095,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.07,
+     "peak": " decid"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.134,
+     "peak": "Ч"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "老师"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": "os"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " этот"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": "老师"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.617,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5ad051079",
+  "minutes": 43,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Big P|api, conf-, Вопрос, 大碗",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "selection": "random draw"
+}

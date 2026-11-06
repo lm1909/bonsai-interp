@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-f8c9747b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N9006-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:52:09+00:00",
+ "recipe": {
+  "toolchain_commit": "5ad051079",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N9006_neg/2026-11-06-lm1909-f8c9747b.tests.json"
+ },
+ "label": "the digit 8, and more weakly 9, near the start of a phone number or ISBN group: 28|7-2651, 0-6|8|4-80407",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N9006_neg/2026-11-06-lm1909-f8c9747b.tests.json",
+   "prereg_commit": "5ad051079",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.88,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.072,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.911,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.649,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.949,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.937,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.862,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.978,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.076,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.11,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.104,
+     "peak": "7"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.195,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.104,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.089,
+     "peak": "7"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.343,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.036,
+     "peak": "4"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.924,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5ad051079",
+  "minutes": 43,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "digit 8 in phone numbers and ISBNs",
+ "unit_kind": "token / format",
+ "confidence": "medium",
+ "selection": "random draw"
+}
