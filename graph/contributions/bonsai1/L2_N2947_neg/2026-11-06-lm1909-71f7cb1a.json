@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-71f7cb1a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N2947-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:39+00:00",
+ "recipe": {
+  "toolchain_commit": "36059199c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N2947_neg/2026-11-06-lm1909-71f7cb1a.tests.json"
+ },
+ "label": "the token ' &' joining names (Oil & Gas, Procter & Gamble)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N2947_neg/2026-11-06-lm1909-71f7cb1a.tests.json",
+   "prereg_commit": "36059199c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.965,
+     "peak": " &"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.655,
+     "peak": " &"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.448,
+     "peak": " &"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.581,
+     "peak": " &"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.628,
+     "peak": " &"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.421,
+     "peak": " &"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.741,
+     "peak": " &"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.704,
+     "peak": " &"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.301,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.108,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.202,
+     "peak": " Arts"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.063,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.156,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.07,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.365,
+     "peak": " Food"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.063,
+     "peak": " cream"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.641,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "36059199c",
+  "minutes": 4,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "the token ' &'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " &"
+  ]
+ }
+}
