@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-4e2eef1e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1537+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:02:52+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N1537",
+   "pole": "+",
+   "label": "Best guess: a noun closing a long named thing, or a Russian genitive ending after it ('Crashed Ice event', 'Дворца культуры', 'иллюзий'); plain sentences stay low.",
+   "fire": [
+    "The Red Bull Soapbox Race event drew a crowd.",
+    "The Ford Fiesta Rally event was cancelled.",
+    "Концерт прошёл в зале Дома культуры.",
+    "Он работал директором Дворца спорта и культуры.",
+    "Врач изучает природу иллюзий и страхов.",
+    "Книга о мире фантазий и иллюзий вышла.",
+    "The Nike Summer Skate Jam event sold out.",
+    "Министр посетил парк отдыха и культуры."
+   ],
+   "quiet": [
+    "The Red Bull cans were on the long table by the door.",
+    "The Ford car was parked outside the small house.",
+    "Концерт прошёл в большом зале вчера.",
+    "Он работал директором очень долго.",
+    "Врач изучает эту книгу дома.",
+    "Книга о море вышла летом.",
+    "The Nike shoes on the top shelf sold out fast.",
+    "Министр посетил парк весной."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "noun closing a long named thing (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "A broad pole (1%) with no consistent token. Probes: ' event' 0.74, 'ий' 0.64, ' культуры' 0.48, but ' Moments' 0.06 and ' deals' 0.15. Plain sentences 0.03-0.05. Near misses here may also leak, since 0.1 of max is common. Likely to fail."
+}

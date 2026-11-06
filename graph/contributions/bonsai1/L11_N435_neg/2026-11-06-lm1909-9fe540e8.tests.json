@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-9fe540e8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N435-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:02:52+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N435",
+   "pole": "-",
+   "label": "Modular arithmetic and checksum or hash code: ' modulo', ' modulus', 'finite field', md5 and sha calls; ordinary code and non-maths uses of the words stay low.",
+   "fire": [
+    "The result is taken modulo a large prime.",
+    "This code works over a finite field of size two.",
+    "digest = hashlib.sha256(payload).hexdigest()\n",
+    "h = md5.new(data)\n",
+    "x = (a * b + c) % modulus\n",
+    "We reduce each power modulo seven.",
+    "Keep the remainder after dividing by the prime.",
+    "The check digit is the remainder after dividing by eleven."
+   ],
+   "quiet": [
+    "The result is taken from a large sample.",
+    "This code works over a slow network at home.",
+    "digest = payload.strip().lower()\n",
+    "h = open(data)\n",
+    "x = (a * b + c) / count\n",
+    "We multiply each power by seven.",
+    "Keep the quotient after dividing by the prime.",
+    "The check digit is the sum of the first eleven."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "modular arithmetic and hash code",
+ "unit_kind": "topic",
+ "confidence": 0.75,
+ "notes": "Probes: 0.20-1.01, peaks on the math or hash word. Ordinary code and other uses of 'finite' and 'last' 0.01-0.02, and ' digits' 0.27, so plain arithmetic may read too; three near misses test that. Two fire sentences say it without those words ('remainder after dividing'), which is the meaning-without-word check; they may read low."
+}

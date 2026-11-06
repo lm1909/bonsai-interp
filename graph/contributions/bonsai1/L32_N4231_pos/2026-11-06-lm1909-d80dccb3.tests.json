@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-d80dccb3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N4231+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:02:52+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N4231",
+   "pole": "+",
+   "label": "An item inside a list of diseases or symptoms ('headache, lower back pain', 'including hemophilia, thalassemia'); lists of other things, and clinical text with no list, stay low.",
+   "fire": [
+    "Her chart lists asthma, migraine, lower back pain and gout.",
+    "Patients report fatigue, nausea, lower limb swelling and fever.",
+    "It treats many disorders, including anemia, thalassemia, and leukemia.",
+    "The clinic sees diabetes, psoriasis, chronic pain and eczema.",
+    "Common problems are insomnia, anxiety, lower back ache and acne.",
+    "He has several conditions, including lupus, hepatitis, and gout.",
+    "The list covers measles, mumps, typhoid and malaria.",
+    "Known risks include stroke, thrombosis, and kidney failure."
+   ],
+   "quiet": [
+    "Her chart shows that she came in on Monday morning.",
+    "Patients report to the front desk before their visit.",
+    "It sells many fruits, including apples, plums, and pears.",
+    "The clinic sees patients on Tuesdays and Fridays only.",
+    "Common pets are cats, rabbits, lower breeds of dog and fish.",
+    "He has several hobbies, including chess, hiking, and golf.",
+    "The list covers Paris, Rome, Vienna and Madrid.",
+    "Known visitors include Tom, Anna, and my brother."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "item in a list of diseases or symptoms",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probes: ' th' 0.61, ' lower' 0.43; 'suffering from irritable' 0.16; 'the presence of antibodies' 0.18; 'respiratory symptoms,' 0.02 and 'low risk' 0.01, although the card has those. So the median is at risk, and most of the card's peaks are not list items, so coverage may be low. Output suppresses ' presentation', ' admission'."
+}
