@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b6500f64",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N2335+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:01:24+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N2335",
+   "pole": "+",
+   "label": "the token in the middle of a code line in a loop body (' y' in yi = np.logical_and, ' ' in j -= 1)",
+   "fire": [
+    "        for x in xs:\n            yi = np.logical_or(Y >= x, Y < x + 1)\n",
+    "        while j:\n            j -= 1\n",
+    "    for w in words:\n        parts.append(w)\n        if w in seen:\n",
+    "        for z in zs:\n            zi = np.logical_and(Z >= z, Z < z + 2)\n",
+    "        while k:\n            k -= 1\n",
+    "    for t in items:\n        rows.append(t)\n        if t in bad:\n",
+    "        for a in vals:\n            ai = np.logical_or(A >= a, A < a * 2)\n",
+    "        while n:\n            n -= 1\n"
+   ],
+   "quiet": [
+    "The tide came in slowly over the rocks\nand then went out again.\n",
+    "She walked to the shop\nand bought a loaf.\n",
+    "They sang together\nall night long.\n",
+    "The tide went out over the sand\nand left many shells.\n",
+    "He rode to the town\nand sold a horse.\n",
+    "They danced together\nall night long.\n",
+    "The rain came down over the hill\nand filled the lake.\n",
+    "We drove to the coast\nand ate some fish.\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "token in a loop-body line",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ']\\n' x3, ' =' x2, indentation, '()' x2. Probes all under 0.06. A best guess, expected to fail."
+}
