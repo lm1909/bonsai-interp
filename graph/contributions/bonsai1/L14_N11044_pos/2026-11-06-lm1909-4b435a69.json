@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-4b435a69",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N11044+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:00:13+00:00",
+ "recipe": {
+  "toolchain_commit": "451f3a289",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N11044_pos/2026-11-06-lm1909-4b435a69.tests.json"
+ },
+ "label": "a change of rank or official standing inside a hierarchy, and the people above (promoted, posted to, a reprimand, his superiors, his bosses), as opposed to the same frames about objects and ordinary jobs",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N11044_pos/2026-11-06-lm1909-4b435a69.tests.json",
+   "prereg_commit": "451f3a289",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.345,
+     "peak": "prim"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.359,
+     "peak": "iors"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.75,
+     "peak": " promoted"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.615,
+     "peak": " transferred"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.582,
+     "peak": " transfer"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.071,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.335,
+     "peak": "oted"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.388,
+     "peak": "igned"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.203,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " later"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " moved"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.069,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " unpack"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.373,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "451f3a289",
+  "minutes": 3,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "rank, posting and superiors in a hierarchy",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Probes: 'to secure promotion' scored only 0.05, so ' promotion' is not reliable alone. Card's Chinese 处分 is not tested.",
+ "selection": "random draw"
+}

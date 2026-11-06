@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-1fd4df8d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N6552-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:00:16+00:00",
+ "recipe": {
+  "toolchain_commit": "451f3a289",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N6552_neg/2026-11-06-lm1909-1fd4df8d.tests.json"
+ },
+ "label": "a spoken discourse marker opening or moving on (All right, Okay, OK, Alright, Very well), as opposed to 'all right', 'well' and 'right' as ordinary words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N6552_neg/2026-11-06-lm1909-1fd4df8d.tests.json",
+   "prereg_commit": "451f3a289",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.786,
+     "peak": " right"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.763,
+     "peak": " right"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.47,
+     "peak": " well"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.663,
+     "peak": "Alright"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.863,
+     "peak": " OK"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.452,
+     "peak": "Okay"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.719,
+     "peak": " Alright"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.333,
+     "peak": " well"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.06,
+     "peak": " right"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " well"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": " OK"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " use"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " sings"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.691,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "451f3a289",
+  "minutes": 3,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "discourse marker: all right, okay, very well",
+ "unit_kind": "syntactic",
+ "confidence": "high",
+ "notes": "A near miss with ' OK' as an adjective ('doing OK') is included deliberately. A probe with ' well' and ' right' as ordinary words stayed at or below 0.004.",
+ "selection": "random draw"
+}
