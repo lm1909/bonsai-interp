@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-f9978611",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N964+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:44:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N964",
+   "pole": "+",
+   "label": "the partial-byte token opening a Korean word that starts with 출 (출신, 출시, 출석, 출장, 출발)",
+   "fire": [
+    "그는 서울 출신 의원으로 유명하다.",
+    "새로운 게임의 출시일이 정해졌다.",
+    "학생들의 출석 상황을 확인했다.",
+    "다음 주에 부산으로 출장을 간다.",
+    "우리는 내일 아침 일찍 출발한다.",
+    "그 책의 출판 계획이 발표되었다.",
+    "회사는 새로운 차를 출시했다.",
+    "선생님은 매일 출석을 부른다."
+   ],
+   "quiet": [
+    "그는 서울 사람 의원으로 유명하다.",
+    "새로운 게임의 내용이 정해졌다.",
+    "학생들의 생활 상황을 확인했다.",
+    "다음 주에 부산으로 여행을 간다.",
+    "우리는 내일 아침 일찍 공부한다.",
+    "그 책의 내용 계획이 발표되었다.",
+    "회사는 새로운 차를 만들었다.",
+    "선생님은 매일 학생을 부른다."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Korean words starting with 출",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "A broad pole with a tiny max (0.47), gate-closed in 61% of cases. Some near misses also contain partial-byte tokens, which is the point: the pole should prefer 출."
+}

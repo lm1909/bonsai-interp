@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-ec00f1f7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N2333-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:44:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N2333",
+   "pole": "-",
+   "label": "the slot right before 'soluble' (water-|s|oluble, water soluble, -ins|oluble)",
+   "fire": [
+    "Thiamine is a water-soluble vitamin found in grains.",
+    "The drug forms a crystalline, water-insoluble salt.",
+    "Since folate is a water-soluble vitamin, it is not stored.",
+    "Poorly water soluble drugs are hard to absorb.",
+    "The extract is nearly 40% water soluble in tests.",
+    "The dye is a bright, water-soluble powder.",
+    "Chitin is a tough, water-insoluble polymer.",
+    "The new form is ten times more water-soluble than before."
+   ],
+   "quiet": [
+    "Thiamine is a common vitamin found in grains.",
+    "The drug forms a crystalline, heat-resistant salt.",
+    "Since folate is a useful vitamin, it is often added.",
+    "Poorly stored drugs are hard to sell.",
+    "The extract is nearly 40% water by weight in tests.",
+    "The dye is a bright, water-proof powder.",
+    "Chitin is a tough, water-cooled polymer.",
+    "The new form is ten times more stable than before."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "slot before 'soluble'",
+ "unit_kind": "prediction / token piece",
+ "confidence": "high",
+ "notes": "Direct logits promote ' diss', ' dissolved', ' melt' on the + pole. At the sentence start 'Water-soluble' reached only 0.26 and 'Insoluble' 0.17 in the probes, so items keep it mid-sentence. 'Fat-soluble' reached 0.32."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-e660ad8e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N443-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:44:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N443",
+   "pole": "-",
+   "label": "the index variable right before +1 (argv[i+1], str(i+1), s[start:i+1], (i+1)%4)",
+   "fire": [
+    "port=int(sys.argv[i+1])\nprint(port)",
+    "labels['row'+str(i+1)]",
+    "walk(i+1, text[begin:i+1])",
+    "nexts=[abs(vals[(i+1)%6]-vals[i])]",
+    "if (Data[x+1,2] == 0):\n    skip()",
+    "for k in range(n):\n    print(table[k+1])",
+    "pairs = [(a[j], a[j+1]) for j in r]",
+    "total += grid[y+1][x]"
+   ],
+   "quiet": [
+    "port=int(value)\nprint(port)",
+    "labels['row'+name]",
+    "walk(node, text)",
+    "x = vals[i]\ny = vals[j]",
+    "if (Data == 0):\n    skip()",
+    "for key in keys:\n    print(table[key])",
+    "print(row[i])\nprint(row[j])",
+    "total += grid[key]"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "index variable before +1",
+ "unit_kind": "code / prediction",
+ "confidence": "high",
+ "notes": "This pole peaks on the index, before the '+' is visible, so near misses vary the lead-in instead of sharing the prefix (AGENTS.md). Two near misses keep a plain index like vals[i]: `a[i]` reached 0.00 in a probe, and `range(n)` 0.20. Direct logits promote '+', '=' on the output direction."
+}
