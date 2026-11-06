@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-b520c310",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6944-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:38:52+00:00",
+ "selection": "picked: round 2 after a failed round",
+ "neighbours": [
+  {
+   "unit": "L10/N6944",
+   "pole": "-",
+   "label": "' name' as a person's name being asked for or recorded (print your name, full name, the mother's name), as opposed to the name of a thing in the same frames, and a name simply being stated",
+   "fire": [
+    "Please write your name at the top of the sheet.",
+    "The form asks for your full name and address.",
+    "Give the officer your name and phone number.",
+    "Sign here and print your name below.",
+    "The register lists each guest's name and room number.",
+    "Witnesses must state their name for the record.",
+    "The clerk wrote down the mother's name in the book.",
+    "Patients should give their name at the front desk."
+   ],
+   "quiet": [
+    "Please write the file name at the top of the sheet.",
+    "The form asks for the model name and number.",
+    "Give the officer your company's name and address.",
+    "Sign here and print the date below.",
+    "The register lists each ship's name and cargo.",
+    "Witnesses must state the time for the record.",
+    "The clerk wrote down the book's name in the ledger.",
+    "Everyone at the front desk knew that her name was Alice."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "a person's name being asked for or recorded",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed personal and family record details, and failed because 'his employer's name' reached 0.70 and 'home address' 0.35. So it may be about ' name', and family is not all of it. 'employer's name' on a person's record may belong to the same pattern; it is not tested here. Probes: 'Full name' 0.43, 'state your name' 0.39, 'recorded his name' 0.36, 'your employer's name' 0.31; 'Part name' 0.03, 'product's name' 0.04, 'name of the company' 0.19, 'Her name was Mary' 0.11, 'His name was John' 0.19. Other tokens on the card (' birth', ' married', ' spouse') fired 0.27-0.67 and are not tested here. The declared tokens include things' names, so coverage is an upper bound.",
+ "trigger": {
+  "tokens": [
+   " name",
+   " names"
+  ]
+ }
+}

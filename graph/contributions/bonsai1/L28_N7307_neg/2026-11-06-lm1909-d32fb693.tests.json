@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-d32fb693",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7307-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:38:52+00:00",
+ "selection": "picked: round 2 after a failed round",
+ "neighbours": [
+  {
+   "unit": "L28/N7307",
+   "pole": "-",
+   "label": "the tokens ' Super', ' super' and ' Hyper' as a word or the first piece of one, as opposed to other intensifiers and prefixes in the same frames",
+   "fire": [
+    "The new Superdrive reads every disc on the shelf.",
+    "The Hyperloop train would run in a vacuum tube.",
+    "We built a supercomputer in the basement.",
+    "He is super tired after the long game.",
+    "The HyperX keyboard sat on the desk by the door.",
+    "The company sold superfoods online last year.",
+    "The Super League plays its games on Sunday.",
+    "We found a super cheap ticket to Rome."
+   ],
+   "quiet": [
+    "The new Microdrive reads every disc on the shelf.",
+    "The Megaloop train would run in a vacuum tube.",
+    "We built a minicomputer in the basement.",
+    "He is very tired after the long game.",
+    "The Logitech keyboard sat on the desk by the door.",
+    "The company sold seafoods online last year.",
+    "The Premier League plays its games on Sunday.",
+    "We found a really cheap ticket to Rome."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the tokens ' Super', ' super', ' Hyper'",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Round 2. An earlier round claimed technical words and names, and failed at AUROC 0.898: ' Super' in Super Bowl and SuperCollider scored the same 0.298, and 'Multi|Th|reading' reached 0.417 on 'reading'. So the technical claim is dropped, and this is token level. Earlier fire items 0.27-0.82, with ' Hyper' strongest; Ultra 0.06, Micro 0.01, Mega 0.20, Computing 0.07-0.20. Output promotes ' fifth', ' next', 'Seventh', not explained. ' Gig' on the card is not tested.",
+ "trigger": {
+  "tokens": [
+   " Super",
+   " super",
+   " Hyper"
+  ]
+ }
+}
