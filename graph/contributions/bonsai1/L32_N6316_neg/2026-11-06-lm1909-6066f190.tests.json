@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-6066f190",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6316-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:14:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N6316",
+   "pole": "-",
+   "label": "The token just before 'weeks' or a period word in a duration ('4 to 6 weeks', 'a few weeks', 'monthly or quarterly'); the same number frames with objects stay under it",
+   "fire": [
+    "Delivery usually takes 4 to 6 weeks from the order.",
+    "The rash goes away in a few weeks without treatment.",
+    "Puppies need shots at 8 to 12 weeks of age.",
+    "Invoices are sent out on a weekly or monthly basis.",
+    "Seedlings are ready in 6 to 8 weeks.",
+    "You will feel better in a few weeks.",
+    "Interest is paid on a quarterly or yearly basis.",
+    "The course lasts 10 to 12 weeks in spring."
+   ],
+   "quiet": [
+    "Delivery usually takes a van from the depot to the door.",
+    "The rash goes away with a few drops of oil.",
+    "Puppies need shots from a vet in the town.",
+    "Invoices are sent out on a blue or white sheet.",
+    "Seedlings are sold in 6 to 8 packs.",
+    "You will feel better in a warm bed.",
+    "Interest is paid on a fixed or floating loan.",
+    "The course has 10 to 12 students in spring."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "slot before 'weeks' in a duration",
+ "unit_kind": "prediction / contextual",
+ "confidence": "medium",
+ "notes": "Card: ' six' x4, ' to' x3, '-' x3, ' ' x3, '6' x2, ' few' x2, ' or' after monthly. The + pole's logit effect promotes ' month', ' months', ' monthly', so the - pole suppresses those and fires before weeks and quarters. Probe: '12 to 16' 1.22, 'monthly or' 0.75, 'a few' 0.73, '4 to 6' 0.67; '12 to 16 eggs' 0.01, 'a few drops' 0.12, but '4 to 6 colours' 0.47."
+}
