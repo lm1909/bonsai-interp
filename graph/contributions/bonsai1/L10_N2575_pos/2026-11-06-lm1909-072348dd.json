@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-072348dd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2575+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:16+00:00",
+ "recipe": {
+  "toolchain_commit": "c7ff8b658",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2575_pos/2026-11-06-lm1909-072348dd.tests.json"
+ },
+ "label": "top-level 'class' / 'if' / 'def' at the start of a line after blank lines (a new top-level block)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2575_pos/2026-11-06-lm1909-072348dd.tests.json",
+   "prereg_commit": "c7ff8b658",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.521,
+     "peak": "class"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.4,
+     "peak": "class"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.574,
+     "peak": "class"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.275,
+     "peak": "def"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.268,
+     "peak": "class"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.55,
+     "peak": "class"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.344,
+     "peak": "if"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.272,
+     "peak": "class"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.054,
+     "peak": " class"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " False"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " print"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": ".close"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "()\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": ".close"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.372,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c7ff8b658",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "new top-level block",
+ "unit_kind": "code / format",
+ "confidence": "high",
+ "notes": "Card: 'class' x16, 'if' x8, 'def' x6 of the top 32. Probe: 'class Board' 0.56, 'class Reader' 0.33, 'if __name__' 0.18; indented 'class Inner' 0.01; prose 0.01.",
+ "selection": "random draw"
+}

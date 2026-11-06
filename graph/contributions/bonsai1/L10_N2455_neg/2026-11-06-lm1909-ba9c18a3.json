@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ba9c18a3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2455-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:25+00:00",
+ "recipe": {
+  "toolchain_commit": "c7ff8b658",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2455_neg/2026-11-06-lm1909-ba9c18a3.tests.json"
+ },
+ "label": "electrical power figures ('5 W average power', '60 watts', 'rated power')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2455_neg/2026-11-06-lm1909-ba9c18a3.tests.json",
+   "prereg_commit": "c7ff8b658",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.254,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.267,
+     "peak": " watts"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.216,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.133,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.082,
+     "peak": " watts"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.581,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.14,
+     "peak": " watts"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.418,
+     "peak": " W"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " amplifier"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " lamp"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " module"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " reached"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.234,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " over"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.343,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c7ff8b658",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "electrical power",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' power' x7, ' watt' x3, ' watts' x3, ' W' x2, ' diss' x2, '-power' x2. Probe: '5 W average power' 0.95, '60 watts' 0.24, 'rated power' 0.09, 'high-power' 0.04; 'power over Congress' 0.01.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3b76214c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N7403+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:10:02+00:00",
+ "recipe": {
+  "toolchain_commit": "c7ff8b658",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N7403_pos/2026-11-06-lm1909-3b76214c.tests.json"
+ },
+ "label": "first token of a multi-word name ('air conditioning', ' White|head', ' Ay|utthaya'; broad; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N7403_pos/2026-11-06-lm1909-3b76214c.tests.json",
+   "prereg_commit": "c7ff8b658",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.361,
+     "peak": " air"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.237,
+     "peak": " White"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.253,
+     "peak": " Ay"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.15,
+     "peak": " Pu"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.32,
+     "peak": " air"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.256,
+     "peak": " White"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.269,
+     "peak": " Ay"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.171,
+     "peak": " Pu"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.127,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.093,
+     "peak": "Dr"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.15,
+     "peak": " walls"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.047,
+     "peak": "ats"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.114,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.102,
+     "peak": " corner"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.195,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.11,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.255,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c7ff8b658",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "name openings (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (8.5%). Card: ' Benjamin' x2, ' ARC' x2, ' Daniel' x2, ' Ay', ' White', 'lein', ' air'. Probe: ' air' 0.62, others 0.20-0.25; 'Here is a site about the old town' 0.27. A best guess.",
+ "selection": "random draw"
+}

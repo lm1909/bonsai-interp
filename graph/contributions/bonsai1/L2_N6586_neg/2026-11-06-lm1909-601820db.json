@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-601820db",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N6586-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:14+00:00",
+ "recipe": {
+  "toolchain_commit": "c7ff8b658",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N6586_neg/2026-11-06-lm1909-601820db.tests.json"
+ },
+ "label": "dense gate-closed unit, strongest on word-final pieces ('ocked', 'ord', '覚')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N6586_neg/2026-11-06-lm1909-601820db.tests.json",
+   "prereg_commit": "c7ff8b658",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.591,
+     "peak": "ocked"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.371,
+     "peak": "ord"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.513,
+     "peak": "覚"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.636,
+     "peak": "ocked"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.396,
+     "peak": "ord"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.865,
+     "peak": "覚"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.556,
+     "peak": "ocked"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.224,
+     "peak": "ord"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.07,
+     "peak": " loss"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.16,
+     "peak": " del"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.07,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.163,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.166,
+     "peak": " nuevo"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.119,
+     "peak": "話"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.103,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.129,
+     "peak": " posible"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.534,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c7ff8b658",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense, word pieces",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (18.5%) and gate-closed (99% leak), max 0.68. Card: 'on' x4, 'ius' x3, 'ord' x2, 'бе' x2, 'us' x2. Probe: 'shell-shocked' 0.63, 'abordaje' 0.49, '自覚' 0.51; 'We went to the shop' 0.09.",
+ "selection": "random draw"
+}

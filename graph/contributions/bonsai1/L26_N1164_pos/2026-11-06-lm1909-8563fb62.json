@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8563fb62",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N1164+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:11+00:00",
+ "recipe": {
+  "toolchain_commit": "c7ff8b658",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N1164_pos/2026-11-06-lm1909-8563fb62.tests.json"
+ },
+ "label": "' the' after a criminal charge, before the crime itself ('charged with homicide in the …'; output promotes ' death', ' murder', ' killings')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N1164_pos/2026-11-06-lm1909-8563fb62.tests.json",
+   "prereg_commit": "c7ff8b658",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.739,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.059,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.583,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.928,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.607,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.984,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.94,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.622,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.163,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.117,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.167,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.112,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": " party"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " birthday"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " three"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.834,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c7ff8b658",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "crime report before 'the'",
+ "unit_kind": "prediction / semantic",
+ "confidence": "high",
+ "notes": "Output promotes ' deaths', ' death', ' murders', ' killings', ' disappearance', ' incident'. Card: ' the' x20, ' in' x3. Probe: 'charged with homicide in the' 1.10, 'charges of murder in the' 0.86, 'accused of the' 0.55, 'clues in the disappearance' 0.27; 'hired as a cook' 0.19, 'working on a new road' 0.11.",
+ "selection": "random draw"
+}

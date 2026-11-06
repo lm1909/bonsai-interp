@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-14c91fc1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N6691+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:09:32+00:00",
+ "recipe": {
+  "toolchain_commit": "c7ff8b658",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N6691_pos/2026-11-06-lm1909-14c91fc1.tests.json"
+ },
+ "label": "things laid out in rows or sequences ('two rows of three', 'variable-length sequences', 'two pieces together'; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N6691_pos/2026-11-06-lm1909-14c91fc1.tests.json",
+   "prereg_commit": "c7ff8b658",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.753,
+     "peak": " rows"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.566,
+     "peak": " together"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.627,
+     "peak": " arrays"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.323,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.38,
+     "peak": " rows"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.756,
+     "peak": " paper"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.298,
+     "peak": " sequences"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.591,
+     "peak": " rows"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.338,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.146,
+     "peak": " function"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.109,
+     "peak": " matrix"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.145,
+     "peak": " shirt"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.032,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.14,
+     "peak": " coins"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.579,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c7ff8b658",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "arranged in rows (guess)",
+ "unit_kind": "semantic",
+ "confidence": "low",
+ "notes": "Card: ' array' x4, ' paper' x2, ' coin' x2, ' row' x2, ')' x2, ' tensor', ' sequences'. Probe: 'two rows of three' 0.72, 'pieces of paper together' 0.60, 'sequences' 0.51, 'diagonal line' 0.37; 'Lay the fish on a plate' 0.30; 'came in the mail' 0.08.",
+ "selection": "random draw"
+}
