@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-06-lm1909-1cd4bd7b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N2938+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:15:41+00:00",
+ "recipe": {
+  "toolchain_commit": "0c609409c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N2938_pos/2026-11-06-lm1909-1cd4bd7b.tests.json"
+ },
+ "label": "' The' opening the name of a music group (The Band, The Supremes, The Knife); ' The' in the titles of newspapers, books and other names stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N2938_pos/2026-11-06-lm1909-1cd4bd7b.tests.json",
+   "prereg_commit": "0c609409c",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.55,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.069,
+     "peak": "es"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.707,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.161,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.132,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.521,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.619,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.143,
+     "peak": " The"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.36,
+     "peak": " The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " Detroit"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.132,
+     "peak": " The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " I"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "Cop"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.341,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0c609409c",
+  "minutes": 4,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "' The' in band names",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}

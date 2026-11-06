@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-06-lm1909-a318fbad",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N3396+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:15:48+00:00",
+ "recipe": {
+  "toolchain_commit": "0c609409c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N3396_pos/2026-11-06-lm1909-a318fbad.tests.json"
+ },
+ "label": "' out' in refactoring talk in code comments (factor this out, splitting out); other edits named in the same comment frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N3396_pos/2026-11-06-lm1909-a318fbad.tests.json",
+   "prereg_commit": "0c609409c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.431,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.645,
+     "peak": " helper"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.165,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.033,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.494,
+     "peak": " module"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.326,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.546,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.068,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " rename"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.389,
+     "peak": " helper"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " function"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.132,
+     "peak": " module"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " log"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.161,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " handler"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.379,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0c609409c",
+  "minutes": 4,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "' out' in refactoring comments",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}
