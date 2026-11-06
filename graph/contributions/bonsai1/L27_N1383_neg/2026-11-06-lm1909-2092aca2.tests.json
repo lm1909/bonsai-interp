@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-2092aca2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N1383-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:24:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N1383",
+   "pole": "-",
+   "label": "the short indent token at the start of a line inside a brace-delimited block",
+   "fire": [
+    "if (x < y) {\n  print('small');\n}\n",
+    "while (n > 0) {\n  n = n - 1;\n}\n",
+    "function go(p) {\n  return p + 1;\n}\n",
+    "for (i = 0; i < 3; i++) {\n  sum += i;\n}\n",
+    "if (ok) {\n  send(msg);\n}\n",
+    "function add(a, b) {\n  return a + b;\n}\n",
+    "if (done) {\n  stop();\n}\n",
+    "while (run) {\n  tick();\n}\n"
+   ],
+   "quiet": [
+    "if (x < y) { print('small'); }\n",
+    "while (n > 0) { n = n - 1; }\n",
+    "function go(p) { return p + 1; }\n",
+    "for (i = 0; i < 3; i++) { sum += i; }\n",
+    "if (ok) { send(msg); }\n",
+    "function add(a, b) { return a + b; }\n",
+    "if (done) { stop(); }\n",
+    "while (run) { tick(); }\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "indent inside a brace block",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Python blocks with 4 and 8 spaces stayed at or below 0.15 in probes, and a one-line brace-free statement reached 0.30 on ' app', so this is about the two-space or brace block."
+}

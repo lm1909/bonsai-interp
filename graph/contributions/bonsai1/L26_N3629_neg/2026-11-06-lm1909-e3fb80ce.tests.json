@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-e3fb80ce",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N3629-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:24:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N3629",
+   "pole": "-",
+   "label": "' self' and '(self' opening an attribute access in a Python method, in multi-line code",
+   "fire": [
+    "class Job:\n    def start(self):\n        kind = self.config.options.get('kind')\n        path = self.config.options.get('path')\n        return self.runner.launch(path, kind)\n",
+    "def test_cache(self):\n    self.settings.set_value('cache', None)\n    self.assertEqual(self.settings.cache, None)\n",
+    "star.x = random_spread(self.origin_x, self.spread_x)\nstar.y = random_spread(self.origin_y, self.spread_y)\n",
+    "class Bot:\n    def reply(self):\n        text = self.client.fetch('text')\n        user = self.client.fetch('user')\n        return self.sender.post(user, text)\n",
+    "def test_limit(self):\n    self.options.set_limit('rows', 5)\n    self.assertEqual(self.options.rows, 5)\n",
+    "dot.r = clamp_value(self.size_r, self.limit_r)\ndot.g = clamp_value(self.size_g, self.limit_g)\n",
+    "class Log:\n    def flush(self):\n        rows = self.buffer.items.get('rows')\n        name = self.buffer.items.get('name')\n        return self.writer.dump(name, rows)\n",
+    "def test_host(self):\n    self.state.set_host('main', 'a')\n    self.assertEqual(self.state.host, 'a')\n"
+   ],
+   "quiet": [
+    "def start(config):\n    kind = config.get('kind')\n    path = config.get('path')\n    return launch(path, kind)\n",
+    "def test_cache(settings):\n    settings.set_value('cache', None)\n    assert settings.cache is None\n",
+    "star_x = random_spread(origin_x, spread_x)\nstar_y = random_spread(origin_y, spread_y)\n",
+    "def reply(client):\n    text = client.fetch('text')\n    user = client.fetch('user')\n    return post(user, text)\n",
+    "def test_limit(options):\n    options.set_limit('rows', 5)\n    assert options.rows == 5\n",
+    "dot_r = clamp_value(size_r, limit_r)\ndot_g = clamp_value(size_g, limit_g)\n",
+    "def flush(buffer):\n    rows = buffer.get('rows')\n    name = buffer.get('name')\n    return dump(name, rows)\n",
+    "def test_host(state):\n    state.set_host('main', 'a')\n    assert state.host == 'a'\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "self access in Python methods",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "The card also shows \"('\", '[\"' and '].'.",
+ "trigger": {
+  "tokens": [
+   " self",
+   "(self"
+  ]
+ }
+}
