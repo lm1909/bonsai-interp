@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-4b392007",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2250-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:16:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N2250",
+   "pole": "-",
+   "label": "(guess) the newline ending the last statement of a Python block before a dedent",
+   "fire": [
+    "    if ready:\n        items.append(k)\n    return items\n",
+    "    for x in rows:\n        out.append(x)\n    return out\n",
+    "    while busy:\n        count.add(y)\n    return count\n",
+    "    if ok:\n        seen.add(n)\n    return seen\n",
+    "    for y in cols:\n        res.append(y)\n    return res\n",
+    "    if found:\n        names.append(s)\n    return names\n",
+    "    for z in keys:\n        vals.append(z)\n    return vals\n",
+    "    if done:\n        log.append(m)\n    return log\n"
+   ],
+   "quiet": [
+    "    items = []\n    items.append(k)\n    items.sort()\n",
+    "    out = []\n    out.append(x)\n    out.sort()\n",
+    "    count = set()\n    count.add(y)\n    count.clear()\n",
+    "    seen = set()\n    seen.add(n)\n    seen.clear()\n",
+    "    res = []\n    res.append(y)\n    res.sort()\n",
+    "    names = []\n    names.append(s)\n    names.sort()\n",
+    "    vals = []\n    vals.append(z)\n    vals.sort()\n",
+    "    log = []\n    log.append(m)\n    log.sort()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "newline before a dedent (guess)",
+ "unit_kind": "format / code",
+ "confidence": 0.2,
+ "notes": "Card: '.\\n' 8, ')\\n' 7, '#' 3. Probes: '\\n' after 'ret.append(n)' before a dedent 0.26, '.\\n' in a docstring 0.17; prose 0.03. Low confidence; the docstring case is not covered."
+}
