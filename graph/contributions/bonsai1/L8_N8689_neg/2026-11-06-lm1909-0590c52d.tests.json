@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-0590c52d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N8689-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:07:28+00:00",
+ "selection": "second round after own failed test",
+ "neighbours": [
+  {
+   "unit": "L8/N8689",
+   "pole": "-",
+   "label": "scientific Python: ' as' after import numpy, pandas or seaborn, ' matplotlib', and the numpy-docstring underline; plain stdlib imports stay weaker",
+   "fire": [
+    "import numpy as np\nx = np.zeros(3)\n",
+    "import pandas as pd\nframe = pd.DataFrame()\n",
+    "import seaborn as sns\nsns.despine()\n",
+    "import matplotlib.pyplot as plt\nplt.show()\n",
+    "def area(r):\n    \"\"\"Compute the area.\n\n    Parameters\n    ----------\n    r : float\n    \"\"\"\n",
+    "import scipy as sp\nimport numpy as np\n",
+    "def peak(y):\n    \"\"\"Find the peak.\n\n    Returns\n    -------\n    i : int\n    \"\"\"\n",
+    "import numpy as numpy\nprint(numpy.pi)\n"
+   ],
+   "quiet": [
+    "import os\nx = os.getcwd()\n",
+    "import sys\nargs = sys.argv\n",
+    "import time\ntime.sleep(1)\n",
+    "import random\nprint(random.random())\n",
+    "def area(r):\n    # Compute the area\n    return r * r\n",
+    "import re\nimport glob\n",
+    "def peak(y):\n    return max(y)\n",
+    "import shutil\nprint(shutil.which('ls'))\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "scientific Python imports and docstrings",
+ "unit_kind": "code / semantic",
+ "confidence": "high"
+}

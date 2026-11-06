@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-1ea53e80",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11581+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:07:28+00:00",
+ "selection": "second round after own failed test",
+ "neighbours": [
+  {
+   "unit": "L23/N11581",
+   "pole": "+",
+   "label": "size and width keyword arguments on GUI widgets: `size=(9, 1)`, `width=9`, `font=(…)`",
+   "fire": [
+    "row = [sg.Text('Age', size=(12, 1)), sg.Input(size=(4, 1))]\n",
+    "go = ttk.Button(top, text='Go', width=14)\ngo.pack()\n",
+    "win = [[sg.Button('Run', size=(6, 2), font=('Arial', 11))]]\n",
+    "name = ttk.Entry(frame, width=24)\nname.pack()\n",
+    "panel = [[sg.Text('X', size=(3, 1))], [sg.Slider(size=(20, 8))]]\n",
+    "lab = tk.Label(root, text='Hi', width=30)\nlab.pack()\n",
+    "col = [[sg.Listbox(items, size=(25, 6))]]\n",
+    "box = tk.Text(root, width=60, height=4)\nbox.pack()\n"
+   ],
+   "quiet": [
+    "row = make_row('Age', limit=(12, 1))\nprint(row)\n",
+    "go = requests.get(url, timeout=14)\ngo.close()\n",
+    "win = compute(values, shape=(6, 2), kind='a')\n",
+    "name = str(frame)\nprint(name)\n",
+    "panel = np.zeros(shape=(20, 8))\nprint(panel)\n",
+    "lab = re.sub('a', 'b', text, count=30)\nprint(lab)\n",
+    "col = np.reshape(items, (25, 6))\n",
+    "box = sorted(root, key=len)\nprint(box)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "size= / width= on GUI widgets",
+ "unit_kind": "code / contextual",
+ "confidence": "medium"
+}
