@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-d359c668",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N5836+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:06:55+00:00",
+ "recipe": {
+  "toolchain_commit": "f0542a986",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N5836_pos/2026-11-06-lm1909-d359c668.tests.json"
+ },
+ "label": "French first-person 'je' as subject, with weaker other subject pronouns (il, nous); noun subjects and English 'I' stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N5836_pos/2026-11-06-lm1909-d359c668.tests.json",
+   "prereg_commit": "f0542a986",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.903,
+     "peak": " je"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.634,
+     "peak": " je"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.794,
+     "peak": " je"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.734,
+     "peak": " je"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.75,
+     "peak": " jou"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.72,
+     "peak": " je"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.789,
+     "peak": " je"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.666,
+     "peak": " je"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.252,
+     "peak": "ner"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.152,
+     "peak": " semaine"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.369,
+     "peak": "er"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.565,
+     "peak": " notre"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.446,
+     "peak": "ait"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.212,
+     "peak": " Julie"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.288,
+     "peak": " ma"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.208,
+     "peak": "fin"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.742,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f0542a986",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French subject 'je'",
+ "unit_kind": "lexical / grammatical",
+ "confidence": 0.8,
+ "notes": "Probes: je 0.77-1.03, il 0.33-0.48, 'all' of nous allons 0.42. Near misses use noun subjects, not other pronouns.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " je"
+  ]
+ }
+}

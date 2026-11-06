@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4b1cf562",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N5565+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:06:05+00:00",
+ "recipe": {
+  "toolchain_commit": "f0542a986",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N5565_pos/2026-11-06-lm1909-4b1cf562.tests.json"
+ },
+ "label": "Cars as a purchase or payment (used-car market, auto payments, auto loans); a car in a plain story stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N5565_pos/2026-11-06-lm1909-4b1cf562.tests.json",
+   "prereg_commit": "f0542a986",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.657,
+     "peak": "-car"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.631,
+     "peak": " auto"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.462,
+     "peak": " auto"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.537,
+     "peak": " car"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.491,
+     "peak": "-car"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.664,
+     "peak": " auto"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.731,
+     "peak": "vehicle"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.37,
+     "peak": " auto"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": "Many"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.05,
+     "peak": "R"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "Bird"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.584,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f0542a986",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "cars as a purchase",
+ "unit_kind": "semantic",
+ "confidence": 0.5,
+ "notes": "A narrower reading of a mixed card. 'Certified Honda' read 0.16; legal capitals and ad-revenue examples are not covered.",
+ "selection": "random draw"
+}
