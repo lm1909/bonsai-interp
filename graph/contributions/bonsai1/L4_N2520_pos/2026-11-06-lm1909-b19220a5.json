@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b19220a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N2520+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:54:23+00:00",
+ "recipe": {
+  "toolchain_commit": "9c4995885",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N2520_pos/2026-11-06-lm1909-b19220a5.tests.json"
+ },
+ "label": "Arabic word start 'اج' or 'اش' after the article, in spellings without hamza (الاجماع, الاجمالي, الاجل, الاجهاض, الاشخاص), as opposed to other Arabic words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N2520_pos/2026-11-06-lm1909-b19220a5.tests.json",
+   "prereg_commit": "9c4995885",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.711,
+     "peak": "اج"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.709,
+     "peak": "اج"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.74,
+     "peak": "اج"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.745,
+     "peak": "اج"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.552,
+     "peak": "اش"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.188,
+     "peak": " ا"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.588,
+     "peak": "ش"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.719,
+     "peak": "اج"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.128,
+     "peak": "اتف"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.172,
+     "peak": "ار"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": "سبب"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.071,
+     "peak": "ال"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.299,
+     "peak": " ا"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.112,
+     "peak": " الى"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.011,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.71,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9c4995885",
+  "minutes": 1,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "Arabic 'اج' / 'اش' after ال",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization of the new words not checked. Scripts like these are often split differently in other forms.",
+ "selection": "random draw"
+}
