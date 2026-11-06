@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f0765805",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N8391-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:33:38+00:00",
+ "recipe": {
+  "toolchain_commit": "62af99028",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N8391_neg/2026-11-06-lm1909-f0765805.tests.json"
+ },
+ "label": "a token in US school or college sports listings (No. 2-ranked, Class 5A, University of Missouri), on a dense pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N8391_neg/2026-11-06-lm1909-f0765805.tests.json",
+   "prereg_commit": "62af99028",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.795,
+     "peak": "crest"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.539,
+     "peak": " Class"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.792,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.939,
+     "peak": " Central"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.726,
+     "peak": "A"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.288,
+     "peak": " Iowa"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.592,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.573,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.084,
+     "peak": " Friday"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.135,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.098,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.174,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.165,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.072,
+     "peak": " four"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.112,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.175,
+     "peak": " church"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.659,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "62af99028",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "US school sports listings (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (20.1%) and gate-closed (100%), max 2.19: '.' x3, ' University' x2, ' Class', 'iana', 'i', ' State'. Probes: ' Class' 0.718, '.' in No. 0.691, ' Missouri' 0.372; a sandwich 0.031. Reported as dense whatever the test says.",
+ "selection": "random draw"
+}

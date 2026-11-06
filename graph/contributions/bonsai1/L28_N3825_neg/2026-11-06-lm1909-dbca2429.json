@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-dbca2429",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3825-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:38+00:00",
+ "recipe": {
+  "toolchain_commit": "62af99028",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N3825_neg/2026-11-06-lm1909-dbca2429.tests.json"
+ },
+ "label": "the word piecemeal (pie|c|emeal), and ' piece' in 'piece of mind' or an idiom",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N3825_neg/2026-11-06-lm1909-dbca2429.tests.json",
+   "prereg_commit": "62af99028",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.94,
+     "peak": "c"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.971,
+     "peak": "c"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.925,
+     "peak": "c"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.582,
+     "peak": " piece"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.856,
+     "peak": "c"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.527,
+     "peak": " piece"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.001,
+     "peak": "c"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.926,
+     "peak": "c"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": " slow"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.044,
+     "peak": " comfort"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " sold"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " gives"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " adopted"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " over"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.925,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "62af99028",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'piecemeal' / ' piece'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: 'c' x5, ' piece' x5, ' custom' x5, ' standard' x2, 'マイ' x2, ' game' x2. Probes: 'c' in piecemeal 0.87-0.89, ' piece' in 'piece of mind' 0.469 and 'piece of cake' 0.329; 'small so far' 0.009, 'custom suit' 0.015. Near misses keep the frames without the word.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "piecemeal"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b768b9cb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N9726+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:29+00:00",
+ "recipe": {
+  "toolchain_commit": "62af99028",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N9726_pos/2026-11-06-lm1909-b768b9cb.tests.json"
+ },
+ "label": "' to be' after a reporting passive that hedges a claim (is believed to be, is thought to be)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N9726_pos/2026-11-06-lm1909-b768b9cb.tests.json",
+   "prereg_commit": "62af99028",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.427,
+     "peak": " believed"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.391,
+     "peak": " thought"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.313,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.158,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.193,
+     "peak": " believed"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.328,
+     "peak": " thought"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.488,
+     "peak": " old"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.174,
+     "peak": " believed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": " over"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": " region"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " here"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.05,
+     "peak": " original"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " monk"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.321,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "62af99028",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'believed to be' hedge",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: ' have' x5, ' estimated' x4, ' that' x3, ' origin' x2, '.' x2, ' think' x2, broadly about uncertain claims. Probes: ' be' in 'believed to be' 0.391, ' have' 0.149, ' in' 0.136, ' at' 0.082, '.' 0.122. A guess at the strongest; median may be weak.",
+ "selection": "random draw"
+}

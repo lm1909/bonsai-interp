@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-94f003c8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N6090+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:23+00:00",
+ "recipe": {
+  "toolchain_commit": "62af99028",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N6090_pos/2026-11-06-lm1909-94f003c8.tests.json"
+ },
+ "label": "' on' or ' upon' after set or determined (set on doing, set upon, determined upon, set on the beach)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N6090_pos/2026-11-06-lm1909-94f003c8.tests.json",
+   "prereg_commit": "62af99028",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.02,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.953,
+     "peak": " upon"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.14,
+     "peak": " upon"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.607,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.686,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.825,
+     "peak": " upon"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.175,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.532,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " men"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.339,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " night"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " novel"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " for"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.756,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "62af99028",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' on/upon' after set or determined",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' on' x26, ' upon' x6, nearly always after set. Probes: 'set on uncovering' 1.010, 'Set on the famous beach' 0.606, 'set upon' 0.579, 'determined upon' 0.301; other verbs 0.014. Near misses keep ' on' after other verbs, so the token alone can't pass.",
+ "selection": "random draw"
+}

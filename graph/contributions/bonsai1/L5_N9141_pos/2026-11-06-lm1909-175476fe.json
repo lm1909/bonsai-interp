@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-175476fe",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9141+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:33+00:00",
+ "recipe": {
+  "toolchain_commit": "62af99028",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N9141_pos/2026-11-06-lm1909-175476fe.tests.json"
+ },
+ "label": "a Latin- or Greek-style end piece of a rare technical or brand word (hypot|onia, chlorot|is, technor|ati)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N9141_pos/2026-11-06-lm1909-175476fe.tests.json",
+   "prereg_commit": "62af99028",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.966,
+     "peak": "onia"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.856,
+     "peak": "is"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.833,
+     "peak": "ati"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.119,
+     "peak": "onia"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.91,
+     "peak": "is"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.736,
+     "peak": "ati"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.908,
+     "peak": "onia"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.863,
+     "peak": "is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " muscle"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " Zealand"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " ranks"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "Doctors"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " birds"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": " rank"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " feeding"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "ervation"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.885,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "62af99028",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Latinate end piece of a rare word",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: 'us' x6, 't' x6, 'ot' x3, 'onia' x2, 'ati' x2, 'ius' x2. Probes: 'onia' 1.044, 'is' 0.931, 'ati' 0.854; plain versions under 0.01. Tokens are checked. Near misses use ordinary words.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d8a2c8ef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N6252+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:31+00:00",
+ "recipe": {
+  "toolchain_commit": "62af99028",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N6252_pos/2026-11-06-lm1909-d8a2c8ef.tests.json"
+ },
+ "label": "' categories' or 'description' in a list of a website's or record's fields (Thumbnails, categories and description; _description)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N6252_pos/2026-11-06-lm1909-d8a2c8ef.tests.json",
+   "prereg_commit": "62af99028",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.547,
+     "peak": " description"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.256,
+     "peak": " categories"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.356,
+     "peak": " description"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.202,
+     "peak": " ''\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.431,
+     "peak": " description"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.23,
+     "peak": " categories"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.376,
+     "peak": " categories"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.189,
+     "peak": "description"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.356,
+     "peak": " logos"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.103,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.236,
+     "peak": "title"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.104,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.177,
+     "peak": " ads"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.108,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.109,
+     "peak": "\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.883,
+    "median_fire": 0.306,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "62af99028",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "site fields: categories, description",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card flags 77% gate-closed: 'description' x4, ' description' x3, 'p' x2, 'logo' x2, ' question' x2, '.description'. Probes: ' categories' 0.49-0.50, 'description' 0.189, ' =' after .description 0.152. Near misses drop these field names. Low confidence.",
+ "selection": "random draw"
+}

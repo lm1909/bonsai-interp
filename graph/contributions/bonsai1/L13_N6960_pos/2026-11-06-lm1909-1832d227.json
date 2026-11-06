@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1832d227",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N6960+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:34:21+00:00",
+ "recipe": {
+  "toolchain_commit": "62af99028",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N6960_pos/2026-11-06-lm1909-1832d227.tests.json"
+ },
+ "label": "a noun or verb for a university course of study (a communication major, majoring in, a journalism degree)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N6960_pos/2026-11-06-lm1909-1832d227.tests.json",
+   "prereg_commit": "62af99028",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.87,
+     "peak": " major"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.521,
+     "peak": " major"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.328,
+     "peak": " degree"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.474,
+     "peak": " major"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.503,
+     "peak": " majors"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.217,
+     "peak": " degree"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.617,
+     "peak": "ing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.645,
+     "peak": " major"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.193,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.15,
+     "peak": " dorm"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.174,
+     "peak": " classes"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.04,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.25,
+     "peak": " students"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.109,
+     "peak": " study"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.512,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "62af99028",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "college major or degree",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' major' x12, 'j', 'leg', ' majors' x2, ' students', ' degree'. Probes: ' major' 1.022 and 0.521, ' degree' 0.606, ' courses' 0.398; 'a tall man at USC' 0.187, 'Trojans' 0.112. Near misses keep college frames without the course of study, and ' major' as an adjective is not used.",
+ "selection": "random draw"
+}
