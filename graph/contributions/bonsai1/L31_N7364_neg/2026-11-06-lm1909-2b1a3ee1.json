@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2b1a3ee1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N7364-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:01:23+00:00",
+ "recipe": {
+  "toolchain_commit": "0f6a00f00",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N7364_neg/2026-11-06-lm1909-2b1a3ee1.tests.json"
+ },
+ "label": "naming hip hop and music artists in a list (including Mos Def, Q-Tip; Kendrick Lamar, and more; rising stars like ...), as opposed to lists of other things",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N7364_neg/2026-11-06-lm1909-2b1a3ee1.tests.json",
+   "prereg_commit": "0f6a00f00",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.696,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.674,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.143,
+     "peak": "ange"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.397,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.443,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.625,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.172,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.977,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " feature"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " names"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " dinner"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "als"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " sold"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " eggs"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.534,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0f6a00f00",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "list of music artists",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "The card's ' with' in medical sentences and ' such as' in chemistry are not covered (0.08 in a probe).",
+ "selection": "random draw"
+}

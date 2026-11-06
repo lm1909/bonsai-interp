@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-ec240656",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N84-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:00:54+00:00",
+ "recipe": {
+  "toolchain_commit": "0f6a00f00",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N84_neg/2026-11-06-lm1909-ec240656.tests.json"
+ },
+ "label": "the word ' strong' and near-synonyms (' vigorous', ' strongly', ' firmly') as an intensity adjective, as opposed to other adjectives in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N84_neg/2026-11-06-lm1909-ec240656.tests.json",
+   "prereg_commit": "0f6a00f00",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.487,
+     "peak": " strong"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.658,
+     "peak": " strong"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.818,
+     "peak": " strong"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.701,
+     "peak": " strong"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.575,
+     "peak": " vigorous"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.654,
+     "peak": " firmly"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.303,
+     "peak": " strong"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.674,
+     "peak": " strongly"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " books"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " made"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " talked"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " mayor"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.656,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0f6a00f00",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "strong, vigorous",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Russian 'но' and Chinese 紧紧 on the card are not tested; they may fit an 'intensity' reading.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " strong",
+   " Strong",
+   " vigorous",
+   " strongly",
+   " firmly"
+  ]
+ }
+}
