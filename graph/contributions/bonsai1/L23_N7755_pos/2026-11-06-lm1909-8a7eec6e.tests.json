@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-8a7eec6e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7755+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:19:59+00:00",
+ "selection": "second round after my own sweep",
+ "neighbours": [
+  {
+   "unit": "L23/N7755",
+   "pole": "+",
+   "label": "the separator (comma or 'and') inside a closed grammatical, liturgical or formulaic set: pronoun and verb paradigms, oaths, creeds, slogans ('My, your, his', 'gold, frankincense and myrrh'); the same separators in an ad-hoc list stay quiet. Counting, weekdays and seasons read weakly and are not claimed",
+   "fire": [
+    "On the worksheet, the object pronouns were me, you, him, her, it, us and them.",
+    "Spanish learners chant hablo, hablas, habla before every lesson.",
+    "At the altar they promised to love, honor and cherish each other for life.",
+    "The revolution's slogan was liberty, equality and fraternity.",
+    "According to the story, the Wise Men brought gold, frankincense and myrrh.",
+    "The Hebrew class began by reciting aleph, bet, gimel and dalet.",
+    "Reporters are trained to ask who, what, when, where and why.",
+    "In court he swore to tell the truth, the whole truth and nothing but the truth."
+   ],
+   "quiet": [
+    "For the worksheet, the spelling words were ladder, quiet, pencil, nearby and garden.",
+    "Spanish learners often chant in cafes, trains, kitchens and gardens before class.",
+    "By the altar the guests promised to sing, sweep and cook for the couple.",
+    "One market's slogan during the revolution was grain, rope, tallow and boots.",
+    "As the story goes, those Wise Men packed blankets, dates and water for the road.",
+    "The Hebrew teacher began by reading out her budget: chairs, chalk, kettles and heating.",
+    "Many reporters want coffee, parking, schedules and quiet rooms.",
+    "Inside the court he swore he saw dust, broken fans and rows of old ledgers."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "separator in a closed formulaic set",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.55,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep12-20261106, which failed on the median (0.191) with AUROC 1.000, but its near misses had no lists. This round's near misses are lists with the same separators, on an ad-hoc set. 26 probe sentences, none reused: ad-hoc lists read 0.00-0.02; rote lists 0.32-0.93; counting, weekdays, seasons, senses and the elements read 0.10-0.17, so the label does not claim every closed set."
+}
