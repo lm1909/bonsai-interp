@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-6f7cf9b7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N1150-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N1150",
+   "pole": "-",
+   "label": "the identifying slot of a sentence: ' what' in 'that's what I did', ' only' in 'the only way', ' primary' in 'one of the primary sources'; the output promotes ' factor', ' consideration', ' plays', ' influence'",
+   "fire": [
+    "Every morning he ran two miles, because that's what his coach said.",
+    "For most people, the only way to learn is by doing.",
+    "Tourism will be one of the primary sources of income.",
+    "I had no milk, and that's what the recipe called for.",
+    "In this town the only bank closes at noon.",
+    "Salt was one of the primary goods in that trade.",
+    "We were told to wait, so that's what we did.",
+    "Honestly, the only thing we need is more time."
+   ],
+   "quiet": [
+    "His coach told him to run two miles every morning.",
+    "Most people learn by doing a little each day.",
+    "Tourists will bring some income to the area.",
+    "No milk was left in the house for the recipe.",
+    "At noon a small bank closes in this town.",
+    "Merchants carried salt along the old trade road.",
+    "Told to wait, we sat down on the bench.",
+    "More time passed, and we went home."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the identifying slot ('that's what', 'the only way')",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.45,
+ "notes": "Card: ' what' x9, ' only' x8, ' the' x7, ' to' x2, ' good', ' primary'. Probe: ' primary' 0.300; ' what' after 'that's' 0.262; ' only' after 'the' 0.247; but 'This is what ... recommends' peaks elsewhere at 0.074 and ' good' 0.066. Near misses use the same subjects without the slot."
+}

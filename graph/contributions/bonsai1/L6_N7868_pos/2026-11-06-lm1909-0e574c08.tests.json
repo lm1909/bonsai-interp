@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-0e574c08",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7868+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N7868",
+   "pole": "+",
+   "label": "the token after 'crash' ('crash|-test', 'crash|_report', 'crash| reports') and the last digit of certain years or codes ('18|9|9', 'MH|3|70')",
+   "fire": [
+    "Engineers strapped a crash-test dummy into the old sedan.",
+    "Set crash_reporter_enabled to true in the config file.",
+    "Our team reads the daily crash reports from every phone.",
+    "Peace talks were held at The Hague in 1899.",
+    "A map of the coast was printed in Madrid in 1799.",
+    "Search crews looked for flight MH370 for years.",
+    "The new crash-test results for that truck came out today.",
+    "The North Atlantic pact was signed in 1949."
+   ],
+   "quiet": [
+    "Workers strapped a heavy box onto the old sedan.",
+    "Set network_timeout_value to ten in the config file.",
+    "Every phone sends daily sales figures to our team.",
+    "Peace talks were held at The Hague in 1907.",
+    "A map of the coast was printed in Madrid in 1805.",
+    "For years, crews looked for a lost ship near Peru.",
+    "That truck got new brake pads and tires today.",
+    "The Warsaw pact was signed in 1955."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "after 'crash'; digits in 1899, MH370",
+ "unit_kind": "token (list)",
+ "confidence": 0.6,
+ "notes": "Card: '9' x12, '3' x2, 'star' x2, 'ang' x2, '-test', '_report', ' reports', ' Band'. Probe: '-test' 0.902; '3' of MH370 0.697; '_report' 0.685; ' reports' 0.671; '9' of 1899 0.587; rag doll, network_requires, sales reports, 1907 at most 0.032. Two different triggers, so a list."
+}

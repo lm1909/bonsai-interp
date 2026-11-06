@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-3adb6d36",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9435+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N9435",
+   "pole": "+",
+   "label": "the Japanese token '作' in words like 作業, 作成, 作例",
+   "fire": [
+    "毎朝この部屋で掃除の作業をします。",
+    "資料を作成してから会議に出ます。",
+    "このカメラで撮った作例を見てください。",
+    "彼はピアノの曲を作曲しました。",
+    "夕方まで庭で作業を続けました。",
+    "新しい書類を作成してください。",
+    "彼女の作品は美術館にあります。",
+    "機械の操作はとても簡単です。"
+   ],
+   "quiet": [
+    "毎朝この部屋で新聞を読みます。",
+    "資料を読んでから会議に出ます。",
+    "このカメラで撮った写真を見てください。",
+    "彼はピアノの曲を聴きました。",
+    "夕方まで庭で花を見ていました。",
+    "新しい書類を見せてください。",
+    "彼女の絵は美術館にあります。",
+    "機械の色はとても綺麗です。"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Japanese '作'",
+ "unit_kind": "token",
+ "confidence": 0.1,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: broad (8.5%), 100% echo regime, '作' x10, '最新' x4, '략' x3. Probe: all Japanese sentences read 0.24-0.47 with or without '作', and the peak was never '作' ('サイト' 0.474, '最新' 0.363, '立て' 0.261). So I could not reproduce the card, and the Japanese baseline is high."
+}

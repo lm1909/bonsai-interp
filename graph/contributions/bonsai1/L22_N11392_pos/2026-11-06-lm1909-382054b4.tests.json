@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-382054b4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11392+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N11392",
+   "pole": "+",
+   "label": "a modal of what ought to be: ' should', ' ought', ' supposed', and Chinese 应该 ('content that should appear', 'Am I supposed to', '你应该')",
+   "fire": [
+    "The flag that should hang here has gone missing.",
+    "Honest people should complain to the city about this.",
+    "Was I supposed to sign these forms today?",
+    "Children ought to wear helmets on their bikes.",
+    "你们应该每天都读书。",
+    "These walls should not be painted without a permit.",
+    "We were supposed to meet at noon by the fountain.",
+    "Everyone ought to vote in the next election."
+   ],
+   "quiet": [
+    "Some banners from the old parade have gone missing.",
+    "Honest people can complain to the city about this.",
+    "May I sign these forms today?",
+    "Children might wear helmets on their bikes.",
+    "你们可以每天都读书。",
+    "These walls will not be painted without a permit.",
+    "We were able to meet at noon by the fountain.",
+    "Should it rain tomorrow, call me before the game."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "what ought to be: should, ought, supposed",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.85,
+ "notes": "Card: ' should' x23, ' ought' x2, 'should' x2, ' supposed', 'Should', '應該'. Probe: ' supposed' 0.770; ' should' 0.765 and 0.344; '你应该' 0.536; ' not' after 'ought' 0.446; ' will' sentence 0.022; ' could' 0.040; ' allowed' 0.084; '你可以' 0.035. The conditional 'Should you need help' read 0.581, so the word fires even without its 'ought' sense; one near miss tests this and may use the allowed one."
+}

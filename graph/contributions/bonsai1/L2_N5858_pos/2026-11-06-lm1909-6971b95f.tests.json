@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-6971b95f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N5858+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N5858",
+   "pole": "+",
+   "label": "the tokens 'ingly' (in adverbs like glow|ingly), Spanish ' algunos', the prefix ' re' before a hyphen or stem, and German ' Ihrem'",
+   "fire": [
+    "Reviewers wrote glowingly about the small new theater.",
+    "Se citan en algunos libros antiguos de la región.",
+    "After the scandal, the mayor was re-elected by a wide margin.",
+    "Bitte speichern Sie das Foto auf Ihrem Telefon.",
+    "Critics spoke glowingly of the young pianist last night.",
+    "Hay algunos errores graves en este informe técnico.",
+    "Our committee was re-formed after the merger.",
+    "Laden Sie die Datei auf Ihrem Computer herunter."
+   ],
+   "quiet": [
+    "Most newspapers wrote often about a small theater.",
+    "Muchos autores viven hoy cerca de esta región.",
+    "A wide margin gave victory to that mayor.",
+    "Mein Bruder fotografiert gern Vögel im Park.",
+    "That young pianist played loudly last night.",
+    "Nadie encontró errores graves hoy.",
+    "Two large firms merged last year.",
+    "Heute regnet es stark im ganzen Land."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'ingly', ' algunos', ' re', ' Ihrem'",
+ "unit_kind": "token (list)",
+ "confidence": 0.45,
+ "notes": "A list: I found nothing the tokens share. Card: broad (9.8%), 97% echo regime, max 0.23. Probe: 'ingly' 0.929; ' Ihrem' 0.679; ' algunos' 0.617; ' re' 0.396. The baseline is high on function tokens: ' dem' 0.344, 'os' of los 0.314. Near misses avoid those and use other openings.",
+ "trigger": {
+  "tokens": [
+   "ingly",
+   " algunos",
+   " re",
+   " Ihrem"
+  ]
+ }
+}

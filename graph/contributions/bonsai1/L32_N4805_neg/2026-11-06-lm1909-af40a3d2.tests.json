@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-af40a3d2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N4805-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N4805",
+   "pole": "-",
+   "label": "pencils, drafting leads and similar fine tools for drawing or writing ('mechanical pencils or drafting leads', 'pencil grips')",
+   "fire": [
+    "My sister draws with charcoal sticks or drafting pencils.",
+    "Rubber or foam pencil grips can help young writers.",
+    "Illustrators often use technical pens and fine brushes.",
+    "A mechanical pencil or a drafting lead gives thin lines.",
+    "Sharpen your colored pencils before you begin the sketch.",
+    "The kit holds a ruler, an eraser and a drafting pen.",
+    "Some cartoonists swear by a fine-tip marker or pencil.",
+    "Thick pencils or ink pens are sold at the art shop."
+   ],
+   "quiet": [
+    "My sister paints with big rollers on large walls.",
+    "Rubber or foam floor mats can help tired workers.",
+    "Bakers often use wooden spoons and deep bowls.",
+    "A garden hose or a watering can gives enough water.",
+    "Sharpen your kitchen knives before you begin the roast.",
+    "The kit holds a hammer, a saw and a box of nails.",
+    "Some gardeners swear by a sharp spade or rake.",
+    "Warm mittens or wool scarves are sold at the market."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "pencils and fine drawing tools",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.6,
+ "notes": "Card: ' a' x3, ' drafting', ' pen', ' pencil', ' small', 'ines', ' aluminum', ' or'; promotes ' mic', ' micro', ' magn', ' macro', ' brushes', ' fine'. Probe: ' drafting' 0.721; ' pencil' 0.715; ' telesc' 0.194; 'clock dial' 0.026; oil paints, coats, boats, a pot at most 0.043. The card's telescope and scope examples are not covered if ' telesc' stays low."
+}

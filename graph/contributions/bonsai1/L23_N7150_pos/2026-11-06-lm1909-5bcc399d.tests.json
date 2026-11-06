@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-5bcc399d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7150+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N7150",
+   "pole": "+",
+   "label": "in Russian, the comma before a subordinate clause, as in 'то, что' and 'проследим, нет ли', not commas in a list",
+   "fire": [
+    "Самое важное в этой книге то, что она написана просто.",
+    "Врачи проверят, нет ли у него температуры.",
+    "Вопрос не в том, сможем ли мы приехать.",
+    "Она удивилась тому, что никто не пришёл.",
+    "Учитель спросил, готовы ли ученики к экзамену.",
+    "Главная трудность заключается в том, что денег мало.",
+    "Посмотри, нет ли в сумке ключей.",
+    "Его радует то, что сын хорошо учится."
+   ],
+   "quiet": [
+    "На столе лежали яблоки, груши, сливы и хлеб.",
+    "Дети пели, смеялись, бегали по двору.",
+    "В магазине купили рис, соль, сахар и чай.",
+    "Утром было тихо, светило солнце, пели птицы.",
+    "Мой друг любит футбол, хоккей, теннис.",
+    "Вечером шёл дождь, дул холодный ветер.",
+    "Бабушка варит суп, печёт пироги, вяжет носки.",
+    "Летом тепло, зимой холодно, весной красиво."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Russian comma before a subordinate clause",
+ "unit_kind": "syntactic",
+ "confidence": 0.85,
+ "notes": "Card: ',' x31, in Russian after 'то', 'тем', 'в том' and verbs of checking. Probe: ',' 0.710 in 'не в том, можем ли'; 0.610 in 'проследим, нет ли'; 0.543 in 'является то, что'; list commas 0.072-0.080; 'холодно, шёл снег' 0.243; English 0.009. Near misses are Russian with commas in lists or between simple clauses."
+}

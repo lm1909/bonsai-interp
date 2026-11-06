@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-6e18af3c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N5890-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N5890",
+   "pole": "-",
+   "label": "something false, fake or hollow ('obviously fake', 'the wrong thing', 'empty promises'); the output promotes ' false', ' fake', ' mock', ' dummy'",
+   "fire": [
+    "Police say the seller used a fake passport at the border.",
+    "That email is an obviously false claim about your account.",
+    "Sometimes people say the wrong thing at a funeral.",
+    "Voters are tired of empty promises from every party.",
+    "The forger printed fake banknotes in his cellar.",
+    "This website spreads false rumors about the vaccine.",
+    "My cousin took the wrong train to the airport.",
+    "Those are hollow threats from a weak government."
+   ],
+   "quiet": [
+    "At the border an agent checked a real passport carefully.",
+    "Your account has a correct balance, the email says.",
+    "Friends often say kind things at a funeral.",
+    "Every party made firm plans for its voters.",
+    "In his cellar the banker stored genuine banknotes.",
+    "Accurate reports about the vaccine appear on this website.",
+    "Our train to the airport left on time.",
+    "A strong government kept its word on trade."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "false, fake or hollow",
+ "unit_kind": "semantic",
+ "confidence": 0.85,
+ "notes": "Card: ' fake' x3, ',' x3, ' wrong' x2, ' false' x2, ' for' x2; promotes ' false', ' fake', ' mock', ' dummy', ' useless', ' meaningless'. Probe: ' promises' after 'empty' 0.680; ' fake' 0.402-0.519; ' wrong' 0.352; ' real' sentence 0.006; 'right thing' sentence 0.024. The 'p <' and Chinese comma peaks are not covered. Near misses are true or real things, with other openings."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-82965382",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N9373-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N9373",
+   "pole": "-",
+   "label": "the token ' m', '-m' or '_m': a separator glued to the first letter of a word beginning with m ('force| m|ajeure', 'Sauvez|-m|oi', 'scale|_m|ri', 'upper| m|olar')",
+   "fire": [
+    "A clause on force majeure protects the shipping firm.",
+    "Aidez-moi, dit la vieille femme.",
+    "Our dentist pulled a lower molar from his jaw.",
+    "Each party may cite force majeure under this contract.",
+    "Regarde-moi quand je te parle.",
+    "She mowed the lawn before the rain started.",
+    "That upper molar hurts when I drink cold water.",
+    "Donne-moi le sel, s'il te plaît."
+   ],
+   "quiet": [
+    "A clause on late fees protects the shipping firm.",
+    "Aidez-nous, dit la vieille femme.",
+    "Our dentist cleaned a lower tooth in his jaw.",
+    "Each party may cite these rules under this contract.",
+    "Regarde-le quand je te parle.",
+    "She raked the lawn before the rain started.",
+    "That upper tooth hurts when I drink cold water.",
+    "Donne-lui le sel, s'il te plaît."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "separator plus first letter 'm'",
+ "unit_kind": "token",
+ "confidence": 0.75,
+ "notes": "Card: ' m' x9, '-m' x5, ' м' x5, '_m' x3, ' M' x2, ' М'. Probe: ' m' of majeure 0.759; '-m' of moi 0.386; ' upper' before molar 0.280; '_mri' at the start of a line 0.023; 'Moksha' sentence 0.007; '-n' of nous 0.009. Tokenizer splits checked. Near misses have other first letters."
+}

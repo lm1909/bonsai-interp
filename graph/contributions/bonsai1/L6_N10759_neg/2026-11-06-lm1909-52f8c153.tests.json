@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-52f8c153",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10759-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N10759",
+   "pole": "-",
+   "label": "an XML namespace prefix or declaration ('xmlns:wfs', 'gml:posList', 'xs:string', 'xml:lang')",
+   "fire": [
+    "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\">",
+    "<gml:coordinates>10 20 30</gml:coordinates>",
+    "Maps to the (xsd) <xs:integer/> element in the schema.",
+    "if node.get(\"xml:space\") == \"preserve\":\n    keep(node)\n",
+    "<svg xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"10\">",
+    "<wsdl:definitions name=\"Quote\" targetNamespace=\"urn:q\">",
+    "<xsl:template match=\"item\"><xsl:value-of select=\"name\"/></xsl:template>",
+    "ns = {\"dc\": \"purl\"}\nroot.find(\"dc:title\", ns)\n"
+   ],
+   "quiet": [
+    "<table border=\"1\" cellpadding=\"4\" width=\"100%\">",
+    "<p>10 20 30</p>",
+    "Maps to the <b>integer</b> column in the table.",
+    "if node.get(\"space\") == \"keep\":\n    save(node)\n",
+    "<img src=\"logo.png\" alt=\"logo\" width=\"10\">",
+    "<form name=\"Quote\" action=\"/send\" method=\"post\">",
+    "<ul class=\"menu\"><li><a href=\"/home\">home</a></li></ul>",
+    "opts = {\"title\": \"blue\"}\nprint(opts[\"title\"])\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "XML namespace prefixes",
+ "unit_kind": "syntactic",
+ "confidence": 0.9,
+ "notes": "Card: ':' x6, 'ml' x4, 'ref' x3, 'xmlns' x2, ':w', ':m'. Probe: ':w' of xmlns:wfs 1.089; 'xs' 0.959; 'ml' of gml 0.745; ':' of xml:lang 0.573; plain HTML 0.040-0.053; plain attribute key 0.032. Near misses are markup without namespaces, with other openings."
+}

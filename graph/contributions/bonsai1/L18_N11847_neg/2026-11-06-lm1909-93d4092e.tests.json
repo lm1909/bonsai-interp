@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-93d4092e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N11847-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N11847",
+   "pole": "-",
+   "label": "a word in a statement that something has never or not yet happened ('has never been broken', 'not a necessity'); the output promotes ' anything', ' nor', ' any'",
+   "fire": [
+    "That old world record has never been beaten by anyone.",
+    "In our climate an air conditioner has never been a necessity.",
+    "The seal on the jar has never been broken.",
+    "So far, this peak has never been climbed in winter.",
+    "A car has never been a necessity for me in the city.",
+    "That promise has never been kept by any mayor.",
+    "The treaty between them has never been broken.",
+    "Their secret code has never been cracked by experts."
+   ],
+   "quiet": [
+    "A runner from Kenya beat that old world record in June.",
+    "Most homes in our climate have an air conditioner.",
+    "Open the jar and pour out the fruit.",
+    "Climbers reached this peak in winter last year.",
+    "In the city I drive a car to work.",
+    "Each mayor made a promise and kept it.",
+    "Both sides signed a treaty in the spring.",
+    "Experts cracked their secret code in a week."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "in a negated statement",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ',' x3, ' with' x2, ' broken', '는', ' control', ' necessity', ' worship'; promotes ' anything', ' nor', ' any'. Probe: ' broken' after 'never been' 0.387; ' control' 0.167; ' necessity' sentence 0.053; 'does not affect' 0.035. Evidence is thin."
+}

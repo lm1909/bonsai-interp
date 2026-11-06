@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-492541e7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N8784+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N8784",
+   "pole": "+",
+   "label": "the age range that closes a children's book review ('(Picture book. 2-5)', '(Fiction. 7-10)')",
+   "fire": [
+    "A gentle story about a lost mitten. (Picture book. 3-6)",
+    "Plenty of silly fun for young readers. (Fiction. 8-12)",
+    "A warm, funny tale of two friends. (Picture book. 4-7)",
+    "This mystery will keep kids guessing. (Fiction. 9-12)",
+    "Bright art and a sweet ending. (Picture book. 2-5)",
+    "An exciting adventure with a brave heroine. (Fiction. 7-10)",
+    "A clever counting book for toddlers. (Picture book. 1-3)",
+    "A touching look at moving to a new town. (Fiction. 10-14)"
+   ],
+   "quiet": [
+    "Please read the chapter on mittens. (See pages 3-6)",
+    "Lots of rain is forecast for tomorrow. (Highs 8-12)",
+    "The shop on the corner sells tea. (Open daily 4-7)",
+    "This flight will leave from a new gate. (Gates 9-12)",
+    "Our team won by a late goal. (Final score 2-5)",
+    "The clinic takes new patients on Fridays. (Room 7-10)",
+    "A used printer in good shape for sale. (Bids 1-3)",
+    "The tour covers the old harbor district. (Stops 10-14)"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "age range closing a children's book review",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Card: '!' x6, ' ©' x3, ' LLC' x2, '0', 'i', '-dimensional', ' colors', '5'. Probe: '5' of '(Picture book. 2-5)' 0.790; ' ©' 0.278; '0' of '(Fiction. 7-10)' 0.210; 'EurekAlert!' only 0.051. So the card's commonest token did not fire in a short sentence and is not covered. Near misses have number ranges in other settings."
+}

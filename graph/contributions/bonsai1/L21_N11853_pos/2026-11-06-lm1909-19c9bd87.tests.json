@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-19c9bd87",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N11853+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:23+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N11853",
+   "pole": "+",
+   "label": "a point in a sentence where a 'but' or 'yet' is likely next ('large enough for serious chores, yet', 'too much money to qualify')",
+   "fire": [
+    "The knife is sharp enough for heavy work, yet small enough for a purse.",
+    "They earn too much money to get aid, but too little to save.",
+    "Our cabin is large enough for six, yet it feels cozy.",
+    "He is old enough to vote, but not to drink.",
+    "This bag is light enough for hiking, yet strong enough for rocks.",
+    "She makes too much to qualify, but cannot pay the rent.",
+    "The car is big enough for the family, yet cheap to run.",
+    "That dog is smart enough to open doors, but not to close them."
+   ],
+   "quiet": [
+    "Sharp knives hang on the wall in the kitchen by the stove.",
+    "Their money goes to the bank, and they save it each month.",
+    "Six people sleep in our cabin near the lake every summer.",
+    "Voting starts at seven, and it ends at nine tonight.",
+    "Rocks lay along the trail, and hikers walked around them.",
+    "Rent is due on Monday, and she will pay it today.",
+    "Each family drives a car to the school on Fridays.",
+    "Doors at the shop open at ten and close at five."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before a likely 'but' or 'yet'",
+ "unit_kind": "predictive",
+ "confidence": 0.2,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ',' x8, ' to' x4, ' enough' x4; promotes ' but', ' yet', ' But', ' However'. Probe: ' enough' 0.277 and 0.060; ' to' after 'too much money' 0.069. These are all far below the card's maximum of 68. Near misses have no contrast coming and other openings."
+}
