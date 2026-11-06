@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-801da544",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N6761-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:55:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N6761",
+   "pole": "-",
+   "label": "argument token inside a Python call (format strings, '=True', ', -1'; guess)",
+   "fire": [
+    "temp = struct.unpack('>QIsI8sI2s', message_buf)",
+    "draw(rows, names=names, is_real_line=True, colorvar='size')",
+    "3: [3**k for k in range(6, 1, -1)],",
+    "elif message.type == 'A':  # add\n    temp = struct.unpack('>IQs8sI', buf)",
+    "plot(xs, labels=labels, is_final=True, cmap='hot')",
+    "2: [2**k for k in range(9, 1, -1)],",
+    "begins, or `None` if the line number is unknown",
+    "out = struct.unpack('>HIQ4sI2s', frame)"
+   ],
+   "quiet": [
+    "The buffer holds the message until it is read.",
+    "We draw the rows and give them names and colors.",
+    "Three numbers go in the list for each step.",
+    "This message adds an item to the buffer.",
+    "We plot the points and label each one in red.",
+    "Two numbers go in the list for each step.",
+    "It begins at the first line of the file.",
+    "The frame holds the packet until it is read."
+   ]
+  }
+ ],
+ "predictions": "Expect a fail: probes stayed under 0.05.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "call arguments (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card: '2' x3, '5' x2, '8', '=True', 'None', ' -'. Probes 0.01-0.04. A best guess."
+}

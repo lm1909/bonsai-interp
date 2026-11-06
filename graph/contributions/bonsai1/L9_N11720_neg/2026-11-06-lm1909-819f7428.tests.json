@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-819f7428",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N11720-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:55:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N11720",
+   "pole": "-",
+   "label": "Python's ' global' statement inside a function",
+   "fire": [
+    "def count(event):\n    global total\n    total = total + 1",
+    "def stop():\n\tglobal running\n\trunning = False",
+    "def setup():\n    global conn, cur\n    conn = connect()",
+    "def bump():\n    global index\n    index += 1",
+    "def reset():\n\tglobal cache\n\tcache = {}",
+    "def load(path):\n    global config\n    config = read(path)",
+    "def tick():\n    global clock\n    clock += 1",
+    "def close():\n\tglobal handle\n\thandle = None"
+   ],
+   "quiet": [
+    "def count(event):\n    total = 1\n    return total",
+    "def stop():\n\trunning = False\n\treturn running",
+    "The global market for phones grew last year.",
+    "def bump():\n    index = 0\n    return index",
+    "Global warming is a major topic at the summit.",
+    "def load(path):\n    config = read(path)\n    return config",
+    "def tick():\n    clock = 0\n    return clock",
+    "Our global team meets online every Monday."
+   ]
+  }
+ ],
+ "predictions": "8/8 fire; functions without it and prose 'global' stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python ' global'",
+ "unit_kind": "lexical / code",
+ "confidence": "high",
+ "notes": "Card: ' global' x29, '\\tglobal' x2 of the top 32. Probe: 0.79-0.81; 'The global economy' 0.01; the same function without it 0.03.",
+ "trigger": {
+  "tokens": [
+   " global",
+   "\tglobal"
+  ]
+ }
+}

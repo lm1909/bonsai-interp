@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-dc427444",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N7307+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:55:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N7307",
+   "pole": "+",
+   "label": "the noun of a Spanish, French or Arabic compound preposition that takes 'de'/'من' next (en busca de, se trata de, en vue de, على الرغم من; output promotes ' of')",
+   "fire": [
+    "Salieron en busca de agua por las montañas.",
+    "Se trata de entender lo que pasó aquel día.",
+    "Le maire a signé un accord en vue de réduire la dette.",
+    "على الرغم من التعب الشديد أكمل العمل.",
+    "Viajó a Lima en busca de trabajo y fortuna.",
+    "Ya no se trata de dinero sino de respeto.",
+    "Ils ont voté une loi en vue de protéger la côte.",
+    "على الرغم من البرد خرج الأطفال."
+   ],
+   "quiet": [
+    "Salieron a las montañas por la mañana.",
+    "Hoy hablamos de lo que pasó aquel día.",
+    "Le maire a signé un accord avec la ville voisine.",
+    "أكمل العمل في المساء بعد التعب.",
+    "Viajó a Lima con su hermano y su madre.",
+    "Ya no vive aquí sino en Toledo.",
+    "Ils ont voté une loi sur la côte.",
+    "خرج الأطفال إلى الحديقة في الصباح."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; the same languages without those phrases stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before 'de' in a set phrase",
+ "unit_kind": "prediction / language",
+ "confidence": "high",
+ "notes": "Output direction promotes ' of', '-of', 'of', ' của', 'ของ'. Card: 'كن' x6, ' trata' x2, 'لا' x2, ' cerca' x2, ' busca', ' vue', ' الرغم', ' بد'. Probe: ' busca' 0.69, ' trata' 0.62, ' vue' 0.56, ' الرغم' 0.29, ' بد' 0.14; 'a la playa' 0.04."
+}
