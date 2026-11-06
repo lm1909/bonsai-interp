@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f31a6b24",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N2596-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:54:28+00:00",
+ "recipe": {
+  "toolchain_commit": "5d3f1de22",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N2596_neg/2026-11-06-lm1909-f31a6b24.tests.json"
+ },
+ "label": "' =' assigning a message or text variable in code (msg =, ERROR_MSG =, delim =)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N2596_neg/2026-11-06-lm1909-f31a6b24.tests.json",
+   "prereg_commit": "5d3f1de22",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.241,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.678,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.76,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.611,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.211,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.238,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.717,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.769,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.242,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.109,
+     "peak": " +="
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.137,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.095,
+     "peak": " +="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.143,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.091,
+     "peak": " -="
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.191,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.287,
+     "peak": " ="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.645,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5d3f1de22",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "' =' assigning a message string",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "New round with 16 new sentences. The first test (sweep 14, seed 202611051614) counted as exploratory because 3 of its near misses had been probed before registration; none of its results carry over.",
+ "selection": "picked"
+}

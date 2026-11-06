@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-d77ce016",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N3429+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:53:44+00:00",
+ "recipe": {
+  "toolchain_commit": "5d3f1de22",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N3429_pos/2026-11-06-lm1909-d77ce016.tests.json"
+ },
+ "label": "' one' or ' the' when choosing the right item from a set: 'find the one that', 'select the one'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N3429_pos/2026-11-06-lm1909-d77ce016.tests.json",
+   "prereg_commit": "5d3f1de22",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.198,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.468,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.592,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.472,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.406,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.251,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.656,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.586,
+     "peak": " one"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.047,
+     "peak": " buy"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "Compare"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": "Test"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " soup"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " train"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " files"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.529,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5d3f1de22",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "'find the one that' among options",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}
