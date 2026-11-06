@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-2a15091a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N1728+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:20+00:00",
+ "recipe": {
+  "toolchain_commit": "2591fcef8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N1728_pos/2026-11-06-lm1909-2a15091a.tests.json"
+ },
+ "label": "' Ne' as the first piece of a name (Ne|ve, Ne|umann, Ne|ft|ali), as opposed to names with similar openings that the tokenizer splits another way (N|esh|ama, Neu|haus, Nes|her, Na|ft|ali) and whole tokens (Neil)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N1728_pos/2026-11-06-lm1909-2a15091a.tests.json",
+   "prereg_commit": "2591fcef8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.422,
+     "peak": " Ne"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.405,
+     "peak": " Ne"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.302,
+     "peak": " Ne"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.697,
+     "peak": " Ne"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.222,
+     "peak": " Ne"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.534,
+     "peak": " Ne"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.414,
+     "peak": " Ne"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.331,
+     "peak": " Ne"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.088,
+     "peak": "ama"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.127,
+     "peak": " Neu"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.169,
+     "peak": "atan"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "ali"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.094,
+     "peak": " Nev"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.043,
+     "peak": " Neil"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.159,
+     "peak": " Nah"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.409,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2591fcef8",
+  "minutes": 1,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "' Ne' as the first piece of a name",
+ "unit_kind": "spelling unit",
+ "confidence": "medium",
+ "notes": "Card: ' Ne' x8, '�' x6, 'ネ' x5, 'ne' x4, ' ne' x3, ' N' x2, across Hebrew names, Japanese and Korean. Probes: Neomi 0.88, Neot 0.72, ' ne' in nechama 0.29, 'ネ' 0.18, 네 0.37; Naomi 0.27, Nahal 0.34, Neil 0.02. So other N- names are not silent, and the cross-script reading is not tested here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Ne"
+  ]
+ }
+}

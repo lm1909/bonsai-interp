@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b736a98e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N8850+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:30+00:00",
+ "recipe": {
+  "toolchain_commit": "2591fcef8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N8850_pos/2026-11-06-lm1909-b736a98e.tests.json"
+ },
+ "label": "a digit inside the year a major war ended (18|6|5, 1|9|18, 19|4|5), in text about that ending, as opposed to the same digits in other years and the same year with no war in the text",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N8850_pos/2026-11-06-lm1909-b736a98e.tests.json",
+   "prereg_commit": "2591fcef8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.005,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.642,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.513,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.661,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.563,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.308,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.507,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.809,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " exchange"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " August"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.267,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.16,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "1"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.603,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2591fcef8",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "a digit in the year a major war ended",
+ "unit_kind": "contextual / numeric",
+ "confidence": "high",
+ "notes": "Card: '6' x12, '9' x12, '4' x8, all in years, mostly the Civil War, World War I and World War II. Probes: 'War's end in 1865' 0.84, 'war ended on Nov. 11, 1918' 0.77, 'that war drew to a close in 1945' 0.55; 1873, 1927, 1955, 1981 0.02 or less, '1945 dollars' and 'room number is 1918' 0.003 or less. 'Eisenhower ... 1954' 0.09 is lower, although it is on the card. Other wars and years are not tested.",
+ "selection": "random draw"
+}

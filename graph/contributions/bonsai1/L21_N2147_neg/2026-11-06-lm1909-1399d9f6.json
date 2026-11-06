@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1399d9f6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N2147-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:04+00:00",
+ "recipe": {
+  "toolchain_commit": "2591fcef8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N2147_neg/2026-11-06-lm1909-1399d9f6.tests.json"
+ },
+ "label": "trusting or doubting people or institutions (trust, distrust, skepticism, mistrusting), as opposed to other attitudes toward them, positive or negative, in the same frames, and to ' trust' as a legal fund",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N2147_neg/2026-11-06-lm1909-1399d9f6.tests.json",
+   "prereg_commit": "2591fcef8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.104,
+     "peak": " trust"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.49,
+     "peak": " skeptical"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.409,
+     "peak": " distrust"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.189,
+     "peak": " anything"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.417,
+     "peak": " distrust"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.495,
+     "peak": " skepticism"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.517,
+     "peak": "ust"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.246,
+     "peak": " skeptical"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": " hope"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.123,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " press"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.113,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " open"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.124,
+     "peak": " police"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.413,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2591fcef8",
+  "minutes": 1,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "trusting or doubting someone",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card: ' trust' x7, ' skeptical' x2, ' distrust' x2, ' skepticism', 'usting', ' from'. Probes: mistrusting 0.60, 'trust you after' 0.56, skepticism 0.56, distrust 0.55, skeptical 0.33; liking 0.03, love 0.02, happy 0.02; 'viewed with great respect' 0.18; 'a trust for his son' 0.005; 'doubtful about the weather' 0.10, so doubt about a thing is weaker. 'marry you after what you did' reached 0.29, on ' what', so that frame is not silent.",
+ "selection": "random draw"
+}

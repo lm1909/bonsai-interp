@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-737c0773",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1781-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:06+00:00",
+ "recipe": {
+  "toolchain_commit": "2591fcef8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N1781_neg/2026-11-06-lm1909-737c0773.tests.json"
+ },
+ "label": "the piece ' metast' (metastasis, metastases, metastatic), as opposed to other words about cancer and disease in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N1781_neg/2026-11-06-lm1909-737c0773.tests.json",
+   "prereg_commit": "2591fcef8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.372,
+     "peak": "asis"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.598,
+     "peak": " metast"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.701,
+     "peak": " metast"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.518,
+     "peak": "asis"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.452,
+     "peak": " metast"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.617,
+     "peak": " metast"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.893,
+     "peak": " metast"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.419,
+     "peak": "atic"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " scan"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": " watching"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " other"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": " growth"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.073,
+     "peak": " bleeding"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " melan"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.558,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2591fcef8",
+  "minutes": 1,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "the word piece ' metast'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' metast' x14, ' irreversible' x4, 'ol' x3, ' drainage', ' progressive', ' progress'. Probes: 'for metastasis' 0.77; 'can metastasize' only 0.20, on 'ize', so forms differ; 'tumor' 0.01, 'infection' 0.00. Others fired and are not claimed: ' irreversible' 0.61, 'progress to leukemia' 0.65 but 'students ... progress to college' 0.42, 'embol|ization' 0.41, ' progressive' 0.08. A shared idea of a disease advancing is possible, but I did not test it. Word-level.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " metast"
+  ]
+ }
+}

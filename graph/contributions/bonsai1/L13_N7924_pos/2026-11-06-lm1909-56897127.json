@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-56897127",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N7924+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:40+00:00",
+ "recipe": {
+  "toolchain_commit": "2591fcef8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N7924_pos/2026-11-06-lm1909-56897127.tests.json"
+ },
+ "label": "a fallback value in code when the normal path fails (except: user = '', return default, d.get(key, None)), as opposed to the normal path and to other handling of the same failure",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N7924_pos/2026-11-06-lm1909-56897127.tests.json",
+   "prereg_commit": "2591fcef8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.331,
+     "peak": " host"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.735,
+     "peak": " default"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.201,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.742,
+     "peak": " default"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.392,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.383,
+     "peak": " fallback"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.4,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.218,
+     "peak": " default"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.377,
+     "peak": " default"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.043,
+     "peak": " int"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.386,
+     "peak": " return"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "try"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.397,
+     "peak": " return"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.269,
+     "peak": " value"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.468,
+     "peak": " return"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.396,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2591fcef8",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "a fallback value in code",
+ "unit_kind": "code / contextual",
+ "confidence": "medium",
+ "notes": "Gate-closed regime dominates. Card: ' default' x4, ' =', '1', '2', ' value', ' that'. Probes: 'except: user' 1.04, 'return default' 0.96, 'return False' 0.32, 'd.get(key, None)' 0.20; 'd.get(key)' 0.03, 'print oops' 0.28, prose 'default setting' 0.04. ':return mtu value that' 0.48 and digits on the card are not explained, and 'd.get' is weak.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7f81dc15",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N8648+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:37+00:00",
+ "recipe": {
+  "toolchain_commit": "2591fcef8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N8648_pos/2026-11-06-lm1909-7f81dc15.tests.json"
+ },
+ "label": "what a garment or household product is made of and how (leather, canvas, latex, double-breasted, hand weaving), as opposed to other details about the same products (price, colour, where sold)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N8648_pos/2026-11-06-lm1909-7f81dc15.tests.json",
+   "prereg_commit": "2591fcef8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.689,
+     "peak": " leather"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.648,
+     "peak": " heavy"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.464,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.141,
+     "peak": " double"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.558,
+     "peak": " hand"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.088,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.209,
+     "peak": " organic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.4,
+     "peak": " stitched"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.192,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.152,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.071,
+     "peak": " wore"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.111,
+     "peak": " local"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.003,
+     "peak": "This"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.124,
+     "peak": " has"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.432,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2591fcef8",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "what a product is made of and how",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' hand' x3, 'Hand' x2, ' wears' x2, ' leather' x2, ' a', ' be'. Output promotes ' tailor', ' Custom', ' inner'. Probes: ' leather' 0.73, '100%' before canvas 0.46, latex list 0.44, ' double' 0.43, ' hand' 0.27; folk singing 0.02, 'sold for ten dollars' 0.06, 'two-storey' 0.02, 'red, blue and silver' 0.00. ' be' and ' and' on the card are not explained.",
+ "selection": "random draw"
+}
