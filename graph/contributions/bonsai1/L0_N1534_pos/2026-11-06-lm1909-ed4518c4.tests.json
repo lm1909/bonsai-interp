@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-ed4518c4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N1534+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:55:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N1534",
+   "pole": "+",
+   "label": "The token '=' without a surrounding space, as in statistics and abbreviations ([n=7], (p=0.2), [=Schizostylis])",
+   "fire": [
+    "The study included doctors [n=12] and nurses [n=40].",
+    "The effect was not significant (p=0.3).",
+    "Crocus sativus [=saffron] grows here.",
+    "The mean age was 40 (SD=5).",
+    "The cohort had 200 patients (N=200).",
+    "The result was large (r=0.8).",
+    "The genus Aster [=Symphyotrichum] is common.",
+    "They scored higher (t=2.1)."
+   ],
+   "quiet": [
+    "The study included doctors and nurses.",
+    "The effect was not significant at all.",
+    "Crocus sativus grows here.",
+    "The mean age was forty.",
+    "The cohort had many patients.",
+    "The result was large.",
+    "The genus Aster is common.",
+    "They scored higher."
+   ]
+  }
+ ],
+ "predictions": "'=' fires; the same statements with no symbol stay quiet. Spaced ' =' read about 0.33 in probes and is not in this test.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unspaced '=' in statistics",
+ "unit_kind": "token",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   "=",
+   " [=",
+   "＝"
+  ]
+ }
+}

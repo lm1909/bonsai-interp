@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-702862a8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N5941+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:55:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N5941",
+   "pole": "+",
+   "label": "Code inside a documentation example: docstring examples and '>>>' prompts, not the same code outside one",
+   "fire": [
+    "Examples\n--------\n>>> H = star_graph(4)\n>>> size = 2\n",
+    "    Example:\n\n        analyze('run12', format='csv')\n",
+    "```python\n# 3-D example\ngrid = [[1, 0], [0, 1]]\n",
+    ">>> compute(r\"y\")\n2\n",
+    "Examples\n--------\n>>> g = cycle_graph(6)\n",
+    "    Example:\n\n        plot('t33', style='bar')\n",
+    "```python\n# simple example\nmask = [[0, 1], [1, 0]]\n",
+    ">>> run(r\"z\")\n3\n"
+   ],
+   "quiet": [
+    "H = star_graph(4)\nsize = 2\n",
+    "analyze('run12', format='csv')\n",
+    "grid = [[1, 0], [0, 1]]\n",
+    "compute(r\"y\")\n",
+    "g = cycle_graph(6)\n",
+    "plot('t33', style='bar')\n",
+    "mask = [[0, 1], [1, 0]]\n",
+    "run(r\"z\")\n"
+   ]
+  }
+ ],
+ "predictions": "The same code inside a documentation example reads higher than bare. Bare forms read 0.06 to 0.35 in probes, so near misses may approach the 0.30 line.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code in a documentation example",
+ "unit_kind": "contextual",
+ "confidence": "high"
+}

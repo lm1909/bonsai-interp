@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-8bd55a78",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N4308+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:55:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N4308",
+   "pole": "+",
+   "label": "'None' in the test call assertIsNone",
+   "fire": [
+    "self.assertIsNone(job.get_result())\n",
+    "self.assertIsNone(user.get_name())\n",
+    "self.assertIsNone(view.get_form())\n",
+    "assertIsNone(row.parent)\n",
+    "self.assertIsNone(obj.value)\n",
+    "    self.assertIsNone(page.title)\n",
+    "self.assertIsNone(cache.get('k'))\n",
+    "self.assertIsNone(node.next)\n"
+   ],
+   "quiet": [
+    "self.assertEqual(job.get_result(), 3)\n",
+    "self.assertTrue(user.get_name())\n",
+    "self.assertIn(view, forms)\n",
+    "assertEqual(row.parent, 1)\n",
+    "self.assertFalse(obj.value)\n",
+    "    self.assertEqual(page.title, 't')\n",
+    "self.assertTrue(cache.get('k'))\n",
+    "self.assertEqual(node.next, 2)\n"
+   ]
+  }
+ ],
+ "predictions": "'None' fires; other assertion names stay quiet. 'return None' and 'x = None' read near zero in probes, and ' with' after 'positive association' read 0.57, so this is one part of the pole.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'None' in assertIsNone",
+ "unit_kind": "token",
+ "confidence": "medium"
+}
