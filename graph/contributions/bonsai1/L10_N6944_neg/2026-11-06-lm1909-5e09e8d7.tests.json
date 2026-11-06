@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-5e09e8d7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6944-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:07:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N6944",
+   "pole": "-",
+   "label": "personal and family record details as asked for in forms and applications (date of birth, maiden name, spouse, married, birth certificate), as opposed to other details in the same frames (address, employer, company name)",
+   "fire": [
+    "Applicants must list their date of birth and mother's maiden name.",
+    "Please bring your birth certificate and your marriage licence.",
+    "Enter your spouse's name on line four of the form.",
+    "Our plans cover you, your spouse and your children.",
+    "Married couples may file a joint tax return.",
+    "The census recorded his father's name and his place of birth.",
+    "Her maiden name appears on the old passport.",
+    "Widowed applicants must attach a copy of the marriage record."
+   ],
+   "quiet": [
+    "Applicants must list their home address and employer's phone number.",
+    "Please bring your utility bill and your driving licence.",
+    "Enter your company's name on line four of the form.",
+    "Our plans cover you, your car and your house.",
+    "The birth of her son delighted the whole village.",
+    "The census recorded his employer's name and his place of work.",
+    "Her stage name appears on the old passport.",
+    "Self-employed applicants must attach a copy of the payroll record."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "personal and family record details",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card: ' name' x12, ' married' x3, ' birth' x3, ' spouse' x2, ' names' x2, ' marry'. Probes: 'Father's name' 0.61, 'birth certificate' 0.63, ' spouse' 0.41, 'married couple' 0.38, ' marry' 0.16; 'File name' list 0.02, 'utility bill' 0.09, 'name of the company' and 'His name was' 0.19, 'birth of the nation' 0.13. So ' name' alone is not silent, and the form or kinship context raises it."
+}

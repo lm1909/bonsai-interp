@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-7daf7ffa",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N11366+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:07:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N11366",
+   "pole": "+",
+   "label": "code that compares in order to select rows or items (df[df.x == y], filter(User.a == b), np.where(x == 1), field__in=, field__startswith=), as opposed to the same objects handled without a selecting comparison, and to a plain == in an if or an assignment",
+   "fire": [
+    "rows = df[df['age'] == 30]\n",
+    "user = session.query(User).filter(User.name == name).first()\n",
+    "idx = np.where(labels == 1)[0]\n",
+    "top = grid[grid[:, 2] == z]\n",
+    "items = Item.objects.filter(tag__in=tags)\n",
+    "qs = Repo.objects.exclude(url__startswith='git')\n",
+    "n = len(data[data.status == 'ok'])\n",
+    "mask = table[table['year'] == 2010]\n"
+   ],
+   "quiet": [
+    "rows = df['age'] + 30\n",
+    "user = session.query(User).order_by(User.name).first()\n",
+    "idx = np.argmax(labels + 1)\n",
+    "top = grid[:, 2] * z\n",
+    "items = Item.objects.order_by('tag')\n",
+    "qs = Repo.objects.values('url')\n",
+    "n = 3\nif n == 3:\n    pass\n",
+    "ok = status == 'done'\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "a comparison that selects rows or items",
+ "unit_kind": "code / contextual",
+ "confidence": "high",
+ "notes": "Card: ' ==' x15, '.startswith' x3, 'in' x2, ' in' x2, ' >' x2, 'startswith'. Probes: df.loc ' ==' 0.81, filter ' ==' 0.71, np.where ' ==' 0.68, '__in' 0.70, '__startswith' 0.61, '.startswith' 0.29; x = y + 1 0.03, df.loc without a comparison 0.03, query.all() 0.03. 'if x == 3' 0.15, 'a != b' 0.08, but 'x = y == 3' 0.46, so a comparison outside selection is not always low."
+}

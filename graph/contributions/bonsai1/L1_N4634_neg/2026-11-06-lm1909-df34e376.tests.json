@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-df34e376",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N4634-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:07:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N4634",
+   "pole": "-",
+   "label": "the piece after N or NH in a letter string N + h (N|ha, N|hat, N|hu, N|HA, N|HT|SA, NH|RA), as opposed to N + another letter (N|inh, N|ga, N|PA, N|TS|B) and whole tokens (' NHS')",
+   "fire": [
+    "The writer Nhat Hanh taught in France.",
+    "The family of Nham lives near the river.",
+    "Her cousin Nhan runs a shop in Hue.",
+    "The NHTSA issued a report on the cars.",
+    "The NHRA drag races are held in Ohio.",
+    "The port of Nhava is near Mumbai.",
+    "The leader Ngo Dinh Nhu was killed in 1963.",
+    "The Housing Agency of the nation (NHA) built the flats."
+   ],
+   "quiet": [
+    "The writer Nguyen taught in France.",
+    "The family of Ninh lives near the river.",
+    "Her cousin Nga runs a shop in Hue.",
+    "The NTSB issued a report on the cars.",
+    "The NHS runs the clinics in Ohio.",
+    "The port of Nantes is near the coast.",
+    "The leader Ngo Dinh Diem was killed in 1963.",
+    "The Parks Agency of the nation (NPA) built the paths."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "piece after N in an N+h letter string",
+ "unit_kind": "spelling unit",
+ "confidence": "high",
+ "notes": "Gate-closed regime dominates on the other pole. Card: 'ار' x10, 'AN' x3, 'hs' x3, 'HS' x3, ' Nh' x2, 'HA' x2. Probes: NH|AN 1.05, N|ha 0.90, N|HA 0.80, Nh|e 0.27, ' Nhi' 0.25; ' NHS' as a whole token 0.07; N|PA, Hanoi, census 0.00, (HS) without N 0.002. 'ار' on the card did not reproduce (0.004), so about a third of the top examples are not covered. Pieces checked with the tokenizer."
+}
