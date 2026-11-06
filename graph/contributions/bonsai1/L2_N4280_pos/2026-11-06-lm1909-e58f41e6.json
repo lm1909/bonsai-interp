@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-e58f41e6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4280+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:56:50+00:00",
+ "recipe": {
+  "toolchain_commit": "b02606c71",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N4280_pos/2026-11-06-lm1909-e58f41e6.tests.json"
+ },
+ "label": "the ending -ation/-iation/-ация when it is its own token in a split word: Med|iation, Medic|ation, Dict|ation, В|ари|ация, Ре|ализ|ация; whole tokens like ' Variation' are not claimed",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N4280_pos/2026-11-06-lm1909-e58f41e6.tests.json",
+   "prereg_commit": "b02606c71",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.005,
+     "peak": "iation"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.101,
+     "peak": " Medic"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": -0.017,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.806,
+     "peak": "ация"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.142,
+     "peak": "ла"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.487,
+     "peak": "ель"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.682,
+     "peak": "iation"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.112,
+     "peak": "ла"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.081,
+     "peak": " dose"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.038,
+     "peak": "она"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.116,
+     "peak": "ла"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.453,
+     "peak": "ель"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": "Court"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": "у"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.797,
+    "median_fire": 0.315,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "b02606c71",
+  "minutes": 4,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "split ending -ation, -ация (checked tokens)",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "selection": "second round after own failed test",
+ "trigger": {
+  "tokens": [
+   "iation",
+   "ation",
+   "ация"
+  ]
+ }
+}
