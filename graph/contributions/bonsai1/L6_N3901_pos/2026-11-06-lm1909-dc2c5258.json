@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-dc2c5258",
+ "kind": "qc",
+ "neuron": "bonsai1/L6/N3901+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:57+00:00",
+ "recipe": {
+  "toolchain_commit": "84afddfc5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N3901_pos/2026-11-06-lm1909-dc2c5258.tests.json"
+ },
+ "label": "a plural pronoun for a pair that a sentence has just formed, whatever the relationship ('with his wife, Emily, and their', 'called his father, and they', 'sat beside me and we'), as against a plural pronoun for a group that was plural from the start",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N3901_pos/2026-11-06-lm1909-dc2c5258.tests.json",
+   "prereg_commit": "84afddfc5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.917,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.668,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.651,
+     "peak": " talked"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.004,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.308,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.794,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.65,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.825,
+     "peak": " they"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " sold"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " nurses"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " built"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " climb"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " tired"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " fly"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.731,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "84afddfc5",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "refine",
+  "label_under_test": "Plural pronoun for a romantic couple right after the partner is introduced by a conjunction (his wife, Lucy, and | their; met him and | they started dating); a group of coworkers or companies in the same frame stays quiet"
+ },
+ "short": "plural pronoun for a pair just formed",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "QC from a seeded sample, proposing a broader label. The current label says a romantic couple. Probe: spouse 0.989 and 0.805, but brother 0.887, son 0.929 and strangers on a flight (' we') 0.734, so the romance looks unnecessary; 'The boys ran ... they' 0.052. Fire items are pairs that are not couples, plus couples; near misses are plural pronouns for a group that was already plural, with no pair just formed. Card's top examples include non-romantic pairs too.",
+ "selection": "random QC sample, seed 202611050311"
+}

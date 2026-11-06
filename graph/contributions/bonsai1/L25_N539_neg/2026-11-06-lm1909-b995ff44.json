@@ -1,0 +1,155 @@
+{
+ "id": "2026-11-06-lm1909-b995ff44",
+ "kind": "qc",
+ "neuron": "bonsai1/L25/N539-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:26+00:00",
+ "recipe": {
+  "toolchain_commit": "84afddfc5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N539_neg/2026-11-06-lm1909-b995ff44.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N539_neg/2026-11-06-lm1909-b995ff44.tests.json",
+   "prereg_commit": "84afddfc5",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.121,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.078,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.325,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.018,
+     "peak": " help"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.41,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.219,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.421,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.285,
+     "peak": " much"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.062,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": " cost"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.142,
+     "peak": " much"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.234,
+     "peak": " much"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": "Lots"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.206,
+     "peak": " much"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "Too"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.252,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "84afddfc5",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "Unclear; best guess: an extent word that amplifies a quantity or tally ('so much more', 'so much for granted', 'overall record')"
+ },
+ "confidence": 0.55,
+ "notes": "QC from a seeded sample. Probe: ' much' after 'so' 0.289-0.393; 'How much' 0.142; 'very much' 0.061; 'so many more' 0.057. Near misses use other forms of much and many with different lead-ins. The label's 'overall record' read 0.014, so this test is on 'so much'.",
+ "selection": "random QC sample, seed 202611050311"
+}

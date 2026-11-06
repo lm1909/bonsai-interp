@@ -1,0 +1,156 @@
+{
+ "id": "2026-11-06-lm1909-94874de1",
+ "kind": "qc",
+ "neuron": "bonsai1/L28/N1141+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:31+00:00",
+ "recipe": {
+  "toolchain_commit": "84afddfc5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N1141_pos/2026-11-06-lm1909-94874de1.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N1141_pos/2026-11-06-lm1909-94874de1.tests.json",
+   "prereg_commit": "84afddfc5",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.361,
+     "peak": "UT"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.758,
+     "peak": "AR"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.488,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.138,
+     "peak": " warming"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.161,
+     "peak": "illed"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.621,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.229,
+     "peak": " satellite"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.341,
+     "peak": "analysis"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " when"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.06,
+     "peak": " argued"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " t"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " poor"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " cut"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " spread"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.351,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "84afddfc5",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "climate-record datasets and reanalysis products (NCEP/NCAR, HadCRUT, ERA-Interim, temperature series and their start dates)"
+ },
+ "unit_kind": "topic",
+ "confidence": 0.75,
+ "notes": "QC from a seeded sample. Card: 'AR' of NCEP/NCAR, ' temperature', ' Daily', '8' of 1989, in climate-record posts. I did not probe this. Near misses are about climate without naming a dataset or series.",
+ "selection": "random QC sample, seed 202611050311"
+}

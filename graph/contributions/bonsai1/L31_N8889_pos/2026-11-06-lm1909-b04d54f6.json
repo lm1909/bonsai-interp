@@ -1,0 +1,156 @@
+{
+ "id": "2026-11-06-lm1909-b04d54f6",
+ "kind": "qc",
+ "neuron": "bonsai1/L31/N8889+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:48+00:00",
+ "recipe": {
+  "toolchain_commit": "84afddfc5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N8889_pos/2026-11-06-lm1909-b04d54f6.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N8889_pos/2026-11-06-lm1909-b04d54f6.tests.json",
+   "prereg_commit": "84afddfc5",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.429,
+     "peak": " battery"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.101,
+     "peak": " looks"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.607,
+     "peak": " vocals"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.762,
+     "peak": " cooking"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.415,
+     "peak": " leg"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.264,
+     "peak": " confidence"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.813,
+     "peak": " humor"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.336,
+     "peak": " nightlife"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " battery"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.206,
+     "peak": " looks"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " singer"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.07,
+     "peak": " dad"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.16,
+     "peak": " leg"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": " shy"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.107,
+     "peak": "or"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.125,
+     "peak": " town"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.518,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "84afddfc5",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "the qualifying noun of an evaluative 'in the X department' / 'X factor' idiom, predicting 'department' (lacking in the taste department)"
+ },
+ "unit_kind": "context",
+ "confidence": 0.75,
+ "notes": "QC from a seeded sample. Probe: ' taste' in 'lacking in the taste department' 0.738; the quote after 'cool tricks' 0.497; ' those' in 'in those regards' 0.461; ' this' 0.254; ' Wow' 0.254; 'in that area' 0.054; 'bad taste in my mouth' 0.035. Near misses put the same nouns in other frames. Since the label predicts 'department', the near misses also use different lead-ins.",
+ "selection": "random QC sample, seed 202611050311"
+}

@@ -1,0 +1,155 @@
+{
+ "id": "2026-11-06-lm1909-eeb07827",
+ "kind": "qc",
+ "neuron": "bonsai1/L12/N5048+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:05+00:00",
+ "recipe": {
+  "toolchain_commit": "84afddfc5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N5048_pos/2026-11-06-lm1909-eeb07827.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N5048_pos/2026-11-06-lm1909-eeb07827.tests.json",
+   "prereg_commit": "84afddfc5",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.99,
+     "peak": " head"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.04,
+     "peak": " off"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.197,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.697,
+     "peak": " daytime"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.045,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.383,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.003,
+     "peak": " blue"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.04,
+     "peak": " inn"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " loose"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.136,
+     "peak": " route"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.086,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.072,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": " pale"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " diner"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.734,
+    "median_fire": 0.121,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "84afddfc5",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "dispute",
+  "label_under_test": "The completing word of a fixed formulaic phrase whose second half is set by convention (Running head:, daytime sleepiness, something to do, Just for today): the word that closes a stock formula"
+ },
+ "confidence": 0.55,
+ "notes": "QC from a seeded sample, registered as a dispute because probes made me expect a failure on other formulas: ' head' of 'Running head' 0.990, ' for' of 'Just for' 0.383 and 'daytime sleepiness' 0.402 fire, but 'off-the-cuff' 0.120 and 'pomp and circumstance' 0.049 do not. Fire items are fixed formulas, most of them new; near misses keep some of the words outside the formula.",
+ "selection": "random QC sample, seed 202611050311"
+}

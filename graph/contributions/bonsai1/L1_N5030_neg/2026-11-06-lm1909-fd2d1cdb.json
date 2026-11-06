@@ -1,0 +1,155 @@
+{
+ "id": "2026-11-06-lm1909-fd2d1cdb",
+ "kind": "qc",
+ "neuron": "bonsai1/L1/N5030-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:13+00:00",
+ "recipe": {
+  "toolchain_commit": "84afddfc5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N5030_neg/2026-11-06-lm1909-fd2d1cdb.tests.json"
+ },
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N5030_neg/2026-11-06-lm1909-fd2d1cdb.tests.json",
+   "prereg_commit": "84afddfc5",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.663,
+     "peak": "وي"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.952,
+     "peak": "وي"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.232,
+     "peak": "يا"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.582,
+     "peak": "الي"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.671,
+     "peak": "uido"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.117,
+     "peak": " gobierno"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.319,
+     "peak": "uest"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.758,
+     "peak": "uido"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.097,
+     "peak": " في"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": "دي"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.134,
+     "peak": " الطلاب"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.149,
+     "peak": "ت"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.114,
+     "peak": " año"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": "ado"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.303,
+     "peak": "uest"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.26,
+     "peak": "i"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.623,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "84afddfc5",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "unclear broad weak pole; best guess a word-final suffix piece split off a longer word (Arabic nisba '-ي/-وي/-الي', Spanish '-uido')"
+ },
+ "confidence": 0.65,
+ "notes": "QC from a seeded sample. The label is a best guess on a broad pole (3.1%). Probe: 'وي' 0.989; 'uido' 0.776; 'الي' 0.550; plain Arabic and Spanish frames 0.032-0.095; Russian 'ист' 0.084. Tokenizer splits checked. Spanish and Arabic only, since 'ист' did not fire.",
+ "selection": "random QC sample, seed 202611050311"
+}
