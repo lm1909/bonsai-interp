@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-af114302",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N8027+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:56:26+00:00",
+ "recipe": {
+  "toolchain_commit": "5f2aef160",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N8027_pos/2026-11-06-lm1909-af114302.tests.json"
+ },
+ "label": "' -sided' in dice and solids, with Python aggregates len, sum and slices '[-' (list, guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N8027_pos/2026-11-06-lm1909-af114302.tests.json",
+   "prereg_commit": "5f2aef160",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.35,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.045,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.33,
+     "peak": " len"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.323,
+     "peak": ")[-"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.021,
+     "peak": " attacks"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.129,
+     "peak": "(total"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.043,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.3,
+     "peak": " len"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.137,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": ".items"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " values"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": ".queue"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.214,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f2aef160",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'-sided', len, sum, '[-' (guess)",
+ "unit_kind": "token / code",
+ "confidence": "low",
+ "selection": "random draw"
+}

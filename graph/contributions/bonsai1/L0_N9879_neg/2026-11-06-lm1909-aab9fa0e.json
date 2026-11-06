@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-aab9fa0e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N9879-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:56:59+00:00",
+ "recipe": {
+  "toolchain_commit": "5f2aef160",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N9879_neg/2026-11-06-lm1909-aab9fa0e.tests.json"
+ },
+ "label": "'en' of en.wikipedia and the verb ' hated' (list, guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N9879_neg/2026-11-06-lm1909-aab9fa0e.tests.json",
+   "prereg_commit": "5f2aef160",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.459,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.589,
+     "peak": " hated"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.249,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.52,
+     "peak": " hated"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.478,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.546,
+     "peak": " hated"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.532,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.649,
+     "peak": " hated"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.144,
+     "peak": "ius"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.275,
+     "peak": " bathroom"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.056,
+     "peak": "alto"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.061,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": "au"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.209,
+     "peak": " visited"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.102,
+     "peak": "ier"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.174,
+     "peak": " hotel"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.526,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f2aef160",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'en' of en.wikipedia, ' hated' (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "The card flags 7.7% of tokens above 0.1 of max, with a small corpus max (0.39) and a 96% gate-closed regime.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "en",
+   " hated"
+  ]
+ }
+}
