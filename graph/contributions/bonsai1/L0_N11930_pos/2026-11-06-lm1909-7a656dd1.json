@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-7a656dd1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11930+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:27:02+00:00",
+ "recipe": {
+  "toolchain_commit": "611114f92",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N11930_pos/2026-11-06-lm1909-7a656dd1.tests.json"
+ },
+ "label": "The first CJK token right after a Latin-script term (Hadoop的, Player の, Mandelbrot 集)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N11930_pos/2026-11-06-lm1909-7a656dd1.tests.json",
+   "prereg_commit": "611114f92",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.347,
+     "peak": "的"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.803,
+     "peak": "の"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.854,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.64,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.984,
+     "peak": "的"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.66,
+     "peak": "の"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.341,
+     "peak": "语言"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.427,
+     "peak": "の"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.13,
+     "peak": "的"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.066,
+     "peak": "の"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.062,
+     "peak": "分"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.061,
+     "peak": "内置"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.415,
+     "peak": "的"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.06,
+     "peak": "を"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": "这种"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.146,
+     "peak": "の"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.65,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "611114f92",
+  "minutes": 1,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "first CJK token after a Latin term",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw"
+}
