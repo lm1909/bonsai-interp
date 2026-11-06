@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-c3376848",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N10520-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:08:23+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L4/N10520",
+   "pole": "-",
+   "label": "the opening quote of a Python string used as a value after return or =, whatever it starts with",
+   "fire": [
+    "def __str__(self):\n    return \"<{size}>\".format(size=4)\n",
+    "def label(self):\n    return \"{kind}\".format(kind=5)\n",
+    "note = \"_read: No data\"\n",
+    "def __repr__(self):\n    return \"Item {id}\".format(id=7)\n",
+    "text = \"<table>\" + rows\n",
+    "def title(self):\n    return \"Report\"\n",
+    "err = \"open: bad file\"\n",
+    "head = \"<h1>\" + name\n"
+   ],
+   "quiet": [
+    "def __str__(self):\n    return self.size + 4\n",
+    "def label(self):\n    return self.kind\n",
+    "note = read(data)\n",
+    "def __repr__(self):\n    return self.id\n",
+    "text = table + rows\n",
+    "def title(self):\n    return report\n",
+    "err = open(path)\n",
+    "head = h1 + name\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "second-round"
+  ]
+ },
+ "short": "opening quote of a string value",
+ "unit_kind": "token / code",
+ "confidence": 0.6,
+ "notes": "Second round; the first ('opening quote before < or _') failed because ' \"{' and plain ' \"' fired at 0.33-0.66 in its near misses. This label takes those as part of the trigger, and the near misses keep the code shape without a string. No new probes; based on the first round's per-sentence numbers."
+}
