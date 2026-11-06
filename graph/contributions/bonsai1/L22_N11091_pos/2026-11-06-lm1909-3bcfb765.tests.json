@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-3bcfb765",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11091+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:21:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N11091",
+   "pole": "+",
+   "label": "'So' or 'That' at the start of a sentence that picks up what was just said ('So let me say ...', 'That problem: ...'); plain continuations stay quiet",
+   "fire": [
+    "I answered badly at the interview.\nSo let me try again here.",
+    "The old theory has a big flaw.\nSo what should replace it?",
+    "Prices have doubled this year. So, for instance, rents are high.",
+    "There is a serious gap in the plan. That gap being money.",
+    "We studied one more problem. That problem: rising seas.",
+    "Nobody read the first report.\nSo here is a short summary.",
+    "He founded the town in 1676. That year, the river flooded.",
+    "You asked me about taxes.\nSo here is my answer."
+   ],
+   "quiet": [
+    "I answered badly at the interview.\nI went home by bus.",
+    "The old theory has a big flaw.\nThe new one does not.",
+    "Prices have doubled this year. Rents are high.",
+    "There is a serious gap in the fence near my house.",
+    "We studied one more problem. The rising seas were next.",
+    "Nobody read the first report.\nThe second came in May.",
+    "He founded the town in 1676. The river flooded.",
+    "You asked me about taxes.\nI paid them in June."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "sentence-initial 'So' or 'That' picking up",
+ "unit_kind": "discourse / contextual",
+ "confidence": "low",
+ "notes": "Card: ' so' x13, ' So' x6, 'So' x3, ' That' x3, ' therefore' x2. The - pole has the same words. Probe: 'So let me say' after a new line 0.55, '. That hole being' 0.46, 'So, for example' 0.13; 'so close that' 0.10, 'tired, so' 0.09, plain sentences 0.01-0.07. Uneven; I expect a marginal result.",
+ "trigger": {
+  "tokens": [
+   " So",
+   "So",
+   " That"
+  ]
+ }
+}

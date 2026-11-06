@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-fc5a3944",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N11812-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:21:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N11812",
+   "pole": "-",
+   "label": "The final '1' of 301, as a Maryland area code or an HTTP status; other area codes and status codes stay quiet",
+   "fire": [
+    "For details, call (301) 555-0134 during office hours.",
+    "The office is in Bethesda; phone (301) 555-0177.",
+    "Reach the clinic at 301-555-0142 on weekdays.",
+    "HTTP 301 means the page has moved.",
+    "return redirect(url, code=301)",
+    "Fax: (301) 555-0165",
+    "A 301 redirect keeps your search ranking.",
+    "Contact Ann Reed at (301) 555-0110 in Maryland."
+   ],
+   "quiet": [
+    "For details, call (212) 555-0134 during office hours.",
+    "The office is in Boston; phone (617) 555-0177.",
+    "Reach the clinic at 415-555-0142 on weekdays.",
+    "HTTP 404 means the page is missing.",
+    "return redirect(url, code=302)",
+    "Fax: (305) 555-0165",
+    "A 500 error hurts your search ranking.",
+    "Contact Ann Reed at (310) 555-0110 in California."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "final '1' of 301",
+ "unit_kind": "token / contextual",
+ "confidence": "medium",
+ "notes": "Card: '1' x27, '0' x2, '4' x2; many in '(301)' phone numbers near Rockville, MD, and '301: MOVED PERMANENTLY'. Probe: (301) 0.58-0.74, HTTP 301 0.42; (415) 0.04, 404 0.01; but '301 Main Street' 0.37 and '301 people' 0.11, so the number itself carries some of it. Near misses use other codes, not the number 301 elsewhere."
+}
