@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-c561bbbf",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N7926+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N7926",
+   "pole": "+",
+   "label": "Inline CSS and style markup: ' text' in text-indent or text-decoration, and '::' pseudo-elements; the word 'text' and margins in prose stay quiet.",
+   "fire": [
+    "<p style=\"margin-top:0px; margin-bottom:0px; -qt-block-indent:0; text-indent:0px;\">Hi</p>",
+    "<span style=\" font-size:9pt; font-weight:600; text-align:left;\">Name</span>",
+    "<td><a style=\"text-decoration:underline\">more</a></td>",
+    ".post-body > h2:first-of-type::before, .card h2::after { content: ''; }",
+    "<div style=\"color:red; text-transform:uppercase\">note</div>",
+    ".nav-item a:hover::after { width: 100%; }",
+    "<a style=\"color:#333;text-decoration:none\" href=\"#\">home</a>",
+    "ul.menu > li:last-child::after { display: none; }"
+   ],
+   "quiet": [
+    "The first paragraph of the text had no margin notes at all.",
+    "Her name was printed in large bold letters on the card.",
+    "The table has a link to more details at the bottom.",
+    "The body of the post has two headings and one picture.",
+    "The note in red was written in capital letters.",
+    "The nav bar is at the top of the page.",
+    "The home page is short and the colour is grey.",
+    "The menu has a list of dishes and the last is soup."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses. The output promotes block, flex and box.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "inline CSS (text-, ::)",
+ "unit_kind": "code / token",
+ "confidence": 0.85,
+ "notes": "Probes: ' text' 1.28, 'text-decoration' 0.96, '::' 0.95; `_display` 0.41 in Selenium, `.clear` 0.10. Prose under 0.01."
+}

@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-60777263",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2729+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N2729",
+   "pole": "+",
+   "label": "The piece 'es' in couches and the word dumps (mine dumps); shafts, chairs and JSON .dumps stay lower.",
+   "fire": [
+    "Please do not move the couches into the lobby.",
+    "Old coal dumps still scar the hills near town.",
+    "All the sofas and couches in the shop are on sale.",
+    "We sat on two couches in a quiet corner.",
+    "The slag dumps above the village are slowly shrinking.",
+    "n_couches = 3\nn_layers = 4",
+    "Waste dumps from the mine are being cleared away.",
+    "The hotel bought new beds, couches and lamps."
+   ],
+   "quiet": [
+    "Please do not move the benches into the lobby.",
+    "Old coal pits still scar the hills near town.",
+    "All the rugs and lamps in the shop are on sale.",
+    "We sat on two stools in a quiet corner.",
+    "The stone walls above the village are slowly crumbling.",
+    "n_chairs = 3\nn_layers = 4",
+    "Trucks from the mine are being cleaned today.",
+    "The hotel bought new beds, tables and lamps."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-1 near miss. A narrow word list; the card's top token is Russian 'ными'. The unit is broad with a max of 1.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "couch|es, dumps",
+ "unit_kind": "token piece",
+ "confidence": 0.55,
+ "notes": "Probes: 'couches' 0.63-0.90, ' dumps' 0.48; 'mine shafts' 0.07, 'chairs' 0.02, `.dumps` 0.14. The 'es' token is general, so it fires here only after couch."
+}

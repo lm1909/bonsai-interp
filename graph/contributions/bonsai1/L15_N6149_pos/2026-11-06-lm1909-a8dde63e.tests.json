@@ -1,0 +1,49 @@
+{
+ "contribution": "2026-11-06-lm1909-a8dde63e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N6149+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N6149",
+   "pole": "+",
+   "label": "A later item of an alphabetically ordered list: the pole fires when the items so far have been in A-to-Z order; the same items shuffled stay low.",
+   "fire": [
+    "Staff: Abbott, Bennett, Clark, Dixon, Ellis, Fisher, Grant, and Young.",
+    "ant, bee, cat, dog, eel, fox, goat, horse, lion, mouse, newt, otter, and zebra",
+    "from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple, Union",
+    "towns: Avon, Bristol, Canton, Danbury, Enfield, Granby, Hartford, and Windsor",
+    "import copy, glob, json, logging, math, os, random, shutil, sys, time, uuid",
+    "basil, chives, dill, fennel, ginger, mint, oregano, parsley, sage, and thyme",
+    "Offices in Austria, Belgium, Croatia, Denmark, Estonia, Finland, Greece, and Sweden.",
+    "amber, beige, coral, ivory, khaki, lilac, mauve, olive, peach, and violet"
+   ],
+   "quiet": [
+    "Staff: Young, Clark, Fisher, Abbott, Grant, Dixon, Bennett, and Ellis.",
+    "zebra, dog, ant, otter, bee, lion, cat, newt, eel, mouse, fox, horse, and goat",
+    "from typing import Union, Dict, Any, Tuple, Callable, List, Optional, Iterable",
+    "towns: Windsor, Canton, Hartford, Avon, Enfield, Bristol, Granby, and Danbury",
+    "import uuid, math, copy, sys, json, time, glob, shutil, os, random, logging",
+    "thyme, dill, sage, basil, mint, fennel, parsley, chives, oregano, and ginger",
+    "Offices in Sweden, Croatia, Austria, Greece, Belgium, Finland, Denmark, and Estonia.",
+    "violet, coral, amber, peach, ivory, olive, beige, mauve, lilac, and khaki"
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-1 near miss. This pattern replaces a token list (Union, Yorktown, Outsourcing, xview), and every near miss uses the same items shuffled.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "later item in an alphabetical list",
+ "unit_kind": "format / contextual",
+ "confidence": 0.7,
+ "notes": "All top examples turned out to be alphabetical lists. Probes, ordered vs shuffled with the same items: 0.29 vs 0.02, 0.58 vs 0.14, 0.27 vs 0.02. Corpus-like lists 0.29-0.57. Non-alphabetical list 0.03."
+}
