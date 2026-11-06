@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-9f983c80",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10440+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:14:19+00:00",
+ "recipe": {
+  "toolchain_commit": "ccd96955f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10440_pos/2026-11-06-lm1909-9f983c80.tests.json"
+ },
+ "label": "the token '.function', as opposed to sibling tokens such as '.method', '.name', '.value' and '.callback' in the same lines",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10440_pos/2026-11-06-lm1909-9f983c80.tests.json",
+   "prereg_commit": "ccd96955f",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.431,
+     "peak": ".function"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.19,
+     "peak": ".function"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.269,
+     "peak": ".function"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.127,
+     "peak": ".function"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.267,
+     "peak": ".function"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.33,
+     "peak": ".function"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.275,
+     "peak": ".function"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.292,
+     "peak": ".function"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.087,
+     "peak": ".method"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.077,
+     "peak": " event"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": "print"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": "start"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.046,
+     "peak": "return"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.048,
+     "peak": ".callback"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.272,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ccd96955f",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "the token '.function'",
+ "unit_kind": "token / code",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed a list ('.function', 'ί', 'كن') and failed, on the Greek 'μ' (0.84-0.89) and the Arabic item (0.06 or less). '.function' was the part that worked: 0.09-0.36 against 0.03-0.05 for the sibling sentences, and 0.35-0.43 in probes. So this round is only that token. The earlier 'y = obj.function(1)' reached only 0.09, so a call right after an assignment may be weak. An L0 pole, so this is about the token. The rest of the card (' بين', 'ί', 'كن', ' SharePoint') is not covered.",
+ "selection": "picked: round 2 after a failed round",
+ "trigger": {
+  "tokens": [
+   ".function"
+  ]
+ }
+}
