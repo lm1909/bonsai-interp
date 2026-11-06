@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-4c546dfc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N3004+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:11:24+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N3004",
+   "pole": "+",
+   "label": "' len' right after ' if' in Python, in a guard such as 'if len(x) > 0'; ' len' in a plain assignment, other functions and prose about length stay low",
+   "fire": [
+    "item = self._items.pop() if len(self._items) > 0 else None",
+    "if len(args) < 2:\n    print('usage')",
+    "x = names[0] if len(names) else ''",
+    "while True:\n    if len(buffer) == 0:\n        break",
+    "return rows[0] if len(rows) == 1 else rows",
+    "for line in lines:\n    if len(line) > 80:\n        continue",
+    "msg = errors.pop() if len(errors) else 'ok'",
+    "if len(sys.argv) != 3:\n    sys.exit(1)"
+   ],
+   "quiet": [
+    "item = self._items.pop()\ncount = self._items.size()",
+    "count = len(args)\nprint(count)",
+    "x = names[0]\nsize = len(names)",
+    "while True:\n    buffer.clear()\n    break",
+    "return rows[0] if rows else rows",
+    "for line in lines:\n    total += 1\n    continue",
+    "msg = errors.pop() if errors else 'ok'",
+    "The length of the list is printed on the screen."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' len' in a Python 'if' guard",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "trigger": {
+  "tokens": [
+   " len"
+  ]
+ }
+}
