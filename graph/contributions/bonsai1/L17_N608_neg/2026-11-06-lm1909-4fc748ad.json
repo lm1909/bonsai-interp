@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4fc748ad",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N608-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:31:01+00:00",
+ "recipe": {
+  "toolchain_commit": "b00f6002a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N608_neg/2026-11-06-lm1909-4fc748ad.tests.json"
+ },
+ "label": "a tax deduction or exemption being claimed",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N608_neg/2026-11-06-lm1909-4fc748ad.tests.json",
+   "prereg_commit": "b00f6002a",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.75,
+     "peak": " claim"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.142,
+     "peak": " equipment"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.28,
+     "peak": " interest"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.278,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.446,
+     "peak": " deduction"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.186,
+     "peak": " property"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.511,
+     "peak": " deduction"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.472,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.074,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.076,
+     "peak": " equipment"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.081,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.224,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.121,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.175,
+     "peak": " free"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.102,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.135,
+     "peak": " tuition"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.363,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b00f6002a",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tax deduction or exemption",
+ "unit_kind": "semantic",
+ "confidence": "low",
+ "notes": "The pole is flagged broad, and other administrative words fired in probes (' certified' 0.38, ' formal' 0.30). I narrowed to the tax case, which reached 0.41-0.59, so the coverage should be small.",
+ "selection": "random draw"
+}

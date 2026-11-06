@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-444c575e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N9836+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:41+00:00",
+ "recipe": {
+  "toolchain_commit": "b00f6002a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N9836_pos/2026-11-06-lm1909-444c575e.tests.json"
+ },
+ "label": "token ' passed' for a law or motion being approved",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N9836_pos/2026-11-06-lm1909-444c575e.tests.json",
+   "prereg_commit": "b00f6002a",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.423,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.24,
+     "peak": " passed"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.259,
+     "peak": " after"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.519,
+     "peak": " passed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.493,
+     "peak": " before"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.49,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.331,
+     "peak": " without"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.381,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.177,
+     "peak": " debated"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.201,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.185,
+     "peak": " measure"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.52,
+     "peak": " rejected"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.143,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.584,
+     "peak": " stalled"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.267,
+     "peak": " without"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.463,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.641,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b00f6002a",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' passed' of a law",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Probes also fired ' at', ' to' and ' for' after event nouns and participles (0.38-0.70), not covered here, so this is a sub-trigger. ' passed' may be firing for any verb of approval; the near misses test that a little.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " passed"
+  ]
+ }
+}

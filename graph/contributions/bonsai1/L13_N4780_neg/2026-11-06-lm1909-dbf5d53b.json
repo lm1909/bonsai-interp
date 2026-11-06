@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-dbf5d53b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N4780-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:30:09+00:00",
+ "recipe": {
+  "toolchain_commit": "b00f6002a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N4780_neg/2026-11-06-lm1909-dbf5d53b.tests.json"
+ },
+ "label": "a Midwestern US city name as a place of publication or location (St. Paul, Columbus, St. Louis, Cleveland)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N4780_neg/2026-11-06-lm1909-dbf5d53b.tests.json",
+   "prereg_commit": "b00f6002a",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.136,
+     "peak": " Minnesota"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.065,
+     "peak": " Ohio"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.251,
+     "peak": " Missouri"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.199,
+     "peak": " Northern"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.225,
+     "peak": " Dayton"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.168,
+     "peak": " Ohio"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.189,
+     "peak": " Press"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.272,
+     "peak": "leveland"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.289,
+     "peak": " Harvard"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " York"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.228,
+     "peak": " Thames"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " Press"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " nearby"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " bank"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.066,
+     "peak": "xford"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": "4"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.194,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b00f6002a",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Midwestern city as a place",
+ "unit_kind": "lexical / contextual",
+ "confidence": "low",
+ "notes": "Columbus-area in running text stayed at or below 0.07 in probes, where 'St. Paul:' in a citation reached 0.66. The near misses in citations use non-Midwestern places.",
+ "selection": "random draw"
+}
