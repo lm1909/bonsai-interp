@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-f17d8c3e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N6541-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:08:37+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N6541",
+   "pole": "-",
+   "label": "A piece of an attribute name on an object in test-style Python (instance_ref.fl|avor, user.for|um_key, withApi|Context); ordinary words in prose stay quiet",
+   "fire": [
+    "vm_ref = objects.Server(**self.test_server)\nvm_ref.flavor.extra_specs = {'cpu': 2}\nself.assertEqual(vm_ref.id, 1)\n",
+    "person = AnonymousUser()\nperson.forum_name = 'abc'\nself.assertEqual(person.key, 1)\n",
+    "node = Node(**self.test_node)\nnode.flavor.memory_mb = 512\nnode.save()\n",
+    "self.client.withApiKey(apiKey)\nself.client.withApiToken(apiToken)\nself.client.send(ctx)\n",
+    "req = fakes.HTTPRequest.blank('/v1')\nreq.identities.append(ident)\nself.assertTrue(req.ok)\n",
+    "inst = make_instance()\ninst.flavor.root_gb = 10\nself.assertEqual(inst.flavor.root_gb, 10)\n",
+    "mock_api.instance.side_effect = values\nmock_api.instance.return_value = 3\nmock_api.reset()\n",
+    "uid = make_uid()\nuid.identities.append(identity)\nself._identities.add(uid)\n"
+   ],
+   "quiet": [
+    "a = 1\nb = 2\nc = a + b\nprint(c)\n",
+    "x = 'abc'\ny = len(x)\nz = y * 2\n",
+    "for n in range(3):\n    print(n)\nprint('end')\n",
+    "total = 0\ntotal += 1\ntotal += 2\nshow(total)\n",
+    "import os\nimport sys\nprint(os.name)\n",
+    "The flavor of the sauce was rich and the instance was rare.",
+    "She joined the forum and shared her identity with the group.",
+    "def add(a, b):\n    return a + b\nprint(add(1, 2))\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "attribute piece in Python",
+ "unit_kind": "code",
+ "confidence": 0.5,
+ "notes": "Probes 0.15-0.55; '.info' in a two-line mock read 0.15. Only multi-line passages are used."
+}
