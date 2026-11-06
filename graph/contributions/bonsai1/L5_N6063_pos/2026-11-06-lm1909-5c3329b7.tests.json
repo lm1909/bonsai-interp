@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-5c3329b7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N6063+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:44:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N6063",
+   "pole": "+",
+   "label": "The suffix '_list' or '_dict' in a variable name (df_list, arg_list, json_dict), also '(list' opening an argument",
+   "fire": [
+    "frames_list = []\nfor f in files:\n    pass\n",
+    "def run(arg_list, out):\n    pass\n",
+    "from pandas import is_dict_like\n",
+    "conf_dict = load(path)\n",
+    "def pairs(list_a, list_b):\n    pass\n",
+    "user_list = get_users()\n",
+    "data_dict = {}\n",
+    "item_list.append(x)\n"
+   ],
+   "quiet": [
+    "frames_name = 'a'\nfor f in files:\n    pass\n",
+    "def run(arg_name, out):\n    pass\n",
+    "from pandas import is_number\n",
+    "conf_text = load(path)\n",
+    "def pairs(left_a, left_b):\n    pass\n",
+    "user_name = get_users()\n",
+    "data_size = 0\n",
+    "item_count += x\n"
+   ]
+  }
+ ],
+ "predictions": "'_list' and '_dict' fire; other suffixes stay quiet. The plain word ' list' read 0.04 in a probe.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'_list', '_dict' in variable names",
+ "unit_kind": "token",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   "_list",
+   "_dict",
+   "(list"
+  ]
+ }
+}
