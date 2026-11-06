@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1bd8ba06",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N7790-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:02:33+00:00",
+ "recipe": {
+  "toolchain_commit": "dfd54a5f9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N7790_neg/2026-11-06-lm1909-1bd8ba06.tests.json"
+ },
+ "label": "the piece 'uf' or 'eb' right after K, Q or T in a rare name (K|uf|a, Q|uf|u, K|eb|ili), as opposed to some other pieces after the same letters (Q|uba, T|swana); K|wan and Q|abo also fire and are not claimed",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N7790_neg/2026-11-06-lm1909-1bd8ba06.tests.json",
+   "prereg_commit": "dfd54a5f9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.759,
+     "peak": "uf"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.624,
+     "peak": "uf"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.696,
+     "peak": "uf"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.534,
+     "peak": "uf"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.454,
+     "peak": "eb"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.52,
+     "peak": "eb"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.424,
+     "peak": "eb"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.78,
+     "peak": "uf"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.175,
+     "peak": "uba"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": "adesh"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.031,
+     "peak": "bil"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " oasis"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": "lim"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.116,
+     "peak": "ik"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.076,
+     "peak": "om"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.579,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dfd54a5f9",
+  "minutes": 5,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "the piece uf or eb after K, Q or T in a rare name",
+ "unit_kind": "spelling unit",
+ "confidence": "low",
+ "notes": "Card: 'eb' x3, 'uf' x2, 'wan' x2, 'ab' x2, 'war' x2, 'ep' x2. Probes: K|uf|ra 0.67, K|eb|ir 0.52, Q|eb 0.56, T|uf|nell 0.48, K|eb|bede 0.33; K|ano 0.01, K|adesh 0.03, Q|uba 0.04, T|swana 0.02, K|ik 0.12, K|ib 0.19. Pieces outside the label also fire: K|wan 0.64, Q|abo 0.43, Kw|a|Z 0.73, T|sh|w 0.41, so this covers only a part of the pole, and the wider pattern is not understood. Pieces checked with the tokenizer.",
+ "selection": "random draw"
+}

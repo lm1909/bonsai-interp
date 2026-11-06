@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-817fd54a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N1113+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:03:02+00:00",
+ "recipe": {
+  "toolchain_commit": "dfd54a5f9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N1113_pos/2026-11-06-lm1909-817fd54a.tests.json"
+ },
+ "label": "the token ' Hay' opening or forming a name (Hay|ek, Hay|ashi, John Hay), as opposed to names that hold those letters inside a whole token (Hayden, Hayward) and other names",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N1113_pos/2026-11-06-lm1909-817fd54a.tests.json",
+   "prereg_commit": "dfd54a5f9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.275,
+     "peak": " Hay"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.681,
+     "peak": " Hay"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.523,
+     "peak": " Hay"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.683,
+     "peak": " Hay"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.46,
+     "peak": " Hay"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.563,
+     "peak": " Hay"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.471,
+     "peak": " Hay"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.559,
+     "peak": " Hay"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " famous"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.084,
+     "peak": " Hayden"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " Mi"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.027,
+     "peak": "Will"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": " Hay"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.541,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dfd54a5f9",
+  "minutes": 6,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "the token ' Hay' in a name",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: ' Hay' x9, 'Hay' x3, ' (' x2, 北京市, 'ő', '8'. Probes: ' Hay' 0.58-0.60, 'Hay' 0.50; whole-token ' Hayes' 0.05, ' hay' 0.07, 'Hey' 0.02, ' Tak' 0.01. 北京市 reached 0.73 and ' (' on the card is unexplained, so this covers part of the pole only. One near miss uses ' Hay' outside a name, so the 'in a name' part rests on one item. Output promotes ' Tu', ' past', 'imus', not explained.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Hay",
+   "Hay"
+  ]
+ }
+}

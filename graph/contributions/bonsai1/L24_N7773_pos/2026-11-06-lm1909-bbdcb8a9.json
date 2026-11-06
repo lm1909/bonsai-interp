@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-bbdcb8a9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N7773+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:02:45+00:00",
+ "recipe": {
+  "toolchain_commit": "dfd54a5f9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N7773_pos/2026-11-06-lm1909-bbdcb8a9.tests.json"
+ },
+ "label": "someone being told or notified of a piece of news, or having learned it (informed X of, told her about, announced that, learned that, a notice of), as opposed to other actions with the same people and frames, and to telling someone what to do",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N7773_pos/2026-11-06-lm1909-bbdcb8a9.tests.json",
+   "prereg_commit": "dfd54a5f9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.485,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.485,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.0,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.959,
+     "peak": " announced"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.365,
+     "peak": " learned"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.973,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.306,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.31,
+     "peak": " news"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.088,
+     "peak": " passengers"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 1.0,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.054,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.153,
+     "peak": " Monday"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.06,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.224,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.883,
+    "median_fire": 0.485,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dfd54a5f9",
+  "minutes": 5,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "someone being told news, or having learned it",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' of' x5, ' announced' x4, ' told' x3, ' him', ' learned', ' them', from news text. Probes: 'told him' 1.00, 'announced' 0.62-1.01, 'notified shareholders of' 0.90, 'notice of' 0.54-0.71, 'informed the family of' 0.66, 'alerted employees of' 0.61, 'gave her the bad news' 0.41, 'learned' 0.39, 'found out' 0.34; 'paid employees for' 0.00, 'walked out' 0.09, 'bought a horse' 0.02, 'shipment of gravel' 0.04. Not everything fits: 'told him to wash the car' 0.48 (no news), 'told a long story' 0.20, 'discovered that' 0.06, and plain 'said that' 0.03, so saying alone is not enough, and telling without news is not silent.",
+ "selection": "random draw"
+}

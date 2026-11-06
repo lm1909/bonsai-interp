@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-47c0fdfe",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N4874+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:02:26+00:00",
+ "recipe": {
+  "toolchain_commit": "dfd54a5f9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N4874_pos/2026-11-06-lm1909-47c0fdfe.tests.json"
+ },
+ "label": "therapy and coping with mental conditions (psychotherapy, anxiety, depression, stress), as opposed to the same frames for bodily conditions, physical therapy and training in other skills",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N4874_pos/2026-11-06-lm1909-47c0fdfe.tests.json",
+   "prereg_commit": "dfd54a5f9",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.77,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.401,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.107,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.354,
+     "peak": " addressed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.273,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.22,
+     "peak": " manage"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.183,
+     "peak": " when"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.193,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.404,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.084,
+     "peak": " trouble"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.149,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.545,
+     "peak": " change"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.076,
+     "peak": " people"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " knife"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.246,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dfd54a5f9",
+  "minutes": 5,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "therapy and coping with mental conditions",
+ "unit_kind": "topic",
+ "confidence": "medium",
+ "notes": "Card: ' to' x4, ' managing' x2, ' and', 'ed', ' in', ' of', in mental-health text. Probes: 'learns to' in psychotherapy 0.87, 'negative thoughts and' 0.52, 'autism ... difficulties in' 0.39, 'trouble in' with depression 0.37, 'manage anxiety' 0.38, 'managing the stress' 0.20; lessons, driving school, hay fever, dental 0.05 or less. Weak or wrong: 'Mental health includes' 0.13, 'alleviating anxiety' 0.16, and physical therapy 'learns to' 0.38, so therapy in general is a rival; three near misses test it.",
+ "selection": "random draw"
+}

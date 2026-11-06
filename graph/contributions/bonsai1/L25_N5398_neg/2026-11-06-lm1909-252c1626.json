@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-252c1626",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N5398-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:03:14+00:00",
+ "recipe": {
+  "toolchain_commit": "dfd54a5f9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N5398_neg/2026-11-06-lm1909-252c1626.tests.json"
+ },
+ "label": "the US constitutional order (Congress, the Supreme Court, the President's powers, amendments), as opposed to the same frames for clubs, councils and other countries' institutions",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N5398_neg/2026-11-06-lm1909-252c1626.tests.json",
+   "prereg_commit": "dfd54a5f9",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.429,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.504,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.47,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.506,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.108,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.369,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.157,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.174,
+     "peak": " Protection"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.048,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": " no"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.172,
+     "peak": " staff"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": " dining"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.261,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.131,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " German"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.399,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dfd54a5f9",
+  "minutes": 6,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "the US constitutional order",
+ "unit_kind": "topic",
+ "confidence": "medium",
+ "notes": "Card: ' the', ' to', ' shall', ' The', ' of', ' or', scattered, with Congress, Supreme Court and the Constitution among them. Probes: 'ordered Nixon to' 0.63, 'provides for ... general' 0.42, 'Senate ... power to' 0.41, 'Court ruled ... must' 0.37, 'prevented from' 0.25, 'First Amendment' 0.21; club, parish and referee versions, Parliament and Bundestag 0.03 or less. Weaker: 'Every law must be passed by both houses' 0.12. Newton's law reached 0.30 and 0.10, and biblical 'shall be' is on the card, so 'binding rules' more widely is a rival, tested here by one biblical near miss.",
+ "selection": "random draw"
+}
