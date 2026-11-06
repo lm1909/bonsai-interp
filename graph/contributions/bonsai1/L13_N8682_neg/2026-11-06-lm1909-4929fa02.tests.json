@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-4929fa02",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N8682-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:39:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N8682",
+   "pole": "-",
+   "label": "Chinese web-news boilerplate: the colon of 责任编辑： (editor in charge) and 有网友 (a netizen ...); other labels and other sources stay quiet",
+   "fire": [
+    "公司向用户道歉。(责任编辑：小王)",
+    "事情已经结束。（责任编辑：admin）",
+    "这是今天的新闻。【责任编辑：李明】",
+    "昨日，有网友发帖称看到了他。",
+    "近日，有网友在微博上传了视频。",
+    "市民可以拨打热线。(责任编辑：张华)",
+    "今天，有网友爆料说公司倒闭了。",
+    "比赛已经结束。（责任编辑：陈静）"
+   ],
+   "quiet": [
+    "公司向用户道歉。(作者：小王)",
+    "事情已经结束。（来源：admin）",
+    "这是今天的新闻。【地址：李明路】",
+    "昨日，有学生发帖称看到了他。",
+    "近日，有记者在微博上传了视频。",
+    "市民可以拨打热线。(电话：张华)",
+    "今天，有员工爆料说公司倒闭了。",
+    "比赛已经结束。（时间：陈静）"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Chinese web-news 责任编辑：, 有网友",
+ "unit_kind": "token / format",
+ "confidence": "high",
+ "notes": "Card: 'ANI' x7, '：' x4 after 责任编辑, 网友 x2, '/t', '.org', ' submitted'. Probe: '：' of 责任编辑 0.66-0.75, 有网友 0.79, 网友 alone 0.23; 来源： 0.14, 电话： 0.04, 有记者 0.02. 'ANI' is not covered."
+}

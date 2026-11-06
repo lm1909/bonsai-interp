@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-30b1c546",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N658-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:39:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N658",
+   "pole": "-",
+   "label": "Setting up a database connection in code: create_engine, connection strings, database URLs; other imports, opening files and HTTP calls stay quiet",
+   "fire": [
+    "from sqlalchemy import create_engine\nengine = create_engine(db_url)",
+    "conn = psycopg2.connect(dsn)\ncur = conn.cursor()",
+    "DATABASE_URL = os.environ['DATABASE_URL']\nengine = create_engine(DATABASE_URL)",
+    "self.connection_string = settings.DB_CONNECTION",
+    "conn = pymysql.connect(host=host, user=user)",
+    "engine = sqlalchemy.create_engine(connection_url)",
+    "db_url = config.get('db_url')\nconnect(db_url)",
+    "pool = redis.ConnectionPool(host=host)"
+   ],
+   "quiet": [
+    "from collections import Counter\ncounter = Counter(words)",
+    "fh = open(path)\nlines = fh.readlines()",
+    "HOME_DIR = os.environ['HOME']\nfiles = os.listdir(HOME_DIR)",
+    "self.page_title = settings.TITLE",
+    "resp = requests.post(url, data=data)",
+    "plot = matplotlib.pyplot.plot(values)",
+    "user_name = config.get('user_name')\nprint(user_name)",
+    "pool = multiprocessing.Pool(4)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "setting up a database connection in code",
+ "unit_kind": "code / semantic",
+ "confidence": "high",
+ "notes": "Card: '_engine' x3, 'connection' x3, '_URL' x2, ' connection' x2, 'ools' of connectionpools, 'Url' of dbUrl; the + pole is '.execute' on the same subject. Probe: create_engine(url 1.13, connection_string 0.76 and 0.61, dbUrl 0.54; sqrt 0.01, requests.get 0.01, conf['name'] 0.06, cursor.execute 0.01."
+}

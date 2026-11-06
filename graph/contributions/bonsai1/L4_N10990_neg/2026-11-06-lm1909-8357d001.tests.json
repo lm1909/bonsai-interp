@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-8357d001",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N10990-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:39:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N10990",
+   "pole": "-",
+   "label": "Font styling values in code: the size digit after a font name ('Helvetica', 15) and ' bold'; other numbers and style settings stay quiet",
+   "fire": [
+    "sg.Text('Name', font=('Arial', 14), key='name')",
+    "label = Label(root, font=('Courier', 12))",
+    "font-weight: bold;\ncolor: red;",
+    "font = ImageFont.truetype('Arial', 18)",
+    "<span style=\"font-weight:bold\">Hello</span>",
+    "title.set_font('Helvetica', 'bold', 16)",
+    "sg.Button('Go', font=('Helvetica', 13))",
+    "style = 'bold italic'\nsize = 12"
+   ],
+   "quiet": [
+    "sg.Text('Name', key='name')",
+    "label = Label(root, width=12)",
+    "margin-top: auto;\ncolor: red;",
+    "img = Image.open('cat.png')",
+    "<span style=\"color:red\">Hello</span>",
+    "title.set_text('Helvetica')",
+    "sg.Button('Go', key='go')",
+    "style = 'plain'\ncount = 12"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "font size digit and ' bold' in code",
+ "unit_kind": "code / token",
+ "confidence": "medium",
+ "notes": "Card: '4' x6, '5' x4, 'bold' x4, '6' x3 in font=('Helvetica', 15), also a button_width and a color tag. Probe: ' bold' 0.86, ('Helvetica', 15) 0.50, button_width 0.15, size=15 0.14, color tag 0.04, 'total = 17' 0.00.",
+ "trigger": {
+  "tokens": [
+   " bold",
+   "bold"
+  ]
+ }
+}

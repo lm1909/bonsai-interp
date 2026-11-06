@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-10917211",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10197-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:39:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N10197",
+   "pole": "-",
+   "label": "The first half of a binomial pair, right before an expected 'and' ('hot and humid', 'time and money', 'heat and pressure'): the - pole promotes ' and'; the same word on its own stays under it",
+   "fire": [
+    "The weather here is hot and humid all year.",
+    "It takes time and money to fix the roof.",
+    "Intense heat and pressure formed the diamonds.",
+    "The winter was cold and wet in the north.",
+    "We thank you for your time and energy.",
+    "The air was warm and still at dusk.",
+    "Hard work and patience will get you there.",
+    "The project needed time and effort from all of us."
+   ],
+   "quiet": [
+    "The weather here is humid all year.",
+    "It takes money to fix the roof.",
+    "Intense pressure formed the diamonds.",
+    "The winter was wet in the north.",
+    "We thank you for your energy.",
+    "The air was still at dusk.",
+    "Patience will get you there.",
+    "The project needed effort from all of us."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first half of a binomial, before 'and'",
+ "unit_kind": "contextual / prediction",
+ "confidence": "medium",
+ "notes": "Card: ' time' x6, ' work' x3, ' years' x2, ' warm', ' heat', ' hot'. Logit effect of the + pole suppresses ' and', ' и', ' &', 'and', 和, so the - pole promotes them. Probe: 'hot and stormy' 0.55, 'heat and pressure' 0.37, 'time and effort' 0.29, 'time, patience' 0.23, 'time and cost' 0.15; plain alternatives at most 0.10. The activation reads the context before the 'and', so the near misses drop the pair entirely."
+}
