@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ca06136f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N9603-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:48:56+00:00",
+ "recipe": {
+  "toolchain_commit": "15247d064",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N9603_neg/2026-11-06-lm1909-ca06136f.tests.json"
+ },
+ "label": "the end of a title or heading, at its last word or the following line break",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N9603_neg/2026-11-06-lm1909-ca06136f.tests.json",
+   "prereg_commit": "15247d064",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.308,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.285,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.389,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.21,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.092,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.179,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.065,
+     "peak": " Paper"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.527,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.056,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "Smith"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.034,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.051,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " marketing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.029,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.247,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "15247d064",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "end of a title or heading",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Peaks are on line breaks or on the last word; the probes reached 0.20-0.52. A broad reading, so expect a narrow result.",
+ "selection": "random draw"
+}

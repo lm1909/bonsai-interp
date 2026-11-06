@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-a01609ef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8460-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:47:49+00:00",
+ "recipe": {
+  "toolchain_commit": "15247d064",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N8460_neg/2026-11-06-lm1909-a01609ef.tests.json"
+ },
+ "label": "the piece 'oid' as its own token (lip|oid, sarcomat|oid, rhomb|oid)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N8460_neg/2026-11-06-lm1909-a01609ef.tests.json",
+   "prereg_commit": "15247d064",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.977,
+     "peak": "oid"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.91,
+     "peak": "oid"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.008,
+     "peak": "oid"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.145,
+     "peak": "void"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.905,
+     "peak": "oid"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.017,
+     "peak": "oid"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.959,
+     "peak": "oid"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.767,
+     "peak": "oid"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " normal"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.248,
+     "peak": " thyroid"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " corners"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "Tiny"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.755,
+     "peak": "oid"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "Ro"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.505,
+     "peak": " asteroid"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.028,
+     "peak": " Android"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.934,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "15247d064",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the piece 'oid'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "The whole-token words ' thyroid', ' Opioid', ' asteroid' and ' Android' are the near misses: they contain the letters but not the piece.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "oid",
+   "oids"
+  ]
+ }
+}
