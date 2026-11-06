@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-cf2600ec",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10875+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:25:51+00:00",
+ "recipe": {
+  "toolchain_commit": "154531685",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N10875_pos/2026-11-06-lm1909-cf2600ec.tests.json"
+ },
+ "label": "The colon after a message header or article-title label (Subject:, HR Updates:, Festival:); colons in lists, in times and after taste statements stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N10875_pos/2026-11-06-lm1909-cf2600ec.tests.json",
+   "prereg_commit": "154531685",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.783,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.771,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.249,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.219,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.552,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.213,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.591,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.096,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.059,
+     "peak": " three"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " film"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " leaves"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.03,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.068,
+     "peak": " saw"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.069,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "1"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.401,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "154531685",
+  "minutes": 21,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "colon after header or title label",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}

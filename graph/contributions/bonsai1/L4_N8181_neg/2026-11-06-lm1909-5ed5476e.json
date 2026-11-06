@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-5ed5476e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8181-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:26:14+00:00",
+ "recipe": {
+  "toolchain_commit": "154531685",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N8181_neg/2026-11-06-lm1909-5ed5476e.tests.json"
+ },
+ "label": "The Chinese noun suffix 子 as its own token (册子, 柜子, 样子); other nouns in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N8181_neg/2026-11-06-lm1909-5ed5476e.tests.json",
+   "prereg_commit": "154531685",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.795,
+     "peak": "子"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.747,
+     "peak": "子"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.119,
+     "peak": "子"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.624,
+     "peak": "子"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.49,
+     "peak": "子"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.61,
+     "peak": "子"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.513,
+     "peak": "子"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.79,
+     "peak": "子"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": "了一个"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": "书"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": "擦"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.021,
+     "peak": "小"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.145,
+     "peak": "小鸟"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.069,
+     "peak": "椅"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": "猫"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "一本"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.685,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "154531685",
+  "minutes": 21,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "Chinese noun suffix 子",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "子"
+  ]
+ }
+}

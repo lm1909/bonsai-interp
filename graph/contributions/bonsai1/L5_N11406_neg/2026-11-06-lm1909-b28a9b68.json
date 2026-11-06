@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-b28a9b68",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N11406-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:25:34+00:00",
+ "recipe": {
+  "toolchain_commit": "154531685",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N11406_neg/2026-11-06-lm1909-b28a9b68.tests.json"
+ },
+ "label": "The letter N or n straight after a digit in a code (H3N2, H1N1, 2n, 48N); N at the start of a word, ' N' as its own word, and other letters after a digit stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N11406_neg/2026-11-06-lm1909-b28a9b68.tests.json",
+   "prereg_commit": "154531685",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.676,
+     "peak": "N"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.877,
+     "peak": "N"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.497,
+     "peak": "n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.751,
+     "peak": "N"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.389,
+     "peak": "n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.617,
+     "peak": "N"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.674,
+     "peak": "N"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.68,
+     "peak": "N"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": " N"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.024,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " lines"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": "B"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " farms"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.675,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "154531685",
+  "minutes": 20,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "N right after a digit",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "N",
+   "n"
+  ]
+ }
+}
