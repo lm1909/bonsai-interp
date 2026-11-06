@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-bf4d064f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N7098-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:59:28+00:00",
+ "recipe": {
+  "toolchain_commit": "f55cc920d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N7098_neg/2026-11-06-lm1909-bf4d064f.tests.json"
+ },
+ "label": "A bare date or weekday closing a past event in news (died Monday, passed away Friday, this past July, effective January)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N7098_neg/2026-11-06-lm1909-bf4d064f.tests.json",
+   "prereg_commit": "f55cc920d",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.708,
+     "peak": " Tuesday"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.775,
+     "peak": " Thursday"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.845,
+     "peak": " June"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.507,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.369,
+     "peak": " Friday"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.167,
+     "peak": " Wednesday"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.31,
+     "peak": " Monday"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.729,
+     "peak": " May"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.233,
+     "peak": " illness"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.153,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "Between"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.077,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " loss"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.005,
+     "peak": "Police"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.045,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.107,
+     "peak": " years"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.607,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f55cc920d",
+  "minutes": 2,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "date closing a news event",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw"
+}
