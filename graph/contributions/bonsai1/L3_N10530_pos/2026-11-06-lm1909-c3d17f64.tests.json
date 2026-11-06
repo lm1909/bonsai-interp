@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-c3d17f64",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N10530+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:41:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N10530",
+   "pole": "+",
+   "label": "風 in Japanese お風呂 (bath), its peak token",
+   "fire": [
+    "夜はお風呂に入ってすぐ寝ます。",
+    "お風呂の掃除は日曜日にします。",
+    "子供とお風呂で歌を歌いました。",
+    "旅館のお風呂はとても広かったです。",
+    "毎日お風呂に入るのが楽しみです。",
+    "お風呂から上がってビールを飲む。",
+    "新しい家のお風呂は小さいです。",
+    "お風呂のお湯が少し熱いです。"
+   ],
+   "quiet": [
+    "夜はお茶を飲んですぐ寝ます。",
+    "お部屋の掃除は日曜日にします。",
+    "子供と公園で歌を歌いました。",
+    "旅館のお庭はとても広かったです。",
+    "毎日お酒を飲むのが楽しみです。",
+    "お店から戻ってビールを飲む。",
+    "新しい家のお庭は小さいです。",
+    "お茶のお湯が少し熱いです。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "風 in お風呂",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: '風' x14, ' wind' x7, '气' x4, '氣' x2, '肺炎', '风', 64% in the echo regime. Probes: '風' in お風呂 0.606, ' wind' 0.121, Chinese 风 sentences under 0.01. So the wind-across-languages reading did not hold, and I test the token that fired. Near misses keep the sentence with another noun.",
+ "trigger": {
+  "tokens": [
+   "風"
+  ]
+ }
+}
