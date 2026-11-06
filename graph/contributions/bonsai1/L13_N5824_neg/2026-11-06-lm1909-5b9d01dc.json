@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-5b9d01dc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N5824-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:50:33+00:00",
+ "recipe": {
+  "toolchain_commit": "80f5617ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N5824_neg/2026-11-06-lm1909-5b9d01dc.tests.json"
+ },
+ "label": "'Icon' as a piece of the Qt name QIcon",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N5824_neg/2026-11-06-lm1909-5b9d01dc.tests.json",
+   "prereg_commit": "80f5617ec",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.086,
+     "peak": "Icon"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.69,
+     "peak": "Icon"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.712,
+     "peak": "Icon"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.474,
+     "peak": "Icon"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.068,
+     "peak": "Icon"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.716,
+     "peak": "Icon"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.744,
+     "peak": "Icon"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.595,
+     "peak": "Icon"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.065,
+     "peak": ".QLabel"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.124,
+     "peak": ".QLabel"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.093,
+     "peak": " QLabel"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.088,
+     "peak": ".QLabel"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.444,
+     "peak": "Pixmap"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.195,
+     "peak": "(Q"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": "item"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.114,
+     "peak": ".QLabel"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.714,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "80f5617ec",
+  "minutes": 23,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'Icon' in QIcon",
+ "unit_kind": "token piece / code",
+ "confidence": 0.75,
+ "notes": "The gate-closed regime is 95% on the card and the card flags the pole broad. Other top tokens (_equal, .TestCase, -score, 'ment') scored at most 0.13 in probes, so coverage will be small.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "Icon"
+  ]
+ }
+}

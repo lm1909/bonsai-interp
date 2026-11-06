@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-d0e6b595",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2020-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:50:20+00:00",
+ "recipe": {
+  "toolchain_commit": "80f5617ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N2020_neg/2026-11-06-lm1909-d0e6b595.tests.json"
+ },
+ "label": "a short list of code tokens: 'apply', 'uglify', ' clam', 'etta' (no shared pattern found)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N2020_neg/2026-11-06-lm1909-d0e6b595.tests.json",
+   "prereg_commit": "80f5617ec",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.71,
+     "peak": "apply"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.321,
+     "peak": "uglify"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.49,
+     "peak": " clam"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.928,
+     "peak": "apply"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.308,
+     "peak": "uglify"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.153,
+     "peak": " clam"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.056,
+     "peak": "etta"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.406,
+     "peak": "apply"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.055,
+     "peak": " make"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": "OL"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " server"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.25,
+     "peak": "cancel"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": "'"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": " folder"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " Twitter"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.051,
+     "peak": "['"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.364,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "80f5617ec",
+  "minutes": 23,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tokens: apply, uglify, clam, etta",
+ "unit_kind": "token / code",
+ "confidence": 0.6,
+ "notes": "Corpus max is 3.34. I did not find a pattern, so the label stays a list.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "apply",
+   "uglify",
+   " clam",
+   "etta"
+  ]
+ }
+}

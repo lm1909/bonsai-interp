@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-8a60038a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5964+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:50:05+00:00",
+ "recipe": {
+  "toolchain_commit": "80f5617ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5964_pos/2026-11-06-lm1909-8a60038a.tests.json"
+ },
+ "label": "the Russian locative ending е as its own token: в дом|е, на восток|е, в парк|е",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5964_pos/2026-11-06-lm1909-8a60038a.tests.json",
+   "prereg_commit": "80f5617ec",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.901,
+     "peak": "е"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.785,
+     "peak": "ке"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.493,
+     "peak": "е"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.654,
+     "peak": "е"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.773,
+     "peak": "е"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.803,
+     "peak": "е"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.908,
+     "peak": "е"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.814,
+     "peak": "ке"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": "ы"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "то"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": "ы"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": " здесь"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": "то"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "О"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "Д"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.794,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "80f5617ec",
+  "minutes": 22,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian locative ending е",
+ "unit_kind": "token piece",
+ "confidence": 0.85,
+ "notes": "Near misses drop the whole locative phrase, so this does not separate the ending from the preposition. Corpus max is 4.22.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "е",
+   "ке",
+   "ле"
+  ]
+ }
+}

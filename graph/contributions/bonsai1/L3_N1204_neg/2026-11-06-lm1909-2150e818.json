@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2150e818",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N1204-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:50:12+00:00",
+ "recipe": {
+  "toolchain_commit": "80f5617ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N1204_neg/2026-11-06-lm1909-2150e818.tests.json"
+ },
+ "label": "pieces such as 'id' of suic|id- and 'oc' of Col|oc-, in several languages (best guess; the card flags the pole dense)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N1204_neg/2026-11-06-lm1909-2150e818.tests.json",
+   "prereg_commit": "80f5617ec",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.942,
+     "peak": "id"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.9,
+     "peak": "oc"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.929,
+     "peak": "id"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.471,
+     "peak": " suic"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.869,
+     "peak": "iv"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.9,
+     "peak": "oc"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.744,
+     "peak": "ic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.971,
+     "peak": "id"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.128,
+     "peak": "ressed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.116,
+     "peak": " el"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.168,
+     "peak": "udades"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.164,
+     "peak": " dej"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.133,
+     "peak": " ci"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.202,
+     "peak": " aquí"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.213,
+     "peak": " thoughts"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.258,
+     "peak": "res"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.9,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "80f5617ec",
+  "minutes": 23,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'suic|id', 'Col|oc' (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "The card flags this pole as dense (22.8% of tokens reach 0.1 of max, max 0.44), and the gate-closed regime as 100%. Probes on the tokens reached 0.90-0.94, so the test may do better than the density suggests, but it does not change the density.",
+ "selection": "random draw"
+}

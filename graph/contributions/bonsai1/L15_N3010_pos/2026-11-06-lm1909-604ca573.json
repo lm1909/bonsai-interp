@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-604ca573",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N3010+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:50:40+00:00",
+ "recipe": {
+  "toolchain_commit": "80f5617ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N3010_pos/2026-11-06-lm1909-604ca573.tests.json"
+ },
+ "label": "a short list of pieces: Russian такими 'ими', ' red' after 'deep', French ' second'|aire (no shared pattern found)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N3010_pos/2026-11-06-lm1909-604ca573.tests.json",
+   "prereg_commit": "80f5617ec",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.528,
+     "peak": "ими"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.488,
+     "peak": " red"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.418,
+     "peak": " second"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.14,
+     "peak": " же"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.296,
+     "peak": " red"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.352,
+     "peak": " second"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.193,
+     "peak": " же"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.439,
+     "peak": " red"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " удал"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": "et"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.117,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " arriv"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "Rub"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.385,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "80f5617ec",
+  "minutes": 23,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pieces: такими же, deep red, secondaire",
+ "unit_kind": "token piece",
+ "confidence": 0.45,
+ "notes": "I did not find a pattern. The output direction promotes ' exact', ' mentioned', which might fit 'такими же' but not the others.",
+ "selection": "random draw"
+}

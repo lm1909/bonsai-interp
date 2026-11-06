@@ -1,0 +1,167 @@
+{
+ "id": "2026-11-06-lm1909-ad336858",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N1555-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:50:30+00:00",
+ "recipe": {
+  "toolchain_commit": "80f5617ec",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N1555_neg/2026-11-06-lm1909-ad336858.tests.json"
+ },
+ "label": "a season or time of day in a title or date range: The Summer of, The Winter of, the weekend of, Midnight Garden",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N1555_neg/2026-11-06-lm1909-ad336858.tests.json",
+   "prereg_commit": "80f5617ec",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.831,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.593,
+     "peak": " weekend"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.681,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.652,
+     "peak": " Midnight"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.398,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.701,
+     "peak": " weekend"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.803,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.425,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " Deal"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.114,
+     "peak": " course"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " wrote"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " Name"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.137,
+     "peak": " June"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": "Have"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " film"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.667,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "80f5617ec",
+  "minutes": 23,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "season in a title, 'weekend of'",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "The + pole of this neuron is 年 and year words.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Summer",
+   " Winter",
+   " Spring",
+   " Autumn",
+   " summer",
+   " weekend",
+   " Weekend",
+   " night",
+   " evening",
+   " Midnight"
+  ]
+ }
+}
