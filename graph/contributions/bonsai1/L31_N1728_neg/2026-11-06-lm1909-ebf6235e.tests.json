@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-ebf6235e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N1728-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:05:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N1728",
+   "pole": "-",
+   "label": "' n' split off as the first letter of a word (nongovernmental, nyc, nuns, nuncio); words that keep n- in a longer token stay quiet",
+   "fire": [
+    "Several nongovernmental groups signed the letter.",
+    "She opened a shop in nyc last year.",
+    "The convent is home to twelve nuns.",
+    "The agency funds nongovernmental aid workers.",
+    "Rents in nyc keep rising every year.",
+    "Two nuns taught at the village school.",
+    "The Vatican sent a papal nuncio to Lima.",
+    "A group of nuns ran the hospital."
+   ],
+   "quiet": [
+    "Several private groups signed the letter.",
+    "She opened a shop in Boston last year.",
+    "The convent is home to twelve monks.",
+    "The agency funds local aid workers.",
+    "Rents in Paris keep rising every year.",
+    "Two nurses taught at the village school.",
+    "The Vatican sent a bishop to Lima.",
+    "A group of nurses ran the hospital."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off ' n'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' n' x12, ' N' x7, 'N' x6, '/n' x3. Probe: nyc 0.75, nuns 0.72, nongovernmental 0.65; nun (one token) 0.00, nightmare 0.00, private 0.00, monks 0.00. Tokenizer checked. ' N' and 'N' are on the card but not in this test.",
+ "trigger": {
+  "tokens": [
+   " n"
+  ]
+ }
+}

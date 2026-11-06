@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-39ecc194",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N2681-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:05:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N2681",
+   "pole": "-",
+   "label": "Computer-algebra tokens: .subs, Maple, LinearSolve, fdiff, :=; ordinary programming methods and other software stay quiet",
+   "fire": [
+    "y = expr.subs(x, 2)\nprint(y)",
+    "result = f.subs(t, 0)",
+    "Maple can integrate this expression exactly.",
+    "Use Maple to solve the system.",
+    "The command LinearSolve returns the solution.",
+    "dy = erf(x).fdiff(1)",
+    "a := 3; b := a + 1;",
+    "sol = eq.subs({x: 1, y: 2})"
+   ],
+   "quiet": [
+    "y = expr.replace(x, 2)\nprint(y)",
+    "result = f.get(t, 0)",
+    "Python can parse this expression exactly.",
+    "Use Excel to solve the system.",
+    "The command print returns the solution.",
+    "dy = math.sqrt(x)",
+    "a = 3; b = a + 1;",
+    "sol = eq.update({x: 1, y: 2})"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "computer-algebra tokens (subs, Maple, ...)",
+ "unit_kind": "code / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' subs' x9, 's' x5, ' Maple' x2, ' :=' x2, '::' x2, 'iff' of fdiff, 'olve' of LinearSolve. Probe: .subs 's' 1.78, LinearSolve 0.85, Maple 0.70, fdiff 0.57; .replace 0.00, Python and Java 0.00. But Maple syrup also 0.53, so the token fires on the word, and soccer ' subs' 0.18. Very sparse pole, so readings can exceed 1.",
+ "trigger": {
+  "tokens": [
+   " subs",
+   " Maple"
+  ]
+ }
+}

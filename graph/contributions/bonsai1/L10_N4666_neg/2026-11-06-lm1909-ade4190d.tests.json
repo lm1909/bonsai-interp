@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-ade4190d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N4666-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:05:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N4666",
+   "pole": "-",
+   "label": "Code comments about the code's own quality or to-do state: '# TODO:', '# pylint: disable=', '# noqa', '@IgnorePep8'; comments that describe what the code does stay quiet",
+   "fire": [
+    "# TODO: Move this into a helper function\ndef load(path):",
+    "# pylint: disable=too-many-arguments\ndef connect(host):",
+    "# FIXME: Add error handling here\nvalue = read()",
+    "import os  # noqa: E402\nimport sys",
+    "# TODO: Remove duplicate code\nclass Parser:",
+    "# pylint: disable=invalid-name\nx = 1",
+    "def run():  # pragma: no cover\n    pass",
+    "# TODO: Write more tests\nimport json"
+   ],
+   "quiet": [
+    "# Load the data from a given file\ndef load(path):",
+    "# Connect to the remote host\ndef connect(host):",
+    "# Read one value from the device\nvalue = read()",
+    "import os  # used for paths\nimport sys",
+    "# Parse a line of the config file\nclass Parser:",
+    "# The first coordinate\nx = 1",
+    "def run():  # starts the loop\n    pass",
+    "# Standard library imports\nimport json"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "comments about code quality or to-dos",
+ "unit_kind": "code / semantic",
+ "confidence": "high",
+ "notes": "Card: '8' x2 of IgnorePep8, ' variable' x2, 'attributes' of too-many-instance-attributes, ' functions', ' tests', '-use' of no-self-use, ' Raise' after TODO. Probe: pylint disable 1.05, TODO 0.70-0.71, IgnorePep8 0.70; descriptive comments 0.02-0.12."
+}
