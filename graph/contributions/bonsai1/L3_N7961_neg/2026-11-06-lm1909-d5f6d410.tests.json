@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-d5f6d410",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N7961-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:15:31+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N7961",
+   "pole": "-",
+   "label": "' in' after two or more unpacked loop variables in Python (for key, value in ...), not after a single loop variable and not a membership test",
+   "fire": [
+    "scores = {}\nfor team, points in results.items():\n    scores[team] = points",
+    "for x, y in zip(xs, ys):\n    plot(x, y)",
+    "labels = {n: c for n, c in zip(names, colors)}",
+    "def show(table):\n    for col, val in table.items():\n        print(col, val)",
+    "pairs = [(a, b) for a, b in edges if a != b]",
+    "for idx, line in enumerate(lines):\n    handle(idx, line)",
+    "for host, port in servers:\n    connect(host, port)",
+    "out = ', '.join(f'{k}={v}' for k, v in params.items())"
+   ],
+   "quiet": [
+    "scores = {}\nfor team in results:\n    scores[team] = 0",
+    "for x in xs:\n    plot(x, 0)",
+    "labels = {n: 1 for n in names}",
+    "def show(table):\n    for col in table:\n        print(col)",
+    "pairs = [a for a in edges if a != b]",
+    "if line in lines:\n    handle(idx, line)",
+    "x, y = point\nif host in servers:\n    connect(host, port)",
+    "out = ', '.join(k for k in params)"
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' in' after 'for a, b'",
+ "unit_kind": "format / contextual",
+ "confidence": "high"
+}
