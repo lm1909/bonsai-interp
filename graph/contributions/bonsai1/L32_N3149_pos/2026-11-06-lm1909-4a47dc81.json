@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-4a47dc81",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N3149+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:30:17+00:00",
+ "recipe": {
+  "toolchain_commit": "a5cd15734",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N3149_pos/2026-11-06-lm1909-4a47dc81.tests.json"
+ },
+ "label": "'-form' in hyphenated -forming compounds (habit-forming, rock-forming, blood-forming, coil-forming), as opposed to the same nouns with other adjectives and to 'form' as a noun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N3149_pos/2026-11-06-lm1909-4a47dc81.tests.json",
+   "prereg_commit": "a5cd15734",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.891,
+     "peak": "-form"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.781,
+     "peak": "-form"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.366,
+     "peak": "-form"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.252,
+     "peak": "-form"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.661,
+     "peak": "-form"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.352,
+     "peak": "-form"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.189,
+     "peak": "-form"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.189,
+     "peak": "-form"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " drug"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " stem"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " papers"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " filled"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.359,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5cd15734",
+  "minutes": 2,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "'-form' in -forming compounds",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "German ' Bild' in 'Bildung' reached 0.10 in a probe and is not tested; the corpus max (672) is on '-form'.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "-form"
+  ]
+ }
+}

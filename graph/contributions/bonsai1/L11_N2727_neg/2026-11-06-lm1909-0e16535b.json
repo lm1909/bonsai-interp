@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0e16535b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N2727-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:30:46+00:00",
+ "recipe": {
+  "toolchain_commit": "a5cd15734",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N2727_neg/2026-11-06-lm1909-0e16535b.tests.json"
+ },
+ "label": "digits of a UK phone or company number (call 07734 ..., No 02017289, 020 7404, +44 (0) 1422), as opposed to the same frames without a number",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N2727_neg/2026-11-06-lm1909-0e16535b.tests.json",
+   "prereg_commit": "a5cd15734",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.303,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.542,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.561,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.495,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.169,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.147,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.76,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.159,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": ".com"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": " England"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " details"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.063,
+     "peak": " station"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " book"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.399,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a5cd15734",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "UK phone or company number",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "US phone numbers are not tested. The card's 'owment' in Endowment is not covered.",
+ "selection": "random draw"
+}
