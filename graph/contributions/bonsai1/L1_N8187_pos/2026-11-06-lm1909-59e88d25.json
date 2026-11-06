@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-59e88d25",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8187+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:03:06+00:00",
+ "recipe": {
+  "toolchain_commit": "3e6e2da7a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N8187_pos/2026-11-06-lm1909-59e88d25.tests.json"
+ },
+ "label": "split pieces 'amm' of German zusammen/gesammelt and 'ued' of imbued (list, guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N8187_pos/2026-11-06-lm1909-59e88d25.tests.json",
+   "prereg_commit": "3e6e2da7a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.875,
+     "peak": "amm"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.872,
+     "peak": "amm"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.75,
+     "peak": "amm"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.662,
+     "peak": "elt"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.775,
+     "peak": "ued"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.785,
+     "peak": "amm"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.752,
+     "peak": "ued"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.007,
+     "peak": "amm"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.083,
+     "peak": " Firm"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.09,
+     "peak": "esehen"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.035,
+     "peak": " g"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.271,
+     "peak": "lesen"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.187,
+     "peak": " filled"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.32,
+     "peak": " Bl"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.287,
+     "peak": " lit"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.053,
+     "peak": "geben"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.78,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e6e2da7a",
+  "minutes": 20,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'amm', 'ued' pieces (guess)",
+ "unit_kind": "token piece",
+ "confidence": "low",
+ "selection": "random draw"
+}
