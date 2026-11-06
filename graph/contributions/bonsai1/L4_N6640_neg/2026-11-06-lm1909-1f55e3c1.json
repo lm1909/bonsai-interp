@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1f55e3c1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6640-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:46:07+00:00",
+ "recipe": {
+  "toolchain_commit": "5f930ed3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N6640_neg/2026-11-06-lm1909-1f55e3c1.tests.json"
+ },
+ "label": "Japanese or Chinese 上 in its sense of 'in terms of' or 'on' after a noun (特性上, 沙发上, 耳朵上的), on a broad pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N6640_neg/2026-11-06-lm1909-1f55e3c1.tests.json",
+   "prereg_commit": "5f930ed3d",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.528,
+     "peak": "い"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.282,
+     "peak": "上"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.631,
+     "peak": "上的"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.554,
+     "peak": "上"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.597,
+     "peak": "上"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.568,
+     "peak": "上的"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.792,
+     "peak": "上"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.347,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.45,
+     "peak": "い"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.22,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.218,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.194,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.271,
+     "peak": "等着"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.185,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.322,
+     "peak": "です"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.213,
+     "peak": "。"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.561,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f930ed3d",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "CJK 上 after a noun",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card flags broad (7.9%) and gate-closed (100%), max 0.18: '上' x7, '上的' x2, '回' x2, ' النظام', '聖'. Probes: '上的' 0.670, '上' 0.645; but sentences without it read 0.22-0.37, so the baseline is high. May fail.",
+ "selection": "random draw"
+}

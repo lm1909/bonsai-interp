@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ff382910",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N1596+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:45:30+00:00",
+ "recipe": {
+  "toolchain_commit": "5f930ed3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N1596_pos/2026-11-06-lm1909-ff382910.tests.json"
+ },
+ "label": "the lesser or middle term in a graded list (rarely; sometimes; killed, injured; shot down or seriously damaged)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N1596_pos/2026-11-06-lm1909-ff382910.tests.json",
+   "prereg_commit": "5f930ed3d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.687,
+     "peak": " sometimes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.773,
+     "peak": " seriously"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.505,
+     "peak": " injured"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.567,
+     "peak": " sometimes"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.45,
+     "peak": " badly"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.404,
+     "peak": " wounded"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.411,
+     "peak": " sometimes"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.787,
+     "peak": " seriously"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " planes"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": ";"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " homes"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.024,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": ";"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.536,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f930ed3d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "lesser term in a graded list",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' seriously' x2, ' sometimes', 'maybe', ' ساعة', '-', ' injured'. Probes: ' sometimes' 0.785, ' seriously' 0.709, ' injured' 0.490; a colour list 0.014, 'maybe should' 0.014. Near misses keep the numbered or casualty frame without a grade.",
+ "selection": "random draw"
+}

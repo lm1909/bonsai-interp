@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-9077575b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N2319-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:45:26+00:00",
+ "recipe": {
+  "toolchain_commit": "5f930ed3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N2319_neg/2026-11-06-lm1909-9077575b.tests.json"
+ },
+ "label": "the split word-ending piece 'ных' or 'aux' on a dense pole (живот|ных, anim|aux)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N2319_neg/2026-11-06-lm1909-9077575b.tests.json",
+   "prereg_commit": "5f930ed3d",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 6,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.809,
+     "peak": "ных"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.639,
+     "peak": "aux"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.869,
+     "peak": "ных"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.542,
+     "peak": "aux"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.176,
+     "peak": "уп"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.75,
+     "peak": "aux"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.186,
+     "peak": " книг"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.74,
+     "peak": "aux"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.238,
+     "peak": "ц"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.321,
+     "peak": " enfants"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.392,
+     "peak": " детей"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.302,
+     "peak": " gar"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.346,
+     "peak": "и"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.677,
+     "peak": "ien"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.181,
+     "peak": "ни"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.426,
+     "peak": " zoo"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.734,
+    "median_fire": 0.69,
+    "near_misses_at_0.3": 6
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f930ed3d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "ending pieces 'ных', 'aux' (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (26.2%) and gate-closed (100%), max 0.46: '�' x4, 'ية' x3, 'ных' x2, 'en' x2, 'aux' x2, 'ram'. Probes: 'ных' 0.974, 'aux' 0.765, 'ram' 0.474, ' cat' 0.222. Reported as dense whatever the test says.",
+ "selection": "random draw"
+}

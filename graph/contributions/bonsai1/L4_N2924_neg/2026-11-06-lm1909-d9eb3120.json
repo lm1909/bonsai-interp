@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d9eb3120",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N2924-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:46:06+00:00",
+ "recipe": {
+  "toolchain_commit": "5f930ed3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N2924_neg/2026-11-06-lm1909-d9eb3120.tests.json"
+ },
+ "label": "the pinyin final '-ang', '-uang' or '-iang' in a Chinese name (X|iang|hua, H|uang, Wang, Sh|ang|hai)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N2924_neg/2026-11-06-lm1909-d9eb3120.tests.json",
+   "prereg_commit": "5f930ed3d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.798,
+     "peak": " Huang"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.933,
+     "peak": "ang"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.727,
+     "peak": " Fang"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.943,
+     "peak": "iang"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.688,
+     "peak": "uang"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.916,
+     "peak": "ang"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.008,
+     "peak": "iang"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.76,
+     "peak": "iang"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.195,
+     "peak": " Liu"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.166,
+     "peak": "ese"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.239,
+     "peak": " Wu"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.179,
+     "peak": " Li"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.29,
+     "peak": " Sun"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.13,
+     "peak": "ese"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.344,
+     "peak": " Beijing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.313,
+     "peak": "hou"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.857,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f930ed3d",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pinyin -ang in a Chinese name",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card flags broad (3.6%) and gate-closed (100%): 'ang' x14, 'uong' x4, 'uang' x3, ' Wang' x3, 'iang', ' Fang'. Probes: 'ang' 0.944, 'iang' 0.879, ' Wang' 0.746, 'uang' 0.692; ' Liu' 0.190, 'Parisians' 0.063. Near misses are Chinese names without the final, in the same frames. Tokens are checked.",
+ "selection": "random draw"
+}

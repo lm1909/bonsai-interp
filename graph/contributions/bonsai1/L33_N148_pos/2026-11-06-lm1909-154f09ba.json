@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-154f09ba",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N148+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:45:24+00:00",
+ "recipe": {
+  "toolchain_commit": "5f930ed3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N148_pos/2026-11-06-lm1909-154f09ba.tests.json"
+ },
+ "label": "a token just before or naming an outdoor part of a house (on a patio, back deck, front bay windows, your carport)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N148_pos/2026-11-06-lm1909-154f09ba.tests.json",
+   "prereg_commit": "5f930ed3d",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.916,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.86,
+     "peak": " front"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.86,
+     "peak": " back"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.605,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.75,
+     "peak": " covered"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.583,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.04,
+     "peak": " front"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.239,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.036,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.08,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " strong"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "iosk"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " your"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.805,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f930ed3d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "outdoor part of a house",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' front' x4, ',' x4, ' on' x2, ' back' x2, ' covered' x2, ' or' x2, from housing, gardening and property text. Probes: 'on the back deck' 0.804, ' front' 0.669, 'on a patio' 0.663, 'your carport' 0.523; 'on a form' 0.001, 'outside the office' 0.115. Near misses keep the frames with non-house words.",
+ "selection": "random draw"
+}

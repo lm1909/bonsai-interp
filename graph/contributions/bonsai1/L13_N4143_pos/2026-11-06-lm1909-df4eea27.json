@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-df4eea27",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N4143+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:45:44+00:00",
+ "recipe": {
+  "toolchain_commit": "5f930ed3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N4143_pos/2026-11-06-lm1909-df4eea27.tests.json"
+ },
+ "label": "a common small word used by mistake for another in a typo (My only complaint if ... for 'is', the best way it to ... for 'is', I have every dealt ... for 'ever')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N4143_pos/2026-11-06-lm1909-df4eea27.tests.json",
+   "prereg_commit": "5f930ed3d",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.662,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.331,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.342,
+     "peak": " every"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.383,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.36,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.366,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.353,
+     "peak": " every"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.19,
+     "peak": " if"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " call"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " regret"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " short"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.356,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f930ed3d",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "typo: wrong small word",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' if' x7, ' it' x4, ' a' x4, ' in' x2, ' as' x2, ' every'. All the top examples are typos: the word cannot stand there. A distinction, not a list. Probes: 'complaint if' 1.008, 'have every dealt' 0.499, 'way now it to' 0.310, 'design if made' 0.155; corrected versions under 0.02. Near misses are the corrected sentences with varied lead-ins.",
+ "selection": "random draw"
+}

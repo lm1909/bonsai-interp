@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-169a45cc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N1038+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:45:59+00:00",
+ "recipe": {
+  "toolchain_commit": "5f930ed3d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N1038_pos/2026-11-06-lm1909-169a45cc.tests.json"
+ },
+ "label": "a word at the start of a contrasting clause (While it ..., whereas others ...)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N1038_pos/2026-11-06-lm1909-169a45cc.tests.json",
+   "prereg_commit": "5f930ed3d",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.241,
+     "peak": " While"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.253,
+     "peak": " While"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.142,
+     "peak": " While"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.179,
+     "peak": " Even"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.292,
+     "peak": " While"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.013,
+     "peak": " he"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.104,
+     "peak": " While"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.052,
+     "peak": " While"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " It"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": " lasts"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " It"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " stove"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " cafe"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.93,
+    "median_fire": 0.16,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5f930ed3d",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "contrast clause opener",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: ' While' x5, '.' x5, ' but' x4, ' because' x3, ' Even' x2, ' since' x2, ' whereas', ' Rather'. Probes were weak: ' While' 0.187, 'arily' 0.071, ' when' 0.070, ' whereas' under 0.02. Likely to fail on the median.",
+ "selection": "random draw"
+}
