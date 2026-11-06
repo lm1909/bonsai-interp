@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ce1ffb8c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N11425-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:13:16+00:00",
+ "recipe": {
+  "toolchain_commit": "e8e583773",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N11425_neg/2026-11-06-lm1909-ce1ffb8c.tests.json"
+ },
+ "label": "the slot right before naming a technology or invention (the coolest invention since the, devices such as, from swords to)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N11425_neg/2026-11-06-lm1909-ce1ffb8c.tests.json",
+   "prereg_commit": "e8e583773",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.041,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.95,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.752,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.055,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.434,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.898,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.292,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.446,
+     "peak": " electric"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.151,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " poem"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " Rh"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.103,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.118,
+     "peak": " early"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.825,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e8e583773",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "slot before naming a technology",
+ "unit_kind": "prediction / semantic",
+ "confidence": "high",
+ "notes": "'the spoon' reached 0.32 in a probe, so household objects fire somewhat too. The direct logits suppress ' computer', ' automobiles', ' smartphones'.",
+ "selection": "random draw"
+}

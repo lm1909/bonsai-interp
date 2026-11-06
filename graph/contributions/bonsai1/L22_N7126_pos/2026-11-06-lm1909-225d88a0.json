@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-225d88a0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N7126+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:12:40+00:00",
+ "recipe": {
+  "toolchain_commit": "e8e583773",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N7126_pos/2026-11-06-lm1909-225d88a0.tests.json"
+ },
+ "label": "comparing the lengths of two things with len() in code (len(a) == len(b))",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N7126_pos/2026-11-06-lm1909-225d88a0.tests.json",
+   "prereg_commit": "e8e583773",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.024,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.009,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.101,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.013,
+     "peak": " left"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.03,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.328,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.012,
+     "peak": " len"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.012,
+     "peak": " len"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": ":\n"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " =="
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.018,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e8e583773",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "len(a) compared with len(b)",
+ "unit_kind": "code / contextual",
+ "confidence": "high",
+ "notes": "Prose comparisons ('unlike the other two', 'identical to') stayed under 0.05 in the probes although top examples include them, so the pole's corpus 'sameness' reading did not reproduce. The direct logits promote ' common', ' shared'.",
+ "selection": "random draw"
+}

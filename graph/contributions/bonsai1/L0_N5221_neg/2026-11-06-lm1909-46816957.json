@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-46816957",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5221-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:12:57+00:00",
+ "recipe": {
+  "toolchain_commit": "e8e583773",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5221_neg/2026-11-06-lm1909-46816957.tests.json"
+ },
+ "label": "the words ' you' and ' your' as object or possessive after a verb",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5221_neg/2026-11-06-lm1909-46816957.tests.json",
+   "prereg_commit": "e8e583773",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.439,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.609,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.149,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.056,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.054,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.267,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.493,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.091,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.074,
+     "peak": " miss"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.219,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.036,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.152,
+     "peak": " said"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.082,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.055,
+     "peak": " him"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.797,
+    "median_fire": 0.208,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e8e583773",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' you', ' your' after a verb",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "' him' reached 0.26 in a probe; sentence-initial 'You', 'Your' stayed under 0.05.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " you",
+   " your"
+  ]
+ }
+}
