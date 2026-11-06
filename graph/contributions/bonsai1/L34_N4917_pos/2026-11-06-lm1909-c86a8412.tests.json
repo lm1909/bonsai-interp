@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c86a8412",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4917+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:57:41+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L34/N4917",
+   "pole": "+",
+   "label": "'_ch' of '_changelist' when the name 'changelist' already appeared earlier on the line",
+   "fire": [
+    "changelist = staff_admin.get_changelist(request, Author)",
+    "changelist = site.get_changelist(req)",
+    "changelist = shop_admin.get_changelist(request)",
+    "changelist = page.get_changelist(request, Event)",
+    "changelist = ma.get_changelist(request)",
+    "changelist = self.admin.get_changelist(req, Tag)",
+    "changelist = user_admin.get_changelist(request)",
+    "changelist = my_admin.get_changelist(request, Post)"
+   ],
+   "quiet": [
+    "cl = staff_admin.get_changelist(request, Author)",
+    "cl = site.get_changelist(req)",
+    "cl = shop_admin.get_changelist(request)",
+    "cl = page.get_changelist(request, Event)",
+    "cl = ma.get_changelist(request)",
+    "cl = self.admin.get_changelist(req, Tag)",
+    "cl = user_admin.get_changelist(request)",
+    "cl = my_admin.get_changelist(request, Post)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "'_ch' of a name already on the line",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. In the first round only the 'changelist =' sentence fired (0.47); seven with another name stayed at or below 0.023. Here the near misses are that other-name form, so the only difference is the earlier name."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-eab0b51e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N1383-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:57:41+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L27/N1383",
+   "pole": "-",
+   "label": "brace-style code (JS or C), across its tokens, as against the same logic in Python",
+   "fire": [
+    "if (a > b) { stop(); }",
+    "while (i < 9) { i = i + 1; }",
+    "function add(x, y) {\n  return x + y;\n}\n",
+    "for (k = 0; k < 4; k++) { total += k; }",
+    "if (ready) {\n  send(data);\n}\n",
+    "function name(u) { return u.name; }",
+    "while (open) {\n  read();\n}\n",
+    "if (x == 0) { reset(); }"
+   ],
+   "quiet": [
+    "if a > b:\n    stop()\n",
+    "while i < 9:\n    i = i + 1\n",
+    "def add(x, y):\n    return x + y\n",
+    "for k in range(4):\n    total += k\n",
+    "if ready:\n    send(data)\n",
+    "def name(u):\n    return u.name\n",
+    "while is_open:\n    read()\n",
+    "if x == 0:\n    reset()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "brace-style code",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. The first round's near misses were one-line brace code, and all 8 fired (up to 0.98), so the indent was the wrong label."
+}
