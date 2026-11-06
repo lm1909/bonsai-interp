@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-c3f84299",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2011-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:51:38+00:00",
+ "recipe": {
+  "toolchain_commit": "3217df2dd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N2011_neg/2026-11-06-lm1909-c3f84299.tests.json"
+ },
+ "label": "' like' introducing a simile ('moved up and down like waves', 'swirling like vomit')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N2011_neg/2026-11-06-lm1909-c3f84299.tests.json",
+   "prereg_commit": "3217df2dd",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.032,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.736,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.735,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.523,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.534,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.696,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.209,
+     "peak": " like"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.726,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.076,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.099,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " along"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.066,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.157,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.711,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3217df2dd",
+  "minutes": 33,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "simile ' like'",
+ "unit_kind": "contextual / lexical",
+ "confidence": "high",
+ "notes": "Card: ' like' x19, ' comme' x5, 'ion' x3, ' como'. Probe: 'like waves' 0.64, 'like vomit' 0.58; ' comme' only 0.16, so English is the claim; 'would like' 0.02; 'Things like apples' 0.03.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " like",
+   " comme",
+   " como"
+  ]
+ }
+}

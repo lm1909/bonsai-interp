@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5d761bfb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N5565+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:50:50+00:00",
+ "recipe": {
+  "toolchain_commit": "3217df2dd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N5565_pos/2026-11-06-lm1909-5d761bfb.tests.json"
+ },
+ "label": "talk of a planet's past water ('did once have oceans', 'liquid water'; guess; output promotes ' civilian', ' ordinary', ' normal')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N5565_pos/2026-11-06-lm1909-5d761bfb.tests.json",
+   "prereg_commit": "3217df2dd",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.02,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.321,
+     "peak": " water"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.934,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.336,
+     "peak": " water"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.714,
+     "peak": " had"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.33,
+     "peak": " water"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.515,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.139,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.044,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "Scientists"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": " Saturn"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.165,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": " old"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.425,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3217df2dd",
+  "minutes": 32,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "planetary past water (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card shows no dominant token (' of' x3, ' into' x3, ' liquid' x2, '_to' x2, 'able' x2). Probe: 'did once have oceans' 0.87 on ' have', 'liquid water' 0.32, 'strips of arable land' 0.33, SQL \"','\" 0.85; 'possibility of rain' 0.01. I could not name one idea for all; this tests the planetary reading.",
+ "selection": "random draw"
+}

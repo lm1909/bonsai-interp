@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-56fcc162",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N1079+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:50:53+00:00",
+ "recipe": {
+  "toolchain_commit": "3217df2dd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N1079_pos/2026-11-06-lm1909-56fcc162.tests.json"
+ },
+ "label": "piece after 'Ball', 'Bur' or 'Bill' (Ball|ad, bur|ly, Bur|ley, Bill|ie)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N1079_pos/2026-11-06-lm1909-56fcc162.tests.json",
+   "prereg_commit": "3217df2dd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.831,
+     "peak": "ad"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.638,
+     "peak": "ly"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.581,
+     "peak": "ley"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.643,
+     "peak": "ads"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.49,
+     "peak": "ie"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.661,
+     "peak": "ly"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.827,
+     "peak": "ad"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.581,
+     "peak": "ley"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " tall"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " Armstrong"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "face"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.641,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3217df2dd",
+  "minutes": 32,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Ball|ad, bur|ly, Bill|ie",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: 'ads' x6, 'ie' x4, 'ad' x3, 'ley' x3, ' Billy' x3, 'ly' x2. A list, though the shape B + l/r + short ending is shared. Probe: Ballad 0.87, Ballads 0.69, burly 0.67, Burley 0.58, Billie 0.49; 'a book of poems' 0.00.",
+ "selection": "random draw"
+}

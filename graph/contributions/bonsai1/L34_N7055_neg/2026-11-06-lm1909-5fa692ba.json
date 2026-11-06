@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5fa692ba",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7055-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:51:28+00:00",
+ "recipe": {
+  "toolchain_commit": "3217df2dd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N7055_neg/2026-11-06-lm1909-5fa692ba.tests.json"
+ },
+ "label": "the word just before ' ratio' ('odds ratio', 'aspect_ratio', 'value-to-income ratio')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N7055_neg/2026-11-06-lm1909-5fa692ba.tests.json",
+   "prereg_commit": "3217df2dd",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.754,
+     "peak": " odds"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.954,
+     "peak": "ds"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.636,
+     "peak": " aspect"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.434,
+     "peak": "-income"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.252,
+     "peak": " odds"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.481,
+     "peak": " aspect"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.349,
+     "peak": "-income"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.015,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.0,
+     "peak": " far"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.362,
+     "peak": " odds"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.069,
+     "peak": " width"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.124,
+     "peak": " debt"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": "'s"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.558,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3217df2dd",
+  "minutes": 32,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "before ' ratio'",
+ "unit_kind": "prediction / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' odds' x7, ' aspect' x4, 'ds', '-income', \"'s\" (Poisson's ratio). Probe: 'adjusted odds ratios' 0.85, '(odds ratio 5.1)' 0.90, 'aspect_ratio' 0.41, '-income ratio' 0.40; but 'The odds of rain' 0.36, 'an aspect of his job' 0.29. Two near misses keep those words on purpose.",
+ "selection": "random draw"
+}
