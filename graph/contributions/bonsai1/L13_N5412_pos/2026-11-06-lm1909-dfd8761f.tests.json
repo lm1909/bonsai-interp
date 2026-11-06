@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-dfd8761f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N5412+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:06:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N5412",
+   "pole": "+",
+   "label": "A Django-style constant holding choices (AREA_CHOICES = [...], LISTE_CONTRAT = (...) of pairs); plain assignments stay quiet",
+   "fire": [
+    "class Shop(models.Model):\n    KIND_LOCAL = 0\n    KIND_ONLINE = 1\n\n    KIND_CHOICES = [\n        (KIND_LOCAL, 'x'),\n    ]\n",
+    "class Staff(models.Model):\n    LISTE_POSTE = (\n        ('CDD', 'CDD'),\n    )\n",
+    "class Item(models.Model):\n    STATE_NEW = 0\n    STATE_OLD = 1\n\n    STATE_CHOICES = [\n        (STATE_NEW, 'n'),\n    ]\n",
+    "class Order(models.Model):\n    STATUS_CHOICES = (\n        ('o', 'Open'),\n    )\n",
+    "class Car(models.Model):\n    COLOR_RED = 0\n    COLOR_BLUE = 1\n\n    COLOR_CHOICES = [\n        (COLOR_RED, 'r'),\n    ]\n",
+    "class Room(models.Model):\n    TYPE_CHOICES = (\n        ('s', 'Single'),\n    )\n",
+    "class Pet(models.Model):\n    KIND_CAT = 0\n    KIND_DOG = 1\n\n    KIND_CHOICES = [\n        (KIND_CAT, 'c'),\n    ]\n",
+    "class Bill(models.Model):\n    LISTE_ETAT = (\n        ('A', 'A'),\n    )\n"
+   ],
+   "quiet": [
+    "class Shop(object):\n    def run(self):\n        self.kind = 0\n        self.size = 1\n        return self.size\n",
+    "a = 1\nb = 2\nprint(a)\n",
+    "class Item(object):\n    def get(self):\n        return self.state\n",
+    "c = conn.cursor()\nc.execute('x')\nprint(c)\n",
+    "The shop has many choices of colour in the window.",
+    "x = [1, 2]\ny = (3, 4)\nprint(x, y)\n",
+    "Pets are welcome, and you have a choice of rooms.",
+    "class Bill(object):\n    def total(self):\n        return 0\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Django choices constant",
+ "unit_kind": "code",
+ "confidence": 0.8,
+ "notes": "Gate-closed 82%, max 5.56."
+}
