@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-0f1c4e8d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N1434+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:45:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N1434",
+   "pole": "+",
+   "label": "a package or module name in a dotted import path: .core, _api, .api, .forms",
+   "fire": [
+    "from sklearn.core.utils import clip",
+    "from nova_api import NovaApi",
+    "@mock.patch('cinder.volume.api.create')",
+    "from shop.apps.cart.forms import CartForm",
+    "from scipy.core.numeric import arange",
+    "from billing_api import BillingApi",
+    "@mock.patch('glance.image.api.get')",
+    "from blog.apps.post.forms import PostForm"
+   ],
+   "quiet": [
+    "import sklearn as sk",
+    "from nova import utils",
+    "@mock.patch('time.time')",
+    "from shop import settings",
+    "import scipy as sp",
+    "from billing import utils",
+    "@mock.patch('os.path')",
+    "from blog import settings"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "module name in an import path",
+ "unit_kind": "code / contextual",
+ "confidence": 0.65,
+ "notes": "The gate-closed regime is 82% on the card and corpus max is 3.34. The - pole of this neuron is the opening brace of a nested dict.",
+ "trigger": {
+  "tokens": [
+   ".core",
+   "_api",
+   ".api",
+   ".forms",
+   "models"
+  ]
+ }
+}
