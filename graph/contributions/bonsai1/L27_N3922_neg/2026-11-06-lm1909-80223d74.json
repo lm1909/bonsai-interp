@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-80223d74",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N3922-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:14:53+00:00",
+ "recipe": {
+  "toolchain_commit": "f4b795f9a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N3922_neg/2026-11-06-lm1909-80223d74.tests.json"
+ },
+ "label": "the country names China, Canada, India, Brazil in the middle of a sentence, as a modifier or not",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N3922_neg/2026-11-06-lm1909-80223d74.tests.json",
+   "prereg_commit": "f4b795f9a",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.335,
+     "peak": " China"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.337,
+     "peak": " Brazil"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.635,
+     "peak": " Canada"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.206,
+     "peak": " India"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.106,
+     "peak": " Canada"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.771,
+     "peak": " China"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.071,
+     "peak": " India"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.103,
+     "peak": " Brazil"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " Paris"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.205,
+     "peak": " Rome"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " drew"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " Ohio"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " Study"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.271,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "f4b795f9a",
+  "minutes": 6,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "country names mid-sentence",
+ "unit_kind": "named entity",
+ "confidence": "medium",
+ "notes": "Second round of my sweep 10 label ('as a modifier'), which failed because 'the report from China' reached 0.51 and 'about Brazil' 0.38. 'traveled to China' was at 0.21 and 'people of India' 0.12 in the probes, so this may also vary by frame.",
+ "selection": "picked",
+ "trigger": {
+  "words": [
+   "China",
+   "Canada",
+   "India",
+   "Brazil"
+  ]
+ }
+}
