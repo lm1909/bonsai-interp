@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-4df1211c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N1263-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:46:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N1263",
+   "pole": "-",
+   "label": "pieces of markup links and web addresses: '](' in Markdown links and the '.cc' domain, firing on those pieces; plain prose in the same frames stays quiet",
+   "fire": [
+    "Read the docs at [the guide](http://example.org/guide) first.",
+    "return '[%s](%s)' % (name, url)",
+    "See [setup.py](https://example.org/setup) for details.",
+    "url = 'https://www.ptt.cc/bbs/index.html'",
+    "Fetch it with requests.get('https://bbs.example.cc/board')",
+    "Install it from [the package page](http://example.org/pkg).",
+    "link = '[{}]({})'.format(title, href)",
+    "The forum moved to https://www.forum.cc/ last week."
+   ],
+   "quiet": [
+    "Read the docs at the front desk first.",
+    "return name + url",
+    "See the setup page for details.",
+    "url = get_address(name)",
+    "Fetch it with the small green bucket.",
+    "Install it from the package in the box.",
+    "link = title + href",
+    "The forum moved to the old hall last week."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'](' and '.cc' in links",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "trigger": {
+  "tokens": [
+   "](",
+   ".cc"
+  ]
+ }
+}
