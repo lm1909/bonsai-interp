@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-9d0d41b0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N122+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:17:47+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L0/N122",
+   "pole": "+",
+   "label": "the Arabic ending -ين as its own token after a consonant, and the katakana piece ニ",
+   "fire": [
+    "رأيت رجلين في الشارع أمس.",
+    "وقعت حرب بين الجيشين قرب النهر.",
+    "جلس الوزير بين الطرفين في القاعة.",
+    "زار المدينة طفلين من القرية.",
+    "وصل آلاف السائحين إلى الميناء.",
+    "انتقد المدير الموظفين في الاجتماع.",
+    "現場ニーズを調べる。",
+    "市場ニーズに応える。"
+   ],
+   "quiet": [
+    "رأيت رجلا في الشارع أمس.",
+    "وقعت حرب بين الجيش والشرطة قرب النهر.",
+    "جلس الوزير بين الناس في القاعة.",
+    "زار المدينة طفل من القرية.",
+    "وصل آلاف الناس إلى الميناء.",
+    "انتقد المدير الخطة في الاجتماع.",
+    "現場の声を調べる。",
+    "市場の声に応える。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic -ين, katakana ニ",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "A new round: the sweep test failed at AUROC 0.891 because one item, 'الأخوين', did not fire (0.02), where the ending follows the vowel piece 'و'. All items here have -ين after a consonant, checked with the tokenizer.",
+ "trigger": {
+  "tokens": [
+   "ين",
+   "ニ"
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-b1bc481a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N7210+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:17:47+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L2/N7210",
+   "pole": "+",
+   "label": "the 'ó' of 'anunció' (announced) after its subject; other Spanish past verbs of saying are much weaker",
+   "fire": [
+    "El presidente anunció que habrá cambios.",
+    "La ministra anunció nuevas medidas ayer.",
+    "Oracle anunció una demanda contra Google.",
+    "El club anunció que cerrará el estadio.",
+    "La empresa anunció un nuevo producto.",
+    "El alcalde anunció más inversiones.",
+    "Nuestra universidad anunció un cambio.",
+    "Ese banco anunció pérdidas otra vez."
+   ],
+   "quiet": [
+    "El presidente dijo que habrá cambios.",
+    "La ministra habló de nuevas medidas ayer.",
+    "Oracle ganó una demanda contra Google.",
+    "El club quiere cerrar el estadio.",
+    "La empresa tiene un nuevo producto.",
+    "El alcalde pidió más inversiones.",
+    "Nuestra universidad hizo un cambio.",
+    "Ese banco tuvo pérdidas otra vez."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'ó' of anunció",
+ "unit_kind": "token piece / lexical",
+ "confidence": 0.55,
+ "notes": "A new round: the sweep label 'preterite ending ó' failed at AUROC 0.867. 'anunció' fired (0.59-0.76), others much less (0.09-0.36). Near misses here include other past verbs ('habló', 'ganó', 'pidió'), so this tests the word against the ending.",
+ "trigger": {
+  "tokens": [
+   "ó"
+  ]
+ }
+}

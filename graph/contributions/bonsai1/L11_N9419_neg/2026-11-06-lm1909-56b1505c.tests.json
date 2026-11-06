@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-56b1505c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N9419-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:17:47+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L11/N9419",
+   "pole": "-",
+   "label": "the attribute after a config object in model code: config.hidden_, cfg.embed_, config.att|ention",
+   "fire": [
+    "x = config.hidden_size * 2",
+    "y = cfg.embed_dim + 1",
+    "dim = config.attention_head_size",
+    "self.dropout = nn.Dropout(config.hidden_dropout_prob)",
+    "n = config.hidden_layers - 1",
+    "emb = cfg.embed_size * 4",
+    "heads = config.attention_heads",
+    "z = self.config.hidden_dim"
+   ],
+   "quiet": [
+    "x = row.price * 2",
+    "y = item.count + 1",
+    "dim = shape.width",
+    "self.dropout = nn.Dropout(0.5)",
+    "n = len(rows) - 1",
+    "emb = row.total * 4",
+    "heads = user.name",
+    "z = self.width"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "attribute after config.",
+ "unit_kind": "code / contextual",
+ "confidence": 0.6,
+ "notes": "A new round: the sweep label 'att|ention in config code' failed because near misses fired on '.hidden' (0.58) and '.embed' (0.28). So this label claims config attributes in general. The other top card tokens (_ERROR, .image) are still not covered.",
+ "trigger": {
+  "tokens": [
+   ".hidden",
+   ".embed",
+   "ention"
+  ]
+ }
+}
