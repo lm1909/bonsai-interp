@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8bbd3860",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10274+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:17:23+00:00",
+ "recipe": {
+  "toolchain_commit": "e6b988c85",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N10274_pos/2026-11-06-lm1909-8bbd3860.tests.json"
+ },
+ "label": "' not' in moral advice ('one should not', 'must not')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N10274_pos/2026-11-06-lm1909-8bbd3860.tests.json",
+   "prereg_commit": "e6b988c85",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.222,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.286,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.387,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.187,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.116,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.186,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.209,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.274,
+     "peak": " bow"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.075,
+     "peak": " should"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " must"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.117,
+     "peak": " should"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.064,
+     "peak": " should"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " still"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.054,
+     "peak": " should"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.058,
+     "peak": " must"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.073,
+     "peak": " should"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.215,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e6b988c85",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' not' in moral advice",
+ "unit_kind": "lexical / contextual",
+ "confidence": "low",
+ "notes": "The card has no single token and the broader hypothesis (' to', ' can', ' being') did not fire in probes. This is the narrowest thing that reached 0.2.",
+ "selection": "random draw"
+}
