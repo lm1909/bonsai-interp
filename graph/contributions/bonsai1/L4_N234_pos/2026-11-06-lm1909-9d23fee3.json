@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-9d23fee3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N234+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:36:57+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N234_pos/2026-11-06-lm1909-9d23fee3.tests.json"
+ },
+ "label": "the quotative or complementizer marker that links a clause to a thinking or saying verb: Korean -다고 and Japanese という",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N234_pos/2026-11-06-lm1909-9d23fee3.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.266,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.281,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.356,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.409,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.257,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.361,
+     "peak": "고"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.305,
+     "peak": "が"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.272,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.246,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.286,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.231,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.278,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.146,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.155,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.19,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.255,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.293,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "quotative marker 다고 / という",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card flags broad (9.0%) and gate-closed (100%), with ' –' x8, '고' x6, 'という' x5, '\\n' x5, '而' x2. Probes peaked on the final period (0.25-0.32), not on the marker, and a sentence without it scored 0.248, so the baseline is high. The card suggests the quotative reading, but my probes do not support it. Expected to fail.",
+ "selection": "random draw"
+}

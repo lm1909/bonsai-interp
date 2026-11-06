@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-05fa3e7a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4894+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:36:37+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N4894_pos/2026-11-06-lm1909-05fa3e7a.tests.json"
+ },
+ "label": "the word ' bit' as a noun or degree word (do your bit, a bit too much, the next bit)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N4894_pos/2026-11-06-lm1909-05fa3e7a.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.775,
+     "peak": " bit"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.398,
+     "peak": " bit"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.147,
+     "peak": " bit"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.089,
+     "peak": " tired"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.214,
+     "peak": " bit"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.565,
+     "peak": " bit"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.196,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.147,
+     "peak": " bit"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": " too"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " keep"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " part"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " tired"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " hit"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.09,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "He"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.205,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word ' bit'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' bit' x19, ' proper' x3, ' must' x2, 'ied', ' appointment'. Probes: 'a bit too much' 0.626, 'do your bit' 0.366, 'The dog bit' 0.294, 'next bit' 0.177, 'a bit like' 0.150, '32 bit' 0.142; 'next piece' 0.014. The verb and the computing sense also fire somewhat, so they are not used as near misses; near misses use other words in the same frames.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " bit"
+  ]
+ }
+}

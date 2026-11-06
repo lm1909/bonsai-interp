@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-a640cd6f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5712+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:37:37+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N5712_pos/2026-11-06-lm1909-a640cd6f.tests.json"
+ },
+ "label": "the first token of a negative contraction (' don', ' won', ' couldn', ' isn') on a dense pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N5712_pos/2026-11-06-lm1909-a640cd6f.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.566,
+     "peak": " don"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.276,
+     "peak": " won"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.692,
+     "peak": " couldn"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.311,
+     "peak": " don"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.714,
+     "peak": " couldn"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.315,
+     "peak": " won"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.53,
+     "peak": " don"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.722,
+     "peak": " couldn"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.097,
+     "peak": "You"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.151,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.164,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.128,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.158,
+     "peak": " eat"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.104,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.173,
+     "peak": " from"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.548,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "n't contraction start (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (19.7%) and gate-closed (100%), max 1.94: ' don' x7, ' isn' x5, ':' x5, ' couldn' x3, ' according' x3, ' won' x2. Probes: ' couldn' 0.732, ' don' 0.566, ' won' 0.315, ' in' in 'Keep in mind' 0.509; 'You do need' 0.092. Reported as dense whatever the test says.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " don",
+   " won",
+   " couldn",
+   " isn"
+  ]
+ }
+}

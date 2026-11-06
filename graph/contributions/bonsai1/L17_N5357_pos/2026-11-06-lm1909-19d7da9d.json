@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-19d7da9d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N5357+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:37:18+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N5357_pos/2026-11-06-lm1909-19d7da9d.tests.json"
+ },
+ "label": "a token in the rules of a tabletop or war game (When a squad shoots, it fires; if you fail your test, you lose)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N5357_pos/2026-11-06-lm1909-19d7da9d.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.299,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.292,
+     "peak": " rer"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.957,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.311,
+     "peak": "es"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.558,
+     "peak": " deals"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.547,
+     "peak": " hit"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.5,
+     "peak": " discard"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.139,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " choir"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " enough"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " walk"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " nurse"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " cook"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.405,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "tabletop game rules",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' with' x3, ' you' x2, ',', '\\n', ' the', ' it', ' Skill', all in tabletop and game rule text. Probes: 'fires one shot per unit in the squad' 0.852, 'score enough successes' 0.537, 'fail your Composure Test' 0.524, 'move the APC' 0.292; a singer 0.071, visiting an aunt 0.025. Near misses keep the sentence frames outside games.",
+ "selection": "random draw"
+}

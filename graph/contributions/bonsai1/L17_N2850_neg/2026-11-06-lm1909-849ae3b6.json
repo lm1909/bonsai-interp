@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-849ae3b6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N2850-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:37:10+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N2850_neg/2026-11-06-lm1909-849ae3b6.tests.json"
+ },
+ "label": "a word closing a call to action on a website (tips left by our visitors, a more informed bidder)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N2850_neg/2026-11-06-lm1909-849ae3b6.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.155,
+     "peak": " readers"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.075,
+     "peak": " shopper"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.107,
+     "peak": " our"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.135,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.069,
+     "peak": " seller"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.031,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.204,
+     "peak": " users"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.133,
+     "peak": " gard"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.142,
+     "peak": " recipes"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.124,
+     "peak": " be"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.035,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " harbor"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.129,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.065,
+     "peak": "See"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": " apples"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.124,
+     "peak": " be"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.656,
+    "median_fire": 0.12,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "website call-to-action word",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card flags broad (4.1%): ' you' x3, ' is' x3, '\\n', '?', ' risk', ' be', ' visitors'. Probes all weak: ' visitors' 0.188, others 0.03-0.09. A guess, expected to fail on the median.",
+ "selection": "random draw"
+}

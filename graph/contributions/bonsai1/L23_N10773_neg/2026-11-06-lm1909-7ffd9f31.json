@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7ffd9f31",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N10773-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:37:47+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N10773_neg/2026-11-06-lm1909-7ffd9f31.tests.json"
+ },
+ "label": "' on', or a verb or noun leading to it, when something physically rests on a surface (sleeps on, perched on, standing on, his foot on)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N10773_neg/2026-11-06-lm1909-7ffd9f31.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.031,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.662,
+     "peak": "ched"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.419,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.355,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.517,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.253,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.516,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.681,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.191,
+     "peak": " relies"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.303,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " going"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.061,
+     "peak": " top"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": "ons"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.081,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.12,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.202,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.516,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "physically resting on a surface",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' on' x14, 'ched' x4, ' foot' x2, ' in', ' them', ' feet', with animals perched, sleeping and standing. Probes: 'sleeps on a gurney' 0.788, 'placing his foot' 0.781, 'standing on a desk' 0.629, 'perched' 0.616; 'depends on a gift' 0.066, 'went on a trip' 0.019. Near misses keep ' on' in abstract and phrasal senses.",
+ "selection": "random draw"
+}

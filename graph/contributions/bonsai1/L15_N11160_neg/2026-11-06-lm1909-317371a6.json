@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-317371a6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N11160-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:36:34+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N11160_neg/2026-11-06-lm1909-317371a6.tests.json"
+ },
+ "label": "' day' in an interval phrase, every other day",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N11160_neg/2026-11-06-lm1909-317371a6.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.023,
+     "peak": " she"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.016,
+     "peak": " waters"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.11,
+     "peak": " day"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.022,
+     "peak": "Take"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.042,
+     "peak": "Since"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.027,
+     "peak": " dry"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.037,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.016,
+     "peak": " gone"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": " she"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " waters"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.124,
+     "peak": " Monday"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": "Take"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.034,
+     "peak": " school"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.099,
+     "peak": " season"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.053,
+     "peak": " flakes"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.305,
+    "median_fire": 0.025,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 13,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'every other day'",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ',' x4, ' Car', ' wealthy', ' and', ' son', ' day', ' time'. Probes: 'every other day' 0.613 on ' day', ' wealthy' 0.264, 'from time to time' 0.100; others under 0.08. A narrow guess from one probe.",
+ "selection": "random draw"
+}

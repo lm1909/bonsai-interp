@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-259cfb97",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N6015+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:38:10+00:00",
+ "recipe": {
+  "toolchain_commit": "a46265f64",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N6015_pos/2026-11-06-lm1909-259cfb97.tests.json"
+ },
+ "label": "a token in a concessive construction fronting an adjective (Astute as he was, Tired as they were, Pour virtuose qu'elle soit)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N6015_pos/2026-11-06-lm1909-259cfb97.tests.json",
+   "prereg_commit": "a46265f64",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.617,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.526,
+     "peak": " soit"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.359,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.504,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.173,
+     "peak": " soit"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.375,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.154,
+     "peak": " may"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.426,
+     "peak": " soit"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.275,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.421,
+     "peak": " reste"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.143,
+     "peak": " they"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.459,
+     "peak": " rich"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": " ch"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " hold"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.278,
+     "peak": " de"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.797,
+    "median_fire": 0.4,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a46265f64",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "concessive 'Adj as he was'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' as' x2, ' the' x2, ' a' x2, 'A', ' se', ',', ' brink', ' elle'; ' as' in 'Astute as he was' and 'Pour virtuose qu'elle soit' top the card. Probes: ' as' 0.602, ' soit' 0.571, 'Tired as they were' 0.332; 'He was astute in' 0.096; 'On the brink of' 0.367 is another trigger, and is outside the label. Near misses state the same adjective plainly.",
+ "selection": "random draw"
+}
