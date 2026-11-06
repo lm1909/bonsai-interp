@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-d03bd5fc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N7729+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:59:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N7729",
+   "pole": "+",
+   "label": "the piece ' pre' where the tokenizer splits it off a longer word (pre|front|al, pre|war, pre|existing), as opposed to the same stems with another prefix or none",
+   "fire": [
+    "The town's prewar houses still line the river.",
+    "She has a preexisting heart condition, her doctor said.",
+    "They found prehistoric tools at the back of the cave.",
+    "The shop sells clothes for her preteen daughter.",
+    "We were preapproved for the loan last week.",
+    "Damage to the prefrontal cortex can change behaviour.",
+    "He watched the prequel with his brother on Sunday.",
+    "Use the prewash cycle for very muddy clothes."
+   ],
+   "quiet": [
+    "The town's postwar houses still line the river.",
+    "She has an existing heart condition, her doctor said.",
+    "They found historic tools at the back of the cave.",
+    "The shop sells clothes for her teenage daughter.",
+    "We were approved for the loan last week.",
+    "Damage to the subfrontal cortex can change behaviour.",
+    "He watched the sequel with his brother on Sunday.",
+    "Use the rewash cycle for very muddy clothes."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' pre' as its own piece of a longer word",
+ "unit_kind": "spelling unit",
+ "confidence": "high",
+ "notes": "Card: ' pre' x16, 'Pre' x3, ' Pre' x3, ' prec' x2, 'pre' x2. Probes: ' pre' 0.37-0.96 on prefrontal, preheated, preadolescent, preloaded and on the bare word; prenatal and prefabricated tokenize differently (' prenatal', ' pref') and stay under 0.01. ' post' 0.08, ' super' 0.01. 'Pre' and capitals fire too (0.36-0.87) but are not tested here. Pieces checked with the tokenizer.",
+ "trigger": {
+  "tokens": [
+   " pre"
+  ]
+ }
+}

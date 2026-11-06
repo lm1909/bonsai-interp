@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-3c5ede9c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N4592-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:59:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N4592",
+   "pole": "-",
+   "label": "the Chinese comma after a terse slogan-style phrase (投资房产，发展经济，), as opposed to the comma after an ordinary clause in the same topics, with a subject or without one",
+   "fire": [
+    "节约用水，保护环境。",
+    "勤俭节约，人人有责。",
+    "多读好书，开阔眼界。",
+    "早睡早起，精神更好。",
+    "理财规划，稳健增值。",
+    "锻炼身体，增强体质。",
+    "诚信经营，顾客至上。",
+    "按时服药，定期复查。"
+   ],
+   "quiet": [
+    "我们每天都在节约用水，因为水很贵。",
+    "他从小就很节约，从来不乱花钱。",
+    "睡得太晚，精神不好。",
+    "她睡得早，精神好。",
+    "我打算明年开始理财，现在还没准备好。",
+    "吃得太咸，对胃不好。",
+    "那家店的老板很诚信，顾客都喜欢他。",
+    "医生让我按时服药，我一直没有忘记。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "，after a terse slogan-style phrase",
+ "unit_kind": "token / syntax",
+ "confidence": "medium",
+ "notes": "Card: '，' x27 of the top 32. Probes: 投资房产， 0.55, 买房投资， 0.82, 读书学习， 0.47, 发展经济， 0.35, 身体健康， 0.33, 工作认真， 0.24; 如果你愿意， 0.04, 天气这么冷， 0.04, 我喜欢喝茶， 0.02, 吃得太多， 0.14, 、 0.01. Semicolons in football line-ups (0.19-0.27) are on the card and not covered. The declared token is every Chinese comma, so coverage is an upper bound. Most near misses are longer than the fire items; the three short ones (睡得太晚，, 她睡得早，, 吃得太咸，) control for length, and two of those have no subject.",
+ "trigger": {
+  "tokens": [
+   "，"
+  ]
+ }
+}

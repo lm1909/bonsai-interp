@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-5e8affbb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N2983-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:59:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N2983",
+   "pole": "-",
+   "label": "tokens just after a word for money (money, cash, funds, savings), as opposed to the same frame with a noun that is not money, including banking words",
+   "fire": [
+    "The cash was stolen from the till on Friday.",
+    "Most of the money will go to local schools.",
+    "Her savings were wiped out in the crash.",
+    "The funds are held in a trust for the children.",
+    "All that money is sitting in an old account.",
+    "Thousands of dollars were taken from the charity.",
+    "His fortune was spent on horses and wine.",
+    "The extra cash is going straight into the roof."
+   ],
+   "quiet": [
+    "The cashier was robbed at the till on Friday.",
+    "Most of the teachers will go to local schools.",
+    "Her bank was wiped out in the crash.",
+    "The deeds are held in a trust for the children.",
+    "All that paperwork is sitting in an old account.",
+    "Thousands of letters were taken from the charity.",
+    "His evenings were spent on horses and wine.",
+    "The extra timber is going straight into the roof."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "tokens just after a word for money",
+ "unit_kind": "contextual / semantic",
+ "confidence": "high",
+ "notes": "Card peaks are on ' be', ' to', ' was' next to money words, and the output promotes ' money', ' capital', ' funds'. Probes: 'money to be' 0.82, 'money was' 0.79, 'cash was' 0.80, 'dollars were' 0.67, 'savings will be' 0.44; same frames with fish, luggage, grain, children at 0.02 or less. 'budget was' 0.09, Bitcoin 0.11, 'earned a lot of money last' 0.12, 'I have some money in' 0.51, so money need not be the subject, though 'money last' was weak. Near misses do not test money as an object."
+}
