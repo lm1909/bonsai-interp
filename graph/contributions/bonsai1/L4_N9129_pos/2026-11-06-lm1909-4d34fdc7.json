@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-4d34fdc7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9129+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:19:51+00:00",
+ "recipe": {
+  "toolchain_commit": "45039aee5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N9129_pos/2026-11-06-lm1909-4d34fdc7.tests.json"
+ },
+ "label": "'ware' as part of a name: WINGWARE, BioWare, PBXware, DeMarcus Ware; the whole token ' software' and 'aware' stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N9129_pos/2026-11-06-lm1909-4d34fdc7.tests.json",
+   "prereg_commit": "45039aee5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.475,
+     "peak": "WARE"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.769,
+     "peak": "Ware"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.829,
+     "peak": " Ware"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.389,
+     "peak": "ware"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.793,
+     "peak": "WARE"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.842,
+     "peak": "Ware"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.779,
+     "peak": " Ware"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.389,
+     "peak": "ware"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": "FT"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.0,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " Denver"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "Tools"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " PROGRAM"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " problem"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " hardware"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.774,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "45039aee5",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "-ware in names (BioWare, Ware)",
+ "unit_kind": "token piece / names",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ware",
+   " Ware",
+   "Ware",
+   "WARE"
+  ]
+ }
+}
