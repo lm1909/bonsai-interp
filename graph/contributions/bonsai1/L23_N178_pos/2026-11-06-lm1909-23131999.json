@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-23131999",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N178+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:08:35+00:00",
+ "recipe": {
+  "toolchain_commit": "5a7d17cb2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N178_pos/2026-11-06-lm1909-23131999.tests.json"
+ },
+ "label": "a word right before 'University' in a university's name ('Ohio State', 'Virginia Commonwealth', 'Case Western Reserve'), where 'University' is the likely next word; the same words elsewhere stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N178_pos/2026-11-06-lm1909-23131999.tests.json",
+   "prereg_commit": "5a7d17cb2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.446,
+     "peak": " State"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.519,
+     "peak": " State"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.724,
+     "peak": " Commonwealth"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.646,
+     "peak": " Reserve"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.522,
+     "peak": " Clara"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.685,
+     "peak": " Illinois"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.536,
+     "peak": " Washington"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.497,
+     "peak": " State"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " makes"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " reserve"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " spring"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " Washington"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " Nations"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.529,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "5a7d17cb2",
+  "minutes": 2,
+  "batch_size": 1,
+  "dtype": "float16"
+ },
+ "short": "the word before 'University'",
+ "unit_kind": "predictive / contextual",
+ "confidence": 0.75,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep11-20261106, which failed at AUROC 0.891 because 'Northern Illinois' (0.61) and 'Eastern Washington' (0.34) in sentences with no university predict 'University' just as well, and the model cannot see the next word at those tokens. This round's near misses use the same words where 'University' is not the likely next word: 'Federal Reserve', 'nature reserve', 'aunt Clara', 'George Washington', 'moved to Illinois'. Not probed for this round: the sentences are all new.",
+ "selection": "second round after my own sweep"
+}
