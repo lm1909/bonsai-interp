@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-587b5c18",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N5818-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:40:29+00:00",
+ "recipe": {
+  "toolchain_commit": "00d9ec7e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N5818_neg/2026-11-06-lm1909-587b5c18.tests.json"
+ },
+ "label": "Russian negation with a negative word (ничем, ничего, никаких, проблем никогда не было), as opposed to plain Russian statements",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N5818_neg/2026-11-06-lm1909-587b5c18.tests.json",
+   "prereg_commit": "00d9ec7e8",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.566,
+     "peak": "ем"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.569,
+     "peak": " проблем"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.342,
+     "peak": " себя"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.422,
+     "peak": " ничего"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.175,
+     "peak": "ин"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.099,
+     "peak": " него"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.362,
+     "peak": "то"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.466,
+     "peak": "ем"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.165,
+     "peak": "т"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.295,
+     "peak": " работает"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.17,
+     "peak": "ан"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.167,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.099,
+     "peak": " него"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.171,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.2,
+     "peak": "ре"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.867,
+    "median_fire": 0.392,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "00d9ec7e8",
+  "minutes": 9,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "Russian negative words",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Other tokens on the card ('elen', '万') are not covered. 'живут' reached 0.21 in a probe, so a Russian floor exists.",
+ "selection": "random draw"
+}

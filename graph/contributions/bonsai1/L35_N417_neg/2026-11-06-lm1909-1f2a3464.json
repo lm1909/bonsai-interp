@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1f2a3464",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N417-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:40:46+00:00",
+ "recipe": {
+  "toolchain_commit": "00d9ec7e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N417_neg/2026-11-06-lm1909-1f2a3464.tests.json"
+ },
+ "label": "Spanish words in English or Spanish text, on a function word or a word-start piece (El, los, Ref|ugiados, extr|anjeros, Día de los Muertos), as opposed to the same frames without Spanish words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N417_neg/2026-11-06-lm1909-1f2a3464.tests.json",
+   "prereg_commit": "00d9ec7e8",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.692,
+     "peak": " El"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.676,
+     "peak": " los"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.635,
+     "peak": " El"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.432,
+     "peak": " Ref"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.293,
+     "peak": " extr"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.426,
+     "peak": " El"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.229,
+     "peak": "El"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.497,
+     "peak": " extr"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " Yosemite"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.0,
+     "peak": " Year"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.314,
+     "peak": " mis"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.161,
+     "peak": " ale"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.287,
+     "peak": " muchos"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.465,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "00d9ec7e8",
+  "minutes": 9,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "Spanish word pieces in text",
+ "unit_kind": "language",
+ "confidence": "medium",
+ "notes": "' son' in plain Spanish reached 0.14 in a probe.",
+ "selection": "random draw"
+}
