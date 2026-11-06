@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-6d2ac50a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10881+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:33:29+00:00",
+ "recipe": {
+  "toolchain_commit": "7b33c97f5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N10881_pos/2026-11-06-lm1909-6d2ac50a.tests.json"
+ },
+ "label": "the split word-initial piece ' S' or ' s' in a name or word (Senna, selenio, Benigno S.)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N10881_pos/2026-11-06-lm1909-6d2ac50a.tests.json",
+   "prereg_commit": "7b33c97f5",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.872,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.511,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.538,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.737,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.804,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.781,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.66,
+     "peak": " s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.13,
+     "peak": " S"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " Mans"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " Bart"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "Cont"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " Aqu"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "P"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": "ffi"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "Min"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.699,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7b33c97f5",
+  "minutes": 5,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "split word-initial ' S' / ' s'",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " S",
+   " s"
+  ]
+ }
+}

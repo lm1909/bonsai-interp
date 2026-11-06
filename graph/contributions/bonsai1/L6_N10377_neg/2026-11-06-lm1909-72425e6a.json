@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-72425e6a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10377-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:33:19+00:00",
+ "recipe": {
+  "toolchain_commit": "7b33c97f5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10377_neg/2026-11-06-lm1909-72425e6a.tests.json"
+ },
+ "label": "corporate financial reporting (quarterly earnings, financial results, EBITDA, full-year loss)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10377_neg/2026-11-06-lm1909-72425e6a.tests.json",
+   "prereg_commit": "7b33c97f5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.969,
+     "peak": " report"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.011,
+     "peak": " results"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.636,
+     "peak": " results"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.844,
+     "peak": "DA"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.314,
+     "peak": " reported"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.457,
+     "peak": " results"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.441,
+     "peak": " loss"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.492,
+     "peak": " profit"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " opened"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.173,
+     "peak": " posted"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " report"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.04,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.031,
+     "peak": " closed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " showed"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " swung"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.038,
+     "peak": " farmer"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.564,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7b33c97f5",
+  "minutes": 5,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "corporate earnings reports",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}
