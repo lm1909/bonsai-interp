@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-77001d2e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N11850-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:44:59+00:00",
+ "recipe": {
+  "toolchain_commit": "c247acfbd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N11850_neg/2026-11-06-lm1909-77001d2e.tests.json"
+ },
+ "label": "The figures of a mains frequency: 50 or 60 before Hz or hertz, often after a voltage; other numbers and units stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N11850_neg/2026-11-06-lm1909-77001d2e.tests.json",
+   "prereg_commit": "c247acfbd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.686,
+     "peak": " Hz"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.918,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.829,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.97,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.873,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.737,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.818,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.672,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.069,
+     "peak": " loud"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.039,
+     "peak": " adapter"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " cut"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.203,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.077,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": "0"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.823,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c247acfbd",
+  "minutes": 12,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "mains frequency figures (50/60 Hz)",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: '0' x13, ' ' x4, '/' x2 in '60 Hz', '50/60Hz', '220 volts, 50 hertz', '5-0-cycle'. The + pole's logit effect suppresses ' frequency', ' Hz', so the - pole points toward them. Probe: 50/60 0.94, '220 volts, 50' 0.89, 60 Hz 0.68; '60 cycles per second' 0.14; 50 kg 0.00, 50 minutes 0.01, volts alone 0.11, but '60 km road' after 'noise' 0.35.",
+ "selection": "random draw"
+}

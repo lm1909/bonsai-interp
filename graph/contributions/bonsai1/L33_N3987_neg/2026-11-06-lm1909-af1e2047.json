@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-af1e2047",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N3987-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:45:30+00:00",
+ "recipe": {
+  "toolchain_commit": "c247acfbd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N3987_neg/2026-11-06-lm1909-af1e2047.tests.json"
+ },
+ "label": "Education policy about attainment gaps and levels: 'at all levels', 'narrow existing achievement gaps'; the same verbs about other things stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N3987_neg/2026-11-06-lm1909-af1e2047.tests.json",
+   "prereg_commit": "c247acfbd",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.527,
+     "peak": " existing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.443,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.556,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.12,
+     "peak": " existing"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.274,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.58,
+     "peak": " existing"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.57,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.047,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " training"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " hall"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " apple"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " across"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " slow"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.485,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c247acfbd",
+  "minutes": 13,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "education: 'at all levels', achievement gaps",
+ "unit_kind": "semantic / contextual",
+ "confidence": "low",
+ "notes": "Card: ' all' x6, ',' x3, ' and' x3, ' increase' x3, ' existing', ' deepen', on education policy. The + pole's logit effect suppresses ' educational', ' curriculum', ' school', so the - pole points toward them. Probe: 'at all' 0.86, 'narrow existing' 0.58; but 'deepen the nation's social divide' 0.10 and 'crisis of separate and unequal' 0.07, so this is uneven.",
+ "selection": "random draw"
+}

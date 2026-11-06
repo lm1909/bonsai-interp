@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5d633e6f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N9986-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:44:13+00:00",
+ "recipe": {
+  "toolchain_commit": "c247acfbd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N9986_neg/2026-11-06-lm1909-5d633e6f.tests.json"
+ },
+ "label": "Giving up rights or control to someone else: give up some rights, surrender, hand over, sign away, give away control; ordinary giving stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N9986_neg/2026-11-06-lm1909-5d633e6f.tests.json",
+   "prereg_commit": "c247acfbd",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.522,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.167,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.36,
+     "peak": " surrender"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.069,
+     "peak": " give"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.196,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.435,
+     "peak": " surrender"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.885,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.257,
+     "peak": " away"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.055,
+     "peak": " give"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.056,
+     "peak": " give"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.076,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.076,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.129,
+     "peak": " send"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.308,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c247acfbd",
+  "minutes": 11,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "giving up rights or control",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Card: ' to' x3, ' people', ' rights', ' giving', ' By', ' give', ' hand'. The + pole's logit effect suppresses ' surrender', ' relinqu', ' loses', ' voluntarily', so the - pole promotes them. Probe: 'give up some rights for' 0.65, 'hand ... over' 0.35, 'you grant' 0.26, 'give up something' 0.21, 'giving away control of' 0.15; 'give some money' 0.06, 'gave him a book' 0.00.",
+ "selection": "random draw"
+}

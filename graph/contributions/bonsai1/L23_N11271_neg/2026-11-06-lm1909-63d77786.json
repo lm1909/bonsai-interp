@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-63d77786",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11271-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:44:03+00:00",
+ "recipe": {
+  "toolchain_commit": "c247acfbd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N11271_neg/2026-11-06-lm1909-63d77786.tests.json"
+ },
+ "label": "An instruction to take a brief physical break: 'get up and do', 'or do some jumping jacks', 'close your eyes and'; other instructions in imperative form stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N11271_neg/2026-11-06-lm1909-63d77786.tests.json",
+   "prereg_commit": "c247acfbd",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.958,
+     "peak": " some"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.358,
+     "peak": " do"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.299,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.508,
+     "peak": " few"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.517,
+     "peak": " stretch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.059,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.292,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.603,
+     "peak": " some"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.165,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.041,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.001,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.244,
+     "peak": " washed"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "Pay"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " brush"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.433,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c247acfbd",
+  "minutes": 11,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "instruction to take a brief physical break",
+ "unit_kind": "contextual / semantic",
+ "confidence": "medium",
+ "notes": "Card: ' and' x7, ',' x4, ' do' x2, ' minute' x2, ' some', 先. Probe: 'or do some' 0.71, 'get up and' 0.64, 'close your eyes and' 0.33, 'shake off the jet lag and' 0.15; non-instructions 0.01-0.11.",
+ "selection": "random draw"
+}
