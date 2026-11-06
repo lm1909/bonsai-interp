@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-86b3fccc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N859-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:24:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N859",
+   "pole": "-",
+   "label": "a very long run of spaces as one token, as in aligned code or banner comments; normal indentation and prose stay quiet",
+   "fire": [
+    "def run():\n                                                              return 0",
+    "y = 2,                                                       # note",
+    "#*   Licensed under GPL.                                                  *",
+    "call(\"name\",\n                                                                 arg)",
+    "result = compute(a, b,\n                                                    c, d)",
+    "--                                                                    end",
+    "foo = bar,                                                          # default",
+    "#    Copyright the authors.                                               #"
+   ],
+   "quiet": [
+    "def run():\n    return 0",
+    "y = 2,  # note",
+    "#* Licensed under GPL. *",
+    "call(\"name\",\n     arg)",
+    "result = compute(a, b,\n    c, d)",
+    "-- end",
+    "foo = bar,  # default",
+    "# Copyright the authors. #"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "very long run of spaces",
+ "unit_kind": "format",
+ "confidence": "high"
+}
