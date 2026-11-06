@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ad35d751",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3706-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N3706",
+   "pole": "-",
+   "label": "the point where a thing is said to lack a body or a body part ('without a body', 'do not include a digestive tract')",
+   "fire": [
+    "The angels are pure spirit (without a body), the old monk said.",
+    "Sponges do not possess a stomach or any other organ.",
+    "Some worms do not include a mouth among their parts.",
+    "He described a soul, immortal (without a body), in his book.",
+    "Jellyfish do not contain a brain or a heart.",
+    "The god is formless (without a face), in their teaching.",
+    "These parasites do not include a gut of their own.",
+    "Ghosts in the tale are shadows (without a head), she wrote."
+   ],
+   "quiet": [
+    "The angels are pure white (with a halo), the old monk said.",
+    "Sponges do live in the sea and on the rocks.",
+    "Some worms do live under a stone in the garden.",
+    "He described a town, ancient (with a wall), in his book.",
+    "Jellyfish do drift on a current or a tide.",
+    "The god is famous (with a temple), in their city.",
+    "These parasites do feed on a host of their own.",
+    "Ghosts in the tale are funny (with a hat), she wrote."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "lacking a body or body part",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.35,
+ "notes": "Card: ' a' x8, ' have' x3, ' of' x2, ' no' x2, ' be' x2, ' the' x2; top examples: 'do not need a skeleton', 'do not include a digestive tract', 'without a body'. Probe: ' a' after 'without' 0.925; ' a' after 'do not include' 0.374; but 'do not need a skeleton' only 0.062; ' have' 0.198; 'without a license' 0.035; 'have a skeleton' 0.029. Weak on the plants example."
+}

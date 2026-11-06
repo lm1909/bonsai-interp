@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-92c8c5f3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8012-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N8012",
+   "pole": "-",
+   "label": "the word 'slap' in any form or sense ('Sl|ap Shot', ' slap', ' slapped', ' slap|stick')",
+   "fire": [
+    "The boss will slap a heavy fine on the driver.",
+    "The man slapped the table and shouted for more beer.",
+    "The children call that rash 'slap cheek' at school.",
+    "Old comedy films are full of slapstick and pie fights.",
+    "The hockey player took a hard Slap Shot from the line.",
+    "Do not slap your brother on the back of his head.",
+    "My mother slapped my hand when I reached for the cake.",
+    "That new law is just a slap on the wrist for banks."
+   ],
+   "quiet": [
+    "The boss will put a heavy load on the driver.",
+    "The man tapped the table and asked for more beer.",
+    "The children call that game 'tag' at school.",
+    "Old comedy films are full of music and bright dancing.",
+    "The hockey player took a long rest on the line.",
+    "Do not poke your brother on the back of his head.",
+    "My mother held my hand when I reached for the cake.",
+    "That new law is just a burden on the budget for banks."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the word 'slap'",
+ "unit_kind": "lexical",
+ "confidence": 0.95,
+ "notes": "Card: ' slap' x14, 'lag' x5, ' slapped' x4, 'ap' x3, 'ack' x3, 'apped'. Probe: 'ap' of Slap and slap 0.901-1.001; ' slap' 0.814-0.841; ' slapped' 0.595; put, kissed and flag or back or shack at most 0.008. 'lag' and 'ack' are not covered.",
+ "trigger": {
+  "words": [
+   "slap",
+   "slapped",
+   "slapstick"
+  ]
+ }
+}

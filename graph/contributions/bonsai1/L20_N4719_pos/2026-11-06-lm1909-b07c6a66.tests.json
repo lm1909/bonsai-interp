@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b07c6a66",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N4719+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N4719",
+   "pole": "+",
+   "label": "a word placing something relative to a neighbor in a sequence or ranking ('the video before it', 'those nearest the bottom')",
+   "fire": [
+    "Each chapter builds on the ideas taught in the chapter before it.",
+    "Those closest to the stage heard more than those closest to the door.",
+    "Every lesson depends on the lesson before it in the course.",
+    "Those near the front see better than those near the back.",
+    "Each step repeats the work done in the step before it.",
+    "Those at the top earn more than those at the bottom.",
+    "Each level adds to the skills learned in the level before it.",
+    "Those on the left voted unlike those on the right."
+   ],
+   "quiet": [
+    "Each chapter ends with a short list of questions and answers.",
+    "Everyone at the concert went home happy after the last song.",
+    "Every lesson starts at nine in the morning in the hall.",
+    "Everyone at the game cheered loudly for the home team.",
+    "Each step is made of wood and painted a dark green.",
+    "Workers at the plant earn a fair wage and good benefits.",
+    "Each level has a bright red door and a small window.",
+    "Voters in the county went to the polls on Tuesday."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "relative position in a sequence",
+ "unit_kind": "contextual",
+ "confidence": 0.2,
+ "notes": "Low-confidence guess. Card: broad (1.1%); ' the', '1', '2', ' older', ' ', ' o', ' in', ' signifies', ' those', ' over'. Probe: ' before' 0.843; ' those' 0.527; ' time' 0.401; '1' in code 0.185; ' older' 0.051; plain sentence 0.008."
+}

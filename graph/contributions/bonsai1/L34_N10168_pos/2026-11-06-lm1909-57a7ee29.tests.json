@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-57a7ee29",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10168+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N10168",
+   "pole": "+",
+   "label": "French function words in running prose ('au courant de', 'Depuis', 'C'est', 'Pendant')",
+   "fire": [
+    "Je ne savais même pas au courant de la vente de cette maison.",
+    "Depuis, elle travaille dans les bureaux de la mairie.",
+    "Il n'était pas informé de l'existence de ce contrat.",
+    "C'est pourquoi nous avons choisi de partir au printemps.",
+    "Elle n'était même pas au courant de la mort de son oncle.",
+    "Pendant que les enfants jouaient, leur mère lisait le journal.",
+    "Personne n'était au courant de la date de la réunion.",
+    "Depuis, je regarde de temps en temps les nouvelles."
+   ],
+   "quiet": [
+    "I did not even know about the sale of this house.",
+    "Desde entonces, ella trabaja en las oficinas del ayuntamiento.",
+    "He was not told about the existence of this contract.",
+    "Deshalb haben wir uns entschieden, im Frühling zu fahren.",
+    "She did not even know about the death of her uncle.",
+    "Mientras los niños jugaban, su madre leía el periódico.",
+    "Niemand wusste vom Datum der Sitzung.",
+    "Since then, I watch the news from time to time."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "French function words",
+ "unit_kind": "language / contextual",
+ "confidence": 0.3,
+ "notes": "Low confidence. Card: 'C' x7, 'uis' x3, ' de' x3, ' d' x3, ',' x2, 'д' x2, in French prose. Probe: ' de' in 'au courant de' 0.647; '.' after 'Depuis, ...' 0.270; '.' after C'est 0.144; Pendant 0.131; English 0.010-0.011, Spanish 0.096, German 0.007. Near misses are the same sentences in other languages."
+}

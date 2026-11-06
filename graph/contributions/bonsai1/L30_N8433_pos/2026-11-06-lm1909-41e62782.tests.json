@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-41e62782",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N8433+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N8433",
+   "pole": "+",
+   "label": "the number of a waiting or notice period ('take from 4 to 6 weeks', 'notice (48 hours)', 'up to four weeks to process')",
+   "fire": [
+    "Custom orders usually take from 3 to 5 weeks, so order early.",
+    "Refunds require advance notice (72 hours) in writing.",
+    "Passport renewals can take up to six weeks to process.",
+    "Delivery normally takes from 2 to 4 days after payment.",
+    "Cancellations need prior notice (24 hours) by phone.",
+    "Visa applications may take up to eight weeks to review.",
+    "Repairs generally take from 5 to 7 days, so plan ahead.",
+    "Bookings require a notice period (48 hours) in advance."
+   ],
+   "quiet": [
+    "Custom shelves usually hold from 3 to 5 boxes, so buy extra.",
+    "Refunds come in a large envelope (72 pages) in the mail.",
+    "Passport photos can have up to six people in the shop.",
+    "Dinner normally costs from 2 to 4 dollars after tax.",
+    "Cancellations hit our team (24 players) at the park.",
+    "Visa offices may have up to eight desks in the hall.",
+    "Shoes generally weigh from 5 to 7 ounces, so pack light.",
+    "Bookings fill a large binder (48 sheets) on the desk."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "length of a waiting or notice period",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Card: '6' x10, '2' x6, '3' x4, '4' x3, ' six' x2, ' four', 'ести' of шести. Probe: '4' of '(48 hours)' 1.003; '6' of '4 to 6 weeks' 0.944; ' four' 0.551; but '30 days written notice' only 0.199 on ' written'; '6 pounds' 0.135; 'scored 48 points' and '30 years ago' at most 0.008."
+}

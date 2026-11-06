@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-3e4785eb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2122+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N2122",
+   "pole": "+",
+   "label": "fixed slogans built by repeating a word or frame ('first-come, first-served', 'buy one get one', 'pay as you go', 'use it or lose it', 'first in, first out')",
+   "fire": [
+    "Parking is offered on a first-come, first-served basis.",
+    "The store has a buy one get one sale on shoes.",
+    "The gym has a pay as you go membership.",
+    "Vacation days follow a use it or lose it policy.",
+    "Layoffs go by last in, first out at the plant.",
+    "Seats at the clinic are first come, first served.",
+    "Her coach always said no pain, no gain to the team.",
+    "These pizzas are buy one get one half price tonight."
+   ],
+   "quiet": [
+    "Parking is offered on a two-hour, paid basis.",
+    "The store has a big summer sale on shoes.",
+    "The gym has a yearly family membership.",
+    "Vacation days follow a strict company policy.",
+    "Layoffs go by department at the plant.",
+    "Seats at the clinic are soft and blue.",
+    "Her coach always said good morning to the team.",
+    "These pizzas are large and quite cheap tonight."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "repeating-frame slogans",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.9,
+ "notes": "Card: ' come' x2, ' as' x2, 'one' x2, 'ome', ' One', ' in', ' it'. Probe: ' one' 1.036; 'ome' of first-come 0.920; ' it' 0.659; ' as' 0.575; ' out' 0.372; the plain frames 0.015-0.049. The test repeats these slogans in new frames plus two new ones: 'last in, first out' and 'no pain, no gain'."
+}

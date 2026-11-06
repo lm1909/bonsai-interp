@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-785ded04",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3349+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N3349",
+   "pole": "+",
+   "label": "a woman's first name of French origin before a surname ('Marie B. Morris', 'Louise Allbritton', 'Dion|ne Warwick'), and the look-alike ' Marine'",
+   "fire": [
+    "The memo was signed by Marie T. Evans of the budget office.",
+    "The film features the actress Louise Fletcher as a head nurse.",
+    "The ballad was recorded by Dionne Warwick in Memphis.",
+    "The novel was reviewed by Yvonne Hart for the local paper.",
+    "The essay was written by Simone Weil in the 1930s.",
+    "My aunt Louise Carter teaches piano at the church.",
+    "The award went to Marie Curie for her work on radium.",
+    "The letter came from Antoinette Fouque in Paris."
+   ],
+   "quiet": [
+    "The memo was signed by Martin T. Evans of the budget office.",
+    "The film features the actor Jack Nicholson as a mental patient.",
+    "The ballad was recorded by Otis Redding in Memphis.",
+    "The novel was reviewed by Peter Hart for the local paper.",
+    "The essay was written by George Orwell in the 1930s.",
+    "My uncle Robert Carter teaches piano at the church.",
+    "The award went to Albert Einstein for his work on light.",
+    "The letter came from Michel Foucault in Paris."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "French-style women's first names",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.75,
+ "notes": "Card: ' Marie' x12, ' Louise' x5, 'ne' x3, 'ine' x3, ' Marine' x2. Probe: 'ne' of Dionne 0.941; ' Louise' 0.754; ' Marie' 0.742; ' Marine' 0.487-0.489 even in 'Marine Corps'; 'ine' of Janine 0.215; Mark, Henry and Stevie at most 0.085. New names in the test: Yvonne, Simone, Antoinette. Male near misses in the same frames."
+}

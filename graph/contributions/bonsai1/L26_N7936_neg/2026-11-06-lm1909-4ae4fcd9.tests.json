@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-4ae4fcd9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7936-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N7936",
+   "pole": "-",
+   "label": "the first syllable of a Korean or Chinese given name, right after the surname (김|경승, 박|창열, 李|秀安)",
+   "fire": [
+    "화가 김영수가 그림을 그렸다.",
+    "기자 박정훈이 현장에서 전했다.",
+    "우리는 어제 김상민 교수를 만났다.",
+    "배우 최강희가 상을 받았다.",
+    "我们见到了张晓明老师。",
+    "记者张秀英报道了这个消息。",
+    "의사 정경호가 환자를 돌보았다.",
+    "昨天李晓东先生来到了北京。"
+   ],
+   "quiet": [
+    "화가가 그림을 그렸다.",
+    "기자가 현장에서 전했다.",
+    "우리는 어제 교수를 만났다.",
+    "경찰이 상을 받았다.",
+    "我们见到了那位老师。",
+    "记者报道了这个消息。",
+    "의사가 환자를 돌보았다.",
+    "昨天这位先生来到了北京。"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "given name after an East Asian surname",
+ "unit_kind": "contextual",
+ "confidence": 0.95,
+ "notes": "Card: '영' x4, '경' x3, '정' x2, '秀' x2, '晓' x2, '상'. Probe: '창' 1.005; '강' 0.867; '경' 0.832 after 김, but the same '경' in 경기도 0.018; '秀' 0.816; ' Jong' after 'Kim' 0.339; sentences without a name at most 0.010."
+}

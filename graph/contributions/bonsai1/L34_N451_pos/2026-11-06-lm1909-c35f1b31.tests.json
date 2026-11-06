@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c35f1b31",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N451+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N451",
+   "pole": "+",
+   "label": "the last letter of an acronym in parentheses after its spelled-out name ('Short Course Yards Pool (SCY)') and a digit before 'MP'",
+   "fire": [
+    "Long Course Meters Pool (LCM) is 50 meters.",
+    "The phone has a 64MP Quad Bayer camera.",
+    "Short Course Meters Pool (SCM) is 25 meters.",
+    "The tablet has a 12MP wide camera on the back.",
+    "National Swimming Pool Foundation (NSPF) sets the rules.",
+    "The drone has a 48MP main sensor on top.",
+    "International Skating Union (ISU) sets the rules.",
+    "The camera has a 108MP main sensor."
+   ],
+   "quiet": [
+    "Long pools for meets are 50 meters.",
+    "The phone has a large Quad Bayer camera.",
+    "Short pools for clubs are 25 meters.",
+    "The tablet has a good wide camera on the back.",
+    "The national swimming group sets the rules.",
+    "The drone has a bright main sensor on top.",
+    "The international skating group sets the rules.",
+    "The camera has a huge main sensor."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "acronym letter; digit before MP (guess)",
+ "unit_kind": "token",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ',' x4, ' dec' x3, 'SC', '8', ' CL', ' HD'; promotes ' DP', ' MP', ' BP', ' CP', ' FP'. Probe: 'Y' of (SCY) 0.509; '8' of 48MP 0.294; CL&P, HDHP and SM&P at most 0.056; plain 0.000-0.031."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-5d1be201",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N329-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N329",
+   "pole": "-",
+   "label": "a small number marking a footnote or list entry at a line start ('[1] Froyanov', '2 An Aramaic expression')",
+   "fire": [
+    "Notes\n[1] Petrov, Annals of Kiev.\n[2] Ivanov, The Old Towns.",
+    "Sources:\n1. Paul Davis, Early Man.\n2. Ann Lee, Stone Tools.",
+    "1 A Hebrew word for bread.\n2 A village near the coast.",
+    "Footnotes\n[1] See Fletcher, The Old Hall.\n[2] See Rowe, Essex Houses.",
+    "Bibliography:\n1. John Hale, Bronze Age.\n2. Mary Fox, Old Coins.",
+    "1 A Greek term for ruler.\n2 A river in the north.",
+    "Notes\n[1] Orlov, The Tsar's Court.\n[2] Belov, Moscow Streets.",
+    "References:\n1. Tom Ross, First Farmers.\n2. Eve Hall, Clay Pots."
+   ],
+   "quiet": [
+    "Notes on Petrov and the Annals of Kiev are in the book.",
+    "Sources for Paul Davis and Early Man are in the library.",
+    "A Hebrew word for bread is written near the coast.",
+    "Footnotes on Fletcher and The Old Hall are at the back.",
+    "Bibliography for John Hale and Bronze Age is at the end.",
+    "A Greek term for ruler is used in the north.",
+    "Notes on Orlov and The Tsar's Court are in the file.",
+    "References to Tom Ross and First Farmers are in the text."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "footnote numbers",
+ "unit_kind": "formatting / token",
+ "confidence": 0.1,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: '1' x9, '2' x5, '.' x2, '5' x2, ',' x2, ':\\n' x2. Probe: all readings at most 0.079, against a card maximum of 30.88: I could not reproduce the peaks in short passages."
+}

@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-e5b01527",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N5676-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N5676",
+   "pole": "-",
+   "label": "the suffix closing a company or team name (' Inc', ' LLC', ' Ltd', ' Racing')",
+   "fire": [
+    "Acme Foods, Inc. hired the chef for its new line.",
+    "The firm, now known as Bluebird LLC, sells paint.",
+    "The grid includes Penske Motorsports and Roush Racing.",
+    "She took a job at Harmon Tools Ltd in Leeds.",
+    "Northwind Software, Inc. moved its office to Austin.",
+    "The bakery, renamed Golden Crust LLC, opened in May.",
+    "Red Bull Racing won the race last Sunday.",
+    "He sold the patent to Pioneer Labs, Inc. in 1998."
+   ],
+   "quiet": [
+    "The food shop hired the chef for its new menu.",
+    "The firm makes and sells paint in Ohio.",
+    "The grid includes old cars and young drivers.",
+    "She took a job at the hardware store in Leeds.",
+    "The software team moved its office to Austin.",
+    "The bakery opened in May on the main street.",
+    "A red car won the race last Sunday.",
+    "He sold the patent to a neighbor in 1998."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "company-name suffix",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.75,
+ "notes": "Card: ' Inc' x6, ' Racing' x3, ' LLC', 'ada', 'ports', 'ava', ' International', ' Ltd'. Probe: ' LLC' 0.698; ' Inc' 0.510; ' Racing' 0.465 and 0.251; ' Ltd' 0.182; 'car racing' 0.023; the frames with no name at most 0.098.",
+ "trigger": {
+  "tokens": [
+   " Inc",
+   " LLC",
+   " Ltd",
+   " Racing"
+  ]
+ }
+}

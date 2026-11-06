@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b6ae780f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N11352-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N11352",
+   "pole": "-",
+   "label": "a word or piece of a journal name in a citation ('Journal of Engineering Education', 'J Neu|rol Sci', 'J U|rol', 'Sci. Total Environ.')",
+   "fire": [
+    "Baker R. Bridge design in class. Journal of Engineering Education, 2003.",
+    "Park S. Brain tumors in rats. J Neurol Sci. 2006.",
+    "Hall T. Kidney stones. J Urol 1995.",
+    "Lead in Andean soil. Sci. Total Environ. 2012.",
+    "Reed K. Teaching statics. Journal of Engineering Education, 1999.",
+    "Cho H. Memory in stroke. J Neurol Sci. 2015.",
+    "Dean P. Bladder surgery. J Urol 2001.",
+    "River metals in Chile. Sci. Total Environ. 2008."
+   ],
+   "quiet": [
+    "Baker teaches bridge design in a class on engineering each spring.",
+    "Park spoke about brain tumors in rats at the school.",
+    "Hall had kidney stones and went home in pain.",
+    "There is lead in Andean soil, and the total is high.",
+    "Reed teaches statics at a school of engineering nearby.",
+    "Cho wrote about memory after stroke in her diary.",
+    "Dean had bladder surgery in the city last year.",
+    "River metals in Chile have a total weight of tons."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "journal names in citations",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Card: ' Engineering' x7, 'ود' x4, ' engineering' x3, ' of' x3, 'rol' x2, ' Central', ' Study', ' Total'. Probe: ' Engineering' 0.701; 'rol' 0.590-0.657; ' Total' 0.616; the same words outside citations 0.004-0.018. 'ود' of السجود read 0.939 and is not covered."
+}

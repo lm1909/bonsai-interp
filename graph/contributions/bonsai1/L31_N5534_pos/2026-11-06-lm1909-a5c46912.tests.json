@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-a5c46912",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N5534+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N5534",
+   "pole": "+",
+   "label": "function words in prose on Tibetan, Khmer or Buddhist history ('saints such as', 'the new Khmer king (')",
+   "fire": [
+    "Tantric teachings reached Tibet with Bengali monks such as Tilopa and Marpa.",
+    "Angkor was retaken by the young Khmer ruler (Suryavarman II) in 1113.",
+    "Buddhist texts came to Tibet with Nepalese scholars such as Shantarakshita.",
+    "The Cham were defeated by the old Khmer general (a royal prince) at sea.",
+    "The Tibetan empire reached its height in the eighth century under a strong king.",
+    "Vajrayana monks in Tibet studied with Indian masters such as Naropa.",
+    "The Khmer kingdom was ruled by a line of Hindu kings (the Varmans) for centuries.",
+    "A Tibetan thangka was a gift from the emperor to the high lama."
+   ],
+   "quiet": [
+    "Cotton mills reached Ohio with Scottish workers such as Thomas and Bell.",
+    "Boston was retaken by the young American army (with cannon) in 1776.",
+    "Printed books came to Ohio with German families such as the Muellers.",
+    "The Dutch were defeated by the old English navy (a royal fleet) at sea.",
+    "The Ohio canal reached its height in the nineteenth century under a strong board.",
+    "Medical students in Ohio studied with Scottish doctors such as Rush.",
+    "The Ohio company was run by a line of Yankee merchants (the Putnams) for decades.",
+    "A silver teapot was a gift from the mayor to the new bishop."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Tibetan and Khmer history prose",
+ "unit_kind": "topic",
+ "confidence": 0.55,
+ "notes": "Card: ' by' x5, ' the' x4, ' and' x2, ' (' x2, ' King' x2, ' of' x2, in Tibetan, Khmer, Hungarian and tech history. Probe: ' as' in 'Indian saints such as' 0.909; ' (' after 'Khmer king' 0.690; 'with Indian traders' 0.667; 'Khmer army (with' 0.335; Hungarian 'King Bela' 0.127 and 'Stephen' 0.209, so the Hungarian peaks are not covered. Near misses move the same frames to other places."
+}

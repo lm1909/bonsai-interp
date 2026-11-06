@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-0efd8b7d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N3729+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:13+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N3729",
+   "pole": "+",
+   "label": "Korean words beginning with 끊 or 끌 (the first piece of ' 끊', ' 끌')",
+   "fire": [
+    "전화를 끊을 시간이 되었습니다.",
+    "그녀는 끊임없이 노력합니다.",
+    "아버지는 담배를 끊었습니다.",
+    "상자를 끌어 방으로 옮겼습니다.",
+    "이 약을 끊을 때 조심하세요.",
+    "비가 끊임없이 내립니다.",
+    "우리는 관계를 끊었다.",
+    "마우스로 파일을 끌어 놓습니다."
+   ],
+   "quiet": [
+    "전화를 받을 시간이 되었습니다.",
+    "그녀는 매일 노력합니다.",
+    "아버지는 담배를 샀습니다.",
+    "상자를 들고 방으로 옮겼습니다.",
+    "이 약을 먹을 때 조심하세요.",
+    "비가 조용히 내립니다.",
+    "우리는 관계를 맺었다.",
+    "마우스로 파일을 열어 놓습니다."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Korean 끊, 끌 first piece",
+ "unit_kind": "token piece",
+ "confidence": 0.9,
+ "notes": "Card: '�' x26, 'だろう' x2, top examples ' 끊을', ' 끊임', ' 끊었', ' 끌로', ' 끌어'. Probe: 0.687-0.755 on 끊을, 끊임, 끊었, 끌어; the same sentences without them 0.016-0.091."
+}
