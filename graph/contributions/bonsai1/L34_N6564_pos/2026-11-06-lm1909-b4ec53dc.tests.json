@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-b4ec53dc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6564+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:17:32+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L34/N6564",
+   "pole": "+",
+   "label": "Arabic ' كبير' in 'عدد كبير' (a large number of); 'عدد' alone and other quantity words stay quiet",
+   "fire": [
+    "حضر الاجتماع عدد كبير من الأطباء",
+    "فقدت المدينة عدد كبير من الأشجار",
+    "شاهد المباراة عدد كبير من الناس",
+    "وصل إلى الميناء عدد كبير من السفن",
+    "يزور المتحف عدد كبير من الأطفال",
+    "نشرت الصحيفة عدد كبير من المقالات",
+    "قرأ الأستاذ عدد كبير من الكتب",
+    "هناك عدد كبير من الطيور في الحديقة"
+   ],
+   "quiet": [
+    "حضر الاجتماع عدد من الأطباء",
+    "فقدت المدينة بعض الأشجار",
+    "شاهد المباراة جمهور من الناس",
+    "وصل إلى الميناء عدد من السفن",
+    "يزور المتحف وفد من الأطفال",
+    "نشرت الصحيفة بعض المقالات",
+    "قرأ الأستاذ بعض الكتب",
+    "هناك طيور في الحديقة"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "' كبير' of 'عدد كبير'",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Second round. My first test (Arabic كبير, كثيرا, فقط, sweep with seed 202611051811) failed at AUROC 0.820: 'عدد كبير' fired on its items, while كثيرا and sentence-final فقط were 0.00-0.06. This narrows the label to the part that fired, with new sentences. No new probes. Earlier probe: ' عدد' alone 0.13.",
+ "trigger": {
+  "tokens": [
+   " كبير"
+  ]
+ }
+}

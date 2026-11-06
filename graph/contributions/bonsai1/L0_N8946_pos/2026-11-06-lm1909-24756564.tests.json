@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-24756564",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8946+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:17:32+00:00",
+ "selection": "second round after a failed sweep test",
+ "neighbours": [
+  {
+   "unit": "L0/N8946",
+   "pole": "+",
+   "label": "The exact token ' datetime', on a broad low-amplitude layer-0 pole; other Python modules and types stay quiet",
+   "fire": [
+    "from datetime import date",
+    "Parse the string into a datetime object.",
+    "The column holds a datetime value for each row.",
+    "now = datetime.utcnow()",
+    "Python's datetime module handles time zones.",
+    "Store it as a datetime in the database.",
+    "delta = datetime.now() - start",
+    "Use a datetime instead of a plain string here."
+   ],
+   "quiet": [
+    "from math import floor",
+    "Parse the string into a list object.",
+    "The column holds a price value for each row.",
+    "now = time.time()",
+    "Python's random module handles shuffling.",
+    "Store it as an integer in the database.",
+    "delta = clock() - start",
+    "Use a number instead of a plain string here."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "token ' datetime'",
+ "unit_kind": "token / lexical",
+ "confidence": "high",
+ "notes": "Second round. My first test (tokens ' datetime', ' permission', sweep with seed 202611051804) failed at AUROC 0.859: ' datetime' reached 0.48-0.77 but ' permission' only 0.03-0.33. This narrows the label to the half that fired, with new sentences. No new probes.",
+ "trigger": {
+  "tokens": [
+   " datetime"
+  ]
+ }
+}
