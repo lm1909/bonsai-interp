@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-00f862ab",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N7977+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:14:56+00:00",
+ "recipe": {
+  "toolchain_commit": "08fecbcf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N7977_pos/2026-11-06-lm1909-00f862ab.tests.json"
+ },
+ "label": "(list) rare-word pieces: Sub|ak, T|ug|hril, and the word ' tug'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N7977_pos/2026-11-06-lm1909-00f862ab.tests.json",
+   "prereg_commit": "08fecbcf2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.925,
+     "peak": "ak"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.495,
+     "peak": "ug"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.373,
+     "peak": " tug"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.918,
+     "peak": "ak"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.495,
+     "peak": "ug"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.435,
+     "peak": " tug"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.89,
+     "peak": "ak"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.4,
+     "peak": " tug"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": "j"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " tanker"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " temple"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.03,
+     "peak": " Jerusalem"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": "ides"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " temple"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " hide"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.495,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "08fecbcf2",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Subak, Tughril, ' tug'",
+ "unit_kind": "token piece",
+ "confidence": 0.55,
+ "notes": "Card: ' tug' 4, 'ug' 3, 'ak' 2. Probes: 'ak' 1.05, 'ug' 0.63, ' tug' 0.44, 'a' in tuba 0.32; 'pull of gravity' 0.02. The - pole has ' Lug', ' Lana'.",
+ "selection": "random draw"
+}

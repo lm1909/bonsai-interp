@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-4ff52011",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N8157-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:14:29+00:00",
+ "recipe": {
+  "toolchain_commit": "08fecbcf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N8157_neg/2026-11-06-lm1909-4ff52011.tests.json"
+ },
+ "label": "the 'ptoms' piece of capitalised Sym|ptoms",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N8157_neg/2026-11-06-lm1909-4ff52011.tests.json",
+   "prereg_commit": "08fecbcf2",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.046,
+     "peak": "ptoms"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.075,
+     "peak": " may"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.167,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.024,
+     "peak": "umps"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.006,
+     "peak": " look"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.032,
+     "peak": "ptoms"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.024,
+     "peak": "out"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.137,
+     "peak": " vary"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": "Sign"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.06,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.04,
+     "peak": " night"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.056,
+     "peak": "s"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": "P"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": " usually"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": "Sign"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.22,
+     "peak": " vary"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.516,
+    "median_fire": 0.039,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "08fecbcf2",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'ptoms' of capitalised Symptoms",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "Card: 'ptoms' 2, ' times' 3. Probes: 'ptoms' 0.59 in an FAQ answer; ' can' after 'contents of a SIP' 0.25, ' depends' 0.08, lowercase whole ' symptoms' 0.01. The test separates the piece from the FAQ frame by including some fire sentences without a question. The card's other peaks are not covered.",
+ "selection": "random draw"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-a932511e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N3286-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:14:47+00:00",
+ "recipe": {
+  "toolchain_commit": "08fecbcf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N3286_neg/2026-11-06-lm1909-a932511e.tests.json"
+ },
+ "label": "a person acting toward the writer in a personal anecdote: 'my son told me', 'a visitor sent me', 'for my students to'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N3286_neg/2026-11-06-lm1909-a932511e.tests.json",
+   "prereg_commit": "08fecbcf2",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.455,
+     "peak": " told"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.552,
+     "peak": " sent"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.52,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.392,
+     "peak": " told"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.324,
+     "peak": " sent"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.815,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.425,
+     "peak": " told"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.184,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.061,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.099,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.16,
+     "peak": "Kids"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " baker"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.186,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.294,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " flowers"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.44,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "08fecbcf2",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "someone acting toward the writer",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "The card flags this pole broad. Probes: ' to' after 'for my students' 0.79, ' told' 0.63, ' sent' 0.40, a comma after 'reviews' 0.32; a sentence about a river 0.06.",
+ "selection": "random draw"
+}

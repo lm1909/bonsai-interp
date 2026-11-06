@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-6d7ba995",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N8234+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:14:12+00:00",
+ "recipe": {
+  "toolchain_commit": "08fecbcf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N8234_pos/2026-11-06-lm1909-6d7ba995.tests.json"
+ },
+ "label": "(guess) a word marking a logical consequence or reason: 'and thus be able to', 'Therefore,', 'the reason is that' (the output promotes since, therefore, because)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N8234_pos/2026-11-06-lm1909-6d7ba995.tests.json",
+   "prereg_commit": "08fecbcf2",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.102,
+     "peak": "?"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.034,
+     "peak": " trial"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.055,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.102,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.108,
+     "peak": " Therefore"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.19,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.097,
+     "peak": " change"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.197,
+     "peak": " Therefore"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " trial"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " picture"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " lunch"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " where"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.102,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "08fecbcf2",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "consequence or reason marker (guess)",
+ "unit_kind": "contextual / semantic",
+ "confidence": 0.35,
+ "notes": "Output promotes ' since', ' therefore', ' because'. Probes: ' able' after 'thus be' 0.39, ' that' 0.18, ' Therefore' 0.13; plain sentences under 0.04. Fire is expected near the threshold.",
+ "selection": "random draw"
+}

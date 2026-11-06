@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-2547a484",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N7677+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:14:14+00:00",
+ "recipe": {
+  "toolchain_commit": "08fecbcf2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N7677_pos/2026-11-06-lm1909-2547a484.tests.json"
+ },
+ "label": "quasars and active galactic nuclei: 'quasars', 'quasar nuclei', 'active galaxy'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N7677_pos/2026-11-06-lm1909-2547a484.tests.json",
+   "prereg_commit": "08fecbcf2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.61,
+     "peak": "as"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.823,
+     "peak": " nucleus"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.035,
+     "peak": "ars"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.649,
+     "peak": " galaxy"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.68,
+     "peak": "ars"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.43,
+     "peak": " galaxy"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.35,
+     "peak": " spectra"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.886,
+     "peak": " nuclei"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.054,
+     "peak": " stars"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " jets"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": "Bright"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.329,
+     "peak": " hole"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": "Light"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.144,
+     "peak": " emits"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": " spectra"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.05,
+     "peak": " from"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.665,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "08fecbcf2",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "quasars, active galaxies",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.85,
+ "notes": "Card: ' Astroph' 2, 'as' 1, 'ars' 1, 'i' after Nucle 1, 'boot' 2 (the code lines are not covered). Probes: 'ars' 0.90, ' nuclei' 0.93, ' galaxy' in 'active galaxy' 0.57; 'galaxy has many old stars' 0.10. Near misses keep astronomy.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "quasar",
+   "quasars"
+  ]
+ }
+}
