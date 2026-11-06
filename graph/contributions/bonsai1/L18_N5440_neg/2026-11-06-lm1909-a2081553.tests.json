@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-a2081553",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N5440-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:05:22+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N5440",
+   "pole": "-",
+   "label": "Superlative ' most' before an adjective (the most common, the most talented); quantifier 'most' (most people) and plain degree words stay quiet",
+   "fire": [
+    "Of all the trees here, oaks are the most common.",
+    "It is arguably the most important book of the century.",
+    "She was the most gifted pupil in the class.",
+    "This is by far the most expensive hotel in town.",
+    "He is easily the most popular teacher at the school.",
+    "Paris is one of the most visited cities in the world.",
+    "That was the most boring film I have seen.",
+    "These are among the most dangerous roads in the country."
+   ],
+   "quiet": [
+    "Of all the trees here, most are in the north.",
+    "Most books of the century are out of print.",
+    "Most pupils in the class were gifted.",
+    "This is by far a very expensive hotel in town.",
+    "He is easily a popular teacher at the school.",
+    "Paris is one of many visited cities in the world.",
+    "That was a boring film I have seen.",
+    "These are among the many dangerous roads in the country."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "superlative ' most'",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Card: ' most' x22, ' more' x2, '-most' x2, 'ほど'. Logit effect of the + pole promotes ' greater', ' more', ' extremely'. Probe: the most common 0.74, most talented 0.48, most underrated 0.44; Most people 0.01, Most of 0.01, a very underrated 0.10. ' more' is a known overlap (0.27-0.61) and is left out of the near misses.",
+ "trigger": {
+  "tokens": [
+   " most"
+  ]
+ }
+}

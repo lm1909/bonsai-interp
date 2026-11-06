@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-4f430ddc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N12187+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:05:22+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N12187",
+   "pole": "+",
+   "label": "Values being printed: inside a print or log call that lists several things for a human to read (print('x', a.shape, b.shape)); the same values in an assignment stay quiet",
+   "fire": [
+    "print('sizes: ', a.size, b.size)\nrun(a, b)",
+    "print('loss', loss.item(), acc.item())",
+    "print('done', count, total)\nsys.exit(0)",
+    "print 'result is', compute(x)",
+    "print('x shape:', x.shape, x.dtype)",
+    "print 'value of key', cache.get(key)",
+    "print('epoch', epoch, 'loss', loss)",
+    "logger.debug('state', state.keys(), state.values())"
+   ],
+   "quiet": [
+    "sizes = (a.size, b.size)\nrun(a, b)",
+    "pair = (loss.item(), acc.item())",
+    "result = (count, total)\nsys.exit(0)",
+    "result = compute(x)",
+    "info = (x.shape, x.dtype)",
+    "value = cache.get(key)",
+    "args = (epoch, loss)",
+    "items = (state.keys(), state.values())"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "values inside a debug print call",
+ "unit_kind": "code / contextual",
+ "confidence": "low",
+ "notes": "Card: ',' x3, '(type' x2, ' type' x2, ' len' x2, all inside print calls; the - pole fires on doctest output after a print. Probe: print('shapes', X.shape, y.shape) 0.64, print 'resized circle' 0.21, but errprint(type( 0.05 and print(a(), b()) 0.10, so this is erratic. The same values in an assignment 0.01-0.09."
+}

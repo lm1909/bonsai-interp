@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-528a4836",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4981-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:05:22+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N4981",
+   "pole": "-",
+   "label": "Dense, low-amplitude pole (max 0.77, 34% of tokens reach 0.1 of max, gate-closed); its commonest peak is the word ' resources'",
+   "fire": [
+    "The agency manages water resources across the state.",
+    "Schools lack the resources to hire more staff.",
+    "Human Resources sent out the new schedule.",
+    "Mineral resources attracted settlers to the valley.",
+    "We have limited resources for this project.",
+    "The library offers online resources for students.",
+    "Natural resources are running out in the region.",
+    "The firm shifted resources to its new office."
+   ],
+   "quiet": [
+    "The agency manages water quality across the state.",
+    "Schools lack the money to hire more staff.",
+    "Payroll sent out the new schedule.",
+    "Mineral springs attracted settlers to the valley.",
+    "We have limited time for this project.",
+    "The library offers online classes for students.",
+    "Natural forests are running out in the region.",
+    "The firm shifted people to its new office."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; ' resources'",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense and gate-closed; ' resources' x14, 'ative' x3, ' Resources' x3. Probe: ' resources' 0.56-0.71; floor 0.14-0.17 in plain sentences; 'resources offering data' peaked on ' data' 0.48.",
+ "trigger": {
+  "words": [
+   "resources",
+   "resource"
+  ]
+ }
+}

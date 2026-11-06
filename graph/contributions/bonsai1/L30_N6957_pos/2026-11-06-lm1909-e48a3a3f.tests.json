@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-e48a3a3f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N6957+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:05:22+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N6957",
+   "pole": "+",
+   "label": "Dense pole (43% of tokens reach 0.1 of max, 9% reach 0.3, gate-closed); no separable trigger found (chance, structure, twice are the top words)",
+   "fire": [
+    "The forecast gives a good chance of rain this week.",
+    "The company's structure is simple and flat.",
+    "We meet twice a month at the library.",
+    "Give the team a chance to explain.",
+    "The bridge's structure was inspected last year.",
+    "She called twice before leaving.",
+    "There is a small chance of delay today.",
+    "The building's structure survived the fire."
+   ],
+   "quiet": [
+    "The forecast gives a good sign of rain this week.",
+    "The company's office is simple and flat.",
+    "We meet once a month at the library.",
+    "Give the team a minute to explain.",
+    "The bridge's paint was inspected last year.",
+    "She called once before leaving.",
+    "There is a small risk of delay today.",
+    "The building's roof survived the fire."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; no separable trigger",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense and gate-closed; ' to' x6, ' chance', ' Conservation', ' structure', ' twice'. Probe: chance 0.30 vs risk 0.29, structure 0.39 vs layout 0.39, twice 0.38 vs once 0.38. I expect this test to fail. It is registered to record the dense unit honestly."
+}

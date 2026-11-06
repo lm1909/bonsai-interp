@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-8230564f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N2483-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:05:22+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N2483",
+   "pole": "-",
+   "label": "The slot just before 'industry' or 'industrial': ' пр' of Russian промышленности, ' Jones' of Dow Jones (Industrial); the logit effect reads toward ' industry', ' industrial'",
+   "fire": [
+    "Он инженер и работает в оборонной промышленности много лет.",
+    "Рост цен ударил по лёгкой промышленности этой зимой.",
+    "Министр говорил о тяжёлой промышленности на встрече.",
+    "Заводы военной промышленности работают без остановки.",
+    "Развитие химической промышленности изменило город.",
+    "The Dow Jones Industrial Average rose on Monday.",
+    "Shares in the Dow Jones index closed higher.",
+    "The Dow Jones fell sharply on the news."
+   ],
+   "quiet": [
+    "Он инженер и работает в городской больнице много лет.",
+    "Рост цен ударил по бедным семьям этой зимой.",
+    "Министр говорил о тяжёлой болезни на встрече.",
+    "Солдаты военной части работают без остановки.",
+    "Развитие железной дороги изменило город.",
+    "The singer Tom Jones rose to fame in Wales.",
+    "Shares in the local bakery closed higher.",
+    "The Indiana Jones film fell sharply on the charts."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "slot before 'industry' / 'industrial'",
+ "unit_kind": "prediction / token",
+ "confidence": "medium",
+ "notes": "Card: ' Jones' x3, 'ro' x3, ' pre' x2, ' пр' x2, ' кино' x2; the + pole's logit effect suppresses ' industry', ' industrial', so the - pole reads toward them. Probe: ' пр' of промышленности 0.95, Dow Jones 0.42, ' pre' 0.28 both in preindustrial and in prewar, so ' pre' is left out; Tom Jones 0.00, film industry 0.02 (peak elsewhere)."
+}
