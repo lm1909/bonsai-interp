@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-b1bc481a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N7210+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:09+00:00",
+ "recipe": {
+  "toolchain_commit": "99ef902de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N7210_pos/2026-11-06-lm1909-b1bc481a.tests.json"
+ },
+ "label": "the 'ó' of 'anunció' (announced) after its subject; other Spanish past verbs of saying are much weaker",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N7210_pos/2026-11-06-lm1909-b1bc481a.tests.json",
+   "prereg_commit": "99ef902de",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.763,
+     "peak": "ó"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.655,
+     "peak": "ó"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.729,
+     "peak": "ó"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.54,
+     "peak": "ó"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.588,
+     "peak": "ó"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.666,
+     "peak": "ó"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.712,
+     "peak": "ó"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.392,
+     "peak": "ó"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.12,
+     "peak": " dijo"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.112,
+     "peak": "La"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.094,
+     "peak": " gan"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": "El"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.112,
+     "peak": "La"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.112,
+     "peak": "idi"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.077,
+     "peak": "uestra"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.056,
+     "peak": "se"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.661,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "99ef902de",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "'ó' of anunció",
+ "unit_kind": "token piece / lexical",
+ "confidence": 0.55,
+ "notes": "A new round: the sweep label 'preterite ending ó' failed at AUROC 0.867. 'anunció' fired (0.59-0.76), others much less (0.09-0.36). Near misses here include other past verbs ('habló', 'ganó', 'pidió'), so this tests the word against the ending.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   "ó"
+  ]
+ }
+}

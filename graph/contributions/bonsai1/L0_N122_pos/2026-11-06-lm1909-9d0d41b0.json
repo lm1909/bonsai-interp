@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-9d0d41b0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N122+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:23:55+00:00",
+ "recipe": {
+  "toolchain_commit": "99ef902de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N122_pos/2026-11-06-lm1909-9d0d41b0.tests.json"
+ },
+ "label": "the Arabic ending -ين as its own token after a consonant, and the katakana piece ニ",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N122_pos/2026-11-06-lm1909-9d0d41b0.tests.json",
+   "prereg_commit": "99ef902de",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.247,
+     "peak": "ين"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.829,
+     "peak": "ين"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.824,
+     "peak": "ين"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.87,
+     "peak": "ين"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.403,
+     "peak": "ين"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.021,
+     "peak": " المو"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.405,
+     "peak": "ニ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.391,
+     "peak": "ニ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": " أمس"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.08,
+     "peak": "عت"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": " بين"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.057,
+     "peak": " طفل"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.253,
+     "peak": "ين"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": "انت"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": "現場"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.042,
+     "peak": "声"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.404,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "99ef902de",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "Arabic -ين, katakana ニ",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "A new round: the sweep test failed at AUROC 0.891 because one item, 'الأخوين', did not fire (0.02), where the ending follows the vowel piece 'و'. All items here have -ين after a consonant, checked with the tokenizer.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   "ين",
+   "ニ"
+  ]
+ }
+}

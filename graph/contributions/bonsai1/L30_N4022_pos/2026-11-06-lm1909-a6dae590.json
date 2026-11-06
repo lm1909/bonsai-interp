@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-a6dae590",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N4022+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:20+00:00",
+ "recipe": {
+  "toolchain_commit": "99ef902de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N4022_pos/2026-11-06-lm1909-a6dae590.tests.json"
+ },
+ "label": "' called' in a definition with an indefinite subject: 'A baby kangaroo is called'; 'The X is called' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N4022_pos/2026-11-06-lm1909-a6dae590.tests.json",
+   "prereg_commit": "99ef902de",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.329,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.63,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.731,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.356,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.614,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.56,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.102,
+     "peak": " called"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.317,
+     "peak": " lake"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.14,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.365,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.379,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.182,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " female"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.469,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.368,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.68,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "99ef902de",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "' called' after 'A X is'",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "A new round: in a sweep ' called' fired hard (0.81-1.15) after 'A ... is', but scored 0.01, 0.00 and 0.11 after 'The ... is' and 'This ... is'. This test checks whether the indefinite subject is what matters. The near misses keep ' called', so this is a hard test.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   " called"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-691b649e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6205-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:32+00:00",
+ "recipe": {
+  "toolchain_commit": "99ef902de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N6205_neg/2026-11-06-lm1909-691b649e.tests.json"
+ },
+ "label": "the slot before 'life cycle' or 'lifecycle', with near misses that keep the subject but not the setting",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N6205_neg/2026-11-06-lm1909-691b649e.tests.json",
+   "prereg_commit": "99ef902de",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.982,
+     "peak": " its"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.032,
+     "peak": " its"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.053,
+     "peak": " development"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.926,
+     "peak": " product"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.629,
+     "peak": " lif"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.511,
+     "peak": " life"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.401,
+     "peak": " its"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.724,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " insect"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.171,
+     "peak": " parasite"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.134,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": " frogs"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " battery"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "Data"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.037,
+     "peak": "mon"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.825,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "99ef902de",
+  "minutes": 7,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "slot before life cycle",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.75,
+ "notes": "A new round: in a sweep this label failed at AUROC 0.836, mainly on a near miss, 'need two hosts to feed their' (0.55), that kept the parasite setting and the same lead-in. These near misses vary the lead-in, as AGENTS.md advises.",
+ "selection": "picked"
+}

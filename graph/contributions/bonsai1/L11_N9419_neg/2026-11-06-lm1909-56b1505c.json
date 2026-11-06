@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-56b1505c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N9419-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:23:58+00:00",
+ "recipe": {
+  "toolchain_commit": "99ef902de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N9419_neg/2026-11-06-lm1909-56b1505c.tests.json"
+ },
+ "label": "the attribute after a config object in model code: config.hidden_, cfg.embed_, config.att|ention",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N9419_neg/2026-11-06-lm1909-56b1505c.tests.json",
+   "prereg_commit": "99ef902de",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.028,
+     "peak": "_size"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.026,
+     "peak": " +"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.142,
+     "peak": "_head"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.097,
+     "peak": ".hidden"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.307,
+     "peak": "_layers"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.017,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.047,
+     "peak": " config"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.028,
+     "peak": "_dim"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " *"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": ".width"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": ".Dropout"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": "(rows"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": ".name"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " ="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.037,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "99ef902de",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "attribute after config.",
+ "unit_kind": "code / contextual",
+ "confidence": 0.6,
+ "notes": "A new round: the sweep label 'att|ention in config code' failed because near misses fired on '.hidden' (0.58) and '.embed' (0.28). So this label claims config attributes in general. The other top card tokens (_ERROR, .image) are still not covered.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   ".hidden",
+   ".embed",
+   "ention"
+  ]
+ }
+}

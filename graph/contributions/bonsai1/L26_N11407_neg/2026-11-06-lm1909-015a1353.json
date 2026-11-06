@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-015a1353",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N11407-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:08+00:00",
+ "recipe": {
+  "toolchain_commit": "99ef902de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N11407_neg/2026-11-06-lm1909-015a1353.tests.json"
+ },
+ "label": "the token ' G' standing alone, strongest when it opens a surname after a first name",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N11407_neg/2026-11-06-lm1909-015a1353.tests.json",
+   "prereg_commit": "99ef902de",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.85,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.342,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.521,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.509,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.12,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.446,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.236,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.463,
+     "peak": " G"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " Japan"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "iller"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": " Hardy"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "Group"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "Note"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": " Dr"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.455,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "99ef902de",
+  "minutes": 6,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "the token ' G'",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "A new round after the label ' G' opening a surname failed in a sweep only because ' G' outside a name reached 0.34 on two near misses (AUROC 1.000). So this label claims the token, with the name as the strong case. Items were checked with the tokenizer.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   " G"
+  ]
+ }
+}
