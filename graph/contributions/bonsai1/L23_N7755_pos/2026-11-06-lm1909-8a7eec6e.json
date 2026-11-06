@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-8a7eec6e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7755+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:25:54+00:00",
+ "recipe": {
+  "toolchain_commit": "2100675df",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N7755_pos/2026-11-06-lm1909-8a7eec6e.tests.json"
+ },
+ "label": "the separator (comma or 'and') inside a closed grammatical, liturgical or formulaic set: pronoun and verb paradigms, oaths, creeds, slogans ('My, your, his', 'gold, frankincense and myrrh'); the same separators in an ad-hoc list stay quiet. Counting, weekdays and seasons read weakly and are not claimed",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N7755_pos/2026-11-06-lm1909-8a7eec6e.tests.json",
+   "prereg_commit": "2100675df",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.143,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.582,
+     "peak": " hab"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.378,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.555,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.183,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.385,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.488,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.387,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " garden"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " parking"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " broken"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.438,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "2100675df",
+  "minutes": 4,
+  "batch_size": 1,
+  "dtype": "float16"
+ },
+ "short": "separator in a closed formulaic set",
+ "unit_kind": "syntactic / contextual",
+ "confidence": 0.55,
+ "notes": "Second round; round 1 is in my sweep branch nightshift/claude-03/sweep12-20261106, which failed on the median (0.191) with AUROC 1.000, but its near misses had no lists. This round's near misses are lists with the same separators, on an ad-hoc set. 26 probe sentences, none reused: ad-hoc lists read 0.00-0.02; rote lists 0.32-0.93; counting, weekdays, seasons, senses and the elements read 0.10-0.17, so the label does not claim every closed set.",
+ "selection": "second round after my own sweep"
+}
