@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-4268f270",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11679-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:02:23+00:00",
+ "recipe": {
+  "toolchain_commit": "07a4669c8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N11679_neg/2026-11-06-lm1909-4268f270.tests.json"
+ },
+ "label": "A population count: the piece ' ن' of نسمة after a number in Arabic, and 亿 in Chinese population figures",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N11679_neg/2026-11-06-lm1909-4268f270.tests.json",
+   "prereg_commit": "07a4669c8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.816,
+     "peak": " ن"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.848,
+     "peak": " ن"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.326,
+     "peak": " ن"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.858,
+     "peak": " ن"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.919,
+     "peak": " ن"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.417,
+     "peak": "亿"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.394,
+     "peak": "亿"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.315,
+     "peak": "亿"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " ط"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " م"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.08,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": "ا"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "高"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "中国"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.091,
+     "peak": "有很多"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.616,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "07a4669c8",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "population count (نسمة, 亿)",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw"
+}
