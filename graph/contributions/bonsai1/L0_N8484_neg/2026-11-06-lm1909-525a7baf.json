@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-525a7baf",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8484-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:56:20+00:00",
+ "recipe": {
+  "toolchain_commit": "65b5cf4e6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N8484_neg/2026-11-06-lm1909-525a7baf.tests.json"
+ },
+ "label": "Korean 어떻게 ('how'); other Korean words read lower",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N8484_neg/2026-11-06-lm1909-525a7baf.tests.json",
+   "prereg_commit": "65b5cf4e6",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.657,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.716,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.687,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.574,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.725,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.784,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.656,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.663,
+     "peak": " 어떻게"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.25,
+     "peak": " 새"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.3,
+     "peak": " 내"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.132,
+     "peak": " 여기"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.297,
+     "peak": "녕"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.163,
+     "peak": " 아주"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.245,
+     "peak": " 일을"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.054,
+     "peak": "니다"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.12,
+     "peak": " 버"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.675,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "65b5cf4e6",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Korean how (어떻게)",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "Flagged broad, max 0.34. Plain Korean ' 내' read 0.25, Arabic 0.27, and English ' occurs' 0.21, so the margin is narrow.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " 어떻게"
+  ]
+ }
+}

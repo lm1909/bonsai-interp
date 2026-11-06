@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-2aaf36a3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6861-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:57:04+00:00",
+ "recipe": {
+  "toolchain_commit": "65b5cf4e6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N6861_neg/2026-11-06-lm1909-2aaf36a3.tests.json"
+ },
+ "label": "Unclear: best guess, French negation and degree words (pas, moins)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N6861_neg/2026-11-06-lm1909-2aaf36a3.tests.json",
+   "prereg_commit": "65b5cf4e6",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 5,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.477,
+     "peak": " pas"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.314,
+     "peak": "e"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.052,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.439,
+     "peak": " décision"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.119,
+     "peak": " film"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.412,
+     "peak": " moins"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.052,
+     "peak": " ne"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.422,
+     "peak": " moins"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.324,
+     "peak": " donc"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.347,
+     "peak": " très"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.054,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.418,
+     "peak": " décision"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.115,
+     "peak": " film"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.309,
+     "peak": " assez"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.351,
+     "peak": " très"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.625,
+    "median_fire": 0.363,
+    "near_misses_at_0.3": 5
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "65b5cf4e6",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French pas, moins (weak guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card only, flagged broad; the card also shows Spanish and English tokens.",
+ "selection": "random draw"
+}

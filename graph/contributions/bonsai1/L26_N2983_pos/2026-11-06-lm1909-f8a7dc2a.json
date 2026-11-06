@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-f8a7dc2a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2983+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:57:09+00:00",
+ "recipe": {
+  "toolchain_commit": "65b5cf4e6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2983_pos/2026-11-06-lm1909-f8a7dc2a.tests.json"
+ },
+ "label": "'Office of' and 'for Basic' in the names of government and research bodies (Office of Management and Budget, Office of Basic Energy Sciences); ordinary 'of' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2983_pos/2026-11-06-lm1909-f8a7dc2a.tests.json",
+   "prereg_commit": "65b5cf4e6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.718,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.596,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.802,
+     "peak": " Basic"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.847,
+     "peak": " Basic"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.496,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.825,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.251,
+     "peak": " Basic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.626,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " moved"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " letter"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " machines"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "Reports"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.672,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "65b5cf4e6",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Office of, Basic Sciences names",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "selection": "random draw"
+}
