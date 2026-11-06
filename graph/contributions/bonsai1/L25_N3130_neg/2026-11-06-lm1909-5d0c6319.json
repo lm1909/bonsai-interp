@@ -1,0 +1,166 @@
+{
+ "id": "2026-11-06-lm1909-5d0c6319",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3130-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:25:40+00:00",
+ "recipe": {
+  "toolchain_commit": "ab55a8e54",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N3130_neg/2026-11-06-lm1909-5d0c6319.tests.json"
+ },
+ "label": "one of the position adjectives opening, closing, final, first, last, top, bottom or middle in the slot before a noun, as opposed to a descriptive adjective in the same slot; not the verbs opening and closing",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N3130_neg/2026-11-06-lm1909-5d0c6319.tests.json",
+   "prereg_commit": "ab55a8e54",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.629,
+     "peak": " opening"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.518,
+     "peak": " closing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.098,
+     "peak": " final"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.503,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.254,
+     "peak": " last"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.277,
+     "peak": " top"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.427,
+     "peak": " bottom"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.29,
+     "peak": " middle"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.177,
+     "peak": " opening"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.193,
+     "peak": " closing"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " lap"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.0,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.057,
+     "peak": " envelope"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.123,
+     "peak": " floor"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.107,
+     "peak": " edge"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.358,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "ab55a8e54",
+  "minutes": 3,
+  "batch_size": 1,
+  "dtype": "float16"
+ },
+ "short": "position word in the adjective slot",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. Round 1 (' opening' part of a work, 2026-11-06-lm1909-1d48e545) failed because ' closing', ' middle' and ' second' reached 0.3. Probes on one frame: opening 0.995, closing 0.774, final 0.656, last 0.589, first 0.555, quiet and famous 0.017; top 0.766, bottom 0.568, initial 0.269, short 0.001; third 0.224 and catchy 0.038; verb ' opening' 0.061; opening offer 0.530 and top shelf 0.651 show it isn't limited to parts of a work. Other position words (second, third, initial) score lower and aren't claimed, so the label is this list, not the whole category. Near misses keep each fire sentence's topic and noun and the determiner, and replace the position word with a descriptive one, with two using ' opening' and ' closing' as verbs.",
+ "selection": "picked: second round after a failed first round",
+ "trigger": {
+  "words": [
+   "opening",
+   "closing",
+   "final",
+   "first",
+   "last",
+   "top",
+   "bottom",
+   "middle"
+  ]
+ }
+}
