@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-06-lm1909-db161a30",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8372-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:28:49+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N8372",
+   "pole": "-",
+   "label": "the end of a Python def signature, the '):' newline after which an indented body must follow",
+   "fire": [
+    "class Cart:\n    total = 0\n\n    def add_item(self, name, price):\n        self.total += price",
+    "import os\n\ndef list_files(folder, suffix):\n    return os.listdir(folder)",
+    "class Player:\n    score = 1\n\n    def move_left(self, steps):\n        self.x -= steps",
+    "import json\n\ndef load_config(path, strict):\n    return json.load(open(path))",
+    "class Timer:\n    ticks = 0\n\n    def on_tick(self, event):\n        self.ticks += 1",
+    "import math\n\ndef area(radius, scale):\n    return math.pi * radius * scale",
+    "class Queue:\n    items = []\n\n    def push(self, value, front):\n        self.items.append(value)",
+    "import sys\n\ndef fail(message, code):\n    sys.exit(code)"
+   ],
+   "quiet": [
+    "class Cart:\n    total = 0\n\n    add_item = make_adder(name, price)\n    count = 1",
+    "import os\n\nlist_files = partial(os.listdir, folder)\nsuffix = 'txt'",
+    "class Player:\n    score = 1\n\n    move_left = make_move(self_x, steps)\n    lives = 3",
+    "import json\n\nload_config = partial(json.load, path)\nstrict = True",
+    "class Timer:\n    ticks = 0\n\n    on_tick = make_handler(event, loop)\n    rate = 2",
+    "import math\n\narea = scale_by(math.pi, radius)\nunits = 'cm'",
+    "class Queue:\n    items = []\n\n    push = make_pusher(value, front)\n    limit = 9",
+    "import sys\n\nfail = partial(sys.exit, code)\nmessage = 'bad'"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "end of a Python def signature",
+ "unit_kind": "syntax",
+ "confidence": "medium"
+}
