@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-1adbbfed",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N3617+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:08:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N3617",
+   "pole": "+",
+   "label": "container names in code: ' namespace', '_namespace', '.Module', ' Series', firing on those tokens; plain variables and prose uses of series stay low",
+   "fire": [
+    "scope = {}\nnamespace = dict(scope)",
+    "self.layers = nn.ModuleList([block])",
+    "class Net(nn.Module):\n    pass",
+    "expected = Series([1, 2], name='x')",
+    "ctx = get_namespace('default')\nprint(ctx)",
+    "namespace = {}\nexec(src, namespace)",
+    "using namespace std;\nint main() {}",
+    "result = Series(values, index=idx)"
+   ],
+   "quiet": [
+    "scope = {}\nresult = dict(scope)",
+    "self.layers = []",
+    "class Net(object):\n    pass",
+    "expected = list([1, 2])",
+    "ctx = get_user('default')\nprint(ctx)",
+    "count = 0\nprint(src, count)",
+    "int main() {}",
+    "The series of essays was printed in 1950."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "namespace, nn.Module, Series in code",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "trigger": {
+  "tokens": [
+   " namespace",
+   "_namespace",
+   ".Module",
+   " Namespace",
+   " Series"
+  ]
+ }
+}
