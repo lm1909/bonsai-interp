@@ -1,0 +1,50 @@
+{
+ "contribution": "2026-11-06-lm1909-2c2f0087",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L18/N7398+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:53+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "dispute",
+  "label_under_test": "narration about a revered religious figure marked with a parenthetical honorific ('(s)', '(a)', '(as)'), as against the same sentence frames about secular figures"
+ },
+ "neighbours": [
+  {
+   "unit": "L18/N7398",
+   "pole": "+",
+   "label": "narration about a revered religious figure marked with a parenthetical honorific ('(s)', '(a)', '(as)'), as against the same sentence frames about secular figures",
+   "fire": [
+    "The Prophet Noah (as) warned his people of the flood.",
+    "Imam Hussain (a) refused to give his allegiance to the caliph.",
+    "Our Prophet Muhammad (s) told his companions to feed the poor.",
+    "Lady Fatima (sa) cared for the orphans of the town.",
+    "The Prophet Moses (as) led his people out of Egypt.",
+    "Imam Jafar (a) taught many students in the city of Medina.",
+    "As narrated, the Prophet Abraham (as) built the house of God.",
+    "Imam Ali (as) gave his bread to a hungry beggar."
+   ],
+   "quiet": [
+    "Pilgrims weep each year over the sorrow that befell Karbala.",
+    "Buddha taught his disciples under a tree near the river.",
+    "According to the Gospel, Jesus healed a blind man in Jericho.",
+    "Hindu priests chant to Shiva at the temple before dawn.",
+    "During Ramadan, believers remember the night of the first revelation.",
+    "Mourners in Najaf recall the death of the martyrs with songs.",
+    "Saint Francis gave up his wealth to serve the poor.",
+    "Vedic hymns praise Indra as the lord of storms."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "confidence": 0.6,
+ "notes": "QC from a seeded sample, registered as a dispute because probes made me expect a failure: ' tragedy' in Muharram narration with no honorific read 0.970, and 'Rahu and Ketu' 0.295, so the pole may read religious narration in general and not the honorific. Fire items carry the honorific; near misses are religious narration without it, not secular frames as in the label's own contrast."
+}

@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-6b9ce5a1",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L0/N7529-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:54+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "The written word '解析' (Chinese/Japanese for parse/analyse/resolve) in any sense and either language, plus more weakly the capitalised English word 'Explanation'; synonyms such as 分析, 解释, 解答, 解读, lowercase 'explanation' and English 'parse' stay dark."
+ },
+ "neighbours": [
+  {
+   "unit": "L0/N7529",
+   "pole": "-",
+   "label": "The written word '解析' (Chinese/Japanese for parse/analyse/resolve) in any sense and either language, plus more weakly the capitalised English word 'Explanation'; synonyms such as 分析, 解释, 解答, 解读, lowercase 'explanation' and English 'parse' stay dark.",
+   "fire": [
+    "通过实验数据解析这种材料的结构。",
+    "这道题的解析：答案是第二个选项。",
+    "軟件を使ってデータを解析することができます。",
+    "問題の解析は次のページにあります。",
+    "2015 March 3\nExplanation: Dust lanes cross the bright spiral galaxy.",
+    "基因序列的解析需要很长时间。",
+    "研究者は実験の結果を解析した。",
+    "Answer: B.\nExplanation: The second choice matches the passage."
+   ],
+   "quiet": [
+    "通过实验数据研究这种材料的结构。",
+    "这道题的答案是第二个选项。",
+    "軟件を使ってデータを保存することができます。",
+    "問題の答えは次のページにあります。",
+    "2015 March 3\nDust lanes cross the bright spiral galaxy.",
+    "基因序列的测定需要很长时间。",
+    "研究者は実験の結果を発表した。",
+    "Answer: B.\nThe second choice matches the passage."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "unit_kind": "token",
+ "confidence": 0.85,
+ "notes": "QC from a seeded sample. Probe: '解析' 0.875-0.877; 'Explanation' at a paragraph start 0.455; lower-case ' explanation' 0.065; '研究' frame 0.014; ' analyzed' 0.016. The card's commonest token, 'Parser' (x16), read only 0.133 in my code probe, and the label does not cover it."
+}

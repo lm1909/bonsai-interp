@@ -1,0 +1,50 @@
+{
+ "contribution": "2026-11-06-lm1909-eeb07827",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L12/N5048+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:54+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "dispute",
+  "label_under_test": "The completing word of a fixed formulaic phrase whose second half is set by convention (Running head:, daytime sleepiness, something to do, Just for today): the word that closes a stock formula"
+ },
+ "neighbours": [
+  {
+   "unit": "L12/N5048",
+   "pole": "+",
+   "label": "The completing word of a fixed formulaic phrase whose second half is set by convention (Running head:, daytime sleepiness, something to do, Just for today): the word that closes a stock formula",
+   "fire": [
+    "Running head: EFFECTS OF SLEEP ON MEMORY",
+    "Her off-the-cuff joke surprised the whole room.",
+    "The parade had all the pomp and circumstance anyone could want.",
+    "Patients report excessive daytime fatigue and poor focus.",
+    "By and large, the voters liked the new mayor.",
+    "Just for tonight I will not worry about money.",
+    "Once in a blue moon he calls his mother.",
+    "We ate bed and breakfast fare at the old inn."
+   ],
+   "quiet": [
+    "The runner lifted her head and looked toward the line.",
+    "A loose shirt cuff caught on the handle of the door.",
+    "Certain circumstances forced the old parade to change its route.",
+    "Patients visit the clinic during daytime hours on Mondays.",
+    "Voters came in large numbers to meet the new mayor.",
+    "Tonight I will count my money and go to bed.",
+    "A pale blue moon rose above the barn at dusk.",
+    "We ate eggs and toast at the old diner."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "confidence": 0.55,
+ "notes": "QC from a seeded sample, registered as a dispute because probes made me expect a failure on other formulas: ' head' of 'Running head' 0.990, ' for' of 'Just for' 0.383 and 'daytime sleepiness' 0.402 fire, but 'off-the-cuff' 0.120 and 'pomp and circumstance' 0.049 do not. Fire items are fixed formulas, most of them new; near misses keep some of the words outside the formula."
+}

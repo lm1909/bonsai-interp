@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-dc2c5258",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L6/N3901+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:54+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "refine",
+  "label_under_test": "Plural pronoun for a romantic couple right after the partner is introduced by a conjunction (his wife, Lucy, and | their; met him and | they started dating); a group of coworkers or companies in the same frame stays quiet"
+ },
+ "neighbours": [
+  {
+   "unit": "L6/N3901",
+   "pole": "+",
+   "label": "a plural pronoun for a pair that a sentence has just formed, whatever the relationship ('with his wife, Emily, and their', 'called his father, and they', 'sat beside me and we'), as against a plural pronoun for a group that was plural from the start",
+   "fire": [
+    "Dana lives in Reno with her sister, Kate, and their old cat.",
+    "Tom called his father last night, and they talked for an hour.",
+    "A stranger sat beside me on the train and we talked all the way.",
+    "Paul moved to Austin with his wife, Ana, and their baby.",
+    "My boss hired Lee in June, and they argued from the first day.",
+    "She married Omar in spring, and they settled near the coast.",
+    "Ruth took her nephew to the fair, where they rode the wheel.",
+    "He met Nina at a party, and they danced until midnight."
+   ],
+   "quiet": [
+    "The sailors reached the harbor, where they rested for a week.",
+    "All the farmers sold wheat, and they bought new tools.",
+    "Several nurses left early because they had a long drive.",
+    "Most tourists like this beach since they can swim safely.",
+    "Those engineers built bridges, and their work still stands.",
+    "Young monkeys play in trees, where they learn to climb.",
+    "The players lost again, and their coach looked tired.",
+    "Many birds fly south when they sense the cold."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "plural pronoun for a pair just formed",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "QC from a seeded sample, proposing a broader label. The current label says a romantic couple. Probe: spouse 0.989 and 0.805, but brother 0.887, son 0.929 and strangers on a flight (' we') 0.734, so the romance looks unnecessary; 'The boys ran ... they' 0.052. Fire items are pairs that are not couples, plus couples; near misses are plural pronouns for a group that was already plural, with no pair just formed. Card's top examples include non-romantic pairs too."
+}

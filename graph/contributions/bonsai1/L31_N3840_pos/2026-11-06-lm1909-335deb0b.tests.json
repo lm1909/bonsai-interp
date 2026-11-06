@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-335deb0b",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L31/N3840+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:53+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "the name inside a colon-delimited markup role or URI (:class:, :ref:, :warning:, ':memory:'), not the same word in prose"
+ },
+ "neighbours": [
+  {
+   "unit": "L31/N3840",
+   "pole": "+",
+   "label": "the name inside a colon-delimited markup role or URI (:class:, :ref:, :warning:, ':memory:'), not the same word in prose",
+   "fire": [
+    "The docstring points to :class:`Widget` for the details.",
+    "conn = sqlite3.connect(':memory:')\nprint(conn)\n",
+    "See also :func:`load_data` in the utilities module.",
+    ":warning: this call removes every file in the folder.",
+    "Use :ref:`install-guide` to link to that section.",
+    "engine = create_engine('sqlite:///:memory:')\nrun(engine)\n",
+    "Returns a list of :class:`Node` objects, sorted by name.",
+    "Pass an instance of :py:class:`Config` to the constructor."
+   ],
+   "quiet": [
+    "My daughter takes a dance class on Tuesday afternoons.",
+    "Grandfather has a sharp memory for names and dates.",
+    "Her fun summer job was teaching one function of a pump.",
+    "Doctors gave a clear warning about the new drug.",
+    "Teachers often ask for a ref letter from a school.",
+    "url = 'http://example.com:8080/items'\nfetch(url)\n",
+    "Sorted by name, the guests sat down: Ann, Bob and Carl.",
+    "time_str = '10:30:45'\nparse(time_str)\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "QC from a seeded sample. I read the label and card only, not the original test. Near misses use the same words in prose, or colons in other code, with different lead-ins."
+}

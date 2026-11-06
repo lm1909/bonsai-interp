@@ -1,0 +1,50 @@
+{
+ "contribution": "2026-11-06-lm1909-fd2d1cdb",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L1/N5030-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:54+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "unclear broad weak pole; best guess a word-final suffix piece split off a longer word (Arabic nisba '-ي/-وي/-الي', Spanish '-uido')"
+ },
+ "neighbours": [
+  {
+   "unit": "L1/N5030",
+   "pole": "-",
+   "label": "unclear broad weak pole; best guess a word-final suffix piece split off a longer word (Arabic nisba '-ي/-وي/-الي', Spanish '-uido')",
+   "fire": [
+    "ارتفع الدخل السنوي للأسر في العام الماضي.",
+    "لقد نشرت الشركة تقريرها السنوي أمس.",
+    "يواجه البنك وضعا ماليا صعبا هذه الأيام.",
+    "قدمت الوزارة الدعم المالي إلى المدارس.",
+    "Las lluvias han disminuido la cosecha de este año.",
+    "El gobierno ha distribuido las ayudas a las familias.",
+    "Nuestro equipo ha construido una casa nueva en el barrio.",
+    "Los precios han disminuido durante todo el invierno."
+   ],
+   "quiet": [
+    "ارتفع عدد الأسر في المدينة في العام الماضي.",
+    "لقد نشرت الشركة كتابا جديدا أمس.",
+    "يواجه الطلاب امتحانا صعبا هذه الأيام.",
+    "قدمت الوزارة الكتب إلى المدارس.",
+    "Las lluvias han caído sobre la cosecha de este año.",
+    "El gobierno ha visitado a las familias del pueblo.",
+    "Nuestro equipo ha pintado una casa nueva en el barrio.",
+    "Los precios han subido durante todo el invierno."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "confidence": 0.65,
+ "notes": "QC from a seeded sample. The label is a best guess on a broad pole (3.1%). Probe: 'وي' 0.989; 'uido' 0.776; 'الي' 0.550; plain Arabic and Spanish frames 0.032-0.095; Russian 'ист' 0.084. Tokenizer splits checked. Spanish and Arabic only, since 'ист' did not fire."
+}

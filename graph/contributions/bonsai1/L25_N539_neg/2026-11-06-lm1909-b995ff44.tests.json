@@ -1,0 +1,50 @@
+{
+ "contribution": "2026-11-06-lm1909-b995ff44",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L25/N539-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:53+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "Unclear; best guess: an extent word that amplifies a quantity or tally ('so much more', 'so much for granted', 'overall record')"
+ },
+ "neighbours": [
+  {
+   "unit": "L25/N539",
+   "pole": "-",
+   "label": "Unclear; best guess: an extent word that amplifies a quantity or tally ('so much more', 'so much for granted', 'overall record')",
+   "fire": [
+    "In this war we stand to lose so much more than land.",
+    "Older people take their friends so much for granted now.",
+    "Trust in the bank has fallen so much since the crash.",
+    "She owes her teachers so much for all that help.",
+    "Modern farms waste so much more water than old ones.",
+    "My parents gave me so much to be thankful for.",
+    "Rising rents take so much from young families each month.",
+    "City dwellers take clean water so much for granted today."
+   ],
+   "quiet": [
+    "There are so many more birds in the woods this spring.",
+    "Our dinner did not cost much at the corner cafe.",
+    "How much water does a small tree need?",
+    "His twin looks very much like their father.",
+    "Lots of rain fell on the farm in April.",
+    "Few guests stayed for much of the long speech.",
+    "A great many people attended the summer fair.",
+    "Too much salt can spoil a good soup."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "confidence": 0.55,
+ "notes": "QC from a seeded sample. Probe: ' much' after 'so' 0.289-0.393; 'How much' 0.142; 'very much' 0.061; 'so many more' 0.057. Near misses use other forms of much and many with different lead-ins. The label's 'overall record' read 0.014, so this test is on 'so much'."
+}

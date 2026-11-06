@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-d5c7a1bd",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L24/N3905+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:53+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "a year of the 1940s written in digits (19|4|x), peaking on the decade digit '4'; the same digits in another century or decade (1846, 1914, 1957, 2042) stay quiet"
+ },
+ "neighbours": [
+  {
+   "unit": "L24/N3905",
+   "pole": "+",
+   "label": "a year of the 1940s written in digits (19|4|x), peaking on the decade digit '4'; the same digits in another century or decade (1846, 1914, 1957, 2042) stay quiet",
+   "fire": [
+    "Rationing began for most families across Britain in 1940.",
+    "My grandfather came home from the Pacific in 1945.",
+    "India won its independence from the British in 1947.",
+    "The Olympic Games were held in London in 1948.",
+    "Le général est revenu à Paris en 1944 avec ses troupes.",
+    "Diese Stadt wurde im Krieg 1943 fast völlig zerstört.",
+    "Paper was scarce during the blockade of 1942 in Leningrad.",
+    "The new charter of the United Nations dates from 1946."
+   ],
+   "quiet": [
+    "The famine drove many Irish families to Boston in 1846.",
+    "Fighting broke out across the whole continent in 1914.",
+    "Soviet engineers launched their first satellite in 1957.",
+    "Scientists predict the coast will flood by about 2042.",
+    "Le roi est revenu à Paris en 1745 avec ses troupes.",
+    "Das Haus hat genau 194 Zimmer auf vier Etagen.",
+    "Our rent rose to $1,940 per month last spring.",
+    "The route numbered 149 runs past the old mill."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "unit_kind": "token/lexical",
+ "confidence": 0.9,
+ "notes": "QC from a seeded sample. Card: '4' x32, all in 19|4|x. I did not probe this. Near misses are other years and non-year numbers with the same digits, with different lead-ins."
+}

@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-0d0beea9",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L34/N1906+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:53+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "Ordinary English prose sentences on any topic (no special trigger word needed; it peaks on the first few words); stays dark on code, JSON, SQL, math formulas and bare number strings"
+ },
+ "neighbours": [
+  {
+   "unit": "L34/N1906",
+   "pole": "+",
+   "label": "Ordinary English prose sentences on any topic (no special trigger word needed; it peaks on the first few words); stays dark on code, JSON, SQL, math formulas and bare number strings",
+   "fire": [
+    "The company is committed to providing fresh bread every day.",
+    "If you want praise, then you should work harder for it.",
+    "New rules supported by the mayor will change those streets.",
+    "Anyone interested in old maps should visit this small shop.",
+    "Our family has been devoted to growing apples for years.",
+    "When you ask for help, people often respond with kindness.",
+    "A law proposed by the council may affect local farms.",
+    "Most students enrolled in the course enjoy its long readings."
+   ],
+   "quiet": [
+    "SELECT name, age FROM users WHERE age > 30 ORDER BY name;",
+    "{\"id\": 12, \"name\": \"bread\", \"price\": 3.5, \"stock\": true}",
+    "for i in range(10):\n    total += values[i] * 2\n",
+    "3.14 2.72 1.41 1.73 0.58 2.24 1.62 4.67 2.65 3.32",
+    "x = (a + b) / (c - d); y = x ** 2 + 3 * x - 1;",
+    "<div class=\"row\"><span id=\"a1\">12</span></div>",
+    "git commit -m fix && git push origin main --force-with-lease",
+    "12, 45, 78, 90, 23, 56, 89, 34, 67, 11, 22, 33"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "unit_kind": "dense / positional",
+ "confidence": 0.75,
+ "notes": "QC from a seeded sample. The card flags this pole as dense and positional (100% of top peaks within the first 16 tokens), so the test keeps the prose openings at the start. Near misses are code, JSON, SQL and bare numbers, as the label says."
+}

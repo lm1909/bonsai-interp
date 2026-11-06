@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-94874de1",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L28/N1141+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:54+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "climate-record datasets and reanalysis products (NCEP/NCAR, HadCRUT, ERA-Interim, temperature series and their start dates)"
+ },
+ "neighbours": [
+  {
+   "unit": "L28/N1141",
+   "pole": "+",
+   "label": "climate-record datasets and reanalysis products (NCEP/NCAR, HadCRUT, ERA-Interim, temperature series and their start dates)",
+   "fire": [
+    "HadCRUT5 shows a warmer decade than the earlier version.",
+    "Daily anomalies from the NCEP/NCAR reanalysis were posted today.",
+    "The ERA-Interim product begins in 1979 and uses satellite data.",
+    "GISTEMP and the Berkeley Earth series agree on recent warming.",
+    "These sea surface temperature series rely on infilled grids.",
+    "NOAA's global temperature dataset goes back as far as 1880.",
+    "Monthly values from the UAH satellite record came out on Monday.",
+    "JRA-55 reanalysis data run about two days behind real time."
+   ],
+   "quiet": [
+    "Warmer winters have changed when farmers plant their wheat.",
+    "Melting glaciers threaten the water supply of many towns.",
+    "Delegates at the climate summit argued about coal subsidies.",
+    "Coastal cities are building sea walls against rising tides.",
+    "Her book explains how carbon taxes affect poor families.",
+    "Heat waves killed many cattle in Kansas last summer.",
+    "Electric buses have cut the emissions of the old city.",
+    "Wildfires spread quickly through the dry hills near the town."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "unit_kind": "topic",
+ "confidence": 0.75,
+ "notes": "QC from a seeded sample. Card: 'AR' of NCEP/NCAR, ' temperature', ' Daily', '8' of 1989, in climate-record posts. I did not probe this. Near misses are about climate without naming a dataset or series."
+}

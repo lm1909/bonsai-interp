@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-b04d54f6",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L31/N8889+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:38:54+00:00",
+ "selection": "random QC sample, seed 202611050311",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "the qualifying noun of an evaluative 'in the X department' / 'X factor' idiom, predicting 'department' (lacking in the taste department)"
+ },
+ "neighbours": [
+  {
+   "unit": "L31/N8889",
+   "pole": "+",
+   "label": "the qualifying noun of an evaluative 'in the X department' / 'X factor' idiom, predicting 'department' (lacking in the taste department)",
+   "fire": [
+    "This phone falls short in the battery department, sadly.",
+    "He is a bit lacking in the looks department, she joked.",
+    "Their new singer leaves a lot to be desired in the vocals department.",
+    "My dad is rather weak in the cooking department these days.",
+    "That car is seriously limited in the legroom department.",
+    "She has never been lacking in the confidence department.",
+    "The sequel falls flat in the humor department, critics said.",
+    "This little town is sadly deficient in the nightlife department."
+   ],
+   "quiet": [
+    "Please charge the battery of this phone before noon.",
+    "Good looks run in the family, she joked.",
+    "Their new singer takes vocal lessons at a school in town.",
+    "Cooking dinner with my dad is fun on Sundays.",
+    "Extra legroom costs thirty dollars on that flight.",
+    "Confidence grows slowly in shy young children.",
+    "Humor helped him survive his long years at sea.",
+    "Nightlife in this little town ends around ten."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "unit_kind": "context",
+ "confidence": 0.75,
+ "notes": "QC from a seeded sample. Probe: ' taste' in 'lacking in the taste department' 0.738; the quote after 'cool tricks' 0.497; ' those' in 'in those regards' 0.461; ' this' 0.254; ' Wow' 0.254; 'in that area' 0.054; 'bad taste in my mouth' 0.035. Near misses put the same nouns in other frames. Since the label predicts 'department', the near misses also use different lead-ins."
+}
