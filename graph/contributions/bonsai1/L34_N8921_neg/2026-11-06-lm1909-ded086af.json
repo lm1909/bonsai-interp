@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ded086af",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N8921-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:49:05+00:00",
+ "recipe": {
+  "toolchain_commit": "30bbfedf6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N8921_neg/2026-11-06-lm1909-ded086af.tests.json"
+ },
+ "label": "' to' or an adverb after a word of tendency or willingness (likely to, chose to, afraid to, rarely, couldn't help but), as opposed to the same sentences stating plain facts",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N8921_neg/2026-11-06-lm1909-ded086af.tests.json",
+   "prereg_commit": "30bbfedf6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.438,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.53,
+     "peak": " rarely"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.538,
+     "peak": " but"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.414,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.506,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.472,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.198,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.366,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": "dest"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.134,
+     "peak": " doctors"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.057,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.072,
+     "peak": "Never"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.062,
+     "peak": " buyers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " blue"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.455,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "30bbfedf6",
+  "minutes": 2,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "tendency or willingness before a verb",
+ "unit_kind": "syntactic",
+ "confidence": "medium",
+ "notes": "Card flags this pole as broad (1.5%), with ' student' and ' I' also near the top, so this covers a part.",
+ "selection": "random draw"
+}

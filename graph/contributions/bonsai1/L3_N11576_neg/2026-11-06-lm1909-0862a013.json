@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-0862a013",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N11576-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:48:37+00:00",
+ "recipe": {
+  "toolchain_commit": "30bbfedf6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N11576_neg/2026-11-06-lm1909-0862a013.tests.json"
+ },
+ "label": "'aken' and 'akens' as a split piece in waken, awaken and wakened, as opposed to similar verbs",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N11576_neg/2026-11-06-lm1909-0862a013.tests.json",
+   "prereg_commit": "30bbfedf6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.824,
+     "peak": "aken"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.777,
+     "peak": "aken"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.503,
+     "peak": "akens"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.07,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.45,
+     "peak": "akens"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.884,
+     "peak": "aken"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.785,
+     "peak": "aken"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.564,
+     "peak": "akens"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.157,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.088,
+     "peak": " injection"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.052,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.07,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " called"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.067,
+     "peak": "Nothing"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.67,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "30bbfedf6",
+  "minutes": 1,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "w/aw|aken",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Max 0.60, 96% leak regime, broad card. ' wakes' reached 0.24 in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "aken",
+   "akens"
+  ]
+ }
+}
