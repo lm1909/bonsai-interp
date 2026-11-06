@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-344dd49e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N844+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:22:29+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N844_pos/2026-11-06-lm1909-344dd49e.tests.json"
+ },
+ "label": "a token in a description of a scientific instrument that measures light or composition (X-ray Grating Spectrometer, sun photometer, ChemCam is a tool)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N844_pos/2026-11-06-lm1909-344dd49e.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.175,
+     "peak": " Object"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.629,
+     "peak": " handheld"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.33,
+     "peak": " sensing"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.599,
+     "peak": "aviolet"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.483,
+     "peak": " optical"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.181,
+     "peak": " new"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.786,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.178,
+     "peak": " laser"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " built"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.526,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.044,
+     "peak": "ding"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " homework"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " cart"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.406,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "optical or X-ray science instrument",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' a' x6, ' optical' x3, ' the' x3, ' National' x2, ',' x2, 'ating', ' infrared', with X-ray spectrometers, photometers, ChemCam and sextant-like tools. Probes: 'ating' 0.732, ' a' before tool 0.701, ' a' before photometer 0.494, ' infrared' 0.249; recipes 0.007, a hotel 0.002. Near misses keep the sentence frames on other equipment.",
+ "selection": "random draw"
+}

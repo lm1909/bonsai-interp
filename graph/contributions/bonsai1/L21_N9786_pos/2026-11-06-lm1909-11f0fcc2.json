@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-11f0fcc2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N9786+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:22:56+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N9786_pos/2026-11-06-lm1909-11f0fcc2.tests.json"
+ },
+ "label": "the start of a sentence-opening reason clause (Because ..., Since ...), up to its subject and verb",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N9786_pos/2026-11-06-lm1909-11f0fcc2.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.164,
+     "peak": " Because"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.175,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.522,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.149,
+     "peak": " Because"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.164,
+     "peak": " Because"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.206,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.246,
+     "peak": " Because"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.284,
+     "peak": " Because"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.041,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " spring"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " every"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.191,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "sentence-opening reason clause",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' Because' x8, ' Since' x5, ' theory' x2, ' has' x2, ' they' x2, ' it' x2. Probes: 'Since this lesson has' 0.386, 'Because they' 0.354, 'Because' as the first word 0.311; 'because it rained' mid-sentence 0.016, plain sentence 0.002. Fire items follow an earlier sentence, as in the card. Near misses have mid-sentence 'because' or no reason clause.",
+ "selection": "random draw"
+}

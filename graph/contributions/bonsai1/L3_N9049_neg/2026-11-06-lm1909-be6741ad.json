@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-be6741ad",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N9049-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:22:10+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N9049_neg/2026-11-06-lm1909-be6741ad.tests.json"
+ },
+ "label": "the piece 'رب' in Arabic الغرب ('the West')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N9049_neg/2026-11-06-lm1909-be6741ad.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.576,
+     "peak": "رب"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.49,
+     "peak": "رب"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.53,
+     "peak": "رب"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.563,
+     "peak": "رب"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.574,
+     "peak": "رب"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.601,
+     "peak": "رب"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.595,
+     "peak": "رب"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.571,
+     "peak": "رب"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.09,
+     "peak": " الجديد"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.125,
+     "peak": " الوز"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.09,
+     "peak": "س"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.091,
+     "peak": " من"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.24,
+     "peak": " الرئيس"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.141,
+     "peak": " الج"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.135,
+     "peak": "يران"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.103,
+     "peak": "رة"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.573,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic 'the West' (الغ|رب)",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card flags broad (3.8%) and gate-closed (100%): 'pin' x7, 'رب' x6, ' pin' x2, ' Gov' x2, ' regulator', ' wiring'. Probes: 'رب' 0.550; my ' pin' and wiring probes stayed under 0.11. So the Arabic token is tested and the electronics cluster is not claimed. Near misses swap in other Arabic place words. Tokens are checked.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "رب"
+  ]
+ }
+}

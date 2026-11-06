@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7dc07b72",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N10236-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:21:52+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N10236_neg/2026-11-06-lm1909-7dc07b72.tests.json"
+ },
+ "label": "the comma closing an 'if' condition that something failed a check (if the values do not match, an error...)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N10236_neg/2026-11-06-lm1909-7dc07b72.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.379,
+     "peak": " match"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.348,
+     "peak": " agree"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.353,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.336,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.293,
+     "peak": " match"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.217,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.419,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.457,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.052,
+     "peak": " size"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " clerk"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " app"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " print"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.35,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "',' after a failed-check condition",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: ',' x11, ' them' x2, ' match', ' present', 'oring', ' doing', with health warnings and error checks. Probes: ',' after 'if the values do not match' 0.566; 'If you experience any one of them' 0.134; 'If either is present' 0.040. So my health reading failed, and I test the one that fired.",
+ "selection": "random draw"
+}

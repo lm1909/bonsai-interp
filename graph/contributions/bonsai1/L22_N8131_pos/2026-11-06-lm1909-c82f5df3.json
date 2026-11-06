@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c82f5df3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N8131+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:22:45+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N8131_pos/2026-11-06-lm1909-c82f5df3.tests.json"
+ },
+ "label": "the token at the turn from the first value to the second in a range or a conversion (from May ... ending in June, 2007 to March 2008, 2,508 sq mi (6,496 sq km))",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N8131_pos/2026-11-06-lm1909-c82f5df3.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.774,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.225,
+     "peak": " May"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.773,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.102,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.375,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.723,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.125,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.766,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " six"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " kept"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " games"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " very"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " overall"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.549,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "start of second value in a range",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: '0' x5, '-' x4, ' to' x4, ',' x3, ' ' x3, '5' x2. Probes: ',' inside the converted number 0.904, ' in' in 'ending in June' 0.665, ' to' after a date 0.355; '(19- 22)' only 0.073; plain sentences under 0.04. Near misses have a single value.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ab455328",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N9397-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:21:38+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N9397_neg/2026-11-06-lm1909-ab455328.tests.json"
+ },
+ "label": "a split inner piece of a word in French, German or Russian that the next piece will finish (cou|lo|irs, Ver|sto|ßes, end|ro|its, Ц|ер|кви)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N9397_neg/2026-11-06-lm1909-ab455328.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.879,
+     "peak": "lo"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.848,
+     "peak": "sto"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.002,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.953,
+     "peak": "ro"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.521,
+     "peak": "sto"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.815,
+     "peak": "lo"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.313,
+     "peak": "ер"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.93,
+     "peak": "ro"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.129,
+     "peak": " vie"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.106,
+     "peak": " Al"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " für"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " прин"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " nos"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.883,
+    "median_fire": 0.831,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split inner piece of a European word",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: 'sto' x2, 'de' x2, 'ro' x2, ' De' x2, 'ri' x2, 'lo', 'ри', 'ер', at L35, the last layer. Probes: 'sto' 0.960, 'ro' 0.935, 'lo' 0.779, 'ер' 0.428; French with no such split 0.031, English 0.001. Tokens are checked for each fire sentence. The near misses keep the sentence with a whole-token word.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-356bd87f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N3055-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:22:08+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N3055_neg/2026-11-06-lm1909-356bd87f.tests.json"
+ },
+ "label": "a token asking about a subset that behaves differently (why some diabetic patients, what causes some children, tell whether)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N3055_neg/2026-11-06-lm1909-356bd87f.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.156,
+     "peak": " stressed"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.177,
+     "peak": " never"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.265,
+     "peak": " rights"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.114,
+     "peak": " poor"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.164,
+     "peak": " some"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.026,
+     "peak": " people"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.259,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.376,
+     "peak": " faster"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.084,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.056,
+     "peak": "plain"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.059,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.063,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": "Describe"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": " leaves"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.17,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "asking why some do and others not",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card flags 68% gate-closed: ',' x2, ' whether' x2, ' cases' x2, ' to' x2, ' potentially', ' children'. Probes: 'some malnourished children' 0.447, ' whether' 0.405, 'why some diabetic patients' 0.321; 'why dogs bark' 0.023, 'What causes rain' 0.024. Near misses ask general questions without a subset.",
+ "selection": "random draw"
+}

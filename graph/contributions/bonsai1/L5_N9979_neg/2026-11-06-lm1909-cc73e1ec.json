@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-cc73e1ec",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9979-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:22:32+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N9979_neg/2026-11-06-lm1909-cc73e1ec.tests.json"
+ },
+ "label": "the Japanese continuative verb ending (連用形) that joins a verb to the next clause (譲り、, 持ち、, 動かし、)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N9979_neg/2026-11-06-lm1909-cc73e1ec.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.739,
+     "peak": "り"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.946,
+     "peak": "ち"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.6,
+     "peak": "し"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.388,
+     "peak": "り"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.529,
+     "peak": "ち"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.144,
+     "peak": "し"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.343,
+     "peak": "書き"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.465,
+     "peak": "り"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": "に"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": "を持"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": "む"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "を持"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.035,
+     "peak": "いた"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "った"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.497,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese continuative verb ending",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card flags broad (1.0%): 'し' x7, 'り' x4, 'い' x4, 'され' x3, 'ち' x2, 'み' x2. Probes: 'り' 0.809, 'ち' 0.796, 'し' 0.568; the same clause ended with た 0.175, 'を持っている' 0.063, 'いい' 0.017. Near misses end the verb in た or ます. Tokens are checked.",
+ "selection": "random draw"
+}

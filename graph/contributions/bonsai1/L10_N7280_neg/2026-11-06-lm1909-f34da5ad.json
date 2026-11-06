@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f34da5ad",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N7280-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:22:36+00:00",
+ "recipe": {
+  "toolchain_commit": "75f015bc8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N7280_neg/2026-11-06-lm1909-f34da5ad.tests.json"
+ },
+ "label": "a split piece of a foreign proper name, near the start of its spelling (San Gal|lo, Wis|marplatz, ロビ|ン|ス)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N7280_neg/2026-11-06-lm1909-f34da5ad.tests.json",
+   "prereg_commit": "75f015bc8",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.051,
+     "peak": " Gal"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.069,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.22,
+     "peak": "ウォ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.061,
+     "peak": " Gal"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.029,
+     "peak": " uns"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.055,
+     "peak": "ジェ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.081,
+     "peak": " Gal"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.102,
+     "peak": " O"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.046,
+     "peak": " liegt"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": "店"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " Florence"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": " uns"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.05,
+     "peak": "ホテル"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.026,
+     "peak": "Sketch"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.055,
+     "peak": " O"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.065,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "75f015bc8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "piece of a foreign proper name",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has 'ン' x2, ' Gal', ' Gi', 'ep', 'plat', 'uye'. Probes weak: ' Gal' 0.249, 'ワ' 0.176, ' W' 0.138, ' dawn' 0.060. A guess, likely to fail on the median.",
+ "selection": "random draw"
+}
