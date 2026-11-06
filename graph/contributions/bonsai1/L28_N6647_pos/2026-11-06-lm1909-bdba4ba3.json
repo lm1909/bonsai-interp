@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-bdba4ba3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N6647+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:44:55+00:00",
+ "recipe": {
+  "toolchain_commit": "b52075bf6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N6647_pos/2026-11-06-lm1909-bdba4ba3.tests.json"
+ },
+ "label": "stating how far back something has lasted: ' since', Spanish ' desde', ' dating', ' known' with 'your entire life', firing on those words; a simple point in time or a place with ' from' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N6647_pos/2026-11-06-lm1909-bdba4ba3.tests.json",
+   "prereg_commit": "b52075bf6",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.443,
+     "peak": " since"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.645,
+     "peak": " since"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.439,
+     "peak": " known"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.508,
+     "peak": " dating"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.388,
+     "peak": " desde"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.293,
+     "peak": " since"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.216,
+     "peak": " dating"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.287,
+     "peak": " desde"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " waiting"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " among"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " who"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.164,
+     "peak": "ers"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": "S"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " con"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.413,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b52075bf6",
+  "minutes": 1,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "how long something has lasted: since, dating from",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " since",
+   " desde",
+   " dating",
+   " known"
+  ]
+ }
+}

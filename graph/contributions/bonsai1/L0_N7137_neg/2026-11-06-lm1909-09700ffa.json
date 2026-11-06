@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-09700ffa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7137-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:45:06+00:00",
+ "recipe": {
+  "toolchain_commit": "b52075bf6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N7137_neg/2026-11-06-lm1909-09700ffa.tests.json"
+ },
+ "label": "'st' in food+st+uffs and the word ' attract' (food attracts pests); no shared pattern found, and other nouns and verbs in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N7137_neg/2026-11-06-lm1909-09700ffa.tests.json",
+   "prereg_commit": "b52075bf6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.842,
+     "peak": "st"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.755,
+     "peak": "st"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.152,
+     "peak": " attract"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.593,
+     "peak": "st"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.373,
+     "peak": " attract"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.828,
+     "peak": "st"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.439,
+     "peak": " attract"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.726,
+     "peak": "st"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.095,
+     "peak": " sold"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.146,
+     "peak": " cell"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " bins"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.073,
+     "peak": " bridges"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.121,
+     "peak": " grow"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " rose"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.102,
+     "peak": " cars"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.659,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b52075bf6",
+  "minutes": 1,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "foodstuffs, attract",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "st",
+   " attract"
+  ]
+ }
+}
