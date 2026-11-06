@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-f42e33d0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N574-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:25:29+00:00",
+ "selection": "second round: narrower label after review (picked)",
+ "neighbours": [
+  {
+   "unit": "L29/N574",
+   "pole": "-",
+   "label": "a generic drug name with no connector needed (pieces inside the name), as opposed to non-drug words in the same frames",
+   "fire": [
+    "She takes warfarin daily.",
+    "The nurse gave him lisinopril today.",
+    "Doctors stopped the metformin last week.",
+    "He was switched to sertraline in May.",
+    "My aunt needs amoxicillin for the infection.",
+    "The chart lists atorvastatin under allergies.",
+    "They prescribed gabapentin for the pain.",
+    "The study compared naproxen and placebo."
+   ],
+   "quiet": [
+    "She takes vitamins daily.",
+    "The nurse gave him water today.",
+    "Doctors stopped the treatment last week.",
+    "He was switched to decaf in May.",
+    "My aunt needs rest for the infection.",
+    "The chart lists peanuts under allergies.",
+    "They prescribed exercise for the pain.",
+    "The study compared rice and pasta."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "quick-test",
+   "second-round",
+   "card"
+  ]
+ },
+ "short": "generic drug names, no connector",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "This tests the alternative to sweep 29's connector label: does a drug name fire the pole without a connector? No sentence was probed."
+}
