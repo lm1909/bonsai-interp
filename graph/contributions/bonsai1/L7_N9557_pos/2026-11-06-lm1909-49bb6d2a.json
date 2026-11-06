@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-49bb6d2a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9557+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:27:54+00:00",
+ "recipe": {
+  "toolchain_commit": "fbfaed2e2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N9557_pos/2026-11-06-lm1909-49bb6d2a.tests.json"
+ },
+ "label": "'ai' in Dalai, as in the Dalai Lama, and in Adlai, as opposed to other names with similar sounds and titles in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N9557_pos/2026-11-06-lm1909-49bb6d2a.tests.json",
+   "prereg_commit": "fbfaed2e2",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.983,
+     "peak": "ai"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.954,
+     "peak": "ai"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.805,
+     "peak": "ai"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.257,
+     "peak": "ai"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.627,
+     "peak": "ai"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.994,
+     "peak": "ai"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.983,
+     "peak": "ai"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.009,
+     "peak": "ai"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " letz"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " Clinton"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "y"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": "ali"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " Tibetan"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.029,
+     "peak": "ala"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.968,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fbfaed2e2",
+  "minutes": 2,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "Dalai Lama ('ai')",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "The near misses contain 'Tibetan monks', so context without the word is tested. A probe of ' Tibet' itself was not run.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ai"
+  ]
+ }
+}
