@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-be616613",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N1403-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:37:49+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N1403",
+   "pole": "-",
+   "label": "a capitalized class name being constructed or called in code (Label(, Cursors(), QtGui.QLabel(, PriorityQueue())",
+   "fire": [
+    "        btn = Button(frm, text='ok')\n",
+    "colors = Colors()\n",
+    "        self.title = QtGui.QLabel(self)\n",
+    "    q = PriorityQueue()\n",
+    "        user = User.by_id(self.uid)\n",
+    "    ctx = Context()\n",
+    "        self.icon = QtGui.QLabel(parent)\n",
+    "        lbl = Label(root, text='y')\n"
+   ],
+   "quiet": [
+    "        btn = make_button(frm)\n",
+    "colors = []\n",
+    "        self.title = title\n",
+    "    q = 0\n",
+    "        user = get_user(self.uid)\n",
+    "    ctx = {}\n",
+    "        self.icon = icon\n",
+    "        lbl = text\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "class name after '=' in code",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: '.QLabel' x9, ' User' x3, ' Solution' x2, ' Context' x2, ' Label', ' Cursors', ' PriorityQueue', ' Job'. Probes: ' Label' 0.552, '.QLabel' 0.504, ' PriorityQueue' 0.367, ' Cursors' 0.332; plain assignments under 0.01. Near misses are assignments from lowercase functions."
+}

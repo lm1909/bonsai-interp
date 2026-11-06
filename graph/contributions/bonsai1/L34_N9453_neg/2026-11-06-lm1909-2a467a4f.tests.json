@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-2a467a4f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N9453-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:37:49+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N9453",
+   "pole": "-",
+   "label": "the digit in a large round amount in Chinese, before 亿 or 万 (15亿, 90万, 2.7万)",
+   "fire": [
+    "这家公司去年亏损了25亿美元。",
+    "活动共筹集善款超过80万元。",
+    "全市人口约3.6万人。",
+    "新机场的造价约为40亿元。",
+    "该项目已经投资了120万元。",
+    "世界人口约有7亿住在沿海地区。",
+    "工厂总人数约1.9万人。",
+    "他们计划再投资58亿美元。"
+   ],
+   "quiet": [
+    "这家公司去年亏损了很多钱。",
+    "活动共筹集了不少善款。",
+    "全市人口不多。",
+    "新机场的造价非常高。",
+    "该项目已经投资了很多钱。",
+    "世界人口很多住在沿海地区。",
+    "工厂人数不多。",
+    "他们计划再投资一些钱。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "digit before 亿 or 万 in Chinese",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: digits '7', '5', '8', '6', '0', '2' in Chinese amounts. Probes: 0.51-0.61; same text without digits 0.001-0.020; '15 dollars' in English 0.006. Near misses drop the number."
+}
