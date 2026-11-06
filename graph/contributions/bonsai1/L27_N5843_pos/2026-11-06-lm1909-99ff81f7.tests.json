@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-99ff81f7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N5843+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:11:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N5843",
+   "pole": "+",
+   "label": "')' closing len(...) before a comparison with one: 'len(src) == 1'",
+   "fire": [
+    "if len(args) == 1 and args[0]:\n    run()\n",
+    "multi = False if len(names) == 1 else True\n",
+    "single = True if len(dst) == 1 and dst[0]:\n    copy()\n",
+    "while len(items) == 1:\n    step()\n",
+    "only = len(rows) == 1\n",
+    "if len(paths) == 1 and os.path.isdir(paths[0]):\n    go()\n",
+    "one_file = True if len(files) == 1 else False\n",
+    "return len(keys) == 1\n"
+   ],
+   "quiet": [
+    "if args == 1 and args[0]:\n    run()\n",
+    "multi = False if names == 1 else True\n",
+    "single = True if dst == 1 and dst[0]:\n    copy()\n",
+    "while items == 1:\n    step()\n",
+    "only = rows == 1\n",
+    "if paths == 1 and os.path.isdir(paths[0]):\n    go()\n",
+    "one_file = True if files == 1 else False\n",
+    "return keys == 1\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "')' in len(x) == 1",
+ "unit_kind": "token / code",
+ "confidence": 0.5,
+ "notes": "Card: ' have' 3, ' a' 2, ' for' 2, ')' 1. Probes: ')' in len(src) == 1 0.53, ' have' 0.21 before 'one to highlight'; 'zero or one element' 0.01. Only one piece of the pole. The - pole is 'any one'."
+}
