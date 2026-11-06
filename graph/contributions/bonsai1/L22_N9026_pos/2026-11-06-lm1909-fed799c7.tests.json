@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-fed799c7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N9026+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:41:39+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N9026",
+   "pole": "+",
+   "label": "The ' %(' opening of a Python named format placeholder (%(name)s)",
+   "fire": [
+    "fmt = '%(asctime)s %(levelname)s'\n",
+    "label = \"%(first)s : %(last)s\"\n",
+    "code += \"%(obj)s.run()\"\n",
+    "line = '%(host)s:%(port)d'\n",
+    "msg = \"%(user)s logged in\"\n",
+    "title = '%(name)s - %(date)s'\n",
+    "path = \"%(root)s/%(file)s\"\n",
+    "text += \"%(key)s=%(val)s\"\n"
+   ],
+   "quiet": [
+    "fmt = '{asctime} {levelname}'\n",
+    "label = \"first : last\"\n",
+    "code += \"{obj}.run()\"\n",
+    "line = host + ':' + port\n",
+    "msg = \"user logged in\"\n",
+    "title = 'name - date'\n",
+    "path = os.path.join(root, file)\n",
+    "text += key + '=' + val\n"
+   ]
+  }
+ ],
+ "predictions": "' %(' fires; brace placeholders and plain concatenation stay quiet. '(' after str and '[' are on the card and fire weakly.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' %(' named format placeholder",
+ "unit_kind": "token",
+ "confidence": "high"
+}
