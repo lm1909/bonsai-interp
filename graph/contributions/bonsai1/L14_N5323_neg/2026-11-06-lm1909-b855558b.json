@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-b855558b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5323-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:08:30+00:00",
+ "recipe": {
+  "toolchain_commit": "42b16cfd8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N5323_neg/2026-11-06-lm1909-b855558b.tests.json"
+ },
+ "label": "Making do with what is on hand: 'all I had in the house', 'if I don't have a dish', 'handy', 'in a pinch'; the same kitchen facts without any lack stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N5323_neg/2026-11-06-lm1909-b855558b.tests.json",
+   "prereg_commit": "42b16cfd8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.626,
+     "peak": " had"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.46,
+     "peak": " home"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.342,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.364,
+     "peak": " handy"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.007,
+     "peak": " pinch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.427,
+     "peak": " had"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.323,
+     "peak": "?"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.375,
+     "peak": " fridge"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.177,
+     "peak": " my"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.229,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " she"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.097,
+     "peak": " found"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " spring"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " Sunday"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " sun"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.401,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "42b16cfd8",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "making do with what's on hand",
+ "unit_kind": "semantic",
+ "confidence": 0.75,
+ "notes": "Probes: 'all I had' 0.72, 'what I had in the fridge' 0.43, 'don't have a dish' 0.39, 'in a pinch' 0.36, 'handy' 0.30, 'if not available' 0.18; 'because they taste good' 0.04, plain under 0.01.",
+ "selection": "random draw"
+}

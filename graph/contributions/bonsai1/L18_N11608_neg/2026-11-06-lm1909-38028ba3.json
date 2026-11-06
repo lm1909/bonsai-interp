@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-38028ba3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N11608-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:08:39+00:00",
+ "recipe": {
+  "toolchain_commit": "42b16cfd8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N11608_neg/2026-11-06-lm1909-38028ba3.tests.json"
+ },
+ "label": "Dense, gate-closed unit (37.7% of tokens reach 0.1 of max 1.16, 100% leak regime); best guess: legal and claims language (hereto, shareholders, refund).",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N11608_neg/2026-11-06-lm1909-38028ba3.tests.json",
+   "prereg_commit": "42b16cfd8",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.852,
+     "peak": "eto"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.295,
+     "peak": " shareholders"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.428,
+     "peak": " refund"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.605,
+     "peak": "eto"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.269,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.525,
+     "peak": " refund"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.232,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.29,
+     "peak": " May"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.217,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.285,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.195,
+     "peak": " ten"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.091,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.111,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.051,
+     "peak": "ears"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.187,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.247,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.361,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "42b16cfd8",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; legal language guess",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags dense. Probes: 'hereto' 0.83, 'amount of' 0.57, shareholders 0.51, refund 0.39; plain 0.08-0.12.",
+ "selection": "random draw"
+}

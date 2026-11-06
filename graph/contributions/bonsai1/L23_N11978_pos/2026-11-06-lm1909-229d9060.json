@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-229d9060",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11978+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:08:55+00:00",
+ "recipe": {
+  "toolchain_commit": "42b16cfd8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N11978_pos/2026-11-06-lm1909-229d9060.tests.json"
+ },
+ "label": "Low-confidence guess: the opening bracket token in repeated rows of a code literal, such as `['` in `{'x': box['right'] ...}` rows or `[` in matrix rows.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N11978_pos/2026-11-06-lm1909-229d9060.tests.json",
+   "prereg_commit": "42b16cfd8",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.495,
+     "peak": "['"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.225,
+     "peak": "['"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.207,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.068,
+     "peak": "['"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.318,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.152,
+     "peak": "':"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.196,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.112,
+     "peak": "['"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.045,
+     "peak": " -"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.088,
+     "peak": " start"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.202,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "42b16cfd8",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "bracket in repeated code rows (guess)",
+ "unit_kind": "code / contextual",
+ "confidence": 0.4,
+ "notes": "Card: ' ' x5, '9' x3, ' for', ':', \"['\", ' [' with a max of 50. Probes: 3-row dict literal 0.60, matrix 0.25-0.31; single row 0.13; plain assignments 0.04. Spaces before numbers in prose stayed at 0.02.",
+ "selection": "random draw"
+}

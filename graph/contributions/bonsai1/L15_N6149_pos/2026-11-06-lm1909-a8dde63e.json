@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-a8dde63e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N6149+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:07:41+00:00",
+ "recipe": {
+  "toolchain_commit": "42b16cfd8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N6149_pos/2026-11-06-lm1909-a8dde63e.tests.json"
+ },
+ "label": "A later item of an alphabetically ordered list: the pole fires when the items so far have been in A-to-Z order; the same items shuffled stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N6149_pos/2026-11-06-lm1909-a8dde63e.tests.json",
+   "prereg_commit": "42b16cfd8",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.334,
+     "peak": " Young"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.575,
+     "peak": " z"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.792,
+     "peak": " Union"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.505,
+     "peak": " Windsor"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.816,
+     "peak": " time"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.706,
+     "peak": " th"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.099,
+     "peak": " Sweden"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.708,
+     "peak": " violet"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.097,
+     "peak": "t"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.171,
+     "peak": " Optional"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.151,
+     "peak": "by"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.186,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.155,
+     "peak": "ano"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.088,
+     "peak": " Estonia"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.23,
+     "peak": "ve"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.64,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "42b16cfd8",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "later item in an alphabetical list",
+ "unit_kind": "format / contextual",
+ "confidence": 0.7,
+ "notes": "All top examples turned out to be alphabetical lists. Probes, ordered vs shuffled with the same items: 0.29 vs 0.02, 0.58 vs 0.14, 0.27 vs 0.02. Corpus-like lists 0.29-0.57. Non-alphabetical list 0.03.",
+ "selection": "random draw"
+}

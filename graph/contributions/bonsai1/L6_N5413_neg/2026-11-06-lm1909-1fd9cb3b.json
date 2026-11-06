@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-1fd9cb3b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N5413-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:08:50+00:00",
+ "recipe": {
+  "toolchain_commit": "42b16cfd8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N5413_neg/2026-11-06-lm1909-1fd9cb3b.tests.json"
+ },
+ "label": "The piece right after 'single' in a compound (Single Business, single|-thread, single|-core, single|_threaded); 'double-' compounds and a single person stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N5413_neg/2026-11-06-lm1909-1fd9cb3b.tests.json",
+   "prereg_commit": "42b16cfd8",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.295,
+     "peak": " Market"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.126,
+     "peak": "-l"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.45,
+     "peak": "_thread"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.645,
+     "peak": "-core"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.2,
+     "peak": " P"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.753,
+     "peak": "-thread"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.095,
+     "peak": "-engine"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.023,
+     "peak": " windows"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " Market"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.237,
+     "peak": "-core"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " runs"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " flew"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " use"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.247,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "42b16cfd8",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun after single-",
+ "unit_kind": "contextual / token",
+ "confidence": 0.75,
+ "notes": "Probes: '-thread' 0.85, ' Business' 0.77, '-core' 0.54, '_thread' 0.45, ' bit' 0.65; 'double-thread' 0.12, 'single brother' 0.19, 'big business' 0.02.",
+ "selection": "random draw"
+}
