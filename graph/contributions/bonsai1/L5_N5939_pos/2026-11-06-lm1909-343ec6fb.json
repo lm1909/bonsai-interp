@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-343ec6fb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N5939+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:45:19+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N5939_pos/2026-11-06-lm1909-343ec6fb.tests.json"
+ },
+ "label": "the opening of a predicate complement after a copula in a reported claim ('that X is a/the ...'): the slot where the claim's verdict arrives",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N5939_pos/2026-11-06-lm1909-343ec6fb.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.171,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.238,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.13,
+     "peak": " excellent"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.315,
+     "peak": " greatest"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.672,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.19,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.12,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.115,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": "Anal"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.031,
+     "peak": " trials"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.074,
+     "peak": " signed"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.143,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.06,
+     "peak": " tried"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " watched"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.059,
+     "peak": " found"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.18,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "predicate of a claim",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probe: 'that the plan is a viable' 0.47, 'may be an even better' 0.49, 'often an indispensable' 0.53, 'I thought Walker was the best' 0.46. Same phrases as objects or appositives 0.005-0.03. Plain 'He will be the next quarterback' only 0.09 and 'Dogs are excellent' 0.004, so the claim framing matters.",
+ "selection": "random draw"
+}

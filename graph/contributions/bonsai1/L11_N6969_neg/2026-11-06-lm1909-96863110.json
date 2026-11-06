@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-06-lm1909-96863110",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6969-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:45:06+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N6969_neg/2026-11-06-lm1909-96863110.tests.json"
+ },
+ "label": "asthma and its airway vocabulary (asthma, asthmatic, inhaler, wheezing, bronchodilators)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N6969_neg/2026-11-06-lm1909-96863110.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.416,
+     "peak": " asthma"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.628,
+     "peak": " asthma"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.465,
+     "peak": " inhal"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.581,
+     "peak": " asthma"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.596,
+     "peak": "chod"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.781,
+     "peak": " rescue"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.689,
+     "peak": " worse"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.59,
+     "peak": " asthma"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.113,
+     "peak": " arthritis"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.295,
+     "peak": " migraine"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.058,
+     "peak": " use"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": " condition"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " stat"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.15,
+     "peak": " air"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.06,
+     "peak": " severe"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.593,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "asthma",
+ "unit_kind": "sparse feature",
+ "confidence": 0.85,
+ "notes": "Probe: inhaler 0.69, wheezing 0.66, asthma 0.62, asthmatic 0.54; flu 0.01, diabetes 0.03. Leaks into eczema cream (0.47) and pollen 'trigger' (0.29), so allergic disease sits nearby; near misses here use non-allergic illness.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "asthma",
+   "asthmatic",
+   "asthmatics",
+   "inhaler",
+   "wheezing",
+   "bronchodilators"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-95e3c44e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N1310+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:45:17+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N1310_pos/2026-11-06-lm1909-95e3c44e.tests.json"
+ },
+ "label": "visual-styling markup in HTML or code strings: style/class/color attributes and their values, as opposed to structure and content",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N1310_pos/2026-11-06-lm1909-95e3c44e.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.365,
+     "peak": " style"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.387,
+     "peak": " bgcolor"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.519,
+     "peak": " size"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.251,
+     "peak": "font"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.228,
+     "peak": "color"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.301,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.396,
+     "peak": " style"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.235,
+     "peak": "span"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.129,
+     "peak": " id"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.227,
+     "peak": " id"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.21,
+     "peak": "title"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " item"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.051,
+     "peak": "logo"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.035,
+     "peak": ")"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.333,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "HTML styling attributes",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probe: style= 0.59, fillcolor \"white\" 0.44, bgcolor value 0.38, class= 0.37; <p> 0.01, <a href> 0.07, prose 'color' -0.01. The other side (- pole) is 'Skip to main content' and lightbox, page-content words.",
+ "selection": "random draw"
+}

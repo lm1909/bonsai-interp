@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a745b403",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N8529+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:45:01+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N8529_pos/2026-11-06-lm1909-a745b403.tests.json"
+ },
+ "label": "'in <year>' attached to a noun (a dated event or thing, 'a law in 2011'), not to a verb ('met in 2015')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N8529_pos/2026-11-06-lm1909-a745b403.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.133,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.075,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.149,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.185,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.334,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.141,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.124,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.099,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": " spring"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.042,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.031,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " only"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.037,
+     "peak": " "
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.137,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun + in + year",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Probe: 'A law in 2011' 0.39, 'album, in 1985' 0.25, 'A bill in 2015' 0.24; 'We met in 2015' 0.03. Also fires on ' in' in 'a virus in the family of' (0.41), so post-nominal ' in' may be the wider pattern. Corpus max 21 is one outlier, so readings are compressed.",
+ "selection": "random draw"
+}

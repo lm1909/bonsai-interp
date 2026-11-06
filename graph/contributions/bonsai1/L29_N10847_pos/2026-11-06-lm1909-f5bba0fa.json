@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f5bba0fa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10847+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:45:32+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N10847_pos/2026-11-06-lm1909-f5bba0fa.tests.json"
+ },
+ "label": "' the' opening a place-within-the-country slot after a named country, where a capital, city or region is expected ('In Vietnam, ... moved ... to the')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N10847_pos/2026-11-06-lm1909-f5bba0fa.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.635,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.374,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.79,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.304,
+     "peak": " big"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.334,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.662,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.238,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.07,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.07,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " poor"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.061,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.992,
+    "median_fire": 0.354,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "country's place slot",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probe: 'In Vietnam ... to the' 0.81, 'its capital' 0.32, 'the country's' 0.30; 'walked across the park' 0.01, 'read the book' 0.01. Fires before the noun, so 'to the capital' and 'to the coast' read the same (0.81). Output direction: the - pole promotes ' city', ' town'.",
+ "selection": "random draw"
+}

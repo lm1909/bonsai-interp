@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-1f833fad",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2204-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:45:41+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N2204_neg/2026-11-06-lm1909-1f833fad.tests.json"
+ },
+ "label": "the piece 佛 in 彷佛 ('as if'): a narrow trigger of a broad, weak pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N2204_neg/2026-11-06-lm1909-1f833fad.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.758,
+     "peak": "佛"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.0,
+     "peak": "佛"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.634,
+     "peak": "佛"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.691,
+     "peak": "佛"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.734,
+     "peak": "佛"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.577,
+     "peak": "佛"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.854,
+     "peak": "佛"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.864,
+     "peak": "佛"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": "色"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.057,
+     "peak": "很"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": "好像"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.079,
+     "peak": "了一"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.083,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "好像"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "灯光"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": "。"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.746,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "佛 in 彷佛",
+ "unit_kind": "dense / positional",
+ "confidence": 0.5,
+ "notes": "Card flags this broad (7% of tokens reach 0.1 of a 0.65 max) with the gate-closed regime at 93%, so it is recorded as dense. 彷佛 read 0.72-0.79 and 好像 0.04; ' парти' 0.25-0.29 and ' fled' 0.16-0.18 are other weak readings. This cannot be the pole's assignment: token trigger declared so coverage shows that.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "佛"
+  ]
+ }
+}

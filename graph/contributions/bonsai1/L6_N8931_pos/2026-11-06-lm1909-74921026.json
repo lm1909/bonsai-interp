@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-74921026",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N8931+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:44:57+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N8931_pos/2026-11-06-lm1909-74921026.tests.json"
+ },
+ "label": "bare ' it' or ' that' right after has/have/there's, pointing at an unnamed quality or situation ('has it', 'has that rare...', 'there's that')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N8931_pos/2026-11-06-lm1909-74921026.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.604,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.936,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.061,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.503,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.28,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.036,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.601,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.398,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.161,
+     "peak": " live"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.108,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.046,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": " every"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " parade"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.112,
+     "peak": " quiet"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " twice"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": " that"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.603,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'has it', 'has that'",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probe: 'definitely has it' 1.03, 'there's that' 1.00, 'has that rare mix' 0.92, 'Legend has it' 0.34. 'gave it' 0.01, 'love that song' 0.02, 'has charm' 0.05. The pronoun is the trigger only after this verb.",
+ "selection": "random draw"
+}

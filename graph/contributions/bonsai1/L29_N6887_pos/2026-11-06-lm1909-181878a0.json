@@ -1,0 +1,164 @@
+{
+ "id": "2026-11-06-lm1909-181878a0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N6887+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T11:45:37+00:00",
+ "recipe": {
+  "toolchain_commit": "0e77cbd9f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N6887_pos/2026-11-06-lm1909-181878a0.tests.json"
+ },
+ "label": "Japanese negative plain verb endings (しない, れない, えない, わない), the verb form before a clause continues, as opposed to the same verb in polite or て form",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N6887_pos/2026-11-06-lm1909-181878a0.tests.json",
+   "prereg_commit": "0e77cbd9f",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.695,
+     "peak": "しない"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.734,
+     "peak": "しない"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.295,
+     "peak": "ない"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.252,
+     "peak": "ないように"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.615,
+     "peak": "しない"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.473,
+     "peak": "らない"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.826,
+     "peak": "しない"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.45,
+     "peak": "れない"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.118,
+     "peak": "してください"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.218,
+     "peak": "イン"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.07,
+     "peak": "出"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.137,
+     "peak": "飲"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.071,
+     "peak": "しております"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.273,
+     "peak": "確認"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.157,
+     "peak": "ください"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.121,
+     "peak": "家"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.544,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e77cbd9f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese negative verb",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probe: 表示しない 0.43-0.68, 注意しない 0.47, 言わない 0.33; 表示して 0.06, 言って 0.07. Leaks: できる 0.28, 添います 0.31, and Korean ' 않을' 0.19, so plain attributive verb forms sit nearby. Token trigger declared.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "しない",
+   "れない",
+   "えない",
+   "ない",
+   "わない",
+   "かない",
+   "できない"
+  ]
+ }
+}
