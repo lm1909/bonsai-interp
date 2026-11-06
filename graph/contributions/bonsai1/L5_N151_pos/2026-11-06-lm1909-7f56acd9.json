@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7f56acd9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N151+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:35:49+00:00",
+ "recipe": {
+  "toolchain_commit": "b15ebeea9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N151_pos/2026-11-06-lm1909-7f56acd9.tests.json"
+ },
+ "label": "A plural noun or its final piece heading a phrase (Вариан|ты бронирования, the heights of, Reports of, Dist|ances and); singular and other nouns in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N151_pos/2026-11-06-lm1909-7f56acd9.tests.json",
+   "prereg_commit": "b15ebeea9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.822,
+     "peak": "ты"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.561,
+     "peak": " heights"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.397,
+     "peak": "Reports"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.726,
+     "peak": "ances"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.702,
+     "peak": "ты"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.842,
+     "peak": " heights"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.397,
+     "peak": "Reports"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.227,
+     "peak": "ances"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": "о"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " them"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.038,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": "clid"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": "ек"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.151,
+     "peak": " fields"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.114,
+     "peak": " Size"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.631,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b15ebeea9",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "plural heading a phrase",
+ "unit_kind": "token piece / grammatical",
+ "confidence": 0.45,
+ "notes": "Probes 0.40-0.81 on the plural pieces; 'walls of' 0.05 and 'news of' 0.03 stayed low, so it isn't every plural.",
+ "selection": "random draw"
+}
