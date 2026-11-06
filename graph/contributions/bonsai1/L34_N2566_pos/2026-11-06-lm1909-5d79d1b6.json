@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-5d79d1b6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N2566+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:57:04+00:00",
+ "recipe": {
+  "toolchain_commit": "c1fcdb348",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N2566_pos/2026-11-06-lm1909-5d79d1b6.tests.json"
+ },
+ "label": "inner or opening pieces of a few split words, several of them Polish names (Piot+rk+owska, Podz+am+cze), plus ' pow'+'ders' and ' sk'+'ilful'; no shared pattern found, and plain words in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N2566_pos/2026-11-06-lm1909-5d79d1b6.tests.json",
+   "prereg_commit": "c1fcdb348",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.732,
+     "peak": "rk"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.869,
+     "peak": "am"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.618,
+     "peak": " pow"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.288,
+     "peak": " sk"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.774,
+     "peak": "rk"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.806,
+     "peak": "am"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.514,
+     "peak": " pow"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.264,
+     "peak": "il"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.151,
+     "peak": " Lub"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " vet"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.162,
+     "peak": "z"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " castle"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " bags"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.045,
+     "peak": " pot"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.675,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1fcdb348",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "pieces: Piotrkowska, Podzamcze, powders, skilful",
+ "unit_kind": "spelling piece",
+ "confidence": "low",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   "rk",
+   "am"
+  ]
+ }
+}

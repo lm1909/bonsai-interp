@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-fe98420e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N7343-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:56:49+00:00",
+ "recipe": {
+  "toolchain_commit": "c1fcdb348",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N7343_neg/2026-11-06-lm1909-fe98420e.tests.json"
+ },
+ "label": "railways: ' railroad', ' Railroad', 'roads' in rail+roads, ' Railway', ' railway', ' Road' in 'Rail Road'; roads, ships and banks in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N7343_neg/2026-11-06-lm1909-fe98420e.tests.json",
+   "prereg_commit": "c1fcdb348",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.683,
+     "peak": "roads"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.9,
+     "peak": " Railroad"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.745,
+     "peak": " Road"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.632,
+     "peak": " railway"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.684,
+     "peak": "roads"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.633,
+     "peak": " Railway"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.82,
+     "peak": " railroad"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.492,
+     "peak": " railways"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " cycling"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " cotton"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " Great"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " shipping"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "actors"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.683,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1fcdb348",
+  "minutes": 3,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "railroads and railways",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "railroad",
+   "Railroad",
+   "railroads",
+   "railway",
+   "Railway"
+  ]
+ }
+}

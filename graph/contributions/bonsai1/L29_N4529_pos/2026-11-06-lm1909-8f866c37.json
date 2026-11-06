@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-8f866c37",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N4529+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:57:54+00:00",
+ "recipe": {
+  "toolchain_commit": "c1fcdb348",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N4529_pos/2026-11-06-lm1909-8f866c37.tests.json"
+ },
+ "label": "a noun that a number usually follows: ' year' in 'up to year', ' iPhone', ' RFC', ' Jahr', ' año', firing on the noun; other nouns in the same frames stay low, and ' Apollo' and ' Kepler' read low in probes",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N4529_pos/2026-11-06-lm1909-8f866c37.tests.json",
+   "prereg_commit": "c1fcdb348",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.545,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.651,
+     "peak": " iPhone"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.605,
+     "peak": " RFC"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.747,
+     "peak": " Jahr"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.56,
+     "peak": " año"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.342,
+     "peak": " iPhone"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.549,
+     "peak": " RFC"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.469,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.073,
+     "peak": " unveil"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " headers"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "ichen"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": "ío"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": " Samsung"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " regions"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.554,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1fcdb348",
+  "minutes": 4,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "noun that a number follows: year, iPhone, RFC",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " year",
+   " iPhone",
+   " RFC",
+   " Jahr",
+   " año"
+  ]
+ }
+}
