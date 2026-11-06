@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-5151446f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N7683+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:00:31+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N7683",
+   "pole": "+",
+   "label": "the piece ending a word split before a stressed syllable: -ard of Edouard, -od of daffodil, -uta of Battuta, -ad of Dybwad",
+   "fire": [
+    "The critic wrote about Edouard Vuillard last year.",
+    "We planted daffodils along the fence.",
+    "The travels of Ibn Battuta fill the book.",
+    "She thanked Dybwad for the note.",
+    "Edouard was the painter's first name.",
+    "Yellow daffodils came up in March.",
+    "Students read Battuta in the first term.",
+    "An email from Dybwad arrived today."
+   ],
+   "quiet": [
+    "The critic wrote about Pierre Bonnard last year.",
+    "We planted tulips along the fence.",
+    "The travels of Marco Polo fill the book.",
+    "She thanked Smith for the note.",
+    "Pierre was the painter's first name.",
+    "Yellow tulips came up in March.",
+    "Students read Homer in the first term.",
+    "An email from Smith arrived today."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'-ard, -od, -uta, -ad' end pieces",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "A list from the card's top pieces, not a shared pattern; 'stressed syllable' is my guess. 'Bonnard' in a near miss splits as ' Bon' + 'nard', so it does not contain the piece 'ard'.",
+ "trigger": {
+  "pieces": [
+   "ard",
+   "od",
+   "uta",
+   "ad"
+  ]
+ }
+}
