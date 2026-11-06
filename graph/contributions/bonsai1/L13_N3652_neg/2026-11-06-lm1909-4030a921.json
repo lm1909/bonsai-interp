@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4030a921",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N3652-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:26:47+00:00",
+ "recipe": {
+  "toolchain_commit": "771c3fbae",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N3652_neg/2026-11-06-lm1909-4030a921.tests.json"
+ },
+ "label": "' their' referring back to a plural subject ('both poems ... far from their native villages'); quiet with a singular subject or without the pronoun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N3652_neg/2026-11-06-lm1909-4030a921.tests.json",
+   "prereg_commit": "771c3fbae",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.189,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.058,
+     "peak": "All"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.213,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.252,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.146,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.285,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.28,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.116,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " abroad"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": "All"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.034,
+     "peak": " far"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " wartime"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.201,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "771c3fbae",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "' their' back to a plural subject",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Second round after 2026-11-06-lm1909-aca7c153 (' cases', failed at median 0.197). A sub-trigger: the card's top examples also peak on ' have', ' cases', ' they' and ' each', none tested here. Hypothesis not tested here: this is the plural side of the + pole's singular 'each sentence'. Eighteen exploration sentences by play probe: plural subject with ' their' peaking on ' their' 0.14-0.35, singular versions 0.03; ' they' after 'almost none' 0.20 but after 'almost no firms' and 'hardly any' 0.04-0.08, so ' they' is left out of this label.",
+ "selection": "picked"
+}

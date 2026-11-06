@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e8c836b0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N3919-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:26:51+00:00",
+ "recipe": {
+  "toolchain_commit": "771c3fbae",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N3919_neg/2026-11-06-lm1909-e8c836b0.tests.json"
+ },
+ "label": "' prior' after 'had just', a weekday after 'who had already', and 'our last few <time>'; quiet in future or habitual frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N3919_neg/2026-11-06-lm1909-e8c836b0.tests.json",
+   "prereg_commit": "771c3fbae",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.089,
+     "peak": " drained"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.302,
+     "peak": " prior"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.237,
+     "peak": " Tuesday"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.202,
+     "peak": " Friday"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.185,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.187,
+     "peak": " Saturday"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.357,
+     "peak": " prior"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.187,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " whistle"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": " today"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.024,
+     "peak": " Friday"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.03,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": "out"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " delay"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " will"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.195,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "771c3fbae",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "' prior' / weekday / 'our last few' in past-narrative frames",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.5,
+ "notes": "Second round after 2026-11-05-lm1909-826b50ed, which missed the median by 0.004 with a broader 'earlier moment' label. This is a list of frames, not a tested meaning: nothing here tests the meaning without these words. Thirteen exploration sentences by play probe: ' prior' after 'had just' 0.48, 'had spoken ... just prior' 0.21, but 'had trained hard prior' 0.11 and 'had closed its doors prior' 0.06; weekday after 'had already' 0.17-0.23; 'Our last few weeks' 0.16; the two future-frame probes 0.01-0.04. The card shows no single dominant token, so this is probably partial.",
+ "selection": "picked"
+}
