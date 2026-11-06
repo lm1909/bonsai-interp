@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-51ea5827",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4621+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:23:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N4621",
+   "pole": "+",
+   "label": "the piece that continues a word opening in mat or мат (mat|rim|ony, mat|ador, Mat|ilda, мат|рос, мат|че), as opposed to whole-token words with the same opening (матч, материал, mattress) and split words with another opening (Mal|aga, Marr|akes|h)",
+   "fire": [
+    "The vicar spoke about matrimony at great length.",
+    "The young matador bowed to the crowd.",
+    "We read a book about Matilda and the king.",
+    "The engineer Matsumoto built the new bridge.",
+    "Старый матрос сидел на берегу.",
+    "Вчера они смотрели матчи по телевизору.",
+    "На кровати лежал новый матрас.",
+    "The port of Matanzas lies in Cuba."
+   ],
+   "quiet": [
+    "The vicar spoke about marriage at great length.",
+    "A cheap mattress was sold to the crowd.",
+    "We read a book about Marrakesh and the king.",
+    "The engineer Takahashi built the new bridge.",
+    "Старый мастер сидел на берегу.",
+    "Вчера они смотрели матч по телевизору.",
+    "На столе лежал новый материал.",
+    "The port of Malaga lies in Spain."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "piece after a split-off mat- or мат-",
+ "unit_kind": "spelling unit",
+ "confidence": "medium",
+ "notes": "Gate-closed regime dominates. Card: 'رو' x3, '리' x3, 'ери' x2, 'чи' x2, 'rim', 'raz', with several after mat or мат. Probes: 'rim' 0.78, 'raz' 0.97, 'че' 0.87, 'реш' 0.86, 'рос' 1.06, 'рас' 0.36, 'ador' 0.36, 'ilda' 0.35, 'sum' 0.39, 'lock' 0.22; whole tokens mattress 0.00, материал 0.03, matrix -0.02, matte 0.11; marriage 0.02. Not fully clean: Math|ilde 0.36, Matte|o 0.44, M|atri|arch 0.63 and Матч at 'ч' 0.67 also fire, so the exact opening is loose, and 'He stood on the mat' reached 0.22. Korean and Arabic tokens on the card are not explained, so expect `partial`."
+}

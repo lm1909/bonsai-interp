@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-817fd54a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N1113+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:23:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N1113",
+   "pole": "+",
+   "label": "the token ' Hay' opening or forming a name (Hay|ek, Hay|ashi, John Hay), as opposed to names that hold those letters inside a whole token (Hayden, Hayward) and other names",
+   "fire": [
+    "The economist Friedrich Hayek wrote that famous book.",
+    "The composer Haydn wrote many symphonies in Vienna.",
+    "Senator John Hay spoke in Ohio last week.",
+    "The director Hayao Miyazaki made the film in Tokyo.",
+    "The Haywood family has lived in Ohio for years.",
+    "Professor Hayashi wrote the paper in Kyoto.",
+    "Will Hay was an English comedian of the old school.",
+    "The writer Haydar wrote from Damascus that winter."
+   ],
+   "quiet": [
+    "The economist Friedrich Keynes wrote that famous book.",
+    "The composer Hayden wrote many symphonies in Vienna.",
+    "Senator John Jay spoke in Ohio last week.",
+    "The director Takashi Miike made the film in Tokyo.",
+    "The Hayward family has lived in Ohio for years.",
+    "Professor Takahashi wrote the paper in Kyoto.",
+    "Will Ray was an English comedian of the old school.",
+    "The sign by the barn read Fresh Hay For Sale."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the token ' Hay' in a name",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: ' Hay' x9, 'Hay' x3, ' (' x2, 北京市, 'ő', '8'. Probes: ' Hay' 0.58-0.60, 'Hay' 0.50; whole-token ' Hayes' 0.05, ' hay' 0.07, 'Hey' 0.02, ' Tak' 0.01. 北京市 reached 0.73 and ' (' on the card is unexplained, so this covers part of the pole only. One near miss uses ' Hay' outside a name, so the 'in a name' part rests on one item. Output promotes ' Tu', ' past', 'imus', not explained.",
+ "trigger": {
+  "tokens": [
+   " Hay",
+   "Hay"
+  ]
+ }
+}

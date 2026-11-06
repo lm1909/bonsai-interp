@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-0b79b703",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10440+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:23:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N10440",
+   "pole": "+",
+   "label": "a short list of tokens: '.function', the piece 'ί' in Greek words, the piece 'كن' in أماكن, as opposed to sibling tokens in the same places",
+   "fire": [
+    "y = obj.function(1)\nprint(y)\n",
+    "z = self.function\nreturn z\n",
+    "result = a.function(b, c)\nprint(result)\n",
+    "call(x.function)\ndone()\n",
+    "Η Αίγυπτος έχει πολλά ποτάμια.",
+    "Το αίμα ήταν κόκκινο στην πληγή.",
+    "زرت كل الأماكن الجميلة في المدينة.",
+    "هذه الأماكن قديمة جدا."
+   ],
+   "quiet": [
+    "y = obj.method(1)\nprint(y)\n",
+    "z = self.name\nreturn z\n",
+    "result = a.value(b, c)\nprint(result)\n",
+    "call(x.size)\ndone()\n",
+    "Η Ελλάδα έχει πολλά ποτάμια.",
+    "Το νερό ήταν κόκκινο στην πληγή.",
+    "زرت كل المدن الجميلة في البلاد.",
+    "هذه البيوت قديمة جدا."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "list: .function, Greek ί, Arabic كن",
+ "unit_kind": "token / list",
+ "confidence": "medium",
+ "notes": "Card: 'كن' x7, ' بين' x7, '.function' x4, 'ί' x2, ' SharePoint' x2, 'مهارات' x2; max 0.58, half gate-closed. Probes: '.function' 0.35-0.43; 'ί' 0.95 in ὀχυραί and Αίών; 'كن' in الاماكن 0.39; '.method' 0.09, '.name' 0.02, '.value' 0.03, ρ 0.07, دن 0.03, سكن 0.02. ' بين' reached only 0.12 and ' SharePoint' 0.04, so they are not claimed. I found no shared pattern, so this is a list on purpose. An L0 pole, so it is about tokens, not meaning.",
+ "trigger": {
+  "tokens": [
+   ".function",
+   "ί",
+   "كن"
+  ]
+ }
+}
