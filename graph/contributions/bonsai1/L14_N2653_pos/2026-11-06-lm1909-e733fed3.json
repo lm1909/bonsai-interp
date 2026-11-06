@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e733fed3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N2653+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:02:23+00:00",
+ "recipe": {
+  "toolchain_commit": "2b754e179",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N2653_pos/2026-11-06-lm1909-e733fed3.tests.json"
+ },
+ "label": "A submodule piece under django.contrib or django.core in an import path ('.hashers', 'urlresolvers', '.util', and others not seen in probing); the same shape in other Python packages stays quiet, even with the same path words.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N2653_pos/2026-11-06-lm1909-e733fed3.tests.json",
+   "prereg_commit": "2b754e179",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.481,
+     "peak": "ers"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.273,
+     "peak": " default"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.378,
+     "peak": " resolve"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.562,
+     "peak": ".util"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.205,
+     "peak": "Backend"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.045,
+     "peak": ".decorators"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.134,
+     "peak": ".cache"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.386,
+     "peak": ".helpers"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": "_hash"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.098,
+     "peak": " default"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " pyramid"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " quote"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.131,
+     "peak": ".hash"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": "Cache"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": " un"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.326,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2b754e179",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "submodule piece under django.contrib or django.core",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: hashers 0.48-0.60, admin.util 0.56, urlresolvers 0.34, django.contrib.auth.tokens 0.26, sessions.backends 0.20, django.utils.encoding 0.17; django.db and django.core.paginator about 0.01, so not all of Django, and sklearn.utils 0.20 outside it. Three fire sentences (hashers, urlresolvers, admin.util) share a prefix with a probed sentence through the firing token, so their values are known; the other five use modules not probed and carry the test. The card's Harry Potter pieces ('ron', 'un') read under 0.04 in probes and are not covered.",
+ "selection": "random draw"
+}

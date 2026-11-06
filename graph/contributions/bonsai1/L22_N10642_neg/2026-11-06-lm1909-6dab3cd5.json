@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6dab3cd5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N10642-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:03:27+00:00",
+ "recipe": {
+  "toolchain_commit": "2b754e179",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N10642_neg/2026-11-06-lm1909-6dab3cd5.tests.json"
+ },
+ "label": "The first piece of a word split across tokens when it begins a new line or sentence ('T/oll-free', ' E/legance', 'Im/prove', 'D/ental'), and ' Re' after 'Subject:'; whole-token words in that place stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N10642_neg/2026-11-06-lm1909-6dab3cd5.tests.json",
+   "prereg_commit": "2b754e179",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.291,
+     "peak": "T"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.272,
+     "peak": " E"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.434,
+     "peak": "Im"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.26,
+     "peak": "D"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.729,
+     "peak": " Re"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.296,
+     "peak": " W"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.238,
+     "peak": "Pl"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.316,
+     "peak": "En"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " site"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": " month"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": "Open"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.077,
+     "peak": " Ann"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " noon"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " forms"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.293,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2b754e179",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first piece of a split word at a line or sentence start",
+ "unit_kind": "positional",
+ "confidence": 0.7,
+ "notes": "Probes: 0.35-0.69. Whole first tokens 0.02-0.05 (one 'He' 0.13), but 'F' in 'Fees' 0.42 at text start, so near misses need a whole-token opener. Density is about 1% of tokens, so other things may also fire. Also seen mid-sentence: 'b' in '(bassist' 0.50, not covered.",
+ "selection": "random draw"
+}

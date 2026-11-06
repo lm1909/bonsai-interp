@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4ff641db",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6358+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:02:17+00:00",
+ "recipe": {
+  "toolchain_commit": "2b754e179",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N6358_pos/2026-11-06-lm1909-4ff641db.tests.json"
+ },
+ "label": "The token ' sk' as tested in ski words (skier, skied, skis), and the Arabic ' مق' of 'مقاومة' and 'مقاضاة'; whole tokens such as ' skull', ' sketch' and ' skin', and other Arabic nouns, stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N6358_pos/2026-11-06-lm1909-4ff641db.tests.json",
+   "prereg_commit": "2b754e179",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.896,
+     "peak": " sk"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.704,
+     "peak": " sk"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.685,
+     "peak": " sk"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.375,
+     "peak": " sk"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.91,
+     "peak": "ا"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.581,
+     "peak": " مق"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.624,
+     "peak": "ا"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.639,
+     "peak": " مق"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " champion"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "Begin"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "ines"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " event"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.051,
+     "peak": "ورة"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.404,
+     "peak": "اق"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": "ه"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.538,
+     "peak": " النق"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.662,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2b754e179",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' sk' of ski words; Arabic مق-",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Probes: ' sk' in skier 0.43-0.89, skied 0.75, skis 0.38; ' skiing' (one token) 0.05, skin and sky about 0; Arabic 0.53-0.87, peaking on ' مق' or the next 'ا'. Other words that split into ' sk' (such as skater) would read the same at that token by construction, so this test cannot say the token is about skiing. Whether the two parts are one distinction I don't know: a list.",
+ "selection": "random draw"
+}

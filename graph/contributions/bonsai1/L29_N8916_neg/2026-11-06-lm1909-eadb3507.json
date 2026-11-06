@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-eadb3507",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N8916-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:02:29+00:00",
+ "recipe": {
+  "toolchain_commit": "2b754e179",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N8916_neg/2026-11-06-lm1909-eadb3507.tests.json"
+ },
+ "label": "' child' in policy or field talk ('in child psychology', 'on child poverty'), against ' child' naming a particular child, with or without that kind of topic.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N8916_neg/2026-11-06-lm1909-eadb3507.tests.json",
+   "prereg_commit": "2b754e179",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.65,
+     "peak": " child"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.567,
+     "peak": " child"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.576,
+     "peak": " child"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.551,
+     "peak": " child"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.507,
+     "peak": " child"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.707,
+     "peak": " child"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.616,
+     "peak": " child"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.537,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.112,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.442,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.426,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.199,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.102,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.092,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.328,
+     "peak": " child"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.571,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2b754e179",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' child' in policy or field talk",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probes: 0.48-0.65 for the field use; 'a child-centered' 0.38. 'the child', 'my child' 0.05-0.11, but 'The child ran' 0.31. The model cannot see the next word, so the difference has to come from what precedes ' child'. The card also fires on 'a child-centered' and 'a child's natural curiosity', so a determiner alone does not silence it. Two near misses keep a policy-like lead-in with a determiner, to separate the two. The output direction fits (it promotes '-centered', ' center', ' family' on this pole).",
+ "selection": "random draw"
+}

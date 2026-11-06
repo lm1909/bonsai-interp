@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0ff8df8b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N6623+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:03:12+00:00",
+ "recipe": {
+  "toolchain_commit": "2b754e179",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N6623_pos/2026-11-06-lm1909-0ff8df8b.tests.json"
+ },
+ "label": "Exceptional power or fighting ability of a person or force ('fighting ability was far', 'magical power', 'skilled in sword', 'superior firepower'); the same characters and armies described in other ways stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N6623_pos/2026-11-06-lm1909-0ff8df8b.tests.json",
+   "prereg_commit": "2b754e179",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.367,
+     "peak": " far"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.131,
+     "peak": " speed"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.064,
+     "peak": "ier"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.359,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.263,
+     "peak": "man"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.845,
+     "peak": " magical"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.358,
+     "peak": " better"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.18,
+     "peak": " unarmed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.059,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": " child"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " legion"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " kingdom"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": "Few"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " border"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " village"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.31,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2b754e179",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "exceptional power or fighting ability",
+ "unit_kind": "topic",
+ "confidence": 0.5,
+ "notes": "Probes: 0.23-0.47, but 'superhuman strength and agility' 0.09, and business rivalry 0.14-0.20. Plain near misses 0.00-0.04, but 'Strength is a measure of force' 0.13. The peak token varies. 'She outperformed every rival' read 0.20. Near misses here stay with warriors and armies, except one non-combat rivalry control.",
+ "selection": "random draw"
+}

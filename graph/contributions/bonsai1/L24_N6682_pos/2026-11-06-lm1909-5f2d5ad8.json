@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5f2d5ad8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6682+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:02:48+00:00",
+ "recipe": {
+  "toolchain_commit": "2b754e179",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N6682_pos/2026-11-06-lm1909-5f2d5ad8.tests.json"
+ },
+ "label": "Best guess: ' guess' or the end of a clause when two people take turns ('You and I take turns, and then you guess'); ' guess' with no turn-taking stays quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N6682_pos/2026-11-06-lm1909-5f2d5ad8.tests.json",
+   "prereg_commit": "2b754e179",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.323,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.2,
+     "peak": " guess"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.213,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.2,
+     "peak": " guess"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.251,
+     "peak": " guess"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.131,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.11,
+     "peak": " guess"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.129,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.205,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " find"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.273,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.144,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.038,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " late"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "Each"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.091,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.2,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2b754e179",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "turn-taking between two people (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "A sparse pole with no consistent token on the card: ' what', ' of', ' letting', ' on', ' other', ' which'. Apart from one ' on' (' capitalized on' read 0.44 once, then 0.01, so I dropped it), only two turn-taking sentences read above 0.3 in probes (0.31, 0.35), and 'switch places' read 0.08. The output direction promotes ' two', ' mutual', ' mutually' and suppresses ' everyone', ' people', ' others', which fits a two-party reading but is weak support. Expected to fail.",
+ "selection": "random draw"
+}
