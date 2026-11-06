@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-b1b23d71",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N6892+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:20:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N6892",
+   "pole": "+",
+   "label": "the ':' after 'Photo', 'Image credit' or 'Photo Credit', firing on the colon; ':' after Note, Source and other labels stays quiet",
+   "fire": [
+    "Cities grow faster when wages rise. (Photo: Getty Images)",
+    "The council will fund new bike lanes.\nImage credit: dt",
+    "Ticks like tall grass.\nPhoto Credit: example.org",
+    "photo credit: Anna Lee. Used under a free license.",
+    "Sales fell sharply in June. (Image: Reuters)",
+    "A new bridge opens next week.\nImage Credit: NASA",
+    "Bears avoid busy roads.\nPhoto: Tom Hall",
+    "Picture credit: the author. All rights reserved."
+   ],
+   "quiet": [
+    "Cities grow faster when wages rise. (Source of data)",
+    "The council will fund new bike lanes.\nNext week: more",
+    "Ticks like tall grass.\nNote: wear boots.",
+    "reminder: Anna Lee is away. Call next week.",
+    "Sales fell sharply in June. (See table two)",
+    "A new bridge opens next week.\nWarning: expect delays.",
+    "Bears avoid busy roads.\nTip: stay calm",
+    "Price list: the author. All copies are sold."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "':' in a photo credit",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   ":"
+  ]
+ }
+}

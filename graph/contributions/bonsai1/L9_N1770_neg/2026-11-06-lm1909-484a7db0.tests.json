@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-484a7db0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N1770-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:20:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N1770",
+   "pole": "-",
+   "label": "Python file-path handling: ' pathlib', ' Path', '.join' on a path object, ' join' from os.path, firing on those tokens; other imports, and 'join' in prose, stay low",
+   "fire": [
+    "import json\nfrom pathlib import Path",
+    "root = Path(base_dir)\nprint(root)",
+    "out = str(workdir.join('data.csv'))",
+    "from os.path import join as pjoin",
+    "from pathlib import Path\nfrom uuid import uuid4",
+    "config = Path.home()\nprint(config)",
+    "fname = os.path.join(root, 'a.txt')",
+    "log = str(tmp_path.join('log.txt'))"
+   ],
+   "quiet": [
+    "import json\nfrom math import sqrt",
+    "root = base_dir\nprint(root)",
+    "out = str(workdir)",
+    "from os.path import exists",
+    "from math import pi\nfrom uuid import uuid4",
+    "config = load()\nprint(config)",
+    "Please join the hikers on the river path.",
+    "log = str(name)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "pathlib and os.path.join",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   " pathlib",
+   " Path",
+   ".join",
+   " join"
+  ]
+ }
+}
