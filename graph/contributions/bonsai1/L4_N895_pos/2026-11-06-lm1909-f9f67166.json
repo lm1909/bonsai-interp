@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f9f67166",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N895+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:43:26+00:00",
+ "recipe": {
+  "toolchain_commit": "114e25347",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N895_pos/2026-11-06-lm1909-f9f67166.tests.json"
+ },
+ "label": "Arabic 'طلاق' in 'انطلاق' and 'ipse' in 'Dipsea' (a list; broad, gate-closed)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N895_pos/2026-11-06-lm1909-f9f67166.tests.json",
+   "prereg_commit": "114e25347",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.039,
+     "peak": "ipse"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.007,
+     "peak": "ipse"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.7,
+     "peak": "طلاق"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.008,
+     "peak": "ipse"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.575,
+     "peak": "طلاق"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.039,
+     "peak": "ipse"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.62,
+     "peak": "طلاق"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.029,
+     "peak": "ipse"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.052,
+     "peak": " Race"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.098,
+     "peak": " climbed"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.26,
+     "peak": " نهاية"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.046,
+     "peak": " love"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.147,
+     "peak": " الص"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.081,
+     "peak": " race"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.082,
+     "peak": " الموسم"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.068,
+     "peak": " twice"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 1.007,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "114e25347",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "انطلاق, Dipsea",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card flags broad (5.8%) and gate-closed (100% echo). Card: 'طلاق' x12, 'ipse' x2, 'os' x2, 'ال' x2. No shared pattern. Probe: Dipsea 1.02-1.07, انطلاق 0.71; 'road race' 0.14; 'نهاية' 0.09.",
+ "selection": "random draw"
+}

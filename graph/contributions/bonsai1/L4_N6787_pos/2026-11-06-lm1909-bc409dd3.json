@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-bc409dd3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N6787+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:44:17+00:00",
+ "recipe": {
+  "toolchain_commit": "114e25347",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N6787_pos/2026-11-06-lm1909-bc409dd3.tests.json"
+ },
+ "label": "nearly always on (82% of tokens reach 0.1 of max; gate-closed, tiny max)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N6787_pos/2026-11-06-lm1909-bc409dd3.tests.json",
+   "prereg_commit": "114e25347",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 8,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.849,
+     "peak": " Jefferson"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.789,
+     "peak": " Jefferson"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.832,
+     "peak": " Jefferson"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.69,
+     "peak": "erson"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.814,
+     "peak": " Jefferson"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.793,
+     "peak": " Jefferson"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.829,
+     "peak": " Jefferson"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.803,
+     "peak": " Jefferson"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.448,
+     "peak": " others"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.392,
+     "peak": " listed"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.379,
+     "peak": " Baltimore"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.441,
+     "peak": "Orange"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.409,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.469,
+     "peak": " Adams"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.407,
+     "peak": " Street"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.552,
+     "peak": " Lincoln"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.808,
+    "near_misses_at_0.3": 8
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "114e25347",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "always on",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (82.6%) and gate-closed (100% echo), max 0.28. Top peaks are tiny (' Jefferson' x11, ' home' x2). Best-guess test on ' Jefferson'.",
+ "selection": "random draw"
+}

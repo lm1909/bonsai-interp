@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-67429059",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N6631-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:43:26+00:00",
+ "recipe": {
+  "toolchain_commit": "114e25347",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N6631_neg/2026-11-06-lm1909-67429059.tests.json"
+ },
+ "label": "German ' sch' opening a word (schreiben, schützen, schweizer)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N6631_neg/2026-11-06-lm1909-67429059.tests.json",
+   "prereg_commit": "114e25347",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.85,
+     "peak": " sch"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.807,
+     "peak": " sch"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.812,
+     "peak": " sch"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.781,
+     "peak": " sch"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.851,
+     "peak": " sch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.009,
+     "peak": " Laden"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.618,
+     "peak": " sch"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.697,
+     "peak": " ru"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.439,
+     "peak": " red"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.22,
+     "peak": " lie"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.05,
+     "peak": "uf"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.233,
+     "peak": " malt"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.266,
+     "peak": " lie"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " Laden"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.352,
+     "peak": " gew"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.688,
+     "peak": " ru"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.794,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "114e25347",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "German ' sch'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' sch' x24, ' ver' x3, ' kom' x2, ' st', ' fr', ' dr'. Probe: 0.79-0.86; ' ver' 0.43; English 0.01. Near misses avoid ' ver', ' kom' openings where I can.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " sch"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4df3639d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N7462-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:43:24+00:00",
+ "recipe": {
+  "toolchain_commit": "114e25347",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N7462_neg/2026-11-06-lm1909-4df3639d.tests.json"
+ },
+ "label": "code that writes to a dict entry after a membership test ('if k in d:\\n    d[k] = …'; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N7462_neg/2026-11-06-lm1909-4df3639d.tests.json",
+   "prereg_commit": "114e25347",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.41,
+     "peak": "]"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.646,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.336,
+     "peak": "]"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.263,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.316,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.127,
+     "peak": "]"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.332,
+     "peak": "]"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.397,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "for"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " item"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": ".id"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": "for"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": ".text"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " path"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": ".uid"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.334,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "114e25347",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dict membership code (guess)",
+ "unit_kind": "code",
+ "confidence": "low",
+ "notes": "Card: ' it' x3, ' be' x2, ' out' x2, ' that' x2, ':\\n', 'ids'. Probe: 'if table.index in table_dict:' 0.35; 'not in xits' 0.08; prose 0.02. A best guess. Prose peaks on the card are not explained.",
+ "selection": "random draw"
+}

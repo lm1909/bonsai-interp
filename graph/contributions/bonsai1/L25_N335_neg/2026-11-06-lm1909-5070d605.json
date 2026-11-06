@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-5070d605",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N335-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:44:32+00:00",
+ "recipe": {
+  "toolchain_commit": "114e25347",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N335_neg/2026-11-06-lm1909-5070d605.tests.json"
+ },
+ "label": "' civil' / ' Civil' (Civil War, civil rights, civil society)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N335_neg/2026-11-06-lm1909-5070d605.tests.json",
+   "prereg_commit": "114e25347",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.771,
+     "peak": " Civil"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.631,
+     "peak": " civil"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.74,
+     "peak": " Civil"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.487,
+     "peak": " civil"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.426,
+     "peak": " civil"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.679,
+     "peak": " Civil"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.661,
+     "peak": " civil"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.643,
+     "peak": " civil"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " Roman"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " labor"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " kind"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": " great"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.652,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "114e25347",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' civil'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' civil' x17, ' Civil' x13, 'Civil' x2. Probe: 0.59-0.91, including the 'polite' sense 'He was civil' 0.59; 'Roman Empire' 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "civil",
+   "Civil"
+  ]
+ }
+}

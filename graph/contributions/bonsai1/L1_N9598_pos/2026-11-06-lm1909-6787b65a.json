@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6787b65a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9598+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:44:22+00:00",
+ "recipe": {
+  "toolchain_commit": "114e25347",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N9598_pos/2026-11-06-lm1909-6787b65a.tests.json"
+ },
+ "label": "dense gate-closed unit with a tiny max, no clear trigger",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N9598_pos/2026-11-06-lm1909-6787b65a.tests.json",
+   "prereg_commit": "114e25347",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.904,
+     "peak": " JUL"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.789,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.809,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.791,
+     "peak": " JUL"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.753,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.785,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.756,
+     "peak": " lor"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.829,
+     "peak": " JUL"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.203,
+     "peak": " middle"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.234,
+     "peak": " first"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.281,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.334,
+     "peak": " begin"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.173,
+     "peak": " next"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.239,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.294,
+     "peak": " par"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.194,
+     "peak": " middle"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.79,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "114e25347",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense, unclear",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (30.0%) and gate-closed (100% echo), max 0.17. Card: 'بار' x4, '1' x3, '8' x2, ' Lair' x2, ' JUL'. A best-guess test on date and digit forms against prose.",
+ "selection": "random draw"
+}
