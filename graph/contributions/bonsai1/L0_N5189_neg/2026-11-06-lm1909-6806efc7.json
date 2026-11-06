@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6806efc7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5189-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:57:48+00:00",
+ "recipe": {
+  "toolchain_commit": "82b7ce3b9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5189_neg/2026-11-06-lm1909-6806efc7.tests.json"
+ },
+ "label": "' goose', 'oth' of Moths, and misspelled ' sucess' (a list; broad)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5189_neg/2026-11-06-lm1909-6806efc7.tests.json",
+   "prereg_commit": "82b7ce3b9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.85,
+     "peak": " goose"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.951,
+     "peak": "oth"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.501,
+     "peak": " goose"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.667,
+     "peak": " sucess"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.951,
+     "peak": "oth"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.829,
+     "peak": " goose"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.057,
+     "peak": " wool"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.716,
+     "peak": " sucess"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " tag"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.068,
+     "peak": " large"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " upgrade"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": "et"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " roasted"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": "Many"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.772,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82b7ce3b9",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "goose, moths, sucess",
+ "unit_kind": "lexical / token piece",
+ "confidence": "medium",
+ "notes": "Card flags broad (1.1%). Card: ' goose' x8, 'oth' x5, 'iac' x3, 'aar' x2, ' sucess' x2, 'acon' x2. No shared pattern named. Probe: Moths 0.95, goose 0.88, sucess 0.60; 'Gotham' 0.01; 'Bees' 0.06; 'tag' 0.01.",
+ "selection": "random draw"
+}

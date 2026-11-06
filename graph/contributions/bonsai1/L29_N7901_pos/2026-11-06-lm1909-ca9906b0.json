@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ca9906b0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N7901+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:58:14+00:00",
+ "recipe": {
+  "toolchain_commit": "82b7ce3b9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N7901_pos/2026-11-06-lm1909-ca9906b0.tests.json"
+ },
+ "label": "brand-name openings ' We' / '.we' / 'red' / ' Red' (WeChat, Weebly, Red Hat, Red Bull)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N7901_pos/2026-11-06-lm1909-ca9906b0.tests.json",
+   "prereg_commit": "82b7ce3b9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.901,
+     "peak": " We"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.553,
+     "peak": ".we"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.902,
+     "peak": "red"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.566,
+     "peak": " Red"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.614,
+     "peak": " We"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.56,
+     "peak": ".we"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.55,
+     "peak": " Red"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.353,
+     "peak": " Red"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.055,
+     "peak": " mail"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.05,
+     "peak": "More"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.139,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.074,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.105,
+     "peak": " front"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.342,
+     "peak": " red"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.034,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.563,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82b7ce3b9",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "We-, Red- brands",
+ "unit_kind": "lexical / token piece",
+ "confidence": "high",
+ "notes": "Card: ' Red' x7, '.we' x3, ' red' x3, 'red' x2, ' Black' x2. A list. Probe: WeChat 1.07, 'redhat' 1.14, '.weebly' 0.53, 'Red Bull' 0.49; 'color is red' 0.11; 'local race' 0.09.",
+ "selection": "random draw"
+}

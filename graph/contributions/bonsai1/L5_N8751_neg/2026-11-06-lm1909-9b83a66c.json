@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-9b83a66c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N8751-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:57:47+00:00",
+ "recipe": {
+  "toolchain_commit": "82b7ce3b9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N8751_neg/2026-11-06-lm1909-9b83a66c.tests.json"
+ },
+ "label": "surname closing a person's mention (Hend|erson, Corz|ine, De|Jesus; gate-closed; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N8751_neg/2026-11-06-lm1909-9b83a66c.tests.json",
+   "prereg_commit": "82b7ce3b9",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.056,
+     "peak": " bere"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.104,
+     "peak": "Jesus"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.047,
+     "peak": " parks"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.045,
+     "peak": " governor"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.241,
+     "peak": " Jesús"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.087,
+     "peak": " Lin"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.101,
+     "peak": "Jesus"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.028,
+     "peak": "In"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": "aison"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.043,
+     "peak": " guilty"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " parks"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.046,
+     "peak": " governor"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.073,
+     "peak": "La"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": " Lin"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.044,
+     "peak": " driver"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": "In"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.688,
+    "median_fire": 0.071,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "82b7ce3b9",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "surnames (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags gate-closed (93% leak); 'erson' x2, 'ine' x2, ' Jesús' x2, 'Jesus', ' Lowe'. Probes on close copies 0.03-0.10. A best guess.",
+ "selection": "random draw"
+}
