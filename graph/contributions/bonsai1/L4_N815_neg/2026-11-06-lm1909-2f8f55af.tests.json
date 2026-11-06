@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-2f8f55af",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N815-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:36:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N815",
+   "pole": "-",
+   "label": "code-comment marker ' TODO' / ' XXX' (broad, gate-closed; guess)",
+   "fire": [
+    "# TODO: clean this up\nx = 1",
+    "# XXX remove this later\ny = 2",
+    "# TODO: handle errors\nreturn None",
+    "# XXX this breaks on Windows\npass",
+    "// TODO: add tests\nint a = 0;",
+    "# TODO: use the new API\nz = 3",
+    "// XXX hack for old browsers\nvar b;",
+    "# TODO: rename this\nreturn 0"
+   ],
+   "quiet": [
+    "# clean this up later on\nx = 1",
+    "# remove this later on\ny = 2",
+    "# handle errors here\nreturn None",
+    "# this breaks on Windows\npass",
+    "// add tests here\nint a = 0;",
+    "# use the new API\nz = 3",
+    "// for old browsers\nvar b;",
+    "# rename this later\nreturn 0"
+   ]
+  }
+ ],
+ "predictions": "4/8 fire; the median may miss",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "TODO / XXX",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card flags broad (7.2%) and gate-closed (99% leak). Card: ' �' x5, ' XXX' x3, ' الآ' x2, 'Middleware' x2, 'TODO' x2. Probe: ' TODO' 0.35; others 0.07-0.15. Max is only 1.86.",
+ "trigger": {
+  "tokens": [
+   " TODO",
+   " XXX",
+   "TODO"
+  ]
+ }
+}

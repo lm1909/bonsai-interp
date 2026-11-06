@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-032c6138",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5741-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:36:09+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N5741",
+   "pole": "-",
+   "label": "' drug' in the crime sense (drug smugglers, dealers, cartels, drug war), not medicine",
+   "fire": [
+    "Police broke up a drug ring in the port last week.",
+    "He spent ten years hunting drug smugglers along the coast.",
+    "The guns were traced back to drug cartels in the north.",
+    "Calling someone a drug dealer can lead to a lawsuit.",
+    "The army was sent to fight the drug gangs in the hills.",
+    "Was there ever a drug war with no innocent dead?",
+    "A local drug lord was shot outside the bar.",
+    "The drug trade pays for most of the violence here."
+   ],
+   "quiet": [
+    "Doctors tested a drug for gout in the clinic last week.",
+    "He spent ten years testing drug doses for the hospital.",
+    "The side effects were traced back to drug interactions with aspirin.",
+    "Calling the pharmacy about a drug refill can take an hour.",
+    "The nurse was sent to give the drug to the patients upstairs.",
+    "Was there ever a drug for this with no side effects?",
+    "A new heart drug was approved by the agency.",
+    "The drug trial pays for most of the research here."
+   ]
+  }
+ ],
+ "predictions": "8/8 fire; medical 'drug' stays quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "illegal-drug ' drug'",
+ "unit_kind": "semantic / lexical",
+ "confidence": "high",
+ "notes": "Card: ' drug' x24, ' Drug', ' cocaine', ' Drugs'. Output is unrelated (' probability', ' PDF'). Probe: 'drug cartels' 0.85, 'drug smugglers' 0.77, 'drug dealers' 0.48; medical 'new drug' 0.00; 'Take the drug' 0.05. The near misses keep the word in a medical sense."
+}
