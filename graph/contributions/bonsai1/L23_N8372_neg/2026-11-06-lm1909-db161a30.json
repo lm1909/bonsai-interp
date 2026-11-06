@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-06-lm1909-db161a30",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8372-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:31:15+00:00",
+ "recipe": {
+  "toolchain_commit": "74272c496",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N8372_neg/2026-11-06-lm1909-db161a30.tests.json"
+ },
+ "label": "the end of a Python def signature, the '):' newline after which an indented body must follow",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N8372_neg/2026-11-06-lm1909-db161a30.tests.json",
+   "prereg_commit": "74272c496",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.016,
+     "peak": "       "
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.015,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.029,
+     "peak": " Player"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.048,
+     "peak": "):\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.112,
+     "peak": "):\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.02,
+     "peak": " *"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.346,
+     "peak": "):\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.021,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.086,
+     "peak": ".listdir"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " Player"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.07,
+     "peak": ")\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": " Queue"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.028,
+     "peak": " ="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.461,
+    "median_fire": 0.025,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "74272c496",
+  "minutes": 1,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "end of a Python def signature",
+ "unit_kind": "syntax",
+ "confidence": "medium",
+ "selection": "random draw"
+}

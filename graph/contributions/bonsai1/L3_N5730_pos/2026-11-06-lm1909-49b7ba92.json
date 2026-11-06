@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-06-lm1909-49b7ba92",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N5730+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:31:10+00:00",
+ "recipe": {
+  "toolchain_commit": "74272c496",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N5730_pos/2026-11-06-lm1909-49b7ba92.tests.json"
+ },
+ "label": "the word ' humane' (guess from the top examples; the pole reaches 0.1 of max on 92% of tokens)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N5730_pos/2026-11-06-lm1909-49b7ba92.tests.json",
+   "prereg_commit": "74272c496",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 8,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.974,
+     "peak": " humane"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.872,
+     "peak": " humane"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.01,
+     "peak": " humane"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.919,
+     "peak": " humane"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.917,
+     "peak": " humane"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.931,
+     "peak": " humane"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.839,
+     "peak": " humane"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.899,
+     "peak": " humane"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.456,
+     "peak": " shelter"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.543,
+     "peak": " prefer"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.54,
+     "peak": " modern"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.519,
+     "peak": " argues"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.493,
+     "peak": " ever"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.652,
+     "peak": " cheapest"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.471,
+     "peak": " safer"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.435,
+     "peak": " treaty"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.918,
+    "near_misses_at_0.3": 8
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "74272c496",
+  "minutes": 1,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "' humane' on a dense pole (guess)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "selection": "random draw"
+}
