@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-127c0860",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N5-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:49:51+00:00",
+ "recipe": {
+  "toolchain_commit": "d4641f0a2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N5_neg/2026-11-06-lm1909-127c0860.tests.json"
+ },
+ "label": "the first letter piece of a rarer surname or foreign name in Russian: Ф|илатов, П|ановой",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N5_neg/2026-11-06-lm1909-127c0860.tests.json",
+   "prereg_commit": "d4641f0a2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.292,
+     "peak": " Ф"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.041,
+     "peak": " П"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.361,
+     "peak": " Ф"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.364,
+     "peak": " П"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.463,
+     "peak": " Ф"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.19,
+     "peak": " Ан"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.206,
+     "peak": " Ф"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.374,
+     "peak": " Ф"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " состав"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": "ня"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": "ами"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " этом"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": "ом"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " провер"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " защит"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.059,
+     "peak": "мо"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.327,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d4641f0a2",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian surname first letter (Ф, П)",
+ "unit_kind": "token piece / names",
+ "confidence": "low",
+ "selection": "random draw"
+}

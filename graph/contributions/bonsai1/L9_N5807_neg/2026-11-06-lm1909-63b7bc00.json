@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-63b7bc00",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N5807-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:49:54+00:00",
+ "recipe": {
+  "toolchain_commit": "d4641f0a2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N5807_neg/2026-11-06-lm1909-63b7bc00.tests.json"
+ },
+ "label": "where an event is held: 'in the Rotunda from 11:30', 'Join us on', 'Second Floor', 'the ground floor of the gallery'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N5807_neg/2026-11-06-lm1909-63b7bc00.tests.json",
+   "prereg_commit": "d4641f0a2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.819,
+     "peak": "unda"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.698,
+     "peak": " us"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.459,
+     "peak": " Floor"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.385,
+     "peak": " floor"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.749,
+     "peak": "unda"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.694,
+     "peak": " us"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.734,
+     "peak": " Stage"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.873,
+     "peak": " stage"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.102,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.042,
+     "peak": " morning"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.155,
+     "peak": " roof"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": "Mayor"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.149,
+     "peak": " hall"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.716,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d4641f0a2",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "event venue and invitation",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}
