@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-5dfbc265",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N629+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:08:15+00:00",
+ "recipe": {
+  "toolchain_commit": "b3883d4e3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N629_pos/2026-11-06-lm1909-5dfbc265.tests.json"
+ },
+ "label": "the first piece of the word for 'complex' in Arabic (التعقيد), Persian (پیچیده), Korean (복잡) and German (kompl-), where 'complex' is the likely continuation",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N629_pos/2026-11-06-lm1909-5dfbc265.tests.json",
+   "prereg_commit": "b3883d4e3",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.85,
+     "peak": " التع"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.082,
+     "peak": "تع"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.804,
+     "peak": " التع"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.518,
+     "peak": " پ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.214,
+     "peak": " پ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.327,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.438,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.218,
+     "peak": "pl"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " لل"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "تف"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "مل"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " پ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " ا"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "의"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "제"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.074,
+     "peak": " kom"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.383,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3883d4e3",
+  "minutes": 25,
+  "batch_size": 1,
+  "dtype": "float16"
+ },
+ "short": "'complex' in Arabic, Persian, Korean, German",
+ "unit_kind": "semantic / token",
+ "confidence": 0.7,
+ "notes": "Second round after my pre-registered first round (nightshift/claude-03/sweep5b-20261105), which failed at AUROC 0.891 because near misses sharing the fire items' frames leaked (up to 0.25 on non-trigger tokens) and the Japanese item read 0.14. New exploration narrowed the languages. Probe: 'تع' and ' التع' 0.500-0.531; Persian ' پ' 0.396; Korean ' 복' piece 0.245-0.384; German 'kom' 0.212. Weak or absent: Japanese 0.128, Spanish ' comple' 0.119, Hebrew 0.098, Russian ' сл' 0.073, Chinese 0.056, Turkish 0.055, Hindi 0.051, Thai 0.052, Vietnamese 0.028, French 0.017, English 0.000-0.007. So the pole is not 'complex in any language'. This round's near misses vary the lead-in, and six of them hold the same first token in another word, checked with the tokenizer: ' التع' in التعديل and التعامل, ' پ' in پدر, the Korean first piece in 복지 and 복사, and ' kom' in komisch. (In round 1 the التعليم near miss was a single token, so it did not test this; 복지 did.)",
+ "selection": "picked"
+}
