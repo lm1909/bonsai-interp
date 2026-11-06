@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1a82b8d9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5371+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:01:56+00:00",
+ "recipe": {
+  "toolchain_commit": "d03159755",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5371_pos/2026-11-06-lm1909-1a82b8d9.tests.json"
+ },
+ "label": "a German adjective ending on a strong form ('ßer', 'iger', 'licher': ein gro|ßer See, wicht|iger, gefähr|licher), as opposed to plain nouns and other words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5371_pos/2026-11-06-lm1909-1a82b8d9.tests.json",
+   "prereg_commit": "d03159755",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.903,
+     "peak": "ßer"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.804,
+     "peak": "iger"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.818,
+     "peak": "licher"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.603,
+     "peak": "licher"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.756,
+     "peak": "licher"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.552,
+     "peak": "iger"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.578,
+     "peak": "licher"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.583,
+     "peak": "iger"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.071,
+     "peak": "uss"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.152,
+     "peak": " ein"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.349,
+     "peak": "er"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.107,
+     "peak": " ein"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.07,
+     "peak": " einen"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.064,
+     "peak": " Ab"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.158,
+     "peak": " ein"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "orgen"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.679,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d03159755",
+  "minutes": 1,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "German adjective ending -er",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "' der' reached 0.16 in a probe. English comparatives stayed at 0.01.",
+ "selection": "random draw"
+}

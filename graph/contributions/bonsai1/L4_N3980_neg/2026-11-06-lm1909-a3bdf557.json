@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a3bdf557",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N3980-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:02:17+00:00",
+ "recipe": {
+  "toolchain_commit": "d03159755",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N3980_neg/2026-11-06-lm1909-a3bdf557.tests.json"
+ },
+ "label": "Major League and Hall of Fame in baseball (the Major Leagues, the Baseball Hall of Fame), as opposed to ' major' and ' hall' in plain senses",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N3980_neg/2026-11-06-lm1909-a3bdf557.tests.json",
+   "prereg_commit": "d03159755",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.256,
+     "peak": " Major"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.979,
+     "peak": " Hall"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.08,
+     "peak": " Major"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.005,
+     "peak": " Fame"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.006,
+     "peak": "stown"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.17,
+     "peak": " Major"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.407,
+     "peak": " Hall"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.432,
+     "peak": " Major"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.107,
+     "peak": " major"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "uth"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " major"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " bridge"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " rookies"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.213,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d03159755",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "Major Leagues, Hall of Fame",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "' major' stayed low (0.04) in 'a call-up to the major leagues' in a probe, though the card has it; Hall reached 0.95.",
+ "selection": "random draw"
+}

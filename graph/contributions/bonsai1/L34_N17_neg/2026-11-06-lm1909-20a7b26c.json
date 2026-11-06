@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-20a7b26c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N17-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:02:03+00:00",
+ "recipe": {
+  "toolchain_commit": "d03159755",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N17_neg/2026-11-06-lm1909-20a7b26c.tests.json"
+ },
+ "label": "a word-start L split off as its own token, in Latin, Cyrillic or Hangul pieces (' l'|igation, ' л'|ичного, ' л'|инда), as opposed to whole words in those sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N17_neg/2026-11-06-lm1909-20a7b26c.tests.json",
+   "prereg_commit": "d03159755",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.046,
+     "peak": " l"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.638,
+     "peak": " л"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.709,
+     "peak": " l"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.091,
+     "peak": " L"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.384,
+     "peak": " л"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.376,
+     "peak": " l"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.397,
+     "peak": " l"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.0,
+     "peak": " со"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.0,
+     "peak": " therapy"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " друг"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "ola"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.048,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": " стар"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " takes"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": " со"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.38,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d03159755",
+  "minutes": 1,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "split word-start L / л",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Tokenization not checked for these new words. Korean ' 플' also fires (0.83 in a probe), so 'L' may not be the idea; that is not tested.",
+ "selection": "random draw"
+}
