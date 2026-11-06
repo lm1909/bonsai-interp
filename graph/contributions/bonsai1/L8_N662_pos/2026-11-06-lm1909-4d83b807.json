@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-4d83b807",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N662+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:39:36+00:00",
+ "recipe": {
+  "toolchain_commit": "e02190812",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N662_pos/2026-11-06-lm1909-4d83b807.tests.json"
+ },
+ "label": "Loss across languages: French pertes, German verlieren, Russian потеряли, Arabic فقدان, English loss",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N662_pos/2026-11-06-lm1909-4d83b807.tests.json",
+   "prereg_commit": "e02190812",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.439,
+     "peak": "es"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.548,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.491,
+     "peak": " в"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.661,
+     "peak": "ли"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.672,
+     "peak": "ان"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.506,
+     "peak": " loss"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.247,
+     "peak": " loss"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.449,
+     "peak": "lo"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " pl"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.051,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " наш"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " сдел"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": "عب"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.081,
+     "peak": " gain"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": " verd"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.498,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e02190812",
+  "minutes": 2,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "loss, across languages",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-f59620a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N3007+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:40:42+00:00",
+ "recipe": {
+  "toolchain_commit": "e02190812",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N3007_pos/2026-11-06-lm1909-f59620a5.tests.json"
+ },
+ "label": "The conjunction in a correction 'X, and not Y': Russian ', а не', Spanish ', y no', French ', et non', English ', and not'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N3007_pos/2026-11-06-lm1909-f59620a5.tests.json",
+   "prereg_commit": "e02190812",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.132,
+     "peak": " а"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.058,
+     "peak": " а"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.182,
+     "peak": " а"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.155,
+     "peak": " а"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.728,
+     "peak": " а"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.071,
+     "peak": " no"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.209,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.313,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "О"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.001,
+     "peak": "а"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "О"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " и"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.188,
+     "peak": " и"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": " jur"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.145,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.168,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e02190812",
+  "minutes": 3,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "correction: ', а не', ', and not'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw"
+}
