@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c3376848",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N10520-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:13:26+00:00",
+ "recipe": {
+  "toolchain_commit": "f099fc518",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N10520_neg/2026-11-06-lm1909-c3376848.tests.json"
+ },
+ "label": "the opening quote of a Python string used as a value after return or =, whatever it starts with",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N10520_neg/2026-11-06-lm1909-c3376848.tests.json",
+   "prereg_commit": "f099fc518",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.795,
+     "peak": " \"<"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.685,
+     "peak": " \"{"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.099,
+     "peak": " \"_"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.332,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.153,
+     "peak": " \"<"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.3,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.034,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.14,
+     "peak": " \"<"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": "self"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.041,
+     "peak": ".kind"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": "self"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "(self"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.029,
+     "peak": "\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.226,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "f099fc518",
+  "minutes": 4,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "opening quote of a string value",
+ "unit_kind": "token / code",
+ "confidence": 0.6,
+ "notes": "Second round; the first ('opening quote before < or _') failed because ' \"{' and plain ' \"' fired at 0.33-0.66 in its near misses. This label takes those as part of the trigger, and the near misses keep the code shape without a string. No new probes; based on the first round's per-sentence numbers.",
+ "selection": "picked"
+}

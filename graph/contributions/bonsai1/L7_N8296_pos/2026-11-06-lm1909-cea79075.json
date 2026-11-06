@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-cea79075",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N8296+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:13:40+00:00",
+ "recipe": {
+  "toolchain_commit": "f099fc518",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N8296_pos/2026-11-06-lm1909-cea79075.tests.json"
+ },
+ "label": "'most of' as an emphatic start: ' of' and ' all' in 'but most of all'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N8296_pos/2026-11-06-lm1909-cea79075.tests.json",
+   "prereg_commit": "f099fc518",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.129,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.314,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.888,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.982,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.083,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.129,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.324,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.888,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.316,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.057,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.233,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.254,
+     "peak": " perhaps"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " receipt"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.165,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.326,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.888,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "f099fc518",
+  "minutes": 4,
+  "batch_size": 3,
+  "dtype": "float16"
+ },
+ "short": "'most of all'",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.65,
+ "notes": "Second round; the first ('most of all', 'surtout') failed because ' of' after 'most' fired in near misses that shared the prefix. Here the near misses use other quantifiers before ' of', so the prefix differs. ' surtout' was weak and is left out. No new probes.",
+ "selection": "picked"
+}
