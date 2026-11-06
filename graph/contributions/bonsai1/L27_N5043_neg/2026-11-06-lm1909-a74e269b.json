@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-a74e269b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N5043-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:30:03+00:00",
+ "recipe": {
+  "toolchain_commit": "413c61454",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N5043_neg/2026-11-06-lm1909-a74e269b.tests.json"
+ },
+ "label": "' late' or 'Late' for the end part of a period of time (the late 1890s, late spring, late last year), as opposed to ' early' or ' mid' in the same frames and to ' late' meaning behind schedule",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N5043_neg/2026-11-06-lm1909-a74e269b.tests.json",
+   "prereg_commit": "413c61454",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.821,
+     "peak": " late"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.736,
+     "peak": " late"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.625,
+     "peak": " late"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.397,
+     "peak": " late"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.708,
+     "peak": " Late"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.637,
+     "peak": " late"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.655,
+     "peak": " late"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.743,
+     "peak": " late"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " grew"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " high"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.045,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.159,
+     "peak": " late"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " canal"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.177,
+     "peak": " late"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.681,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "413c61454",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "' late' for the end of a period",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Card: ' late' x24, 'Late' x4, ' Late' x3 of the top 32. Output promotes ' early', ' late'. Probes: 0.64-0.90 on 'late 80s', 'late 1950s', 'late 20th century', 'Late last month'; ' early' 0.11 or less. ' late' as behind schedule 0.17-0.31, so it fires less but is not silent. 'My late husband' reached 0.75, so 'deceased' fires too, and it is not claimed. The declared tokens include the other senses, so coverage is an upper bound.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " late",
+   "Late",
+   " Late"
+  ]
+ }
+}

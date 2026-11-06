@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-df34e376",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N4634-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:30:43+00:00",
+ "recipe": {
+  "toolchain_commit": "413c61454",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N4634_neg/2026-11-06-lm1909-df34e376.tests.json"
+ },
+ "label": "the piece after N or NH in a letter string N + h (N|ha, N|hat, N|hu, N|HA, N|HT|SA, NH|RA), as opposed to N + another letter (N|inh, N|ga, N|PA, N|TS|B) and whole tokens (' NHS')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N4634_neg/2026-11-06-lm1909-df34e376.tests.json",
+   "prereg_commit": "413c61454",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.911,
+     "peak": "hat"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.476,
+     "peak": "ham"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.98,
+     "peak": "han"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.176,
+     "peak": "HT"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.303,
+     "peak": " NH"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.589,
+     "peak": " Nh"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.533,
+     "peak": "hu"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.778,
+     "peak": "HA"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " writer"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.177,
+     "peak": "inh"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "ga"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " issued"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.07,
+     "peak": " NHS"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.002,
+     "peak": " coast"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": "inh"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": " built"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.561,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "413c61454",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "piece after N in an N+h letter string",
+ "unit_kind": "spelling unit",
+ "confidence": "high",
+ "notes": "Gate-closed regime dominates on the other pole. Card: 'ار' x10, 'AN' x3, 'hs' x3, 'HS' x3, ' Nh' x2, 'HA' x2. Probes: NH|AN 1.05, N|ha 0.90, N|HA 0.80, Nh|e 0.27, ' Nhi' 0.25; ' NHS' as a whole token 0.07; N|PA, Hanoi, census 0.00, (HS) without N 0.002. 'ار' on the card did not reproduce (0.004), so about a third of the top examples are not covered. Pieces checked with the tokenizer.",
+ "selection": "random draw"
+}

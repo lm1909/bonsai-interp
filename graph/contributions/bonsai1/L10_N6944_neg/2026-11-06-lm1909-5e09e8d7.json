@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5e09e8d7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6944-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:30:08+00:00",
+ "recipe": {
+  "toolchain_commit": "413c61454",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N6944_neg/2026-11-06-lm1909-5e09e8d7.tests.json"
+ },
+ "label": "personal and family record details as asked for in forms and applications (date of birth, maiden name, spouse, married, birth certificate), as opposed to other details in the same frames (address, employer, company name)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N6944_neg/2026-11-06-lm1909-5e09e8d7.tests.json",
+   "prereg_commit": "413c61454",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.604,
+     "peak": " birth"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.674,
+     "peak": " marriage"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.538,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.267,
+     "peak": " spouse"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.454,
+     "peak": " joint"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.573,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.346,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.539,
+     "peak": " marriage"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.345,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.058,
+     "peak": " licence"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.17,
+     "peak": " name"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.07,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.095,
+     "peak": " birth"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.695,
+     "peak": " name"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.148,
+     "peak": " passport"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.216,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.538,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "413c61454",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "personal and family record details",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Card: ' name' x12, ' married' x3, ' birth' x3, ' spouse' x2, ' names' x2, ' marry'. Probes: 'Father's name' 0.61, 'birth certificate' 0.63, ' spouse' 0.41, 'married couple' 0.38, ' marry' 0.16; 'File name' list 0.02, 'utility bill' 0.09, 'name of the company' and 'His name was' 0.19, 'birth of the nation' 0.13. So ' name' alone is not silent, and the form or kinship context raises it.",
+ "selection": "random draw"
+}

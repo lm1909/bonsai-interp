@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7daf7ffa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N11366+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:30:30+00:00",
+ "recipe": {
+  "toolchain_commit": "413c61454",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N11366_pos/2026-11-06-lm1909-7daf7ffa.tests.json"
+ },
+ "label": "code that compares in order to select rows or items (df[df.x == y], filter(User.a == b), np.where(x == 1), field__in=, field__startswith=), as opposed to the same objects handled without a selecting comparison, and to a plain == in an if or an assignment",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N11366_pos/2026-11-06-lm1909-7daf7ffa.tests.json",
+   "prereg_commit": "413c61454",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.624,
+     "peak": " =="
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.601,
+     "peak": " =="
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.602,
+     "peak": " =="
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.589,
+     "peak": " =="
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.532,
+     "peak": "in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.591,
+     "peak": "startswith"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.796,
+     "peak": " =="
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.614,
+     "peak": " =="
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": ".name"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.185,
+     "peak": ".argmax"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": "top"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": "')\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.029,
+     "peak": ".values"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.114,
+     "peak": " =="
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.233,
+     "peak": " =="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.601,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "413c61454",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "a comparison that selects rows or items",
+ "unit_kind": "code / contextual",
+ "confidence": "high",
+ "notes": "Card: ' ==' x15, '.startswith' x3, 'in' x2, ' in' x2, ' >' x2, 'startswith'. Probes: df.loc ' ==' 0.81, filter ' ==' 0.71, np.where ' ==' 0.68, '__in' 0.70, '__startswith' 0.61, '.startswith' 0.29; x = y + 1 0.03, df.loc without a comparison 0.03, query.all() 0.03. 'if x == 3' 0.15, 'a != b' 0.08, but 'x = y == 3' 0.46, so a comparison outside selection is not always low.",
+ "selection": "random draw"
+}

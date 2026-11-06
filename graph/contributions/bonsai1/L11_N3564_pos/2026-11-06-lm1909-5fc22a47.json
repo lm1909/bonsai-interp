@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5fc22a47",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N3564+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:30:25+00:00",
+ "recipe": {
+  "toolchain_commit": "413c61454",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N3564_pos/2026-11-06-lm1909-5fc22a47.tests.json"
+ },
+ "label": "the writer checking that the reader follows (Make sense?, Does that make sense?, Are you with me?, Know what I mean?), as opposed to sentences of the same shape about something else, including the same words without the check (makes no sense to try, know what I mean to do)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N3564_pos/2026-11-06-lm1909-5fc22a47.tests.json",
+   "prereg_commit": "413c61454",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.568,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.523,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.844,
+     "peak": " far"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.543,
+     "peak": "?"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.333,
+     "peak": " mean"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.487,
+     "peak": " saying"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.475,
+     "peak": "?"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.28,
+     "peak": " cleared"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " salt"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.164,
+     "peak": " make"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.363,
+     "peak": " far"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.286,
+     "peak": " Got"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.419,
+     "peak": " mean"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.083,
+     "peak": " no"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.273,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.145,
+     "peak": " you"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.505,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "413c61454",
+  "minutes": 2,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "checking that the reader follows",
+ "unit_kind": "semantic / discourse",
+ "confidence": "high",
+ "notes": "Card: '?' x5, ' sense' x3, ' me' x2, ' Sound', ' sound', ' made', ' mean'. Probes: 'make any sense' 0.77, 'made things a little clearer' 0.52, 'Are you with me' 0.50, 'Make sense' 0.44, 'Know what I mean' 0.42, 'Does this make sense' 0.39; 'Look west. Okay' 0.06, 'Are you with him' 0.14, 'makes sense to leave' 0.09, 'I know what I mean to say' 0.21. 'Does that make any noise' reached 0.57, on ' any', and 'Does this make money' 0.25, on ' make', so 'Does this make' is itself not silent. The frames here avoid ' any'. ' Sound' on the card is not explained.",
+ "selection": "random draw"
+}

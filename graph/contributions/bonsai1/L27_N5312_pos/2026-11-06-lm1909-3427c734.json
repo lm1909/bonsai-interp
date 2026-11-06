@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3427c734",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N5312+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:29:52+00:00",
+ "recipe": {
+  "toolchain_commit": "413c61454",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N5312_pos/2026-11-06-lm1909-3427c734.tests.json"
+ },
+ "label": "the start of a docstring in a yes/no function (is_x, x_exists, has_x), where a word like 'check' or 'test' comes next, as opposed to docstrings of functions that fetch, change or compute, and to a yes/no function with no docstring",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N5312_pos/2026-11-06-lm1909-3427c734.tests.json",
+   "prereg_commit": "413c61454",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.764,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.794,
+     "peak": " \"\"\""
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.509,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.703,
+     "peak": " \"\"\""
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.642,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.336,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.843,
+     "peak": " \"\"\""
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.781,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.445,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.054,
+     "peak": "(self"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.136,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.176,
+     "peak": " \"\"\""
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": "   "
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.734,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "413c61454",
+  "minutes": 1,
+  "batch_size": 8,
+  "dtype": "float16"
+ },
+ "short": "docstring start in a yes/no function",
+ "unit_kind": "code / contextual",
+ "confidence": "high",
+ "notes": "Output promotes ' check', ' checking', ' checks', and the card has '       ' x4 and ' \"\"\"' x4 opening such docstrings. Probes: 'def table_exists' 0.93, 'def is_valid_slug' 0.79; 'def get_table' 0.05, 'def save_slug' 0.01. Prose does not behave the same way ('allow clients to check' 0.04, card ' to' x5), so ' to' on the card is not explained. 'is_single' in prose reached 0.37 on its quote mark whatever followed. The peak comes before the docstring's words, so the difference is in the function name.",
+ "selection": "random draw"
+}
