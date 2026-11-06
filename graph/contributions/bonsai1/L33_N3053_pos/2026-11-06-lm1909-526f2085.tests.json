@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-526f2085",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L33/N3053+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:13:28+00:00",
+ "selection": "picked",
+ "qc": {
+  "verdict": "confirm",
+  "label_under_test": "a piece of a sports team or sports-figure name (New York| Mets, the P|ats, Big P|api), as against the same place name used for the city itself"
+ },
+ "neighbours": [
+  {
+   "unit": "L33/N3053",
+   "pole": "+",
+   "label": "a piece of a sports team or sports-figure name (New York| Mets, the P|ats, Big P|api), as against the same place name used for the city itself",
+   "fire": [
+    "Late in overtime the New York Rangers pulled their goalie.",
+    "Last night in the playoffs the New York Knicks lost.",
+    "As a Jets fan I still root for the Pats.",
+    "Everyone at Fenway loved our Big Papi.",
+    "He pitched a shutout against the NY Mets.",
+    "After the final whistle the New York Giants celebrated.",
+    "My dad and I drove up to watch the Pats.",
+    "Fans cheered when Big Papi came to bat."
+   ],
+   "quiet": [
+    "At a council meeting the New York mayor spoke twice.",
+    "Last month in the suburbs of New York rents rose.",
+    "As a tax lawyer I still work for the Port.",
+    "Everyone at the office loved our big party.",
+    "He wrote a letter to the NY courts.",
+    "After the long winter in New York parks reopened.",
+    "My dad and I drove up to see the Pacific.",
+    "Tourists cheered when Big Ben came into view."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "notes": "QC confirm, no probing. The card fires on ' York' after 'New' in a hockey sentence, ' P' in 'Pats' and 'Papi', and ' T' in 'TBS'. The model can't see the team name after ' York', so fire has a sports lead-in before it, and near misses have the place name in a civic lead-in. Pairs diverge in the lead-in."
+}
