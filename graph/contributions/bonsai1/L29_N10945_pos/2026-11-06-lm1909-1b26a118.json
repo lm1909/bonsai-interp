@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1b26a118",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10945+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:11:10+00:00",
+ "recipe": {
+  "toolchain_commit": "8b135a909",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N10945_pos/2026-11-06-lm1909-1b26a118.tests.json"
+ },
+ "label": "the number or noun right before 'species' or 'families' in a count of living things",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N10945_pos/2026-11-06-lm1909-1b26a118.tests.json",
+   "prereg_commit": "8b135a909",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.176,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.773,
+     "peak": " bird"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.152,
+     "peak": " beetle"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.45,
+     "peak": " plant"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.051,
+     "peak": " ants"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.192,
+     "peak": " fish"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.16,
+     "peak": " tree"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.24,
+     "peak": " frog"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.176,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.059,
+     "peak": " twenty"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.068,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.035,
+     "peak": " tall"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": "8"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.184,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8b135a909",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "count before 'species'",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.85,
+ "notes": "The output direction promotes ' cell', ' plant', ' tree', ' bird', ' species'.",
+ "selection": "random draw"
+}

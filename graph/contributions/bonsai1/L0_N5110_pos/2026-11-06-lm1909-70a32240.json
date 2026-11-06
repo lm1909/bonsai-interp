@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-70a32240",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5110+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:11:02+00:00",
+ "recipe": {
+  "toolchain_commit": "8b135a909",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5110_pos/2026-11-06-lm1909-70a32240.tests.json"
+ },
+ "label": "Korean 냄 of 냄새, Chinese 拿下, Arabic ' كب' (best guess; the card flags the pole dense)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5110_pos/2026-11-06-lm1909-70a32240.tests.json",
+   "prereg_commit": "8b135a909",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.878,
+     "peak": "냄"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.776,
+     "peak": "拿下"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.867,
+     "peak": " كب"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.887,
+     "peak": "냄"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.149,
+     "peak": "下来"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.815,
+     "peak": " كب"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.082,
+     "peak": "다"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.134,
+     "peak": "下来"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.049,
+     "peak": "해"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": "放"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.045,
+     "peak": "배"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.082,
+     "peak": "把"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.394,
+     "peak": " المؤ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.07,
+     "peak": "음"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.156,
+     "peak": "好吧"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.795,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8b135a909",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "냄, 拿下, كب (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "The card flags this pole as dense (13.8% of tokens reach 0.1 of max). This test mainly records the density.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-145196a4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6157-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:11:33+00:00",
+ "recipe": {
+  "toolchain_commit": "8b135a909",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N6157_neg/2026-11-06-lm1909-145196a4.tests.json"
+ },
+ "label": "the last digit or ' billion' right before 'light-years'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N6157_neg/2026-11-06-lm1909-145196a4.tests.json",
+   "prereg_commit": "8b135a909",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.946,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.778,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.607,
+     "peak": " billion"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.174,
+     "peak": "-years"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.246,
+     "peak": " light"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.448,
+     "peak": " light"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.659,
+     "peak": " billion"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.233,
+     "peak": " light"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.13,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.16,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.093,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.076,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.138,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.124,
+     "peak": "0"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.527,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8b135a909",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "number before light-years",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.85,
+ "notes": "The output direction: the + pole suppresses ' light', ' lights', so this - pole promotes them. Probes with miles and acres reached 0.12-0.16.",
+ "selection": "random draw"
+}

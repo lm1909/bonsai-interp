@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-c14e331f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N2636+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:11:51+00:00",
+ "recipe": {
+  "toolchain_commit": "8b135a909",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N2636_pos/2026-11-06-lm1909-c14e331f.tests.json"
+ },
+ "label": "a noun of change or difference before 'of' and an amount: 'a gain of', 'a gap of', 'a difference of', 'an increase of'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N2636_pos/2026-11-06-lm1909-c14e331f.tests.json",
+   "prereg_commit": "8b135a909",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.224,
+     "peak": " gain"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.179,
+     "peak": " gap"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.24,
+     "peak": " difference"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.367,
+     "peak": " increase"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.166,
+     "peak": " gain"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.435,
+     "peak": " decrease"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.22,
+     "peak": " gap"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.588,
+     "peak": " difference"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " everyone"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " leaves"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": " bad"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.232,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "8b135a909",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "gain / gap / difference of",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.85,
+ "notes": "The output direction promotes ' of', ' Of'. Spanish ' aumento' scored 0.18 in a short probe and is not tested.",
+ "selection": "random draw"
+}
