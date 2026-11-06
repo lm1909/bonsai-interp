@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-de7b7121",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N159+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:29:11+00:00",
+ "recipe": {
+  "toolchain_commit": "d72d40398",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N159_pos/2026-11-06-lm1909-de7b7121.tests.json"
+ },
+ "label": "a semicolon closing a definition of an abstract concept (Entropy measures ...; it is not ...)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N159_pos/2026-11-06-lm1909-de7b7121.tests.json",
+   "prereg_commit": "d72d40398",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.243,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.232,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.481,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.389,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.329,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.214,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.207,
+     "peak": ";"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.265,
+     "peak": ";"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.0,
+     "peak": " gravity"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " monks"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.092,
+     "peak": ";"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " why"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.254,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d72d40398",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "semicolon closing an abstract definition",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Third look at this pole, narrowed after sweep 11's first round (median 0.196). Probes put the comma forms lower than the semicolon forms, so this test is semicolons only and says nothing about commas. Five near misses keep the abstract topic without defining it; three are concrete narrative.",
+ "selection": "picked"
+}

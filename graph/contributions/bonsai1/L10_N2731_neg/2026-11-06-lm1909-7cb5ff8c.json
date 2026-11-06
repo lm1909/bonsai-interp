@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7cb5ff8c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2731-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:29:13+00:00",
+ "recipe": {
+  "toolchain_commit": "d72d40398",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2731_neg/2026-11-06-lm1909-7cb5ff8c.tests.json"
+ },
+ "label": "a request that the listener pass something on to a third person, at ' my' after give or send and at ' I' after tell (give my thanks to, tell him I)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2731_neg/2026-11-06-lm1909-7cb5ff8c.tests.json",
+   "prereg_commit": "d72d40398",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.604,
+     "peak": " my"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.325,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.414,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.361,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.561,
+     "peak": " my"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.094,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.23,
+     "peak": " my"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.724,
+     "peak": " my"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.066,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.07,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.069,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": " key"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.127,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.064,
+     "peak": " my"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.387,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d72d40398",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "asking the listener to pass something on",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Third round. Two tests of 'passing on greetings' failed because ' my' fired in near misses such as 'Give my car keys to him'. Probes suggest passing on is the distinction and greetings are one case: ' my' after wash, fix or clean stayed under 0.03.",
+ "selection": "picked"
+}
