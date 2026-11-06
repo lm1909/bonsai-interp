@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-52a6483c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N3311+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:06:48+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L9/N3311",
+   "pole": "+",
+   "label": "a line of commented-out code ('#' before an assignment or call), as against the same line live",
+   "fire": [
+    "#     m = 4\n#     n = 5\n#     p = 6\n",
+    "#     job.begin()\n#     job.wait()\n#     job.end()\n",
+    "#     import json\n#     import time\n#     import math\n",
+    "#     \"color\": 1,\n#     \"width\": 2,\n#     \"depth\": 3,\n",
+    "#     show(a)\n#     show(b)\n#     show(c)\n",
+    "#     db.open()\n#     db.scan()\n#     db.close()\n",
+    "#     \"title\",\n#     \"owner\",\n#     \"count\",\n",
+    "#     u = 7\n#     v = 8\n#     w = 9\n"
+   ],
+   "quiet": [
+    "      m = 4\n      n = 5\n      p = 6\n",
+    "      job.begin()\n      job.wait()\n      job.end()\n",
+    "      import json\n      import time\n      import math\n",
+    "      \"color\": 1,\n      \"width\": 2,\n      \"depth\": 3,\n",
+    "      show(a)\n      show(b)\n      show(c)\n",
+    "      db.open()\n      db.scan()\n      db.close()\n",
+    "      \"title\",\n      \"owner\",\n      \"count\",\n",
+    "      u = 7\n      v = 8\n      w = 9\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "commented-out code",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round. In round 1 the second '#' fired, but single-'#' commented lines also read 0.30-0.38, so the commented code seemed to be the point."
+}
