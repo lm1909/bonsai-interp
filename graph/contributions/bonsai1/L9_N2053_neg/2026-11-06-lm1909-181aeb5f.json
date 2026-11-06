@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-181aeb5f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N2053-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:14:50+00:00",
+ "recipe": {
+  "toolchain_commit": "b3bc2ae2f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N2053_neg/2026-11-06-lm1909-181aeb5f.tests.json"
+ },
+ "label": "token ' Art' in a film credit ('Art Direction', 'Best Art Director')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N2053_neg/2026-11-06-lm1909-181aeb5f.tests.json",
+   "prereg_commit": "b3bc2ae2f",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.45,
+     "peak": " Direction"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.34,
+     "peak": " Direction"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.744,
+     "peak": " Direction"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.079,
+     "peak": " Director"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.46,
+     "peak": " Direction"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.088,
+     "peak": " Director"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.505,
+     "peak": " Direction"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.35,
+     "peak": " Direction"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.083,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.057,
+     "peak": " Hall"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": " Director"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.057,
+     "peak": " Editor"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.058,
+     "peak": " Best"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " Max"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " Sound"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.138,
+     "peak": " Design"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.4,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3bc2ae2f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Art' in film credits",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "The card suggests 'creative' as a theme, but ' creative' and ' artistic' stayed at or below 0.13 in probes, so I narrowed to the credit.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Art"
+  ]
+ }
+}

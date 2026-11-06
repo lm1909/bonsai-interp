@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-30181a4c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N8291-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:15:08+00:00",
+ "recipe": {
+  "toolchain_commit": "b3bc2ae2f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N8291_neg/2026-11-06-lm1909-30181a4c.tests.json"
+ },
+ "label": "a moment that falls to someone: ' to' of 'it is up to', 'over to you', 'the moment of truth'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N8291_neg/2026-11-06-lm1909-30181a4c.tests.json",
+   "prereg_commit": "b3bc2ae2f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.009,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.803,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.043,
+     "peak": " now"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.361,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.896,
+     "peak": " truth"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.605,
+     "peak": " truth"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.404,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.469,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.234,
+     "peak": " now"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.381,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.158,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.061,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": "'s"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.704,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3bc2ae2f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'up to X' / 'moment of truth'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "'up to the roof' stayed at 0.01 in a probe. 'It's now near the House' read 0.29 on ' now', so the build-up may leak.",
+ "selection": "random draw"
+}

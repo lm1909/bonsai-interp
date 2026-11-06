@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-db126b7a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8997+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:14:51+00:00",
+ "recipe": {
+  "toolchain_commit": "b3bc2ae2f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N8997_pos/2026-11-06-lm1909-db126b7a.tests.json"
+ },
+ "label": "the Dutch piece ' ver' opening a longer word (verzekeren, verhaal, veranderen, verkeer)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N8997_pos/2026-11-06-lm1909-db126b7a.tests.json",
+   "prereg_commit": "b3bc2ae2f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.909,
+     "peak": " ver"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.841,
+     "peak": "ha"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.884,
+     "peak": " ver"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.946,
+     "peak": " ver"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.682,
+     "peak": " ver"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.002,
+     "peak": "ke"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.87,
+     "peak": "al"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.047,
+     "peak": " ver"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.369,
+     "peak": " belang"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.344,
+     "peak": " le"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.207,
+     "peak": " ge"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.185,
+     "peak": " bou"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.202,
+     "peak": " wil"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.257,
+     "peak": "uk"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.208,
+     "peak": " kort"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.377,
+     "peak": " wil"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.927,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3bc2ae2f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Dutch split piece ' ver'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Other ver- words split as ' verb', ' verk', ' verst' and ' verr', and these are not tested. ' beh' and 'let' on the card are not covered either.",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   " ver"
+  ]
+ }
+}
