@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-38616c71",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N11348+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:35:59+00:00",
+ "recipe": {
+  "toolchain_commit": "28a5f67a0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N11348_pos/2026-11-06-lm1909-38616c71.tests.json"
+ },
+ "label": "' Star' opening a brand or franchise name (Star Wars, Star Trek, Starburst) and ' James' before Joyce: a list; other brands and authors stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N11348_pos/2026-11-06-lm1909-38616c71.tests.json",
+   "prereg_commit": "28a5f67a0",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.846,
+     "peak": " Star"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.36,
+     "peak": " Star"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.7,
+     "peak": " Star"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.673,
+     "peak": " Star"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.85,
+     "peak": " James"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.758,
+     "peak": " Star"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.475,
+     "peak": " James"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.531,
+     "peak": " Star"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.078,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " next"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.233,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " pink"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": "olars"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " sold"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.686,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "28a5f67a0",
+  "minutes": 1,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "' Star' of Star Wars, Starburst; James Joyce",
+ "unit_kind": "token / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' Star' x12, ' James' x4, 'Star' x3, ' Var' x2, 'av' x2, Arabic ار of Starbucks. Probe: James Joyce 1.07, Starburst 0.90, Star Wars 0.81, Star Trek 0.53; whole-token Starbucks 0.00, Skittles 0.04, a plain ' star' 0.47. Lower-case ' star' overlaps and is left out.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Star",
+   " James"
+  ]
+ }
+}
