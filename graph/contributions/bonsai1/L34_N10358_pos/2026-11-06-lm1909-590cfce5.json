@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-590cfce5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N10358+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:27:54+00:00",
+ "recipe": {
+  "toolchain_commit": "6137aa22d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N10358_pos/2026-11-06-lm1909-590cfce5.tests.json"
+ },
+ "label": "' etc' inside a bracketed list, as opposed to ' etc' closing a list in running text and to bracketed lists without it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N10358_pos/2026-11-06-lm1909-590cfce5.tests.json",
+   "prereg_commit": "6137aa22d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.74,
+     "peak": " etc"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.842,
+     "peak": " etc"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.734,
+     "peak": " etc"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.742,
+     "peak": " etc"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.684,
+     "peak": " etc"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.747,
+     "peak": " etc"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.78,
+     "peak": " etc"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.72,
+     "peak": " etc"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.175,
+     "peak": " etc"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.118,
+     "peak": " etc"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " orange"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.209,
+     "peak": " etc"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": "ens"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.183,
+     "peak": " etc"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.104,
+     "peak": "ets"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.137,
+     "peak": " etc"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.741,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "6137aa22d",
+  "minutes": 2,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "' etc' inside a bracketed list",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Narrower label after sweep 19, where bracketed lists scored 0.725-0.980 and running-text lists 0.079-0.132. No sentence was probed.",
+ "selection": "second round: narrower label after review (picked)"
+}

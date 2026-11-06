@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-17d1554f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3085-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:27:47+00:00",
+ "recipe": {
+  "toolchain_commit": "6137aa22d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N3085_neg/2026-11-06-lm1909-17d1554f.tests.json"
+ },
+ "label": "' similar' directly after 'a', as opposed to ' similar' after other words or none",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N3085_neg/2026-11-06-lm1909-17d1554f.tests.json",
+   "prereg_commit": "6137aa22d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.401,
+     "peak": " similar"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.673,
+     "peak": " similar"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.335,
+     "peak": " similar"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.478,
+     "peak": " similar"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.432,
+     "peak": " similar"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.4,
+     "peak": " similar"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.306,
+     "peak": " similar"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.565,
+     "peak": " similar"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.081,
+     "peak": " similar"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.202,
+     "peak": " similar"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.039,
+     "peak": " took"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.175,
+     "peak": " twins"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.122,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.058,
+     "peak": " similar"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": " teams"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.072,
+     "peak": " similar"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.416,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "6137aa22d",
+  "minutes": 2,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "' similar' after 'a'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Narrower label after sweep 13. The pole's 'coming' piece is not covered. No sentence was probed.",
+ "selection": "second round: narrower label after review (picked)"
+}

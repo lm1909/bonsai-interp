@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ca2f40a0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N6066+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:27:56+00:00",
+ "recipe": {
+  "toolchain_commit": "6137aa22d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N6066_pos/2026-11-06-lm1909-ca2f40a0.tests.json"
+ },
+ "label": "the continuation piece of a rare As-, Ag- or Ar- name (Ashkenazi, Agassiz, Agassi, Arakan, Arezki, Arsene), as opposed to common names with the same openings (Ashley, Arthur, Agnes)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N6066_pos/2026-11-06-lm1909-ca2f40a0.tests.json",
+   "prereg_commit": "6137aa22d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.768,
+     "peak": "ken"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.003,
+     "peak": "akan"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.008,
+     "peak": "iz"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.08,
+     "peak": "assi"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.755,
+     "peak": "z"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.971,
+     "peak": "ene"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.768,
+     "peak": "ken"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.983,
+     "peak": "iz"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " Ashley"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " steep"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " survives"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.03,
+     "peak": " Ashe"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " hired"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "Fans"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": " Ashton"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": " letter"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.977,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "6137aa22d",
+  "minutes": 2,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "rare As-/Ag-/Ar- names, not common ones",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Tests the 'rare' part that sweep 29 left open. Other rare names with these openings are still untested. No sentence was probed.",
+ "selection": "second round: narrower label after review (picked)"
+}

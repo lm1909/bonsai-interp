@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-25b6c544",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N4458+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:27:58+00:00",
+ "recipe": {
+  "toolchain_commit": "6137aa22d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N4458_pos/2026-11-06-lm1909-25b6c544.tests.json"
+ },
+ "label": "a hyphen joining two related parties (parent-child, Japan-Korea), as opposed to a hyphen after the same kind of noun with no second party (parent-approved, Japan-based)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N4458_pos/2026-11-06-lm1909-25b6c544.tests.json",
+   "prereg_commit": "6137aa22d",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.196,
+     "peak": "-child"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.346,
+     "peak": "-K"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.467,
+     "peak": "upil"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.564,
+     "peak": "-B"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.085,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.185,
+     "peak": "-China"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.311,
+     "peak": "-s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.612,
+     "peak": "-"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.045,
+     "peak": "-approved"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "-based"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " contact"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " slowed"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "-bound"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.329,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "6137aa22d",
+  "minutes": 2,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "hyphen between two parties, not party-based",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Decides sweep 29's relation label against 'a hyphen after a person or country noun'. If these near misses fire, the relation label is wrong. No sentence was probed.",
+ "selection": "second round: narrower label after review (picked)"
+}
