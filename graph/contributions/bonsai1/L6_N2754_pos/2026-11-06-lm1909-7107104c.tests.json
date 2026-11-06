@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-7107104c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N2754+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:18:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N2754",
+   "pole": "+",
+   "label": "a short letter piece ('r', 'areth', 'et') ending an odd identifier or name (-r in a command-line flag, pmr|Indx, Kyn|areth, Blackfe|et)",
+   "fire": [
+    "    parser.add_argument('-r','--retries', dest='retries')\n",
+    "    y = pmrCount + 2\n",
+    "The Shout of Dragons is linked to the goddess Kynareth.",
+    "The treaty with the Blackfeet was signed that spring.",
+    "    parser.add_argument('-r','--root', dest='root')\n",
+    "    z = pmrValue * 3\n",
+    "Priests of Kynareth keep a temple in the city.",
+    "Hunters from the Blackfeet came to trade furs."
+   ],
+   "quiet": [
+    "    parser.add_argument('--retries', dest='retries')\n",
+    "    y = count + 2\n",
+    "The Shout of Dragons is linked to the goddess Athena.",
+    "The treaty with the Sioux was signed that spring.",
+    "    parser.add_argument('--root', dest='root')\n",
+    "    z = value * 3\n",
+    "Priests of Athena keep a temple in the city.",
+    "Hunters from the Sioux came to trade furs."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "'r'/'et' piece in odd names (list)",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card: 'R' x5, 'r' x3, 'rick' x3, 'et' x2, 'ryn' x2, ' Hills' x2. Probes: 'r' in pmrIndx 1.241, 'areth' 0.876, 'et' in Blackfeet 0.707, 'r' in '-r' 0.474; plain frames under 0.02. No pattern found; a list, tested on near copies of what fired."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ab455328",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N9397-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:18:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N9397",
+   "pole": "-",
+   "label": "a split inner piece of a word in French, German or Russian that the next piece will finish (cou|lo|irs, Ver|sto|ßes, end|ro|its, Ц|ер|кви)",
+   "fire": [
+    "Les enfants jouaient dans les couloirs du vieil hôpital.",
+    "Wegen ihres Verstoßes gegen die Regeln musste sie zahlen.",
+    "Le prêtre a quitté la Grande Église de Moscou.",
+    "Beaucoup de touristes visitent ces endroits pendant l'été.",
+    "Sie sprach über einen schweren Verstoß gegen das Gesetz.",
+    "Le médecin marche dans les longs couloirs de la clinique.",
+    "Православной Церкви принадлежит этот старый дом.",
+    "Nous cherchons des endroits calmes pour nos vacances."
+   ],
+   "quiet": [
+    "Les enfants jouaient dans la cour du vieil hôpital.",
+    "Wegen ihres Alters musste sie weniger zahlen.",
+    "Le prêtre a quitté la ville de Moscou.",
+    "Beaucoup de touristes visitent la plage pendant l'été.",
+    "Sie sprach über einen neuen Plan für das Land.",
+    "Le médecin marche dans le long jardin de la clinique.",
+    "Старому человеку принадлежит этот старый дом.",
+    "Nous cherchons un hôtel calme pour nos vacances."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split inner piece of a European word",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: 'sto' x2, 'de' x2, 'ro' x2, ' De' x2, 'ri' x2, 'lo', 'ри', 'ер', at L35, the last layer. Probes: 'sto' 0.960, 'ro' 0.935, 'lo' 0.779, 'ер' 0.428; French with no such split 0.031, English 0.001. Tokens are checked for each fire sentence. The near misses keep the sentence with a whole-token word."
+}

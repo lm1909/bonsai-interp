@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-e7ac65f3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N1809-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:18:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N1809",
+   "pole": "-",
+   "label": "a token inside dotted Python identifiers for parsing and registries (RegisterPlugins([, .generate_headers, WinRegistryParser), on a broad leak pole",
+   "fire": [
+    "    winreg.RegistryParser.RegisterPlugins([a])\n",
+    "    gen.generate_code(self.parser)\n",
+    "    registry.PluginParser.RegisterTypes([b, c])\n",
+    "    gen.generate_docs(self.parser)\n",
+    "    manager.WinRegistry.RegisterKeys([k])\n",
+    "    gen.generate_tests(self.parser)\n",
+    "    plugins.EventParser.RegisterPlugins([p])\n",
+    "    gen.generate_stubs(self.parser)\n"
+   ],
+   "quiet": [
+    "    a = 1\n",
+    "    print(a)\n",
+    "    b = c\n",
+    "    print(b)\n",
+    "    k = 2\n",
+    "    print(k)\n",
+    "    p = 3\n",
+    "    print(p)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "Python API identifier (broad)",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card flags broad (6.4%) and gate-closed (98%): '_parser' x2, 'Registry', ' =', '.parser', 'aming', ' https'. Probes all weak: '([' 0.185, ' cat' 0.169 (!), '.generate' 0.113. So plain English reads as high as code. A low-confidence guess, expected to fail."
+}

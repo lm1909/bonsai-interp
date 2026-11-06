@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-11f0fcc2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N9786+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:18:58+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N9786",
+   "pole": "+",
+   "label": "the start of a sentence-opening reason clause (Because ..., Since ...), up to its subject and verb",
+   "fire": [
+    "The soil here is thin and dry. Because of this, few crops grow.",
+    "The tax was unpopular with farmers. Because they rely on cheap fuel, it hurt.",
+    "The trail is often closed in winter. Since this route has few signs, go slowly.",
+    "Nurses are in short supply this year. Because training takes time, it will last.",
+    "The river floods nearly every spring. Because the town is low, it often suffers.",
+    "The law is hard to enforce. Since these rules have many gaps, firms ignore them.",
+    "Bees are vital to farming. Because they pollinate crops, their decline matters.",
+    "Prices rose again this quarter. Because demand is strong, sellers raised them."
+   ],
+   "quiet": [
+    "The soil here is thin and dry, and few crops grow because of this.",
+    "The tax was unpopular with farmers, who rely on cheap fuel, and it hurt.",
+    "The trail is often closed in winter, and this route has few signs.",
+    "Nurses are in short supply this year, and the training takes time.",
+    "The river floods nearly every spring, and the town is low.",
+    "The law is hard to enforce, and these rules have many gaps.",
+    "Bees are vital to farming, and they pollinate crops every summer.",
+    "Prices rose again this quarter, and demand is strong in the region."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "sentence-opening reason clause",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' Because' x8, ' Since' x5, ' theory' x2, ' has' x2, ' they' x2, ' it' x2. Probes: 'Since this lesson has' 0.386, 'Because they' 0.354, 'Because' as the first word 0.311; 'because it rained' mid-sentence 0.016, plain sentence 0.002. Fire items follow an earlier sentence, as in the card. Near misses have mid-sentence 'because' or no reason clause."
+}
