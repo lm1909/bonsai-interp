@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-2d433615",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N1780-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:47:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N1780",
+   "pole": "-",
+   "label": "A present-tense verb, or 'do', in a generic or habitual statement or question (what happens, I go to, what do you make of); the same sentence in the past tense stays quiet",
+   "fire": [
+    "What do you think of the new coach?",
+    "This is what happens when nobody reads the rules.",
+    "I go to college near my parents' house.",
+    "What Do You Say to a Grieving Friend?",
+    "How do you make a good omelette?",
+    "Most people here go to work by bus.",
+    "Here is what happens if you skip a dose.",
+    "We do our shopping at the market on Mondays."
+   ],
+   "quiet": [
+    "What did you think of the new coach?",
+    "This is what happened when nobody read the rules.",
+    "I went to college near my parents' house.",
+    "What Did You Say to a Grieving Friend?",
+    "How did you make such a good omelette?",
+    "Most people here went to work by bus.",
+    "Here is what happened after you skipped a dose.",
+    "We did our shopping at the market on Monday."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "verb in the generic present tense",
+ "unit_kind": "contextual / grammatical",
+ "confidence": "medium",
+ "notes": "Card: ' make' x4, ' happens' x3, ' do' x2, ' does' x2, ' go', ' only', Arabic present-tense ' ي' x3 (the present prefix). Logit effect of the + pole promotes ' use', ' do', ' regularly'. Probe, each against its past-tense twin: what happens 0.56 vs 0.02, What Do You Do 0.69 vs 0.01, make of it 0.34 vs 0.01, I go 0.29 vs 0.02. ' only' 0.20 in both, so that peak is not about tense."
+}

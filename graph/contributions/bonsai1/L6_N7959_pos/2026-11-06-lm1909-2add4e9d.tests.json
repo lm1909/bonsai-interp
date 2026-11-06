@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-2add4e9d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7959+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:47:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N7959",
+   "pole": "+",
+   "label": "An opening quotation mark in mid-sentence, around a phrase being quoted or held at arm's length (described as “deeply flawed”); the same sentence with no quotation marks stays quiet",
+   "fire": [
+    "Critics called the bill “a gift to the rich” in their letter.",
+    "The report describes the policy as “deeply flawed” and urges change.",
+    "The mayor's plan sounds more “business-friendly” than it is.",
+    "She said the film was \"a total mess\" on her blog.",
+    "The company describes itself as a \"family\" with shared goals.",
+    "To them, success is \"being left alone\" at work.",
+    "Le ministre parle d'une loi « très mauvaise » pour le pays.",
+    "He calls this \"the new normal\" in every interview."
+   ],
+   "quiet": [
+    "Critics called the bill a gift to the rich in their letter.",
+    "The report describes the policy as deeply flawed and urges change.",
+    "The mayor's plan sounds more business-friendly than it is.",
+    "She said the film was a total mess on her blog.",
+    "The company describes itself as a family with shared goals.",
+    "To them, success is being left alone at work.",
+    "Le ministre parle d'une loi très mauvaise pour le pays.",
+    "He calls this the new normal in every interview."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "mid-sentence opening quotation mark",
+ "unit_kind": "format / contextual",
+ "confidence": "high",
+ "notes": "Card: ' “' x8, ' \"' x8, '“' x3, ' «' x2, Chinese ‘ and “. Probe: ' “' 0.57-0.70, ' \"' 0.65, ' «' 0.27; the same text unquoted 0.03-0.08; a quote opening direct speech 0.01-0.02. The - pole is ' \"__' of __main__.",
+ "trigger": {
+  "tokens": [
+   " “",
+   " \"",
+   "“",
+   " «"
+  ]
+ }
+}

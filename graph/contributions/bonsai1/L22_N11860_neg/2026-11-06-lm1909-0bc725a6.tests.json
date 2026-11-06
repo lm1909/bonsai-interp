@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-0bc725a6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11860-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:47:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N11860",
+   "pole": "-",
+   "label": "The Arabic piece ' ك' split off as the first letter of a foreign or rare name (كندا, كوبا, كرواتيا, كارل, كوالالمبور); names starting with other letters stay quiet",
+   "fire": [
+    "سافر أخي إلى كندا قبل عامين للدراسة",
+    "تقع هافانا في كوبا على البحر الكاريبي",
+    "فاز منتخب كرواتيا في المباراة أمس",
+    "زار الوفد كمبوديا في الشهر الماضي",
+    "كتب المؤرخ كارل كتابا عن الحرب",
+    "أقيم المعرض في هونج كونج هذا العام",
+    "وصل الرئيس إلى كوالالمبور صباح اليوم",
+    "قرأت قصيدة عن بني كليب في الجامعة"
+   ],
+   "quiet": [
+    "سافر أخي إلى لندن قبل عامين للدراسة",
+    "تقع هافانا في الجزيرة على البحر الكاريبي",
+    "فاز منتخب فرنسا في المباراة أمس",
+    "زار الوفد طوكيو في الشهر الماضي",
+    "كتب المؤرخ أحمد كتابا عن الحرب",
+    "أقيم المعرض في برلين هذا العام",
+    "وصل الرئيس إلى باريس صباح اليوم",
+    "قرأت قصيدة عن بني هاشم في الجامعة"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off Arabic ' ك' opening a name",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' ك' x24, ' K', ' الك', ' К'. Probe: ' ك' 0.56-0.82 in كونج, كارل, كوالالمبور; باريس, أحمد 0.03-0.04; English Kuala 0.03. Tokenizer checked for each fire word.",
+ "trigger": {
+  "tokens": [
+   " ك"
+  ]
+ }
+}

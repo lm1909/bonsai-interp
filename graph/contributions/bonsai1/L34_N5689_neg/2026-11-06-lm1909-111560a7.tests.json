@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-111560a7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N5689-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:47:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N5689",
+   "pole": "-",
+   "label": "' b' of boulders and ' B' of Bishops, where the first letter splits off as its own token: a two-word sub-trigger",
+   "fire": [
+    "The beach is covered with huge boulders after the storm.",
+    "Hikers must climb over several boulders near the falls.",
+    "The glacier left behind many boulders in the valley.",
+    "The river runs between boulders below the bridge.",
+    "The Conference of Bishops issued a statement on Friday.",
+    "The House of Bishops met in York last month.",
+    "Many Bishops spoke at the synod in Rome.",
+    "A letter from the Bishops was read in every church."
+   ],
+   "quiet": [
+    "The beach is covered with huge logs after the storm.",
+    "Hikers must climb over several fences near the falls.",
+    "The glacier left behind many lakes in the valley.",
+    "The river runs between cliffs below the bridge.",
+    "The Conference of Priests issued a statement on Friday.",
+    "The House of Commons met in London last month.",
+    "Many priests spoke at the synod in Rome.",
+    "A letter from the Pope was read in every church."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off ' b' of boulders, ' B' of Bishops",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: ' b' x12, ' B' x10, 'B' x3, 'b' x2, in boulders, Bishops, bhasya. Probe: boulders 0.74, Bishops 0.74, but bhasya 0.13 and Bistro 0.08 (same split), so a general 'split-off b' label is not claimed. Rocks, Elders, commentary at most 0.04. Tokenizer checked.",
+ "trigger": {
+  "tokens": [
+   " b",
+   " B"
+  ]
+ }
+}

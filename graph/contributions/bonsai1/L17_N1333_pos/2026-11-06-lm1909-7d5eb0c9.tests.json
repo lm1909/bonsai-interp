@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-7d5eb0c9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N1333+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:47:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N1333",
+   "pole": "+",
+   "label": "'.Q' in Qt code (QtGui.QLabel, QtWidgets.QPushButton); widgets from other toolkits stay quiet; a sub-trigger of a broad code pole",
+   "fire": [
+    "layout = QtGui.QVBoxLayout()\nself.setLayout(layout)",
+    "button = QtWidgets.QPushButton('OK')",
+    "label = QtGui.QLabel(self)\nlabel.setText('Name')",
+    "timer = QtCore.QTimer()\ntimer.start(1000)",
+    "item = QtGui.QTableWidgetItem('x')",
+    "self.edit = QtGui.QLineEdit(self)",
+    "font = QtGui.QFont('Arial', 12)",
+    "box = QtGui.QMessageBox.question(self, 'Quit', 'Sure?')"
+   ],
+   "quiet": [
+    "layout = tk.Frame(root)\nlayout.pack()",
+    "button = tk.Button(root, text='OK')",
+    "label = tk.Label(root)\nlabel.config(text='Name')",
+    "timer = threading.Timer(1.0, run)\ntimer.start()",
+    "item = self.table.item(0, 0)",
+    "self.edit = wx.TextCtrl(self)",
+    "font = pygame.font.SysFont('Arial', 12)",
+    "box = messagebox.askquestion('Quit', 'Sure?')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'.Q' of Qt classes",
+ "unit_kind": "code / token",
+ "confidence": "medium",
+ "notes": "Card: broad; ' #' x4, '._' x4, '.Q' x4, ' _' x3, 'os' of qos, ' n'. Probe: '.Q' 0.66; but 'self._' 0.07, a comment ' #' 0.08, ' n' of nValor 0.07, ordinary code about 0.1. So this covers only one of the card's tokens.",
+ "trigger": {
+  "tokens": [
+   ".Q"
+  ]
+ }
+}
