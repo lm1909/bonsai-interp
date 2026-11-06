@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-47dc2a0b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1713+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:10:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N1713",
+   "pole": "+",
+   "label": "the ':' and newline closing a negated Python guard ('if not self.closed:', 'if x != y:')",
+   "fire": [
+    "def stop(self):\n    if not self.running:\n        self.start()\n",
+    "def seek(self, pos):\n    if pos != self._pos:\n        self._pos = pos\n",
+    "def clear(path):\n    if not os.path.exists(path):\n        os.makedirs(path)\n",
+    "def play(self):\n    if not already_playing:\n        print('start')\n",
+    "def send(self):\n    if not self.connected:\n        self.connect()\n",
+    "def tell(self, n):\n    if n != self.count:\n        self.count = n\n",
+    "def load(name):\n    if not os.path.isfile(name):\n        fetch(name)\n",
+    "def flush(self):\n    if not self.empty:\n        self.buffer.clear()\n"
+   ],
+   "quiet": [
+    "def stop(self):\n    if self.running:\n        self.halt()\n",
+    "def seek(self, pos):\n    if pos == self._pos:\n        return pos\n",
+    "def clear(path):\n    if os.path.exists(path):\n        os.remove(path)\n",
+    "def play(self):\n    if already_playing:\n        print('stop')\n",
+    "def send(self):\n    if self.connected:\n        self.write()\n",
+    "def tell(self, n):\n    if n == self.count:\n        return n\n",
+    "def load(name):\n    if os.path.isfile(name):\n        read(name)\n",
+    "def flush(self):\n    if self.empty:\n        return None\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "':\\n' after a negated if",
+ "unit_kind": "token / code",
+ "confidence": "medium"
+}
