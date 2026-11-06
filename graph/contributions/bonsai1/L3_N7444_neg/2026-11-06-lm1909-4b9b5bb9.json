@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-4b9b5bb9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N7444-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:22+00:00",
+ "recipe": {
+  "toolchain_commit": "b12f80bb8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N7444_neg/2026-11-06-lm1909-4b9b5bb9.tests.json"
+ },
+ "label": "the name ' Ellen', and Korean ' 대해' / Japanese 'について' ('about') (a list)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N7444_neg/2026-11-06-lm1909-4b9b5bb9.tests.json",
+   "prereg_commit": "b12f80bb8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.772,
+     "peak": " Ellen"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.869,
+     "peak": " Ellen"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.798,
+     "peak": " Ellen"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.699,
+     "peak": " 대해"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.543,
+     "peak": "について"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.9,
+     "peak": "en"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.648,
+     "peak": " 대해"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.586,
+     "peak": "について"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " 함께"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.002,
+     "peak": "問題"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "환경"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": "本"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.736,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b12f80bb8",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' Ellen'; 대해, について",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' Ellen' x18, ' 대해' x5, 'en' x4, 'し' x3, 'について' x2. Probe: Ellen 0.83-0.89, 대해 0.68, について 0.53; 'Mary Granger' 0.00. I can't name a shared pattern; ' 대해' and 'について' share a meaning, ' Ellen' does not.",
+ "selection": "random draw"
+}

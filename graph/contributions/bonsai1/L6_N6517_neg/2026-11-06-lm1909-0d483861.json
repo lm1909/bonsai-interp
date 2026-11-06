@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-0d483861",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N6517-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:01+00:00",
+ "recipe": {
+  "toolchain_commit": "b12f80bb8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N6517_neg/2026-11-06-lm1909-0d483861.tests.json"
+ },
+ "label": "inner pieces 'от' / 'ар' of Russian words and 'ar|am' of an Indian surname (соотношение, разочарованным, Sundaram; a list)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N6517_neg/2026-11-06-lm1909-0d483861.tests.json",
+   "prereg_commit": "b12f80bb8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.476,
+     "peak": "от"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.541,
+     "peak": "от"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.568,
+     "peak": "ар"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.011,
+     "peak": "aram"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.494,
+     "peak": "от"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.549,
+     "peak": "ар"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.968,
+     "peak": "aram"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.935,
+     "peak": "aram"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "Х"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": "он"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": "Pat"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " количество"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " взгляд"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "Dr"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.558,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b12f80bb8",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "соотношение, Sundaram",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Card: 'от' x6, 'ear' x4, 'erv' x4, 'ар' x3, 'oder' x3, 'ерж' x3. Probe: Sundaram 1.00, разочарованным 0.57, соотношением 0.54, соотношение 0.51; plain Russian 0.02.",
+ "selection": "random draw"
+}

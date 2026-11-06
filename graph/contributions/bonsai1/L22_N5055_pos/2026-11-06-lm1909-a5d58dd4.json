@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a5d58dd4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N5055+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:41:18+00:00",
+ "recipe": {
+  "toolchain_commit": "b12f80bb8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N5055_pos/2026-11-06-lm1909-a5d58dd4.tests.json"
+ },
+ "label": "a book, exhibition or inquiry showing or examining something ('does an admirable job of showing', 'explains the relationship'; output promotes ' showing', ' how', ' tracing')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N5055_pos/2026-11-06-lm1909-a5d58dd4.tests.json",
+   "prereg_commit": "b12f80bb8",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.443,
+     "peak": " showing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.472,
+     "peak": " explains"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.289,
+     "peak": " examine"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.207,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.222,
+     "peak": " tracing"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.292,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.288,
+     "peak": " examine"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.507,
+     "peak": " examines"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " Beard"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " Lou"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " meet"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " dollars"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.056,
+     "peak": " talk"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " display"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "Her"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.29,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b12f80bb8",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "work that shows or examines",
+ "unit_kind": "semantic / contextual",
+ "confidence": "medium",
+ "notes": "Output promotes ' showing', ' how', ' tracing', ' highlighting', ' demonstrating'. Card: ' to', ' on', ' shows' x2, ' examine' x2, ' with'. Probe: ' examine' 0.38, ' showing' 0.36, ' explains' 0.29, 'Kevin Ashton shows' 0.07; 'opens on Friday' 0.03.",
+ "selection": "random draw"
+}
