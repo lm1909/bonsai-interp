@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-99b53cd5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2731-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:33:46+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L10/N2731",
+   "pole": "-",
+   "label": "passing on greetings to someone absent (say hi to, tell her I said hello, send my best, my regards)",
+   "fire": [
+    "Be sure to say hi to your uncle for me.",
+    "Please tell Sam I said hello when you see him.",
+    "Send my best wishes to the whole class.",
+    "Pass my kind regards on to your wife.",
+    "Give them my love when you get there.",
+    "Do tell your dad I said hi.",
+    "And say hello to Nina for me, will you?",
+    "Send my warmest regards to the staff."
+   ],
+   "quiet": [
+    "Be sure to pay your uncle back by Friday.",
+    "Please tell Sam the shop closes when it rains.",
+    "Send my tax forms to the whole class.",
+    "Pass the kind old lady her walking stick.",
+    "Give my car keys to him when you get there.",
+    "Do tell your dad the road is closed.",
+    "And write to Nina about the rent, will you?",
+    "Send the late notices to the staff."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "passing on greetings",
+ "unit_kind": "semantic / social",
+ "confidence": "high",
+ "notes": "Second round. The first round failed on one near miss, 'give my old coat to your father', at 0.48 on ' my'. 'Give my coat' reached 0.59 and 'Send my invoice' 0.27 in the probes, so ' my' after give or send fires regardless; two near misses keep that frame, because leaving them out would hide it. So this may fail again."
+}

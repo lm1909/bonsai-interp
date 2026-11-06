@@ -1,0 +1,61 @@
+{
+ "contribution": "2026-11-06-lm1909-25d96eb3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8460-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:33:46+00:00",
+ "selection": "picked",
+ "neighbours": [
+  {
+   "unit": "L0/N8460",
+   "pole": "-",
+   "label": "words ending in -oid, whether the ending is its own token or not (asteroid, humanoid, opioid, hemorrhoid, fibroid)",
+   "fire": [
+    "Astronomers tracked the asteroid for several months.",
+    "Her new book is about a humanoid nurse.",
+    "The clinic treats opioid addiction among veterans.",
+    "A small fibroid showed up on the scan.",
+    "He bought a cream for a painful hemorrhoid.",
+    "That tabloid paid a lot for the photos.",
+    "She grew paranoid after the break-in.",
+    "The robot looks like a humanoid at first."
+   ],
+   "quiet": [
+    "Astronomers tracked the comet for several months.",
+    "Her new book is about a young nurse.",
+    "The clinic treats alcohol addiction among veterans.",
+    "A small solid mass showed up on the scan.",
+    "He bought a cream for a painful rash.",
+    "That paper paid a lot for the photos.",
+    "She tried to avoid him after the break-in.",
+    "The robot looks like a toy at first."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "words ending in -oid",
+ "unit_kind": "lexical / morphological",
+ "confidence": "high",
+ "notes": "Second round. The first round ('the piece oid') failed because whole-token words fired: asteroid 0.51, opioid 0.76, thyroid 0.25. ' thyroid' and ' steroids' stayed weak in the probes (0.16-0.18), so those are left out and reported here. ' void' 0.14 and ' avoid' 0.07.",
+ "trigger": {
+  "words": [
+   "asteroid",
+   "humanoid",
+   "opioid",
+   "fibroid",
+   "hemorrhoid",
+   "tabloid",
+   "paranoid",
+   "sarcomatoid",
+   "spheroid"
+  ]
+ }
+}
