@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-82254789",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10991+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:16:29+00:00",
+ "recipe": {
+  "toolchain_commit": "1a56e0579",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N10991_pos/2026-11-06-lm1909-82254789.tests.json"
+ },
+ "label": "The final 'U' of a university abbreviation (MS|U, SM|U); plain mentions of a college stay lower",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N10991_pos/2026-11-06-lm1909-82254789.tests.json",
+   "prereg_commit": "1a56e0579",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.888,
+     "peak": "U"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.896,
+     "peak": "U"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.732,
+     "peak": "U"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.653,
+     "peak": "U"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.669,
+     "peak": "U"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.862,
+     "peak": "U"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.833,
+     "peak": "U"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.878,
+     "peak": "U"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.237,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.183,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.086,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.076,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.241,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.112,
+     "peak": " lives"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.242,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.063,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.847,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1a56e0579",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "U of a university abbreviation",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Gate-closed, flagged broad, max 0.97. ' the' in a near miss read 0.24.",
+ "selection": "random draw"
+}

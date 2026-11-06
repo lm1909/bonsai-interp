@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-420a0413",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N10205+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:16:22+00:00",
+ "recipe": {
+  "toolchain_commit": "1a56e0579",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N10205_pos/2026-11-06-lm1909-420a0413.tests.json"
+ },
+ "label": "The Russian adjective ending of a material or tree adjective (сосн|ов|ой, серебря|ную, тополи|ных); nouns in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N10205_pos/2026-11-06-lm1909-420a0413.tests.json",
+   "prereg_commit": "1a56e0579",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.496,
+     "peak": "овой"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.576,
+     "peak": "ную"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.565,
+     "peak": "овых"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.535,
+     "peak": "овой"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.695,
+     "peak": "ую"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.535,
+     "peak": "овых"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.601,
+     "peak": "ную"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.278,
+     "peak": "овой"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.083,
+     "peak": "От"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": "Вы"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.045,
+     "peak": "а"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.217,
+     "peak": "ле"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.173,
+     "peak": "ку"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.044,
+     "peak": " среди"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.164,
+     "peak": " мне"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.093,
+     "peak": "ёт"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.55,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1a56e0579",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian material-adjective ending",
+ "unit_kind": "token piece / grammatical",
+ "confidence": 0.55,
+ "notes": "Probes 0.26-0.87.",
+ "selection": "random draw"
+}
