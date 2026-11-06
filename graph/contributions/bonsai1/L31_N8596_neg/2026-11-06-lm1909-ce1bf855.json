@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-ce1bf855",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N8596-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:15+00:00",
+ "recipe": {
+  "toolchain_commit": "5ddfca7fa",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N8596_neg/2026-11-06-lm1909-ce1bf855.tests.json"
+ },
+ "label": "a capital V split off as its own token at the start of a name or initial (' V'|itt|orio, ' V'|aid|ya, V.K., '/V'), as opposed to whole names",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N8596_neg/2026-11-06-lm1909-ce1bf855.tests.json",
+   "prereg_commit": "5ddfca7fa",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.558,
+     "peak": " V"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.538,
+     "peak": " V"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.194,
+     "peak": " V"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.533,
+     "peak": " V"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.448,
+     "peak": " V"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.437,
+     "peak": " V"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.407,
+     "peak": "/V"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.478,
+     "peak": " V"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": "M"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": "Authors"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " includes"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.112,
+     "peak": " Vincent"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " here"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " Stone"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": "ners"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.463,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5ddfca7fa",
+  "minutes": 7,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "split ' V' name start or initial",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked: Vincent, Viktor, Vanessa, Vladimir and Venus are whole tokens. 'Vasek' not checked.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " V",
+   "V",
+   "/V",
+   "-V"
+  ]
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-ed0bd78c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N10014+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:23:48+00:00",
+ "recipe": {
+  "toolchain_commit": "5ddfca7fa",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N10014_pos/2026-11-06-lm1909-ed0bd78c.tests.json"
+ },
+ "label": "the piece ' Er', ' er' or ' ER' split off at a word start (' Er'|win, ' Er'|ichsen, ' er'|pnext, ' ER'|AP), as opposed to whole tokens like Eric and Erik and names with other starts",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N10014_pos/2026-11-06-lm1909-ed0bd78c.tests.json",
+   "prereg_commit": "5ddfca7fa",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.058,
+     "peak": " Er"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.961,
+     "peak": " Er"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.951,
+     "peak": " Er"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.938,
+     "peak": " Er"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.73,
+     "peak": " er"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.878,
+     "peak": " ER"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.867,
+     "peak": " Er"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.937,
+     "peak": "Er"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.194,
+     "peak": " Eric"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.177,
+     "peak": " Erik"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "er"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": " Erie"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "er"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.938,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5ddfca7fa",
+  "minutes": 6,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "split ' Er' / ' er' word start",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization checked: ' Eric', ' Erik' and ' Erie' are whole tokens, in the near misses on purpose. Spoken 'er,' also reached 0.76 in a probe.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Er",
+   " er",
+   " ER",
+   "Er"
+  ]
+ }
+}

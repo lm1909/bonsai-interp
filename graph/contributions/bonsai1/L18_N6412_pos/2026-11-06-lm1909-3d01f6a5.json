@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3d01f6a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N6412+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:42+00:00",
+ "recipe": {
+  "toolchain_commit": "5ddfca7fa",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N6412_pos/2026-11-06-lm1909-3d01f6a5.tests.json"
+ },
+ "label": "'#' opening the next line of a comment block, as opposed to code lines and prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N6412_pos/2026-11-06-lm1909-3d01f6a5.tests.json",
+   "prereg_commit": "5ddfca7fa",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.293,
+     "peak": " say"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.178,
+     "peak": "#\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.304,
+     "peak": "#"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.059,
+     "peak": " each"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.501,
+     "peak": "#"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.214,
+     "peak": "#"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.208,
+     "peak": "#"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.327,
+     "peak": " Default"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "show"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "run"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": ".start"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "print"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "link"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " base"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.254,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5ddfca7fa",
+  "minutes": 7,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "'#' opening a next comment line",
+ "unit_kind": "format",
+ "confidence": "low",
+ "notes": "Probes 0.14–0.25 on '#'. ' offering' reached 0.48 in prose, which this does not explain.",
+ "selection": "random draw"
+}

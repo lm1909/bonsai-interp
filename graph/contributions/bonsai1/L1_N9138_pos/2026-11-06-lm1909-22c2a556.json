@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-22c2a556",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9138+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:24:32+00:00",
+ "recipe": {
+  "toolchain_commit": "5ddfca7fa",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N9138_pos/2026-11-06-lm1909-22c2a556.tests.json"
+ },
+ "label": "the split word-ending piece 'gen', 'ogen', 'en' or 'ens' (Bi|ogen, All|erg|ens, Reg|en, code|gen, Ellenb|ogen), as opposed to whole words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N9138_pos/2026-11-06-lm1909-22c2a556.tests.json",
+   "prereg_commit": "5ddfca7fa",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.308,
+     "peak": " pathogens"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.934,
+     "peak": "ogen"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.756,
+     "peak": "ens"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.583,
+     "peak": "gen"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.984,
+     "peak": "ogen"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.885,
+     "peak": "ens"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.91,
+     "peak": "gen"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.661,
+     "peak": "ogen"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " warm"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": "izer"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " foods"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " its"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " Stone"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " opened"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.048,
+     "peak": " rude"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.821,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5ddfca7fa",
+  "minutes": 7,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "split ending 'ogen', 'gen', 'ens'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Tokenization partly checked: ' estrogen', ' collagen' and ' hydrogen' are whole. 'Regens' and 'uncongenial' are not checked. Tiny corpus max (1.12), 100% echo.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "gen",
+   "ogen",
+   "en",
+   "ens"
+  ]
+ }
+}
