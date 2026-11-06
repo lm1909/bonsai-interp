@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-6ec6caa7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3730-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:00:15+00:00",
+ "recipe": {
+  "toolchain_commit": "7e82ef9d9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N3730_neg/2026-11-06-lm1909-6ec6caa7.tests.json"
+ },
+ "label": "The lowercase token ' h' opening a word that the tokenizer splits (h|inders, h|aphazard, h|unch); whole-token words stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N3730_neg/2026-11-06-lm1909-6ec6caa7.tests.json",
+   "prereg_commit": "7e82ef9d9",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.431,
+     "peak": " h"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.437,
+     "peak": " h"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.069,
+     "peak": " h"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.459,
+     "peak": " h"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.636,
+     "peak": " h"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.293,
+     "peak": " h"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.262,
+     "peak": " h"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.686,
+     "peak": " h"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " distr"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " costs"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " only"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " rules"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "Planning"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": " little"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " tires"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " poor"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.434,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7e82ef9d9",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' h' opening a split word",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Probes: hinders 0.83, haphazard 0.53, hunch 0.31, hERG 0.24; HBP 0.03; plain 0.00-0.02. Tokenization of fire words checked with the tokenizer before the commit.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " h"
+  ]
+ }
+}

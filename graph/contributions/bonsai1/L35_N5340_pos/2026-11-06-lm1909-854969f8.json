@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-854969f8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5340+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:59:42+00:00",
+ "recipe": {
+  "toolchain_commit": "7e82ef9d9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N5340_pos/2026-11-06-lm1909-854969f8.tests.json"
+ },
+ "label": "The first piece of a split Arabic word (' ص', ' الص', ' ث', ' الثن', ' وال'); other languages stay quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N5340_pos/2026-11-06-lm1909-854969f8.tests.json",
+   "prereg_commit": "7e82ef9d9",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.752,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.886,
+     "peak": " الص"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.59,
+     "peak": " ث"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.362,
+     "peak": " الثن"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.144,
+     "peak": " وال"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.309,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.379,
+     "peak": " الص"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.418,
+     "peak": " ث"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "F"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " debts"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " level"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": "σ"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.047,
+     "peak": "τ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": "zt"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.003,
+     "peak": "Le"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.398,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7e82ef9d9",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first piece of split Arabic words",
+ "unit_kind": "token piece / language",
+ "confidence": 0.6,
+ "notes": "Probes: ' ص' 0.85, ' الص' 0.59, ' ث' 0.50, ' الثن' 0.37, ' وال' 0.36; English and Greek at most 0.01. The output promotes '(' tokens. The density is broad (0.8%).",
+ "selection": "random draw"
+}
