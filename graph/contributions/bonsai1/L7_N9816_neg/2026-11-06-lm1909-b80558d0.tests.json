@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-b80558d0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9816-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:48:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N9816",
+   "pole": "-",
+   "label": "noise as a word piece across languages (r|uid|osa, br|uy|ant, ш|ум, AW|GN, shot|noise)",
+   "fire": [
+    "The channel is modeled as AWGN at the receiver.",
+    "Es una calle muy ruidosa por la noche.",
+    "Новый вентилятор совершенно бесшумный.",
+    "Ему мешает шумный сосед сверху.",
+    "Cette rue est très bruyante le soir.",
+    "The script applies a shotnoise filter to the image.",
+    "El motor es poco ruidoso en carretera.",
+    "Les enfants étaient bruyants dans la cour."
+   ],
+   "quiet": [
+    "The channel is modeled as linear at the receiver.",
+    "Es una calle muy oscura por la noche.",
+    "Новый вентилятор совершенно белый.",
+    "Ему мешает старый сосед сверху.",
+    "Cette rue est très sombre le soir.",
+    "The script applies a blur filter to the image.",
+    "El motor es poco potente en carretera.",
+    "Les enfants étaient fatigués dans la cour."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "noise as a word piece, cross-language",
+ "unit_kind": "token piece / cross-language",
+ "confidence": "high",
+ "notes": "The whole token ' noise' reached only 0.19 in a probe, so the pole may prefer the split forms, or the near-English spelling; the near misses here don't contain the word. Note that this is not tested against ' noise' itself."
+}

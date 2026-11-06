@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-71a4ea5f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N7563+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:48:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N7563",
+   "pole": "+",
+   "label": "a short token in a code format or usage string (%A, <tnum>, cp -f)",
+   "fire": [
+    "day_name = when.strftime('%A')\nprint(day_name)",
+    "Usage:\n    runner [--jobs=<njob>]",
+    "# Back up first.\ncp -r ./src ./bak",
+    "month = stamp.strftime('%B')\nshow(month)",
+    "Options:\n    fetch [--limit=<lnum>]",
+    "# Restore the files.\ncp -f ./bak ./src",
+    "hour = when.strftime('%H')\nprint(hour)",
+    "Usage:\n    build [--level=<lvl>]"
+   ],
+   "quiet": [
+    "day_name = get_day(when)\nprint(day_name)",
+    "Run the runner with one job at a time.",
+    "# Back up first.\nprint('done')",
+    "month = get_month(stamp)\nshow(month)",
+    "Fetch up to one hundred items at once.",
+    "# Restore the files.\nprint('ok')",
+    "hour = get_hour(when)\nprint(hour)",
+    "Build the project at a high level of detail."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "short token in a format or usage string (guess)",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "notes": "Weak guess on a broad, mostly gate-closed pole (1.2% of tokens reach 0.1 of max; 76% echo). Top examples also include letters in prose (' E' of Eindhoven)."
+}

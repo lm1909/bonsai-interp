@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-3868f871",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N700-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:48:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N700",
+   "pole": "-",
+   "label": "the closing bracket at the very end of a code file (predicting the end of the document)",
+   "fire": [
+    "def main():\n    run(job)\n\nmain()",
+    "admin.site.register(Page, PageAdmin)",
+    "    fields = [\n        'a',\n        'b',\n    ]",
+    "urlpatterns = [\n    path('a', view),\n]",
+    "setup(\n    name='demo',\n    version='1.0',\n)",
+    "class A:\n    def f(self):\n        return g(self)",
+    "return view.get(request, slug=slug, day=today.day)",
+    "add_item(wave)"
+   ],
+   "quiet": [
+    "def main():\n    run(job)\n\n# TODO: call main",
+    "admin.site.register(Page, PageAdmin)\nadmin.site.register(Post",
+    "    fields = [\n        'a',\n        'b',",
+    "urlpatterns = [\n    path('a', view),",
+    "setup(\n    name='demo',\n    version='1.0',",
+    "class A:\n    def f(self):\n        return",
+    "return view.get(request, slug=slug,",
+    "add_item("
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "closing bracket at end of a code file (guess)",
+ "unit_kind": "code / position",
+ "confidence": "low",
+ "notes": "Weak guess: in the corpus the top activations come just before <|endoftext|>, which my sentences can't show; the probes reached only 0.14. Expect a fail."
+}
