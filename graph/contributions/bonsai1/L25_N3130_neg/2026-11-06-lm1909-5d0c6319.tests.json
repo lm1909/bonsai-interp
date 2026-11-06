@@ -1,0 +1,62 @@
+{
+ "contribution": "2026-11-06-lm1909-5d0c6319",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3130-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:19:05+00:00",
+ "selection": "picked: second round after a failed first round",
+ "neighbours": [
+  {
+   "unit": "L25/N3130",
+   "pole": "-",
+   "label": "one of the position adjectives opening, closing, final, first, last, top, bottom or middle in the slot before a noun, as opposed to a descriptive adjective in the same slot; not the verbs opening and closing",
+   "fire": [
+    "Most readers remember the memoir's opening chapter about the flood.",
+    "The orchestra held back until the symphony's closing movement began.",
+    "Our coach gave a speech before the final lap of the relay.",
+    "Applicants should fill in the first box on the tax form.",
+    "My grandmother kept the last page of the diary in an envelope.",
+    "Tourists climbed the stairs to the top floor of the old museum.",
+    "Mechanics found a small crack along the bottom edge of the door.",
+    "Hikers rested at the middle section of the long canyon trail."
+   ],
+   "quiet": [
+    "At school the librarian was opening the memoir at the gloomy chapter about the flood.",
+    "This season the orchestra is closing the hall after the stormy symphony by a local composer.",
+    "Thousands of fans cheered during the exhausting lap of the relay.",
+    "Accountants often leave the blank box on the tax form.",
+    "Inside the envelope lay the yellowed page of the diary.",
+    "Visitors usually admire the marble floor of the old museum.",
+    "With sandpaper he smoothed the rough edge of the door.",
+    "Everyone relaxed at the shady section of the long canyon trail."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire at or above 0.3, with ' middle' the weakest; 0 or 1 near misses at 0.3. Verb ' opening' and ' closing' in the first two near misses should stay low.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ]
+ },
+ "short": "position word in the adjective slot",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. Round 1 (' opening' part of a work, 2026-11-06-lm1909-1d48e545) failed because ' closing', ' middle' and ' second' reached 0.3. Probes on one frame: opening 0.995, closing 0.774, final 0.656, last 0.589, first 0.555, quiet and famous 0.017; top 0.766, bottom 0.568, initial 0.269, short 0.001; third 0.224 and catchy 0.038; verb ' opening' 0.061; opening offer 0.530 and top shelf 0.651 show it isn't limited to parts of a work. Other position words (second, third, initial) score lower and aren't claimed, so the label is this list, not the whole category. Near misses keep each fire sentence's topic and noun and the determiner, and replace the position word with a descriptive one, with two using ' opening' and ' closing' as verbs.",
+ "trigger": {
+  "words": [
+   "opening",
+   "closing",
+   "final",
+   "first",
+   "last",
+   "top",
+   "bottom",
+   "middle"
+  ]
+ }
+}
