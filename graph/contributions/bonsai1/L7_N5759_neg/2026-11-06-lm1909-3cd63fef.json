@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-3cd63fef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N5759-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:24+00:00",
+ "recipe": {
+  "toolchain_commit": "cfe9a9870",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N5759_neg/2026-11-06-lm1909-3cd63fef.tests.json"
+ },
+ "label": "'bo' of oboe and obovate, 'dependent' of interdependent: a list; flute, narrow and whole-token ' independent' stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N5759_neg/2026-11-06-lm1909-3cd63fef.tests.json",
+   "prereg_commit": "cfe9a9870",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.043,
+     "peak": "bo"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.98,
+     "peak": "bo"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.017,
+     "peak": "bo"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.557,
+     "peak": "dependent"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.547,
+     "peak": "dependent"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.107,
+     "peak": "bo"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.4,
+     "peak": "dependent"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.011,
+     "peak": "bo"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": " movement"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " pointed"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": "sts"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "N"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "Pl"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " upper"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.995,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cfe9a9870",
+  "minutes": 1,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "o-bo-e, o-bo-vate, inter-dependent",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: 'bo' x6, 'dependent' x6, 'dependence' x4, 'depend' x3, 'dependency' x2. Probe: obovate 1.02, oboe 0.99, interdependent 0.97; flute 0.03, whole-token independent 0.01. Its tokenization matters: 'dependent' as a split-off piece fires; whole-token ' independent' does not.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "bo",
+   "dependent"
+  ]
+ }
+}

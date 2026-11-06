@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-792f8f6f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N9866-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:22+00:00",
+ "recipe": {
+  "toolchain_commit": "cfe9a9870",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N9866_neg/2026-11-06-lm1909-792f8f6f.tests.json"
+ },
+ "label": "'reflect' in the sense of thinking back (a moment to reflect, reflecting on the past); mirrors reflecting light, and figures reflecting a cause, stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N9866_neg/2026-11-06-lm1909-792f8f6f.tests.json",
+   "prereg_commit": "cfe9a9870",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.784,
+     "peak": " reflect"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.736,
+     "peak": " reflecting"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.721,
+     "peak": " reflects"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.691,
+     "peak": " reflect"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.75,
+     "peak": " reflects"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.725,
+     "peak": " reflect"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.461,
+     "peak": " reflecting"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.791,
+     "peak": " reflect"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " reflect"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " quietly"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " reflect"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.072,
+     "peak": " travel"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.73,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cfe9a9870",
+  "minutes": 1,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "'reflect' = think back, not mirror",
+ "unit_kind": "semantic / lexical",
+ "confidence": "high",
+ "notes": "Card: ' reflect' x11, ' reflecting' x5, ' reflects' x3, ' reflective' x2. Probe: 'moment to reflect' 0.90, 'reflecting on the past year' 0.80, 'reflect on how' 0.74; 'Mirrors reflect' 0.04, 'prices reflect' 0.01, ask 0.01. The word is shared on both sides, so this is about the sense.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "reflect",
+   "reflects",
+   "reflecting"
+  ]
+ }
+}

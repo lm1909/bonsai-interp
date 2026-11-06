@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-211759a8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10224+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:41+00:00",
+ "recipe": {
+  "toolchain_commit": "cfe9a9870",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10224_pos/2026-11-06-lm1909-211759a8.tests.json"
+ },
+ "label": "'org' of smorgasbord and the digits of PM2.5, PM10: a list; other words in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10224_pos/2026-11-06-lm1909-211759a8.tests.json",
+   "prereg_commit": "cfe9a9870",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.093,
+     "peak": "org"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.968,
+     "peak": "org"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.945,
+     "peak": "org"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.707,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.621,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.719,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.62,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.942,
+     "peak": "org"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " night"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "Levels"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " hourly"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " comes"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.831,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cfe9a9870",
+  "minutes": 2,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "'org' of smorgasbord; PM2.5, PM10 digits",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: '2' x5, 'org' x2, '5' x2, '1' x2, ' salmon' x2, ' Robinson'. Probe: smorgasbord 0.99, PM2.5 0.69, PM10 0.65; selection 0.01, 'grade 2.5' 0.01, salmon 0.02 (against the card). I found no shared pattern.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-258ee327",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N9994-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:07:32+00:00",
+ "recipe": {
+  "toolchain_commit": "cfe9a9870",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N9994_neg/2026-11-06-lm1909-258ee327.tests.json"
+ },
+ "label": "R or r split off right after an opening quotation mark ('“Richest', '“racketeering', ''Risafa'); other first letters in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N9994_neg/2026-11-06-lm1909-258ee327.tests.json",
+   "prereg_commit": "cfe9a9870",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.695,
+     "peak": "R"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.082,
+     "peak": "ers"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.701,
+     "peak": "R"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.082,
+     "peak": " Three"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.046,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.041,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.405,
+     "peak": "R"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.09,
+     "peak": ".”"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "ri"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.121,
+     "peak": " '"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.059,
+     "peak": " Three"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.081,
+     "peak": "ul"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.672,
+    "median_fire": 0.082,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cfe9a9870",
+  "minutes": 1,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "'R' or 'r' right after an opening quote",
+ "unit_kind": "token piece / contextual",
+ "confidence": "medium",
+ "notes": "Card: 'R' x6, ' R' x5, ' r' x3, 'r' x2, '-r' x2, and French ' déf', ' pr', after an opening quote. Probe: “Richest 0.96, “racketeering 0.75, 'Risafa 0.33; “Golden 0.12, 'Musafa 0.07, no quote 0.16. I have not tested R without a quote mark in the same word.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "R",
+   "r"
+  ]
+ }
+}
