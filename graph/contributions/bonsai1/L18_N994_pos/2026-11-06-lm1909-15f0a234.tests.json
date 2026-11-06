@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-15f0a234",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N994+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N994",
+   "pole": "+",
+   "label": "the ':\\n' that ends an 'if' condition with a comparison, deep in a code block",
+   "fire": [
+    "    def add(self, bit):\n        self.bits.append(bit)\n        if len(self.bits) == self.size:\n            self.flush()\n",
+    "    def tick(self):\n        self.steps += 1\n        if self.steps % self.period == 0:\n            self.update()\n",
+    "    def check(self):\n        now = time.time()\n        if self.last + self.interval > now:\n            return\n",
+    "    def push(self, item):\n        self.items.append(item)\n        if len(self.items) >= self.limit:\n            self.drain()\n",
+    "    def scan(self):\n        count = self.count + 1\n        if count % self.columns == 0:\n            self.row += 1\n",
+    "    def grow(self):\n        self.length += 1\n        if self.length == self.block_size:\n            self.close()\n",
+    "    def poll(self):\n        wait = self.timeout\n        if self.start + wait < clock():\n            return\n",
+    "    def step(self):\n        self.n += 1\n        if self.n > self.max_steps:\n            self.stop()\n"
+   ],
+   "quiet": [
+    "    def add(self, bit):\n        self.bits.append(bit)\n        self.size = len(self.bits)\n        self.flush()\n",
+    "    def tick(self):\n        self.steps += 1\n        self.total = self.steps\n        self.update()\n",
+    "    def check(self):\n        now = time.time()\n        self.last = now\n        return now\n",
+    "    def push(self, item):\n        self.items.append(item)\n        self.count = len(self.items)\n        self.drain()\n",
+    "    def scan(self):\n        count = self.count + 1\n        self.count = count\n        self.row += 1\n",
+    "    def grow(self):\n        self.length += 1\n        self.block = self.length\n        self.close()\n",
+    "    def poll(self):\n        wait = self.timeout\n        self.start = clock()\n        return wait\n",
+    "    def step(self):\n        self.n += 1\n        self.last = self.n\n        self.stop()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "':\\n' after an if-comparison",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card: ':\\n' x6, '):\\n' x3, '0' x2, '_total', ' else', '\\t\\t'. Top examples sit deep in code, in if lines with comparisons. Probes on short snippets were weak: 0.101 on ':\\n' at best, under 0.05 otherwise. The test uses longer code. May fail on the median."
+}

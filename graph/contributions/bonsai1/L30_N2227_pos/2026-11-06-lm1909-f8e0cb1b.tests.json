@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-f8e0cb1b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N2227+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N2227",
+   "pole": "+",
+   "label": "a token that scales a quantity between units (/1e6, /1000000, kilo- in kilojoules)",
+   "fire": [
+    "    elapsed = float(diff.microseconds)/1e6\n",
+    "    secs = int(self.read(m)/1000000)\n",
+    "    return total_bytes/1e9\n",
+    "The bonds in water are about 20 kilojoules per mole.",
+    "Burning this fuel releases about 45 kilojoules per gram.",
+    "    ms = float(delta.seconds)*1e3\n",
+    "    kb = int(size/1000)\n",
+    "Each snack bar supplies 600 kilojoules of energy."
+   ],
+   "quiet": [
+    "    elapsed = float(diff.name)\n",
+    "    secs = int(self.read(m))\n",
+    "    return total_bytes\n",
+    "The bonds in water are weak and break easily when heated.",
+    "Burning this fuel releases a thick black smoke in the air.",
+    "    ms = float(delta.label)\n",
+    "    kb = int(size)\n",
+    "Each snack bar is wrapped in a thin layer of foil."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "scaling between units",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' ' x4, ')/' x3, 'ill' x3, '0' x2, ' kil' x2, ' time' x2: microseconds)/1e6, /1000000, divmod 60, kilojoules, million hryvnia. Probes: ' kil' 0.756, 'e' in 1e6 0.616, '0' in /1000000 0.274, '6' in divmod 60 0.177; no scale in the same frames under 0.01. Near misses keep the code and physics frames."
+}

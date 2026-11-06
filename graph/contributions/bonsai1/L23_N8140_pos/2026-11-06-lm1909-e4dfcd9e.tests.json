@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-e4dfcd9e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8140+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N8140",
+   "pole": "+",
+   "label": "the opening parenthesis that explains a symbol or abbreviation just given (USD $ (U.S. Dollars), / (as opposed to C:\\), ?（疑問符）)",
+   "fire": [
+    "All prices on this page are in GBP £ (British Pounds).",
+    "In Windows, the path separator is \\ (as opposed to / in Unix).",
+    "シェルでは「*」（アスタリスク）を使います。",
+    "Amounts below are shown in EUR € (Euros).",
+    "In Bash, the home directory is ~ (as opposed to C:\\Users on Windows).",
+    "正規表現では「.」（ドット）を使います。",
+    "Totals are given in JPY ¥ (Japanese Yen).",
+    "In Python, the comment marker is # (as opposed to // in Java)."
+   ],
+   "quiet": [
+    "All prices on this page were set (last year) by the owners.",
+    "In Windows, the desktop (the main screen) shows your files.",
+    "シェルでは名前（ユーザー）を使います。",
+    "Amounts below were checked (twice) by the clerk.",
+    "In Bash, the manual (a long text) explains each command.",
+    "学校では先生（教師）が教えます。",
+    "Totals are given by the treasurer (Mr. Lee).",
+    "In Python, the library (written in C) runs very fast."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "' (' glossing a symbol",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: ' (' x5, '&' x2, '（', plus HTML entity pieces (or, til, psi) in a table. Probes: ' (' after / 0.981, '（' after ? 0.767, ' (' after $ 0.435; '(near Dayton)' 0.002, plain text under 0.05. The entity-table cluster is outside this label. Near misses keep parentheses after ordinary words, so ' (' alone cannot pass."
+}

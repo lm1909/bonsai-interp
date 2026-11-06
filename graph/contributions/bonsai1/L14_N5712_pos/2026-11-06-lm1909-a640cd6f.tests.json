@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-a640cd6f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5712+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N5712",
+   "pole": "+",
+   "label": "the first token of a negative contraction (' don', ' won', ' couldn', ' isn') on a dense pole",
+   "fire": [
+    "You don't have to pay for the second ticket.",
+    "The old doors won't close unless you lift them.",
+    "She couldn't believe how quickly the year went.",
+    "They don't sell bread at that little shop.",
+    "We couldn't find the keys anywhere in the house.",
+    "The kids won't eat anything green at dinner.",
+    "I don't think the store opens before noon.",
+    "He couldn't hear the speaker from the back row."
+   ],
+   "quiet": [
+    "You have to pay for the second ticket.",
+    "The old doors will close if you lift them.",
+    "She could believe how quickly the year went.",
+    "They do sell bread at that little shop.",
+    "We could find the keys anywhere in the house.",
+    "The kids will eat anything green at dinner.",
+    "I do think the store opens before noon.",
+    "He could hear the speaker from the back row."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "n't contraction start (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense (19.7%) and gate-closed (100%), max 1.94: ' don' x7, ' isn' x5, ':' x5, ' couldn' x3, ' according' x3, ' won' x2. Probes: ' couldn' 0.732, ' don' 0.566, ' won' 0.315, ' in' in 'Keep in mind' 0.509; 'You do need' 0.092. Reported as dense whatever the test says.",
+ "trigger": {
+  "tokens": [
+   " don",
+   " won",
+   " couldn",
+   " isn"
+  ]
+ }
+}

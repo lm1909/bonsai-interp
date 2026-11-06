@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-19d7da9d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N5357+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:22:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N5357",
+   "pole": "+",
+   "label": "a token in the rules of a tabletop or war game (When a squad shoots, it fires; if you fail your test, you lose)",
+   "fire": [
+    "When a unit charges, it rolls one die per model in the unit.",
+    "If you don't roll enough hits, you can reroll one attack.",
+    "Any time you fail your Willpower Check, you lose one point.",
+    "To capture a bunker, move the tank within two hexes.",
+    "When a knight attacks, it deals one wound per weapon it holds.",
+    "If you score a critical hit, you may draw another card.",
+    "Any time your hero takes damage, you discard one token.",
+    "Each player rolls a die, and the highest roll goes first."
+   ],
+   "quiet": [
+    "When a choir rehearses, it sings one hymn per week in the hall.",
+    "If you don't get enough sleep, you can rest on Sunday.",
+    "Any time you miss your bus, you lose an hour.",
+    "To reach the bakery, walk down the street past two shops.",
+    "When a nurse arrives, she checks one chart per patient on the ward.",
+    "If you buy a new house, you may need another loan.",
+    "Any time your son comes home, you cook a meal.",
+    "Each student buys a book, and the oldest reads first."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "tabletop game rules",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' with' x3, ' you' x2, ',', '\\n', ' the', ' it', ' Skill', all in tabletop and game rule text. Probes: 'fires one shot per unit in the squad' 0.852, 'score enough successes' 0.537, 'fail your Composure Test' 0.524, 'move the APC' 0.292; a singer 0.071, visiting an aunt 0.025. Near misses keep the sentence frames outside games."
+}
