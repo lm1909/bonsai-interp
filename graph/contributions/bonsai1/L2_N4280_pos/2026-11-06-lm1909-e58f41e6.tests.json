@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-e58f41e6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4280+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:52:02+00:00",
+ "selection": "second round after own failed test",
+ "neighbours": [
+  {
+   "unit": "L2/N4280",
+   "pole": "+",
+   "label": "the ending -ation/-iation/-ация when it is its own token in a split word: Med|iation, Medic|ation, Dict|ation, В|ари|ация, Ре|ализ|ация; whole tokens like ' Variation' are not claimed",
+   "fire": [
+    "The two sides went to Mediation in June.",
+    "Her doctor changed the Medication after a week.",
+    "He passed the French Dictation with ease.",
+    "Вариация веса зависит от сезона.",
+    "Реализация проекта заняла два года.",
+    "Операция прошла успешно в понедельник.",
+    "Court-appointed Mediation saved them money.",
+    "Цивилизация возникла на берегу реки."
+   ],
+   "quiet": [
+    "The two sides went to lunch in June.",
+    "Her doctor changed the dose after a week.",
+    "He passed the French exam with ease.",
+    "Вес зависит от сезона.",
+    "Подготовка проекта заняла два года.",
+    "Встреча прошла успешно в понедельник.",
+    "Court-appointed lawyers saved them money.",
+    "Город возник на берегу реки."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "split ending -ation, -ация (checked tokens)",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   "iation",
+   "ation",
+   "ация"
+  ]
+ }
+}
