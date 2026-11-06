@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-c4f68479",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1713+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:51:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N1713",
+   "pole": "+",
+   "label": "(guess) the colon closing a guard on an object's state flag: `if not self.closed:`, `if pos != self._pos:`",
+   "fire": [
+    "    def close(self):\n        if not self.closed:\n            self.flush()\n",
+    "    def stop(self):\n        if not self.stopped:\n            self.join()\n",
+    "    def seek(self, pos):\n        if pos != self._pos:\n            self._pos = pos\n",
+    "    def open(self):\n        if not self.opened:\n            self.init()\n",
+    "    def start(self):\n        if not self.started:\n            self.run()\n",
+    "    def show(self):\n        if not self.visible:\n            self.draw()\n",
+    "    def resize(self, n):\n        if n != self._size:\n            self._size = n\n",
+    "    def shutdown(self):\n        if not self.finished:\n            self.abort()\n"
+   ],
+   "quiet": [
+    "    def close(self):\n        self.flush()\n        self.closed = True\n",
+    "    def stop(self):\n        self.join()\n        return 1\n",
+    "    def seek(self, pos):\n        self._pos = pos\n        return pos\n",
+    "for x in items:\n    print(x)\n",
+    "while n > 0:\n    n -= 1\n",
+    "    def show(self):\n        self.draw()\n        return self\n",
+    "try:\n    run()\nexcept OSError:\n    pass\n",
+    "with open(p) as f:\n    print(f)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "colon closing a state guard",
+ "unit_kind": "code / contextual",
+ "confidence": "low"
+}

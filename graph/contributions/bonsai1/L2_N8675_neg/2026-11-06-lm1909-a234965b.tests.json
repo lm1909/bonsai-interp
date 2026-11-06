@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-a234965b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N8675-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:51:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N8675",
+   "pole": "-",
+   "label": "(guess) dense weak pole on uppercase code constants and model pieces: wx.EVT_MENU, self in callbacks",
+   "fire": [
+    "self.Bind(wx.EVT_BUTTON, self.on_press, id=self.id_ok)\n",
+    "self.Bind(wx.EVT_CLOSE, self.on_exit)\n",
+    "self.Bind(wx.EVT_TIMER, self.on_tick, self.timer)\n",
+    "panel.Bind(wx.EVT_PAINT, self.on_paint)\n",
+    "self.Bind(wx.EVT_SIZE, self.on_size)\n",
+    "frame.Bind(wx.EVT_MENU, self.on_quit, id=1)\n",
+    "self.Bind(wx.EVT_KEY_DOWN, self.on_key)\n",
+    "win.Bind(wx.EVT_LEFT_UP, self.on_up)\n"
+   ],
+   "quiet": [
+    "self.connect(event, handler, id=self.id_ok)\n",
+    "self.bind(close_cb, on_exit)\n",
+    "self.schedule(tick, on_tick, timer)\n",
+    "panel.draw(canvas, on_paint)\n",
+    "self.resize(width, height)\n",
+    "frame.add(menu, quit_cb, id=1)\n",
+    "self.listen(key, on_key)\n",
+    "win.show(up, on_up)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "uppercase constants in code (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low"
+}

@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-06-lm1909-4939463d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5952+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:51:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N5952",
+   "pole": "+",
+   "label": "(guess) '(self' opening a method's parameters in a Python class",
+   "fire": [
+    "class Sensor(Entity):\n    @property\n    def name(self):\n        return self._name\n\n    @property\n    def state(self):\n        return self._state\n",
+    "class Db:\n    def __init__(self):\n        self.rows = {}\n\n    def get_row(self, key):\n        return self.rows[key]\n",
+    "class Plot:\n    def get_axes(self, bins, data):\n        return bins\n",
+    "class View:\n    def width(self):\n        \"\"\"\n        Returns:\n            int\n        \"\"\"\n        return 1\n",
+    "class Job:\n    def _print_status(self, status):\n        print(status)\n",
+    "class Page:\n    @property\n    def thumbnail(self):\n        return self._thumb\n",
+    "class Pool:\n    def clear(self):\n        self.items = []\n",
+    "class Log:\n    def write(self, line):\n        self.out.append(line)\n"
+   ],
+   "quiet": [
+    "def name(entity):\n    return entity.name\n\n\ndef state(entity):\n    return entity.state\n",
+    "rows = {}\n\n\ndef get_row(key):\n    return rows[key]\n",
+    "def get_axes(bins, data):\n    return bins\n",
+    "def width(view):\n    \"\"\"\n    Returns:\n        int\n    \"\"\"\n    return 1\n",
+    "def print_status(status):\n    print(status)\n",
+    "thumb = load(page)\nprint(thumb)\n",
+    "items = []\nitems.clear()\n",
+    "lines = []\nlines.append(line)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'(self' in a method definition (guess)",
+ "unit_kind": "code / token",
+ "confidence": "low",
+ "trigger": {
+  "tokens": [
+   "(self"
+  ]
+ }
+}
