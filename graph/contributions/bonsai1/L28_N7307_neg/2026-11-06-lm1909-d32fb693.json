@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-d32fb693",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7307-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:42:17+00:00",
+ "recipe": {
+  "toolchain_commit": "67b4f2918",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N7307_neg/2026-11-06-lm1909-d32fb693.tests.json"
+ },
+ "label": "the tokens ' Super', ' super' and ' Hyper' as a word or the first piece of one, as opposed to other intensifiers and prefixes in the same frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N7307_neg/2026-11-06-lm1909-d32fb693.tests.json",
+   "prereg_commit": "67b4f2918",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.317,
+     "peak": " Super"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.337,
+     "peak": " Hyper"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.375,
+     "peak": " super"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.093,
+     "peak": " super"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.337,
+     "peak": " Hyper"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.363,
+     "peak": " super"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.298,
+     "peak": " Super"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.261,
+     "peak": " super"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " disc"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": "op"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": " built"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " League"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " found"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.327,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "67b4f2918",
+  "minutes": 3,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "the tokens ' Super', ' super', ' Hyper'",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Round 2. An earlier round claimed technical words and names, and failed at AUROC 0.898: ' Super' in Super Bowl and SuperCollider scored the same 0.298, and 'Multi|Th|reading' reached 0.417 on 'reading'. So the technical claim is dropped, and this is token level. Earlier fire items 0.27-0.82, with ' Hyper' strongest; Ultra 0.06, Micro 0.01, Mega 0.20, Computing 0.07-0.20. Output promotes ' fifth', ' next', 'Seventh', not explained. ' Gig' on the card is not tested.",
+ "selection": "picked: round 2 after a failed round",
+ "trigger": {
+  "tokens": [
+   " Super",
+   " super",
+   " Hyper"
+  ]
+ }
+}

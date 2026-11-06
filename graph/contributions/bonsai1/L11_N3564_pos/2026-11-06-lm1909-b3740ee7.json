@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b3740ee7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N3564+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:42:06+00:00",
+ "recipe": {
+  "toolchain_commit": "67b4f2918",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N3564_pos/2026-11-06-lm1909-b3740ee7.tests.json"
+ },
+ "label": "'make sense' asked as a question, as opposed to statements that something makes sense or makes no sense, other uses of ' sense', and the same question with another object",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N3564_pos/2026-11-06-lm1909-b3740ee7.tests.json",
+   "prereg_commit": "67b4f2918",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.428,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.534,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.371,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.38,
+     "peak": "?"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.812,
+     "peak": " far"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.27,
+     "peak": " make"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.372,
+     "peak": " sense"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.426,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.089,
+     "peak": " sense"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.132,
+     "peak": " sense"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.214,
+     "peak": " sounds"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " stones"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.253,
+     "peak": " make"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.267,
+     "peak": " make"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": "?"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.403,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "67b4f2918",
+  "minutes": 3,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "'make sense' asked as a question",
+ "unit_kind": "lexical / discourse",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed the wider check-in (Are you with me?, Know what I mean?) and failed on near misses that kept those words ('know what I mean to do' 0.42, 'following him so far' 0.36). This round is only about 'make sense?'. Earlier: 'Make sense?' 0.57, 'Does all that make sense?' 0.52, 'make any sense' 0.77; 'makes no sense to try' 0.08, 'makes sense to leave' 0.09, 'Does all that make money?' 0.16. 'Does that make any noise' 0.57 peaked on ' any', so ' any' is avoided. No near miss is a sincere question about whether something makes sense, so 'checking on the reader' is not claimed. The peak was on ' sense' in most earlier items.",
+ "selection": "picked: round 2 after a failed round"
+}

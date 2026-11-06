@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-345e1d83",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N7773+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:42:11+00:00",
+ "recipe": {
+  "toolchain_commit": "67b4f2918",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N7773_pos/2026-11-06-lm1909-345e1d83.tests.json"
+ },
+ "label": "the ' of' that introduces news someone is given or finds out (informed X of, notified X of, notice of, learned of), as opposed to ' of' after other verbs and adjectives in the same frames (accused of, thought of, tired of), and to a news verb with no ' of'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N7773_pos/2026-11-06-lm1909-345e1d83.tests.json",
+   "prereg_commit": "67b4f2918",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.883,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.883,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.485,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.496,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.117,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.675,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.301,
+     "peak": " heard"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.294,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.067,
+     "peak": " students"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.063,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.198,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.141,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.135,
+     "peak": " changes"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.49,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "67b4f2918",
+  "minutes": 3,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "the ' of' that introduces news someone gets",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed telling and learning news more widely, and failed on 'told her' (the same 1.000 before 'about' and before 'to'). ' told' is dropped here, and this round is only about ' of'. Probes: 'notice of' 0.82, 'informed patients of' 0.76, 'learned of' 0.73, 'notified residents of' 0.61; 'accused the driver of' 0.003, 'thought of' 0.10. 'reminded parents of' 0.36, on ' parents', is unclear. Other forms fired in probes and are not tested here: 'announced' 0.48, 'were told that' 0.47.",
+ "selection": "picked: round 2 after a failed round"
+}

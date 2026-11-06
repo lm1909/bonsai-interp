@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-b520c310",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6944-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:42:03+00:00",
+ "recipe": {
+  "toolchain_commit": "67b4f2918",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N6944_neg/2026-11-06-lm1909-b520c310.tests.json"
+ },
+ "label": "' name' as a person's name being asked for or recorded (print your name, full name, the mother's name), as opposed to the name of a thing in the same frames, and a name simply being stated",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N6944_neg/2026-11-06-lm1909-b520c310.tests.json",
+   "prereg_commit": "67b4f2918",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.325,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.423,
+     "peak": " address"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.138,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.43,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.482,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.841,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.445,
+     "peak": " name"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.225,
+     "peak": " name"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " name"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " asks"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.2,
+     "peak": " address"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.082,
+     "peak": " here"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.165,
+     "peak": " name"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.082,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.045,
+     "peak": " name"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.189,
+     "peak": " name"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.426,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "67b4f2918",
+  "minutes": 3,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "a person's name being asked for or recorded",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Round 2. An earlier round claimed personal and family record details, and failed because 'his employer's name' reached 0.70 and 'home address' 0.35. So it may be about ' name', and family is not all of it. 'employer's name' on a person's record may belong to the same pattern; it is not tested here. Probes: 'Full name' 0.43, 'state your name' 0.39, 'recorded his name' 0.36, 'your employer's name' 0.31; 'Part name' 0.03, 'product's name' 0.04, 'name of the company' 0.19, 'Her name was Mary' 0.11, 'His name was John' 0.19. Other tokens on the card (' birth', ' married', ' spouse') fired 0.27-0.67 and are not tested here. The declared tokens include things' names, so coverage is an upper bound.",
+ "selection": "picked: round 2 after a failed round",
+ "trigger": {
+  "tokens": [
+   " name",
+   " names"
+  ]
+ }
+}
