@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-4a340779",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N566-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:52:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N566",
+   "pole": "-",
+   "label": "a broken-byte token, a piece of a CJK character the tokenizer cannot keep whole (龜, 釀, 鑰, 纏), as opposed to the same text in simplified characters and to traditional characters that stay whole",
+   "fire": [
+    "他的烏龜爬得很慢。",
+    "他說釀酒需要耐心和時間。",
+    "我找不到家裡的鑰匙了。",
+    "這些麻煩一直纏著他。",
+    "今晚的籃球比賽開始了。",
+    "農民在家裡養蠶。",
+    "工人用電鑽打洞。",
+    "天氣驟然變冷了。"
+   ],
+   "quiet": [
+    "他的乌龟爬得很慢。",
+    "他说酿酒需要耐心和时间。",
+    "我找不到家里的钥匙了。",
+    "这些麻烦一直缠着他。",
+    "今晚的足球比賽開始了。",
+    "農民在家裡養牛。",
+    "工人用鐵棒打洞。",
+    "天氣突然變冷了。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "broken-byte piece of a rare CJK character",
+ "unit_kind": "spelling unit",
+ "confidence": "medium",
+ "notes": "Card: '�' x24, ' �' x3, of the top 32 (〇, Ⅱ, 糾, 蝦, ...). Probes: 〇 0.39, 糾 0.32, 蝦 0.09; the same phrases in simplified characters, which are whole tokens, 0.001 or less; English 0.01. Common traditional characters are whole tokens (舊, 龍, 鐵), so near misses include them to separate script from fragments. Pieces checked with the tokenizer. Other kinds of '�' (for example in other scripts) are not tested.",
+ "trigger": {
+  "tokens": [
+   "�",
+   " �"
+  ]
+ }
+}

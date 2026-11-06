@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-b66e39af",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N8269+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:52:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N8269",
+   "pole": "+",
+   "label": "the hyphen in a French fixed phrase where à comes next (vis-à-vis, tête-à-tête, c'est-à-dire), as opposed to other hyphens in French, including X-preposition-Y compounds",
+   "fire": [
+    "Les deux chefs se sont vus en face-à-face hier.",
+    "Il a acheté un pied-à-terre à Paris cette année.",
+    "Elle travaille dans le prêt-à-porter depuis longtemps.",
+    "Il a traduit le texte mot-à-mot pour ses élèves.",
+    "La voiture a fait un tête-à-queue sur la route.",
+    "Ils ont dansé dos-à-dos toute la soirée.",
+    "Son attitude vis-à-vis de ses collègues a changé.",
+    "Le maire est parti, c'est-à-dire qu'il a démissionné."
+   ],
+   "quiet": [
+    "Les deux chefs se sont vus à la mi-temps hier.",
+    "Il a acheté un lave-vaisselle à Paris cette année.",
+    "Elle vend des coupe-vent depuis longtemps.",
+    "Il a traduit le texte peut-être pour ses élèves.",
+    "La voiture a fait un demi-tour sur la route.",
+    "Ils ont dansé au rez-de-chaussée toute la soirée.",
+    "Son attitude envers ses beaux-frères a changé.",
+    "Le maire est parti, grand-père m'a dit qu'il a démissionné."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "hyphen where à comes next in a French phrase",
+ "unit_kind": "token / context",
+ "confidence": "medium",
+ "notes": "Card: '-' x17 and ' (' x8. Probes: tête|-|à 1.01, c'est|-|à 0.48, vis|-|à 0.31; 'peut-être', 'ci-dessous', well-known, twenty-year-old, bear-feeding 0.01 or less. 'cinque-foil' 0.45 is a counterexample, 'ci-' is the card's top example although 'ci-dessous' scored 0.01 in a probe, 'bear-feeding' is also on the card, and ' (' is not explained, so expect `partial`. Four near misses (mi-temps, lave-vaisselle, coupe-vent, rez-de-chaussée) keep a standalone '-' token as the fire items do; the other four merge it (-t, -être). Output promotes ' im', ' em', 'en', 'ri', not explained."
+}

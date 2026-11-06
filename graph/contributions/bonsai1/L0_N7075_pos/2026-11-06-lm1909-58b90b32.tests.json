@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-58b90b32",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7075+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:52:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N7075",
+   "pole": "+",
+   "label": "the token ' **' (a double asterisk after a space), whether it marks bold text or a power, as opposed to other markup symbols in the same place",
+   "fire": [
+    "Shipping is free this week. **Sale ends on Sunday.",
+    "He told us it was **very** important to arrive early.",
+    "Warning: ** do not open the lid while hot.",
+    "The manual says to use **only** distilled water.",
+    "The area grows as r ** 2 in that formula.",
+    "Our shop is closed today. **Back on Monday morning.",
+    "The result equals x ** 3 at that point.",
+    "Please read this ** before you sign the form."
+   ],
+   "quiet": [
+    "Shipping is free this week. *Sale ends on Sunday.",
+    "He told us it was __very__ important to arrive early.",
+    "Warning: ## do not open the lid while hot.",
+    "The manual says to use ~~only~~ distilled water.",
+    "The area grows as r ^ 2 in that formula.",
+    "Our shop is closed today. //Back on Monday morning.",
+    "The result equals x squared at that point.",
+    "Please read this -- before you sign the form."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the token ' **'",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: ' **' x19 and '<|endoftext|>' x13 of the top 32. Probes: ' **' 0.44-0.71 in bold, note and power use; ' *' 0.03, '##' 0.02, ' __' 0.11. The '<|endoftext|>' half of the card cannot be tested in sentences and is not covered.",
+ "trigger": {
+  "tokens": [
+   " **"
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-348b0552",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N2217-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:52:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N2217",
+   "pole": "-",
+   "label": "the slot just before the result of a procedure on an input: a shell ' >' before the output file, and '=' or 'to get' after a personal formula, as opposed to the same procedures with no result named",
+   "fire": [
+    "grep error server.log > errors.txt\n",
+    "gcc -E main.c > main.i\n",
+    "cat part1.txt part2.txt > whole.txt\n",
+    "tar tf backup.tar > list.txt\n",
+    "Add your two best scores and divide by 2 = your final grade.",
+    "Multiply your age by 7 = your dog's age in human years.",
+    "Divide your savings by 12 to get your monthly budget.",
+    "Divide your height by 2 to get your ideal stride length."
+   ],
+   "quiet": [
+    "grep error server.log | wc -l\n",
+    "gcc -E main.c | less\n",
+    "cat part1.txt part2.txt | sort\n",
+    "if [ \"$n\" > 3 ]; then ls; fi\n",
+    "Add your two best scores and write them in the box on your chart.",
+    "Multiply your age by 7 and tell your dog's vet at the visit.",
+    "Divide your savings by 12 and write it in the ledger.",
+    "Divide your height by 2 and mark it on the wall."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "slot before a procedure's output",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: ' as' x11, ',' x6, ' to' x3, ' >' x2, ' AS', ' ='. Probes: 'new.cpp >' 0.69, 'sorted.csv' redirect 0.42, 'ls -l >' 0.37; 'Multiply ... by 0.55 =' 0.49-0.51, 'subtract it from 220 to' 0.62; '| uniq' 0.06, 'and write it down' 0.11. Counterexamples: 'Add 1 cup flour + 2 cups milk =' 0.10, 'a = b + c' 0.00, '->' 0.01. SQL AS was uneven ('FROM users AS' 0.47, 'COUNT(*) AS' 0.16 or less), 'with open(path) as' 0.23, so ' as' is the card's biggest token and is not claimed. This mixes two kinds of text on purpose; a failure would be informative."
+}

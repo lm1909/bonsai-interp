@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-6d024f38",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N10002+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:52:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N10002",
+   "pole": "+",
+   "label": "the first piece of five French words where the tokenizer splits them (' pass'|és, ' part'|out, ' vers'|er, '-ret'|our, ' Kab'|oul), as opposed to other words in the same French sentences, including other split words (' all'|és, ' cha'|uffer)",
+   "fire": [
+    "Nous sommes passés devant la gare ce matin.",
+    "On trouve des cafés un peu partout en ville.",
+    "Il faut verser le lait doucement dans la casserole.",
+    "Le billet aller-retour coûte vingt euros.",
+    "Un attentat a eu lieu à Kaboul la semaine dernière.",
+    "Les jours sont passés très vite cet hiver.",
+    "Il cherche partout ses clés depuis midi.",
+    "On doit verser une caution avant d'entrer."
+   ],
+   "quiet": [
+    "Nous sommes allés devant la gare ce matin.",
+    "On trouve des cafés un peu dans toute la ville.",
+    "Il faut chauffer le lait doucement dans la casserole.",
+    "Le billet simple coûte vingt euros.",
+    "Un attentat a eu lieu à Madrid la semaine dernière.",
+    "Les jours sont restés très froids cet hiver.",
+    "Il cherche encore ses clés depuis midi.",
+    "On doit payer une caution avant d'entrer."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "French stem pieces (pass|é, part|out, vers|er)",
+ "unit_kind": "spelling unit / language",
+ "confidence": "low",
+ "notes": "Card: ' vers' x2, ' part' x2, 'Ret' x2, ' Kab', ' pass', ' tous'; output promotes 'out', 'er', 'oul', 'our', 'ours', which are the endings. Probes: ' Kab' 0.76, ' pass' 0.70-0.74, '-ret' 0.69, ' part' 0.54, ' vers' 0.48; Spanish, Italian, German, English versions 0.03 or less, so French only. Other French is not silent: ' dort' 0.26, ' mettre' 0.34, ' et' 0.37, 'tout' 0.31, so the near misses may fail this test."
+}
