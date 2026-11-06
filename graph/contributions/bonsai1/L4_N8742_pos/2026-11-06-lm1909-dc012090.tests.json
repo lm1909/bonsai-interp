@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-dc012090",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8742+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:04:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N8742",
+   "pole": "+",
+   "label": "Assigning the empty string in code (package = '' followed by a newline); other initial values on the same lines stay quiet",
+   "fire": [
+    "prefix = ''\nsuffix = ''\n",
+    "output = ''\nfor c in s:\n    output += c\n",
+    "title = ''\nif a:\n    pass\n",
+    "    buf = ''\n    return buf\n",
+    "text = ''\nwhile x:\n    pass\n",
+    "name = ''\nprint(name)\n",
+    "result = ''\nresult += 'a'\n",
+    "line = ''\nf.write(line)\n"
+   ],
+   "quiet": [
+    "prefix = 'a'\nsuffix = 'b'\n",
+    "output = []\nfor c in s:\n    output.append(c)\n",
+    "title = None\nif a:\n    pass\n",
+    "    buf = 0\n    return buf\n",
+    "text = 'hi'\nwhile x:\n    pass\n",
+    "name = 'Ann'\nprint(name)\n",
+    "result = 1\nresult += 2\n",
+    "line = 'x'\nf.write(line)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "empty string assignment in code",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "trigger": {
+  "tokens": [
+   " ''\n",
+   " ''"
+  ]
+ }
+}
