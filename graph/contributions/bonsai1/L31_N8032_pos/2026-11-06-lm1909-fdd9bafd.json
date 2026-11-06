@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-fdd9bafd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N8032+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:33+00:00",
+ "recipe": {
+  "toolchain_commit": "4c672e9ad",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N8032_pos/2026-11-06-lm1909-fdd9bafd.tests.json"
+ },
+ "label": "The connective before a progressive auxiliary in Korean and Japanese (증가하고 있다, 働いている); the plain past of the same verbs stays quiet; the logit effect promotes -ing forms",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N8032_pos/2026-11-06-lm1909-fdd9bafd.tests.json",
+   "prereg_commit": "4c672e9ad",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.494,
+     "peak": "하고"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.462,
+     "peak": "하고"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.817,
+     "peak": "하고"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.727,
+     "peak": "いて"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.085,
+     "peak": "で"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.147,
+     "peak": "強"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.51,
+     "peak": "하고"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.066,
+     "peak": "ずっと"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " 감"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": "부"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "정"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.13,
+     "peak": "働"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.085,
+     "peak": "で"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.048,
+     "peak": "強"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.054,
+     "peak": "르"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.033,
+     "peak": "が"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.945,
+    "median_fire": 0.478,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c672e9ad",
+  "minutes": 3,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "connective of a progressive (하고 있다, ている)",
+ "unit_kind": "grammatical / prediction",
+ "confidence": "high",
+ "notes": "Card: 하고 x9, 고 x4, いて x2, んで x2, 해서, 이고, けて. Logit effect promotes ' being', ' happening', ' working', ' occurring', ' doing'. Probe: いて 0.85, 하고 0.68, けて 0.37, 이고 0.31; plain past 0.01; but 'て' in 雇われて 0.40 and は 0.16, so Japanese て has a floor.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "하고",
+   "いて"
+  ]
+ }
+}

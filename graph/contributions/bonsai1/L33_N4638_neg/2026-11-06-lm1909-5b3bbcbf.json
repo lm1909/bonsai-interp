@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5b3bbcbf",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N4638-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:26+00:00",
+ "recipe": {
+  "toolchain_commit": "4c672e9ad",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N4638_neg/2026-11-06-lm1909-5b3bbcbf.tests.json"
+ },
+ "label": "'act' of the slogan 'think global, act local': the slot right before 'local'; other slogans stay quiet; a narrow sub-trigger",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N4638_neg/2026-11-06-lm1909-5b3bbcbf.tests.json",
+   "prereg_commit": "4c672e9ad",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.43,
+     "peak": " act"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.834,
+     "peak": "act"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.573,
+     "peak": " act"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.401,
+     "peak": " act"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.976,
+     "peak": "act"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.274,
+     "peak": "act"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.563,
+     "peak": " act"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.823,
+     "peak": " act"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " work"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.0,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " measure"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.048,
+     "peak": " buy"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.698,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c672e9ad",
+  "minutes": 3,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "'act' of 'think global, act local'",
+ "unit_kind": "token / prediction",
+ "confidence": "low",
+ "notes": "Card: 'يل' x2, ' 로' x2 (Korean 로컬, local), 'ة' x2, 'act' of think-global-act-local, ' non' of nonlocally, ' المعارضة'. Several top examples are right before a word for 'local', in three languages, but probes did not repeat the others: 'act' 0.95, Arabic before المحلية 0.26, Korean 로컬 0.15, nonlocally 0.04; other slogans 0.02. So only the English slogan is tested.",
+ "selection": "random draw"
+}

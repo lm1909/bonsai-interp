@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-758d296f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N11156+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:47+00:00",
+ "recipe": {
+  "toolchain_commit": "4c672e9ad",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N11156_pos/2026-11-06-lm1909-758d296f.tests.json"
+ },
+ "label": "'.data' of tf.data and tensorflow.python.data; other TensorFlow modules stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N11156_pos/2026-11-06-lm1909-758d296f.tests.json",
+   "prereg_commit": "4c672e9ad",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.851,
+     "peak": ".data"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.683,
+     "peak": ".data"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.751,
+     "peak": ".data"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.655,
+     "peak": ".data"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.916,
+     "peak": ".data"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.696,
+     "peak": ".data"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.579,
+     "peak": ".data"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.707,
+     "peak": ".data"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " model"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.203,
+     "peak": "Record"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": "from"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.061,
+     "peak": "compat"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " saved"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": ".image"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": "from"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.702,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c672e9ad",
+  "minutes": 3,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "'.data' of tf.data",
+ "unit_kind": "code / token",
+ "confidence": "high",
+ "notes": "Card: '.data' x7, 'alt' x6, 'yth' x3, ' Data' x2. Probe: tf.data 0.96, tensorflow.python.data 0.75; tf.keras 0.01, framework 0.03, plain 'data = load' 0.02. ' Data' of Master Data Services 0.58 and 'yth' of Forsyth 0.62 also fire and are not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   ".data"
+  ]
+ }
+}
