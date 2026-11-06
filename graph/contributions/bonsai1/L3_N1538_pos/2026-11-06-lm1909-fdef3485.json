@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-fdef3485",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N1538+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:23:15+00:00",
+ "recipe": {
+  "toolchain_commit": "7b1940fdf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N1538_pos/2026-11-06-lm1909-fdef3485.tests.json"
+ },
+ "label": "dense unit (on for about half of all text in the gate-closed regime), peaking on ' only' in 'not only'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N1538_pos/2026-11-06-lm1909-fdef3485.tests.json",
+   "prereg_commit": "7b1940fdf",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.766,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.65,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.727,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.698,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.647,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.761,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.711,
+     "peak": " only"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.804,
+     "peak": " only"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.517,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.273,
+     "peak": " grow"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.268,
+     "peak": " heat"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.305,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.257,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.267,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.239,
+     "peak": " mood"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.251,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.719,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7b1940fdf",
+  "minutes": 8,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; 'not only' peak",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "The card flags 49.4% of tokens above 0.1 of max and 100% gate-closed. Exploration near misses reached 0.23-0.28, so some are likely to reach 0.30.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " only"
+  ]
+ }
+}
