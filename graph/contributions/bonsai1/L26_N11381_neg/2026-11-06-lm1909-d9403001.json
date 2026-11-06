@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d9403001",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N11381-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:59:39+00:00",
+ "recipe": {
+  "toolchain_commit": "71c9afbf0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N11381_neg/2026-11-06-lm1909-d9403001.tests.json"
+ },
+ "label": "A word in advice about taking part in an exchange, setting up input ('by asking', 'ask', 'by contributing', 'write a'); the same verbs in plain reports, and advice about other things, stay lower.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N11381_neg/2026-11-06-lm1909-d9403001.tests.json",
+   "prereg_commit": "71c9afbf0",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.575,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.447,
+     "peak": " ask"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.687,
+     "peak": " contributing"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.419,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.427,
+     "peak": " asking"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.199,
+     "peak": " ask"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.57,
+     "peak": " contributing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.503,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.146,
+     "peak": " improve"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.212,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.088,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " asking"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.049,
+     "peak": "Join"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.165,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.475,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "71c9afbf0",
+  "minutes": 2,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "word in advice about giving input",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Second round. The first test (branch nightshift/claude-15/sweep7-20261105) failed because one pair shared the prefix through the peak ' leave'. It had 0.27-0.91 on fire sentences; 'left excellent tips' read 0.53, above 'gave excellent feedback', so I drop evaluative adjectives from the label. No new probing.",
+ "selection": "picked"
+}

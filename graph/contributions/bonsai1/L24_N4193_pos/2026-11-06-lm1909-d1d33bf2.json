@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d1d33bf2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N4193+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:59:29+00:00",
+ "recipe": {
+  "toolchain_commit": "71c9afbf0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N4193_pos/2026-11-06-lm1909-d1d33bf2.tests.json"
+ },
+ "label": "Boilerplate of an online dictionary page: ' you' and ' want' in 'What made you want to look up X?', after a page lead-in; other questions after the same lead-ins stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N4193_pos/2026-11-06-lm1909-d1d33bf2.tests.json",
+   "prereg_commit": "71c9afbf0",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.294,
+     "peak": " look"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.703,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.607,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.741,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.344,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.536,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.444,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.324,
+     "peak": " want"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.149,
+     "peak": " Origin"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.067,
+     "peak": " teacher"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.18,
+     "peak": " first"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.093,
+     "peak": " brother"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.14,
+     "peak": "Does"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.211,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": "Word"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.49,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "71c9afbf0",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "'What made you want to look up'",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Second round. The first test (branch nightshift/claude-15/sweep11-20261105) failed partly because a near miss shared 'Wikipedia Foundation. 2011.' through the year's '1' (0.606). This round drops the 'Look at other dictionaries' half, which read only 0.11-0.18 there, and every pair differs from the start of the question. Lead-ins contain no years. 'Did anyone want' read 0.39 in round one, so two near misses keep ' want' and ' you'. No new probing.",
+ "selection": "picked"
+}

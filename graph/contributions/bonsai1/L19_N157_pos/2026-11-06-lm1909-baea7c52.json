@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-baea7c52",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N157+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:59:20+00:00",
+ "recipe": {
+  "toolchain_commit": "71c9afbf0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N157_pos/2026-11-06-lm1909-baea7c52.tests.json"
+ },
+ "label": "' vanished', ' disappeared', and 'became a' + a kind of polity ('Hawaii became a state'), on the verb or just after it; the same subjects with a static verb in the past tense stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N157_pos/2026-11-06-lm1909-baea7c52.tests.json",
+   "prereg_commit": "71c9afbf0",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.204,
+     "peak": " state"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.268,
+     "peak": " century"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.2,
+     "peak": " state"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.086,
+     "peak": " across"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.184,
+     "peak": " became"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.22,
+     "peak": " disappeared"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.124,
+     "peak": " war"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.168,
+     "peak": " vanished"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.18,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.09,
+     "peak": "Old"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.04,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.088,
+     "peak": " war"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.098,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.192,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "71c9afbf0",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "' vanished', ' disappeared', ' became a state'",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Second round. The first test (branch nightshift/claude-15/sweep10-20261105) failed by a hair (0.1995 against 0.20), with a pair that shared the prefix through ' code'. The weak verbs (repealed 0.13, amended and changed 0.16) also held the median down, so this label is narrower. Pairs diverge at the verb, and all sentences are in the past tense. ' became' peaked after the verb in the first round, on ' state'. ' have' read 0.30 in round-one probes, so it isn't used. No new probing.",
+ "selection": "picked"
+}
