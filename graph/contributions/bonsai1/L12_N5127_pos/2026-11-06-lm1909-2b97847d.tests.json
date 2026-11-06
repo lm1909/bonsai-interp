@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-2b97847d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N5127+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:02:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N5127",
+   "pole": "+",
+   "label": "A clause weighing whether something is feasible, safe or harmful: right after 'large enough to run', 'safe for', 'too risky to', 'concern that', 'if delay would'; plain facts stay quiet.",
+   "fire": [
+    "Your team is big enough to manage a full production line.",
+    "Ask your doctor when it's safe for a pregnant woman to fly.",
+    "In places where it is too dangerous, slow, or costly to send trucks, they use mules.",
+    "There is serious concern that release of the names may endanger them.",
+    "The only exception is if waiting for a court order would seriously harm the child.",
+    "Your budget is large enough to buy a second van.",
+    "Nobody knows when it's safe for a small child to swim.",
+    "There is growing concern that exposure of the sources would put them at risk."
+   ],
+   "quiet": [
+    "Your team is based in Denver near the old station.",
+    "Ask your doctor about the new clinic on Main Street.",
+    "In the mountain villages they use mules and old trucks.",
+    "There are forty names on the list of winners this year.",
+    "The only exception is the Sunday market near the old church.",
+    "Your budget is due at the end of the second week.",
+    "Nobody knows the name of that small child at the pool.",
+    "There is a growing crowd near the gates of the stadium."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0-1 near miss.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "weighing feasibility or safety",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.65,
+ "notes": "Probes: 'large enough to run a' 0.77, 'safe for a' 0.76, 'delay ... would' 0.61, 'too risky ... to use' 0.52, 'concern that disclosure' 0.44; plain versions under 0.02. The peaks fall on the next word (a, use, would)."
+}

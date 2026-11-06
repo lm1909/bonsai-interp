@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-98674692",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9616+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:02:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N9616",
+   "pole": "+",
+   "label": "Python path setup: the pieces in `__file__` and `sys.path` at the top of a script; other uses of os and sys and the word 'file' in prose stay low.",
+   "fire": [
+    "BASE_DIR = os.path.dirname(os.path.abspath(__file__))",
+    "import sys\nimport json\nsys.path.append('/usr/local/lib')",
+    "config = os.path.join(os.path.dirname(__file__), 'config')",
+    "import os, sys\nsys.path.insert(0, 'vendor')",
+    "HERE = os.path.dirname(os.path.realpath(__file__))",
+    "import sys\nimport argparse\nsys.path.insert(1, '../src')",
+    "logs = os.path.join(os.path.dirname(__file__), 'logs')",
+    "import numpy\nimport sys\nsys.path.append('libs')"
+   ],
+   "quiet": [
+    "BASE_NAME = os.getenv('HOME_NAME')",
+    "import sys\nimport json\nprint(sys.argv)",
+    "config = json.loads(open_config('config'))",
+    "import os, sys\nprint(os.name)",
+    "HERE = os.getcwd()",
+    "import sys\nimport argparse\nsys.exit(1)",
+    "The log book is in the top drawer of the desk.",
+    "import numpy\nimport sys\nprint(sys.platform)"
+   ]
+  }
+ ],
+ "predictions": "8/8 fire, 0 near misses. The 'file' token is declared because the corpus peaks there, but it isn't specific to __file__.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "__file__, sys.path",
+ "unit_kind": "code / token",
+ "confidence": 0.9,
+ "notes": "Probes: __file__ 0.71, sys.path 0.61-0.64; 'home directory' 0.18, sys.version 0.05, os.getenv 0.12.",
+ "trigger": {
+  "tokens": [
+   "file",
+   ".path"
+  ]
+ }
+}

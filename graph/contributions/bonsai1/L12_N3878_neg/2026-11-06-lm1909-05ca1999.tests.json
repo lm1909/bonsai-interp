@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-05ca1999",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N3878-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:02:00+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N3878",
+   "pole": "-",
+   "label": "The period that closes the date in a bibliography or web citation ('Course Hero. 2 Dec. 2016.', 'The Lancet, July 19, 2011.'); dates in ordinary sentences stay quiet.",
+   "fire": [
+    "Brown, Lisa. \"Beowulf Summary.\" SparkNotes. 4 Mar. 2015. Web. 12 May 2016.",
+    "Hall, B. \"Online Privacy.\" The Guardian. 09 March 2012. http://www.example.org",
+    "Academic Search Premier. Web. 18 Oct. 2014.",
+    "\"Stroke Risk in Adults.\" The Lancet Oncology, May 3, 2013.",
+    "Klein, Mark. \"Water Rights.\" Time. 21 Jan. 2009. Web. 3 Feb. 2010.",
+    "\"Sleep and Memory.\" Nature Neuroscience, March 8, 2012.",
+    "Gale Literature Resource Center. Web. 7 Sept. 2013.",
+    "Ward, C. \"Solar Power.\" The Atlantic. 15 June 2014. http://www.example.net"
+   ],
+   "quiet": [
+    "Lisa moved to Boston on 4 Mar. 2015 and started a new job.",
+    "He joined the paper on 09 March 2012. It was his first job.",
+    "We finished the search on 18 Oct. 2014. Everyone went home.",
+    "My son had a small stroke on May 3, 2013.",
+    "Mark bought the water rights on 21 Jan. 2009.",
+    "The storm hit the coast on March 8, 2012.",
+    "The centre opened to the public on 7 Sept. 2013.",
+    "They installed solar panels on 15 June 2014 at home."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0 near misses.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "period after a citation's date",
+ "unit_kind": "format",
+ "confidence": 0.85,
+ "notes": "Probes: citations 0.79-0.94, 'Printing Office, 2010.' 0.33; date in prose under 0.01. Other card peaks (' <', ' from', ').') are outside this label."
+}
