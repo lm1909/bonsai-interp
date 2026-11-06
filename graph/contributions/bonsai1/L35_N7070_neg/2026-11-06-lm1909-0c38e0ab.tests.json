@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-0c38e0ab",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N7070-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:54:11+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N7070",
+   "pole": "-",
+   "label": "A Python string prefix or short name split off as ' r', '(f' or ' f' (r'...', f'...', (frm, (fakelib); plain strings and whole names stay quiet",
+   "fire": [
+    "x = re.compile(r'\\d+')",
+    "print(f'{name} is here')",
+    "pattern = r'^[a-z]+$'",
+    "mock = self.mox.CreateMock(fakelib.Domain)",
+    "btn = Button(frm, text='Save')",
+    "msg = f'Total: {n}'",
+    "path = os.path.join(r'C:\\temp', name)",
+    "log.info(f'started {job}')"
+   ],
+   "quiet": [
+    "x = re.compile('abc')",
+    "print('name is here')",
+    "pattern = '^[a-z]+$'",
+    "mock = self.mox.CreateMock(Domain)",
+    "btn = Button(root, text='Save')",
+    "msg = 'Total'",
+    "path = os.path.join('temp', name)",
+    "log.info('started')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off ' r', '(f' in Python code",
+ "unit_kind": "code / token",
+ "confidence": "medium",
+ "notes": "Card: '(f' x12, ' f' x7, ' u' x5, ' r' x3, '(r' x2. The + pole's logit effect promotes quote marks (' “', ' ‘'), so the - pole suppresses them. Probe: r' 0.74, (frm 0.59, print(f' 0.47, (fakelib 0.37; u' 0.03, plain strings 0.00-0.05.",
+ "trigger": {
+  "tokens": [
+   " r",
+   "(f",
+   " f"
+  ]
+ }
+}
