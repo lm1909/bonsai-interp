@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-1e0f0b5c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N8750-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:12:24+00:00",
+ "recipe": {
+  "toolchain_commit": "cf35e4eef",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N8750_neg/2026-11-06-lm1909-1e0f0b5c.tests.json"
+ },
+ "label": "Goods being packaged or sealed: in the package, bagged, vacuum wrapped, flash frozen, unwrap",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N8750_neg/2026-11-06-lm1909-1e0f0b5c.tests.json",
+   "prereg_commit": "cf35e4eef",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.764,
+     "peak": " package"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.249,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.883,
+     "peak": " frozen"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.502,
+     "peak": "ged"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.387,
+     "peak": " box"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.707,
+     "peak": " until"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.671,
+     "peak": " wrapped"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.459,
+     "peak": " packaged"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.289,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " sliced"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " soon"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " seated"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.482,
+     "peak": " folded"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.107,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.587,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cf35e4eef",
+  "minutes": 2,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "goods packaged or sealed",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}
