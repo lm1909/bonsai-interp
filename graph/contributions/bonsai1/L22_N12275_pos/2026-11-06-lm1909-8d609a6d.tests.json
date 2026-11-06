@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-8d609a6d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N12275+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:33:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N12275",
+   "pole": "+",
+   "label": "A bracket-plus-newline token (' [\\n', ' {\\n') opening a multi-line literal in indented Python; the same literal written on one line, and an unindented multi-line literal, stay quiet.",
+   "fire": [
+    "    def test_attach(self):\n        fake = {'name': 'y'}\n        disk = {'volume_mapping': [\n            {'device': 'vda'},\n        ]}\n",
+    "    def test_boot(self):\n        fake = {'id': 3}\n        conf = {'network_list': [\n            {'port': 80},\n        ]}\n",
+    "        LOG.info('saw %(host)s: %(port)s' % {\n            'host': host, 'port': port})\n",
+    "        LOG.warn('lost %(disk)s on %(node)s' % {\n            'disk': disk, 'node': node})\n",
+    "        self.assertEqual(names, [\n            'a', 'b',\n        ])\n",
+    "        self.assertEqual(rows, [\n            (1, 2),\n        ])\n",
+    "    def test_rule(self):\n        fake = {'id': 9}\n        body = {'allowed_hosts': [\n            {'ip': addr},\n        ]}\n",
+    "        LOG.error('bad %(user)s in %(zone)s' % {\n            'user': user, 'zone': zone})\n"
+   ],
+   "quiet": [
+    "    def test_attach(self):\n        fake = {'name': 'y'}\n        disk = {'volume_mapping': [{'device': 'vda'}]}\n",
+    "    def test_boot(self):\n        fake = {'id': 3}\n        conf = {'network_list': [{'port': 80}]}\n",
+    "info = {'volume_list': [\n    {'device': 'vda'},\n]}\n",
+    "        LOG.warn('lost %(disk)s' % {'disk': disk})\n",
+    "        self.assertEqual(names, ['a', 'b'])\n",
+    "        self.assertEqual(rows, [(1, 2)])\n",
+    "    def test_rule(self):\n        fake = {'id': 9}\n        body = {'allowed_hosts': [{'ip': addr}]}\n",
+    "        LOG.error('bad %(user)s' % {'user': user})\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "bracket + newline opening a multi-line literal",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Probes: 0.28-0.60 in indented multi-line code; one-liners 0.02-0.03; unindented multi-line 0.02-0.04, with the bracket token not the peak. But `compute_totals(\\n` read 0.03 and a nested `data={'rule': {\\n` 0.06, so not all such tokens fire, even though the card's most common is '(\\n'. Fire items are multi-line passages."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-7ff0f6bf",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N7156-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:33:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N7156",
+   "pole": "-",
+   "label": "Best guess: a variable name in multi-line Python, in the particular slots seen on the card ('(client' passed to find_one, ':type s' in a docstring, 'data[\"y'); other variables and lines stay lower.",
+   "fire": [
+    "def test_up(client, compose):\n    template = load('a.yml')\n    make_project(compose, input=template)\n    stack = find_one(client.list_stack, name=stack_name)\n    assert stack.state == 'up'\n",
+    "def test_down(client, compose):\n    template = load('b.yml')\n    make_project(compose, input=template)\n    host = find_one(client.list_host, name=host_name)\n",
+    "        xlo, xhi = self.chart.ax.get_xlim()\n        data[\"xhi\"] = xhi\n        ylo, yhi = self.chart.ax.get_ylim()\n        data[\"ylo\"] = ylo\n",
+    "        amin, amax = self.view.ax.get_clim()\n        data[\"amax\"] = amax\n        bmin, bmax = self.view.bx.get_clim()\n        data[\"bmin\"] = bmin\n",
+    "    def isMatch(self, s, pattern):\n        \"\"\"\n        :type s: str\n        :type pattern: str\n        \"\"\"\n",
+    "    def maxArea(self, h, width):\n        \"\"\"\n        :type h: List[int]\n        :type width: int\n        \"\"\"\n",
+    "def test_list(client):\n    env = make_env()\n    item = find_one(client.list_item, env=env)\n    assert item\n",
+    "    def rotate(self, n, nums):\n        \"\"\"\n        :type n: int\n        :rtype: None\n        \"\"\"\n"
+   ],
+   "quiet": [
+    "def test_sum(rows):\n    count = sum(rows)\n    print(count)\n    assert count\n",
+    "def test_max(rows):\n    top = max(rows)\n    print(top)\n",
+    "        lo = min(points)\n        hi = max(points)\n        span = hi - lo\n        print(span)\n",
+    "        first = points[0]\n        last = points[-1]\n        print(first)\n        print(last)\n",
+    "    def isMatch(self, input_string, regex_pattern):\n        \"\"\"\n        Check input_string against regex_pattern.\n        \"\"\"\n",
+    "    def maxArea(self):\n        \"\"\"\n        Not done yet.\n        See the wiki page.\n        \"\"\"\n",
+    "def test_list(rows):\n    size = len(rows)\n    assert size\n",
+    "    def rotate(self):\n        \"\"\"\n        Turn it around.\n        Nothing is returned.\n        \"\"\"\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "variable in some multi-line Python slots (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "A broad pole (1.1% of tokens). Probes read only in longer code: ' s' 0.52, ' data' 0.47, '(client' 0.26; one-liners 0.01-0.12, and `total` in a multi-line block 0.03, `(items` 0.02. So fire items are multi-line, and near misses keep ordinary variables. Peak tokens vary and I have no firm pattern. May fail."
+}

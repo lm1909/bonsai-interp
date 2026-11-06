@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-ebb22bd2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N9068+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:33:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N9068",
+   "pole": "+",
+   "label": "The second word of a doubled intensifier ('really, really', 'much, much', 'very, very'); the same word used once, and doubling that is not an intensifier, stay low.",
+   "fire": [
+    "Our dog was really, really sick last week.",
+    "Those new shoes look really really nice.",
+    "You owe me much, much more than that.",
+    "Her cousin got very, very lucky at the fair.",
+    "That old bridge is really, really narrow.",
+    "This job pays much, much less than mine.",
+    "These rooms get very very cold at night.",
+    "My aunt seemed really, really pleased with it."
+   ],
+   "quiet": [
+    "Our dog ran and ran last week.",
+    "Those shoes really look nice.",
+    "You owe me a lot more than that.",
+    "Her cousin got very lucky at the fair.",
+    "That old bridge is really narrow.",
+    "This job pays much less than mine.",
+    "These rooms get very cold at night.",
+    "My aunt really seemed pleased with it."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "second word of a doubled intensifier",
+ "unit_kind": "contextual",
+ "confidence": 0.9,
+ "notes": "Probes: 0.41-0.76 ('so, so' 0.28); a single ' really' 0.03-0.05, other single-intensifier sentences up to 0.20 on ' do'; other repeats ('did it and did it' 0.11, 'says, I say' 0.12) low, though the card also has ' do' x7 and ' say' x2. The model cannot see the next word, so a single use before an adjective can't read lower by what follows: the reading falls on the second copy. 12 of the top 32 peak on ' really', 5 on ' much'."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-0a63ba56",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8757-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:33:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N8757",
+   "pole": "-",
+   "label": "The subject or verb of a temporal clause opened by 'by the time', 'from the moment' or 'until the moment' ('By the time the war ended', 'from the moment a guest walks'); the same verbs after a fronted time phrase or in a plain main clause stay lower.",
+   "fire": [
+    "By the time the mayor arrived, the crowd had left.",
+    "From the moment a patient enters, the nurses help.",
+    "By the time the snow melted, the road was open.",
+    "Until the moment a seller agrees, the deal is open.",
+    "From the time the bell rings, you have an hour.",
+    "By the time the ship sailed, the cargo was gone.",
+    "Until the moment a tenant moves, the rent is due.",
+    "From the moment the curtain rises, the crowd is hushed."
+   ],
+   "quiet": [
+    "Late that day the mayor arrived, and the crowd had left.",
+    "A patient enters, and the nurses help.",
+    "Early that spring the snow melted, and the road was open.",
+    "A seller agrees, and then the deal is closed.",
+    "The bell rings at nine, and you have an hour.",
+    "The ship sailed at dawn with the cargo.",
+    "A tenant moved out, and the rent was due.",
+    "The curtain rises at eight, and the crowd is hushed."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "verb in a 'by the time' clause",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Probes: 0.15-0.28, against 0.01-0.06 for the same verbs in main clauses, so the median is at risk. Fronted time phrases also read 0.11-0.13 ('Early in his', 'In his early'), so two near misses use them. Fire sentences 1, 3 and 6 share 'By the time the' with probes, a known 0.16 on ' the'; the verb comes later. 'Not much was heard of him after that' read 0.14 and 'Little was known' 0.21, and the top examples also have ' was' in biography, which this test leaves out."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-a9ebb5ac",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N6245+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:33:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N6245",
+   "pole": "+",
+   "label": "A list of opening pieces after their set-phrase lead-in: ' Ak' after 'uses' (Akismet), ' Cro' after 'Betty' (Crocker), ' вос' after 'суббота и' (воскресенье); the same pieces after a weaker lead-in, and other words in these slots, stay lower.",
+   "fire": [
+    "Our blog uses Akismet to block junk.",
+    "This forum also uses Akismet for comments.",
+    "Grandma always baked with Betty Crocker frosting.",
+    "Stir in a box of Betty Crocker brownie mix.",
+    "Мы отдыхаем в субботу и воскресенье дома.",
+    "Они работают по субботам и воскресеньям тоже.",
+    "My old blog uses Akismet and little else.",
+    "She bought a Betty Crocker cookbook."
+   ],
+   "quiet": [
+    "Our blog filter is named Akismet for junk.",
+    "This forum also uses filters for comments.",
+    "Grandma always baked with Swiss frosting.",
+    "Stir in a box of plain brownie mix.",
+    "Мы отдыхаем в воскресенье дома.",
+    "Они работают по вечерам тоже.",
+    "My old blog uses little else.",
+    "She bought a French cookbook."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' Ak', ' Cro', ' вос' in set phrases",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Probes: 'uses Ak' 0.82, 'Betty Cro' 0.30-0.99 (0.30 after 'Hines or Betty'), 'и вос' 0.52-0.64, but 'called Ak' 0.22 and 'в вос' 0.13. I tried 'the first piece of a strongly predicted word' on new cases, and it failed: Zuckerberg, DiCaprio, Schwarzenegger, Gandhi all under 0.03. So this is only a list of set phrases. The output direction (' statistical', ' Stat') doesn't help."
+}
