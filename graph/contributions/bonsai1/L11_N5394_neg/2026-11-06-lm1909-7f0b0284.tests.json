@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-7f0b0284",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N5394-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:56:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N5394",
+   "pole": "-",
+   "label": "Verbs meaning 'to talk about' in French, Spanish and Russian (parler, hablaremos, говорить); other verbs in the same frames stay under it",
+   "fire": [
+    "Je vais en parler à ma mère demain.",
+    "C'est un livre dont je parlerai bientôt.",
+    "Nous devons parler de ce problème.",
+    "Tout le monde veut en parler ce soir.",
+    "De este tema hablaremos la próxima semana.",
+    "Quiero hablar de ese asunto contigo.",
+    "Об этом можно говорить часами.",
+    "Давайте будем говорить об этом завтра."
+   ],
+   "quiet": [
+    "Je vais en acheter pour ma mère demain.",
+    "C'est un livre que je lirai bientôt.",
+    "Nous devons sortir de ce bâtiment.",
+    "Tout le monde veut en manger ce soir.",
+    "De este pueblo saldremos la próxima semana.",
+    "Quiero comer en ese sitio contigo.",
+    "Об этом можно читать часами.",
+    "Давайте будем гулять в парке завтра."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'talk about' verbs (parler, hablar, говорить)",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card: ' parler' x3, 'aremos', 'ai' of parlerai, 'ить' of говорить, ' hablar', 'cue'. Probe: parler 0.94-1.03, hablaremos 0.84, говорить 0.80; manger 0.13, lirai 0.03; English 'talk about' 0.01. But 'volveremos' 0.55 and 'спорить' 0.40 fired on the verb ending, so the ending carries some of this. Near misses avoid those exact words.",
+ "trigger": {
+  "words": [
+   "parler",
+   "hablar"
+  ]
+ }
+}

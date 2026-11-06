@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-4ffd58ec",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N10682+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:56:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N10682",
+   "pole": "+",
+   "label": "' H' split off as the first letter of a place name (Hanoi, Huddersfield, Hertford); place names that are one token, including Helsinki and Havana, stay quiet",
+   "fire": [
+    "Our office is based in Harnham near the river.",
+    "Flights to Hanoi leave twice a week.",
+    "The mill in Huddersfield closed in 1980.",
+    "She went to school in Hertford with her sister.",
+    "The team plays in Hopton on Saturday.",
+    "We spent a week in Hanoi and loved it.",
+    "The train stops at Huddersfield before Leeds.",
+    "He was born in Hertford, north of London."
+   ],
+   "quiet": [
+    "Our office is based in Leeds near the river.",
+    "Flights to Helsinki leave twice a week.",
+    "The mill in Manchester closed in 1980.",
+    "She went to school in Havana with her sister.",
+    "The team plays in Bristol on Saturday.",
+    "We spent a week in Paris and loved it.",
+    "The train stops at York before Leeds.",
+    "He was born in Oxford, north of London."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off ' H' of a place name",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' H' x26 in Harnham, Hanoi, Hertford, Huddersfield, Hopton. Probe: Harnham 0.79, Hanoi 0.77, Huddersfield 0.70, Hertford 0.67; ' H' of Helen 0.36 after 'Her friend', Leeds, Paris, Manchester at most 0.01. Tokenizer checked; Helsinki and Havana are one token and are used as near misses.",
+ "trigger": {
+  "tokens": [
+   " H"
+  ]
+ }
+}
