@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-27f3f2b1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N2375+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:05:57+00:00",
+ "neighbours": [
+  {
+   "unit": "L22/N2375",
+   "pole": "+",
+   "label": "a panel or sub-part tag in parentheses in a figure caption ('(a)', '(top)', '(left)')",
+   "fire": [
+    "Fig. 3. Mean length of seedlings (a), root mass (b) and leaf count (c).",
+    "Figure 2 shows rainfall (top) and river flow (bottom) by month.",
+    "Fig. 5. Maps of the delta in 1950 (left) and 2010 (right).",
+    "Figure 1. Survival of adults (a) and juveniles (b) at each site.",
+    "Fig. 7. Egg counts (a), hatch rate (b) and body size (c) across sites.",
+    "Figure 6 compares summer (top) with winter (bottom) temperatures.",
+    "Fig. 4. Cell density at day 1 (left) and day 7 (right).",
+    "Figure 8. Total biomass (a) and nitrogen content (b) per plot."
+   ],
+   "quiet": [
+    "Fig. 3. Mean length of seedlings across the three study plots.",
+    "Figure 2 shows rainfall and river flow by month.",
+    "Fig. 5. Maps of the delta in 1950 and 2010.",
+    "Figure 1. Survival of adults and juveniles at each site.",
+    "Fig. 7. Egg counts, hatch rate and body size across sites.",
+    "Figure 6 compares summer with winter temperatures.",
+    "The meeting moved to Room 4 (the blue door) on the second floor.",
+    "Our neighbor (a retired pilot) lent us his ladder."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "figure-panel tag",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Second round. Round 1 ('short parenthetical tag') failed at AUROC 0.867: figure-panel tags fired ('(a)' 0.84, '(top)' 0.65), while non-figure tags such as '(narrow)' 0.00 did not. Near misses here are figure captions without panel tags, and two are non-figure parentheticals.",
+ "selection": "second round after the failed label in sweep seed 202611050407"
+}
