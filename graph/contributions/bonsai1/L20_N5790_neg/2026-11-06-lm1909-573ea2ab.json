@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-573ea2ab",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N5790-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:53:03+00:00",
+ "recipe": {
+  "toolchain_commit": "f632cefe3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N5790_neg/2026-11-06-lm1909-573ea2ab.tests.json"
+ },
+ "label": "words of a web page talking about itself and its content (' content', ' images', ' references', ' article' in 'this article', ' answer' in 'expert answer'), firing on them; the same words about trains, cloth and heels stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N5790_neg/2026-11-06-lm1909-573ea2ab.tests.json",
+   "prereg_commit": "f632cefe3",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.106,
+     "peak": " images"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.276,
+     "peak": " references"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.335,
+     "peak": " Wikipedia"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.383,
+     "peak": " content"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.39,
+     "peak": " answer"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.35,
+     "peak": " images"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.721,
+     "peak": " sources"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.227,
+     "peak": " content"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.054,
+     "peak": " dog"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " lunch"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.029,
+     "peak": " down"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.343,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f632cefe3",
+  "minutes": 14,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "web page talking about its content",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}
