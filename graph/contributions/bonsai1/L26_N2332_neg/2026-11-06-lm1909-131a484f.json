@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-131a484f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2332-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:18:09+00:00",
+ "recipe": {
+  "toolchain_commit": "e2ec5ed52",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2332_neg/2026-11-06-lm1909-131a484f.tests.json"
+ },
+ "label": "' have' in the future obligation 'will have to', firing on ' have'; simple statements with no obligation in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2332_neg/2026-11-06-lm1909-131a484f.tests.json",
+   "prereg_commit": "e2ec5ed52",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.633,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.297,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.229,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.295,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.079,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.109,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.16,
+     "peak": " would"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.727,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.019,
+     "peak": "Prices"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " show"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": " rain"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.262,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2ec5ed52",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "' have' in 'will have to'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " have"
+  ]
+ }
+}

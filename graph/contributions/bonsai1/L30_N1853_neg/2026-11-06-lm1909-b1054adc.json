@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-b1054adc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N1853-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:18:03+00:00",
+ "recipe": {
+  "toolchain_commit": "e2ec5ed52",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N1853_neg/2026-11-06-lm1909-b1054adc.tests.json"
+ },
+ "label": "idioms with 'take': ' it' in 'take it easy', ' take' in 'take your time', 'take on', ' Take' in 'Take care', firing on ' take' or ' it'; other verbs in the same frames and the literal 'were taken to' stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N1853_neg/2026-11-06-lm1909-b1054adc.tests.json",
+   "prereg_commit": "e2ec5ed52",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.443,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.649,
+     "peak": " take"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.191,
+     "peak": " take"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.342,
+     "peak": " Take"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.56,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.565,
+     "peak": " take"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.353,
+     "peak": " took"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.054,
+     "peak": " extra"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " porch"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " hall"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "'ve"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " eat"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.131,
+     "peak": " taken"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " wear"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.398,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2ec5ed52",
+  "minutes": 2,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "idioms: take it easy, take your time",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " take",
+   " Take",
+   " it",
+   " taken",
+   " took",
+   " taking"
+  ]
+ }
+}
