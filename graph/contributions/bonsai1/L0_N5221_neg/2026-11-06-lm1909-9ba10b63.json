@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-9ba10b63",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5221-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:47:11+00:00",
+ "recipe": {
+  "toolchain_commit": "7f6e0bbf5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5221_neg/2026-11-06-lm1909-9ba10b63.tests.json"
+ },
+ "label": "' you' and ' your' as the object of affection, thanks or good wishes (love you, appreciate your, thank you, enjoy your)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5221_neg/2026-11-06-lm1909-9ba10b63.tests.json",
+   "prereg_commit": "7f6e0bbf5",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.405,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.586,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.144,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.69,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.137,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.192,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.73,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.114,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.197,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.461,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.22,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.525,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.049,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.081,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.525,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.082,
+     "peak": " you"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.641,
+    "median_fire": 0.298,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "7f6e0bbf5",
+  "minutes": 13,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "you, your as object of affection or thanks",
+ "unit_kind": "lexical / semantic",
+ "confidence": "high",
+ "notes": "Second round. The first round ('after a verb') failed: 'blame you' and 'trusts you' stayed under 0.1. In the probes, love, appreciate, thank and enjoy reached 0.48-0.73, and show, bring, blame stayed at or under 0.05. ' saw you' reached 0.26. The declared tokens occur everywhere, so coverage is an upper bound.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   " you",
+   " your"
+  ]
+ }
+}

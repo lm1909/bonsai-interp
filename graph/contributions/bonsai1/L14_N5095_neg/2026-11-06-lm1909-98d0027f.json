@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-98d0027f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5095-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:47:14+00:00",
+ "recipe": {
+  "toolchain_commit": "7f6e0bbf5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N5095_neg/2026-11-06-lm1909-98d0027f.tests.json"
+ },
+ "label": "' a' after 'on', in a time or place phrase (on a cold day, on a busy street, on a Friday)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N5095_neg/2026-11-06-lm1909-98d0027f.tests.json",
+   "prereg_commit": "7f6e0bbf5",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.021,
+     "peak": " here"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.096,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.024,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.145,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.114,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.05,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.018,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " here"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.036,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " river"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.099,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.069,
+     "peak": " sea"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.68,
+    "median_fire": 0.04,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "7f6e0bbf5",
+  "minutes": 13,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "' a' after on (retest with varied sentences)",
+ "unit_kind": "function / contextual",
+ "confidence": "low",
+ "notes": "Second round, a deliberate retest. The first round held but used a few templates, and varied probes stayed at 0.13-0.28, so I expect this to fail.",
+ "selection": "picked"
+}

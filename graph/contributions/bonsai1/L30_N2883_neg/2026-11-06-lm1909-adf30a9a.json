@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-adf30a9a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N2883-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:47:06+00:00",
+ "recipe": {
+  "toolchain_commit": "7f6e0bbf5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N2883_neg/2026-11-06-lm1909-adf30a9a.tests.json"
+ },
+ "label": "' get' after an urging lead-in (let's get, it's time to get, we better get, before you get); the following word does not matter",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N2883_neg/2026-11-06-lm1909-adf30a9a.tests.json",
+   "prereg_commit": "7f6e0bbf5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.46,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.649,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.418,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.526,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.387,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.527,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.347,
+     "peak": " get"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.545,
+     "peak": " get"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " moving"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " she"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " they"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.044,
+     "peak": " get"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.097,
+     "peak": " get"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.074,
+     "peak": " get"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "Those"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.493,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "7f6e0bbf5",
+  "minutes": 13,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "' get' after an urging lead-in",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "Second round. The first round failed because near misses shared the prefix: in the probes, 'Let's get going' and 'Let's get pizza' scored the identical 0.445, because the pole peaks on ' get' before the next word. This round claims the lead-in, not the phrase.",
+ "selection": "picked"
+}
