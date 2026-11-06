@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-420675c7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N7132-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:00:05+00:00",
+ "recipe": {
+  "toolchain_commit": "52e36d645",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N7132_neg/2026-11-06-lm1909-420675c7.tests.json"
+ },
+ "label": "' if' in a clipped conditional with no clause ('if any', 'if known', 'if available')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N7132_neg/2026-11-06-lm1909-420675c7.tests.json",
+   "prereg_commit": "52e36d645",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.751,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.067,
+     "peak": " known"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.476,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.571,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.353,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.109,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.424,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.58,
+     "peak": " if"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.049,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " author"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.045,
+     "peak": "Please"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.571,
+     "peak": " if"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": "Add"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.109,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": "Enc"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.45,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "52e36d645",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "clipped ' if'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Second round, narrowed. The first test also claimed 'when necessary'; 'when' forms scored 0.02-0.06, while clipped ' if' scored 0.33-0.63, and full if-clauses reached 0.25. No new probes on this pole.",
+ "selection": "second round after a failed sweep test",
+ "trigger": {
+  "tokens": [
+   " if"
+  ]
+ }
+}

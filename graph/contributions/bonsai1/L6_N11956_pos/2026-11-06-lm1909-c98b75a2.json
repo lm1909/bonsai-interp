@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-c98b75a2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N11956+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:00:14+00:00",
+ "recipe": {
+  "toolchain_commit": "52e36d645",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N11956_pos/2026-11-06-lm1909-c98b75a2.tests.json"
+ },
+ "label": "Spanish third-person verb with a dropped subject ('dicen que tiene', 'creo que siente', 'a veces tiene')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N11956_pos/2026-11-06-lm1909-c98b75a2.tests.json",
+   "prereg_commit": "52e36d645",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.5,
+     "peak": " tiene"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.556,
+     "peak": "iente"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.696,
+     "peak": " puede"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.611,
+     "peak": " tiene"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.372,
+     "peak": " tiene"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.487,
+     "peak": " tiene"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.524,
+     "peak": "iente"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.753,
+     "peak": " tiene"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.014,
+     "peak": " tiene"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": " mucho"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.055,
+     "peak": " gan"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " el"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " hijos"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " tiene"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.088,
+     "peak": "iente"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.046,
+     "peak": " tiene"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.54,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "52e36d645",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "Spanish verb, dropped subject",
+ "unit_kind": "contextual / language",
+ "confidence": "medium",
+ "notes": "Second round, narrowed after the first test. There, ' tiene' fired without a subject ('A veces tiene' 0.61) but not with one ('Mi vecina tiene' 0.03). Probe: 'Dicen que tiene' 0.50, 'Creo que siente' 0.56, 'Dicen que puede' 0.53; 'Mi hermano tiene' 0.02. Note that past-tense 'ó' also fires this pole (0.26-0.44), and I avoid it in this test on both sides.",
+ "selection": "second round after a failed sweep test"
+}

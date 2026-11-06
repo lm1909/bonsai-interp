@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-da9e6b6d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N7907+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:00:11+00:00",
+ "recipe": {
+  "toolchain_commit": "52e36d645",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N7907_pos/2026-11-06-lm1909-da9e6b6d.tests.json"
+ },
+ "label": "the token '-E' opening the second part of a hyphenated name ('Afro-Eurasian', 'Nord-Europe')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N7907_pos/2026-11-06-lm1909-da9e6b6d.tests.json",
+   "prereg_commit": "52e36d645",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.727,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.705,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.66,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.659,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.642,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.698,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.661,
+     "peak": "-E"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.359,
+     "peak": "-E"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": " Afro"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.031,
+     "peak": "-B"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "frican"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.09,
+     "peak": "-O"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": " Gre"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": "as"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.058,
+     "peak": "ov"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " Anglo"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.661,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "52e36d645",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "'-E' piece",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Second round, narrowed from a list. In the first test, ' -E' in 'Afro-Eurasian' reached 0.69 while 'Indo-European' and 'Euro-Asian' scored 0.02, so the split matters. Probe: 'Afro-Eurasian' 0.73, 'Nord-Europe' 0.70; 'Trans-Atlantic' 0.00. Card: '-E' x8. German 'le' and French \"'E\" are left out here. The tokenization of each new word was not checked before commit.",
+ "selection": "second round after a failed sweep test",
+ "trigger": {
+  "tokens": [
+   "-E"
+  ]
+ }
+}

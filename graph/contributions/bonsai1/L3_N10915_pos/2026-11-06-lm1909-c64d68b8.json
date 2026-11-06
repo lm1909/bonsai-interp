@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-c64d68b8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N10915+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:00:13+00:00",
+ "recipe": {
+  "toolchain_commit": "52e36d645",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N10915_pos/2026-11-06-lm1909-c64d68b8.tests.json"
+ },
+ "label": "the word 'fierce' / 'fiercely' / 'fiercest' when it is not the first token of a sentence (gate-closed)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N10915_pos/2026-11-06-lm1909-c64d68b8.tests.json",
+   "prereg_commit": "52e36d645",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.94,
+     "peak": " fierce"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.925,
+     "peak": "cest"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.849,
+     "peak": " fiercely"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.933,
+     "peak": " fierce"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.953,
+     "peak": " fierce"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.744,
+     "peak": " fiercely"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.929,
+     "peak": "cest"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.943,
+     "peak": " fierce"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.007,
+     "peak": " road"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.024,
+     "peak": "dest"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.011,
+     "peak": " young"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.023,
+     "peak": " argument"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.018,
+     "peak": " quiet"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.009,
+     "peak": " politely"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.011,
+     "peak": " had"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.022,
+     "peak": " steady"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.931,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "52e36d645",
+  "minutes": 1,
+  "batch_size": 5,
+  "dtype": "float16"
+ },
+ "short": "'fierce' (not sentence-initial)",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Second round. The first test (2026-11-05 sweep, seed 202611050508) failed at AUROC 0.891 only because one fire item opened a sentence with 'Fierce' and scored -0.03; the other seven scored 0.71-0.92. No test sentence here puts the trigger first.",
+ "selection": "second round after a failed sweep test",
+ "trigger": {
+  "words": [
+   "fierce",
+   "fiercely",
+   "fiercest"
+  ]
+ }
+}
