@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-b0d29b9f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N6295-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:12:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N6295",
+   "pole": "-",
+   "label": "The ' in' of a Python for loop or comprehension, and ' enumerate' right after it; ' in' in an if test and in prose stay low.",
+   "fire": [
+    "for itemList in itemLists:\n    print(itemList)",
+    "y = [g for g in groups if g]",
+    "for widget in widgets:\n    state = None",
+    "for j, v in enumerate(vs):\n    print(j)",
+    "names = [n for n in people if n]",
+    "for field in fields:\n    value = None",
+    "for k, w in enumerate(ws):\n    print(k)",
+    "for token in tokens:\n    print(token)"
+   ],
+   "quiet": [
+    "if item in itemLists:\n    print(item)",
+    "y = [g] if g else []",
+    "while widget:\n    state = None",
+    "print(j)\nprint(vs)",
+    "names = people.copy()",
+    "if field in fields:\n    value = None",
+    "print(k, ws)",
+    "The tokens are in the box on the shelf."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire, 0-1 near miss. Short loops varied in probes (0.19-0.79).",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "for ... in (Python)",
+ "unit_kind": "code / contextual",
+ "confidence": 0.85,
+ "notes": "Probes: comprehension ' in' 0.79, 'for x in xs' 0.40-0.56, ' enumerate' 0.63, one short item 0.19; 'if x in y' 0.14, prose under 0.01. The declared ' in' counts every ' in', so coverage isn't specific.",
+ "trigger": {
+  "tokens": [
+   " in",
+   " enumerate"
+  ]
+ }
+}

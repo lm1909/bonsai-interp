@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-756c98c3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5031-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:12:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N5031",
+   "pole": "-",
+   "label": "Arabic discourse openers after a sentence: 'أما' (as for) and 'ثم إن'; the same content with no opener stays low.",
+   "fire": [
+    "قرأنا الكتاب كله. أما الفصل الأخير فصعب جدا.",
+    "وصل الوفد أمس.\nأما الرئيس فسيصل غدا.",
+    "ذهب الطلاب إلى المدرسة. ثم إن بعضهم عاد إلى البيت.",
+    "هذا الحديث صحيح. أما رواية الآخرين فضعيفة.",
+    "تحدث الوزير طويلا.\nثم إن النواب طرحوا أسئلة كثيرة.",
+    "نجح الفريق الأول. أما الفريق الثاني فخسر المباراة.",
+    "فهم الناس الأمر كما شاهدنا.\nأما تعلم اللغة فيحتاج وقتا.",
+    "انتهى الاجتماع مبكرا. ثم إن الجميع غادروا القاعة."
+   ],
+   "quiet": [
+    "قرأنا الكتاب كله. الفصل الأخير صعب جدا.",
+    "وصل الوفد أمس.\nسيصل الرئيس غدا.",
+    "ذهب الطلاب إلى المدرسة. عاد بعضهم إلى البيت.",
+    "هذا الحديث صحيح. رواية الآخرين ضعيفة.",
+    "تحدث الوزير طويلا.\nطرح النواب أسئلة كثيرة.",
+    "نجح الفريق الأول. خسر الفريق الثاني المباراة.",
+    "فهم الناس الأمر كما شاهدنا.\nتعلم اللغة يحتاج وقتا.",
+    "انتهى الاجتماع مبكرا. غادر الجميع القاعة."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0 near misses. A sentence-initial 'أما' always scored 0.32 in probes, so items place it after a first sentence.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic أما, ثم إن openers",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Probes: ' إن' 0.51, 'أما' 0.32 at sentence start; no opener 0.02-0.05. Russian 'думала' 0.14. The 'ما' token is declared because the corpus peaks there, but it's a broad token.",
+ "trigger": {
+  "tokens": [
+   "أما",
+   "اما",
+   "ما",
+   " إن"
+  ]
+ }
+}

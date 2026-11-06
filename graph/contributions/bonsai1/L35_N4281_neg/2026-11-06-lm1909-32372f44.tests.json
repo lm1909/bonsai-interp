@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-32372f44",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4281-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:12:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N4281",
+   "pole": "-",
+   "label": "The first piece of a surname or given name split by the tokenizer (' D'|orian, ' Ar'|agon); names that are whole tokens stay low.",
+   "fire": [
+    "The film of Dorian Gray opened last week.",
+    "Poets such as Paul Eluard and Louis Aragon wrote about the war.",
+    "Critics compared The Portrait of Dorian Gray with his plays.",
+    "She read a biography of Louis Aragon on the train.",
+    "The painter was a friend of Aragon and Breton in Paris.",
+    "Oscar Wilde's Dorian Gray stays young for decades.",
+    "Essays on Aragon and the surrealists fill this volume.",
+    "Actors playing Dorian Gray have to look very young."
+   ],
+   "quiet": [
+    "The film of John Smith opened last week.",
+    "Poets such as Paul Green and John Brown wrote about the war.",
+    "Critics compared The Portrait of Mary Jones with his plays.",
+    "She read a biography of James Scott on the train.",
+    "The painter was a friend of Peter and Robert in Paris.",
+    "Oscar Wilde's Mary Green stays young for decades.",
+    "Essays on Lincoln and the generals fill this volume.",
+    "Actors playing Henry Ford have to look very old."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0 near misses. Coverage partial: Korean and Arabic first pieces also fire (' �' 0.63).",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first piece of a split name",
+ "unit_kind": "token piece",
+ "confidence": 0.7,
+ "notes": "Probes: ' D'orian 0.82, ' Ar'agon 0.75; whole-token Mary, Smith under 0.01. Arabic ' الذ' 0.07. The output promotes 'air', 'ian', 'ahl', 'an', 'oku', which fits name endings. Tokenization of fire names checked."
+}
