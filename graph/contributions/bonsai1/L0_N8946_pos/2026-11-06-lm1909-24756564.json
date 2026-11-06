@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-24756564",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8946+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:20:42+00:00",
+ "recipe": {
+  "toolchain_commit": "51fa309ea",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N8946_pos/2026-11-06-lm1909-24756564.tests.json"
+ },
+ "label": "The exact token ' datetime', on a broad low-amplitude layer-0 pole; other Python modules and types stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N8946_pos/2026-11-06-lm1909-24756564.tests.json",
+   "prereg_commit": "51fa309ea",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.581,
+     "peak": " datetime"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.494,
+     "peak": " datetime"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.526,
+     "peak": " datetime"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.579,
+     "peak": " datetime"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.672,
+     "peak": " datetime"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.473,
+     "peak": " datetime"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.641,
+     "peak": " datetime"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.672,
+     "peak": " datetime"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " import"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " into"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.067,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.113,
+     "peak": "now"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.367,
+     "peak": " handles"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.07,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.094,
+     "peak": " clock"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.162,
+     "peak": " here"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.58,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "51fa309ea",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "token ' datetime'",
+ "unit_kind": "token / lexical",
+ "confidence": "high",
+ "notes": "Second round. My first test (tokens ' datetime', ' permission', sweep with seed 202611051804) failed at AUROC 0.859: ' datetime' reached 0.48-0.77 but ' permission' only 0.03-0.33. This narrows the label to the half that fired, with new sentences. No new probes.",
+ "selection": "second round after a failed sweep test",
+ "trigger": {
+  "tokens": [
+   " datetime"
+  ]
+ }
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-b4ec53dc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6564+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:20:49+00:00",
+ "recipe": {
+  "toolchain_commit": "51fa309ea",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N6564_pos/2026-11-06-lm1909-b4ec53dc.tests.json"
+ },
+ "label": "Arabic ' كبير' in 'عدد كبير' (a large number of); 'عدد' alone and other quantity words stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N6564_pos/2026-11-06-lm1909-b4ec53dc.tests.json",
+   "prereg_commit": "51fa309ea",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.08,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.757,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.275,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.508,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.661,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.699,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.365,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.807,
+     "peak": " كبير"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " عدد"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": " بعض"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "ور"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.068,
+     "peak": " عدد"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " و"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "ت"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " الأ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "قة"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.585,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "51fa309ea",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "' كبير' of 'عدد كبير'",
+ "unit_kind": "lexical / contextual",
+ "confidence": "medium",
+ "notes": "Second round. My first test (Arabic كبير, كثيرا, فقط, sweep with seed 202611051811) failed at AUROC 0.820: 'عدد كبير' fired on its items, while كثيرا and sentence-final فقط were 0.00-0.06. This narrows the label to the part that fired, with new sentences. No new probes. Earlier probe: ' عدد' alone 0.13.",
+ "selection": "second round after a failed sweep test",
+ "trigger": {
+  "tokens": [
+   " كبير"
+  ]
+ }
+}
