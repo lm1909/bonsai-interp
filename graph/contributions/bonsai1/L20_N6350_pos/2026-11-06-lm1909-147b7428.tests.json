@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-147b7428",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N6350+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:18:53+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N6350",
+   "pole": "+",
+   "label": "the first hyphen in an ISBN ('ISBN 0-88192-453-9')",
+   "fire": [
+    "The Flora of Ohio. Forest Press. 2001 ISBN 0-87654-321-0",
+    "Smith, J. Wild Herbs. Green Books. 1995. ISBN 1-55555-210-7",
+    "Plants of Texas. Lone Star Press. 2004. ISBN 0-12345-678-9",
+    "Lee, A. River Fish. Delta Press. 1989 ISBN 0-92345-111-2",
+    "A Guide to Moss. Timber Press. 2010. ISBN 0-88192-999-4",
+    "Brown, T. Old Roads. County Press. 1978 ISBN 0-44444-222-3",
+    "The Birds of Iowa. Prairie Books. 1999. ISBN 1-88888-345-6",
+    "Marsh, K. Ferns. Hill Press. 2007. ISBN 0-77777-654-1"
+   ],
+   "quiet": [
+    "The Flora of Ohio is a well-known book from Forest Press in 2001.",
+    "Smith wrote Wild Herbs for Green Books in 1995 and sold 5000 copies.",
+    "Plants of Texas is a long-awaited work from Lone Star Press.",
+    "Lee wrote River Fish for Delta Press in 1989, with 212 pages.",
+    "A Guide to Moss is a low-cost book from Timber Press.",
+    "Brown wrote Old Roads for County Press in 1978, with 300 maps.",
+    "The Birds of Iowa is a well-loved book from Prairie Books.",
+    "Marsh wrote Ferns for Hill Press in 2007, with 77 plates."
+   ]
+  }
+ ],
+ "predictions": "7/8 fire; hyphens in prose and plain numbers stay quiet",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "ISBN hyphen",
+ "unit_kind": "format / token",
+ "confidence": "high",
+ "notes": "Card: '-' x17, '_of' x2, '_month', '_Enter', '_ex'. Top '-' examples are ISBNs; '_' pieces in identifiers are not claimed (probes 0.02-0.05). Probe: 'ISBN 0-88192' 0.54; 'well-known press' 0.01.",
+ "trigger": {
+  "tokens": [
+   "-"
+  ]
+ }
+}
