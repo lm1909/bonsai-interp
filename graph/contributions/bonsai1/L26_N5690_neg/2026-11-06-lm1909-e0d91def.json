@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e0d91def",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N5690-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:06+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N5690_neg/2026-11-06-lm1909-e0d91def.tests.json"
+ },
+ "label": "a token in a statement that a picture or image is famous or iconic (one of the most iconic images, a famous photograph, has become one of the symbols)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N5690_neg/2026-11-06-lm1909-e0d91def.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.688,
+     "peak": " defining"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.204,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.593,
+     "peak": " images"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.144,
+     "peak": " famous"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.511,
+     "peak": " haunting"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.352,
+     "peak": " iconic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.152,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.279,
+     "peak": " image"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.076,
+     "peak": " one"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " took"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.075,
+     "peak": " made"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.508,
+     "peak": " haunting"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": " single"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.316,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a famous or iconic picture",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' image' x6, ' a' x2, ' single' x2, ' famous' x2, ' iconic'. Probes: 'distraught image has become one of' 0.717, 'famous painting' 0.326, 'most iconic images' 0.325, 'captured a famous photograph' 0.289; 'distraught mother ... one of' 0.124, 'most boring classes' 0.013. Near misses keep the frames with no famous picture.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ec78b750",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10351+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:18+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N10351_pos/2026-11-06-lm1909-ec78b750.tests.json"
+ },
+ "label": "a token in text about weight training and strength exercise (dumbbells, bench presses, squats, free weights)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N10351_pos/2026-11-06-lm1909-ec78b750.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.665,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.713,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.499,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.805,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.533,
+     "peak": " squ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.374,
+     "peak": " using"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.271,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.353,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.088,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.112,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": " coach"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.144,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.096,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.065,
+     "peak": " using"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.115,
+     "peak": "ング"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " his"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.516,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "weight training topic",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' weight' x6, ' the' x2, ' lifting' x2, ',', ' work', ' of', with weightlifter, dumbbell and squat text, plus Japanese. Probes: 'free weights at the' 0.805, ベル in ダンベル 0.661, ' dumb' 0.619, 'bench ... and squat' 0.577; a swimmer 0.114, 'eat five hundred grams' 0.068. Near misses keep sport and gym frames without weights.",
+ "selection": "random draw"
+}

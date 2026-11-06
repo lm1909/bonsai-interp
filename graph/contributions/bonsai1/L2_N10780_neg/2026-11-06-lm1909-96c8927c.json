@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-96c8927c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10780-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:36+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N10780_neg/2026-11-06-lm1909-96c8927c.tests.json"
+ },
+ "label": "' out' in a verb meaning to set forth or explain (lays out, sets out, spells out), on a broad pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N10780_neg/2026-11-06-lm1909-96c8927c.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.824,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.12,
+     "peak": " clear"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.125,
+     "peak": " policy"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.708,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.049,
+     "peak": "Law"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.61,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.044,
+     "peak": " set"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.24,
+     "peak": " vision"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.059,
+     "peak": " bad"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.102,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": "Law"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.111,
+     "peak": " staff"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.05,
+     "peak": " stepped"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.048,
+     "peak": " speech"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.182,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' out' in 'lays out'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card flags broad (6.2%) and gate-closed (85%), max 0.59: ' out' x6, 'er' x3, 'layout', 'ers', ' «', 'uentes'. Probes: 'lays out' 0.863, 'er' in rancher 0.621; 'He went out' under 0, 'iez' 0.317. So ' out' depends on the verb. 'er' and 'layout' are outside this label.",
+ "selection": "random draw"
+}

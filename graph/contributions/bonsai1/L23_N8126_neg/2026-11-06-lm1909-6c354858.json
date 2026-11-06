@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6c354858",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8126-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:32+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N8126_neg/2026-11-06-lm1909-6c354858.tests.json"
+ },
+ "label": "a verb or limiter saying a remedy treats only part of a problem (only kill the ants you see, only treat the symptoms)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N8126_neg/2026-11-06-lm1909-6c354858.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.483,
+     "peak": " kill"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.523,
+     "peak": " treat"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.333,
+     "peak": " burn"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.324,
+     "peak": " last"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.363,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.372,
+     "peak": " cover"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.129,
+     "peak": " mice"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.215,
+     "peak": " mask"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": "Most"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.062,
+     "peak": " dollars"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " weed"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": "Many"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.048,
+     "peak": "Short"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": "Most"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.037,
+     "peak": "ain"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.348,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "remedy with limited reach",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' the' x3, ' for' x3, ' one' x3, ' with' x2, ' kill', ' maximizing', ' solve', ' if'. Probes: 'only kill the ants' 0.683, 'at a moment in time' 0.299, 'great for him' 0.305, 'even if' 0.082; 'only close on Sundays' 0.107. A guess from the top probe, not from a clear card pattern.",
+ "selection": "random draw"
+}

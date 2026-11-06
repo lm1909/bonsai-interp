@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-ddd9a010",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N6073-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:45+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N6073_neg/2026-11-06-lm1909-ddd9a010.tests.json"
+ },
+ "label": "a noun used as a modifier in a finance or physical-science term after 'in' or 'increased' (changes in bank reserves, increased muscle mass)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N6073_neg/2026-11-06-lm1909-ddd9a010.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.538,
+     "peak": " bank"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.456,
+     "peak": " muscle"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.591,
+     "peak": " bank"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.421,
+     "peak": " muscle"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.187,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.395,
+     "peak": " muscle"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.192,
+     "peak": " bank"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.414,
+     "peak": " muscle"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.194,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " exercise"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.19,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " produces"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.184,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.099,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " drug"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.417,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "modifier noun in a technical term",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' muscle' x3, ' optical' x2, '-ray', ' enhanced', ' varying', ' bank'. Probes: ' bank' 0.446, ' varying' 0.165, ' internal' 0.132, 'X-ray' sentence 0.038. A guess; the top examples are too varied for a clear pattern.",
+ "selection": "random draw"
+}

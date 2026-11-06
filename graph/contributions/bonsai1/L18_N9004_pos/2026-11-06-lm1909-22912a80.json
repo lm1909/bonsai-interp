@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-22912a80",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N9004+",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:22+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N9004_pos/2026-11-06-lm1909-22912a80.tests.json"
+ },
+ "label": "a noun or word marking someone's first time doing something or being new to it (my first plane ride, my first project, new to this)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N9004_pos/2026-11-06-lm1909-22912a80.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.466,
+     "peak": " ride"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.259,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.191,
+     "peak": " trip"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.17,
+     "peak": " baked"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.414,
+     "peak": " big"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.162,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.482,
+     "peak": " trip"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.51,
+     "peak": " seen"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.047,
+     "peak": " My"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.047,
+     "peak": " my"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " trip"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.064,
+     "peak": " bread"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.237,
+     "peak": " jet"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": "!"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.065,
+     "peak": " had"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.337,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first-time experience",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' first' x4, ' this' x2, ' before' x2, ' sleeping', ' ride', ' used', ' project', ' to' in 'new to'. Probes: 'first plane ride' 0.542, 'my first project' 0.390, 'not used a shredder before' 0.207, 'first time sleeping' 0.127; 'last week' 0.016, 'old bike' 0.047. Near misses keep the frames without the first-time claim.",
+ "selection": "random draw"
+}

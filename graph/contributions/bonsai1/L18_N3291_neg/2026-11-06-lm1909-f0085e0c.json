@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f0085e0c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N3291-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:35+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N3291_neg/2026-11-06-lm1909-f0085e0c.tests.json"
+ },
+ "label": "a word in the methods statement of a medical study (ethical approval was not required, medians were used for)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N3291_neg/2026-11-06-lm1909-f0085e0c.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.607,
+     "peak": " required"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.299,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.483,
+     "peak": " required"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.295,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.598,
+     "peak": " median"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.232,
+     "peak": " required"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.041,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.318,
+     "peak": "-square"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " adults"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.135,
+     "peak": " short"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.133,
+     "peak": " needed"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.145,
+     "peak": " mailed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.029,
+     "peak": "ies"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.308,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "medical study methods statement",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ',' x5, 'ake' x3 in Adequate Intake, ' required', ' garg', ' median', ' cases', mostly in research methods. Probes: 'approval was not required' 0.608, 'median and range for' 0.505, Intake 0.292; 'gargle specimens divided' 0.022; 'Permission was not given' 0.034. Near misses keep the sentence shapes in school and home settings.",
+ "selection": "random draw"
+}

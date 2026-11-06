@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8eb1a52e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2015-",
+ "contributor": "lm1909",
+ "created": "2026-11-05T23:52:59+00:00",
+ "recipe": {
+  "toolchain_commit": "5c1c2d0f1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2015_neg/2026-11-06-lm1909-8eb1a52e.tests.json"
+ },
+ "label": "a token in a description of something light falling or drifting through the air (snowflakes falling, seeds carried on the air, a sparrow that falls)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2015_neg/2026-11-06-lm1909-8eb1a52e.tests.json",
+   "prereg_commit": "5c1c2d0f1",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.678,
+     "peak": "akes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.671,
+     "peak": " float"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.342,
+     "peak": " several"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.705,
+     "peak": " fell"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.654,
+     "peak": " falls"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.519,
+     "peak": " stay"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.667,
+     "peak": " falling"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.203,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " blankets"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.082,
+     "peak": "andel"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " days"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "umn"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " without"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.079,
+     "peak": " by"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.661,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5c1c2d0f1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "falling or drifting through the air",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' can' x3, ' falling' x3, ' fell' x3, ' falls' x2, ' fall' x2, ' only', ' gently', 'akes', mostly about snow, ash, seeds and sparrows. Probes: 'sparrow that falls' 0.799, 'remain airborne for' 0.648, 'snowflakes' 0.453, 'hairs can carry the seed on the air' 0.217; 'Stock prices were falling' 0.015, 'children walking' 0.005. Near misses use falling in a non-physical sense or keep the objects on the ground.",
+ "selection": "random draw"
+}
