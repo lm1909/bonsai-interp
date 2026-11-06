@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-accefeca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N9447-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:24:33+00:00",
+ "recipe": {
+  "toolchain_commit": "2c6ea19e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N9447_neg/2026-11-06-lm1909-accefeca.tests.json"
+ },
+ "label": "the word ' sale' as its own token, firing on it; ' rent', ' party' and other nouns in the same frames stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N9447_neg/2026-11-06-lm1909-accefeca.tests.json",
+   "prereg_commit": "2c6ea19e8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.816,
+     "peak": " sale"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.692,
+     "peak": " sale"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.741,
+     "peak": " sale"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.753,
+     "peak": " sale"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.805,
+     "peak": " sale"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.841,
+     "peak": " sale"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.813,
+     "peak": " sale"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.892,
+     "peak": " sale"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": " rent"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " Saturday"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " mail"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " shop"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " view"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " cars"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " market"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " survey"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.809,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2c6ea19e8",
+  "minutes": 1,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "word ' sale'",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " sale",
+   " Sale"
+  ]
+ }
+}

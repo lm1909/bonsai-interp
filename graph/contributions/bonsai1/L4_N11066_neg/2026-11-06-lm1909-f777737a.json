@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-f777737a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N11066-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:24:32+00:00",
+ "recipe": {
+  "toolchain_commit": "2c6ea19e8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N11066_neg/2026-11-06-lm1909-f777737a.tests.json"
+ },
+ "label": "' supply' in economics, and Chinese 供应, firing on those tokens; hours, land sales and other nouns in the same frames stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N11066_neg/2026-11-06-lm1909-f777737a.tests.json",
+   "prereg_commit": "2c6ea19e8",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.293,
+     "peak": " supply"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.484,
+     "peak": " supply"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.249,
+     "peak": "供应"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.087,
+     "peak": " supply"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.051,
+     "peak": "供应"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.066,
+     "peak": " supply"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.821,
+     "peak": "供应"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.575,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " rise"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " visitors"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.005,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " flats"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.006,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": " sharply"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.003,
+     "peak": "苹果"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.006,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.271,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2c6ea19e8",
+  "minutes": 1,
+  "batch_size": 6,
+  "dtype": "float16"
+ },
+ "short": "' supply' / 供应",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " supply",
+   "供应"
+  ]
+ }
+}
