@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-890bf47d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N7450-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:16:50+00:00",
+ "recipe": {
+  "toolchain_commit": "49e5699b5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N7450_neg/2026-11-06-lm1909-890bf47d.tests.json"
+ },
+ "label": "the word for a cultural institution of religion or the arts (religious, Religious, Art, Arts, church)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N7450_neg/2026-11-06-lm1909-890bf47d.tests.json",
+   "prereg_commit": "49e5699b5",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.196,
+     "peak": " religious"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.34,
+     "peak": " Arts"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.337,
+     "peak": " Art"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.089,
+     "peak": " religious"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.411,
+     "peak": " Arts"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.242,
+     "peak": " religious"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.403,
+     "peak": " Art"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.066,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.082,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.09,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.08,
+     "peak": " Food"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " this"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.289,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "49e5699b5",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' religious', ' Art(s)' institution",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' the' x6, ' Art' x5, ' more' x4, ' religious' x2, ' Religious', ' church'. Probes: ' religious' 0.777, ' Arts' 0.483, ' Art' 0.378, ' church' sentence 0.139 (peak ' membership'); plain versions under 0.06. Near misses keep the frames.",
+ "selection": "random draw"
+}

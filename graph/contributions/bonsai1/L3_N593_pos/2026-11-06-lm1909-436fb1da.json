@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-436fb1da",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N593+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:16:45+00:00",
+ "recipe": {
+  "toolchain_commit": "49e5699b5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N593_pos/2026-11-06-lm1909-436fb1da.tests.json"
+ },
+ "label": "an unusual symbol token standing on its own (' -*-', '^^', ' \"%', ' ||', ' .')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N593_pos/2026-11-06-lm1909-436fb1da.tests.json",
+   "prereg_commit": "49e5699b5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.626,
+     "peak": " -*-"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.513,
+     "peak": "^^"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.545,
+     "peak": " \"%"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.409,
+     "peak": " ||"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.761,
+     "peak": " ."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.392,
+     "peak": "="
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.73,
+     "peak": "^^"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.565,
+     "peak": " \"%"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.461,
+     "peak": "usr"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.144,
+     "peak": "真的很"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.107,
+     "peak": "_URL"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.082,
+     "peak": " age"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.077,
+     "peak": " set"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.288,
+     "peak": "好久"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.296,
+     "peak": " host"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.555,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "49e5699b5",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "standalone symbol token",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card flags broad (4.0%) and gate-closed (100%): '||' x7, ' -*-' x5, ' \"%' x3, ' .\\n' x2, ' .', ' ::'. Probes: ' .' 0.807, ' \"%' 0.782, '^^' 0.602, ' -*-' 0.591, ' ||' 0.380; plain text 0.014. Near misses keep the topics with no such symbols.",
+ "selection": "random draw"
+}

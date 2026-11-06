@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2f6e03b9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N7438-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:18:13+00:00",
+ "recipe": {
+  "toolchain_commit": "49e5699b5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N7438_neg/2026-11-06-lm1909-2f6e03b9.tests.json"
+ },
+ "label": "a word for named attributes or arguments in code (_attributes, attrs, args, attribute)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N7438_neg/2026-11-06-lm1909-2f6e03b9.tests.json",
+   "prereg_commit": "49e5699b5",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.751,
+     "peak": "_attributes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.451,
+     "peak": "attributes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.461,
+     "peak": "(args"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.492,
+     "peak": " attrs"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.655,
+     "peak": "_attributes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.483,
+     "peak": " attribute"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.395,
+     "peak": "(args"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.47,
+     "peak": " attrs"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " @"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.0,
+     "peak": " shape"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.0,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.0,
+     "peak": " elif"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": " _"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": " file"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": "_help"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.0,
+     "peak": " name"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.476,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "49e5699b5",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "code attributes / args",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card flags broad (1.6%): ' args' x2, 'Attribute' x2, '(args' x2, 'attrs' x2, ' accuracy', '_attributes'. Probes: '_attributes' 0.644, ' accuracy' field 0.621, 'attributes' 0.519, '(args' 0.348; 'def run(self)' under 0.01. Near misses are nearby code or docs without the word.",
+ "selection": "random draw"
+}

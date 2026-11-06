@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-92e91dff",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N1775-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:16:56+00:00",
+ "recipe": {
+  "toolchain_commit": "49e5699b5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N1775_neg/2026-11-06-lm1909-92e91dff.tests.json"
+ },
+ "label": "the piece 'gr' before 'uppe' in a German compound (Integrations|gr|uppen)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N1775_neg/2026-11-06-lm1909-92e91dff.tests.json",
+   "prereg_commit": "49e5699b5",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.26,
+     "peak": "gr"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.322,
+     "peak": "egr"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.407,
+     "peak": "gr"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.123,
+     "peak": "gr"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.355,
+     "peak": "gr"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.003,
+     "peak": "Die"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.0,
+     "peak": "In"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.424,
+     "peak": "gr"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " der"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " sich"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "chen"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": "zeigt"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " Fre"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "Die"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.0,
+     "peak": " sind"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "Die"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.836,
+    "median_fire": 0.291,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "49e5699b5",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'gr' in German -gruppe compound",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card has 'gr' x3, ' (' x3, ' Gr' x3, 'Gr' x3, ' gr' x2, 'w' x2, with a very low density. Probes: 'gr' 0.260, ' (' 0.208; others under 0.06. A guess.",
+ "selection": "random draw"
+}

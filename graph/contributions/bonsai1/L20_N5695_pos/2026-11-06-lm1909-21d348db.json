@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-21d348db",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N5695+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:17:57+00:00",
+ "recipe": {
+  "toolchain_commit": "49e5699b5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N5695_pos/2026-11-06-lm1909-21d348db.tests.json"
+ },
+ "label": "' is' in 'getting the flu is no big deal', a dismissive claim about a health risk",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N5695_pos/2026-11-06-lm1909-21d348db.tests.json",
+   "prereg_commit": "49e5699b5",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.027,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.083,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.01,
+     "peak": "umps"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.017,
+     "peak": "ox"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.011,
+     "peak": " virus"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.022,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.008,
+     "peak": " big"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.007,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " park"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": " enjoy"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " town"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " dog"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " too"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.044,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " kind"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.5,
+    "median_fire": 0.014,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "49e5699b5",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' is' in 'X is no big deal'",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ',' x2, ' of' x2, ' is', '”', ' proteins', ' make'. Probes all weak: ' is' 0.114, others under 0.02. A best guess, expected to fail.",
+ "selection": "random draw"
+}
