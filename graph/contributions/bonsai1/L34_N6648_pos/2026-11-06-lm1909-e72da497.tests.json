@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-e72da497",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6648+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N6648",
+   "pole": "+",
+   "label": "' de' before a word starting with l' or a vowel in French prose (le reste de l'huile, en direct de l'Elysée)",
+   "fire": [
+    "Verser le reste de l'eau, puis remuer doucement.",
+    "Il présentera son émission en direct de l'Assemblée.",
+    "C'est une réimpression de l'ouvrage de Lyon.",
+    "Ajouter le reste de l'ail et bien mélanger.",
+    "La radio diffuse le concert en direct de l'Opéra.",
+    "On lit ici une traduction de l'anglais de Londres.",
+    "Le ministre parle en direct de l'aéroport de Nice.",
+    "Garder le reste de l'huile pour la sauce."
+   ],
+   "quiet": [
+    "Verser ce liquide, puis remuer doucement.",
+    "Il présentera son émission ce soir.",
+    "C'est un ouvrage publié à Lyon.",
+    "Ajouter le sel et bien mélanger.",
+    "La radio diffuse le concert ce samedi.",
+    "On lit ici un texte venu de Londres.",
+    "Le ministre parle ce matin à Nice.",
+    "Garder le pain pour la sauce."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "French ' de' before l'",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Card: ' de' x13, ' à' x2, ' travers' x2, ' contra', 'été', ' sous'. Probes: ' de' 0.20-0.40, but ' puis' 0.234 and ' contra' 0.364 are near it, and a sentence without it reached 0.113. The baseline in French is high, so this may fail."
+}

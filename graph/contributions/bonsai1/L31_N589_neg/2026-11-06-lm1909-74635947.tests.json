@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-74635947",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N589-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N589",
+   "pole": "-",
+   "label": "the arithmetic operator ' /' or ' -' right before a parenthesised expression in code (precision / (recall+precision), 100 - (float(n)))",
+   "fire": [
+    "    f1 = 2*tp*fn / (tp+fn)\n",
+    "    pct = 100 - (float(a) / total)\n",
+    "    avg = (x*n + y) / (n+1)\n",
+    "    score = 1.0*good*bad / (good+bad)\n",
+    "    left = 200 - (float(b) / count)\n",
+    "    mean = (s*k + t) / (k+1)\n",
+    "    rate = 3*hits*runs / (hits+runs)\n",
+    "    free = 50 - (float(c) / size)\n"
+   ],
+   "quiet": [
+    "    f1 = tp\n",
+    "    pct = float(a)\n",
+    "    avg = x\n",
+    "    score = good\n",
+    "    left = float(b)\n",
+    "    mean = s\n",
+    "    rate = hits\n",
+    "    free = float(c)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "' /' or ' -' before a parenthesis in code",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: ' *' x8, ' /' x5, ' %' x5, ' -' x4, '.append' x2, ' not'. Probes: ' /' before ( 0.387, ' -' before ( 0.345; but ' *' in '8 * f.offset' 0.001, ' %' in a print 0.001, so operators do not all fire; the label is limited to what repeated. Near misses keep the numbers with no operator before a parenthesis."
+}

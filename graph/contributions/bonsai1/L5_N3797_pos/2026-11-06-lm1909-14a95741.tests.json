@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-14a95741",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N3797+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N3797",
+   "pole": "+",
+   "label": "the letter piece at the end of a letter range (-f, -F, -G in [a-fA-F0-9], A-F, A-G)",
+   "fire": [
+    "The pattern accepts [a-fA-F0-9] digits and rejects the rest.",
+    "Hex values must match [0-9A-Fa-f]+ in this field.",
+    "Students receive grades A-F at the end of each term.",
+    "Volumes for the letters A-G are on the top shelf.",
+    "The token is made of [0-9a-f]+ characters only.",
+    "Sections A-E of the form must be filled in by hand.",
+    "Input must match [A-Fa-f0-9]{8} or it fails.",
+    "Files A-F are stored in the left cabinet."
+   ],
+   "quiet": [
+    "The pattern accepts plain digits and rejects the rest.",
+    "Hex values must be lowercase in this field.",
+    "Students receive report cards at the end of each term.",
+    "Volumes of the old atlas are on the top shelf.",
+    "The token is made of letters only.",
+    "Sections of the form must be filled in by hand.",
+    "Input must be short or it fails.",
+    "Files for the audit are stored in the left cabinet."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "end letter of a letter range",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card: ' AF' x6, '.E' x3, ' F' x2, ' BE' x2, 'H' x2, ' E' x2, '-f' and '-G' in the top examples. Probes: '-f' 1.091, '-G' 0.681, '-F' 0.545, 'FE' in AFE 0.530, '.F' 0.345; 'lowercase characters' 0.003. Other F-initial cases (AFE, A.F.) are outside this label. Near misses keep the topic without a range."
+}

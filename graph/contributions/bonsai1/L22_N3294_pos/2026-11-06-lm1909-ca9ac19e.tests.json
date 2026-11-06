@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-ca9ac19e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N3294+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N3294",
+   "pole": "+",
+   "label": "a token of a squared quantity or variance in code (**2, length_squared, variance)",
+   "fire": [
+    "        dist = (x[0]-y[0])**2 + (x[1]-y[1])**2\n",
+    "        n = self.norm_squared()\n        if n == 0:\n",
+    "    avg, variance = tf.nn.moments(batch)\n",
+    "        r2 = (p.x-q.x)**2 + (p.y-q.y)**2\n",
+    "        err = (pred - target)**2\n",
+    "    mean, var = nn.moments(activations)\n",
+    "        m = self.magnitude_squared()\n        if m == 0:\n",
+    "        s2 = (u-v)**2\n"
+   ],
+   "quiet": [
+    "        dist = x[0]-y[0]\n",
+    "        n = self.norm()\n        if n == 0:\n",
+    "    avg = tf.reduce_mean(batch)\n",
+    "        r = p.x-q.x\n",
+    "        err = pred - target\n",
+    "    mean = nn.average(activations)\n",
+    "        m = self.magnitude()\n        if m == 0:\n",
+    "        s = u-v\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "squared quantity in code",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: '2' x6, '\\n' x2, 'var' x2, 'vars' x2, '9' x2, '_squared' x2, 'Tx', with code on squared lengths and moments. Probes: '2' in **2 0.289, ' variance' 0.191, ' ls' before length_squared 0.172; plain length 0.002, plain difference 0.004, 'xTx' 0.002. The median may fall short of the bar."
+}

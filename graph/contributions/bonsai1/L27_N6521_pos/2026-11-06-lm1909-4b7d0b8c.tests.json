@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-4b7d0b8c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N6521+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N6521",
+   "pole": "+",
+   "label": "the ' .' dots in a vertical-ellipsis column of a matrix in plain-text comments",
+   "fire": [
+    "    #      a_11   a_12   ...\n    #      .             .\n    #      .             .\n",
+    "    # M_1   M_2\n    #  .     .\n    #  .     .\n    # M_n   M_m\n",
+    "    #  x_1   y_1\n    #   .     .\n    #   .     .\n",
+    "    # row 1  ...\n    #   .        .\n    #   .        .\n    # row n  ...\n",
+    "    #  b_1\n    #   .\n    #   .\n    #  b_n\n",
+    "    # A_11   A_12\n    #   .      .\n    #   .      .\n",
+    "    # c_1  c_2\n    #  .    .\n    #  .    .\n    # c_n  c_m\n",
+    "    #  w_1   w_2\n    #   .     .\n    #   .     .\n"
+   ],
+   "quiet": [
+    "    #      a_11   a_12   a_13\n    #      a_21   a_22   a_23\n",
+    "    # M_1   M_2\n    # M_3   M_4\n    # M_n   M_m\n",
+    "    #  x_1   y_1\n    #  x_2   y_2\n",
+    "    # row 1  row 2\n    # row 3  row 4\n    # row n  end\n",
+    "    #  b_1\n    #  b_2\n    #  b_n\n",
+    "    # A_11   A_12\n    # A_21   A_22\n",
+    "    # c_1  c_2\n    # c_3  c_4\n    # c_n  c_m\n",
+    "    #  w_1   w_2\n    #  w_3   w_4\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "' .' in a text matrix",
+ "unit_kind": "token",
+ "confidence": "low",
+ "notes": "Murky pole: card flags broad (1.0%); '9' x3, '._' x3, ' .' x2, '1' x2, '3', '0', with matrices, patents and dates. Probes: ' .' 0.432, '9' in dates 0.201, '.,' 0.045; a cat 0.012. A guess at one sub-cluster."
+}

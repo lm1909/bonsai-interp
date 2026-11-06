@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-fe3caf81",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N3325+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:41+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N3325",
+   "pole": "+",
+   "label": "the token opening the right-hand side of a formula or a chained lookup (FV = PV x (1+r), objects.get)",
+   "fire": [
+    "The general formula is A = P x (1+i) for compound interest.",
+    "    product = Product.objects.get(sku=sku)\n    return product\n",
+    "Future value is given by V = C x (1+g) for this case.",
+    "    author = Author.objects.get(pk=author_id)\n",
+    "The present value is PV = FV / (1+r) for one year.",
+    "    user = User.objects.get(email=email)\n    return user\n",
+    "The simple formula is T = F x (1+s) for this tax.",
+    "    order = Order.objects.get(id=order_id)\n"
+   ],
+   "quiet": [
+    "The general rule is that interest is paid at the end.",
+    "    product = 'sku'\n    print(product)\n",
+    "Future value is mentioned in the last chapter of the book.",
+    "    author = 'unknown'\n",
+    "The present value is on the first page of the form.",
+    "    user = 'guest'\n    print(user)\n",
+    "The simple rule is to pay this tax in April.",
+    "    order = 42\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "start of a formula's right side",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: ' =' x8, ' return' x8, ' \"' x3, '().' x2, \" '\" x2, ' ('. Probes: ' (' in a finance formula 0.689, '.get' 0.414, but ' =' in 'output = sos_targets' 0.009, ' self' after return 0.058. A low-confidence guess at what lines up."
+}
