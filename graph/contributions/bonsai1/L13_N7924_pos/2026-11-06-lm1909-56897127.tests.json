@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-56897127",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N7924+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:44:15+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N7924",
+   "pole": "+",
+   "label": "a fallback value in code when the normal path fails (except: user = '', return default, d.get(key, None)), as opposed to the normal path and to other handling of the same failure",
+   "fire": [
+    "try:\n    host = socket.gethostname()\nexcept:\n    host = 'localhost'\n",
+    "def get_option(opts, default):\n    if 'x' not in opts:\n        return default\n",
+    "try:\n    port = int(text)\nexcept ValueError:\n    port = 0\n",
+    "def first(items, default):\n    if not items:\n        return default\n",
+    "try:\n    conf = read(path)\nexcept IOError:\n    conf = {}\n",
+    "def size(path, fallback):\n    if not exists(path):\n        return fallback\n",
+    "try:\n    value = d[key]\nexcept KeyError:\n    value = None\n",
+    "def lookup(key, default):\n    if key not in table:\n        return default\n"
+   ],
+   "quiet": [
+    "try:\n    host = socket.gethostname()\nexcept:\n    raise\n",
+    "def get_option(opts, default):\n    if 'x' in opts:\n        return opts['x']\n",
+    "try:\n    port = int(text)\nexcept ValueError:\n    log(text)\n",
+    "def first(items, key):\n    if items:\n        return items[0]\n",
+    "try:\n    conf = read(path)\nexcept IOError:\n    log(path)\n",
+    "def size(path, block):\n    if exists(path):\n        return stat(path)\n",
+    "try:\n    value = d[key]\nexcept KeyError:\n    log(key)\n",
+    "def lookup(key, table):\n    if key in table:\n        return table[key]\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "a fallback value in code",
+ "unit_kind": "code / contextual",
+ "confidence": "medium",
+ "notes": "Gate-closed regime dominates. Card: ' default' x4, ' =', '1', '2', ' value', ' that'. Probes: 'except: user' 1.04, 'return default' 0.96, 'return False' 0.32, 'd.get(key, None)' 0.20; 'd.get(key)' 0.03, 'print oops' 0.28, prose 'default setting' 0.04. ':return mtu value that' 0.48 and digits on the card are not explained, and 'd.get' is weak."
+}
