@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b1c7f6c0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N7126+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:10+00:00",
+ "recipe": {
+  "toolchain_commit": "29c95ff16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N7126_pos/2026-11-06-lm1909-b1c7f6c0.tests.json"
+ },
+ "label": "the comma after an abstract subject noun, before an inserted 'he says' or 'then' (The goal, he said, is; The upshot, then, is)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N7126_pos/2026-11-06-lm1909-b1c7f6c0.tests.json",
+   "prereg_commit": "29c95ff16",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.164,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.311,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.248,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.326,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.171,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.237,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.209,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.105,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " result"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " finding"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": " teach"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.223,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "29c95ff16",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "comma before an inserted 'he said'",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ',' x18, ' he' x4, ' on' x2, ' mind', ' thus', ' she', with science-news frames like 'The goal, he said, is'. Probes: 'The upshot,' 0.498, 'The goal,' 0.301, 'The best course of action,' 0.171; 'Torrens's model, on the other hand' 0.057; plain 0.014-0.020. Near misses are the same sentences without the inserted clause.",
+ "selection": "random draw"
+}

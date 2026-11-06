@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1d48e545",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3130-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:40+00:00",
+ "recipe": {
+  "toolchain_commit": "29c95ff16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N3130_neg/2026-11-06-lm1909-1d48e545.tests.json"
+ },
+ "label": "' opening' or 'Opening' as the first part of a performance or work (opening line, opening track, opening bars, Opening act)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N3130_neg/2026-11-06-lm1909-1d48e545.tests.json",
+   "prereg_commit": "29c95ff16",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.633,
+     "peak": " opening"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.912,
+     "peak": " opening"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.746,
+     "peak": " opening"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.518,
+     "peak": "Opening"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.709,
+     "peak": " opening"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.713,
+     "peak": " opening"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.721,
+     "peak": " opening"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.745,
+     "peak": " opening"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.436,
+     "peak": " middle"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.325,
+     "peak": " second"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.522,
+     "peak": " closing"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.087,
+     "peak": "Backing"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.293,
+     "peak": " second"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.598,
+     "peak": " closing"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.229,
+     "peak": " fourth"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.281,
+     "peak": " second"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.717,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "29c95ff16",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' opening' part of a work",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: ' opening' x9, ' top' x8, '�' x4, ' last' x2, ' Opening', '最初'. Probes: ' opening' 0.63-0.73, 'Opening' 0.519; ' top' 0.407, ' last' 0.277 are close, so the card's ' top' cluster is outside this label and near misses avoid it. Near misses use middle, closing and second parts.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-63117c26",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N4891+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:21+00:00",
+ "recipe": {
+  "toolchain_commit": "29c95ff16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N4891_pos/2026-11-06-lm1909-63117c26.tests.json"
+ },
+ "label": "a token that sets aside one thing to widen or contrast the claim (not the only, rather than just, let alone, not just)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N4891_pos/2026-11-06-lm1909-63117c26.tests.json",
+   "prereg_commit": "29c95ff16",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.07,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.082,
+     "peak": " than"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.465,
+     "peak": " let"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.142,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.295,
+     "peak": " let"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.196,
+     "peak": " than"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.325,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.442,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "oking"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " seen"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " boil"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " applies"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.245,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "29c95ff16",
+  "minutes": 14,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'not the only', 'rather than', 'let alone'",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' let' x8, ' the' x5, ' purposes' x4, ' not' x3, ' than' x2, ' was'. Probes: ' let' 0.377, ' than' 0.315, ' the' in 'not the only' 0.299, ' not' 0.110; plain 0.006-0.007. Near misses drop the construction.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5ef56913",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N7699-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:51+00:00",
+ "recipe": {
+  "toolchain_commit": "29c95ff16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N7699_neg/2026-11-06-lm1909-5ef56913.tests.json"
+ },
+ "label": "' group' or ' groups' as an arm of a study (control group, the acupuncture group, patient group)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N7699_neg/2026-11-06-lm1909-5ef56913.tests.json",
+   "prereg_commit": "29c95ff16",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.762,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.623,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.616,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.786,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.074,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.244,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.687,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.189,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " went"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.619,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "29c95ff16",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' group' as a study arm",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: ' group' x18, ' groups' x14, all study arms. Probes: 'acupuncture group' 1.064, 'control groups' 0.461, 'patient group' 0.387; 'rock group' 0.003. Near misses keep ' group' in non-study senses, so the token alone can't pass, and other sentences keep the trial frame without it.",
+ "selection": "random draw"
+}

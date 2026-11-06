@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-75ef62a2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N8175-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:53:01+00:00",
+ "recipe": {
+  "toolchain_commit": "29c95ff16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N8175_neg/2026-11-06-lm1909-75ef62a2.tests.json"
+ },
+ "label": "a word about direction or order in space (left-right order, forward and backward, no special direction)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N8175_neg/2026-11-06-lm1909-75ef62a2.tests.json",
+   "prereg_commit": "29c95ff16",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.312,
+     "peak": "-down"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.203,
+     "peak": " right"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.095,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.145,
+     "peak": "wise"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.064,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.14,
+     "peak": " backward"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.025,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.165,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " chairs"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " stars"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": "aking"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " practice"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.143,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "29c95ff16",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "direction or order in space",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Murky pole: card has ' to' x2, ' different' x2, '-right', 'oma', ' with', ' backward', ' change'. Probes flat at 0.21-0.26 for direction sentences, with peaks on ' of', ' with', ' backward' and on a lymphoma sentence too; plain 0.01-0.04. A guess.",
+ "selection": "random draw"
+}

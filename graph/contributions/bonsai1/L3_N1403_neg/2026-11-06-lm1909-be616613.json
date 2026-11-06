@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-be616613",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N1403-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:53+00:00",
+ "recipe": {
+  "toolchain_commit": "29c95ff16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N1403_neg/2026-11-06-lm1909-be616613.tests.json"
+ },
+ "label": "a capitalized class name being constructed or called in code (Label(, Cursors(), QtGui.QLabel(, PriorityQueue())",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N1403_neg/2026-11-06-lm1909-be616613.tests.json",
+   "prereg_commit": "29c95ff16",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.187,
+     "peak": " Button"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.134,
+     "peak": " Colors"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.361,
+     "peak": ".QLabel"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.343,
+     "peak": " PriorityQueue"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.526,
+     "peak": " User"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.353,
+     "peak": " Context"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.348,
+     "peak": ".QLabel"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.552,
+     "peak": " Label"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": "_button"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " []\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " q"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " user"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " {}\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " text"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.35,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "29c95ff16",
+  "minutes": 15,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "class name after '=' in code",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: '.QLabel' x9, ' User' x3, ' Solution' x2, ' Context' x2, ' Label', ' Cursors', ' PriorityQueue', ' Job'. Probes: ' Label' 0.552, '.QLabel' 0.504, ' PriorityQueue' 0.367, ' Cursors' 0.332; plain assignments under 0.01. Near misses are assignments from lowercase functions.",
+ "selection": "random draw"
+}
