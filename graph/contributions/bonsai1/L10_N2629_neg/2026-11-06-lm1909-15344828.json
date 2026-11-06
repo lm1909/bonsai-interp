@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-15344828",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N2629-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:13:20+00:00",
+ "recipe": {
+  "toolchain_commit": "e7920c820",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N2629_neg/2026-11-06-lm1909-15344828.tests.json"
+ },
+ "label": "medical journal names in citations: Lanc|et, BMJ, 'b|mj'; the piece 'et' of lancet fires with or without a citation",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N2629_neg/2026-11-06-lm1909-15344828.tests.json",
+   "prereg_commit": "e7920c820",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.775,
+     "peak": "et"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.579,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.897,
+     "peak": "et"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.602,
+     "peak": "mj"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.754,
+     "peak": "et"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.7,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.603,
+     "peak": "et"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.439,
+     "peak": "J"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.128,
+     "peak": " trial"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": "-"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.335,
+     "peak": " study"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.32,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.229,
+     "peak": " Guardian"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.651,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e7920c820",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Lancet, BMJ in citations",
+ "unit_kind": "format / lexical",
+ "confidence": "high",
+ "selection": "random draw"
+}

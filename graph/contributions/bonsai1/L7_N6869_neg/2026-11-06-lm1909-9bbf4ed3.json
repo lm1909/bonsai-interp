@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-9bbf4ed3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N6869-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:13:04+00:00",
+ "recipe": {
+  "toolchain_commit": "e7920c820",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N6869_neg/2026-11-06-lm1909-9bbf4ed3.tests.json"
+ },
+ "label": "'-city' in 'inner-city' (and ' inner–city')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N6869_neg/2026-11-06-lm1909-9bbf4ed3.tests.json",
+   "prereg_commit": "e7920c820",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.807,
+     "peak": "-city"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.787,
+     "peak": "-city"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.942,
+     "peak": "-city"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.152,
+     "peak": "-city"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.973,
+     "peak": "-city"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.027,
+     "peak": "-city"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.832,
+     "peak": "-city"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.074,
+     "peak": "-city"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " science"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "ma"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " Detroit"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.09,
+     "peak": " inner"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.958,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e7920c820",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "inner-city",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "selection": "random draw"
+}
