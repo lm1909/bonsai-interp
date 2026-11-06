@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-1626fdef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N10475+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:55:34+00:00",
+ "recipe": {
+  "toolchain_commit": "d8de1da96",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N10475_pos/2026-11-06-lm1909-1626fdef.tests.json"
+ },
+ "label": "Paper size values in a print or page setting: letter, legal, tabloid, A3, A5; the same words with other meanings ('a letter to her aunt', 'a legal team') and other print settings stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N10475_pos/2026-11-06-lm1909-1626fdef.tests.json",
+   "prereg_commit": "d8de1da96",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.293,
+     "peak": " printer"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.443,
+     "peak": "letter"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.456,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.1,
+     "peak": "loid"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.456,
+     "peak": " letter"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.451,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.077,
+     "peak": " size"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.256,
+     "peak": "legal"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " colour"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": "_paper"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.232,
+     "peak": " sheets"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.074,
+     "peak": "_title"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": " son"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " tea"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.005,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.368,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "d8de1da96",
+  "minutes": 34,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "paper size values",
+ "unit_kind": "semantic",
+ "confidence": 0.65,
+ "notes": "Round 1 (sweep seed 202611050903) near misses: 'letter' in a config 0.44, A5 0.37, legal 0.32. Probes this round: 'paper size to letter' 0.44, 'legal' in config 0.42, A3 and A5 0.47, US Letter 0.20, B5 0.11; letter to an aunt under 0.01, legal team under 0.01, paper color 0.09. Other card peaks (IPv4, dense, RP) stay outside this label.",
+ "selection": "picked"
+}
