@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-070d82aa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N9246-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:04:37+00:00",
+ "recipe": {
+  "toolchain_commit": "22543dc32",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N9246_neg/2026-11-06-lm1909-070d82aa.tests.json"
+ },
+ "label": "the equative 'as ... as': ' as' or ' much' / ' many' in 'as much as', 'as many ... as', 'as good as'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N9246_neg/2026-11-06-lm1909-070d82aa.tests.json",
+   "prereg_commit": "22543dc32",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.767,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.425,
+     "peak": " many"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.329,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.753,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.558,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.437,
+     "peak": " little"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.298,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.521,
+     "peak": " many"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.156,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.086,
+     "peak": " than"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " nearly"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.109,
+     "peak": " than"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " only"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " almost"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.068,
+     "peak": " than"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.479,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22543dc32",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "equative as ... as",
+ "unit_kind": "grammar / lexical",
+ "confidence": 0.8,
+ "notes": "The + pole of this neuron fires before comparatives (' than', ' better', ' worse'), so 'as ... as' against 'more ... than' looks like the distinction. 'more ... than' near misses reached 0.18 in probes.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " as",
+   " much",
+   " many"
+  ]
+ }
+}

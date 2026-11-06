@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6c126065",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N7921-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:03:39+00:00",
+ "recipe": {
+  "toolchain_commit": "22543dc32",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N7921_neg/2026-11-06-lm1909-6c126065.tests.json"
+ },
+ "label": "a short list of name pieces: ' Tay' in Taye, Tayyaba, Taymur, 'ans' in Hans, and 'Times' in Times Square (no shared pattern found)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N7921_neg/2026-11-06-lm1909-6c126065.tests.json",
+   "prereg_commit": "22543dc32",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.856,
+     "peak": " Tay"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.937,
+     "peak": " Tay"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.858,
+     "peak": " Tay"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.6,
+     "peak": "ans"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.6,
+     "peak": "ans"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.474,
+     "peak": "Times"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.6,
+     "peak": "ans"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.474,
+     "peak": "Times"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " Gary"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.089,
+     "peak": " Hasan"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.075,
+     "peak": " Mahm"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.038,
+     "peak": "laus"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " packed"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": "John"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " venue"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.6,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22543dc32",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pieces: Tay-, H|ans, Times",
+ "unit_kind": "token piece",
+ "confidence": 0.6,
+ "notes": "' Taylor' as a whole token scored 0.01 in a probe, although 'T|AY' in 'TAYLOR' is on the card.",
+ "selection": "random draw"
+}

@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-21cea344",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N12086+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:04:32+00:00",
+ "recipe": {
+  "toolchain_commit": "22543dc32",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N12086_pos/2026-11-06-lm1909-21cea344.tests.json"
+ },
+ "label": "' which' after a preposition: 'for which', 'on which', 'at which'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N12086_pos/2026-11-06-lm1909-21cea344.tests.json",
+   "prereg_commit": "22543dc32",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.195,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.246,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.064,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.091,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.115,
+     "peak": " would"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.151,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.037,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.155,
+     "peak": " which"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.123,
+     "peak": " me"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.077,
+     "peak": " amount"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.047,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.034,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.095,
+     "peak": " ten"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.323,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": " it"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.719,
+    "median_fire": 0.133,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22543dc32",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' which' after a preposition",
+ "unit_kind": "lexical / contextual",
+ "confidence": 0.35,
+ "notes": "The card flags the pole as broad (7.2% of tokens reach 0.1 of max). Its other top tokens (' therefore', ' мне', ' CV') are not covered.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " which"
+  ]
+ }
+}

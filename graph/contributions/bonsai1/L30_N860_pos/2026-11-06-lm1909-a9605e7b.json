@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-a9605e7b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N860+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:03:30+00:00",
+ "recipe": {
+  "toolchain_commit": "22543dc32",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N860_pos/2026-11-06-lm1909-a9605e7b.tests.json"
+ },
+ "label": "' you' after 'if' or 'when' in the middle of site instructions: 'or if you don't have an account', 'when you are offline'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N860_pos/2026-11-06-lm1909-a9605e7b.tests.json",
+   "prereg_commit": "22543dc32",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.103,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.029,
+     "peak": " when"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.069,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.053,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.011,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.039,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.023,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " sign"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " server"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.001,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " your"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.034,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22543dc32",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' you' after if / when in instructions",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probes: 'or if you' 1.09 whichever word followed, sentence-initial 'If you' 0.06-0.16, so being mid-text seems to matter. The output direction is about absence (the - pole fires on what is lacking), which this label does not test.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " you"
+  ]
+ }
+}

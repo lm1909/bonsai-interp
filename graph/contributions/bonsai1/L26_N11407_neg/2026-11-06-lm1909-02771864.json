@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-02771864",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N11407-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:04:24+00:00",
+ "recipe": {
+  "toolchain_commit": "22543dc32",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N11407_neg/2026-11-06-lm1909-02771864.tests.json"
+ },
+ "label": "' G' as the first piece of a surname right after a first name: David G|lick, David G|oh, Alex G|uevara",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N11407_neg/2026-11-06-lm1909-02771864.tests.json",
+   "prereg_commit": "22543dc32",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.748,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.921,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.8,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.664,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.844,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.459,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.434,
+     "peak": " G"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.575,
+     "peak": " G"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " Tan"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": " firm"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.342,
+     "peak": " G"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.12,
+     "peak": " G"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.283,
+     "peak": " G"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.343,
+     "peak": " G"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.706,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22543dc32",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' G' opening a surname",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.85,
+ "notes": "A probe with 'The G-20 summit' reached 0.34, so ' G' outside a name can leak.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " G"
+  ]
+ }
+}
