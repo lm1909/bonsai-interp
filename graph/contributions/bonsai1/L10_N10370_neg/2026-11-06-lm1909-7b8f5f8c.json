@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7b8f5f8c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10370-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:21:06+00:00",
+ "recipe": {
+  "toolchain_commit": "9dcaae1ab",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N10370_neg/2026-11-06-lm1909-7b8f5f8c.tests.json"
+ },
+ "label": "a list: ' least' in 'at least', ' ever' or ' you' in 'have you (ever) ...', and ' except', with no pattern I can name",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N10370_neg/2026-11-06-lm1909-7b8f5f8c.tests.json",
+   "prereg_commit": "9dcaae1ab",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.384,
+     "peak": " least"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.261,
+     "peak": " least"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.346,
+     "peak": " tried"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.438,
+     "peak": " you"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": -0.003,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.07,
+     "peak": " least"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.284,
+     "peak": " seen"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.021,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.117,
+     "peak": " users"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": "I"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " bake"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " days"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.272,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dcaae1ab",
+  "minutes": 4,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "at least; have you ever; except (list)",
+ "unit_kind": "lexical",
+ "confidence": "low",
+ "notes": "A list of what fired. Small max (7.06), and the numbers are not uniform (0.19 to 0.55).",
+ "selection": "random draw"
+}

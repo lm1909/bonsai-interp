@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-80e2b3d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N1811+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:21:20+00:00",
+ "recipe": {
+  "toolchain_commit": "9dcaae1ab",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N1811_pos/2026-11-06-lm1909-80e2b3d1.tests.json"
+ },
+ "label": "a child's skills compared with others the same age (children of their age, kids his age, skills which 95 percent of children attain), as opposed to other comparisons",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N1811_pos/2026-11-06-lm1909-80e2b3d1.tests.json",
+   "prereg_commit": "9dcaae1ab",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.64,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.482,
+     "peak": " boys"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.343,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.298,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.193,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.238,
+     "peak": " peers"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.123,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.59,
+     "peak": " boy"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.047,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.046,
+     "peak": " other"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": "ikers"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.059,
+     "peak": " people"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.093,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " bread"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " above"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.321,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dcaae1ab",
+  "minutes": 4,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "development compared with same-age kids",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Peaks on ' of' and ' his' in probes. Card's 'a black male' and 'percent of pets' are not covered (0.16, 0.06).",
+ "selection": "random draw"
+}

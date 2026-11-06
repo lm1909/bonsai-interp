@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-82bc2895",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6705-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:20:56+00:00",
+ "recipe": {
+  "toolchain_commit": "9dcaae1ab",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N6705_neg/2026-11-06-lm1909-82bc2895.tests.json"
+ },
+ "label": "the comma after a completed clause in a narrative, before it continues with another action (start with a Sharpie, but finish...; took a photo of my mug, then...), as opposed to list commas and commas after an opening word",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N6705_neg/2026-11-06-lm1909-82bc2895.tests.json",
+   "prereg_commit": "9dcaae1ab",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.573,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.615,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.702,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.486,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.558,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.511,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.763,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.518,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.057,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " she"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " we"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": " rain"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " snow"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " green"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.566,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dcaae1ab",
+  "minutes": 4,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "comma after a clause, before more action",
+ "unit_kind": "format",
+ "confidence": "medium",
+ "notes": "A list comma reached 0.19 in a probe. Russian and quote-closing commas on the card are not tested.",
+ "selection": "random draw"
+}

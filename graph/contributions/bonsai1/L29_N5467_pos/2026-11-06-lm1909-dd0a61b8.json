@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-dd0a61b8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5467+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:21:12+00:00",
+ "recipe": {
+  "toolchain_commit": "9dcaae1ab",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N5467_pos/2026-11-06-lm1909-dd0a61b8.tests.json"
+ },
+ "label": "the adjective naming a kind of medicine, before ' medicine' or ' Treatments' (Traditional Chinese, Osteopathic, Internal, Natural and Alternative), as opposed to the same adjectives on other subjects",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N5467_pos/2026-11-06-lm1909-dd0a61b8.tests.json",
+   "prereg_commit": "9dcaae1ab",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.03,
+     "peak": " Chinese"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.888,
+     "peak": "opathic"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.725,
+     "peak": " Alternative"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.553,
+     "peak": " Internal"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.904,
+     "peak": " Chinese"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.433,
+     "peak": " alternative"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.215,
+     "peak": "ic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.326,
+     "peak": "ative"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.352,
+     "peak": " Chinese"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.171,
+     "peak": " Fine"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.165,
+     "peak": " natural"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.391,
+     "peak": " internal"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.282,
+     "peak": " Chinese"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.433,
+     "peak": " alternative"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.455,
+     "peak": "Natural"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " fresh"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.836,
+    "median_fire": 0.639,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dcaae1ab",
+  "minutes": 4,
+  "batch_size": 15,
+  "dtype": "float16"
+ },
+ "short": "kind of medicine",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Word-only activation exists: ' Chinese' 0.30 and ' Natural' (gas) 0.46 in probes. Near misses include those.",
+ "selection": "random draw"
+}
