@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1e594fb1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6382+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:18:14+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N6382_pos/2026-11-06-lm1909-1e594fb1.tests.json"
+ },
+ "label": "Earth's yearly motion past a comet or the Sun ('Earth passes through the tail of the comet'; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N6382_pos/2026-11-06-lm1909-1e594fb1.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.747,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.756,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.135,
+     "peak": " dust"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.469,
+     "peak": " through"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.544,
+     "peak": " passes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.769,
+     "peak": " passes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.808,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.602,
+     "peak": " through"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " bus"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " train"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": " parade"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " river"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": " field"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " mail"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": " dips"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.674,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Earth's yearly passage",
+ "unit_kind": "semantic",
+ "confidence": "low",
+ "notes": "Card: ' of' x5, ' to' x4, ' the' x4, ' our' x2, ' passes', ' from', ' toward'. Probe: 'Earth passes through the tail' 0.74; 'closer to the Sun' 0.16; 'seasons change' 0.06; 'toward or away from the Sun' 0.01.",
+ "selection": "random draw"
+}

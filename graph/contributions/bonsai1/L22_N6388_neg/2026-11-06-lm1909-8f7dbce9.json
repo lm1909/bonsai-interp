@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8f7dbce9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N6388-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:17:50+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N6388_neg/2026-11-06-lm1909-8f7dbce9.tests.json"
+ },
+ "label": "the second conjunct repeating its opening word ('in A and in B', 'and then on to', 'goods … and goods …')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N6388_neg/2026-11-06-lm1909-8f7dbce9.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.646,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.282,
+     "peak": " then"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.468,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.233,
+     "peak": " books"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.363,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.508,
+     "peak": " then"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.872,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.151,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " Oregon"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": "ums"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " out"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " sampled"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "ikers"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": " exist"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " rented"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.415,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "repeated word in a coordination",
+ "unit_kind": "contextual / syntactic",
+ "confidence": "medium",
+ "notes": "Card: ' in' x10, ' then' x3, ' and' x3, ' as' x2, ' or' x2. Output promotes ' simplify', ' gradually', ' complementary'. Probe: 'in all 50 states, in Washington, and in Guam' 0.90, 'and in the Deschutes' 0.58, 'and then on to' 0.50, 'and goods' 0.27; no coordination 0.03-0.07.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-b85480e6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N3039-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:17:43+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N3039_neg/2026-11-06-lm1909-b85480e6.tests.json"
+ },
+ "label": "token in a measure or emphasis clause ('is around 96%', 'what it takes', 'So powerful is'; broad; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N3039_neg/2026-11-06-lm1909-b85480e6.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.549,
+     "peak": " around"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.342,
+     "peak": " takes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.539,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.231,
+     "peak": " same"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.478,
+     "peak": " around"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.515,
+     "peak": " takes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.072,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.108,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.039,
+     "peak": " bar"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.41,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "measure or emphasis (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (1.3%) with no repeating token (' takes' x2, ' is' x2, ' in' x2, ' around', ' size', ' mind'). Probe: 0.46-0.81 on those tokens in close copies; 'The tyre is on the car' 0.05. I could not name one idea.",
+ "selection": "random draw"
+}

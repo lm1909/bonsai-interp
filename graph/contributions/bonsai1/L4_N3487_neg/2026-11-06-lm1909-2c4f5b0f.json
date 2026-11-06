@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-06-lm1909-2c4f5b0f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N3487-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:17:51+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N3487_neg/2026-11-06-lm1909-2c4f5b0f.tests.json"
+ },
+ "label": "the piece ' amp' / ' amph' opening a word or standing alone (ampollas, amp simulator, amphipods)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N3487_neg/2026-11-06-lm1909-2c4f5b0f.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.936,
+     "peak": " amp"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.733,
+     "peak": " amp"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.749,
+     "peak": " amph"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.881,
+     "peak": " amp"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.654,
+     "peak": " amp"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.507,
+     "peak": " amphib"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.834,
+     "peak": " amp"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.581,
+     "peak": " amph"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": "uras"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " plugged"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " included"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " march"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " hour"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " other"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " rack"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "Many"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.741,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' amp' piece",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' amp' x11, ' amph' x5, ' Amp' x3, ' Amph' x2, ' Ampl' x2. Probe: ampollas 0.98, amphipods 0.78, amp 0.73; plain versions under 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " amp",
+   " amph",
+   " Amp",
+   " Amph",
+   "amp"
+  ]
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-35a92086",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N6599+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:18:08+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N6599_pos/2026-11-06-lm1909-35a92086.tests.json"
+ },
+ "label": "the Arabic preposition ' في' ('in') (broad, gate-closed, very small max)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N6599_pos/2026-11-06-lm1909-35a92086.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.12,
+     "peak": " العمل"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.254,
+     "peak": " في"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.207,
+     "peak": " في"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.234,
+     "peak": "سة"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.143,
+     "peak": " آخر"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.095,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.165,
+     "peak": " في"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.225,
+     "peak": " في"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " وال"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": "كتب"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.104,
+     "peak": " كبير"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.179,
+     "peak": "ون"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.075,
+     "peak": " الحل"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.093,
+     "peak": "شرق"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.067,
+     "peak": "ي"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.137,
+     "peak": "ماء"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.186,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic ' في'",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Card flags broad (5.1%) and gate-closed (81% echo), max 0.40. Card: ' في' x15, ' eager' x3, '에' x2. Probe: 0.65-0.68; the same Arabic without it 0.13; English 0.08.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " في"
+  ]
+ }
+}

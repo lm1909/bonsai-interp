@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-09b2f837",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N2950+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:17:40+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N2950_pos/2026-11-06-lm1909-09b2f837.tests.json"
+ },
+ "label": "a journal editorial or accompanying commentary ('in an accompanying editorial', 'a set of editorials'; output promotes ' editorial', ' commentary', ' letter')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N2950_pos/2026-11-06-lm1909-09b2f837.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.798,
+     "peak": " editor"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.421,
+     "peak": " editorial"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.448,
+     "peak": " accompanying"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.243,
+     "peak": " accompanying"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.749,
+     "peak": " editor"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.197,
+     "peak": " editorial"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.371,
+     "peak": " perspective"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.284,
+     "peak": " editor"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.337,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " separate"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.163,
+     "peak": " recent"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.03,
+     "peak": " wrote"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.269,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " matter"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.064,
+     "peak": " brief"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " set"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.396,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "journal editorial",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Output direction promotes ' editorial', ' editor', ' commentary', ' letter', ' opinion'. Card: ' an' x7, ' a' x7, ' accompanying' x2, ' editor' x2. Probe: ' editor' in editorials 0.62; ' accompanying' 0.24-0.26; 'In a recent study' 0.05; 'a letter to her son' 0.04.",
+ "selection": "random draw"
+}

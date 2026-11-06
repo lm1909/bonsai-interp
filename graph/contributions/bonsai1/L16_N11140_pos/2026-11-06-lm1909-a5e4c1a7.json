@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-a5e4c1a7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N11140+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:17:32+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N11140_pos/2026-11-06-lm1909-a5e4c1a7.tests.json"
+ },
+ "label": "word piece in Romance and other non-English prose (broad; guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N11140_pos/2026-11-06-lm1909-a5e4c1a7.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.477,
+     "peak": " requer"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.624,
+     "peak": "á"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.326,
+     "peak": " requer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.652,
+     "peak": "á"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.374,
+     "peak": " requer"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.259,
+     "peak": "class"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.698,
+     "peak": "á"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.258,
+     "peak": "class"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.129,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.089,
+     "peak": " few"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.149,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.154,
+     "peak": " several"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.212,
+     "peak": "That"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.145,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.086,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.107,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.425,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "non-English pieces (guess)",
+ "unit_kind": "unclear",
+ "confidence": "low",
+ "notes": "Card flags broad (4.2%), no repeating token ('__' x3, 'ell' x2, 'ساس', ' requer', 'á', 'う'). Probe: 'á' 0.62, ' requer' 0.48, '__' 0.33; ' pr' in 'pruebas' 0.33; English 0.19. A best guess.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-b32f69e6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N10667-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:17:53+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N10667_neg/2026-11-06-lm1909-b32f69e6.tests.json"
+ },
+ "label": "the real estate business ('real estate sector', 'real estate development', 房地产; gate-closed)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N10667_neg/2026-11-06-lm1909-b32f69e6.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.601,
+     "peak": " sector"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.156,
+     "peak": " development"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.249,
+     "peak": " real"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.097,
+     "peak": " market"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.197,
+     "peak": " real"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.139,
+     "peak": " developers"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.044,
+     "peak": " worried"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.073,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.038,
+     "peak": " harbor"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " fish"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.06,
+     "peak": "Invest"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": " fishing"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.055,
+     "peak": " river"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.06,
+     "peak": " oil"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.073,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.148,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "real estate",
+ "unit_kind": "semantic / lexical",
+ "confidence": "medium",
+ "notes": "Card flags gate-closed (82% leak); ' real' x4, ' estate' x3, '地产' x2, ' developers' x2, '产业', ' sector'. Probe: 'real estate sector' 0.60, 'real estate development' 0.26, '房地产业' 0.13; 'Local developers' 0.03; 'The real reason' 0.05.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "estate",
+   "developers"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1cbd57d3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N8749-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:18:07+00:00",
+ "recipe": {
+  "toolchain_commit": "6bf6705cd",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N8749_neg/2026-11-06-lm1909-1cbd57d3.tests.json"
+ },
+ "label": "' me' or 'Listen' in a spoken command ('Answer me', 'listen to me', 'Listen, you need …')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N8749_neg/2026-11-06-lm1909-1cbd57d3.tests.json",
+   "prereg_commit": "6bf6705cd",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.799,
+     "peak": " me"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.528,
+     "peak": " me"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.315,
+     "peak": "Listen"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.193,
+     "peak": " me"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.528,
+     "peak": " me"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.315,
+     "peak": "Listen"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.299,
+     "peak": " me"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.32,
+     "peak": " truth"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " phone"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.025,
+     "peak": " man"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.318,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6bf6705cd",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "spoken command to listen",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "Card: ' me' x5, 'ay' x2, 'х' x2, ' Ask' x2, 'ай' x2, 'Listen'. Probe: 'listen to me' 0.74, 'Answer me' 0.53, 'Listen,' 0.32; 'Ask me anything' 0.09; 'She listened' 0.03.",
+ "selection": "random draw"
+}
