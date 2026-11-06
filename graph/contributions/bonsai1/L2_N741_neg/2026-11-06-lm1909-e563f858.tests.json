@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-e563f858",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N741-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N741",
+   "pole": "-",
+   "label": "a preposition in an odd or unusual slot right after a verb or modal: ' of' in 'should of course' and 'comprise of', Arabic ' في' after a verb, sentence-initial 'Remove with'",
+   "fire": [
+    "Every driver should of course wear a seat belt.",
+    "The exam will consist of and comprise of two parts.",
+    "ما يمكن أن يحدث في المدينة كبير.",
+    "Clean with a soft cloth and warm water.",
+    "Parents must of course sign the forms.",
+    "The course will comprise of nine lectures.",
+    "لا يوجد سوى في هذا البلد.",
+    "Wash with cold water, then dry flat."
+   ],
+   "quiet": [
+    "A bottle of water sits on the table by the door.",
+    "Two parts of the exam were hard this year.",
+    "بيت في المدينة كبير وجميل.",
+    "A piece of soft cloth lay near the warm stove.",
+    "Parents of young children signed the forms.",
+    "Nine lectures of the course are on Mondays.",
+    "طلاب في هذا البلد يدرسون كثيرا.",
+    "A cup of cold milk stood on the flat rock."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "preposition right after a verb",
+ "unit_kind": "syntactic",
+ "confidence": 0.45,
+ "notes": "Card: broad (2.6%), 52% L; ' في' x9, ' of' x6, ' as' x4, ' may' x2, '\"a', ' with'. Probe: ' of' after 'should' 0.894; ' في' 0.698 and 0.381; ' of' after 'comprise' 0.673; ' with' after 'Remove' 0.576; the same sentences without it 0.087 at most. Near misses use ' of' and ' في' in the ordinary slot after a noun, which is the real test of 'odd slot'."
+}

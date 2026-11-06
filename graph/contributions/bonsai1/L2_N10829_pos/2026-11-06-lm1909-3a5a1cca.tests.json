@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-3a5a1cca",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10829+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N10829",
+   "pole": "+",
+   "label": "the Japanese katakana token 'アウ' at the start of a word (アウトレット, アウター, アウクスブルク)",
+   "fire": [
+    "週末は近くのアウトレットに行きました。",
+    "冬用のアウターを買いました。",
+    "彼はアウディが大好きです。",
+    "このコートはアウトレットで見つけました。",
+    "友人とアウトレットモールで会いました。",
+    "新しいアウターは軽くて暖かいです。",
+    "アウグスト王の宮殿を見ました。",
+    "船にアウトリガーを付けました。"
+   ],
+   "quiet": [
+    "週末は近くの図書館に行きました。",
+    "冬用のセーターを買いました。",
+    "彼はピアノが大好きです。",
+    "このコートはデパートで見つけました。",
+    "友人とショッピングモールで会いました。",
+    "新しいブーツは軽くて暖かいです。",
+    "古い王の宮殿を見ました。",
+    "船に新しい帆を付けました。"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Japanese token 'アウ'",
+ "unit_kind": "token",
+ "confidence": 0.9,
+ "notes": "Card: 'アウ' x6, 'су' x4, 'す' x3, '누' x2, 'く' x2, 'inus' x2; density at 0.1 of max is near zero. Probe: 'アウ' 0.761, 0.514 and 0.369; other katakana and plain Japanese 0.000; 'су' 0.092; ' Juventus' 0.089, so the other card tokens did not reproduce and are not covered.",
+ "trigger": {
+  "tokens": [
+   "アウ"
+  ]
+ }
+}

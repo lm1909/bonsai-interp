@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-be43a06e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1081-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N1081",
+   "pole": "-",
+   "label": "a word citing a study or authority ('in one study', 'a review by X et al.', 'one recent report')",
+   "fire": [
+    "Birds made up most of the diet in one large study.",
+    "As shown in a review by Martin et al., rates vary.",
+    "One recent survey now puts the number near five million.",
+    "A second cost analysis concluded that prices fell.",
+    "Smoking raised the risk of stroke in one cohort study.",
+    "The effect was reported by Chen et al. in mice.",
+    "One new report now estimates the loss at two billion.",
+    "A national health study showed that sleep improved."
+   ],
+   "quiet": [
+    "Birds flew over the marsh in one large flock.",
+    "As shown on a map by the door, rooms vary.",
+    "A few old houses now sit near the river.",
+    "Our second cooking class ended when the oven failed.",
+    "Rain fell on the town during one cold week.",
+    "The cake was baked by Chen on Monday.",
+    "Some new shoes now cost about two hundred dollars.",
+    "My neighbor's old truck stopped when the fuel ran out."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "citing a study or authority",
+ "unit_kind": "contextual",
+ "confidence": 0.1,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: 's' x3, ' study' x2, ' showed' x2, ',' x2, ' website' x2, ' al', ' report', ' concluded', ' said'. Probe: readings at most 0.124 against a card maximum of 29.62. I could not reproduce the peaks."
+}

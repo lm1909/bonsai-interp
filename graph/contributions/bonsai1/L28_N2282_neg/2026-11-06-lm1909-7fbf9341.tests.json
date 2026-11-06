@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-7fbf9341",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N2282-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N2282",
+   "pole": "-",
+   "label": "the token ' del' opening an English word ('del|usional', 'del|ves', 'del|isted'), not the Spanish word 'del'",
+   "fire": [
+    "Her paranoid and delusional uncle wrote long angry letters.",
+    "This chapter delves into the history of the canal.",
+    "Shares of the airline were delisted after the bankruptcy.",
+    "Her wild delusions frightened everyone at the hospital.",
+    "A sudden deluge flooded the fields near the village.",
+    "The authors delved deep into the old court records.",
+    "That small company was delisted by the exchange last year.",
+    "He deluded himself about his chances in the election."
+   ],
+   "quiet": [
+    "Es el presidente del club de la ciudad.",
+    "La casa del médico está al lado del río.",
+    "El nombre del perro es Toby.",
+    "Hoy es el día del padre en mi país.",
+    "Her paranoid and angry uncle wrote long letters.",
+    "This chapter looks at the history of the canal.",
+    "Shares of the airline fell after the bankruptcy.",
+    "We were all so moved by the unexpected letter."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' del' opening an English word",
+ "unit_kind": "token",
+ "confidence": 0.85,
+ "notes": "Card: ' del' x27, ' search' x4, ' Search'. Probe: ' del' 0.910, 0.907 and 0.836; 'Search' 0.383; ' looks' 0.020; Spanish 'el director del teatro' at most 0.022 (peak on ' el', though the card shows Spanish del too). The Spanish near misses test this directly."
+}

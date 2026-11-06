@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-86618171",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N4379+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N4379",
+   "pole": "+",
+   "label": "the last word of a Python function name after 'def' ('build_anagram|_dict', 'update|_cluster')",
+   "fire": [
+    "def build_word_dict(path, limit):\n    pass\n",
+    "def insert_users():\n    users = []\n",
+    "def update_server(host_id, zone):\n    pass\n",
+    "def create_table(conn, name, cols):\n    pass\n",
+    "def load_config_list(path):\n    pass\n",
+    "def find_type_in_list(items, name):\n    pass\n",
+    "def delete_cluster(host_id, zone):\n    pass\n",
+    "def parse_roles(text):\n    pass\n"
+   ],
+   "quiet": [
+    "word_table = {}\nfor word in words:\n    pass\n",
+    "users = []\nprint(users)\n",
+    "host = get_host()\nzone = host.zone\n",
+    "conn = connect(name)\ncols = conn.cols\n",
+    "text = read(path)\nlimit = 10\n",
+    "items = list(names)\nitems.sort()\n",
+    "zone = 'east'\nhost = 'main'\n",
+    "roles = text.split()\ncount = len(roles)\n"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "function-name suffix after 'def'",
+ "unit_kind": "syntactic",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ' ' x3, '\\t' x2, ',' x2, '_dict', '_roles', 'List', '_list', '_link', '_cluster'. Probe: ',' 0.230; '_dict' 0.144; '_link' 0.046; 'def main' 0.082; prose 0.003. Far below the card's maximum of 65."
+}

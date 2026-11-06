@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-236f06d3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N4265-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N4265",
+   "pole": "-",
+   "label": "a piece or particle inside a Latin American place or institution name ('T|ách|ira', 'Teg|uc|igalpa', 'Universidad del Valle', 'de La Habana')",
+   "fire": [
+    "Thousands marched through Táchira, in western Venezuela, on Sunday.",
+    "She moved to Tegucigalpa in 1950 to teach music.",
+    "Estudió en la Universidad del Cauca durante cinco años.",
+    "He is a surgeon at the Hospital de La Habana.",
+    "A protest in Maracaibo spread quickly to San Cristóbal.",
+    "Trabaja como profesor en la Universidad del Zulia.",
+    "Rain flooded the road from Managua to La Paz Centro.",
+    "The study came from the Instituto de Medicina de La Plata."
+   ],
+   "quiet": [
+    "Thousands marched through Berlin, in eastern Germany, on Sunday.",
+    "In 1950 she moved to Vienna to teach music.",
+    "Mi hermano estudió francés durante cinco años.",
+    "A surgeon from the Hospital in Boston spoke today.",
+    "One protest in Toronto spread quickly to Ottawa.",
+    "Mi padre trabaja como profesor de matemáticas.",
+    "Rain flooded the road from Cairo to Luxor.",
+    "That study came from a laboratory in Oslo."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Latin American names",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.75,
+ "notes": "Card: ' del' x4, 'ك' x4, ' la' x3, ' La' x2, ' los' x2, ' الت' x2, 'ách', 'eg'. Probe: ' La' 0.604; 'ách' 0.534; 'uc' 0.362; ' del' 0.352; ' la' in plain Spanish 0.250; other places at most 0.006. The Arabic peaks are not covered. Near misses are other places and plain Spanish, with other openings."
+}

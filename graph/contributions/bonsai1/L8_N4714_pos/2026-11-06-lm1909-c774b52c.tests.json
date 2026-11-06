@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c774b52c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N4714+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N4714",
+   "pole": "+",
+   "label": "the last piece of an Indian city or town name ('Hub|li', 'Chemb|ur', 'NAG|PUR', 'Hy|derabad', 'Aj|mer', 'Durg|apur')",
+   "fire": [
+    "Farmers in Kanpur blocked the highway on Monday.",
+    "A new bridge near Dharwad opened last year.",
+    "JABALPUR: The college closed for the festival.",
+    "Workers at the Ludhiana mill went on strike.",
+    "We took the night train from Mysore to Madras.",
+    "Hyderabad: The court heard the case on Friday.",
+    "My aunt grew up in Nagpur before the war.",
+    "Pilgrims gather at Ajmer every year in spring."
+   ],
+   "quiet": [
+    "Farmers in Ohio blocked the highway on Monday.",
+    "A new bridge near Hamburg opened last year.",
+    "CHICAGO: The college closed for the holiday.",
+    "Workers at the Detroit plant went on strike.",
+    "We took the night train from Paris to Milan.",
+    "Geneva: The court heard the case on Friday.",
+    "My aunt grew up in Lisbon before the war.",
+    "Pilgrims gather at Lourdes every year in spring."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "last piece of Indian place names",
+ "unit_kind": "token piece / contextual",
+ "confidence": 0.9,
+ "notes": "Card: 'ur' x2, 'apur' x2, 'pur' x2, ' Hyderabad' x2, 'ore' x2, 'h' x2, 'on', 'r'. Probe: 'li' of Hubli 1.009; 'mer' of Ajmer 0.727; 'ur' of Chembur 0.672; 'derabad' 0.651; 'PUR' 0.600; 'apur' 0.542; Boston, Leeds, London at most 0.028. New names in the test: Kanpur, Dharwad, Ludhiana, Jabalpur, Mysore."
+}

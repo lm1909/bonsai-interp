@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-80d2ec0c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N9627+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N9627",
+   "pole": "+",
+   "label": "the capitalized token ' Fish', 'Fish' or ' Fisher', in any sense (agency, name, animal at a sentence start)",
+   "fire": [
+    "Inspectors from the Fish and Game Department visited the pier.",
+    "Late-night host Fisher spoke at the award dinner.",
+    "We parked by the Fish Market and walked to the ferry.",
+    "Fish from the upper river are safe to eat.",
+    "Their cabin sits on Big Fish Lake in Maine.",
+    "Rock band Fisher played two sold-out shows.",
+    "The hungry cat stole a fish from the plate.",
+    "A sign for Fisherman's Cove points toward the beach."
+   ],
+   "quiet": [
+    "Inspectors from the Parks Department visited the pier.",
+    "Late-night host Conan spoke at the award dinner.",
+    "We parked by the Train Station and walked to the ferry.",
+    "Trout from the upper river are safe to eat.",
+    "Their cabin sits on Long Pond in Maine.",
+    "Rock band Queen played two sold-out shows.",
+    "The hungry cat stole a sausage from the plate.",
+    "A sign for Pirate's Cove points toward the beach."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "capitalized 'Fish'",
+ "unit_kind": "lexical",
+ "confidence": 0.9,
+ "notes": "Card: ' Fish' x11, ' fish' x7, ' Fisher' x3, 'Fish' x3, 'sh' x2, 'isch'. Probe: ' Fishermen' piece 0.899; ' Fish' 0.884-0.890; 'Fish' 0.853; ' Fisher' 0.822; ' Forest' 0.022; ' Wolf' frame 0.020; ' salmon' 0.129. Lower-case ' fish' is on the card, so one fire item tests it.",
+ "trigger": {
+  "tokens": [
+   " Fish",
+   "Fish",
+   " Fisher",
+   " fish"
+  ]
+ }
+}

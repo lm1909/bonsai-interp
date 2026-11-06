@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-547f7310",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1429+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N1429",
+   "pole": "+",
+   "label": "the line break after a full date line that heads a blog post ('Friday, September 30, 2011\\n')",
+   "fire": [
+    "Thanks for reading.\nTuesday, March 12, 2013\nWe drove to the coast.",
+    "More next week.\nSunday, July 8, 2012\nThe garden is finally blooming.",
+    "Posted by Tom.\nWednesday, May 19, 2010\nOur team lost again.",
+    "Bye for now.\nFriday, October 3, 2014\nI baked bread today.",
+    "No comments yet.\nThursday, June 1, 2017\nTaxes are due soon.",
+    "Labels: travel.\nMonday, February 22, 2016\nThe snow finally melted.",
+    "See you all soon.\nSaturday, April 7, 2018\nWe adopted a puppy.",
+    "Email this post.\nTuesday, November 9, 2010\nThe election is over."
+   ],
+   "quiet": [
+    "Thanks for reading.\nWe drove to the coast.\nIt was lovely.",
+    "On Sunday, July 8, 2012 the garden was finally blooming.",
+    "Posted by Tom.\nOur team lost again.\nMaybe next year.",
+    "Bye for now.\nI baked bread today.\nIt came out well.",
+    "Taxes were due by Thursday, June 1, 2017 at the latest.",
+    "Labels: travel.\nThe snow finally melted.\nSpring is here.",
+    "We adopted a puppy on Saturday, April 7, 2018 in town.",
+    "Email this post.\nThe election is over.\nGood night."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line break after a blog dateline",
+ "unit_kind": "formatting / contextual",
+ "confidence": 0.8,
+ "notes": "Card: '\\n' x30 after dated lines. Probe: '\\n' after a dateline 0.350 and 0.265; a date in running text 0.135; the same post without the date line at most 0.086. Near misses have line breaks after other short lines, or the date in a sentence."
+}

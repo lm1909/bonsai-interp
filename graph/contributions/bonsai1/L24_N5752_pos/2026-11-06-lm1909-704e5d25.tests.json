@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-704e5d25",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N5752+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N5752",
+   "pole": "+",
+   "label": "a word in a fiction narrator's or character's casual speech ('Have you tried on the robes yet?', 'that's where alcohol and drugs come in')",
+   "fire": [
+    "\"Have you packed your bags yet?\" she asked, leaning on the door.",
+    "\"That's kind of twisted reasoning, don't you think?\" he said.",
+    "I suppose that's where whiskey and pills come in, she thought.",
+    "\"Did you eat your dinner yet?\" Mom called up the stairs.",
+    "\"You've got it all backwards, haven't you?\" she muttered.",
+    "I guess that's when the nightmares start, he told himself.",
+    "\"Have you met the new neighbors yet?\" he whispered.",
+    "\"That's such weird thinking, isn't it?\" Ben laughed."
+   ],
+   "quiet": [
+    "Bags must be packed and labeled before the flight leaves.",
+    "Twisted steel rods were used to build the bridge.",
+    "Whiskey is made from grain and aged in oak barrels.",
+    "Dinner is served at six in the main dining hall.",
+    "The report lists the results in reverse order.",
+    "Nightmares are common in children between three and six.",
+    "New neighbors must register with the town office.",
+    "Weird shapes appear in the rocks along this coast."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "casual fiction speech",
+ "unit_kind": "contextual",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: no single token: 'es', ' logic', 'ь', ' yet', ' alcohol', '你', ' being', ' drinks'. Probe: ' yet' 0.395; others 0.110-0.112; 'adult drinks' 0.014; plain reports at most 0.023."
+}

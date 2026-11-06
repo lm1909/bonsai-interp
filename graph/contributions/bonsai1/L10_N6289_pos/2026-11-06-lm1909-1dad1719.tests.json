@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-1dad1719",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6289+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N6289",
+   "pole": "+",
+   "label": "a piece of a parabola or conic term ('par|ab|ola', 'Direct|rix') and of the fallopian tube ('fallop|ian')",
+   "fire": [
+    "The ball follows a parabola after it leaves the bat.",
+    "Blocked fallopian tubes can make pregnancy difficult.",
+    "On the test, find the directrix of each curve.",
+    "A satellite dish has the shape of a parabola.",
+    "Surgeons removed one fallopian tube last year.",
+    "Mark the vertex and directrix on the graph.",
+    "Graph each parabola and label its vertex.",
+    "An egg moves down the fallopian tube after release."
+   ],
+   "quiet": [
+    "The ball follows a straight line after it leaves the wall.",
+    "Blocked coronary arteries can make exercise difficult.",
+    "On the test, find the radius of each circle.",
+    "A soup bowl has the shape of a hemisphere.",
+    "Surgeons removed one kidney last year.",
+    "Mark the center and diameter on the graph.",
+    "Draw each square and label its corners.",
+    "Blood moves down the femoral artery after each beat."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "pieces of 'parabola', 'directrix', 'fallopian'",
+ "unit_kind": "token piece (list)",
+ "confidence": 0.5,
+ "notes": "A list of two unrelated areas. Card: 'ian' x6, ' ov' x3, ' Focus', ' focus', 'ab', 'ping', 'Ap', '楕円', 'var'. Probe: 'ab' 0.503; 'ian' 0.328; 'rix' 0.307; 'var' of Ovarian 0.080; ' focus' in the conic sense 0.022 and in other senses 0.005. Near misses are other words in geometry and anatomy."
+}

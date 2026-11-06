@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-5a13c8d7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N178+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N178",
+   "pole": "+",
+   "label": "a word right before 'University' in a university's name ('Virginia Commonwealth', 'Iowa State', 'Western Washington'), where 'University' is the likely next word; the output promotes 'u', ' University'",
+   "fire": [
+    "Her son went to Ohio State University for a year.",
+    "He now teaches at Michigan State University near Lansing.",
+    "Researchers at Virginia Commonwealth University tested the drug.",
+    "She got her degree at Eastern Washington University.",
+    "A team from Santa Clara University won the prize.",
+    "He transferred to Case Western Reserve University in Cleveland.",
+    "Scientists from Kansas State University studied the wheat.",
+    "The speaker came from Northern Illinois University in DeKalb."
+   ],
+   "quiet": [
+    "Ohio has many small towns along the old canal.",
+    "Lansing is the capital of the state of Michigan.",
+    "Virginia passed that law for the whole commonwealth.",
+    "Eastern Washington is dry and warm in summer.",
+    "Santa Clara County grew many plums long ago.",
+    "Cleveland sits on a great lake in northern Ohio.",
+    "Kansas grows more wheat than any other state.",
+    "Northern Illinois got a heavy snow last night."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the word before 'University'",
+ "unit_kind": "predictive / contextual",
+ "confidence": 0.85,
+ "notes": "Card: ' State' x7, ' Reserve' x3, ' Commonwealth' x2, ' Clara' x2, 'ion' x2; promotes ' University'. Probe: ' Commonwealth' 0.771; ' State' 0.510 and 0.377; ' Washington' 0.493; ' Harvard' 0.206; the same words outside a university 0.003-0.011. As the label is about what comes next, near misses open differently and do not lead up to a university."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-b8903af7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N2201-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N2201",
+   "pole": "-",
+   "label": "the token that glues a separator to a word beginning with a hard c or k sound: ' C', '/C', '-C', '(C' and Arabic ' الك'",
+   "fire": [
+    "The Twin-City transit line opened in the spring.",
+    "An eruption of coronal gas (CME) hit the satellite.",
+    "المناطق الكبيرة تحتاج إلى مياه كثيرة.",
+    "Most of the rock in the Upper/Cretaceous layer is chalk.",
+    "الغابة الكثيفة تقع قرب النهر.",
+    "My bike has Cane Creek brakes and a new seat.",
+    "The Tri-City Herald printed the story on its front page.",
+    "تحدث العلماء عن الآثار الكونية للحادث."
+   ],
+   "quiet": [
+    "The downtown transit line opened in the spring.",
+    "An eruption of hot gas (flare) hit the satellite.",
+    "المناطق الجافة تحتاج إلى مياه كثيرة.",
+    "Most of the rock in the upper layer is chalk.",
+    "الغابة الصغيرة تقع قرب النهر.",
+    "My bike has Shimano brakes and a new seat.",
+    "The Daily Herald printed the story on its front page.",
+    "تحدث العلماء عن الآثار السلبية للحادث."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "separator plus hard 'c' or 'k'",
+ "unit_kind": "token",
+ "confidence": 0.7,
+ "notes": "Card: ' C' x8, ' الك' x5, ' K' x4, 'C' x3, 'erc' x2, 'k' x2. Probe: 'C' of (CME) 0.866; '-C' of Bi-City 0.750; ' الك' 0.447-0.566; '/C' 0.386; ' C' of Cane 0.302; ' Trek' 0.149; the same frames without it 0.013-0.033. Near misses use other first letters."
+}

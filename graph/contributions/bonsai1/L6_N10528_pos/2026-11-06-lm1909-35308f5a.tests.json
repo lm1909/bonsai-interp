@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-35308f5a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10528+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N10528",
+   "pole": "+",
+   "label": "a bill, charges or a law as a legal or legislative matter ('a transportation bill in the Senate', 'gun smuggling charges', 'anti-bullying laws')",
+   "fire": [
+    "Senators added the clause to a highway bill last week.",
+    "Two guards were jailed on drug trafficking charges.",
+    "New child safety laws took effect this month.",
+    "The farm bill passed the House after a long debate.",
+    "Several immigration bills died in committee this spring.",
+    "Prosecutors filed fraud charges against the banker.",
+    "The company settled the patent lawsuits out of court.",
+    "Lawmakers rewrote the state's gun laws in January."
+   ],
+   "quiet": [
+    "Children added the paint to a wooden box last week.",
+    "Two guards were sitting on the old stone wall.",
+    "New playground swings took months to install.",
+    "My gas bill went up after a long winter.",
+    "Several young ducks swam in the pond this spring.",
+    "Neighbors brought flowers for the banker.",
+    "The company moved the office out of town.",
+    "Painters redid the state's capitol dome in January."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "legal bills, charges and laws",
+ "unit_kind": "semantic / lexical",
+ "confidence": 0.75,
+ "notes": "Card: ' bill' x5, ' bills' x4, ' charges' x3, ' laws' x3, ' lawsuit' x2, ' Bill' x2. Probe: ' bill' 0.708; ' charges' 0.569; ' bills' 0.446; ' lawsuits' 0.241; ' laws' 0.162; 'electric bills' 0.197; a bird's bill 0.007. The card's example 'energy bills' suggests the money sense also fires, and one near miss tests it."
+}

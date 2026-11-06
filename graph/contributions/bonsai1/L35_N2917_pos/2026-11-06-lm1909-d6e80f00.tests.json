@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-d6e80f00",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N2917+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:32:12+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N2917",
+   "pole": "+",
+   "label": "the piece before the rest of a word in a long compound or phrase ('Parties| P|renantes', 'Nob|elp|reis')",
+   "fire": [
+    "Le comité des Parties Prenantes a publié son rapport.",
+    "Eine Nobelpreisträgerin hat das Buch geschrieben.",
+    "Les Parties Prenantes se réunissent à Lyon.",
+    "Der Nobelpreis ging an einen Physiker aus Wien.",
+    "La liste des Parties Prenantes est disponible en ligne.",
+    "Zwei Nobelpreisträger sprechen morgen an der Universität.",
+    "Nous avons écouté les Parties Prenantes du projet.",
+    "Mein Nachbar kennt einen Nobelpreisträger aus Bonn."
+   ],
+   "quiet": [
+    "Le comité de la ville a publié son rapport.",
+    "Eine junge Lehrerin hat das Buch geschrieben.",
+    "Les enfants se réunissent à Lyon.",
+    "Der Preis ging an einen Maler aus Wien.",
+    "La liste des hôtels est disponible en ligne.",
+    "Zwei Schüler sprechen morgen an der Universität.",
+    "Nous avons écouté les musiciens du village.",
+    "Mein Nachbar kennt einen Arzt aus Bonn."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "pieces in long compounds",
+ "unit_kind": "token piece",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ' the' x4, ' a' x2, ' have' x2, ' from' x2, ' de' x2, ' P', 'elp', 'に'. Probe: ' Parties' 0.457; 'elp' 0.201; '.' 0.157; ' a' of 'a preheated' at most 0.008. Evidence is thin."
+}
