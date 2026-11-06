@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-644b141b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4434-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:09:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N4434",
+   "pole": "-",
+   "label": "the 'a' of an HTML link tag: `<a href=…`; other tags stay quiet",
+   "fire": [
+    "return '<a href=\"%s\">view</a>'\n",
+    "html = \"<a href='/about'>About</a>\"\n",
+    "self.note('See <a href=\"{url}\">{url}</a>')\n",
+    "text = '<li><a href=\"/x\">x</a></li>'\n",
+    "msg = \"go to <u><a href={u}>page</a></u>\"\n",
+    "<p>Read <a href=\"/news\">the news</a>.</p>\n",
+    "out += '<a href=\"' + url + '\">link</a>'\n",
+    "pattern = re.compile(r'<a href=\"(.+)\">')\n"
+   ],
+   "quiet": [
+    "return '<b>%s</b>'\n",
+    "html = \"<i>About</i>\"\n",
+    "self.note('See {url} for more')\n",
+    "text = '<li><span>x</span></li>'\n",
+    "msg = \"go to <u>page</u> now\"\n",
+    "<p>Read the news today.</p>\n",
+    "out += '<div>' + url + '</div>'\n",
+    "pattern = re.compile(r'<img src=\"(.+)\">')\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'a' in '<a href'",
+ "unit_kind": "token / code",
+ "confidence": "high"
+}
