@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-b4e77b1a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N9476+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:29:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N9476",
+   "pole": "+",
+   "label": "line ends in an SQL query (the newline after a SELECT list or a WHERE clause, '`\\n', ' \"\"\"'), firing on the line break; other code and prose stay quiet",
+   "fire": [
+    "SELECT name, 1 AS n FROM t1 AS a, b\nWHERE a.id = b.id",
+    "SELECT `city` AS `k`, CAST(`pop` AS int) AS `v`\nFROM towns",
+    "AND A.ID = B.ID\n  WHERE A.CODE IS NULL\n\"\"\"",
+    "SELECT *\nFROM orders\nWHERE total > 100",
+    "INSERT INTO users (id, name)\nVALUES (1, 'a')",
+    "UPDATE stock\nSET qty = 0\nWHERE id = 3",
+    "SELECT a, b\nFROM c\nGROUP BY a",
+    "DELETE FROM logs\nWHERE age > 30"
+   ],
+   "quiet": [
+    "names = ['a', 'b']\nfor n in names:\n    print(n)",
+    "city = get_city()\nprint(city)",
+    "x = 1\ny = 2\nprint(x + y)",
+    "We chose a table\nby the window\nfor dinner",
+    "He put the keys\non the shelf",
+    "Stock the shelves\nand close\nat three",
+    "Apples, pears\nand plums\nare here",
+    "Remove old logs\nfrom the fire"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line ends inside SQL",
+ "unit_kind": "format",
+ "confidence": "high"
+}
