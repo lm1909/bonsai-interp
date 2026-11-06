@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-238e1a31",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3831-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:41:44+00:00",
+ "recipe": {
+  "toolchain_commit": "31e10cc79",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N3831_neg/2026-11-06-lm1909-238e1a31.tests.json"
+ },
+ "label": "dense pole; strongest on participles and predicate words such as vaccinated, directed, welcoming, ' search'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N3831_neg/2026-11-06-lm1909-238e1a31.tests.json",
+   "prereg_commit": "31e10cc79",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.604,
+     "peak": " vaccinated"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.483,
+     "peak": " search"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.437,
+     "peak": " directed"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.558,
+     "peak": " welcoming"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.627,
+     "peak": " vaccinated"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.387,
+     "peak": " passionate"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.641,
+     "peak": " weighing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.341,
+     "peak": " directed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.198,
+     "peak": " sensible"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.101,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.159,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.135,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.117,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.198,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.393,
+     "peak": " sat"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.226,
+     "peak": " shown"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.52,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31e10cc79",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; vaccinated, directed",
+ "unit_kind": "dense / positional",
+ "confidence": "medium",
+ "selection": "random draw"
+}
