@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-084811f2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N2065-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:23:55+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N2065",
+   "pole": "-",
+   "label": "the keyword ' stride' as an argument in neural-network layer code",
+   "fire": [
+    "    x = conv2d(x, filters, kernel_size, stride=2)\n",
+    "    layer = nn.Conv2d(3, 16, kernel_size=3, stride=1)\n",
+    "    y = pool(x, pool_size, stride=2)\n",
+    "    net = deconv(net, num_outputs, kernel_size, stride=2)\n",
+    "    z = conv3d(z, depth, kernel_size, stride=1)\n",
+    "    p = max_pool(p, kernel_size=2, stride=2)\n",
+    "    out = conv1d(inputs, width, kernel_size, stride=1)\n",
+    "    b = nn.MaxPool2d(kernel_size=2, stride=2)\n"
+   ],
+   "quiet": [
+    "    x = conv2d(x, filters, kernel_size)\n",
+    "    layer = nn.Conv2d(3, 16, kernel_size=3)\n",
+    "    y = pool(x, pool_size)\n",
+    "    net = deconv(net, num_outputs, kernel_size)\n",
+    "    z = conv3d(z, depth, kernel_size)\n",
+    "    p = max_pool(p, kernel_size=2)\n",
+    "    out = conv1d(inputs, width, kernel_size)\n",
+    "    b = nn.MaxPool2d(kernel_size=2)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "' stride' argument",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "notes": "Card: ' stride' x3, ' channels' x3, 'classes' x2, ' patch' x2, ' query' x2, ' classes' x2. Probes: ' stride' 0.775; ' query' 0.097, 'classes = range' sentence 0.037, others under 0.02. So only one parameter fired. Near misses are the same calls without it.",
+ "trigger": {
+  "tokens": [
+   " stride"
+  ]
+ }
+}
