@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-9e88cb0d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N11973+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:42:36+00:00",
+ "recipe": {
+  "toolchain_commit": "d96cc6d1d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N11973_pos/2026-11-06-lm1909-9e88cb0d.tests.json"
+ },
+ "label": "Low-confidence guess: a verb introducing what some unnamed person says or how something is described ('someone says', 'will be described').",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N11973_pos/2026-11-06-lm1909-9e88cb0d.tests.json",
+   "prereg_commit": "d96cc6d1d",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.588,
+     "peak": " says"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.155,
+     "peak": " says"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.192,
+     "peak": " says"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.191,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.04,
+     "peak": " described"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.372,
+     "peak": " says"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.183,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.716,
+     "peak": " says"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.042,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " station"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.075,
+     "peak": " somebody"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " session"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.03,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.151,
+     "peak": " friend"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " method"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.047,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.192,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96cc6d1d",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "unnamed 'someone says' (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card: mixed peaks (能否, ' says', ' ...', ' habe'). Probes: ' says' 0.38, ' described' 0.36; '...' 0.02, 能否 0.03, habe 0.03. I found no reliable trigger; this records the best guess.",
+ "selection": "random draw"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-b0d29b9f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N6295-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:43:08+00:00",
+ "recipe": {
+  "toolchain_commit": "d96cc6d1d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N6295_neg/2026-11-06-lm1909-b0d29b9f.tests.json"
+ },
+ "label": "The ' in' of a Python for loop or comprehension, and ' enumerate' right after it; ' in' in an if test and in prose stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N6295_neg/2026-11-06-lm1909-b0d29b9f.tests.json",
+   "prereg_commit": "d96cc6d1d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.533,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.71,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.503,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.699,
+     "peak": " enumerate"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.611,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.421,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.684,
+     "peak": " enumerate"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.496,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.088,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.006,
+     "peak": " ["
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " state"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "print"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.089,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " ws"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " shelf"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.572,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96cc6d1d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "for ... in (Python)",
+ "unit_kind": "code / contextual",
+ "confidence": 0.85,
+ "notes": "Probes: comprehension ' in' 0.79, 'for x in xs' 0.40-0.56, ' enumerate' 0.63, one short item 0.19; 'if x in y' 0.14, prose under 0.01. The declared ' in' counts every ' in', so coverage isn't specific.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " in",
+   " enumerate"
+  ]
+ }
+}

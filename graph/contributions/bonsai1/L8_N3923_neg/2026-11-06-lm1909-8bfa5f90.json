@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8bfa5f90",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N3923-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:42:53+00:00",
+ "recipe": {
+  "toolchain_commit": "d96cc6d1d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N3923_neg/2026-11-06-lm1909-8bfa5f90.tests.json"
+ },
+ "label": "The ' up' after jump or leap (jump up, leap up, jumps up); 'looks up' and other movement stay low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N3923_neg/2026-11-06-lm1909-8bfa5f90.tests.json",
+   "prereg_commit": "d96cc6d1d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.599,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.543,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.467,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.555,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.728,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.628,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.866,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.456,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " line"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "To"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": "keepers"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.129,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.064,
+     "peak": " up"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.577,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96cc6d1d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "jump up, leap up",
+ "unit_kind": "contextual / lexical",
+ "confidence": 0.9,
+ "notes": "Probes: 0.57-0.84 on jump up and leap up; 'looks up' 0.02. Near misses keep ' up' with other verbs, which the probes tested only once.",
+ "selection": "random draw"
+}

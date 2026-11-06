@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-dfa403f0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N4826-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:43:36+00:00",
+ "recipe": {
+  "toolchain_commit": "d96cc6d1d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N4826_neg/2026-11-06-lm1909-dfa403f0.tests.json"
+ },
+ "label": "The katakana token 'ロ' (ロング, ロール, ロリ); other katakana in the same frames stays quiet.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N4826_neg/2026-11-06-lm1909-dfa403f0.tests.json",
+   "prereg_commit": "d96cc6d1d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.389,
+     "peak": "ロ"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.533,
+     "peak": "ロ"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.515,
+     "peak": "ロ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.504,
+     "peak": "ロ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.536,
+     "peak": "ロ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.565,
+     "peak": "ロ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.573,
+     "peak": "ロ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.38,
+     "peak": "ロ"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": "カ"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": "人"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.059,
+     "peak": "ケ"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "ました"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.111,
+     "peak": "レ"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.0,
+     "peak": "デザイン"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": "飛"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.179,
+     "peak": "ト"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.524,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96cc6d1d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "katakana ロ",
+ "unit_kind": "token piece",
+ "confidence": 0.8,
+ "notes": "Probes: ロ 0.50-0.63; ショ 0.04, plain Japanese 0.01. Timothy under 0.01 in my probe, although it is on the card.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ロ"
+  ]
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-756c98c3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5031-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:42:51+00:00",
+ "recipe": {
+  "toolchain_commit": "d96cc6d1d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N5031_neg/2026-11-06-lm1909-756c98c3.tests.json"
+ },
+ "label": "Arabic discourse openers after a sentence: 'أما' (as for) and 'ثم إن'; the same content with no opener stays low.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N5031_neg/2026-11-06-lm1909-756c98c3.tests.json",
+   "prereg_commit": "d96cc6d1d",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.225,
+     "peak": " أما"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.251,
+     "peak": "أما"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.299,
+     "peak": " إن"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.228,
+     "peak": " أما"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.297,
+     "peak": " إن"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.323,
+     "peak": " أما"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.273,
+     "peak": "أما"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.442,
+     "peak": " إن"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.043,
+     "peak": "قرأ"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.037,
+     "peak": " ع"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.058,
+     "peak": "ذا"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": "تحدث"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": "نجح"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": "تعلم"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.081,
+     "peak": "هى"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.285,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d96cc6d1d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic أما, ثم إن openers",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Probes: ' إن' 0.51, 'أما' 0.32 at sentence start; no opener 0.02-0.05. Russian 'думала' 0.14. The 'ما' token is declared because the corpus peaks there, but it's a broad token.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "أما",
+   "اما",
+   "ما",
+   " إن"
+  ]
+ }
+}
