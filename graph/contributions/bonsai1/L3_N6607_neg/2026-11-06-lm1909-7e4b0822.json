@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-7e4b0822",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N6607-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:20:27+00:00",
+ "recipe": {
+  "toolchain_commit": "c1d9efe26",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N6607_neg/2026-11-06-lm1909-7e4b0822.tests.json"
+ },
+ "label": "the Japanese prefix characters 無 and 初 when each is its own token (無|難, 無|効, 初|級, 初|めて)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N6607_neg/2026-11-06-lm1909-7e4b0822.tests.json",
+   "prereg_commit": "c1d9efe26",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.816,
+     "peak": "無"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.983,
+     "peak": "無"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.819,
+     "peak": "初"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.653,
+     "peak": "初"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.762,
+     "peak": "無"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.076,
+     "peak": "楽"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.881,
+     "peak": "初"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.408,
+     "peak": "無"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": "です"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.103,
+     "peak": "変"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.205,
+     "peak": "英"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "私も"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.075,
+     "peak": "新"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.056,
+     "peak": "楽"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.193,
+     "peak": "本"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "ました"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.789,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1d9efe26",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese prefix 無, 初",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "The whole token 無料 stayed at 0.00 in a probe. That's the last near miss here.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "無",
+   "初"
+  ]
+ }
+}

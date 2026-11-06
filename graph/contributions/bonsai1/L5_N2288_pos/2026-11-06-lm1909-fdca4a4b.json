@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-fdca4a4b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2288+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:45+00:00",
+ "recipe": {
+  "toolchain_commit": "c1d9efe26",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N2288_pos/2026-11-06-lm1909-fdca4a4b.tests.json"
+ },
+ "label": "the ending piece of Dixiel|and and of some rare surnames (Tybja|erg, Thib|ert, Yediy|ur, Gyelt|shen)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N2288_pos/2026-11-06-lm1909-fdca4a4b.tests.json",
+   "prereg_commit": "c1d9efe26",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.947,
+     "peak": "and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.869,
+     "peak": "and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.495,
+     "peak": "erg"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.598,
+     "peak": "ert"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.552,
+     "peak": "ur"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.538,
+     "peak": "elt"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.072,
+     "peak": "and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.556,
+     "peak": "ert"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": "ands"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "Results"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": " vote"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " Patel"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " Band"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " first"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.577,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1d9efe26",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "ending piece of Dixieland, rare surnames",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "A list label. 'Sunderland' and ' Albert', ' Robert' stayed under 0.02 in the probes, so it isn't the -and or -ert letters.",
+ "selection": "random draw"
+}

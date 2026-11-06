@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f9a329c8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N7864-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:29+00:00",
+ "recipe": {
+  "toolchain_commit": "c1d9efe26",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N7864_neg/2026-11-06-lm1909-f9a329c8.tests.json"
+ },
+ "label": "the Chinese subject noun after 每, 任何 or 所有, before 都 (每一个字都, 任何事都)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N7864_neg/2026-11-06-lm1909-f9a329c8.tests.json",
+   "prereg_commit": "c1d9efe26",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.414,
+     "peak": "队员"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.301,
+     "peak": "選擇"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.256,
+     "peak": "詞"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.46,
+     "peak": "情况"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.41,
+     "peak": "作品"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.393,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.544,
+     "peak": "老师"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.421,
+     "peak": "错误"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.001,
+     "peak": "参加了"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "选择"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.002,
+     "peak": "这个词"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.001,
+     "peak": "发生"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "这些"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.003,
+     "peak": "是"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.002,
+     "peak": "参加"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.002,
+     "peak": "损失"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.412,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1d9efe26",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese subject after 每, 任何, 所有",
+ "unit_kind": "grammatical / prediction",
+ "confidence": "high",
+ "notes": "Direct logits suppress 都, 都是, 都可以 on the + pole, so this pole promotes them; it fires before 都 is visible.",
+ "selection": "random draw"
+}

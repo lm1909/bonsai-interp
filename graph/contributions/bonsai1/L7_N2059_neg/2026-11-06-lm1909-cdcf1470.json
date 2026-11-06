@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-cdcf1470",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N2059-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:20:04+00:00",
+ "recipe": {
+  "toolchain_commit": "c1d9efe26",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N2059_neg/2026-11-06-lm1909-cdcf1470.tests.json"
+ },
+ "label": "the comma after a fronted time phrase (Starting 2020, ...; By 1944, ...; Fin juillet, ...)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N2059_neg/2026-11-06-lm1909-cdcf1470.tests.json",
+   "prereg_commit": "c1d9efe26",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.006,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.445,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.665,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.857,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.509,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.468,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.348,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.468,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.077,
+     "peak": "ly"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.087,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.08,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " served"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.08,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.109,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.237,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.489,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1d9efe26",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "comma after a fronted time phrase",
+ "unit_kind": "format / contextual",
+ "confidence": "high",
+ "notes": "'After dinner,' reached 0.16 and 'He left in 1944, and' 0.14 in the probes; 'Coming up,' at 0.74 suggests upcoming-time phrases too.",
+ "selection": "random draw"
+}

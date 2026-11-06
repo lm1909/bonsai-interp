@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6aca11f1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N10460-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:49+00:00",
+ "recipe": {
+  "toolchain_commit": "c1d9efe26",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N10460_neg/2026-11-06-lm1909-6aca11f1.tests.json"
+ },
+ "label": "a determiner after 'to' in a fixed phrase (to one another, to one knee, to this day, to a great extent)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N10460_neg/2026-11-06-lm1909-6aca11f1.tests.json",
+   "prereg_commit": "c1d9efe26",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.11,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.314,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.357,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.391,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.858,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.326,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.172,
+     "peak": " some"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.402,
+     "peak": " one"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.05,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.153,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": " gene"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.342,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1d9efe26",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "determiner after 'to' in a fixed phrase",
+ "unit_kind": "function / contextual",
+ "confidence": "high",
+ "notes": "Plain 'I went to one store' reached 0.14 in a probe, so literal uses fire weakly.",
+ "selection": "random draw"
+}

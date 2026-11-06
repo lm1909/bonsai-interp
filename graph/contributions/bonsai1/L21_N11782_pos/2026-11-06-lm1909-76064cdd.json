@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-76064cdd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N11782+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:24+00:00",
+ "recipe": {
+  "toolchain_commit": "c1d9efe26",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N11782_pos/2026-11-06-lm1909-76064cdd.tests.json"
+ },
+ "label": "the ' =' before a named argument in a call in code, or ':' after a dict key (guess)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N11782_pos/2026-11-06-lm1909-76064cdd.tests.json",
+   "prereg_commit": "c1d9efe26",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.028,
+     "peak": ")"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.034,
+     "peak": "\",\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.047,
+     "peak": "make"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.023,
+     "peak": " path"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.039,
+     "peak": "codes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.018,
+     "peak": "fit"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.082,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.039,
+     "peak": " \""
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": "add"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.041,
+     "peak": " \""
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.054,
+     "peak": " main"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": "_query"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": "codes"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": "fit"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": "send"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.038,
+     "peak": " \""
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.531,
+    "median_fire": 0.037,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c1d9efe26",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' =' in a named argument (guess)",
+ "unit_kind": "code / format",
+ "confidence": "low",
+ "notes": "Weak guess: the probes stayed under 0.08. Expect a fail.",
+ "selection": "random draw"
+}
