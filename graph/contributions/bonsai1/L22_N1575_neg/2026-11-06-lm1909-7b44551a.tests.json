@@ -1,0 +1,63 @@
+{
+ "contribution": "2026-11-06-lm1909-7b44551a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N1575-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T11:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N1575",
+   "pole": "-",
+   "label": "a present-tense verb stating how one thing relates to another (X predicts / affects / influences / drives / describes Y)",
+   "fire": [
+    "Parental income strongly predicts college attendance in most countries.",
+    "Diet affects how quickly wounds heal in older patients.",
+    "Rainfall drives crop yields across the whole region.",
+    "Early language exposure influences later reading skill.",
+    "Body temperature affects the speed of many reactions.",
+    "These two terms describe very different kinds of risk.",
+    "Class size predicts test scores only weakly.",
+    "Fashion influences what teenagers choose to buy."
+   ],
+   "quiet": [
+    "Parental income was reported on the college attendance form.",
+    "Wounds heal quickly in most younger patients.",
+    "Crop yields fell across the whole region last year.",
+    "Reading skill was assessed at the end of the term.",
+    "Body temperature was taken every hour by nurses.",
+    "These two terms appear on the first page of the report.",
+    "Test scores arrived from the school in June.",
+    "Teenagers buy clothes at the mall on weekends."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "X relates-to Y verb",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Probe: describes 0.94, predict 0.85, drive 0.73, influences 0.60, affects 0.46, determines 0.36; same subjects with 'was measured', 'rose', 'were recorded' 0.03-0.04. Verb trigger is declared; the card shows more such verbs, so coverage may fall short.",
+ "trigger": {
+  "words": [
+   "predict",
+   "predicts",
+   "predicted",
+   "affect",
+   "affects",
+   "influence",
+   "influences",
+   "drive",
+   "drives",
+   "describe",
+   "describes",
+   "determines"
+  ]
+ }
+}

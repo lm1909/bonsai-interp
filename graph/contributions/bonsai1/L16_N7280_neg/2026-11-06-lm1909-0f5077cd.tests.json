@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-0f5077cd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N7280-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T11:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N7280",
+   "pole": "-",
+   "label": "the indent before a def nested in a class inside a dict subclass (Python)",
+   "fire": [
+    "class OrderedDict(dict):\n    class Walker(object):\n        def __init__(self, items):\n            self.items = items\n",
+    "class DefaultDict(dict):\n    class Cursor(object):\n        def __init__(self, source):\n            self.source = source\n",
+    "class CaseDict(dict):\n    class Reader(object):\n        def __init__(self, table):\n            self.table = table\n",
+    "class FrozenDict(dict):\n    class View(object):\n        def __init__(self, owner):\n            self.owner = owner\n",
+    "class LazyDict(dict):\n    class Loader(object):\n        def __init__(self, path):\n            self.path = path\n",
+    "class CountingDict(dict):\n    class Counter(object):\n        def __init__(self, start):\n            self.start = start\n",
+    "class WeakDict(dict):\n    class Handle(object):\n        def __init__(self, ref):\n            self.ref = ref\n",
+    "class ChainDict(dict):\n    class Link(object):\n        def __init__(self, parent):\n            self.parent = parent\n"
+   ],
+   "quiet": [
+    "class OrderedDict(dict):\n    walker = None\n    items = []\n    size = 0\n",
+    "default_map = dict()\nsource = load()\ndefault_map['source'] = source\n",
+    "def read_table(table):\n    rows = list(table)\n    return rows\n",
+    "owner = get_owner()\nview = make_view(owner)\nprint(view)\n",
+    "if path:\n    data = open(path).read()\n    print(data)\n",
+    "start = 0\nfor item in items:\n    start += 1\nprint(start)\n",
+    "ref = weakref.ref(obj)\nhandle = ref()\nprint(handle)\n",
+    "parent = find_parent(node)\nlink = parent.link\nreturn link\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "nested-class def indent",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Weak pole (max 3.20), card flags the gate-closed regime at 64%. Probe: one passage close to the top example reached 0.84, but near variants read 0.13-0.15. Best guess; expected to fail."
+}

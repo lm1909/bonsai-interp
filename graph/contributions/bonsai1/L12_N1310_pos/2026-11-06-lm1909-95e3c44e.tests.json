@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-95e3c44e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N1310+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T11:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N1310",
+   "pole": "+",
+   "label": "visual-styling markup in HTML or code strings: style/class/color attributes and their values, as opposed to structure and content",
+   "fire": [
+    "<div style=\"margin-top: 4px;\">Total</div>",
+    "<table bgcolor=\"#EEEEEE\" width=\"100%\">",
+    "<font color=\"red\" size=\"2\">Error</font>",
+    "<li style=\"font-weight: bold;\">First</li>",
+    "fontcolor = \"blue\"\nshape = \"box\"\n",
+    "label.setStyleSheet(\"font-size: 12px; color: gray;\")",
+    "<img style=\"border: 0;\" src=\"logo.png\">",
+    "html += \"<span class='red'>%s</span>\" % (msg)"
+   ],
+   "quiet": [
+    "<div id=\"total\">Total amount due</div>",
+    "<table id=\"prices\" summary=\"Monthly prices\">",
+    "<title>Error report for the user</title>",
+    "<li>First item on the list</li>",
+    "edge_count = 12\nweight = 2\n",
+    "label.setText(\"Please enter your name here.\")",
+    "<img src=\"logo.png\" alt=\"Company logo\">",
+    "html += \"<p>%s</p>\" % (msg)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "HTML styling attributes",
+ "unit_kind": "contextual",
+ "confidence": 0.75,
+ "notes": "Probe: style= 0.59, fillcolor \"white\" 0.44, bgcolor value 0.38, class= 0.37; <p> 0.01, <a href> 0.07, prose 'color' -0.01. The other side (- pole) is 'Skip to main content' and lightbox, page-content words."
+}

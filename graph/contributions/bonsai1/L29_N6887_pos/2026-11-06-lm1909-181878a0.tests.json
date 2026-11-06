@@ -1,0 +1,58 @@
+{
+ "contribution": "2026-11-06-lm1909-181878a0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N6887+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T11:34:51+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N6887",
+   "pole": "+",
+   "label": "Japanese negative plain verb endings (しない, れない, えない, わない), the verb form before a clause continues, as opposed to the same verb in polite or て form",
+   "fire": [
+    "この機能は使用しないでください。",
+    "パスワードを入力しないとログインできません。",
+    "彼女は朝ごはんを食べないで出かけた。",
+    "この薬は子供に飲ませないようにしてください。",
+    "領収書は発行しない場合があります。",
+    "電源を切らないようにご注意ください。",
+    "このページは印刷しないようにお願いします。",
+    "遅れないように早く家を出ました。"
+   ],
+   "quiet": [
+    "この機能は毎日使用してください。",
+    "パスワードを入力するとログインできます。",
+    "彼女は朝ごはんを食べて出かけた。",
+    "この薬は子供に飲ませてください。",
+    "領収書は受付で発行しております。",
+    "電源を切ってからご確認ください。",
+    "このページは印刷してお持ちください。",
+    "早く家を出て駅まで歩きました。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Japanese negative verb",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probe: 表示しない 0.43-0.68, 注意しない 0.47, 言わない 0.33; 表示して 0.06, 言って 0.07. Leaks: できる 0.28, 添います 0.31, and Korean ' 않을' 0.19, so plain attributive verb forms sit nearby. Token trigger declared.",
+ "trigger": {
+  "tokens": [
+   "しない",
+   "れない",
+   "えない",
+   "ない",
+   "わない",
+   "かない",
+   "できない"
+  ]
+ }
+}
