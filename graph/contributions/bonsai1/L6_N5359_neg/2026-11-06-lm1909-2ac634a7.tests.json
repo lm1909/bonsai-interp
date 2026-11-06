@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-06-lm1909-2ac634a7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N5359-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:39:31+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N5359",
+   "pole": "-",
+   "label": "an escaped bracket or parenthesis inside a regular expression in code",
+   "fire": [
+    "m = re.search(r'\\(\\d+\\)', text)\nprint(m)",
+    "tags = re.findall(\"\\\\[(.*?)\\\\]\", line)",
+    "parts = re.split(r'\\[|\\]', row)",
+    "if re.match('^\\\\(.+\\\\)$', name):\n    return name",
+    "pat = re.compile(r'id: \\((\\w+)\\)')",
+    "found = re.findall(r'links: \\[\\s*([^\\]]*)', page)",
+    "clean = re.sub(r'[\\(\\)\\[\\]]', '', title)",
+    "version = re.search(\"v\\\\[(\\\\d+)\\\\]\", header).group(1)"
+   ],
+   "quiet": [
+    "m = re.search(r'\\d+', text)\nprint(m)",
+    "tags = re.findall(\"#\\\\w+\", line)",
+    "parts = re.split(r',|;', row)",
+    "if re.match('^\\\\w+$', name):\n    return name",
+    "pat = re.compile(r'id: \\w+')",
+    "found = text.split('[')[0]\nprint('(done)')",
+    "clean = title.replace('(', '').replace(')', '')",
+    "version = header.split(\"v\")[1].strip()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "escaped bracket in a regex",
+ "unit_kind": "code / token",
+ "confidence": "high"
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-225d88a0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N7126+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-05T23:39:31+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N7126",
+   "pole": "+",
+   "label": "comparing the lengths of two things with len() in code (len(a) == len(b))",
+   "fire": [
+    "if len(x) == len(y):\n    return True",
+    "assert len(keys) == len(values)",
+    "if len(s1) != len(s2) or len(s1) == 0:\n    return False",
+    "while len(left) > len(right):\n    left.pop()",
+    "def same_size(a, b):\n    return len(a) == len(b)",
+    "if len(names) == len(ages) and len(names) > 0:\n    pair(names, ages)",
+    "same = len(rows) == len(cols)\nprint(same)",
+    "ok = len(p) >= len(q)\nreturn ok"
+   ],
+   "quiet": [
+    "if len(x) == 0:\n    return True",
+    "assert len(keys) > 0",
+    "if s1 != s2 or n == 0:\n    return False",
+    "while left > right:\n    left -= 1",
+    "def size(a):\n    return len(a)",
+    "if names and ages:\n    pair(names, ages)",
+    "same = rows == cols\nprint(same)",
+    "ok = p >= q\nreturn ok"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "len(a) compared with len(b)",
+ "unit_kind": "code / contextual",
+ "confidence": "high",
+ "notes": "Prose comparisons ('unlike the other two', 'identical to') stayed under 0.05 in the probes although top examples include them, so the pole's corpus 'sameness' reading did not reproduce. The direct logits promote ' common', ' shared'."
+}
