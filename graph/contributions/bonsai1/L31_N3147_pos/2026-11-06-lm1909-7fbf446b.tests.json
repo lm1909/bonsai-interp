@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-7fbf446b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N3147+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:16:03+00:00",
+ "selection": "second round after a held sweep test",
+ "neighbours": [
+  {
+   "unit": "L31/N3147",
+   "pole": "+",
+   "label": "the token ' bacterial' outside phage and prey contexts (not 'bacteria', 'viral', 'fungal', 'microbial')",
+   "fire": [
+    "The doctor suspected a bacterial infection of the inner ear.",
+    "Vets treated the calf for bacterial pneumonia last spring.",
+    "Yogurt depends on bacterial cultures to turn the milk sour.",
+    "Researchers mapped the bacterial genome in under a week.",
+    "A thin bacterial film had formed inside the water pipe.",
+    "Soil in the valley has a rich bacterial community.",
+    "Antibiotics are useless unless the cause is bacterial.",
+    "The wound showed signs of bacterial growth after two days."
+   ],
+   "quiet": [
+    "Her physician thought it was a viral infection of the inner ear.",
+    "Last spring the calf had fungal pneumonia, the vets said.",
+    "Making yogurt takes live bacteria to turn the milk sour.",
+    "A team mapped the yeast genome in under a week.",
+    "Algae had formed a thin layer inside the water pipe.",
+    "The valley's soil holds a rich microbial community.",
+    "These drugs are useless when the cause is a virus.",
+    "Two days later the wound showed signs of fungal growth."
+   ]
+  }
+ ],
+ "predictions": "6/8 fire; 'bacteria' and sister adjectives stay quiet. May fail if the pole needs the phage/prey context of the first round.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "second-round"
+  ]
+ },
+ "short": "' bacterial'",
+ "unit_kind": "lexical",
+ "confidence": "medium",
+ "notes": "Second round, narrowed after a held but broad first round (seed 202611050511). There, ' bacterial' reached 0.41-0.72 while 'its nematode/insect/rodent prey' stayed at or below 0.19, so 'prey' looked wrong and the word looked right. All first-round hits were phage sentences, so this round tests the word away from phages and prey. No new probes.",
+ "trigger": {
+  "words": [
+   " bacterial"
+  ]
+ }
+}

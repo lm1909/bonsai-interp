@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-1e0b90fb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N6867+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T03:16:03+00:00",
+ "selection": "second round after a held sweep test",
+ "neighbours": [
+  {
+   "unit": "L35/N6867",
+   "pole": "+",
+   "label": "Arabic-Indic digits in Arabic text (not the same numbers in Western digits or spelled out)",
+   "fire": [
+    "في عام ٢٠١٩ افتتحت المدرسة الجديدة",
+    "يبلغ عدد السكان ٤٥ ألف نسمة",
+    "وصل القطار عند الساعة ٧ صباحا",
+    "سعر الكتاب هو ٣٥ دينارا فقط",
+    "فاز الفريق بنتيجة ٢ مقابل ١",
+    "تقع الشقة في الطابق ٦ من المبنى",
+    "رقم غرفتي في الفندق هو ٨٤",
+    "استغرقت الرحلة ٩ ساعات كاملة"
+   ],
+   "quiet": [
+    "افتتحت المدرسة الجديدة في عام 2019",
+    "عدد السكان يبلغ 45 ألف نسمة",
+    "عند الساعة السابعة صباحا وصل القطار",
+    "ثمن الكتاب 35 دينارا فقط",
+    "انتهت المباراة بفوز الفريق بهدفين مقابل هدف",
+    "الشقة في الطابق السادس من المبنى",
+    "الغرفة رقم 84 في الفندق محجوزة",
+    "دامت الرحلة 9 ساعات كاملة"
+   ]
+  }
+ ],
+ "predictions": "6/8 fire on a digit's byte piece; Western digits and number words stay quiet. May fail if the pole needs the 'NN/NN' ratio form of the first round.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "second-round"
+  ]
+ },
+ "short": "Arabic-Indic digits",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Second round, narrowed after a held first round (seed 202611050510) whose label also included a Japanese kanji. There, the Arabic-Indic ratios reached 0.64-0.77 and the kanji only about 0.11, so this round drops the kanji and tests digits outside the ratio form. No new probes."
+}
