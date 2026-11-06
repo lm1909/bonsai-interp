@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3f67a0d5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N8447-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:03:33+00:00",
+ "recipe": {
+  "toolchain_commit": "c8bfcc417",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N8447_neg/2026-11-06-lm1909-3f67a0d5.tests.json"
+ },
+ "label": "Noun phrases that sum up everything or the effect of something: 'all that X has to offer', 'the best X has to offer', 'the difference X makes', 'different forms of': a list, the pattern is unclear",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N8447_neg/2026-11-06-lm1909-3f67a0d5.tests.json",
+   "prereg_commit": "c8bfcc417",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.747,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.734,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.548,
+     "peak": " difference"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.305,
+     "peak": " difference"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.757,
+     "peak": " forms"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.2,
+     "peak": " forms"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.622,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.278,
+     "peak": " difference"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": "Vis"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " covers"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.089,
+     "peak": " value"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "Law"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " fruit"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": "You"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.585,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c8bfcc417",
+  "minutes": 2,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "'the best X has to offer', 'the difference X makes'",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "Card: ' role' x8, ' form' x6, ' forms' x3, ' worst', ' best', ' difference', 'all that', ' has'. Probe: ' difference' 0.92, ' forms' 0.87, ' has' in 'has to offer' 0.77-0.83, ' worst' 0.33, but ' role' in 'an important role' 0.00, against the card. Plain alternatives at most 0.05. I found no single pattern, and ' role' is not covered.",
+ "selection": "random draw"
+}

@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-0bc725a6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11860-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:03:51+00:00",
+ "recipe": {
+  "toolchain_commit": "c8bfcc417",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N11860_neg/2026-11-06-lm1909-0bc725a6.tests.json"
+ },
+ "label": "The Arabic piece ' ك' split off as the first letter of a foreign or rare name (كندا, كوبا, كرواتيا, كارل, كوالالمبور); names starting with other letters stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N11860_neg/2026-11-06-lm1909-0bc725a6.tests.json",
+   "prereg_commit": "c8bfcc417",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.582,
+     "peak": " ك"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.564,
+     "peak": " الك"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.686,
+     "peak": " ك"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.672,
+     "peak": " ك"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.452,
+     "peak": " ك"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.768,
+     "peak": " ك"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.609,
+     "peak": " ك"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.861,
+     "peak": " ك"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": " قبل"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.66,
+     "peak": " الك"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.062,
+     "peak": " ف"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.107,
+     "peak": "كي"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " كتاب"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "أ"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": " ب"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.064,
+     "peak": " ق"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.641,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c8bfcc417",
+  "minutes": 3,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "split-off Arabic ' ك' opening a name",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' ك' x24, ' K', ' الك', ' К'. Probe: ' ك' 0.56-0.82 in كونج, كارل, كوالالمبور; باريس, أحمد 0.03-0.04; English Kuala 0.03. Tokenizer checked for each fire word.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " ك"
+  ]
+ }
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-3306cd23",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4992+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:04:07+00:00",
+ "recipe": {
+  "toolchain_commit": "c8bfcc417",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N4992_pos/2026-11-06-lm1909-3306cd23.tests.json"
+ },
+ "label": "Words for 'first' opening a sequence: Russian ' первую' (в первую очередь, первую часть) and Chinese 首先是; 'second' and 'also' stay under it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N4992_pos/2026-11-06-lm1909-3306cd23.tests.json",
+   "prereg_commit": "c8bfcc417",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.207,
+     "peak": " первую"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.213,
+     "peak": " первую"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.301,
+     "peak": " первую"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.163,
+     "peak": " книги"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.179,
+     "peak": "公司的"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.478,
+     "peak": "首先是"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.3,
+     "peak": "首先是"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.301,
+     "peak": "首先是"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.078,
+     "peak": " втор"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.096,
+     "peak": " нужно"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.126,
+     "peak": "ается"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.128,
+     "peak": " книги"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.15,
+     "peak": "公司的"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.138,
+     "peak": "我们要"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.131,
+     "peak": "这个问题"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.116,
+     "peak": "。"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.257,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c8bfcc417",
+  "minutes": 3,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "'first' opening a sequence (первую, 首先是)",
+ "unit_kind": "lexical / semantic",
+ "confidence": "low",
+ "notes": "Card: broad and gate-closed; ' первую' x7, ' VI' x4, 先是 x2, ' XIV' x2, 首先是. Probe: 首先是 0.44, ' первую' 0.25-0.34, ' XIV' 0.37; ' втор' 0.12, 'First part' 0.08. Roman numerals are not in this label. I expect low readings.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " первую",
+   "首先是"
+  ]
+ }
+}

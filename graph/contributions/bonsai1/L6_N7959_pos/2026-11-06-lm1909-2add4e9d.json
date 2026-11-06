@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-2add4e9d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7959+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:04:05+00:00",
+ "recipe": {
+  "toolchain_commit": "c8bfcc417",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N7959_pos/2026-11-06-lm1909-2add4e9d.tests.json"
+ },
+ "label": "An opening quotation mark in mid-sentence, around a phrase being quoted or held at arm's length (described as “deeply flawed”); the same sentence with no quotation marks stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N7959_pos/2026-11-06-lm1909-2add4e9d.tests.json",
+   "prereg_commit": "c8bfcc417",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.02,
+     "peak": "a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.16,
+     "peak": " “"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.58,
+     "peak": " “"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.151,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.153,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.602,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.09,
+     "peak": " »"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.09,
+     "peak": " \""
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.025,
+     "peak": " plan"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.057,
+     "peak": " mess"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.038,
+     "peak": " goals"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.105,
+     "peak": " being"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " minist"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.041,
+     "peak": " normal"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.152,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c8bfcc417",
+  "minutes": 3,
+  "batch_size": 11,
+  "dtype": "float16"
+ },
+ "short": "mid-sentence opening quotation mark",
+ "unit_kind": "format / contextual",
+ "confidence": "high",
+ "notes": "Card: ' “' x8, ' \"' x8, '“' x3, ' «' x2, Chinese ‘ and “. Probe: ' “' 0.57-0.70, ' \"' 0.65, ' «' 0.27; the same text unquoted 0.03-0.08; a quote opening direct speech 0.01-0.02. The - pole is ' \"__' of __main__.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " “",
+   " \"",
+   "“",
+   " «"
+  ]
+ }
+}
