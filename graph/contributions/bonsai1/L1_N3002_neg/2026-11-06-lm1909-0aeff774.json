@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-0aeff774",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N3002-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:05:39+00:00",
+ "recipe": {
+  "toolchain_commit": "99c71d806",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N3002_neg/2026-11-06-lm1909-0aeff774.tests.json"
+ },
+ "label": "the Italian-looking spelling piece 'azz' as its own token, with 'azzi' and 'azzo' (paparazzi, razzia, palazzo)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N3002_neg/2026-11-06-lm1909-0aeff774.tests.json",
+   "prereg_commit": "99c71d806",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.793,
+     "peak": "azzi"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.245,
+     "peak": "azzi"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": -0.001,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.143,
+     "peak": "azzo"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.237,
+     "peak": "azzo"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.925,
+     "peak": "azz"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.142,
+     "peak": "azz"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.627,
+     "peak": "azz"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " Med"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.027,
+     "peak": " museum"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.053,
+     "peak": " marble"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "Die"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.0,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " defense"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.883,
+    "median_fire": 0.241,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "99c71d806",
+  "minutes": 32,
+  "batch_size": 12,
+  "dtype": "float16"
+ },
+ "short": "spelling piece 'azz'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   "azz",
+   "azzi",
+   "azzo"
+  ]
+ }
+}
