@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-142c8207",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1628-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:27:12+00:00",
+ "recipe": {
+  "toolchain_commit": "fd4bcefad",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N1628_neg/2026-11-06-lm1909-142c8207.tests.json"
+ },
+ "label": "the word right after a number-plus-unit compound: ' time' after '30-year', ' minimum' after '$500/month', ' block' after 'four-bit', '-Un' after '1:1', firing on that word; the same nouns without such a compound stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N1628_neg/2026-11-06-lm1909-142c8207.tests.json",
+   "prereg_commit": "fd4bcefad",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.757,
+     "peak": " time"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.693,
+     "peak": " minimum"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.554,
+     "peak": " block"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.081,
+     "peak": "-Un"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.616,
+     "peak": " term"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.367,
+     "peak": " load"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.546,
+     "peak": " fee"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.288,
+     "peak": " wall"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " horizon"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " clients"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "en"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " fees"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " carries"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " gym"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " road"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.585,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd4bcefad",
+  "minutes": 6,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "noun after a number-unit compound",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw"
+}

@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-87e7920b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2354-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:26:41+00:00",
+ "recipe": {
+  "toolchain_commit": "fd4bcefad",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2354_neg/2026-11-06-lm1909-87e7920b.tests.json"
+ },
+ "label": "past-tense auxiliaries and copulas ' was', ' were', ' did' (and ''t' in didn't) in a statement about the past; the same sentences in the present tense stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2354_neg/2026-11-06-lm1909-87e7920b.tests.json",
+   "prereg_commit": "fd4bcefad",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.352,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.06,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.334,
+     "peak": "'t"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.205,
+     "peak": " did"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.412,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.261,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.194,
+     "peak": " did"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.204,
+     "peak": " opened"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": "Her"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.0,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.0,
+     "peak": " written"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "ickets"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.233,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "fd4bcefad",
+  "minutes": 6,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "past tense: was, were, did",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " was",
+   " were",
+   " did",
+   "'t",
+   "’t"
+  ]
+ }
+}
