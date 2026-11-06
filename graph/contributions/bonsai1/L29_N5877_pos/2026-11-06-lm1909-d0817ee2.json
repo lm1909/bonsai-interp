@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d0817ee2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N5877+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:37+00:00",
+ "recipe": {
+  "toolchain_commit": "584a6de45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N5877_pos/2026-11-06-lm1909-d0817ee2.tests.json"
+ },
+ "label": "a split-off H-onset in names and terms: H|ertz, H|eli|ocentrism, ' Hiro'|shima",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N5877_pos/2026-11-06-lm1909-d0817ee2.tests.json",
+   "prereg_commit": "584a6de45",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.311,
+     "peak": "ertz"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.673,
+     "peak": "eli"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.609,
+     "peak": " Hiro"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.571,
+     "peak": "ertz"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.673,
+     "peak": "eli"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.601,
+     "peak": " Hiro"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.15,
+     "peak": "ertz"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.407,
+     "peak": " Hiro"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": "bright"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "Dar"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " Marshall"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " put"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " wrote"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " named"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " Dresden"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.586,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "584a6de45",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-off H- onset",
+ "unit_kind": "token piece",
+ "confidence": 0.75,
+ "notes": "Card: 'eli' 3, 'هي' 3, 'ル' 3, ' Hiro' 2, 'él' 2. Probes: ' Hiro' 0.86, 'eli' 0.67, 'ertz' 0.66; Rhodes 0.01, Copernicus 0.01, ' hello' 0.05. Arabic 'هي' is on the card and untested.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d42f8c63",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N3994-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:31+00:00",
+ "recipe": {
+  "toolchain_commit": "584a6de45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N3994_neg/2026-11-06-lm1909-d42f8c63.tests.json"
+ },
+ "label": "the word just before 'surface' in science text: 'attached to the nanorod's', 'on their'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N3994_neg/2026-11-06-lm1909-d42f8c63.tests.json",
+   "prereg_commit": "584a6de45",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.325,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.566,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.568,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.587,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.246,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.511,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.122,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.778,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.0,
+     "peak": " blood"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.141,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.312,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " chain"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.108,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.0,
+     "peak": " drug"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "Cells"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.538,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "584a6de45",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word just before 'surface'",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.65,
+ "notes": "Card: ' the' 13, ' on' 3, ' its', ' their'. Probes: \"'s\" before surface 0.69, ' their' 0.53; 'Brush the surface' 0.11, 'owner's family' 0.01. The pole sees only the prefix, so these are predictions.",
+ "selection": "random draw"
+}

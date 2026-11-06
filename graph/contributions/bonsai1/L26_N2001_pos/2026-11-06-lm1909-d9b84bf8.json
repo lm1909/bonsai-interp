@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-d9b84bf8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2001+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:24+00:00",
+ "recipe": {
+  "toolchain_commit": "584a6de45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N2001_pos/2026-11-06-lm1909-d9b84bf8.tests.json"
+ },
+ "label": "(guess) expecting an unseen cause: 'some invisible something', 'an undiscovered law' (output promotes unseen, invisible, unknown)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N2001_pos/2026-11-06-lm1909-d9b84bf8.tests.json",
+   "prereg_commit": "584a6de45",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.362,
+     "peak": " unseen"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.403,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.12,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.031,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.353,
+     "peak": " force"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.203,
+     "peak": " energy"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.153,
+     "peak": " law"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.363,
+     "peak": " unseen"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": " some"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " tall"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.278,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "584a6de45",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "expecting an unseen cause (guess)",
+ "unit_kind": "contextual / prediction",
+ "confidence": 0.2,
+ "notes": "Output promotes ' unseen', ' invisible', ' unknown', ' hidden'. Probes stayed at or under 0.17; 'a new road' 0.03. Expected to fall short of the median.",
+ "selection": "random draw"
+}

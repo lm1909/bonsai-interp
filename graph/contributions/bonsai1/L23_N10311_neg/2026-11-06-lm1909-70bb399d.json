@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-70bb399d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N10311-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:53+00:00",
+ "recipe": {
+  "toolchain_commit": "584a6de45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N10311_neg/2026-11-06-lm1909-70bb399d.tests.json"
+ },
+ "label": "(guess) '。' after a Chinese clause that sets up a concession ('从表面看...')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N10311_neg/2026-11-06-lm1909-70bb399d.tests.json",
+   "prereg_commit": "584a6de45",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.415,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.556,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.361,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.331,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.422,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.412,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.371,
+     "peak": "。"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.314,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.136,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.139,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.146,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.097,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.168,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.146,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.083,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.139,
+     "peak": "。"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.391,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "584a6de45",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'。' after a concession set-up (guess)",
+ "unit_kind": "format / contextual",
+ "confidence": 0.35,
+ "notes": "Card: '.' 15, '。' 6, '，' 4; top examples precede 但是. Probes: '。' after a concession set-up 0.48; plain 0.03; English '.' before But 0.06. Since the pole sees only the prefix, the set-up must carry it.",
+ "selection": "random draw"
+}

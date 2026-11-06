@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-7ee69b92",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3590+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:04:59+00:00",
+ "recipe": {
+  "toolchain_commit": "584a6de45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N3590_pos/2026-11-06-lm1909-7ee69b92.tests.json"
+ },
+ "label": "(guess) the piece 'ant' in Spanish bizantina(s)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N3590_pos/2026-11-06-lm1909-7ee69b92.tests.json",
+   "prereg_commit": "584a6de45",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.936,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.774,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.656,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.628,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.631,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.277,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.645,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.586,
+     "peak": "ant"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.174,
+     "peak": " cl"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.14,
+     "peak": " pint"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.337,
+     "peak": " Sic"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.154,
+     "peak": " cú"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.151,
+     "peak": " text"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.154,
+     "peak": "pol"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.289,
+     "peak": "á"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.086,
+     "peak": " fl"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.638,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "584a6de45",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'ant' in bizantina (guess)",
+ "unit_kind": "token piece",
+ "confidence": 0.4,
+ "notes": "Card: ' r' 3, 'ant' 2, ' interact' 2. Probes: 'ant' 0.87, ' San' 0.18, 'IP' 0.15, ' t' 0.13; ' cl' in 'clara' 0.27. Only one piece. The near misses share ' cl', which may fire.",
+ "selection": "random draw"
+}
