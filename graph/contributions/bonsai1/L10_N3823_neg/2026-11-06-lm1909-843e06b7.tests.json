@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-843e06b7",
+ "contributor": "lm1909",
+ "kind": "qc",
+ "neuron": "bonsai1/L10/N3823-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:54:27+00:00",
+ "selection": "picked",
+ "qc": {
+  "verdict": "refine",
+  "label_under_test": "'either' (or German entw|eder) opening an either...or choice between two options: the pole marks the start of a correlative disjunction; 'either' at the end of a negative clause, and the same choices written with plain 'or', stay low"
+ },
+ "neighbours": [
+  {
+   "unit": "L10/N3823",
+   "pole": "-",
+   "label": "The opening word of a correlative pair: 'both', 'either', 'not only', 'not just', which promises a second element to come",
+   "fire": [
+    "The program helps both students and teachers in town.",
+    "You can reach us either by phone or by letter.",
+    "The mayor not only read the report but also signed it.",
+    "Their new plan covers both rent and food.",
+    "The dish is not just cheap but also tasty.",
+    "Guests may choose either the fish or the lamb.",
+    "She speaks both French and German at home.",
+    "The shop is not only open late but also close by."
+   ],
+   "quiet": [
+    "The program helps students and teachers in town.",
+    "You can reach us by phone or by letter.",
+    "The mayor read the report and also signed it.",
+    "Their new plan covers rent and food.",
+    "The dish is cheap and also tasty.",
+    "We don't serve the lamb either.",
+    "She speaks French and German at home.",
+    "The shop isn't open late either."
+   ]
+  }
+ ],
+ "predictions": "The opening word fires. The same pairs without it, and 'either' at the end of a negative clause, stay low.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "opening a correlative pair",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "QC refine. The current label names only 'either'. In its coverage round (seeded sample, 16 strong activations) 2 of 16 were 'either', while 6 were 'both' and 4 were 'not only' or 'not'. New sentences, none scored before this commit."
+}
