@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-4185897b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N12025+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:53:59+00:00",
+ "recipe": {
+  "toolchain_commit": "0e2bf0b63",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N12025_pos/2026-11-06-lm1909-4185897b.tests.json"
+ },
+ "label": "tokens \"{}'.\", ' wohl' and ' footh' (a broad, low-amplitude pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N12025_pos/2026-11-06-lm1909-4185897b.tests.json",
+   "prereg_commit": "0e2bf0b63",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.904,
+     "peak": "{}'."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.533,
+     "peak": "{}'."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.747,
+     "peak": " wohl"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.591,
+     "peak": " footh"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.591,
+     "peak": " wohl"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.743,
+     "peak": "{}'."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.643,
+     "peak": " footh"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.003,
+     "peak": " wohl"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.102,
+     "peak": "%"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.089,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.096,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.069,
+     "peak": " covered"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.119,
+     "peak": " beste"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": " n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.136,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.693,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e2bf0b63",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "\"{}'.\", ' wohl', ' footh'",
+ "unit_kind": "token / lexical",
+ "confidence": "medium",
+ "notes": "A list of tokens, no shared pattern. Flagged broad.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "{}'.",
+   " wohl",
+   " footh"
+  ]
+ }
+}

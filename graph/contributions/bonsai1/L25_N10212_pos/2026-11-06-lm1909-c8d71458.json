@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-c8d71458",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N10212+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:52:55+00:00",
+ "recipe": {
+  "toolchain_commit": "0e2bf0b63",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N10212_pos/2026-11-06-lm1909-c8d71458.tests.json"
+ },
+ "label": "the verb raise / raised / raising, strongest for rearing animals, crops or children",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N10212_pos/2026-11-06-lm1909-c8d71458.tests.json",
+   "prereg_commit": "0e2bf0b63",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.451,
+     "peak": " raised"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.802,
+     "peak": " raised"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.805,
+     "peak": " raising"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.61,
+     "peak": " raise"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.546,
+     "peak": " raise"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.73,
+     "peak": " raising"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.559,
+     "peak": " raise"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.926,
+     "peak": " raised"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.284,
+     "peak": " goats"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.113,
+     "peak": " children"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.086,
+     "peak": " pigs"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.174,
+     "peak": " store"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.068,
+     "peak": " baby"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " feeding"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.027,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.061,
+     "peak": " horses"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.67,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e2bf0b63",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the verb 'raise' (rearing)",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "My first idea was rearing as against other senses, but 'raised money' (0.45) and 'raised his hand' (0.38) fired in probes, about as much as 'raised cattle' (0.29). So this test separates the verb from other verbs, not the sense.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " raise",
+   " raised",
+   " raising"
+  ]
+ }
+}
