@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-1fb286ef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N10338+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:46:33+00:00",
+ "recipe": {
+  "toolchain_commit": "4c23b993a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L21_N10338_pos/2026-11-06-lm1909-1fb286ef.tests.json"
+ },
+ "label": "' now' in 'N years from now', a point in the future counted from today, as opposed to the same sentences without it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L21_N10338_pos/2026-11-06-lm1909-1fb286ef.tests.json",
+   "prereg_commit": "4c23b993a",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.486,
+     "peak": " now"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.498,
+     "peak": " now"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.312,
+     "peak": " now"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.59,
+     "peak": " now"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.34,
+     "peak": " we"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.45,
+     "peak": " now"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.097,
+     "peak": " show"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.404,
+     "peak": " now"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " years"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " retire"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": " cared"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.264,
+     "peak": " we"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " here"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " closed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": "?"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.427,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c23b993a",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "N years from now",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Past-time frames ('When you were inside me') stayed at 0.01 in probes, though the card has ' When' and ' later'.",
+ "selection": "random draw"
+}

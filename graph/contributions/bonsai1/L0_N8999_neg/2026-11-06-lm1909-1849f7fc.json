@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-1849f7fc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8999-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:46:38+00:00",
+ "recipe": {
+  "toolchain_commit": "4c23b993a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N8999_neg/2026-11-06-lm1909-1849f7fc.tests.json"
+ },
+ "label": "'ust' as a split piece or in the word ' lust' (Fa|ust, bl|ust|ery, Gold|ust, lust), as opposed to whole tokens like must and bus",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N8999_neg/2026-11-06-lm1909-1849f7fc.tests.json",
+   "prereg_commit": "4c23b993a",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.9,
+     "peak": " lust"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.898,
+     "peak": " lust"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.953,
+     "peak": "ust"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.947,
+     "peak": "ust"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.72,
+     "peak": "ust"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.982,
+     "peak": "ust"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.967,
+     "peak": "ust"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.972,
+     "peak": "ust"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " drive"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " envy"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " coach"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": "ethe"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " Dallas"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.048,
+     "peak": " must"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.164,
+     "peak": " August"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "Mary"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.95,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4c23b993a",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "'ust' piece and ' lust'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Whole tokens ' must' and ' August' stay in the near misses. Tokens checked.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "ust",
+   " lust"
+  ]
+ }
+}
