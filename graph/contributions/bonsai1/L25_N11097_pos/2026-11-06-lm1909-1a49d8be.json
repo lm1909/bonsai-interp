@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-1a49d8be",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N11097+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:08:54+00:00",
+ "recipe": {
+  "toolchain_commit": "f3473a11d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N11097_pos/2026-11-06-lm1909-1a49d8be.tests.json"
+ },
+ "label": "a word for an unpleasant or harsh sound, smell or feel (rattling, musty, clammy, rancid), not only a split piece",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N11097_pos/2026-11-06-lm1909-1a49d8be.tests.json",
+   "prereg_commit": "f3473a11d",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.656,
+     "peak": " cl"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.234,
+     "peak": " st"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.458,
+     "peak": " grim"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.686,
+     "peak": " sque"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.225,
+     "peak": " sour"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.522,
+     "peak": "reak"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.217,
+     "peak": "rid"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.735,
+     "peak": " gre"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.072,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": " breeze"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.158,
+     "peak": " felt"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " entrance"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.123,
+     "peak": "boards"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.032,
+     "peak": " flag"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.188,
+     "peak": " soft"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.49,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "f3473a11d",
+  "minutes": 3,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "short": "harsh sound / smell / feel word",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Second round. Round 1 ('first piece of a split sensory word') failed because whole-word sensory near misses fired: rattling 0.65, moaning 0.47, sour 0.34, humming 0.33. Near misses here are neutral or pleasant words in the same frames.",
+ "selection": "second round after the failed label in sweep seed 202611050406"
+}
