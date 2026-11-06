@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-68457b7c",
+ "kind": "qc",
+ "neuron": "bonsai1/L13/N10298-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:13:37+00:00",
+ "recipe": {
+  "toolchain_commit": "ed1a7f75a",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N10298_neg/2026-11-06-lm1909-68457b7c.tests.json"
+ },
+ "label": "A time phrase with 'next' pointing to a coming period (next month, next year, next June), with no milestone; the same sentence with 'last' stays under it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N10298_neg/2026-11-06-lm1909-68457b7c.tests.json",
+   "prereg_commit": "ed1a7f75a",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.141,
+     "peak": " next"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.281,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.277,
+     "peak": " next"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.287,
+     "peak": " month"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.1,
+     "peak": " next"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.186,
+     "peak": " year"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.106,
+     "peak": " Tuesday"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.307,
+     "peak": " next"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.042,
+     "peak": " month"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.052,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.062,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.106,
+     "peak": " month"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.052,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.067,
+     "peak": " Tuesday"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.098,
+     "peak": " last"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.232,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ed1a7f75a",
+  "minutes": 1,
+  "batch_size": 2,
+  "dtype": "float16"
+ },
+ "qc": {
+  "verdict": "refine",
+  "label_under_test": "Reaching a numeric milestone: turning an age, passing a record ('turns 37 next April', 'passed Babe Ruth', 'his 3,000th hit'); plain statements without a milestone stay quiet"
+ },
+ "short": "'next' + a coming time word",
+ "unit_kind": "contextual",
+ "confidence": "low",
+ "notes": "QC refine of my own label from the sweep with seed 202611051808 (reaching a numeric milestone). Several peaks there fell on the time word after 'next' (' month' 0.90, ' year' 0.90, ' June' 0.68), and its near misses had neither a milestone nor a time word, so the test could not separate the two readings. This test has no milestones at all. If it fails, the milestone reading stands. A probe there showed 'turned 37 ... last April' at 0.40, so 'last' may not be silent. Not probed beforehand.",
+ "selection": "QC of my own label from the same night's sweep"
+}
