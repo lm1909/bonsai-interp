@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-b609028c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11091-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:05:47+00:00",
+ "recipe": {
+  "toolchain_commit": "0b2b77e99",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N11091_neg/2026-11-06-lm1909-b609028c.tests.json"
+ },
+ "label": "the m- piece where a word like museum is about to follow: Arabic ' والم', Russian ' М', '.m' in museum URLs, 'em' of -emuseum",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N11091_neg/2026-11-06-lm1909-b609028c.tests.json",
+   "prereg_commit": "0b2b77e99",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.757,
+     "peak": " والم"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.703,
+     "peak": " والم"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.431,
+     "peak": " М"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.216,
+     "peak": ".m"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.373,
+     "peak": "em"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.808,
+     "peak": " والم"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.313,
+     "peak": " М"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.265,
+     "peak": "m"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " ال"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.037,
+     "peak": "طور"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.111,
+     "peak": "ный"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": "www"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " رجال"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.051,
+     "peak": "ской"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.251,
+     "peak": ".m"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0b2b77e99",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "m- piece before 'museum'",
+ "unit_kind": "token piece / prediction",
+ "confidence": "low",
+ "selection": "random draw"
+}
