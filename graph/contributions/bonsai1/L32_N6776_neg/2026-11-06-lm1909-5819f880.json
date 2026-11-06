@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5819f880",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N6776-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:34:44+00:00",
+ "recipe": {
+  "toolchain_commit": "19e045458",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N6776_neg/2026-11-06-lm1909-5819f880.tests.json"
+ },
+ "label": "a short word-start piece of a less common word (' jav'|elin, ' sil'|icate, ' del'|phinid, ' gal'|ley), as opposed to whole common words in the same sentences",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N6776_neg/2026-11-06-lm1909-5819f880.tests.json",
+   "prereg_commit": "19e045458",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.511,
+     "peak": " jav"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.554,
+     "peak": " sil"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.505,
+     "peak": " del"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.508,
+     "peak": " gal"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.798,
+     "peak": " jav"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.037,
+     "peak": "alle"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " iron"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.043,
+     "peak": " whale"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.034,
+     "peak": " harbor"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.506,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "19e045458",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "word-start piece of a rarer word",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "' Java' reached 0.09 in a probe, though it is on the card. Tokenization of all new words not checked.",
+ "selection": "random draw"
+}

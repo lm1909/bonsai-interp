@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-e6a0670b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11479-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:34:23+00:00",
+ "recipe": {
+  "toolchain_commit": "19e045458",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N11479_neg/2026-11-06-lm1909-e6a0670b.tests.json"
+ },
+ "label": "a nationality or ethnic adjective for where a person's family comes from (a Russian Jewish American composer, to Irish parents, a German-born composer), as opposed to the same adjectives for food and things",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N11479_neg/2026-11-06-lm1909-e6a0670b.tests.json",
+   "prereg_commit": "19e045458",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.578,
+     "peak": " Ukrainian"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.532,
+     "peak": " Chinese"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.494,
+     "peak": " Polish"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.515,
+     "peak": " Irish"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.276,
+     "peak": " Greek"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.396,
+     "peak": " Italian"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.497,
+     "peak": "-born"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.354,
+     "peak": " Scottish"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.334,
+     "peak": " Ukrainian"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.293,
+     "peak": " Chinese"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.254,
+     "peak": " Polish"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.278,
+     "peak": " Irish"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.21,
+     "peak": " Greek"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.299,
+     "peak": " Italian"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.361,
+     "peak": " Armenian"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.194,
+     "peak": " Scottish"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.495,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "19e045458",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "nationality or ethnicity of a person",
+ "unit_kind": "semantic",
+ "confidence": "medium",
+ "notes": "Food and object uses are not silent: 'Chinese food' 0.25 and 'The Italian restaurant' 0.31 in probes. Some may be near the top of the near misses.",
+ "selection": "random draw"
+}

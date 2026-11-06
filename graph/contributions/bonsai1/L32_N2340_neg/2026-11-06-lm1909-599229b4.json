@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-599229b4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N2340-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:34:37+00:00",
+ "recipe": {
+  "toolchain_commit": "19e045458",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N2340_neg/2026-11-06-lm1909-599229b4.tests.json"
+ },
+ "label": "computer networking in prose and logs (TCP/IP, trace routes, bandwidth from vm to vm, wlan interfaces), as opposed to the same frames on other subjects",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N2340_neg/2026-11-06-lm1909-599229b4.tests.json",
+   "prereg_commit": "19e045458",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.296,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.603,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.659,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.257,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.163,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.255,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.473,
+     "peak": " %"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.138,
+     "peak": " own"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " Bread"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": "\","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " plumber"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " %"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " has"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.276,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "19e045458",
+  "minutes": 2,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "computer networking",
+ "unit_kind": "semantic",
+ "confidence": "high",
+ "notes": "Code-only probes without network words (elif test == 'agent', --sport) stayed at or below 0.06, despite being top examples.",
+ "selection": "random draw"
+}

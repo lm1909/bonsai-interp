@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-f05faafa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7432+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:34:08+00:00",
+ "recipe": {
+  "toolchain_commit": "19e045458",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N7432_pos/2026-11-06-lm1909-f05faafa.tests.json"
+ },
+ "label": "the Chinese and Japanese word 对象 / 對象 / 対象 ('object, target, partner'), as opposed to the same sentences with another noun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N7432_pos/2026-11-06-lm1909-f05faafa.tests.json",
+   "prereg_commit": "19e045458",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.833,
+     "peak": "对象"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.968,
+     "peak": "对象"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.434,
+     "peak": "的对象"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.428,
+     "peak": "象"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.417,
+     "peak": "象"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.353,
+     "peak": "象"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.571,
+     "peak": "对象"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.89,
+     "peak": "对象"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.045,
+     "peak": "方向"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": "老师"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "终于"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "萬元"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": "不是"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "は"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "链接"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": "去"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.502,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "19e045458",
+  "minutes": 1,
+  "batch_size": 13,
+  "dtype": "float16"
+ },
+ "short": "对象 / 對象 ('object, target')",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "English ' object' is much weaker (0.16–0.27 in probes), so the label is about the Chinese word.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "对象",
+   "象"
+  ]
+ }
+}
