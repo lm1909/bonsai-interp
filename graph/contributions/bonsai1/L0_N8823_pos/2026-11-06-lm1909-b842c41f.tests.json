@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-b842c41f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N8823+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:28:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N8823",
+   "pole": "+",
+   "label": "The tokens '.\\n', '.\"\\n' and ' ...\\n' ending a paragraph; a plain '.' inside a paragraph stays lower.",
+   "fire": [
+    "The rains stopped early that year. Most of the crop was lost in the fields.\nThe next spring was better.",
+    "Our new router has a flaw. It drops the signal every hour, which makes it useless.\nThe old one was fine.",
+    "The storm moved east overnight. Hail was reported across the county.\"\nCrews went out at dawn.",
+    "Good soil feeds the roots. It also feeds the animals living on the land ...\nA second note follows.",
+    "The mayor spoke at noon. Two people were hurt in the crowd.\nA video of the event spread fast.",
+    "He crossed the ball from the far side for the winger to tap home.\nThe restart was quick.",
+    "This site will stay online as an example of your skills.\nHTML is easy to learn.",
+    "The trees are not suited to this country and just burn up.\nThere was a warning years ago."
+   ],
+   "quiet": [
+    "The rains stopped early that year. Most of the crop was lost in the fields. The next spring was better.",
+    "Our new router has a flaw. It drops the signal every hour, which makes it useless. The old one was fine.",
+    "The storm moved east overnight. Hail was reported across the county. Crews went out at dawn.",
+    "Good soil feeds the roots. It also feeds the animals living on the land. A second note follows.",
+    "The mayor spoke at noon. Two people were hurt in the crowd. A video of the event spread fast.",
+    "He crossed the ball from the far side for the winger to tap home. The restart was quick.",
+    "This site will stay online as an example of your skills. HTML is easy to learn.",
+    "The trees are not suited to this country and just burn up. There was a warning years ago."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'.\\n' ending a paragraph",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "23 of the top 32 peak on '.\\n'. But my short probes read only 0.06-0.16, about the same as sentences with no line break, so this may need longer paragraphs. Fire items are two-sentence paragraphs and a following line. Near misses keep the same text with a plain '.' or ','. Peak values are low for this pole in the preamble's frame, so the median is at risk.",
+ "trigger": {
+  "tokens": [
+   ".\n",
+   ".\"\n",
+   " ...\n"
+  ]
+ }
+}

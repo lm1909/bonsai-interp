@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-984fac3e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N7983-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:28:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N7983",
+   "pole": "-",
+   "label": "Best guess: '@example' in an obfuscated e-mail address and 'Form' as the first argument of Qt's translate call; other strings in those slots stay lower.",
+   "fire": [
+    "Please write to firstname.lastname@example.org for a refund.",
+    "You can reach her at name@example.com any day.",
+    "Send your form to jane.doe@example.org by Friday.",
+    "Contact the office by e-mail at info@example.com.",
+    "self.box.setItemText(0, QtGui.QApplication.translate(\"Form\", \"Red\", None))\n",
+    "self.tab.setTabText(1, QtGui.QApplication.translate(\"Form\", \"Blue\", None))\n",
+    "self.label.setText(QtGui.QApplication.translate(\"Form\", \"Name\", None))\n",
+    "self.btn.setText(QtGui.QApplication.translate(\"Form\", \"Save\", None))\n"
+   ],
+   "quiet": [
+    "Please write to firstname.lastname@acme.org for a refund.",
+    "You can reach her at name@acme.com any day.",
+    "Send your form to the front desk by Friday.",
+    "Contact the office by phone at noon.",
+    "self.box.setItemText(0, QtGui.QApplication.translate(\"Main\", \"Red\", None))\n",
+    "self.tab.setTabText(1, QtGui.QApplication.translate(\"Main\", \"Blue\", None))\n",
+    "self.label.setText(str(\"Name\"))\n",
+    "self.btn.setText(str(\"Save\"))\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'@example', translate(\"Form\" (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "A broad pole (0.9%) with varied code on the card. Probes were all low: '@example' 0.16, '.Q' 0.16, others under 0.1. Expected to fail."
+}

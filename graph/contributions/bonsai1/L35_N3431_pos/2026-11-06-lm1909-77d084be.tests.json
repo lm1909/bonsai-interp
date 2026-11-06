@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-77d084be",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3431+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:28:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N3431",
+   "pole": "+",
+   "label": "Japanese text, highest on katakana pieces ('ス', 'ェ', 'ズ'); Chinese on the same topics stays lower, on a broad pole.",
+   "fire": [
+    "最新のソフトウェアを導入します。",
+    "このホテルのチェックインは三時です。",
+    "空港からスカイライナーに乗ります。",
+    "新しいプラズマテレビを買いました。",
+    "ネットワークのパラメータを設定します。",
+    "駅前のスーパーマーケットへ行きます。",
+    "コンピュータのキーボードが壊れました。",
+    "週末にサッカーのゲームを見ます。"
+   ],
+   "quiet": [
+    "我们引进了最新的软件。",
+    "这家酒店三点办理入住。",
+    "我们从机场坐火车。",
+    "我买了一台新电视。",
+    "请设置网络的参数。",
+    "我去车站前的超市。",
+    "电脑的键盘坏了。",
+    "周末我看足球比赛。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Japanese text, highest on katakana",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probes: 0.40-0.67 on katakana, 0.32-0.42 for hiragana and kanji sentences, 0.01 for English. So a katakana-against-kanji test would fail by construction, and I test Japanese against Chinese instead, whose tokens the output direction suppresses. This does not separate katakana from Japanese in general. A broad pole (2.7%)."
+}

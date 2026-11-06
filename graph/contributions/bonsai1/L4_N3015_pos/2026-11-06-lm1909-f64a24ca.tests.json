@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-f64a24ca",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N3015+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:28:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N3015",
+   "pole": "+",
+   "label": "Positional: the card's top activations all sit at the first token of a corpus window (' needs', ' age', ' amounts'). Best guess, tested anyway: those tokens opening a text fragment, against the same words later.",
+   "fire": [
+    " needs of each student are met.\n",
+    " age at marriage rose sharply,",
+    " amounts of sugar in the blood and that is",
+    " frames of the old film are lost",
+    " needs of the local market,",
+    " age of the patients was noted",
+    " amounts of salt in the soup",
+    " frames and other images from space"
+   ],
+   "quiet": [
+    "The needs of each student are met.\n",
+    "Their age at marriage rose sharply,",
+    "Small amounts of sugar in the blood and that is",
+    "Many frames of the old film are lost",
+    "All needs of the local market,",
+    "The age of the patients was noted",
+    "Large amounts of salt in the soup",
+    "Some frames and other images from space"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "positional; first token of a window",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "The card flags this pole as positional (100% at window position 0). `play run` scores each sentence after a preamble, so position 0 can't be reproduced, and probes read 0.01-0.04. This test is expected to fail and says little about the pole."
+}
