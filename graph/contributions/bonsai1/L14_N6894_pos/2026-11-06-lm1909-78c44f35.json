@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-78c44f35",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N6894+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:55:13+00:00",
+ "recipe": {
+  "toolchain_commit": "9da2eb4d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N6894_pos/2026-11-06-lm1909-78c44f35.tests.json"
+ },
+ "label": "the phrase naming a solved protein or crystal structure, after a method such as X-ray or cryo-EM: 'revealed the structure of', 'its structure at 2 Å resolution'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N6894_pos/2026-11-06-lm1909-78c44f35.tests.json",
+   "prereg_commit": "9da2eb4d2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.589,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.666,
+     "peak": " structure"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.263,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.655,
+     "peak": " resolution"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.283,
+     "peak": " resolution"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.321,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.096,
+     "peak": " resolution"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.257,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.032,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": " firm"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.028,
+     "peak": " school"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "Researchers"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": " lab"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " door"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " revealed"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.302,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9da2eb4d2",
+  "minutes": 2,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "solved structure, after a method",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.7,
+ "notes": "A new round: the sweep label 'solved protein structure' had AUROC 1.000 but median 0.186. The stronger readings there came after a method ('Cryo-EM revealed', 0.59, and 'at high resolution', 0.37), so this test keeps those frames.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   " structure",
+   " structures"
+  ]
+ }
+}

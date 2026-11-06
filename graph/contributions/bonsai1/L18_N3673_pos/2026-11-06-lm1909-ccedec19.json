@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-ccedec19",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N3673+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:55:21+00:00",
+ "recipe": {
+  "toolchain_commit": "9da2eb4d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N3673_pos/2026-11-06-lm1909-ccedec19.tests.json"
+ },
+ "label": "' to' in the older GPL header 'if not, write to the Free Software Foundation', inside a full multi-line licence header; the newer 'if not, see <http...>' stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N3673_pos/2026-11-06-lm1909-ccedec19.tests.json",
+   "prereg_commit": "9da2eb4d2",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 5,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.847,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.82,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.49,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.522,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.826,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.827,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.516,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.544,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.279,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.359,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.339,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.429,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.424,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.384,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.254,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.249,
+     "peak": " this"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.682,
+    "near_misses_at_0.3": 5
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9da2eb4d2",
+  "minutes": 2,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "GPL 'write to the FSF', full header",
+ "unit_kind": "lexical / boilerplate",
+ "confidence": 0.8,
+ "notes": "A new round: the sweep test failed (AUROC 0.742) because short one-line versions did not fire; only a full multi-line header did (0.67). Near misses here are the same headers with the newer ending, so they are hard.",
+ "selection": "picked",
+ "trigger": {
+  "tokens": [
+   " to"
+  ]
+ }
+}
