@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-177acf69",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N11098+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:04:41+00:00",
+ "recipe": {
+  "toolchain_commit": "0e7c3f138",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N11098_pos/2026-11-06-lm1909-177acf69.tests.json"
+ },
+ "label": "a reprint or earlier-edition mark in a citation or byline ('1929/1961', 'Originally published', 'rpt.', 'cross-post')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N11098_pos/2026-11-06-lm1909-177acf69.tests.json",
+   "prereg_commit": "0e7c3f138",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.82,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.893,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.618,
+     "peak": " published"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.546,
+     "peak": "-post"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.441,
+     "peak": " rpt"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.542,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.372,
+     "peak": "Originally"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.677,
+     "peak": "-post"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": "7"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.076,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.091,
+     "peak": "edited"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " essay"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.09,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.04,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": "bound"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.582,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e7c3f138",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "reprint mark in a citation",
+ "unit_kind": "semantic / contextual",
+ "confidence": "high",
+ "notes": "A near-miss-style probe with '(printed in Madras)' read 0.53 on ' in', so publishers' place phrases may leak.",
+ "selection": "random draw"
+}

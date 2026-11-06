@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-a11b1a0a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N453-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:04:35+00:00",
+ "recipe": {
+  "toolchain_commit": "0e7c3f138",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N453_neg/2026-11-06-lm1909-a11b1a0a.tests.json"
+ },
+ "label": "' Eastern' or ' Western' opening a US regional name ('Eastern Kentucky', 'Western Washington University')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N453_neg/2026-11-06-lm1909-a11b1a0a.tests.json",
+   "prereg_commit": "0e7c3f138",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.576,
+     "peak": " Eastern"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.689,
+     "peak": " Western"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.294,
+     "peak": " Eastern"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.382,
+     "peak": " Western"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.755,
+     "peak": " Eastern"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.632,
+     "peak": " Western"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.459,
+     "peak": " Eastern"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.598,
+     "peak": " Western"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.107,
+     "peak": "Ohio"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.231,
+     "peak": " Illinois"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " Duke"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.101,
+     "peak": " Illinois"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.202,
+     "peak": " Michigan"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.146,
+     "peak": " Kentucky"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.252,
+     "peak": " Kentucky"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.587,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0e7c3f138",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Eastern/Western in US regional names",
+ "unit_kind": "lexical / contextual",
+ "confidence": "high",
+ "notes": "The card's ' E' of Edo and the ' and' in a list of rappers (0.83 in a probe) are not covered. Lowercase 'eastern side' stayed at 0.01.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " Eastern",
+   " Western"
+  ]
+ }
+}
