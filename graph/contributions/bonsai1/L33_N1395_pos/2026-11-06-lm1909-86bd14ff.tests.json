@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-86bd14ff",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N1395+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:46:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N1395",
+   "pole": "+",
+   "label": "A word-initial m piece in Russian and Arabic (' м', ' م', ' بم') and in the abbreviation 'M.D.'; other word openings in the same frames stay low.",
+   "fire": [
+    "Царя свергли и лишили митрополита власти.",
+    "Он долго жил в монастыре на юге.",
+    "We met Anna Klein, M.D., at the clinic.",
+    "تولى الرئيس مقاليد السلطة أمس.",
+    "يتعهد الأطباء بممارسة الطب في المستشفى.",
+    "Она читала о морских птицах дома.",
+    "The author is James Hart, M.D., of Yale.",
+    "يتحدث عن مقاليد التعليم في البلاد."
+   ],
+   "quiet": [
+    "Царя свергли и лишили власти быстро.",
+    "Он долго жил в доме на юге.",
+    "We met Anna Klein at the clinic.",
+    "تولى الرئيس رئاسة السلطة أمس.",
+    "يتعهد الأطباء بخدمة الناس في المستشفى.",
+    "Она читала о лесных птицах дома.",
+    "The author is James Hart of Yale.",
+    "يتحدث عن قضية التعليم في البلاد."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word-initial 'm' piece (Russian, Arabic, M.D.)",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Probes: 0.21-0.76 ('-M' 0.31). English ' M' only tried in 'M.D.'. Russian ' с' before a noun read 0.32 in a shared frame, so near misses vary the lead-in. The output direction promotes ' Gr', ' Ch', ' br', which doesn't help."
+}

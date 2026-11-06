@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-5da8fc22",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N661-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:46:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N661",
+   "pole": "-",
+   "label": "'__(' closing '__init' in a Python class; '__(' after other dunder names, and other method names, stay lower.",
+   "fire": [
+    "class Token(object):\n    kind = 'x'\n\n    def __init__(self, text, pos=None):\n",
+    "class Parser(BaseParser):\n    \"\"\"Parse a file.\"\"\"\n\n    def __init__(self, path):\n",
+    "class Widget(Frame):\n    \"\"\"Draw a handle.\"\"\"\n\n    def __init__(self, master):\n",
+    "class Client(object):\n    timeout = 30\n\n    def __init__(self, key):\n",
+    "class Node(SyntaxNode):\n    def __init__(self, left, right=None):\n",
+    "class Stack(list):\n    def __init__(self, items):\n",
+    "class Store(object):\n    \"\"\"Keep data.\"\"\"\n\n    def __init__(self, name):\n",
+    "class Timer(Thread):\n    def __init__(self, delay):\n"
+   ],
+   "quiet": [
+    "class Token(object):\n    kind = 'x'\n\n    def __repr__(self):\n",
+    "class Parser(BaseParser):\n    \"\"\"Parse a file.\"\"\"\n\n    def __len__(self):\n",
+    "class Widget(Frame):\n    \"\"\"Draw a handle.\"\"\"\n\n    def draw(self, master):\n",
+    "class Client(object):\n    timeout = 30\n\n    def send(self, key):\n",
+    "class Node(SyntaxNode):\n    def __str__(self):\n",
+    "class Stack(list):\n    def push(self, items):\n",
+    "class Store(object):\n    \"\"\"Keep data.\"\"\"\n\n    def __iter__(self):\n",
+    "class Timer(Thread):\n    def start(self, delay):\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'__(' in '__init__('",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probes: 0.145 for `__init__(` after a class line, 0.04 for `__str__(`, 0.01 otherwise. The card reads higher (top 22.6 of max, x9 of 32), so the median may fail at 0.20 unless context helps; fire items have a little more of a class before them. The card's ' test', ' cloud' and ' sensors' are not covered."
+}

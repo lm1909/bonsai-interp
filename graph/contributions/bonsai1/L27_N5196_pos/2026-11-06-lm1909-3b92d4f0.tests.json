@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-3b92d4f0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N5196+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:46:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N5196",
+   "pole": "+",
+   "label": "A list: ' his' after 'Throughout', and ' internal' after 'references after' in a config comment; ' his' after other openers, and other words after 'after', stay lower.",
+   "fire": [
+    "She never left him. Throughout his youth she wrote letters.",
+    "The king ruled well, and throughout his reign the borders held.",
+    "He loved art. Throughout his years in Rome he painted daily.",
+    "# If true, add page numbers after internal links.\n",
+    "# If false, hide page references after internal links.\n",
+    "Friends helped, and throughout his long illness he kept working.",
+    "# If true, show footnotes after internal links.\n",
+    "We wrote often. Throughout his time abroad he missed home."
+   ],
+   "quiet": [
+    "She never left him. During his youth she wrote letters.",
+    "The king ruled well, and under his reign the borders held.",
+    "He loved art. In his years in Rome he painted daily.",
+    "# If true, add page numbers after each section.\n",
+    "# If false, hide page references in chapter titles.\n",
+    "Friends helped, and despite his long illness he kept working.",
+    "# If true, add internal links after page numbers.\n",
+    "We wrote often. Throughout the time abroad he missed home."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' his' after 'Throughout'; ' internal' links",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Probes: ' his' 0.33, ' internal' 0.77; 'During his' 0.06, 'Throughout the time' 0.13 on 'Throughout', 'page numbers after chapter' 0.23 on ' after'. ' long', ' beyond' on the card read 0.13 or lower, and the card's ' throughout' (x7) is not tested, so not covered. The output direction suppresses ' throughout', so a span-of-time reading may exist; I did not find it."
+}
