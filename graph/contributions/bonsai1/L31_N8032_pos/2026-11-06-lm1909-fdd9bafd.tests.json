@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-06-lm1909-fdd9bafd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N8032+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:37:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N8032",
+   "pole": "+",
+   "label": "The connective before a progressive auxiliary in Korean and Japanese (증가하고 있다, 働いている); the plain past of the same verbs stays quiet; the logit effect promotes -ing forms",
+   "fire": [
+    "그 회사의 매출은 계속 감소하고 있다.",
+    "학생들이 도서관에서 공부하고 있다.",
+    "정부는 새로운 법을 준비하고 있습니다.",
+    "私は東京の会社で働いています。",
+    "子供たちは公園で遊んでいる。",
+    "彼は毎日日本語を勉強している。",
+    "물가가 빠르게 상승하고 있다.",
+    "雨がずっと降っている。"
+   ],
+   "quiet": [
+    "그 회사의 매출은 작년에 감소했다.",
+    "학생들이 도서관에서 공부했다.",
+    "정부는 새로운 법을 발표했습니다.",
+    "私は東京の会社で働きました。",
+    "子供たちは公園で遊んだ。",
+    "彼は昨日日本語を勉強した。",
+    "물가가 빠르게 상승했다.",
+    "雨が昨日降った。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "connective of a progressive (하고 있다, ている)",
+ "unit_kind": "grammatical / prediction",
+ "confidence": "high",
+ "notes": "Card: 하고 x9, 고 x4, いて x2, んで x2, 해서, 이고, けて. Logit effect promotes ' being', ' happening', ' working', ' occurring', ' doing'. Probe: いて 0.85, 하고 0.68, けて 0.37, 이고 0.31; plain past 0.01; but 'て' in 雇われて 0.40 and は 0.16, so Japanese て has a floor.",
+ "trigger": {
+  "tokens": [
+   "하고",
+   "いて"
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-06-lm1909-758d296f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N11156+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:37:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N11156",
+   "pole": "+",
+   "label": "'.data' of tf.data and tensorflow.python.data; other TensorFlow modules stay quiet",
+   "fire": [
+    "Build the pipeline with the `tf.data` API.",
+    "ds = tf.data.TFRecordDataset(files)",
+    "from tensorflow.python.data import Dataset",
+    "import tensorflow.data as tfdata",
+    "A `tf.data.Dataset` can be batched.",
+    "dataset = tf.data.Dataset.from_tensors(x)",
+    "The tf.data module reads files in parallel.",
+    "from tensorflow.data.experimental import shuffle"
+   ],
+   "quiet": [
+    "Build the model with the `tf.keras` API.",
+    "ds = tf.io.TFRecordWriter(files)",
+    "from tensorflow.python.keras import layers",
+    "import tensorflow.compat as tfcompat",
+    "A `tf.keras.Model` can be saved.",
+    "layer = tf.nn.relu(x)",
+    "The tf.image module reads files in parallel.",
+    "from tensorflow.keras.utils import shuffle"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'.data' of tf.data",
+ "unit_kind": "code / token",
+ "confidence": "high",
+ "notes": "Card: '.data' x7, 'alt' x6, 'yth' x3, ' Data' x2. Probe: tf.data 0.96, tensorflow.python.data 0.75; tf.keras 0.01, framework 0.03, plain 'data = load' 0.02. ' Data' of Master Data Services 0.58 and 'yth' of Forsyth 0.62 also fire and are not covered.",
+ "trigger": {
+  "tokens": [
+   ".data"
+  ]
+ }
+}

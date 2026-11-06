@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-7f567fbe",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N10911-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:37:18+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N10911",
+   "pole": "-",
+   "label": "A later digit in a short sequence of numbers (the 4 of [{'id': 3}, {'id': 4}], the 5 of 24-25); data with no numeric sequence stays quiet",
+   "fire": [
+    "data = json.dumps([{'id': 1}, {'id': 2}])",
+    "arr = np.array([[1, 2], [3, 4]])",
+    "Meetings: May 11-12 in Austin. May 24-25 in Dallas.",
+    "cols = df.iloc[:, [4, 5]]",
+    "values = [10, 20, 30, 40, 50]",
+    "July 3-4 - Reno, NV. July 17-18 - Elko, NV.",
+    "assert sorted(x) == [1, 2, 3]",
+    "items = {'a': 1, 'b': 2, 'c': 3}"
+   ],
+   "quiet": [
+    "data = json.dumps({'id': key})",
+    "arr = np.array(rows)",
+    "Meetings: in May in Austin. In June in Dallas.",
+    "cols = df.iloc[:, mask]",
+    "values = list(numbers)",
+    "July in Reno, NV. August in Elko, NV.",
+    "assert sorted(x) == expected",
+    "items = dict(name=value)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "later number in a short numeric sequence",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Card: '5' x8, '6' x5, '1' x4, '3' x4, in lists, dict literals and date ranges. Probe: {'id': 4} after {'id': 3} 0.85, June 24-25 0.62, [2, 3] 0.43, [4, 5, 6] 0.34; rows, name, Portland 0.00-0.03, '4 apples and 5 pears' 0.00."
+}
