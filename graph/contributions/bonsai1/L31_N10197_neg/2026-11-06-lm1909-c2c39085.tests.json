@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c2c39085",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10197-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:02+00:00",
+ "selection": "second round after a failed or too narrow sweep test",
+ "neighbours": [
+  {
+   "unit": "L31/N10197",
+   "pole": "-",
+   "label": "Weather and temperature adjectives (hot, cold, warm, humid, damp); other adjectives in the same frames stay under them",
+   "fire": [
+    "The summer here is hot for months on end.",
+    "The climate in the north is damp in winter.",
+    "The evening was warm after the rain.",
+    "The nights are cold in the mountains.",
+    "The air is humid along the coast.",
+    "The weather turned chilly in the afternoon.",
+    "The autumn is mild in these valleys.",
+    "The wind was icy on the pass."
+   ],
+   "quiet": [
+    "The summer here is busy for the hotels.",
+    "The road in the north is closed in winter.",
+    "The evening was quiet after the game.",
+    "The nights are long in the mountains.",
+    "The path is narrow along the coast.",
+    "The market turned busy in the afternoon.",
+    "The autumn is short in these valleys.",
+    "The bridge was old on the pass."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "weather and temperature adjectives",
+ "unit_kind": "lexical / semantic",
+ "confidence": "medium",
+ "notes": "Second round. My first test (first half of a binomial, sweep with seed 202611051808) failed because the near miss ' humid' reached 0.35 with no pair at all. Probe: ' damp' 0.53 alone; 'bread and butter' 0.01 and 'law and order' 0.01, so binomials as such are not the point. Earlier: hot 0.39-0.55, heat 0.37-0.43, warm 0.33, cold 0.33; 'long' 0.10. The card's ' time' x6 and ' work' x3 are not covered, and the logit effect (' and') is not explained by this label."
+}

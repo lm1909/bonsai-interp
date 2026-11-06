@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-11e93b5f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N536+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T01:52:02+00:00",
+ "selection": "second round after a failed or too narrow sweep test",
+ "neighbours": [
+  {
+   "unit": "L24/N536",
+   "pole": "+",
+   "label": "A bibliographic reference line: publisher, entry or page slot in a citation (London: Collins, Pages 5-19 in ...); the same names in prose stay quiet",
+   "fire": [
+    "Jones, P. 1987. Badgers. Oxford: Blackwell.",
+    "Miller, R. Trees of Ohio. Chicago: Rand McNally, 1962.",
+    "Kerr, L. 2004. \"Moss.\" Pages 5-19 in Plants of Wales.",
+    "White, D. (ed.). Handbook of Ponds. London: Routledge.",
+    "Evans, T. \"Slate.\" In Encyclopedia of Mining, edited by J. Cole.",
+    "Ford, G. 1971. Owls. New York: Harper.",
+    "Young, B. Rivers of Spain. Madrid: Alianza, 2001.",
+    "Hill, C. 1993. Foxes. Pages 40-52 in Mammals of Kent."
+   ],
+   "quiet": [
+    "Mr Jones bought a book about badgers in Oxford on Monday.",
+    "Miller drove to Chicago with a map of Ohio in 1962.",
+    "Kerr found some moss on page five of her diary in Wales.",
+    "White walked around the ponds in London with a friend.",
+    "Evans worked in a slate mine with John Cole.",
+    "Ford saw owls in New York in the spring.",
+    "Young swam in rivers near Madrid in 2001.",
+    "Hill counted foxes in Kent for forty days."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "second-round"
+  ]
+ },
+ "short": "a bibliographic reference line",
+ "unit_kind": "format / contextual",
+ "confidence": "medium",
+ "notes": "Second round. My first test (citation of an entry in a reference work, sweep with seed 202611051807) failed because plain citations fired too: '.\"' of a journal citation 0.42, ' Collins' 0.33. So the pole reads reference lists in general. Probe: ' Collins' 0.36, ' Penguin' in a citation 0.23, journal citation 0.15; 'He bought a Penguin' 0.13, prose 0.00. The logit effect (' Encyclopedia', ' Dictionary', ' handbook') suggests a preference for reference works, which this label does not claim."
+}
