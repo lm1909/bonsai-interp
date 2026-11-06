@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-005e48a2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N3055+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:01:52+00:00",
+ "recipe": {
+  "toolchain_commit": "d1f60e5d9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N3055_pos/2026-11-06-lm1909-005e48a2.tests.json"
+ },
+ "label": "'Separate' for an extra item that may be needed (a separate data plan, a separate DAC, a separate chart), with Korean 별도; 'separated' and 'separate ways' read low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N3055_pos/2026-11-06-lm1909-005e48a2.tests.json",
+   "prereg_commit": "d1f60e5d9",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.025,
+     "peak": " separate"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.99,
+     "peak": " separate"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.798,
+     "peak": " separate"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.675,
+     "peak": " separate"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.911,
+     "peak": " separate"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.81,
+     "peak": " separate"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.57,
+     "peak": " separate"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.781,
+     "peak": " separate"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.063,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.39,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.022,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.072,
+     "peak": " account"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " room"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.165,
+     "peak": " separate"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.035,
+     "peak": " for"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.804,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d1f60e5d9",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a separate extra item",
+ "unit_kind": "lexical / semantic",
+ "confidence": 0.85,
+ "notes": "A near miss with 'a new set of' read 0.43 on ' of', so one close frame is kept.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "separate"
+  ]
+ }
+}
