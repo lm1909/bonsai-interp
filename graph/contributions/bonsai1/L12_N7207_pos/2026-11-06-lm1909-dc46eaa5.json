@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-dc46eaa5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N7207+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:03:35+00:00",
+ "recipe": {
+  "toolchain_commit": "c3bf023c1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N7207_pos/2026-11-06-lm1909-dc46eaa5.tests.json"
+ },
+ "label": "a noun of arranged items or plans (shopping list, plans in place, mobilization orders, sign up)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N7207_pos/2026-11-06-lm1909-dc46eaa5.tests.json",
+   "prereg_commit": "c3bf023c1",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.494,
+     "peak": " list"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.309,
+     "peak": " orders"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.53,
+     "peak": " plans"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.542,
+     "peak": " up"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.023,
+     "peak": " list"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.391,
+     "peak": " orders"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.284,
+     "peak": " plans"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.323,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": " sticky"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " left"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": " noon"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": " door"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " small"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.017,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " rushed"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.357,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c3bf023c1",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "plans, lists, orders, signing up",
+ "unit_kind": "semantic",
+ "confidence": "low",
+ "notes": "A loose group; probes reached 0.35-0.86. The pole's code examples ('sources', '_mapping') stayed low.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-f9978611",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N964+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T03:03:57+00:00",
+ "recipe": {
+  "toolchain_commit": "c3bf023c1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N964_pos/2026-11-06-lm1909-f9978611.tests.json"
+ },
+ "label": "the partial-byte token opening a Korean word that starts with 출 (출신, 출시, 출석, 출장, 출발)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N964_pos/2026-11-06-lm1909-f9978611.tests.json",
+   "prereg_commit": "c3bf023c1",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.685,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.675,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.721,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.717,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.78,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.66,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.853,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.699,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.036,
+     "peak": "하다"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.041,
+     "peak": "해"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.08,
+     "peak": " 확인"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.26,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.105,
+     "peak": "찍"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.199,
+     "peak": "되었다"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.242,
+     "peak": " 만들"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.142,
+     "peak": " 매"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.708,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c3bf023c1",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Korean words starting with 출",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "A broad pole with a tiny max (0.47), gate-closed in 61% of cases. Some near misses also contain partial-byte tokens, which is the point: the pole should prefer 출.",
+ "selection": "random draw"
+}
