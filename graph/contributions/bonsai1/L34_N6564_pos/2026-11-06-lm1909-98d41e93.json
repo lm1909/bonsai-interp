@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-98d41e93",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6564+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:30+00:00",
+ "recipe": {
+  "toolchain_commit": "9dc81f450",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N6564_pos/2026-11-06-lm1909-98d41e93.tests.json"
+ },
+ "label": "Arabic words of amount or restriction: كبير in 'a large number', كثيرا (a lot), فقط (only); the same sentence without them stays quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N6564_pos/2026-11-06-lm1909-98d41e93.tests.json",
+   "prereg_commit": "9dc81f450",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.656,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.558,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.009,
+     "peak": "أ"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.602,
+     "peak": " فقط"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.058,
+     "peak": " كثير"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.794,
+     "peak": " كبير"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.003,
+     "peak": "نحن"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.005,
+     "peak": " الشهر"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.09,
+     "peak": " عدد"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " الس"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": "أ"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "هذه"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " قبل"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": "صنع"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "نحن"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " الشهر"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.82,
+    "median_fire": 0.308,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dc81f450",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "Arabic كبير, كثيرا, فقط",
+ "unit_kind": "lexical / semantic",
+ "confidence": "medium",
+ "notes": "Card: ' كبير' x3, 'ً' x2, ' فقط' x2, 'زيد' x2, also Japanese 」, ' distinct'. Probe: ' كبير' 0.72, ' فقط' 0.63, 'ا' of كثيرا 0.38, ' أكبر' 0.15; ' عدد' alone 0.13, plain sentences 0.00.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " كبير",
+   " فقط"
+  ]
+ }
+}

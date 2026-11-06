@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-072ee874",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N9720-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:50+00:00",
+ "recipe": {
+  "toolchain_commit": "9dc81f450",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N9720_neg/2026-11-06-lm1909-072ee874.tests.json"
+ },
+ "label": "A closing greeting or signature: 'Love from', 'Liebe Grüße', 'Grüsse von', 'Aloha from', 'From your Valentine'; ' from' and ' von' with their ordinary meaning stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N9720_neg/2026-11-06-lm1909-072ee874.tests.json",
+   "prereg_commit": "9dc81f450",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.153,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.856,
+     "peak": " loving"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.654,
+     "peak": "ße"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.622,
+     "peak": " von"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.691,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.796,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.572,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.498,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.185,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.224,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "elen"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " der"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " noon"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": "See"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " Grandma"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.672,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dc81f450",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "closing greeting or signature",
+ "unit_kind": "semantic / format",
+ "confidence": "high",
+ "notes": "Card: ' from' x9, 'ße' x3, ' the' x3, 'From' x2, 'udos' x2. Probe: 'Love from' 0.93, 'From your Valentine' 0.64, Liebe Grüße 0.59, Grüsse von 0.57, Aloha from 0.52; 'drove home from' 0.01, 'came from' 0.03, 'took a book from' 0.01. ' the' in 'saith the LORD' on the card is not covered.",
+ "selection": "random draw"
+}

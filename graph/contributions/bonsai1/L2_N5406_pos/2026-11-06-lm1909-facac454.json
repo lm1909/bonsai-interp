@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-facac454",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N5406+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:33+00:00",
+ "recipe": {
+  "toolchain_commit": "9dc81f450",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N5406_pos/2026-11-06-lm1909-facac454.tests.json"
+ },
+ "label": "Dense, low-amplitude pole (max 0.33, 22% of tokens reach 0.1 of max, gate-closed); strongest on ' as' of 'so as to' and on ' alcohol'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N5406_pos/2026-11-06-lm1909-facac454.tests.json",
+   "prereg_commit": "9dc81f450",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.689,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.714,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.73,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.777,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.593,
+     "peak": " alcohol"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.523,
+     "peak": " alcohol"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.719,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.726,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.308,
+     "peak": " stayed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.474,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.209,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.184,
+     "peak": " avoid"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.295,
+     "peak": " soap"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.179,
+     "peak": " premises"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.194,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.181,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.716,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dc81f450",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "dense; ' as' of 'so as to', ' alcohol'",
+ "unit_kind": "dense / positional",
+ "confidence": "low",
+ "notes": "Card flags dense and gate-closed; ' as' x26 in 'so as to', ' alcohol'. Probe: 'so as' 0.60-0.75, ' alcohol' 0.63; 'works as' 0.20, 'as tall as' 0.15, soap 0.15, 'so that' 0.23 (on ' faster'), so the floor is high.",
+ "selection": "random draw"
+}

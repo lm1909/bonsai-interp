@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-ebf6235e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N1728-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:19:58+00:00",
+ "recipe": {
+  "toolchain_commit": "9dc81f450",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N1728_neg/2026-11-06-lm1909-ebf6235e.tests.json"
+ },
+ "label": "' n' split off as the first letter of a word (nongovernmental, nyc, nuns, nuncio); words that keep n- in a longer token stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N1728_neg/2026-11-06-lm1909-ebf6235e.tests.json",
+   "prereg_commit": "9dc81f450",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.605,
+     "peak": " n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.578,
+     "peak": " n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.544,
+     "peak": " n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.8,
+     "peak": " n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.66,
+     "peak": " n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.517,
+     "peak": " n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.42,
+     "peak": " n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.217,
+     "peak": " n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " opened"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " rising"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " nurses"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " nurses"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.561,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9dc81f450",
+  "minutes": 2,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "split-off ' n'",
+ "unit_kind": "token piece",
+ "confidence": "high",
+ "notes": "Card: ' n' x12, ' N' x7, 'N' x6, '/n' x3. Probe: nyc 0.75, nuns 0.72, nongovernmental 0.65; nun (one token) 0.00, nightmare 0.00, private 0.00, monks 0.00. Tokenizer checked. ' N' and 'N' are on the card but not in this test.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " n"
+  ]
+ }
+}
