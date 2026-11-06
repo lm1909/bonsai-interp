@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-6a0e9ba9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10495-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:09:46+00:00",
+ "recipe": {
+  "toolchain_commit": "a7b59d74e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N10495_neg/2026-11-06-lm1909-6a0e9ba9.tests.json"
+ },
+ "label": "(guess) rare foreign or technical terms: 'koseki', 'azimuth', '<want>'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N10495_neg/2026-11-06-lm1909-6a0e9ba9.tests.json",
+   "prereg_commit": "a7b59d74e",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.184,
+     "peak": "ose"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.102,
+     "peak": "ki"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.04,
+     "peak": " azimuth"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.028,
+     "peak": " azimuth"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.139,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.282,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.135,
+     "peak": "ki"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.028,
+     "peak": " azimuth"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " family"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": " letter"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " compass"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.068,
+     "peak": " group"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.071,
+     "peak": ">"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " bearing"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.118,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a7b59d74e",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "rare foreign or technical terms (guess)",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Card: mixed pieces, no shared pattern. Probes: 'ant' 0.27, 'ki' 0.16, ' azimuth' 0.08. Expected to fall short; recorded so the draw stays complete.",
+ "selection": "random draw"
+}

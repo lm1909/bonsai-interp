@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-213557e0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N2248+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:09:27+00:00",
+ "recipe": {
+  "toolchain_commit": "a7b59d74e",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N2248_pos/2026-11-06-lm1909-213557e0.tests.json"
+ },
+ "label": "(gate-closed echo) late digits of a long ISBN or product code: ISBN 978-81208157|8|0, /dp/15430766|2|9",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N2248_pos/2026-11-06-lm1909-213557e0.tests.json",
+   "prereg_commit": "a7b59d74e",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.215,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.371,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.315,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.397,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.14,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.671,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.477,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.12,
+     "peak": "://"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.22,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.151,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.167,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.11,
+     "peak": " https"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.139,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.124,
+     "peak": "www"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.203,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.116,
+     "peak": "://"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.343,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a7b59d74e",
+  "minutes": 12,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "late digits of an ISBN or ASIN",
+ "unit_kind": "token / numeric",
+ "confidence": 0.7,
+ "notes": "Card: '2' 6, ' ' 4, '<|endoftext|>' 3, flagged broad and gate-closed. Probes: '8' in an ISBN 0.62, '2' in an ASIN 0.71; 'pages 251-3' 0.16, '2 dollars' 0.10, <|endoftext|> 0.12.",
+ "selection": "random draw"
+}
