@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-06-lm1909-dc5cd1b4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N2924-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:53:13+00:00",
+ "recipe": {
+  "toolchain_commit": "b06494940",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N2924_neg/2026-11-06-lm1909-dc5cd1b4.tests.json"
+ },
+ "label": "a Chinese name in pinyin, responding most strongly on the final '-ang', '-uang' or '-iang' (H|uang, X|iang|hua, Sh|ang|hainese), as opposed to non-Chinese names",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N2924_neg/2026-11-06-lm1909-dc5cd1b4.tests.json",
+   "prereg_commit": "b06494940",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.88,
+     "peak": " Wang"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.636,
+     "peak": " Jiang"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.75,
+     "peak": "ang"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.879,
+     "peak": "iang"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.772,
+     "peak": " Fang"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.513,
+     "peak": " Guang"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.767,
+     "peak": "iang"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.715,
+     "peak": " Huang"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.076,
+     "peak": " Weber"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " Bav"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.072,
+     "peak": " Rossi"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.141,
+     "peak": " Caesar"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.173,
+     "peak": " Berg"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.144,
+     "peak": " Lyon"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.128,
+     "peak": "arl"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.271,
+     "peak": " Meyer"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.758,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test",
+   "second-round"
+  ],
+  "detected": [],
+  "toolchain_commit": "b06494940",
+  "minutes": 5,
+  "batch_size": 4,
+  "dtype": "float16"
+ },
+ "short": "pinyin Chinese names, strongest on -ang",
+ "unit_kind": "token",
+ "confidence": "high",
+ "notes": "Second round. The first round claimed the -ang final against other Chinese names and failed on two near misses (' Beijing' 0.344, 'hou' in Zhou 0.313), so the pole reaches other pinyin too. New label: Chinese pinyin names against European names in the same frames. This is a different contrast, not the same test with easier near misses: the first-round result stands for the narrower claim.",
+ "selection": "picked"
+}
