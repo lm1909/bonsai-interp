@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-3e749e0f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N10290+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:50:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N10290",
+   "pole": "+",
+   "label": "the digits of hexadecimal literals in code (0x01, \\xfd)",
+   "fire": [
+    "if status == 0x02:\n    retry()\n",
+    "mask = value & 0x40\n",
+    "data = b'\\x7f\\xfd\\x12\\xc8'\n",
+    "if (flags & 0x10) >> 4:\n    stop()\n",
+    "PORT_ADDR = 0x3f8\n",
+    "reg = 0x0a\n",
+    "header = '\\x89\\xfd\\x4e\\x47'\n",
+    "assert size == 0xe4\n"
+   ],
+   "quiet": [
+    "if status == 2:\n    retry()\n",
+    "mask = value & 64\n",
+    "data = b'hello world'\n",
+    "if (flags & 16) >> 4:\n    stop()\n",
+    "PORT_ADDR = 1016\n",
+    "reg = 10\n",
+    "header = 'hello there'\n",
+    "assert size == 228\n"
+   ]
+  }
+ ],
+ "predictions": "6/8 fire, 0 near misses",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "hexadecimal literals",
+ "unit_kind": "format / token",
+ "confidence": "high"
+}
