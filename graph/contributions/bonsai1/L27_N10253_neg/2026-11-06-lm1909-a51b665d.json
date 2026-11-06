@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-a51b665d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N10253-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:22:01+00:00",
+ "recipe": {
+  "toolchain_commit": "e82a8daab",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N10253_neg/2026-11-06-lm1909-a51b665d.tests.json"
+ },
+ "label": "describing what a material is ('a solid material', 'naturally occurring', 'natural compounds')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N10253_neg/2026-11-06-lm1909-a51b665d.tests.json",
+   "prereg_commit": "e82a8daab",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.552,
+     "peak": " solid"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.56,
+     "peak": " occurring"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.35,
+     "peak": " natural"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.143,
+     "peak": "ine"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.38,
+     "peak": " occurring"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.062,
+     "peak": " natural"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.411,
+     "peak": " natural"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.016,
+     "peak": "Ice"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.12,
+     "peak": " popular"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.07,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.057,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.002,
+     "peak": "ber"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": "Gran"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.0,
+     "peak": "Ice"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.365,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e82a8daab",
+  "minutes": 3,
+  "batch_size": 10,
+  "dtype": "float16"
+ },
+ "short": "describing a natural material",
+ "unit_kind": "contextual / semantic",
+ "confidence": "high",
+ "selection": "random draw"
+}
