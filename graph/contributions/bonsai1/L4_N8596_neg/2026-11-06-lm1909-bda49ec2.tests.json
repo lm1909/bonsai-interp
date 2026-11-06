@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-06-lm1909-bda49ec2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8596-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N8596",
+   "pole": "-",
+   "label": "the piece 'oot' of rare words (W|oot|ton, W|oot, M|oot, the token ' moot') and 'et' of 'le|et'",
+   "fire": [
+    "The steam train stops at Wootton on the island.",
+    "We won the contest!!! Woot, what a day.",
+    "That argument is now moot after the ruling.",
+    "The jurors of the court leet fined the miller.",
+    "Dr. Wooten published his bird survey that spring.",
+    "The new rule makes their whole complaint moot.",
+    "The old manor held a court leet each autumn.",
+    "My cousin moved to Wootton Bassett last year."
+   ],
+   "quiet": [
+    "The steam train stops at Oxford on the way.",
+    "We won the contest!!! Great, what a day.",
+    "That argument is now over after the ruling.",
+    "The jurors in the shoot fined the hunter a boot.",
+    "Dr. Foote published his bird survey that spring.",
+    "The new rule makes their whole foot sore.",
+    "The old manor held a street fair each autumn.",
+    "My cousin moved to Oakland last year."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'oot' in rare words, 'le|et'",
+ "unit_kind": "spelling",
+ "confidence": 0.85,
+ "notes": "Card: 'oot' x12, ' moot' x6, 'et' x4, 'oting' x3, 'en' x2, 'ot' x2. Probe: 'oot' of Wootton 0.933; 'oot' of Woot 0.831; 'et' of leet 0.777; ' moot' 0.637; common words foot, root, boots, shoot at about 0.00. Check the near misses: they are whole tokens with the same spelling.",
+ "trigger": {
+  "tokens": [
+   "oot",
+   " moot"
+  ]
+ }
+}

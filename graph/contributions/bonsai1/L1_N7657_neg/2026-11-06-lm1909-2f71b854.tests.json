@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-2f71b854",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N7657-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N7657",
+   "pole": "-",
+   "label": "a suffix piece on a long word ('Suicid|ally', 'de-militar|ized')",
+   "fire": [
+    "Homicidally angry men filled the old prison yard.",
+    "The region has been fully re-militarized since the war.",
+    "Suicidally reckless guards stood around the palace.",
+    "The city was de-industrialized during the last thirty years.",
+    "Homicidally jealous husbands appear in many old operas.",
+    "The army has de-nuclearized the whole peninsula.",
+    "Maniacally cheerful hosts ran the morning show.",
+    "The coast was over-commercialized by the new hotels."
+   ],
+   "quiet": [
+    "Very angry men filled the old prison yard.",
+    "The region has been quite calm since the war.",
+    "Very reckless guards stood around the palace.",
+    "The city was rebuilt during the last thirty years.",
+    "Very jealous husbands appear in many old operas.",
+    "The army has left the whole peninsula.",
+    "Young cheerful hosts ran the morning show.",
+    "The coast was hit by the new storms."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "suffix pieces on long words",
+ "unit_kind": "token piece",
+ "confidence": 0.15,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: L 100%, density under 0.3 near zero, max 2.22 (one outlier: 'jav'); 'ally' x2, 'able' x2, 'ab', 'MOD', 'iz'. Probe: 'ized' 0.279; 'ally' 0.258; 'ine' 0.143; plain sentences 0.035-0.046; the 'jav' top example read 0.074."
+}

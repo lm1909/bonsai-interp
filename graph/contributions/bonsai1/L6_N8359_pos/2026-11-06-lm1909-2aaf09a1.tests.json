@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-2aaf09a1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N8359+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N8359",
+   "pole": "+",
+   "label": "things changing or differing from how they were ('things changed', 'change his mind', 'this time was different')",
+   "fire": [
+    "Everything changed for her after the fire at the mill.",
+    "He will surely change his mind about the farm next year.",
+    "But this winter was different, and the village knew it.",
+    "Perhaps her opinion could change once she meets them.",
+    "Our situation is different from the one in your town.",
+    "They changed their minds about the wedding at the last minute.",
+    "Su opinión es diferente a la de sus padres.",
+    "Life changed quickly when the railroad came to the valley."
+   ],
+   "quiet": [
+    "Everything stayed quiet for her after the fire at the mill.",
+    "He will surely read his book about the farm next year.",
+    "But this winter was the same, and the village knew it.",
+    "Perhaps her sister could come once she meets them.",
+    "Our situation is like the one in your town.",
+    "They kept their plans for the wedding at the last minute.",
+    "Su casa es igual a la de sus padres.",
+    "Life went on slowly when the railroad came to the valley."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "change or difference",
+ "unit_kind": "semantic",
+ "confidence": 0.9,
+ "notes": "Card: ' change' x7, ' different' x6, ' mind' x6, ' minds' x3, ' changed' x2, ' differently' x2, ' that' after 'changed'. Probe: ' mind' after 'change his' 1.083; ' changed' 0.909; ' change' 0.812; ' Different' 0.791; ' different' 0.754; Spanish ' diferente' 0.627; ' same' 0.214; 'read his mail' 0.023. The near misses state sameness or no change in the same frames."
+}

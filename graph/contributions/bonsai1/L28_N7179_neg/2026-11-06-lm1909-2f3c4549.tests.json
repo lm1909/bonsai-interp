@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-2f3c4549",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7179-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N7179",
+   "pole": "-",
+   "label": "something a person keeps up as a habit over time ('the routine he has kept', 'I've kept a journal', 'maintain this regime')",
+   "fire": [
+    "She follows the same schedule she has kept since college.",
+    "I have kept a small diary for most of my life.",
+    "Keep up this exercise regime for a few months, then check.",
+    "He never strays from the morning ritual he has followed for years.",
+    "We have kept a weekly budget for nearly a decade.",
+    "My aunt sticks to the diet she has kept for thirty years.",
+    "Continue this treatment regime for a few weeks, then stop.",
+    "They still observe the habit they have kept since the war."
+   ],
+   "quiet": [
+    "She follows the same trail she has walked since noon.",
+    "I have bought a small boat for most of my trips.",
+    "Hold up this heavy ladder for a few seconds, then drop.",
+    "He never strays from the path the guide has marked for us.",
+    "We have bought a large table for nearly a hundred dollars.",
+    "My aunt sticks to the bridge she has crossed for thirty minutes.",
+    "Carry this wooden crate for a few yards, then stop.",
+    "They still own the car they have parked behind the barn."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "a habit kept up over time",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' who' x2, ' have' x2, ' has', ' Account', ' regime', ' journal', ' form', ' she'; promotes ' regularly', ' regular', ' frequent', ' periodically'. Probe: ' has' in 'the routine he has' 0.937; ' journal' after 'kept' 0.573; ' Account' 0.512; ' who' 0.340; ' regime' 0.241; 'road he has driven' 0.084; 'paper towel' 0.043. ' Account' and ' who' are not explained by this label."
+}

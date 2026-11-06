@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-5d941bba",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N802-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N802",
+   "pole": "-",
+   "label": "the pieces 'et' of epith|et, 'ign' of Sovere|ign, Arabic 'با' of غال|با and Korean '당' after a party name",
+   "fire": [
+    "The poet used a fine epithet for the sea in that line.",
+    "The island is a Sovereign territory of the crown.",
+    "يأتي المطر غالبا في فصل الشتاء من كل عام.",
+    "일본 자민당 대표는 어제 기자들에게 말했다.",
+    "Homer gives each hero a fixed epithet in the poem.",
+    "The Sovereign signed the order at the old palace.",
+    "يذهب الأطفال غالبا إلى المدرسة سيرا على الأقدام.",
+    "영국 노동당 의원은 그 법안에 반대했다."
+   ],
+   "quiet": [
+    "The poet used a fine word for the sea in that line.",
+    "The island is a large territory of the crown.",
+    "يأتي المطر كثيرا في فصل الشتاء من كل عام.",
+    "일본 정부 대표는 어제 기자들에게 말했다.",
+    "Homer gives each hero a long speech in the poem.",
+    "The king signed the order at the old palace.",
+    "يذهب الأطفال معا إلى المدرسة سيرا على الأقدام.",
+    "영국 정부 의원은 그 법안에 반대했다."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'et', 'ign', 'با', '당'",
+ "unit_kind": "token piece (list)",
+ "confidence": 0.65,
+ "notes": "Card: broad (1.7%); 'et' x8, 'با' x6, 'ign' x5, '당' x2, 'ム' x2, ' 많은' x2. Probe: '당' 0.863; 'ign' 0.668; 'et' 0.645; 'با' 0.495; the same frames without them 0.044-0.146. No shared pattern: a list. The tests include 'ign' and 'et' in the same words as the card.",
+ "trigger": {
+  "tokens": [
+   "et",
+   "ign",
+   "با",
+   "당"
+  ]
+ }
+}

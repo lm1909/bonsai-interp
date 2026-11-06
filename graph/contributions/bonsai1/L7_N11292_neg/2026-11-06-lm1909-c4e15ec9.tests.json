@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-c4e15ec9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N11292-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N11292",
+   "pole": "-",
+   "label": "the last piece of a rare name or word split by the tokenizer ('Plut|arch', 'Pelt|zman', 'Puck|man', 'SAL|AD')",
+   "fire": [
+    "Petrarch wrote sonnets to a woman he barely knew.",
+    "According to Hartzman, the new rules failed in Ohio.",
+    "The menu lists GREEN SALAD, SOUP, AND BREAD.",
+    "Plutarch records the speech in his life of Caesar.",
+    "He played the arcade game Puckman with his cousins.",
+    "A study by Feltzman tracked drivers for two years.",
+    "The buffet has FRUIT SALAD, ROLLS, AND COFFEE.",
+    "The writer Plutarch lived in a small Greek town."
+   ],
+   "quiet": [
+    "Homer wrote poems about a war he barely knew.",
+    "According to Johnson, the new rules failed in Ohio.",
+    "The menu lists GREEN BEANS, SOUP, AND BREAD.",
+    "Caesar records the speech in his book on Gaul.",
+    "He played the board game Monopoly with his cousins.",
+    "A study by Smith tracked drivers for two years.",
+    "The buffet has FRESH FRUIT, ROLLS, AND COFFEE.",
+    "The writer Dickens lived in a small London house."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "last piece of a split name",
+ "unit_kind": "token piece",
+ "confidence": 0.5,
+ "notes": "Card: 'man' x2, 'arch' x2, 'AD', ' Dis', 'ek', ' Res'. Probe: 'arch' 1.080; 'AD' 0.946; 'zman' 0.726; 'man' 0.673; ' Res' after 'Exp. Cell' 0.300; ' Infect' 0.249; plain sentences at most 0.097. The new cases in this test are guesses at the pattern."
+}

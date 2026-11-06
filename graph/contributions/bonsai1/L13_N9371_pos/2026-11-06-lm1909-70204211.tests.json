@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-70204211",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N9371+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N9371",
+   "pole": "+",
+   "label": "saying how well something suits a use ('goes perfectly with', 'make great additions to', 'would work as', 'not out of place in')",
+   "fire": [
+    "This red scarf goes perfectly with a plain gray coat.",
+    "These little jars make great gifts for teachers and neighbors.",
+    "The old barn would work well as a summer theater.",
+    "That lamp would not look out of place in a modern office.",
+    "Her soft voice fits perfectly with the slow piano line.",
+    "Dried herbs make great additions to soups and stews.",
+    "This small tent would work as a shelter for two.",
+    "The bench would look lovely in any garden."
+   ],
+   "quiet": [
+    "This red scarf was found near a plain gray coat.",
+    "These little jars were sold to teachers and neighbors.",
+    "The old barn was built here as a summer stable.",
+    "That lamp was left out in the rain by the office.",
+    "Her soft voice was heard over the slow piano line.",
+    "Dried herbs were stored next to soups and stews.",
+    "This small tent was bought by a couple of friends.",
+    "The bench was moved from the garden."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "how well something suits a use",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.75,
+ "notes": "Card: ' to' x3, ' for' x3, ' great' x2, ' an' x2, ' easily' x2, ' fit' x2, ' as', ' perfectly', ' in'. Probe: ' perfectly' after 'goes' 1.072; ' great' after 'make' 0.688; ' as' after 'would work' 0.658; ' in' after 'out of place' 0.597; 'designed to' only 0.198; 'was washed with' 0.028; 'recorded last year' 0.053."
+}

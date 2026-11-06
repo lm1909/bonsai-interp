@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-06-lm1909-65205a6c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8217-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N8217",
+   "pole": "-",
+   "label": "dense unit (26% of tokens reach 0.1 of max); strongest on the pieces 'atal' of C|atal-, 'chy' of it|chy and 'fulness'",
+   "fire": [
+    "The wool sweater made his neck feel itchy all morning.",
+    "The sign says Riu (Catalan for river) near the old bridge.",
+    "Catalysts are added to the tank before heating it.",
+    "Her thankfulness for the gift surprised the old man.",
+    "Mosquito bites leave my ankles itchy for days.",
+    "Many street signs in the city are written in Catalan.",
+    "Catalysts clean the exhaust of most modern cars.",
+    "His forgetfulness with money was known in the village."
+   ],
+   "quiet": [
+    "The wool sweater made his neck feel warm all morning.",
+    "The sign says Riu (a word for river) near the old bridge.",
+    "Water is added to the tank before heating it.",
+    "Her letter about the gift surprised the old man.",
+    "Mosquito bites leave my ankles red for days.",
+    "Many street signs in the city are written in French.",
+    "Filters clean the exhaust of most modern cars.",
+    "His house by the mill was known in the village."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; 'atal', 'chy', 'fulness'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.5,
+ "notes": "Card: FLAG dense 26.2%, gate-closed regime 100%, max 0.21; 'atal' x5, 'chy' x3, ' Catal' x2. Probe: 'chy' 0.920; ' Catalan' 0.840; 'atal' 0.818; 'fulness' 0.778; but the baseline is high: ' used' 0.325 and ' dry' 0.235. This is a list of its top pieces on a dense pole, not an explanation.",
+ "trigger": {
+  "tokens": [
+   "atal",
+   "chy",
+   "fulness",
+   " Catalan"
+  ]
+ }
+}

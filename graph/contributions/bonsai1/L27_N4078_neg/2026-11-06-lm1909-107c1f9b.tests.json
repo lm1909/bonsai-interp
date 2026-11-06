@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-107c1f9b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N4078-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N4078",
+   "pole": "-",
+   "label": "a line-opening 'If' or 'Are' that addresses the reader at the end of promotional copy, and the token 'War' or ' War'",
+   "fire": [
+    "We repair roofs of every size and shape.\nIf you would like a quote, contact us.",
+    "Our team loves to answer your questions.\nIf you need help with your order, call today.",
+    "Warum lohnt sich dieses Angebot für Sie?",
+    "These tips work for small shops too.\nIf you want to learn more, sign up below.",
+    "Warum sind unsere Preise so günstig?",
+    "We clean carpets and much, much more!\nIf you are a new customer, ask about our deals.",
+    "Warum ist die Anmeldung so einfach?",
+    "That is all for our spring sale.\nIf you have a question, send us a note."
+   ],
+   "quiet": [
+    "We repair roofs of every size and shape.\nThe crew starts work at eight each day.",
+    "Our team loves to answer your questions.\nThe office is on the second floor.",
+    "Wie viel kostet dieses Angebot für Sie?",
+    "These tips work for small shops too.\nThe owner of ours sells books.",
+    "Wann sind unsere Preise so günstig?",
+    "We clean carpets and much, much more!\nThe van is parked around the back.",
+    "Wie lange dauert die Anmeldung noch?",
+    "That is all for our spring sale.\nThe summer one comes in June."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "reader-addressing 'If'; 'War' (list)",
+ "unit_kind": "contextual (list)",
+ "confidence": 0.4,
+ "notes": "Card: 'If' x8, ' War' x3, ' war' x3, 'Are' x2, ' Dar' x2, ' Learn' x2; promotes ' free', ' Free'. Probe: 'War' 0.425 in both German 'Warum' and English 'War is bad'; 'If' at a line start 0.263-0.280; 'Are' 0.133; ' if' mid-sentence 0.020; a line opening with 'The' 0.036. Two unrelated triggers, so a list."
+}

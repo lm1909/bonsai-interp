@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-06-lm1909-80500eed",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10558+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N10558",
+   "pole": "+",
+   "label": "the Chinese tokens '或' ('or'), '目标' ('goal') and '旨在' ('aims to')",
+   "fire": [
+    "学生或家长都可以来学校咨询。",
+    "我们的目标是提高产品质量。",
+    "这项研究旨在了解儿童的睡眠。",
+    "你可以坐火车或飞机去北京。",
+    "这个学期，目标是学会游泳。",
+    "该项目旨在帮助农村的老人。",
+    "请在周一或周二交作业。",
+    "他的目标是成为一名医生。"
+   ],
+   "quiet": [
+    "学生都可以来学校咨询。",
+    "我们的工厂生产很多产品。",
+    "这位老师认识所有的儿童。",
+    "你可以坐火车去北京。",
+    "这个学期，课程很有意思。",
+    "这位医生帮助农村的老人。",
+    "请在周一交作业。",
+    "他的姐姐是一名医生。"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Chinese '或', '目标', '旨在'",
+ "unit_kind": "token (list)",
+ "confidence": 0.6,
+ "notes": "Card: '或' x12, '和' x9, '目标' x4, '公司' x3, '旨在', '分析'. Probe: '目标' 0.475; '或' 0.420; '旨在' 0.408; '公园' 0.285; '和' 0.260; plain sentences 0.076-0.098. '和' and '公司' are not covered. This stays a list.",
+ "trigger": {
+  "tokens": [
+   "或",
+   "目标",
+   "旨在"
+  ]
+ }
+}

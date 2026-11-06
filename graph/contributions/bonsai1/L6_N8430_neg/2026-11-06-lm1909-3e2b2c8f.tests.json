@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-3e2b2c8f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N8430-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N8430",
+   "pole": "-",
+   "label": "free-choice 'any', 'anything' or 'anywhere' after 'can' or 'could' (a range of open possibilities), not the same words under negation or in a question",
+   "fire": [
+    "With enough practice you can do anything you want.",
+    "The trip can take anywhere from two days to a month.",
+    "You can pick any color you like for the walls.",
+    "Bears can live almost anywhere in these mountains.",
+    "This engine can burn anything from coal to old tires.",
+    "The tool could be anything: a hammer, a rope, or a stick.",
+    "She said you can sit in any seat on the bus.",
+    "Prices can be anywhere from ten to fifty dollars."
+   ],
+   "quiet": [
+    "With no practice you cannot do anything you want.",
+    "The trip did not take us anywhere new last month.",
+    "You should not pick any color for the walls yet.",
+    "Bears do not live anywhere in these mountains now.",
+    "This engine has not burned anything since the fire.",
+    "Is the tool anything like a hammer or a rope?",
+    "She said nobody can sit in any seat on the bus.",
+    "Have prices gone anywhere since the start of the year?"
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "free-choice 'any...'",
+ "unit_kind": "grammatical / semantic",
+ "confidence": 0.95,
+ "notes": "Card: ' any' x12, ' anything' x11, ' anywhere' x8, ' anyone'. Probe: ' anything' after 'could do' 0.980 and 'can take' 0.892; ' anywhere' 0.794; ' any' after 'can use' 0.680. The same words under negation or in a question read 0.005-0.008: 'did not do anything', 'hasn't been anywhere', 'don't have any', 'Did you see anyone'. So this is a distinction, not the word."
+}

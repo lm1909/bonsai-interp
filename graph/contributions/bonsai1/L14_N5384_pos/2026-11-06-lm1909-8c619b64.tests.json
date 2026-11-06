@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-8c619b64",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5384+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N5384",
+   "pole": "+",
+   "label": "a business giving a share of its sales or matching funds to a cause ('gives 1% of sales to', 'donates $1 from every box', 'match funds')",
+   "fire": [
+    "The shoe brand gives 5% of profits to children's hospitals.",
+    "For each bag sold, the bakery donates fifty cents to a food bank.",
+    "A local dealer has pledged to match donations up to $2000.",
+    "The soap maker gives one bar to a shelter for every 5 it sells.",
+    "A percentage of the ticket sales will go to cancer research.",
+    "The coffee chain donates $1 from each bag to rainforest groups.",
+    "Our company will match every dollar raised by the staff.",
+    "This brewery gives a tenth of its income to river cleanup."
+   ],
+   "quiet": [
+    "The shoe brand sells 5% more sneakers to children's stores.",
+    "For each bag sold, the bakery prints a coupon for the next visit.",
+    "A local dealer has decided to close on Mondays after 2000.",
+    "The soap maker ships one crate to a shop for every order.",
+    "A number of the ticket holders will go to the second show.",
+    "The coffee chain buys beans from each farm in rainforest areas.",
+    "Our company will check every invoice sent by the staff.",
+    "This brewery uses a tenth of its barley in winter ale."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "a business giving sales to a cause",
+ "unit_kind": "semantic",
+ "confidence": 0.85,
+ "notes": "Card: '0' x4, ' of' x3, ' to' x2, ' donated' x2, ' Registered' x2, ' match', 'IC' of FDIC. Probe: ' of' after 'gives 1%' 0.727; ' to' after 'every box sold' 0.636; ' every' 0.610; ' match' 0.482; the same firms selling or shipping 0.012-0.056. 'polled 2,000 Canadians' read 0.375 and the ' Registered' and FDIC peaks are not covered."
+}

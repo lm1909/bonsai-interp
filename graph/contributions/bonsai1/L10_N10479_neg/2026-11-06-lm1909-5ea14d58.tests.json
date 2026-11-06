@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-5ea14d58",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10479-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N10479",
+   "pole": "-",
+   "label": "a piece inside a tax, rent, price or trade term ('quit|-rent', 'TV|A', '/ 10|0.0', 'chant|ier ... commerce')",
+   "fire": [
+    "He leased the land at a yearly quit-rent of two shillings.",
+    "Le gouvernement veut baisser la TVA sur les produits de base.",
+    "total = price * (1 - rate / 100.0)",
+    "Ils paient la TVA sur tous les services de la maison.",
+    "The tenants owed the lord a quit-rent every Michaelmas.",
+    "net = amount * (1 - tax / 100.0)",
+    "Le chantier naval et le commerce du port employaient cent hommes.",
+    "The estate carried a small quit-rent of one penny."
+   ],
+   "quiet": [
+    "He walked the land on a cold morning with two dogs.",
+    "Le gouvernement veut construire une route vers les villages du nord.",
+    "total = width * (1 + height)",
+    "Ils lisent le journal sur tous les bancs de la place.",
+    "The tenants gave the lord a goose every Michaelmas.",
+    "net = length * (1 + depth)",
+    "Le jardin public et la fontaine du port plaisaient aux enfants.",
+    "The estate had a small orchard of old apple trees."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "pieces of tax and price terms",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Low confidence. Card: 'est' x2, 'ية' x2, 'hold', ' Text', ' chant', '0', ' quit', ' TV'. Probe: ' TV' of TVA 0.944; '0' of 100.0 after a discount 0.856; ' quit' 0.689; ' chant' 0.561; a tailor in a textile town 0.056; 'small holdings' 0.008. The shared idea is my guess."
+}

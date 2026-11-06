@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-5a46318d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N2823-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:57:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N2823",
+   "pole": "-",
+   "label": "a broken bone or limb ('broke his leg', 'a broken leg', 'bone fractures', 'arm is broken')",
+   "fire": [
+    "My brother broke his leg during a ski trip last winter.",
+    "The goalkeeper missed the season after suffering a broken leg.",
+    "An X-ray showed two rib fractures after the crash.",
+    "Her wrist is broken in three places, the doctor said.",
+    "The old man fell and fractured his hip on the ice.",
+    "He broke his arm when he fell off the ladder.",
+    "Falls cause many hip fractures among older women.",
+    "A rider with a broken collarbone left the race on Tuesday."
+   ],
+   "quiet": [
+    "My brother broke his phone during a ski trip last winter.",
+    "The goalkeeper missed the season after signing a new contract.",
+    "An X-ray showed two healthy lungs after the crash.",
+    "Her window is broken in three places, the landlord said.",
+    "The old man fell and dropped his hat on the ice.",
+    "He broke his word when he sold the ladder.",
+    "Falls cause many insurance claims among older women.",
+    "The chair with a broken leg was left in the hall on Tuesday."
+   ]
+  }
+ ],
+ "predictions": "AUROC>=0.9; median fire>=0.2",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "a broken bone",
+ "unit_kind": "semantic",
+ "confidence": 0.8,
+ "notes": "Card: ' leg' x5, ' fracture' x4, ' bones' x3, 'ar', ' fractures' x2, ' off' x2, ' broken', 'URE', 'act'. Probe: ' leg' after 'broke his' 0.977; ' fractures' 0.873; ' leg' after 'broken' 0.830; ' broken' after 'arm is' 0.790. But the word pair also fires: 'The table has a broken leg' 0.667, 'broke his promise' 0.263 and 'broken window' 0.230. A chair near miss tests this directly, so it may cost the one allowed near miss."
+}
