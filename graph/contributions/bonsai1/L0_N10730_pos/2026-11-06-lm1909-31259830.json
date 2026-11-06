@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-06-lm1909-31259830",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10730+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T00:23:53+00:00",
+ "recipe": {
+  "toolchain_commit": "2e56fc809",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10730_pos/2026-11-06-lm1909-31259830.tests.json"
+ },
+ "label": "The second word of a fixed compound or name, where the first word sets it up (parchment paper, picnic table, Fresno State)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10730_pos/2026-11-06-lm1909-31259830.tests.json",
+   "prereg_commit": "2e56fc809",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.849,
+     "peak": " table"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.006,
+     "peak": "He"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.025,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.908,
+     "peak": " paper"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.469,
+     "peak": " State"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.092,
+     "peak": " paper"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.088,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " lunch"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.024,
+     "peak": " her"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.092,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " small"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.09,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2e56fc809",
+  "minutes": 4,
+  "batch_size": 9,
+  "dtype": "float16"
+ },
+ "short": "second word of a fixed compound",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "selection": "random draw"
+}
