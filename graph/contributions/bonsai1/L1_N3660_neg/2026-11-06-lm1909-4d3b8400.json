@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-06-lm1909-4d3b8400",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N3660-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:37:30+00:00",
+ "recipe": {
+  "toolchain_commit": "93151f38f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N3660_neg/2026-11-06-lm1909-4d3b8400.tests.json"
+ },
+ "label": "The Arabic 'and' written as a separate token ' و'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N3660_neg/2026-11-06-lm1909-4d3b8400.tests.json",
+   "prereg_commit": "93151f38f",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.661,
+     "peak": " و"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.579,
+     "peak": " و"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.329,
+     "peak": " و"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.531,
+     "peak": " و"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.362,
+     "peak": " و"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.4,
+     "peak": " و"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.471,
+     "peak": " و"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.287,
+     "peak": " و"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.15,
+     "peak": "يع"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.328,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.183,
+     "peak": " السوق"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.056,
+     "peak": "ساء"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.086,
+     "peak": " الص"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.154,
+     "peak": "جر"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.328,
+     "peak": " الجديدة"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.149,
+     "peak": "اء"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.435,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "93151f38f",
+  "minutes": 4,
+  "batch_size": 7,
+  "dtype": "float16"
+ },
+ "short": "separate Arabic ' و'",
+ "unit_kind": "token",
+ "confidence": "medium",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " و"
+  ]
+ }
+}
