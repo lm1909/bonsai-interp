@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-06-lm1909-b0f2db8f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N865-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T00:48:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N865",
+   "pole": "-",
+   "label": "The comma or quote after an argument name in argparse's add_argument",
+   "fire": [
+    "parser.add_argument('-o', metavar='OUT', help='Output')\n",
+    "parser.add_argument('--name', type=str, help='name')\n",
+    "parser.add_argument(\"-v\", \"--verbose\", help=\"Talk\")\n",
+    "p.add_argument('path', type=str, nargs='+')\n",
+    "sub.add_argument('kernel', type=str, help='Kernel')\n",
+    "parser.add_argument(\"-n\", \"--num\", type=int)\n",
+    "parser.add_argument('--rate', type=float, default=1.0)\n",
+    "args.add_argument('input', metavar='FILE')\n"
+   ],
+   "quiet": [
+    "foo.call('-o', 'OUT')\n",
+    "names = ['name', 'str']\n",
+    "print(\"-v\", \"--verbose\")\n",
+    "d = {'path': 1, 'mode': 2}\n",
+    "log.info('kernel', 'loaded')\n",
+    "print(\"-n\", \"--num\")\n",
+    "vals = ('rate', 'float', 1.0)\n",
+    "open('input', 'r')\n"
+   ]
+  }
+ ],
+ "predictions": "Argument punctuation in add_argument fires; the same strings in other calls stay quiet.",
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "comma after argparse argument",
+ "unit_kind": "contextual",
+ "confidence": "high"
+}
