@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-06-lm1909-20a7b26c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N17-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-06T02:56:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N17",
+   "pole": "-",
+   "label": "a word-start L split off as its own token, in Latin, Cyrillic or Hangul pieces (' l'|igation, ' л'|ичного, ' л'|инда), as opposed to whole words in those sentences",
+   "fire": [
+    "Sutures, ligation, and laser therapy are used.",
+    "Ничего личного, просто работа.",
+    "hola linda, soy Gabriel.",
+    "The Koil line is LUXURY for the price.",
+    "Это личное дело каждого.",
+    "Fue un lindo día de campo.",
+    "Treatment by ligation takes an hour.",
+    "Он говорил лично со мной."
+   ],
+   "quiet": [
+    "Sutures and laser therapy are used.",
+    "Ничего другого, просто работа.",
+    "hola amiga, soy Gabriel.",
+    "The Koil line is sold for the price.",
+    "Это старое дело каждого.",
+    "Fue un buen día de campo.",
+    "Treatment by pills takes an hour.",
+    "Он говорил долго со мной."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ]
+ },
+ "short": "split word-start L / л",
+ "unit_kind": "token piece",
+ "confidence": "medium",
+ "notes": "Tokenization not checked for these new words. Korean ' 플' also fires (0.83 in a probe), so 'L' may not be the idea; that is not tested."
+}
