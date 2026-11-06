@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-480e46eb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N7337+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T02:47:21+00:00",
+ "recipe": {
+  "toolchain_commit": "6838c2885",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N7337_pos/2026-11-06-lm1909-480e46eb.tests.json"
+ },
+ "label": "The words volume and function (add volume, lung function, volume of sales); similar nouns stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N7337_pos/2026-11-06-lm1909-480e46eb.tests.json",
+   "prereg_commit": "6838c2885",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.458,
+     "peak": " volume"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.208,
+     "peak": " function"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.755,
+     "peak": " volume"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.15,
+     "peak": " function"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.255,
+     "peak": " volume"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.372,
+     "peak": " volume"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.667,
+     "peak": " function"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.286,
+     "peak": " function"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " thin"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.124,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": "Her"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " heat"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " staff"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.201,
+     "peak": " levels"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.096,
+     "peak": "Liver"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.329,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6838c2885",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "volume, function",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Flagged broad; max 1.01. 'Add colour' read 0.16.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "volume",
+   "function"
+  ]
+ }
+}
