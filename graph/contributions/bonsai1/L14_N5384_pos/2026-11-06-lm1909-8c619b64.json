@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-8c619b64",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5384+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:08:02+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N5384_pos/2026-11-06-lm1909-8c619b64.tests.json"
+ },
+ "label": "a business giving a share of its sales or matching funds to a cause ('gives 1% of sales to', 'donates $1 from every box', 'match funds')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N5384_pos/2026-11-06-lm1909-8c619b64.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.751,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.7,
+     "peak": "ates"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.444,
+     "peak": " match"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.417,
+     "peak": " every"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.476,
+     "peak": " go"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.752,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.457,
+     "peak": " dollar"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.448,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.263,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.081,
+     "peak": " every"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.078,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " company"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "This"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.467,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a business giving sales to a cause",
+ "unit_kind": "semantic",
+ "confidence": 0.85,
+ "notes": "Card: '0' x4, ' of' x3, ' to' x2, ' donated' x2, ' Registered' x2, ' match', 'IC' of FDIC. Probe: ' of' after 'gives 1%' 0.727; ' to' after 'every box sold' 0.636; ' every' 0.610; ' match' 0.482; the same firms selling or shipping 0.012-0.056. 'polled 2,000 Canadians' read 0.375 and the ' Registered' and FDIC peaks are not covered.",
+ "selection": "random draw"
+}

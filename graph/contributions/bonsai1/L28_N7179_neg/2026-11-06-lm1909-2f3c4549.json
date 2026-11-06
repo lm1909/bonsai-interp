@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2f3c4549",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7179-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:50+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N7179_neg/2026-11-06-lm1909-2f3c4549.tests.json"
+ },
+ "label": "something a person keeps up as a habit over time ('the routine he has kept', 'I've kept a journal', 'maintain this regime')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N7179_neg/2026-11-06-lm1909-2f3c4549.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.854,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.348,
+     "peak": " diary"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.207,
+     "peak": " regime"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.987,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.241,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.231,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.23,
+     "peak": " stop"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.649,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.116,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " then"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " dollars"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.158,
+     "peak": " bridge"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " then"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.387,
+     "peak": " have"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.498,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a habit kept up over time",
+ "unit_kind": "semantic / contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' who' x2, ' have' x2, ' has', ' Account', ' regime', ' journal', ' form', ' she'; promotes ' regularly', ' regular', ' frequent', ' periodically'. Probe: ' has' in 'the routine he has' 0.937; ' journal' after 'kept' 0.573; ' Account' 0.512; ' who' 0.340; ' regime' 0.241; 'road he has driven' 0.084; 'paper towel' 0.043. ' Account' and ' who' are not explained by this label.",
+ "selection": "random draw"
+}

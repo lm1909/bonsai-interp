@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-306ede94",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9437+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:08:16+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N9437_pos/2026-11-06-lm1909-306ede94.tests.json"
+ },
+ "label": "school mathematics lesson text ('Classify figures into categories', 'number bonds', worksheets)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N9437_pos/2026-11-06-lm1909-306ede94.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.022,
+     "peak": "Sort"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.051,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.246,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.277,
+     "peak": " your"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.057,
+     "peak": " into"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.047,
+     "peak": " practiced"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.01,
+     "peak": "omin"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.062,
+     "peak": " included"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "Sort"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": "iting"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": "ate"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.019,
+     "peak": "ies"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " maps"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.054,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "school maths lesson text",
+ "unit_kind": "topic",
+ "confidence": 0.2,
+ "notes": "Low-confidence guess, and I expect it to fail. Card: ' the' x7, ' to' x5, ':' x2, '.' x2, '的', ' into', 'ition' of addition. Probe: ' into' after 'Classify ... figures' 0.306; the rest of the school text only 0.080-0.122; matched non-school frames 0.013-0.030. Readings are low and I found no sharper trigger.",
+ "selection": "random draw"
+}

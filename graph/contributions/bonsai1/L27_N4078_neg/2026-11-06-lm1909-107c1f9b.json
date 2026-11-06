@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-107c1f9b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N4078-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:08:09+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N4078_neg/2026-11-06-lm1909-107c1f9b.tests.json"
+ },
+ "label": "a line-opening 'If' or 'Are' that addresses the reader at the end of promotional copy, and the token 'War' or ' War'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N4078_neg/2026-11-06-lm1909-107c1f9b.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.183,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.257,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.425,
+     "peak": "War"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.177,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.425,
+     "peak": "War"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.282,
+     "peak": "If"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.425,
+     "peak": "War"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.124,
+     "peak": "If"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " eight"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " floor"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": "Wie"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.062,
+     "peak": " tips"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.057,
+     "peak": "ann"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.036,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.09,
+     "peak": " dau"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.033,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.269,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "reader-addressing 'If'; 'War' (list)",
+ "unit_kind": "contextual (list)",
+ "confidence": 0.4,
+ "notes": "Card: 'If' x8, ' War' x3, ' war' x3, 'Are' x2, ' Dar' x2, ' Learn' x2; promotes ' free', ' Free'. Probe: 'War' 0.425 in both German 'Warum' and English 'War is bad'; 'If' at a line start 0.263-0.280; 'Are' 0.133; ' if' mid-sentence 0.020; a line opening with 'The' 0.036. Two unrelated triggers, so a list.",
+ "selection": "random draw"
+}

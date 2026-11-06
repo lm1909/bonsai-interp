@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-3e2b2c8f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N8430-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:56+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N8430_neg/2026-11-06-lm1909-3e2b2c8f.tests.json"
+ },
+ "label": "free-choice 'any', 'anything' or 'anywhere' after 'can' or 'could' (a range of open possibilities), not the same words under negation or in a question",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N8430_neg/2026-11-06-lm1909-3e2b2c8f.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.719,
+     "peak": " want"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.769,
+     "peak": " anywhere"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.614,
+     "peak": " any"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.702,
+     "peak": " anywhere"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.686,
+     "peak": " anything"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.815,
+     "peak": " anything"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.921,
+     "peak": " any"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.736,
+     "peak": " anywhere"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.241,
+     "peak": " want"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " us"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "B"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": "This"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "Is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.063,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.079,
+     "peak": " anywhere"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.728,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "free-choice 'any...'",
+ "unit_kind": "grammatical / semantic",
+ "confidence": 0.95,
+ "notes": "Card: ' any' x12, ' anything' x11, ' anywhere' x8, ' anyone'. Probe: ' anything' after 'could do' 0.980 and 'can take' 0.892; ' anywhere' 0.794; ' any' after 'can use' 0.680. The same words under negation or in a question read 0.005-0.008: 'did not do anything', 'hasn't been anywhere', 'don't have any', 'Did you see anyone'. So this is a distinction, not the word.",
+ "selection": "random draw"
+}

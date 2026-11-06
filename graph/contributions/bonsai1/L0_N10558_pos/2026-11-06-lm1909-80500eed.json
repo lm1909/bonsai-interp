@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-06-lm1909-80500eed",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10558+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:53+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10558_pos/2026-11-06-lm1909-80500eed.tests.json"
+ },
+ "label": "the Chinese tokens '或' ('or'), '目标' ('goal') and '旨在' ('aims to')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10558_pos/2026-11-06-lm1909-80500eed.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.315,
+     "peak": "或"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.614,
+     "peak": "目标"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.511,
+     "peak": "旨在"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.334,
+     "peak": "或"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.631,
+     "peak": "目标"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.41,
+     "peak": "旨在"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.516,
+     "peak": "或"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.49,
+     "peak": "目标"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.135,
+     "peak": "学生"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.213,
+     "peak": "工厂"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.067,
+     "peak": "儿童"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.137,
+     "peak": "你可以"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.155,
+     "peak": "课程"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "帮助"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": "作业"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.035,
+     "peak": "他的"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.5,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese '或', '目标', '旨在'",
+ "unit_kind": "token (list)",
+ "confidence": 0.6,
+ "notes": "Card: '或' x12, '和' x9, '目标' x4, '公司' x3, '旨在', '分析'. Probe: '目标' 0.475; '或' 0.420; '旨在' 0.408; '公园' 0.285; '和' 0.260; plain sentences 0.076-0.098. '和' and '公司' are not covered. This stays a list.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "或",
+   "目标",
+   "旨在"
+  ]
+ }
+}

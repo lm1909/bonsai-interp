@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-06-lm1909-65205a6c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8217-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:45+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N8217_neg/2026-11-06-lm1909-65205a6c.tests.json"
+ },
+ "label": "dense unit (26% of tokens reach 0.1 of max); strongest on the pieces 'atal' of C|atal-, 'chy' of it|chy and 'fulness'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N8217_neg/2026-11-06-lm1909-65205a6c.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.782,
+     "peak": "chy"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.824,
+     "peak": "atal"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.818,
+     "peak": "atal"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.184,
+     "peak": "fulness"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.619,
+     "peak": "chy"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.678,
+     "peak": " Catalan"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.818,
+     "peak": "atal"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.358,
+     "peak": "fulness"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.237,
+     "peak": " feel"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.181,
+     "peak": " near"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.159,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.091,
+     "peak": " surprised"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.108,
+     "peak": " bites"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.203,
+     "peak": " French"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.167,
+     "peak": "Filters"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.097,
+     "peak": " by"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.73,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; 'atal', 'chy', 'fulness'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.5,
+ "notes": "Card: FLAG dense 26.2%, gate-closed regime 100%, max 0.21; 'atal' x5, 'chy' x3, ' Catal' x2. Probe: 'chy' 0.920; ' Catalan' 0.840; 'atal' 0.818; 'fulness' 0.778; but the baseline is high: ' used' 0.325 and ' dry' 0.235. This is a list of its top pieces on a dense pole, not an explanation.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "atal",
+   "chy",
+   "fulness",
+   " Catalan"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-5ea14d58",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10479-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:52+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N10479_neg/2026-11-06-lm1909-5ea14d58.tests.json"
+ },
+ "label": "a piece inside a tax, rent, price or trade term ('quit|-rent', 'TV|A', '/ 10|0.0', 'chant|ier ... commerce')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N10479_neg/2026-11-06-lm1909-5ea14d58.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.568,
+     "peak": " quit"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.839,
+     "peak": " TV"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.996,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.726,
+     "peak": " TV"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.706,
+     "peak": " quit"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.985,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.16,
+     "peak": " chant"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.584,
+     "peak": " quit"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " land"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.101,
+     "peak": " constr"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " width"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.09,
+     "peak": " lord"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.153,
+     "peak": " font"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.136,
+     "peak": " old"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.716,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pieces of tax and price terms",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Low confidence. Card: 'est' x2, 'ية' x2, 'hold', ' Text', ' chant', '0', ' quit', ' TV'. Probe: ' TV' of TVA 0.944; '0' of 100.0 after a discount 0.856; ' quit' 0.689; ' chant' 0.561; a tailor in a textile town 0.056; 'small holdings' 0.008. The shared idea is my guess.",
+ "selection": "random draw"
+}

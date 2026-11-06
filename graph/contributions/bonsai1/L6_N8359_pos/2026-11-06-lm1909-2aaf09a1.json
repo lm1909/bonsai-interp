@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-06-lm1909-2aaf09a1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N8359+",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:08:11+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N8359_pos/2026-11-06-lm1909-2aaf09a1.tests.json"
+ },
+ "label": "things changing or differing from how they were ('things changed', 'change his mind', 'this time was different')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N8359_pos/2026-11-06-lm1909-2aaf09a1.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.759,
+     "peak": " changed"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.059,
+     "peak": " mind"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.747,
+     "peak": " different"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.866,
+     "peak": " change"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.73,
+     "peak": " different"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.953,
+     "peak": " minds"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.617,
+     "peak": " diferente"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.702,
+     "peak": " changed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.076,
+     "peak": " stayed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.244,
+     "peak": " same"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " once"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.054,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.053,
+     "peak": " igual"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.753,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 11,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "change or difference",
+ "unit_kind": "semantic",
+ "confidence": 0.9,
+ "notes": "Card: ' change' x7, ' different' x6, ' mind' x6, ' minds' x3, ' changed' x2, ' differently' x2, ' that' after 'changed'. Probe: ' mind' after 'change his' 1.083; ' changed' 0.909; ' change' 0.812; ' Different' 0.791; ' different' 0.754; Spanish ' diferente' 0.627; ' same' 0.214; 'read his mail' 0.023. The near misses state sameness or no change in the same frames.",
+ "selection": "random draw"
+}

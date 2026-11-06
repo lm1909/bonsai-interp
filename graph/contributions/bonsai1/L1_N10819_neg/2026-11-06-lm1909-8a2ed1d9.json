@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-06-lm1909-8a2ed1d9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N10819-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:53+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N10819_neg/2026-11-06-lm1909-8a2ed1d9.tests.json"
+ },
+ "label": "the word 'standard' in any case, in prose or code",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N10819_neg/2026-11-06-lm1909-8a2ed1d9.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.746,
+     "peak": " standard"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.833,
+     "peak": " Standard"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.656,
+     "peak": " standard"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.815,
+     "peak": " standard"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.61,
+     "peak": "_standard"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.627,
+     "peak": " standard"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.664,
+     "peak": " Standard"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.682,
+     "peak": " standard"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.086,
+     "peak": " fairly"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.265,
+     "peak": " Air"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.164,
+     "peak": " tea"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.189,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.086,
+     "peak": " run"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.092,
+     "peak": " equipment"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.117,
+     "peak": " kids"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.144,
+     "peak": " clean"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.673,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the word 'standard'",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Card: broad (8.3%), L 95%, max 0.18; ' standard' x14, ' Standard' x5, 'standard' x2, '_standard', 'Proxy' x2. Probe: ' Standard' 0.935; ' standard' 0.888 and 0.656; 'Proxy' 0.790 and 'vard' 0.608, neither covered; 'common stuff' with ' field' 0.325; ' Express' 0.189.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "standard"
+  ]
+ }
+}

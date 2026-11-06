@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-06-lm1909-bda49ec2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8596-",
+ "contributor": "lm1909",
+ "created": "2026-11-06T01:07:57+00:00",
+ "recipe": {
+  "toolchain_commit": "a23b4fc72",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N8596_neg/2026-11-06-lm1909-bda49ec2.tests.json"
+ },
+ "label": "the piece 'oot' of rare words (W|oot|ton, W|oot, M|oot, the token ' moot') and 'et' of 'le|et'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N8596_neg/2026-11-06-lm1909-bda49ec2.tests.json",
+   "prereg_commit": "a23b4fc72",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.959,
+     "peak": "oot"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.866,
+     "peak": "oot"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.605,
+     "peak": " moot"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.865,
+     "peak": "et"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.827,
+     "peak": "oot"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.654,
+     "peak": " moot"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.757,
+     "peak": "et"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.938,
+     "peak": "oot"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " contest"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " argument"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.0,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.145,
+     "peak": "ote"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " fair"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " year"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.846,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a23b4fc72",
+  "minutes": 10,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'oot' in rare words, 'le|et'",
+ "unit_kind": "spelling",
+ "confidence": 0.85,
+ "notes": "Card: 'oot' x12, ' moot' x6, 'et' x4, 'oting' x3, 'en' x2, 'ot' x2. Probe: 'oot' of Wootton 0.933; 'oot' of Woot 0.831; 'et' of leet 0.777; ' moot' 0.637; common words foot, root, boots, shoot at about 0.00. Check the near misses: they are whole tokens with the same spelling.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "oot",
+   " moot"
+  ]
+ }
+}
