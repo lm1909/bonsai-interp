@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-07-lm1909-ada18a96",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N12124+",
+ "contributor": "lm1909",
+ "created": "2026-11-07T12:22:13+00:00",
+ "recipe": {
+  "toolchain_commit": "164b14550",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N12124_pos/2026-11-07-lm1909-ada18a96.tests.json"
+ },
+ "label": "The hyphenated word 'bed-wetting', particularly its continuation piece.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N12124_pos/2026-11-07-lm1909-ada18a96.tests.json",
+   "prereg_commit": "164b14550",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.399,
+     "peak": "etting"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.402,
+     "peak": "etting"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.449,
+     "peak": "etting"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.446,
+     "peak": "etting"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.467,
+     "peak": "etting"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.474,
+     "peak": "etting"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.502,
+     "peak": "etting"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.273,
+     "peak": "etting"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.094,
+     "peak": " accidents"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.122,
+     "peak": " control"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.063,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.073,
+     "peak": "ence"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.061,
+     "peak": " trips"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.197,
+     "peak": " accidents"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.161,
+     "peak": " bedding"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.448,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "codex gpt-6",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "164b14550",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Bed-wetting compound",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "The strongest lexical probe peaked on etting in bed-wetting. Repeated compound names gave little separation, and the card includes many unrelated split words. This is a deliberately narrow compound hypothesis, tested against the same nighttime-accident meaning without that spelling.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "bed-wetting"
+  ]
+ }
+}

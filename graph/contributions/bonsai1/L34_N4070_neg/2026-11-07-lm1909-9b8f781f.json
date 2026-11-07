@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-07-lm1909-9b8f781f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4070-",
+ "contributor": "lm1909",
+ "created": "2026-11-07T12:21:50+00:00",
+ "recipe": {
+  "toolchain_commit": "164b14550",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N4070_neg/2026-11-07-lm1909-9b8f781f.tests.json"
+ },
+ "label": "Python source with CRLF line breaks or spaces immediately before line breaks.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N4070_neg/2026-11-07-lm1909-9b8f781f.tests.json",
+   "prereg_commit": "164b14550",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.372,
+     "peak": " prices"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.384,
+     "peak": " labels"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.496,
+     "peak": "self"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.402,
+     "peak": "\"\r\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.362,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.641,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.355,
+     "peak": "):"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.759,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.141,
+     "peak": " entries"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.1,
+     "peak": "(tag"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.174,
+     "peak": "self"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.097,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.164,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.437,
+     "peak": "(tokens"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.206,
+     "peak": "self"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.161,
+     "peak": "):\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.393,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "codex gpt-6",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "164b14550",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Padded Python line endings",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Four fire passages use CRLF and four use trailing spaces with LF. Near misses retain multiline Python, similar operations and lengths, but use LF without trailing spaces. The exploratory contrast supported formatting more than boolean defaults or generic code comments. Literal line endings inside JSON strings are part of the hypothesis.",
+ "selection": "random draw"
+}

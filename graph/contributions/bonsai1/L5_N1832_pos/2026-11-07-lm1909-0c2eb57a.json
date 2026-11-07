@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-07-lm1909-0c2eb57a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N1832+",
+ "contributor": "lm1909",
+ "created": "2026-11-07T12:22:07+00:00",
+ "recipe": {
+  "toolchain_commit": "164b14550",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N1832_pos/2026-11-07-lm1909-0c2eb57a.tests.json"
+ },
+ "label": "Starting a new sentence immediately after a numeral followed by a period and a space.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N1832_pos/2026-11-07-lm1909-0c2eb57a.tests.json",
+   "prereg_commit": "164b14550",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.62,
+     "peak": " We"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.118,
+     "peak": " They"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.569,
+     "peak": " She"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.064,
+     "peak": " Everyone"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.459,
+     "peak": " Our"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.334,
+     "peak": " It"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.112,
+     "peak": " A"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.493,
+     "peak": " You"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.12,
+     "peak": " We"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " locked"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " found"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "-two"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " Our"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " It"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " then"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": "You"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.397,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "codex gpt-6",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "164b14550",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Sentence after numeric period",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "The top examples usually start a sentence after digits and a full stop; some instead follow a single-letter abbreviation. The registered hypothesis tests the numeric subset against the same kinds of quantities written out as words. No general topic interpretation is claimed.",
+ "selection": "random draw"
+}

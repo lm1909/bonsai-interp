@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-07-lm1909-df87c87e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N6295-",
+ "contributor": "lm1909",
+ "created": "2026-11-07T12:22:14+00:00",
+ "recipe": {
+  "toolchain_commit": "164b14550",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N6295_neg/2026-11-07-lm1909-df87c87e.tests.json"
+ },
+ "label": "A dense gate-leak pole with a candidate lexical increase on the token 'schedule'.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N6295_neg/2026-11-07-lm1909-df87c87e.tests.json",
+   "prereg_commit": "164b14550",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.407,
+     "peak": " schedule"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.207,
+     "peak": " office"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.267,
+     "peak": " schedule"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.083,
+     "peak": " asked"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.167,
+     "peak": " schedule"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.221,
+     "peak": " schedule"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.424,
+     "peak": " schedule"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.242,
+     "peak": " schedule"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.146,
+     "peak": " staff"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.204,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.059,
+     "peak": " secretary"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.181,
+     "peak": " would"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.136,
+     "peak": " photograph"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.124,
+     "peak": " concert"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.136,
+     "peak": " order"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.113,
+     "peak": " team"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.231,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "codex gpt-6",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "164b14550",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Dense schedule candidate",
+ "unit_kind": "dense / positional",
+ "confidence": 0.3,
+ "notes": "The requested negative pole is flagged dense: 11.029% of corpus tokens exceed 0.1 of its small 0.746 maximum, and 98% of this activity is gate-closed leakage. Schedule is only a best-guess sub-trigger among multilingual peaks. A failed separation is expected to be informative; this is not an assignment of the whole pole.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "schedule"
+  ]
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-07-lm1909-b5bf96f8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N1335+",
+ "contributor": "lm1909",
+ "created": "2026-11-07T12:22:33+00:00",
+ "recipe": {
+  "toolchain_commit": "164b14550",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N1335_pos/2026-11-07-lm1909-b5bf96f8.tests.json"
+ },
+ "label": "Title-case content words in a named title or heading, compared with the same kind of title written in sentence case.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N1335_pos/2026-11-07-lm1909-b5bf96f8.tests.json",
+   "prereg_commit": "164b14550",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.497,
+     "peak": " Change"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.449,
+     "peak": " Into"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.499,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.387,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.569,
+     "peak": " New"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.549,
+     "peak": " Exploration"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.388,
+     "peak": " The"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.535,
+     "peak": " Legacy"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.293,
+     "peak": " change"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.28,
+     "peak": " A"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.504,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.308,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.316,
+     "peak": " gardens"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.474,
+     "peak": " exploration"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.279,
+     "peak": " The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.252,
+     "peak": " Work"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.498,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "codex gpt-6",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "164b14550",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Title-case content words",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "The card is broad and dominated by titles and headings. Exploratory sentence-case controls still exceeded 0.30, so a failed near-miss criterion is plausible. This registration tests whether capitalization really separates the proposed trigger while preserving the named-title setting in the controls.",
+ "selection": "random draw"
+}

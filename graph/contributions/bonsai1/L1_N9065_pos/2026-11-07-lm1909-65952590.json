@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-07-lm1909-65952590",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9065+",
+ "contributor": "lm1909",
+ "created": "2026-11-07T12:22:15+00:00",
+ "recipe": {
+  "toolchain_commit": "164b14550",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N9065_pos/2026-11-07-lm1909-65952590.tests.json"
+ },
+ "label": "The token 'acoustic', across musical, physical, and word-mention contexts.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N9065_pos/2026-11-07-lm1909-65952590.tests.json",
+   "prereg_commit": "164b14550",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.688,
+     "peak": " acoustic"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.455,
+     "peak": " acoustic"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.511,
+     "peak": " acoustic"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.554,
+     "peak": " acoustic"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.611,
+     "peak": " acoustic"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.674,
+     "peak": " acoustic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.664,
+     "peak": " acoustic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.659,
+     "peak": " acoustic"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.004,
+     "peak": " arranged"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.011,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.017,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.013,
+     "peak": " booth"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.0,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.02,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.007,
+     "peak": " card"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.015,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.635,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "codex gpt-6",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "164b14550",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Acoustic token",
+ "unit_kind": "lexical",
+ "confidence": 0.85,
+ "notes": "The positive pole is mostly a gate-closed echo and has a small maximum. Acoustic fired in both music and physics probes; the negative pole is strongly associated with audio. Audubon and data pieces also fire this pole and remain outside this token hypothesis.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "acoustic"
+  ]
+ }
+}

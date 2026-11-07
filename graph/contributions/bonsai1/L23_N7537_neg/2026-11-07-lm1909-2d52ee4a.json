@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-07-lm1909-2d52ee4a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N7537-",
+ "contributor": "lm1909",
+ "created": "2026-11-07T12:22:43+00:00",
+ "recipe": {
+  "toolchain_commit": "164b14550",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N7537_neg/2026-11-07-lm1909-2d52ee4a.tests.json"
+ },
+ "label": "Repeating an object or action in coordinated alternatives that lead to contrasting outcomes.",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N7537_neg/2026-11-07-lm1909-2d52ee4a.tests.json",
+   "prereg_commit": "164b14550",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.03,
+     "peak": " lose"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.358,
+     "peak": " window"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.109,
+     "peak": " fence"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.238,
+     "peak": " shortcut"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.071,
+     "peak": " un"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.251,
+     "peak": " offer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.101,
+     "peak": " test"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.213,
+     "peak": " receipt"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " mean"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.08,
+     "peak": " prevents"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " would"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": " cold"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.085,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " receipt"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.161,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "codex gpt-6",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "164b14550",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Repeated contrasting alternatives",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Simple noun lists and ordinary coordination were weak in exploration. A repeated object followed by contrasting coordinated outcomes was stronger, motivating this narrower hypothesis. Controls retain both alternatives and their consequences while removing repeated full noun phrases. The broad card contains many unrelated code and list-ending peaks.",
+ "selection": "random draw"
+}
