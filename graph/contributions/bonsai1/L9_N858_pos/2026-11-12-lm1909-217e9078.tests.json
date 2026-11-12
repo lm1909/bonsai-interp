@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-12-lm1909-217e9078",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N858+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:32:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N858",
+   "pole": "+",
+   "label": "a spaced hyphen ' -' separating a title from an instruction or subtitle in a UI or dialog string ('Audio Settings - Pick a device')",
+   "fire": [
+    "choice = dialog.select('Audio Settings - Pick an output device', list=devices)",
+    "menu.set_title('Backup Manager - Select files to restore')",
+    "self.setWindowTitle('Export Wizard - Choose a format')",
+    "ret = xbmcgui.Dialog().select('Library Options - Select an action', items)",
+    "label.setText('Profile Editor - Enter a new name')",
+    "opt = dialog.select('Recording Schedule - Select a channel to edit', list=chans)",
+    "print('Network Tools - Choose a test to run')",
+    "win.title('Printer Setup - Select a paper size')"
+   ],
+   "quiet": [
+    "choice = dialog.select('Pick an output device', list=devices)",
+    "menu.set_title('Backup Manager')",
+    "self.setWindowTitle('Choose a format for the export')",
+    "ret = xbmcgui.Dialog().select('Library Options', items)",
+    "label.setText('Enter a new name for the profile')",
+    "opt = dialog.select('Select a channel to edit', list=chans)",
+    "print('Network Tools')",
+    "win.title('Select a paper size for the printer')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "title - instruction dash",
+ "unit_kind": "contextual",
+ "confidence": 0.5
+}
