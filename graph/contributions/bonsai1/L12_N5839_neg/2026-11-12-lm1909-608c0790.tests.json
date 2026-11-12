@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-608c0790",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N5839-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:32:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N5839",
+   "pole": "-",
+   "label": "continuation piece of a word split across tokens in Russian text (так|ово, стоим|остью)",
+   "fire": [
+    "Мы обсудили стоимость проекта и сроки его выполнения.",
+    "Таково было решение совета директоров на прошлой неделе.",
+    "Он рассказал о своих впечатлениях от путешествия по Сибири.",
+    "Преподаватель объяснил студентам особенности грамматики.",
+    "Строительство нового моста продолжалось почти четыре года.",
+    "Исследователи опубликовали результаты эксперимента в журнале.",
+    "Она внимательно перечитала договор перед подписанием.",
+    "Администрация города утвердила новые правила парковки."
+   ],
+   "quiet": [
+    "We discussed the cost of the project and its deadlines.",
+    "Such was the decision of the board of directors last week.",
+    "He talked about his impressions of the trip through Siberia.",
+    "The teacher explained the features of the grammar to the students.",
+    "Construction of the new bridge went on for almost four years.",
+    "The researchers published the results of the experiment in a journal.",
+    "She carefully reread the contract before signing it.",
+    "The city administration approved new parking rules."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split Russian word piece",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card flags the pole broad (6.9% of tokens reach 0.1 of max), max only 1.47, gate-closed leak regime; top examples mix Russian word pieces, a code blank line, Chinese. No clear label; this is a best guess and is expected to fail."
+}

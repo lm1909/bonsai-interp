@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-972ec9b2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1287-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:32:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N1287",
+   "pole": "-",
+   "label": "the word right before a dollar amount (cost about $, bought for $, balance is $)",
+   "fire": [
+    "The stadium upgrade is expected to cost roughly US$ 800 million.",
+    "Microsoft agreed to acquire the studio for $7.5 billion in cash.",
+    "Given the wallet balance is \\$20 and the item costs \\$25, the purchase is declined.",
+    "Annual funding for the program totals about $15 million.",
+    "The painting sold at auction for $4.2 million on Tuesday.",
+    "Tickets are priced at US$ 45 for adults and $20 for children.",
+    "The settlement requires the bank to pay nearly $300 million.",
+    "Shares closed at $18.40 after the announcement."
+   ],
+   "quiet": [
+    "The stadium upgrade is expected to take roughly three years.",
+    "Microsoft agreed to acquire the studio after months of talks.",
+    "Given the wallet is empty and the item is in the cart, the purchase is declined.",
+    "Annual funding for the program comes from two foundations.",
+    "The painting sold at auction to a private collector on Tuesday.",
+    "Tickets are available online for adults and children.",
+    "The settlement requires the bank to apologise to its customers.",
+    "Shares closed higher after the announcement."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word before a $ amount",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: ' US' x7, 'is \\$10', 'about $25 million', 'for $12.5 billion', '美元'. Very sparse pole with an extreme top (239). Probe on such sentences only 0.10-0.19, so the median threshold is unlikely to be met; recorded as the best guess."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-a8eed0a9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N759+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:32:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N759",
+   "pole": "+",
+   "label": "word-initial Korean syllable that is its own token (괜|찮다, 꾸|미다)",
+   "fire": [
+    "어제 본 영화는 생각보다 괜찮았어요.",
+    "이 카페는 분위기가 꽤 괜찮은 편이에요.",
+    "그녀는 방을 예쁘게 꾸미는 것을 좋아한다.",
+    "날씨가 흐려도 산책하기에는 괜찮다.",
+    "아이들이 교실을 꽃으로 꾸몄다.",
+    "새로 산 의자는 가격에 비해 괜찮은 것 같다.",
+    "그는 무대를 화려하게 꾸며 놓았다.",
+    "시험 결과가 괜찮게 나와서 다행이다."
+   ],
+   "quiet": [
+    "어제 본 영화는 생각보다 재미있었어요.",
+    "이 카페는 분위기가 꽤 조용한 편이에요.",
+    "그녀는 방을 깨끗하게 청소하는 것을 좋아한다.",
+    "날씨가 흐려도 산책하기에는 좋다.",
+    "아이들이 교실을 깨끗이 청소했다.",
+    "새로 산 의자는 가격에 비해 편한 것 같다.",
+    "그는 무대를 조용히 정리해 놓았다.",
+    "시험 결과가 좋게 나와서 다행이다."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Korean syllable piece",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card flags the pole broad (2.7% of tokens reach 0.1 of max), max only 0.25, gate-closed echo regime; tops are Korean syllables (괜 x2, 꾸, 괴) plus Spanish 'tomar'. The - pole is dense (80%). Best guess, expected to fail."
+}
