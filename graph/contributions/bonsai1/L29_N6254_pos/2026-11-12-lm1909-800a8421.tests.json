@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-12-lm1909-800a8421",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N6254+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:39:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N6254",
+   "pole": "+",
+   "label": "' protein(s)' in cell-biology text about how proteins are made, moved or imported (and the token right after it)",
+   "fire": [
+    "Inside the cell, each new protein is folded by chaperones before export.",
+    "Ribosomes on the rough endoplasmic reticulum make the protein for secretion.",
+    "Most mitochondrial proteins are imported from the cytoplasm through pores.",
+    "A short signal sequence tells the cell where to send the protein next.",
+    "Misfolded proteins are tagged and broken down by the proteasome.",
+    "The virus hijacks the host's protein synthesis machinery to copy itself.",
+    "Researchers tracked a fluorescent protein as it moved to the membrane.",
+    "Transport vesicles carry proteins from the Golgi to the cell surface."
+   ],
+   "quiet": [
+    "Inside the cell, each new lipid is made by enzymes in the membrane.",
+    "Ribosomes are built from RNA and assembled in the nucleolus.",
+    "Most mitochondrial DNA is inherited only from the mother.",
+    "A small sugar chain marks the cell surface for recognition.",
+    "Damaged membranes are repaired quickly after a small tear.",
+    "The virus enters the host cell by fusing with its outer membrane.",
+    "Researchers tracked a fluorescent dye as it spread through the tissue.",
+    "Transport vesicles carry lipids from the reticulum to the cell surface."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "protein (cell biology)",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Top 32: ' protein' x8, ' proteins' x3, plus the token right after 'protein' (secretion system '(' , 'is synthesized'). The output promotes signal/folding. The - pole is antibody production (detect, neutralizing, autoantibodies), and its output promotes 'antibodies'. Near misses: the same cell biology with other molecules (lipids, RNA, sugars).",
+ "trigger": {
+  "words": [
+   "protein",
+   "proteins"
+  ]
+ }
+}

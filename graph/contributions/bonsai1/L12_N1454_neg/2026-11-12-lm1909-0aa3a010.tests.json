@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-0aa3a010",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N1454-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:39:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N1454",
+   "pole": "-",
+   "label": "a word piece inside a non-English or split word (cou|gars, Tom|ar, на|род|ной), no clear meaning",
+   "fire": [
+    "Las vecinas suelen tomar té verde por la tarde en el jardín.",
+    "Традиционная народная музыка звучала на площади весь вечер.",
+    "Mountain cougars were seen near the hiking trail last week.",
+    "エンザイムプレミアムは毎朝飲むのがおすすめです。",
+    "Los niños quieren jugar en el parque después de clase.",
+    "Он изучает историю национальной кухни в университете.",
+    "In the yearbook she was voted Most Likely To Travel.",
+    "تحدث مع أصدقائك في غرفة الدردشة كل مساء."
+   ],
+   "quiet": [
+    "My neighbors drink green tea in the garden every afternoon.",
+    "Traditional folk music played in the square all evening.",
+    "Mountain lions were seen near the hiking trail last week.",
+    "This enzyme drink is best taken every morning.",
+    "The children want to play in the park after school.",
+    "He studies the history of national cuisine at university.",
+    "In the yearbook she was voted the best traveler.",
+    "Talk with your friends in the chat room every evening."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unclear word pieces",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card flags broad (1.4% >0.1 max); top tokens are mixed pieces across Spanish, Russian, Arabic, Japanese and 'Most Likely'. Probe of four top-example paraphrases scored about 0 on all of them, so this is a best guess, recorded honestly and expected to fail."
+}

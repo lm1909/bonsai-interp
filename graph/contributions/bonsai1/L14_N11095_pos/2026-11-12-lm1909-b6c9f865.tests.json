@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-b6c9f865",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N11095+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:39:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N11095",
+   "pole": "+",
+   "label": "the first, capitalized token inside a quoted string literal in code (a dict key or value: 'Content-Type', 'RSS 0.90')",
+   "fire": [
+    "config = {\n    'name': 'Server Alpha',\n    'Region': 'Europe West',\n}",
+    "headers = {}\nheaders['Authorization'] = 'Bearer ' + token",
+    "LANGS = {'en': 'English', 'de': 'German', 'fr': 'French'}",
+    "response.headers['Cache-Control'] = 'no-cache'",
+    "COLORS = {\n    'red': 'Crimson',\n    'blue': 'Navy',\n}",
+    "params['Content-Length'] = str(len(body))",
+    "FORMATS = {'atom10': 'Atom 1.0', 'json': 'JSON Feed'}",
+    "menu.add_item('Settings', callback=open_settings)"
+   ],
+   "quiet": [
+    "config = dict(\n    name=server_name,\n    region=region_code,\n)",
+    "headers = {}\nheaders[auth_key] = prefix + token",
+    "LANGS = dict(zip(codes, names))",
+    "response.headers[cache_key] = cache_value",
+    "COLORS = [\n    red_value,\n    blue_value,\n]",
+    "params[length_key] = len(body)",
+    "FORMATS = dict(atom10=atom_name, json=json_name)",
+    "menu.add_item(settings_label, callback=open_settings)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "start of a code string",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Top examples: header_parameters['Content-Type'], 'rss090': 'RSS 0.90', HTML entity dicts ('Diacritical...', 'Yuml'). Probe was weak (0.06), so low confidence. Near misses: the same code with no string literal."
+}

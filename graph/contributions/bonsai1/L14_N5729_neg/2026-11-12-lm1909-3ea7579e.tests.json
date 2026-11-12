@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-3ea7579e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5729-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:39:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N5729",
+   "pole": "-",
+   "label": "document boundary: the <|endoftext|> separator and the first token of a new document",
+   "fire": [
+    "Thanks for reading, see you next week!<|endoftext|>The city council met on Tuesday evening.",
+    "All rights reserved.<|endoftext|>How to grow tomatoes on a small balcony",
+    "Posted in Uncategorized | Leave a comment<|endoftext|>Our team builds custom furniture.",
+    "Click here to subscribe.<|endoftext|>A new study suggests coffee may help memory.",
+    "That is the end of the recipe.<|endoftext|>Welcome to the official site of the band.",
+    "Contact us for more details.<|endoftext|>The train was delayed by two hours.",
+    "Comments are closed.<|endoftext|>Ten tips for a better night's sleep",
+    "Share this article with friends.<|endoftext|>Local schools will reopen on Monday."
+   ],
+   "quiet": [
+    "Thanks for reading, see you next week! The city council met on Tuesday evening.",
+    "All rights reserved, and how to grow tomatoes on a small balcony",
+    "Posted in Uncategorized, and our team builds custom furniture.",
+    "Click here to subscribe, since a new study suggests coffee may help memory.",
+    "That is the end of the recipe, and welcome to the site of the band.",
+    "Contact us for more details about why the train was delayed.",
+    "Comments are closed, but here are ten tips for a better night's sleep",
+    "Share this article with friends, because local schools reopen on Monday."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "document boundary",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags broad (4.1% >0.1 max, 0.001% >0.3 max) and gate-closed regime; top examples are <|endoftext|> tokens. Probe: a typed '<|endoftext|>' in a probe sentence scored 0.04, so it may not tokenize as the special token. Best guess recorded honestly; expected to fail."
+}
