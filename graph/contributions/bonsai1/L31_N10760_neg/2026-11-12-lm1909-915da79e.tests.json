@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-12-lm1909-915da79e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10760-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:35:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N10760",
+   "pole": "-",
+   "label": "the 'kn'/'ne' piece of a word split into sub-tokens around a kn cluster (kn|elt, kn|ave, verkn|üpfen, maßgesch|ne|idert)",
+   "fire": [
+    "He knelt beside the stone wall to tie his shoe.",
+    "Gently knead the clay until it is smooth and warm.",
+    "The villain of the play is a cunning knave named Rolf.",
+    "Er hat die beiden Dateien miteinander verknüpft.",
+    "Wir bieten maßgeschneiderte Lösungen für kleine Firmen an.",
+    "The baker kneads the bread twice before baking it.",
+    "Bitte senden Sie die Unterlagen ungeknickt zurück.",
+    "The old monk knelt in prayer by the altar."
+   ],
+   "quiet": [
+    "He sat beside the stone wall to tie his shoe.",
+    "Gently shape the clay until it is smooth and warm.",
+    "The villain of the play is a cunning knight named Rolf.",
+    "Er hat die beiden Dateien miteinander verbunden.",
+    "Wir bieten einfache Lösungen für kleine Firmen an.",
+    "The baker knows the bread needs time before baking it.",
+    "Bitte senden Sie die Unterlagen sofort zurück.",
+    "The old monk knitted a scarf by the altar."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "split 'kn' word pieces",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card/look: top examples are 'ne'/'kn' pieces in Kneeling, knave, ungeknickt, verknüpfen, knead, knotted, Knapp, maßgeschneiderte. Probe: knead 0.54, knelt 0.39, knave 0.37, knuckles 0.30, verknüpfen 0.43, maßgeschneiderte 0.76; whole-token words (knit, knob, knight, know) about 0. Lowercase ' kneeling' and ' knit'/' knight' are single tokens, so the test uses knelt/knead/knave."
+}
