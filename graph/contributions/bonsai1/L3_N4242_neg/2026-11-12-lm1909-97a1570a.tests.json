@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-12-lm1909-97a1570a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N4242-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:36:25+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N4242",
+   "pole": "-",
+   "label": "' self' or 'cls' as the first parameter of a Python method definition (also the fused tokens '(self', '(cls')",
+   "fire": [
+    "class Parser:\n    def parse(self, text):\n        return text.split()",
+    "class Config:\n    def __init__( self ):\n        self.path = None",
+    "class Shape:\n    @classmethod\n    def create(cls, size):\n        return cls(size)",
+    "class Account:\n    def deposit(self, amount):\n        self.balance += amount",
+    "class Loader:\n    def load(\n        self,\n        path,\n    ):\n        pass",
+    "class Timer:\n    def start(self):\n        self.running = True",
+    "class Model:\n    def forward(self, x, mask=None):\n        return x",
+    "class Node:\n    def __repr__(self):\n        return 'Node'"
+   ],
+   "quiet": [
+    "def parse(text):\n    return text.split()\n\nwords = parse(line)",
+    "def init_config():\n    path = None\n    return path",
+    "def create(size):\n    return Shape(size)\n\nshape = create(3)",
+    "def deposit(balance, amount):\n    return balance + amount",
+    "def load(\n    path,\n    mode='r',\n):\n    pass",
+    "def start(timer):\n    timer.running = True",
+    "def forward(x, mask=None):\n    return x",
+    "def describe(node):\n    return 'Node'"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "self / cls parameter",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "trigger": {
+  "tokens": [
+   " self",
+   "(self",
+   "(cls"
+  ]
+ }
+}
