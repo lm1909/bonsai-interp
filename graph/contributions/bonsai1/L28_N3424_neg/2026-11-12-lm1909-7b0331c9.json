@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-12-lm1909-7b0331c9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3424-",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:43:55+00:00",
+ "recipe": {
+  "toolchain_commit": "0ac4cdf2c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N3424_neg/2026-11-12-lm1909-7b0331c9.tests.json"
+ },
+ "label": "the copula or verb slot right before an efficacy judgment (is [most effective], proven to [be ineffective], considered [acceptable])",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N3424_neg/2026-11-12-lm1909-7b0331c9.tests.json",
+   "prereg_commit": "0ac4cdf2c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.588,
+     "peak": " most"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.455,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.239,
+     "peak": " remains"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.353,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.633,
+     "peak": " most"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.481,
+     "peak": " always"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.553,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.285,
+     "peak": " appear"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": " been"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.239,
+     "peak": " remains"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.211,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.348,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " how"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.146,
+     "peak": " were"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.468,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0ac4cdf2c",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "slot before efficacy verdict",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Top tokens is/be/most/considered before effective/acceptable/useful; the + pole's logit effect suppresses effective/beneficial/helpful, so the - pole promotes them. Probes 0.29-0.90 on efficacy frames; near misses with the same verb but a factual continuation scored 0.19-0.48, so near misses here avoid evaluation altogether.",
+ "selection": "random draw"
+}

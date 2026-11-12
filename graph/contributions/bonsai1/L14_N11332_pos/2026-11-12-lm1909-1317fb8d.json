@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-12-lm1909-1317fb8d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N11332+",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:44:41+00:00",
+ "recipe": {
+  "toolchain_commit": "0ac4cdf2c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N11332_pos/2026-11-12-lm1909-1317fb8d.tests.json"
+ },
+ "label": "the token right after a short quoted reply or reveal in narrative dialogue (the ', and' / ',' / ':' that resumes narration)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N11332_pos/2026-11-12-lm1909-1317fb8d.tests.json",
+   "prereg_commit": "0ac4cdf2c",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.482,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.43,
+     "peak": "ured"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.472,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.469,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.384,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.241,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.442,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.392,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.08,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.239,
+     "peak": " he"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.134,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.089,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.071,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.033,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.129,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.165,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.436,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0ac4cdf2c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "after a quoted reply",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Top examples: ' and' / ',' / ':' right after a one-word quoted answer or a reveal ('The name of that student: Albert Einstein'). Probes ~0.41-0.44 on quoted replies, 0.07-0.12 on reported speech.",
+ "selection": "random draw"
+}

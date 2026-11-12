@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-12-lm1909-62a748ee",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10729-",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:43:38+00:00",
+ "recipe": {
+  "toolchain_commit": "0ac4cdf2c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N10729_neg/2026-11-12-lm1909-62a748ee.tests.json"
+ },
+ "label": "' color' as an item in an anti-discrimination list of protected classes (race, color, religion, national origin)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N10729_neg/2026-11-12-lm1909-62a748ee.tests.json",
+   "prereg_commit": "0ac4cdf2c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.523,
+     "peak": " color"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.112,
+     "peak": " color"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.552,
+     "peak": " color"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.483,
+     "peak": " color"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.357,
+     "peak": " color"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.233,
+     "peak": " color"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.369,
+     "peak": " color"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.43,
+     "peak": " color"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.084,
+     "peak": " because"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.079,
+     "peak": " income"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.059,
+     "peak": " grounds"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": " chose"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.015,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.399,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0ac4cdf2c",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "color in protected-class list",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Very sparse pole (0.045% > 0.1 max); top examples are mixed (Nonetheless, Rather, Pablo, color, stains). Contrastive connectives scored ~0.03 in probes; ' color' in a Title VII list scored 0.39, so this tests that one context.",
+ "selection": "random draw"
+}

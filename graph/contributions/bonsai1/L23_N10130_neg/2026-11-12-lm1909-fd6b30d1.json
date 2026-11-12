@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-12-lm1909-fd6b30d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N10130-",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:44:52+00:00",
+ "recipe": {
+  "toolchain_commit": "0ac4cdf2c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N10130_neg/2026-11-12-lm1909-fd6b30d1.tests.json"
+ },
+ "label": "the word inside a terse verbless fragment that follows a full sentence in casual writing (Badly. Or a friend. Yep.)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N10130_neg/2026-11-12-lm1909-fd6b30d1.tests.json",
+   "prereg_commit": "0ac4cdf2c",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.295,
+     "peak": " finished"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.504,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.354,
+     "peak": " close"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.779,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.21,
+     "peak": " lucky"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.618,
+     "peak": " Again"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.097,
+     "peak": " tissues"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.932,
+     "peak": " bathroom"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": " finish"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.049,
+     "peak": " anniversary"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.124,
+     "peak": " tea"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.03,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.044,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.104,
+     "peak": " but"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.097,
+     "peak": " kitchen"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.429,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0ac4cdf2c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "terse follow-up fragment",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Top examples: ' Yep', 'Or a friend', 'Bad-ly', 'Lots of it', 'Or ever'. The + pole is the '.' before such a fragment (promotes Or/Especially/Which). Probes 0.27-1.03 on fragments, 0.05-0.08 on the same content as one sentence.",
+ "selection": "random draw"
+}

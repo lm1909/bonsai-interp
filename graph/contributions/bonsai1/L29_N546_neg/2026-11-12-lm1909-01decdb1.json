@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-12-lm1909-01decdb1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N546-",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:45:00+00:00",
+ "recipe": {
+  "toolchain_commit": "0ac4cdf2c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N546_neg/2026-11-12-lm1909-01decdb1.tests.json"
+ },
+ "label": "a Chinese modal or permission word before a verb (可以, 只能, 不得, 不可, 可)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N546_neg/2026-11-12-lm1909-01decdb1.tests.json",
+   "prereg_commit": "0ac4cdf2c",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.122,
+     "peak": "门店"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.32,
+     "peak": "只能"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.126,
+     "peak": "不得"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.389,
+     "peak": "同时"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.0,
+     "peak": "学生"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.724,
+     "peak": "只能"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.11,
+     "peak": "，"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.002,
+     "peak": "游客"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.087,
+     "peak": "卡"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.047,
+     "peak": "场地"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.001,
+     "peak": "来自"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.214,
+     "peak": "券"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.002,
+     "peak": "学生们"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.122,
+     "peak": "奖金"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "们"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.124,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0ac4cdf2c",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese modal before verb",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Top examples 不得/已/可以/可/不可 in Chinese rules and descriptions; the logit effect suppresses (so the - pole promotes) used/applied/用于. Probes: 可以 0.76, 只能 0.69, 不得 0.24, 已 0.03, no modal ~0; English 'can be used' 0.01-0.12.",
+ "selection": "random draw"
+}
