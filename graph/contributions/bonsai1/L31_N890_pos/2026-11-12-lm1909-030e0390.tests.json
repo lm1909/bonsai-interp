@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-030e0390",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N890+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:39:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N890",
+   "pole": "+",
+   "label": "pose / position fields in robotics (ROS) Python code (msg.pose.position, waypoints[i].pose)",
+   "fire": [
+    "from geometry_msgs.msg import PoseStamped\ngoal = PoseStamped()\ngoal.pose.position.x = 0.5\ngoal.pose.position.z = 1.2",
+    "for i in range(len(waypoints)):\n    p = waypoints[i].pose\n    print(p.position.x, p.position.y)",
+    "def callback(msg):\n    self.current_pose = msg.pose\n    self.x = msg.pose.position.x",
+    "marker = Marker()\nmarker.pose.position.x = target.x\nmarker.pose.orientation.w = 1.0",
+    "import rospy\nfrom geometry_msgs.msg import Point, Pose, Twist\nstart = Pose()\nstart.position = Point(0, 0, 0)",
+    "state = robot.get_state()\njoints = list(state.position[3:9])\nprint(joints)",
+    "odom_pose = odom.pose.pose\nyaw = quat_to_yaw(odom_pose.orientation)\nx = odom_pose.position.x",
+    "target = Pose()\ntarget.position.x, target.position.y = 2.0, 3.5\npub.publish(target)"
+   ],
+   "quiet": [
+    "from collections import OrderedDict\ncache = OrderedDict()\ncache['a'] = 0.5\ncache['b'] = 1.2",
+    "for i in range(len(orders)):\n    o = orders[i].total\n    print(o.amount, o.tax)",
+    "def callback(msg):\n    self.last_text = msg.text\n    self.count = msg.text.count('a')",
+    "label = Label()\nlabel.text.value = user.name\nlabel.font.size = 12",
+    "import json\nfrom datetime import date, time, timedelta\nstart = date.today()\nstart_time = time(0, 0, 0)",
+    "row = table.get_row()\ncells = list(row.values[3:9])\nprint(cells)",
+    "user_profile = resp.data.user\nname = clean(user_profile.nickname)\nage = user_profile.age",
+    "invoice = Invoice()\ninvoice.amount, invoice.tax = 2.0, 3.5\nqueue.publish(invoice)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "robot pose code",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Top examples also include anatomical position prose ('position of the tongue', 'symphysis') at about half the code peak."
+}
