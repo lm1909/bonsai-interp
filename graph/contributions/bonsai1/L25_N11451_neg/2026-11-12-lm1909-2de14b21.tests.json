@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-2de14b21",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N11451-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:38:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N11451",
+   "pole": "-",
+   "label": "the separator that continues a sequence of steps or items: a list comma, or 'to' introducing the next action",
+   "fire": [
+    "First she hired a chef, a waiter, and a cleaner for the cafe.",
+    "Click on Tools to open the options menu.",
+    "The two proteins bind together to form a stable complex.",
+    "He washed the car, cut the grass, and painted the fence.",
+    "Scroll down to Privacy to adjust the cookie settings.",
+    "We packed the tent, the stove, the lamps, and some food.",
+    "The villagers joined forces to rebuild the old bridge.",
+    "Plug in the charger, wait a minute, and restart the phone."
+   ],
+   "quiet": [
+    "First she hired a chef for the new cafe downtown.",
+    "Click on Tools in the top menu bar.",
+    "The two proteins bind tightly in the cell membrane.",
+    "He washed the car on Sunday morning.",
+    "Scroll down slowly through the privacy page.",
+    "We packed the tent in the car last night.",
+    "The villagers rebuilt the old bridge last summer.",
+    "Plug in the charger before you go to bed."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "sequence continuation",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "card: ',' x13, ' to' x7 in step-by-step sequences; the + pole peaks on ' and' joining a pair. Probes 0.23-0.41. Near misses state a single step without a list comma or purpose 'to'."
+}
