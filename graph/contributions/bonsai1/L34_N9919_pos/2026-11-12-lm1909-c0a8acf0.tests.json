@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-12-lm1909-c0a8acf0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N9919+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:30:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N9919",
+   "pole": "+",
+   "label": "a word-initial 'm' split off as its own token ('self-m|otivated', 'M|&E', Russian ' м|илиция')",
+   "fire": [
+    "We need a highly self-motivated person for this role.",
+    "The group runs M&E for several aid programs.",
+    "Полиция и милиция патрулировали улицы.",
+    "The candidate is self-motivated and reliable.",
+    "Donors asked for a clear M&E framework.",
+    "Вчера митинг прошёл без происшествий.",
+    "Она работает в милиции уже десять лет.",
+    "The M&E officer visited the field sites."
+   ],
+   "quiet": [
+    "We need a highly organized person for this role.",
+    "The group runs audits for several aid programs.",
+    "Полиция патрулировала улицы всю ночь.",
+    "The candidate is hardworking and reliable.",
+    "Donors asked for a clear budget framework.",
+    "Вчера собрание прошло без происшествий.",
+    "Она работает в полиции уже десять лет.",
+    "The finance officer visited the field sites."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off 'm' onset",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "card: top peaks ' M', '-m', ' m', Russian ' м', Arabic ' م'. Probes: self-motivated 0.53, M&E 0.32, милицией 0.35, mowed 0.15. The - pole takes 'P'/'M' onsets too.",
+ "trigger": {
+  "pieces": [
+   "m",
+   "-m",
+   "м",
+   "م"
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-944e21c1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N2833-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:30:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N2833",
+   "pole": "-",
+   "label": "the first sub-word piece of a Spanish word the tokenizer splits (' ter'|cera, ' sor'|presa, con|'ci'|encia)",
+   "fire": [
+    "Ganaron la tercera medalla del torneo.",
+    "Para mi sorpresa, el tren llegó a tiempo.",
+    "El equipo terminó en tercera posición.",
+    "La fiesta fue una sorpresa para todos.",
+    "Tomó conciencia del problema muy tarde.",
+    "La tercera parte del libro es la mejor.",
+    "Recibimos una sorpresa agradable en casa.",
+    "Su conciencia no lo dejaba dormir."
+   ],
+   "quiet": [
+    "Ganaron otra medalla del torneo.",
+    "Por suerte, el tren llegó a tiempo.",
+    "El equipo terminó en segundo lugar.",
+    "La fiesta fue muy bonita para todos.",
+    "Vio el problema muy tarde.",
+    "El final del libro es lo mejor.",
+    "Recibimos una visita agradable en casa.",
+    "Su miedo no lo dejaba dormir."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Spanish split-word onsets",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "card: - pole tops are all Spanish word onsets ( c|occión, ter|cera, sor|presa, c|ama). Probes: tercera 0.47, sorpresa 0.52, conciencia 0.33, cama 0.31, but 'la primera' also 0.27, so plain Spanish leaks."
+}

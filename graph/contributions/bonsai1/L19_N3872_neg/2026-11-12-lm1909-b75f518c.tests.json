@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-b75f518c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N3872-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:30:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N3872",
+   "pole": "-",
+   "label": "a long run of spaces used to align columns in code (padding before '=' or a trailing comment)",
+   "fire": [
+    "__author__      = 'Jane Doe'\n__version__     = '1.2.0'\n__license__     = 'MIT'",
+    "MAX_RETRIES = 5                        # retry limit\nTIMEOUT = 30                           # seconds",
+    "config = {\n    'host':           'localhost',\n    'port':           8080,\n}",
+    "self.red_led_pin          = 17\nself.green_led_pin        = 27\nself.button_pin           = 22",
+    "DB_NAME        = 'shop'\nDB_USER        = 'admin'\nDB_HOST        = 'localhost'",
+    "import os\n\nBASE_DIR          = os.getcwd()\nSTATIC_DIR        = 'static'",
+    "x_offset        = 0\ny_offset        = 0\nscale_factor    = 1.5",
+    "LOG_LEVEL = 'INFO'                     # verbosity\nLOG_FILE = 'app.log'                   # output path"
+   ],
+   "quiet": [
+    "__author__ = 'Jane Doe'\n__version__ = '1.2.0'\n__license__ = 'MIT'",
+    "MAX_RETRIES = 5  # retry limit\nTIMEOUT = 30  # seconds",
+    "config = {\n    'host': 'localhost',\n    'port': 8080,\n}",
+    "self.red_led_pin = 17\nself.green_led_pin = 27\nself.button_pin = 22",
+    "DB_NAME = 'shop'\nDB_USER = 'admin'\nDB_HOST = 'localhost'",
+    "import os\n\nBASE_DIR = os.getcwd()\nSTATIC_DIR = 'static'",
+    "x_offset = 0\ny_offset = 0\nscale_factor = 1.5",
+    "LOG_LEVEL = 'INFO'  # verbosity\nLOG_FILE = 'app.log'  # output path"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code alignment padding",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "card: top 32 peaks are all whitespace runs (and one dash run) used for alignment in Python config/dunder blocks. Near misses are the same code with single spaces. Not probed."
+}

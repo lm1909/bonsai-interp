@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-263b5b14",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N3594-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:30:48+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N3594",
+   "pole": "-",
+   "label": "the first piece of a word split by the tokenizer, mostly in non-English text (Russian ' м|орские', 'co-|ordinates')",
+   "fire": [
+    "На ужин мы заказали морепродукты и вино.",
+    "Летом мы ездили на морское побережье.",
+    "Rather than polar co-ordinates, the map uses a simple grid.",
+    "The ship's co-ordinates were sent to the coast guard.",
+    "Дети собирали морские камешки у воды.",
+    "The anthology includes the stories The Glass House and Winter Road.",
+    "Мы видели медуз в тёплом море.",
+    "Please co-ordinate the schedule with the other team."
+   ],
+   "quiet": [
+    "На ужин мы заказали рыбу и вино.",
+    "Летом мы ездили на побережье озера.",
+    "Rather than polar angles, the map uses a simple grid.",
+    "The ship's position was sent to the coast guard.",
+    "Дети собирали камешки у воды.",
+    "The anthology includes two stories about a glass house.",
+    "We saw jellyfish swimming in the warm sea.",
+    "Please plan the schedule with the other team."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split word onsets",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "card tops are mixed: ' co'(-ordinates), Spanish ' el', Russian ' м', ' The' before a story title. Probes weak: ' м' 0.20, ' co' 0.15-0.25, ' The' before titles 0.23, plain Spanish 0.04-0.05. Best guess, likely to fail."
+}
