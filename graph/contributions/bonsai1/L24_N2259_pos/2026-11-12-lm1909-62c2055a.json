@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-12-lm1909-62c2055a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N2259+",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:43:40+00:00",
+ "recipe": {
+  "toolchain_commit": "a0008e824",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N2259_pos/2026-11-12-lm1909-62c2055a.tests.json"
+ },
+ "label": "'to'/'from' marking the end or start of a journey back or home (back to Ames, returning from a game, home from work)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N2259_pos/2026-11-12-lm1909-62c2055a.tests.json",
+   "prereg_commit": "a0008e824",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.682,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.553,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.295,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.277,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.709,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.448,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.687,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.752,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " Glasgow"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " island"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.106,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " farm"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.024,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.618,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a0008e824",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "journey back to / from",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: ' to' x13, ' from' x12 (bus back to Ames, walk back to Harlem, returning from a hockey game). Probe: 'bus ride back to Denver' 0.96, 'driving home from work' 0.61; 'sent the letter to' 0.13, 'taken from a survey' 0.00. Near misses use to/from in non-travel senses with the same places.",
+ "selection": "random draw"
+}

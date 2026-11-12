@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-12-lm1909-ddc16cb0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N6495+",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:45:02+00:00",
+ "recipe": {
+  "toolchain_commit": "a0008e824",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N6495_pos/2026-11-12-lm1909-ddc16cb0.tests.json"
+ },
+ "label": "'in'/'into' right after 'get' in a get-in idiom (get in the habit, get into, get in touch, get in here)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N6495_pos/2026-11-12-lm1909-ddc16cb0.tests.json",
+   "prereg_commit": "a0008e824",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.438,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.592,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.398,
+     "peak": " into"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.737,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.679,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.405,
+     "peak": " into"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.842,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.56,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.045,
+     "peak": " stay"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.048,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": " miss"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " finally"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " lobby"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.038,
+     "peak": " get"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.576,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a0008e824",
+  "minutes": 7,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'in' after 'get'",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Card: ' in' x20, ' into' x5, all top six right after 'get' (get in the habit, get into the habit, get in contact). The - pole is 'get [one's] hands on'. Near misses keep 'in' after other verbs and 'get' with other words.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " in",
+   " into"
+  ]
+ }
+}

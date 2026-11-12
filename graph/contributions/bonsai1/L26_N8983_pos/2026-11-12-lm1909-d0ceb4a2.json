@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-12-lm1909-d0ceb4a2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N8983+",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:44:52+00:00",
+ "recipe": {
+  "toolchain_commit": "a0008e824",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N8983_pos/2026-11-12-lm1909-d0ceb4a2.tests.json"
+ },
+ "label": "a modifier marking an added or edge element (extra, additional, leading/trailing) before the noun it counts",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N8983_pos/2026-11-12-lm1909-d0ceb4a2.tests.json",
+   "prereg_commit": "a0008e824",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.126,
+     "peak": " trailing"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.308,
+     "peak": " extra"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.941,
+     "peak": " leading"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.058,
+     "peak": " additional"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.01,
+     "peak": " pair"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.342,
+     "peak": " leading"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.176,
+     "peak": " extra"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.026,
+     "peak": " ring"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.029,
+     "peak": " any"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.073,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.038,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " warm"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.051,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " free"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " reaction"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.805,
+    "median_fire": 0.151,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a0008e824",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "extra / leading / trailing",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card: ' trailing' x4, ' leading' x3, ' extra' x2, 'adds a phosphorous group'; output promotes multiple, extra, double, additional. Probe: trailing 0.33, extra 0.21-0.24. Near misses keep the same frames with ordinary descriptive adjectives.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "extra",
+   "leading",
+   "trailing",
+   "additional"
+  ]
+ }
+}

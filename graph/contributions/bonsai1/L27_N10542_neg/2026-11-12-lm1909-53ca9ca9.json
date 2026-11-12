@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-12-lm1909-53ca9ca9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N10542-",
+ "contributor": "lm1909",
+ "created": "2026-11-12T16:43:23+00:00",
+ "recipe": {
+  "toolchain_commit": "a0008e824",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N10542_neg/2026-11-12-lm1909-53ca9ca9.tests.json"
+ },
+ "label": "the slot right before 'unaware / don't know / never notice': people who have or pass something without knowing it",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N10542_neg/2026-11-12-lm1909-53ca9ca9.tests.json",
+   "prereg_commit": "a0008e824",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.952,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.389,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.519,
+     "peak": " remain"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.136,
+     "peak": " never"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.372,
+     "peak": " but"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.429,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.731,
+     "peak": " often"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.286,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.952,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.208,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.636,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.038,
+     "peak": " day"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.159,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.11,
+     "peak": " take"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": " cards"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.261,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.742,
+    "median_fire": 0.409,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a0008e824",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "before 'unaware' (not knowing)",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: 'Many⟦ are⟧ seniors. Many don't know they have', 'but⟦ remain⟧ undiagnosed', 'walk right by them⟦ and⟧ never see them'; the output direction promotes unaware/unknown/oblivious on this pole. Probe: 'many are unaware' 0.91. Near misses keep the same frame (a group of people, often health) where the continuation is not ignorance.",
+ "selection": "random draw"
+}
