@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-34da9afc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N5389+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:37:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N5389",
+   "pole": "+",
+   "label": "form input fields: 'Radio' in RadioField and fields to fill in or select on a form",
+   "fire": [
+    "class SurveyForm(FlaskForm):\n    gender = RadioField('Gender', choices=[('f', 'F'), ('m', 'M')])",
+    "Type your postcode in the field labelled ZIP and press Continue.",
+    "from django import forms\nfrom wtforms import RadioField, IntegerField",
+    "Please complete every field marked with an asterisk before you submit.",
+    "    plan = RadioField('Plan', choices=PLANS, default='basic')",
+    "Enter the amount in the box named Total, then choose a currency from the drop-down list.",
+    "Leave the field for your middle name blank if you do not have one.",
+    "    contact = RadioField('Preferred contact', choices=[('e', 'Email'), ('p', 'Phone')])"
+   ],
+   "quiet": [
+    "class SurveyForm(FlaskForm):\n    def validate(self):\n        return super().validate()",
+    "Type your postcode on the envelope and post it before Friday.",
+    "from django import http\nfrom wtforms import validators",
+    "Please wash every cup marked with a sticker before you leave.",
+    "    plan = get_plan(user, default='basic')",
+    "Put the money in the box under the counter, then lock the shop for the night.",
+    "Leave the light in the hallway on if you come home late.",
+    "    contact = lookup_contact(user_id, cache=True)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "form input fields",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: ' Radio' (RadioField) x2, ' dialog' x6, 'fields marked *', 'in the field named'; probe: RadioField 0.97, 'fill in the required fields' 0.55, 'dialog box' 0.04. The opposite pole is (un)checking checkboxes."
+}

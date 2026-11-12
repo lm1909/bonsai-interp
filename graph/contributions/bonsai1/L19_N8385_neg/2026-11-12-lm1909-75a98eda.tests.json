@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-75a98eda",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8385-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:37:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N8385",
+   "pole": "-",
+   "label": "dense / broad pole; best guess: the ')\\n' that closes a Python call statement",
+   "fire": [
+    "    model = build_model(config)\n    model.fit(train_x, train_y)\n    model.save(path)",
+    "    parser.add_argument('--seed', type=int)\n    args = parser.parse_args()",
+    "    conn = connect(url)\n    conn.execute(query)\n    conn.close()",
+    "    plt.plot(xs, ys)\n    plt.savefig('out.png')",
+    "    logger.info('starting')\n    run_pipeline(stages)",
+    "    f = open(name)\n    lines = f.readlines()\n    f.close()",
+    "    queue.put(task)\n    worker.start()",
+    "    os.makedirs(out_dir)\n    shutil.copy(src, out_dir)"
+   ],
+   "quiet": [
+    "The model was built from the config and then fitted on the training data before being saved.",
+    "The parser accepted a seed argument and then read all the arguments at once.",
+    "We opened a connection, ran the query and then closed the connection again.",
+    "She plotted the points on a chart and saved the picture to a file.",
+    "The log said the job was starting, and then the pipeline ran each stage.",
+    "He opened the file, read all of its lines and closed it afterwards.",
+    "The task went into the queue and then the worker started up.",
+    "First make the output folder, then copy the source files into it."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; ')\\n' in code",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card flags broad (4.3% of tokens reach 0.1 of max); top examples mix Korean/Russian word pieces and ')\\n' in code. Probe of a code snippet only 0.15. Recorded to document density."
+}

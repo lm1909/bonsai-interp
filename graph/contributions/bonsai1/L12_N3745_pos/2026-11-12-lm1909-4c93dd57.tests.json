@@ -1,0 +1,44 @@
+{
+ "contribution": "2026-11-12-lm1909-4c93dd57",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N3745+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:37:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N3745",
+   "pole": "+",
+   "label": "'.route' (and similar registration attributes) on a Python decorator line, e.g. @app.route(...)",
+   "fire": [
+    "from flask import Flask\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    return 'hello'",
+    "bp = Blueprint('shop', __name__)\n\n@bp.route('/cart', methods=['POST'])\ndef add_to_cart():\n    return jsonify(ok=True)",
+    "    return render_template('about.html')\n\n\n@app.route('/contact')\ndef contact():\n    return render_template('contact.html')",
+    "api = Blueprint('api', __name__)\n\n@api.route('/v2/items/<int:item_id>')\ndef get_item(item_id):\n    return items[item_id]",
+    "@server.route('/health')\ndef health():\n    return 'ok', 200\n\n@server.route('/metrics')\ndef metrics():\n    return dump()",
+    "admin = Blueprint('admin', __name__, url_prefix='/admin')\n\n@admin.route('/login', methods=['GET', 'POST'])\ndef login():\n    form = LoginForm()",
+    "    db.session.commit()\n    return redirect(url_for('home'))\n\n@application.route('/logout')\ndef logout():\n    session.clear()",
+    "app = Flask('notes')\n\n@app.route('/notes/<slug>', methods=['DELETE'])\ndef delete_note(slug):\n    notes.pop(slug)"
+   ],
+   "quiet": [
+    "from flask import Flask\napp = Flask(__name__)\n\ndef index():\n    return 'hello'\n\napp.run(debug=True)",
+    "bp = Blueprint('shop', __name__)\n\ndef add_to_cart():\n    return jsonify(ok=True)\n\nbp.name = 'shop'",
+    "    return render_template('about.html')\n\n\ndef contact():\n    return render_template('contact.html')",
+    "api = Blueprint('api', __name__)\n\ndef get_item(item_id):\n    return items[item_id]\n\nprint(api.url_prefix)",
+    "def health():\n    return 'ok', 200\n\ndef metrics():\n    return dump()\n\nserver.config['DEBUG'] = False",
+    "admin = Blueprint('admin', __name__, url_prefix='/admin')\n\ndef login():\n    form = LoginForm()",
+    "    db.session.commit()\n    return redirect(url_for('home'))\n\ndef logout():\n    session.clear()",
+    "Take the scenic route along the coast and then follow the signs to the old harbour."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,probe,look"
+ },
+ "short": "decorator .route",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: '):\\n' x5 and '.route' x4 in the top 32; probe: @app.route fired 0.24, def lines and prose near 0. Weak pole (max 17)."
+}

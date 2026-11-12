@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-36e4cea4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N8951-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:37:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N8951",
+   "pole": "-",
+   "label": "names of library types and functions in code (typing Union/Optional, std:: templates, np. math functions)",
+   "fire": [
+    "from typing import Optional\n\ndef find(key: str) -> Optional[Record]:\n    return table.get(key)",
+    "def parse(raw) -> Union[dict, list]:\n    return json.loads(raw)",
+    "    typedef std::map<std::string, int> Counter;\n    Counter counts;",
+    "    density = coeff * np.exp(-0.5 * (x - mu) ** 2 / var)",
+    "    std::unique_ptr<Node> root = std::make_unique<Node>(0);",
+    "    angle = np.arctan2(dy, dx)\n    dist = np.hypot(dx, dy)",
+    "def merge(a: Dict[str, int], b: Dict[str, int]) -> Dict[str, int]:\n    return {**a, **b}",
+    "    assert gamma(1) == S.One\n    assert erf(0) == S.Zero"
+   ],
+   "quiet": [
+    "def find(key, table):\n    record = table[key]\n    return record",
+    "def parse(raw, sep):\n    parts = raw.split(sep)\n    return parts",
+    "    int counter = 0;\n    counter += step;",
+    "    density = coeff * weight - offset / total_count",
+    "    Node root = make_node(0);\n    root.left = other;",
+    "    angle = dy / dx\n    dist = dx + dy",
+    "def merge(first, second):\n    result = first + second\n    return result",
+    "    assert total == expected\n    assert count == 0"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "library type/function names",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card top: Union[, std::pair, np.exp, erfi; probe: Union 0.69, std::vector 0.34, np.exp 0.21, prose 0. Near misses are code lines that use only user-defined names."
+}

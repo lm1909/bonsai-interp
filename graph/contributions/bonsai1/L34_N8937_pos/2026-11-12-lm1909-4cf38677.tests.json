@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-4cf38677",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N8937+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:37:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N8937",
+   "pole": "+",
+   "label": "a contraction (didn, couldn, doesn) right before an escaped apostrophe inside a quoted string in code",
+   "fire": [
+    "        if not rows:\n            raise RuntimeError('Couldn\\'t load any rows from %s' % path)",
+    "    if verbose:\n        print('  didn\\'t match pattern, skipping')",
+    "        except KeyError:\n            sys.exit('Couldn\\'t find section [server] in config')",
+    "    if a and b:\n        raise Exception('doesn\\'t make sense to pass both a and b')",
+    "            else:\n                log.warning('Wasn\\'t able to reach the mirror, retrying')",
+    "    if user is None:\n        return HttpResponse('Couldn\\'t identify the user', status=401)",
+    "        if ret != 0:\n            print('  didn\\'t exit cleanly, code %d' % ret)",
+    "    if not callable(fn):\n        raise TypeError('isn\\'t callable: %r' % fn)"
+   ],
+   "quiet": [
+    "        if not rows:\n            raise RuntimeError('Could not load any rows from %s' % path)",
+    "    if verbose:\n        print('  did not match pattern, skipping')",
+    "        except KeyError:\n            sys.exit('Could not find section [server] in config')",
+    "    if a and b:\n        raise Exception('it makes no sense to pass both a and b')",
+    "            else:\n                log.warning('Was not able to reach the mirror, retrying')",
+    "    if user is None:\n        return HttpResponse('Could not identify the user', status=401)",
+    "        if ret != 0:\n            print('  did not exit cleanly, code %d' % ret)",
+    "    if not callable(fn):\n        raise TypeError('is not callable: %r' % fn)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "contraction before \\' in code string",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: ' didn\\'t', 'Couldn\\'t' x2, 'doesn\\'t' at the start of print/raise strings; probe: print('didn't ...') 0.54, prose couldn't 0.00. Near misses are the same code with 'did not' / 'could not'."
+}
