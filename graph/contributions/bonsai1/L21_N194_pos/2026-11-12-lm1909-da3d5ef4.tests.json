@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-da3d5ef4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N194+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:31:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N194",
+   "pole": "+",
+   "label": "the first token of an indented statement line in Python code (the indentation or the name being assigned)",
+   "fire": [
+    "def mean(values):\n    total = sum(values)\n    n = len(values)\n    return total / n",
+    "for row in rows:\n    name = row['name']\n    names.append(name)",
+    "def clean(text):\n    text = text.strip()\n    words = text.split()\n    return words",
+    "if user is None:\n    user = default_user\n    logged_in = False",
+    "def parse(line):\n    parts = line.split(',')\n    key = parts[0]\n    return key",
+    "while i < n:\n    value = data[i]\n    i += 1",
+    "def scale(img, k):\n    h = img.height * k\n    w = img.width * k\n    return img.resize((w, h))",
+    "try:\n    conn = connect(url)\n    rows = conn.fetch()\nexcept IOError:\n    rows = []"
+   ],
+   "quiet": [
+    "The mean function adds up the values and divides by how many there are.",
+    "x = sum(values) / len(values)",
+    "The clean function strips the text and splits it into words.",
+    "print(user or default_user)",
+    "The parse function splits a line on commas and returns the first part.",
+    "result = [d for d in data if d > 0]",
+    "The scale function multiplies the height and width of the image by k.",
+    "rows = connect(url).fetch()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "indented Python line start",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: whitespace runs and assignment targets after a newline in indented code. Probe: multi-line Python 0.14-0.37, prose about code ~0. Near misses are one-line code or prose about the same code, without an indented line."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-12-lm1909-30bf4a14",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N7598+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:31:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N7598",
+   "pole": "+",
+   "label": "the last token completing a fixed multi-word name or set phrase (Whole Foods, the lost sheep, Blood on the Tracks)",
+   "fire": [
+    "We picked up a salad at Whole Foods after work.",
+    "The pastor preached on the parable of the prodigal son.",
+    "Her favourite album is still Blood on the Tracks.",
+    "Grammar books warn against the dangling participle.",
+    "The family drove down to Pigeon Forge for the weekend.",
+    "He quoted the line about the good shepherd and his flock.",
+    "The team met at Madison Square Garden before the game.",
+    "She ordered the book from Barnes and Noble online."
+   ],
+   "quiet": [
+    "We picked up a salad and some frozen foods after work.",
+    "The pastor talked about his son and his daughter.",
+    "Her favourite songs are about trains and tracks.",
+    "Grammar books explain how each participle works.",
+    "The family drove down to a blacksmith's forge for the weekend.",
+    "He talked about the farmer and his large flock.",
+    "The team met in a small garden before the game.",
+    "She ordered the book from a local seller online."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "name-completing token",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card: ' Foods', ' sheep', ' Tracks', 'ive', 'ville', '_lib'. Probe: 'Whole Foods' 0.75, 'the lost sheep' 0.70, 'split infinitive' 0.71; the same words in ordinary use 0.01-0.10. Near misses use the final word outside the fixed phrase."
+}
