@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-12-lm1909-0371639c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N6907-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:33:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N6907",
+   "pole": "-",
+   "label": "punctuation and identifiers in Python model/class-definition code (db.Column(...) field lines, Meta fields tuples)",
+   "fire": [
+    "class Order(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    total = db.Column(db.Float, nullable=False)\n    note = db.Column(db.Text, nullable=True)",
+    "class Post(db.Model):\n    title = db.Column(db.String(200), nullable=False)\n    body = db.Column(db.Text, nullable=True)\n    created = db.Column(db.DateTime, nullable=True)",
+    "class Item(db.Model):\n    sku = db.Column(db.String(40), unique=True)\n    price = db.Column(db.Numeric, nullable=False)\n    stock = db.Column(db.Integer, default=0)",
+    "class Tag(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(50), nullable=False)\n    color = db.Column(db.String(7), nullable=True)",
+    "class Author(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    first = db.Column(db.String(60), nullable=False)\n    last = db.Column(db.String(60), nullable=False)",
+    "class Visit(db.Model):\n    day = db.Column(db.Date, nullable=False)\n    start = db.Column(db.Time, nullable=True)\n    end = db.Column(db.Time, nullable=True)",
+    "class Review(db.Model):\n    stars = db.Column(db.Integer, nullable=False)\n    text = db.Column(db.Text, nullable=True)\n    user_id = db.Column(db.Integer, nullable=False)",
+    "class Room(db.Model):\n    number = db.Column(db.String(10), nullable=False)\n    beds = db.Column(db.Integer, default=1)\n    floor = db.Column(db.Integer, nullable=True)"
+   ],
+   "quiet": [
+    "The Order table has an id that is the primary key, a total that cannot be empty, and an optional note.",
+    "Each post has a title of up to two hundred characters, a body, and the date it was created.",
+    "Every item has a unique stock code, a price that must be set, and a stock count that starts at zero.",
+    "A tag has an id, a short name that is required, and an optional color written as a hex code.",
+    "An author record stores a first name and a last name, both of which are required fields.",
+    "For each visit we record the day, which is required, and optional start and end times.",
+    "A review stores the number of stars, an optional text, and the id of the user who wrote it.",
+    "Each room has a number, a count of beds that defaults to one, and an optional floor."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "Python ORM field code",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Weak pole (max 7.5, 0.8% > 0.1 max); top examples are '(db', \" ('\", ':' and ';' in Flask/Django model code and Qt stylesheets. Probes: a multi-line db.Column block 0.33, a Django Meta block 0.09, prose about the same 0.03."
+}

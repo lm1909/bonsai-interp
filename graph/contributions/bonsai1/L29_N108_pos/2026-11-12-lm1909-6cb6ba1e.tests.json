@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-12-lm1909-6cb6ba1e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N108+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:33:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N108",
+   "pole": "+",
+   "label": "the last token of a paragraph or list item, right before a paragraph break (e.g. the final digit of a citation's date)",
+   "fire": [
+    "Sources\n- Miller, R. (1999). \"Soil and Water\". Farm Journal 8 (2): 10-14.\n- \"Bridge closed for repairs\". City Times. 2012-07-11. Retrieved 2015-01-23.\n\nSee also",
+    "Notes\n1. Harris, P. The Long Winter (London: Faber, 2003), p. 41.\n2. Grant, L. Retrieved 14 April 2017.\n\nExternal links",
+    "If you did not receive a copy of the license, write to the publisher at 12 Mill Road, Leeds LS1 4AB UK.\n\nThis file is part of the project.",
+    "Cheer on your team in comfort all winter long.\n\nFree shipping on orders over fifty dollars.",
+    "With love and thanks,\nRosa, Daniel, Mia, and Leo\n\nOur next newsletter arrives in May.",
+    "In no event shall the authors be liable for any claim or damages.\n\nYou agree to these terms by using the site.",
+    "Archived from the original on June 2, 2013. Retrieved June 9, 2019.\n\n- \"Heavy snow hits the coast\". Daily News.",
+    "The reporter can be reached at 555-2100 or at news@example.com.\n\nMore from the Sports section"
+   ],
+   "quiet": [
+    "Sources\n- Miller, R. (1999). \"Soil and Water\". Farm Journal 8 (2): 10-14, a study cited by many later authors.",
+    "Notes\n1. Harris, P. The Long Winter (London: Faber, 2003), a novel that sold well in its first year.",
+    "If you did not receive a copy of the license, write to the publisher and they will mail one to you soon.",
+    "Cheer on your team in comfort during every home game this winter with our new jackets.",
+    "With love and thanks to Rosa, Daniel, Mia, and Leo, who helped us plant the garden.",
+    "In no event shall the authors be liable for any claim, so please read these terms carefully.",
+    "The article was archived in June 2013 and retrieved again by the editors in June 2019.",
+    "The reporter, who can be reached by phone, covered the game for the Sports section."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "paragraph-final token",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Top examples are the final digit or word before '.\\n' (dates in reference lists, 'all season long', 'such damages'); the logit effect promotes '\\n\\n' tokens. Probes of single-line and multi-line references all scored < 0.1, so this is a best guess and will likely fail."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-12-lm1909-1d98ae6c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N6525-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:33:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N6525",
+   "pole": "-",
+   "label": "later digits of a comma-grouped quantity (a price, count or measurement like 4,750 or 25,600)",
+   "fire": [
+    "The stadium seats about 62,450 fans on a busy match day.",
+    "A night at the resort costs between 7,850 yen and 14,200 yen.",
+    "The new sensor can shoot at up to ISO 51,200 in the dark.",
+    "The factory shipped 18,375 bicycles last year.",
+    "The well pumps roughly 3,640 liters of water every hour.",
+    "Tickets sold out after 24,980 people bought them online.",
+    "The used car has 87,320 miles on it but runs well.",
+    "The library added 5,715 new books to its shelves this year."
+   ],
+   "quiet": [
+    "The stadium is at 1200 Park Avenue in ZIP code 62450.",
+    "Call the resort at 555-0185 to book a room for the night.",
+    "The new sensor has model number 51200 printed on its side.",
+    "The factory's order number for last year's shipment was 18375.",
+    "The well is listed as site 3640 on the county's water map.",
+    "Your ticket confirmation code is 24980, so keep it safe.",
+    "The used car's license plate reads 87320, issued in Ohio.",
+    "The library book has call number 5715 on its spine."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "digits of large quantities",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Both poles fire on digits; - pole examples are quantities (prices, ISO values, toxicity values), + pole examples are identifiers (ZIP codes, page and article numbers). Probes on quantities 0.08-0.29, ZIP/page/phone numbers 0.01-0.04, so the median may miss 0.20."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-12-lm1909-7b0331c9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N3424-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:33:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N3424",
+   "pole": "-",
+   "label": "the copula or verb slot right before an efficacy judgment (is [most effective], proven to [be ineffective], considered [acceptable])",
+   "fire": [
+    "Doctors still disagree about which painkiller is most effective after knee surgery.",
+    "Several popular supplements have been found to be useless for preventing colds.",
+    "It remains unclear whether the new reading program is truly beneficial for young pupils.",
+    "In trials, the cheaper vaccine proved to be just as effective as the expensive one.",
+    "Experts asked which teaching method was most useful for students with dyslexia.",
+    "A longer course of antibiotics is not always considered necessary for mild infections.",
+    "The review asked whether acupuncture is helpful for chronic back pain at all.",
+    "Few of the proposed reforms appear likely to be effective in reducing crime."
+   ],
+   "quiet": [
+    "Doctors still disagree about which hospital first performed knee surgery in the region.",
+    "Several popular supplements have been sold in pharmacies since the late nineties.",
+    "It remains unclear where the new reading program will be launched next year.",
+    "In trials, the cheaper vaccine was given to two thousand adults in three cities.",
+    "Experts asked which teaching method was first used in schools in the region.",
+    "A longer course of antibiotics usually lasts about ten days for mild infections.",
+    "The review asked how many clinics offer acupuncture for chronic back pain.",
+    "Few of the proposed reforms were discussed in the committee meeting on Tuesday."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "slot before efficacy verdict",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Top tokens is/be/most/considered before effective/acceptable/useful; the + pole's logit effect suppresses effective/beneficial/helpful, so the - pole promotes them. Probes 0.29-0.90 on efficacy frames; near misses with the same verb but a factual continuation scored 0.19-0.48, so near misses here avoid evaluation altogether."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-12-lm1909-7b0ad619",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N11170-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:33:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N11170",
+   "pole": "-",
+   "label": "dense / broad: tokens in non-English or code text (best guess)",
+   "fire": [
+    "ВНИМАНИЕ: ВХОД ТОЛЬКО ДЛЯ ПЕРСОНАЛА И ГОСТЕЙ",
+    "DEFAULT_CONFIG_PATH = os.path.join(BASE_DIR, 'conf')",
+    "この寺は、古い仏像が多く残っていることで有名です。",
+    "Die Wanderer genossen den Blick über die Alpen.Danach gingen sie heim.",
+    "    result = self.client.get_item(item_id=req_id)",
+    "НЕ ОСТАВЛЯЙТЕ ВЕЩИ БЕЗ ПРИСМОТРА В ЗАЛЕ",
+    "self.assertEqual(self.parse_header(raw_hdr), expected_hdr)",
+    "東京の夏はとても暑くて、湿度も高いです。"
+   ],
+   "quiet": [
+    "Attention: entry is only for staff and guests of the hotel.",
+    "The default settings are stored in a folder called conf.",
+    "This temple is famous because many old statues of the Buddha remain there.",
+    "The hikers enjoyed the view over the Alps. Afterwards they went home.",
+    "The result came back from the server a few seconds later.",
+    "Please do not leave your bags unattended in the hall.",
+    "The test checks that the header is parsed the way we expect.",
+    "Summer in Tokyo is very hot, and the humidity is high too."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "dense: foreign/code text",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags broad (5.4% of tokens reach 0.1 of max). Top examples are mixed tokens in Russian caps, Python identifiers, Japanese and German. Recorded to document the density; expected to fail."
+}

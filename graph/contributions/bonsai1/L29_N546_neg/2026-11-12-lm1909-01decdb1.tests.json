@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-12-lm1909-01decdb1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N546-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-12T16:33:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N546",
+   "pole": "-",
+   "label": "a Chinese modal or permission word before a verb (可以, 只能, 不得, 不可, 可)",
+   "fire": [
+    "这张会员卡可以在全国所有门店使用。",
+    "本场地只能用于体育比赛和训练。",
+    "参赛作品不得抄袭他人的设计。",
+    "该优惠券不可与其他优惠同时使用。",
+    "学生可以在图书馆借阅最多五本书。",
+    "这笔奖金只能用来购买学习用品。",
+    "未经许可，任何人不得进入实验室。",
+    "游客可以免费参观博物馆的一楼展厅。"
+   ],
+   "quiet": [
+    "这张会员卡是去年在北京的门店办的。",
+    "本场地昨天举行了一场体育比赛。",
+    "参赛作品来自全国各地的大学生。",
+    "该优惠券是商场在春节期间发放的。",
+    "学生们在图书馆里安静地看书。",
+    "这笔奖金去年发给了十名优秀学生。",
+    "昨天下午，几位老师进入了实验室。",
+    "游客们在博物馆的一楼展厅拍照。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "Chinese modal before verb",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Top examples 不得/已/可以/可/不可 in Chinese rules and descriptions; the logit effect suppresses (so the - pole promotes) used/applied/用于. Probes: 可以 0.76, 只能 0.69, 不得 0.24, 已 0.03, no modal ~0; English 'can be used' 0.01-0.12."
+}
