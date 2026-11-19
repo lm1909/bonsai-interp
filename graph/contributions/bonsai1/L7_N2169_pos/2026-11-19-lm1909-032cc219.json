@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-032cc219",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N2169+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:09+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N2169_pos/2026-11-19-lm1909-032cc219.tests.json"
+ },
+ "label": "the token right after a lone punctuation mark that stands by itself as a name or string ('/', '_', '-', '.'): fires on what follows the bare symbol, not when the symbol starts a longer path or identifier",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N2169_pos/2026-11-19-lm1909-032cc219.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.625,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.595,
+     "peak": "\":"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.352,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.244,
+     "peak": " '-',"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.402,
+     "peak": "':\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.304,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.187,
+     "peak": " which"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.781,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": "home"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": ".utils"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " dashes"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": "start"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " numbers"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.046,
+     "peak": " which"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.377,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "after a bare symbol",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: top examples follow a bare '/', '_', '-', '.' or '--' in code strings and prose. Probes: bare '/' 0.66-0.69, '_ =' 0.44, \"'-',\" 0.34, \"'.'.join\" 0.55; '/home/user' 0.01, '\"/index\"' 0.09, 'tr =' 0.01. Near misses keep the same code or prose but the symbol is part of a longer path or name.",
+ "selection": "random draw"
+}

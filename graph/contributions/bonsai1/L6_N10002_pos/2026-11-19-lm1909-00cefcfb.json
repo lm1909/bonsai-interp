@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-00cefcfb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10002+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:14:06+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10002_pos/2026-11-19-lm1909-00cefcfb.tests.json"
+ },
+ "label": "the last word of two specific fixed names: ' City' right after 'Kansas' (Kansas City), and ' Research' right after 'Nucleic Acids' (the journal); a list, not a pattern: other '… City' names and other '… Research' journals stay quiet",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10002_pos/2026-11-19-lm1909-00cefcfb.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.483,
+     "peak": " City"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.519,
+     "peak": " City"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.945,
+     "peak": " Research"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.344,
+     "peak": " City"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.486,
+     "peak": " City"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.026,
+     "peak": " Research"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.555,
+     "peak": " City"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.969,
+     "peak": " Research"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.045,
+     "peak": " Lake"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.248,
+     "peak": " Research"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": " Research"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " City"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " appeared"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.537,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Kansas City; Nucleic Acids Research",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card: ' City' x17 (the visible ones all Kansas City / KANSAS CITY), ' Research' x3 (top example: Nucleic Acids Research), 'ville' x2. Probes: 'Kansas City' 0.51-0.58, 'Nucleic Acids Research' 1.04; Oklahoma City 0.11, Salt Lake City 0.04, New York City / Mexico City 0.02, Panama / Quebec / Jersey / Carson City 0.06-0.07, 'Journal of Cancer Research' 0.11, Nashville / Jacksonville 0.03. I could not find what the two names share beyond being frequent fixed names, so the label keeps the list and says so.",
+ "selection": "random draw"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-7765d9b3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10528+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:54+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N10528_pos/2026-11-19-lm1909-7765d9b3.tests.json"
+ },
+ "label": "the link word right before, or the first piece of, a technical disease name in clinical text ('diagnosed [with] retinitis pigmentosa', 'also known [as] fundus flavimaculatus', 'patients with Le[ber] congenital amaurosis'), mostly inherited and eye disorders in the card; weak in my probes",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N10528_pos/2026-11-19-lm1909-7765d9b3.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.29,
+     "peak": " type"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.158,
+     "peak": "iform"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.024,
+     "peak": " progressive"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.207,
+     "peak": " St"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.363,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.213,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.456,
+     "peak": " her"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.388,
+     "peak": " an"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": "Her"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.08,
+     "peak": " cattle"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " followed"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.028,
+     "peak": "M"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.038,
+     "peak": " garden"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " clinic"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " early"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.252,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a disease name is due",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: peaks on ' with', ' an', ' in', ' of', ' as', ' from' just before a named disorder (Stargardt's disease, aniridia, retinitis pigmentosa, sudden sensorineural hearing loss). Probes were weak: 'patients with Leber congenital amaurosis' 0.30, 'suffering from an inherited form of deafness' 0.22, 'also known as brittle bone disease' 0.20, 'diagnosed with retinitis pigmentosa' 0.16; 'presented with a rare medal' 0.01, 'also known as the old mill' 0.00. May miss the 0.20 median. Near misses keep the link words with a non-medical continuation.",
+ "selection": "random draw"
+}

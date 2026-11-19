@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-0d05d857",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8780-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:30+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N8780_neg/2026-11-19-lm1909-0d05d857.tests.json"
+ },
+ "label": "best guess: a middle token inside a multi-word proper name or title that is not ordinary English (band, anime and film titles, foreign personal names: 'Ladysmith [Black] Mambazo', 'Kimagure [Orange] Road', 'Nik[las] Bendtner'), and likewise inside multi-part code identifiers; weak everywhere I probed",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N8780_neg/2026-11-19-lm1909-0d05d857.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.405,
+     "peak": "am"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.513,
+     "peak": " ni"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.111,
+     "peak": " Tomas"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.047,
+     "peak": " Sergio"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.294,
+     "peak": " Y"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.296,
+     "peak": "mani"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.444,
+     "peak": "phinx"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.201,
+     "peak": "eto"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " closed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.017,
+     "peak": " gardening"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " pian"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " cartoons"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": " guitar"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.065,
+     "peak": " \""
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": " show"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.295,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "inside an exotic multi-word name",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Card: no single token; top examples sit mid-name in titles and names (Getsuga Tensho, Kimagure Orange Road, Ladysmith Black Mambazo, Scott Pilgrim Vs. The World: The Game) and mid-identifier in code (sphinx_rtd_theme, ucs2_persian_ci). Probes were weak: Ladysmith Black Mambazo 0.32, Buena Vista Social Club 0.28, sphinx_book_theme 0.24, Niklas 0.22, anime titles 0.08-0.13; plain sentences 0.02. Probably fails the 0.20 median; recorded as a guess.",
+ "selection": "random draw"
+}

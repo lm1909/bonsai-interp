@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-c8dc28ef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N6433-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:45+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N6433_neg/2026-11-19-lm1909-c8dc28ef.tests.json"
+ },
+ "label": "software licence boilerplate inside a source-file comment header (GPL / Apache / BSD: 'but WITHOUT ANY WARRANTY', 'WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND', 'without specific prior written permission', 'any later version'); not ordinary comments and not warranty talk in prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N6433_neg/2026-11-19-lm1909-c8dc28ef.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.815,
+     "peak": " WITHOUT"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.648,
+     "peak": " CONDITIONS"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.862,
+     "peak": " without"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.686,
+     "peak": " later"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.638,
+     "peak": " WITHOUT"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.581,
+     "peak": " WITHOUT"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.371,
+     "peak": " written"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.484,
+     "peak": "at"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " web"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " Names"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " second"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " A"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.643,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "licence header boilerplate",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Card: ' WITHOUT' x12, comment indent x5, '#' x4, ' written' x3, ' CONDITIONS' x3, all in licence headers; one unrelated Chinese example. Probes: GPL header 0.56, Apache header 0.63; prose 'sold without any warranty' 0.01, an ordinary comment block 0.00, the BSD clause as one prose line 0.04, so the comment-header context matters. Fire items are multi-line headers.",
+ "selection": "random draw"
+}

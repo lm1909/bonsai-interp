@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-4aca20d6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N8089-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:15+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N8089_neg/2026-11-19-lm1909-4aca20d6.tests.json"
+ },
+ "label": "the token ' True' given as a documented default value (\"default: True\", \"Default: True\", \"(default True)\") in docstrings and config schemas; ' False' is the + pole of the same neuron",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N8089_neg/2026-11-19-lm1909-4aca20d6.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.579,
+     "peak": " True"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.713,
+     "peak": " True"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.777,
+     "peak": " True"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.564,
+     "peak": " True"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.408,
+     "peak": " True"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.595,
+     "peak": " True"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.654,
+     "peak": " True"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.559,
+     "peak": " True"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.071,
+     "peak": " default"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.123,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.044,
+     "peak": "default"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.172,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.063,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.082,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.122,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.078,
+     "peak": "3"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.587,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "default: True",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Card: 30 of 32 top examples are True tokens, the strongest after 'default'; the + pole is False. Probes: 'default: True' 0.79, 'is_ready = True' 0.26, 'shuffle=True' 0.19, 'default: False' 0.09, prose 'true' 0.00. So the test is on True stated as a default; near misses give other defaults (False, None, numbers, strings) in the same doc style.",
+ "selection": "random draw"
+}

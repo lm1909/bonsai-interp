@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-2a370baa",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N3792+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:20+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N3792_pos/2026-11-19-lm1909-2a370baa.tests.json"
+ },
+ "label": "the comma (or ' either') after a verb or participle that opens an inserted qualifier of manner or extent, where 'directly or indirectly' / 'in whole or in part' is expected (legal style: \"…may not be used, [either] wholly or partly, …\"); not list commas, and not 'either' choosing between nouns",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N3792_pos/2026-11-19-lm1909-2a370baa.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.617,
+     "peak": " either"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.36,
+     "peak": " directly"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.772,
+     "peak": " either"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.413,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.639,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.5,
+     "peak": " either"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.201,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.945,
+     "peak": " either"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": " may"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.052,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " photographs"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.034,
+     "peak": " accept"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.075,
+     "peak": " either"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " lives"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " managed"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.558,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "comma opening 'X-ly or Y-ly'",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: peaks on ',' or ' either' right before 'directly or indirectly', 'fully or in part', 'totally or in part'; output promotes 'either', 'whether', 'directly'. Probes: 'copied, either wholly or partly' 0.49, 'caused, directly or indirectly' 0.44, but also 'caused, however large,' 0.44, so the pole reads the slot (comma after the participle), not the words that follow. 'pay either by card' 0.07, list commas 0.01. Near misses keep legal style with commas in lists, after nouns and after openers.",
+ "selection": "random draw"
+}

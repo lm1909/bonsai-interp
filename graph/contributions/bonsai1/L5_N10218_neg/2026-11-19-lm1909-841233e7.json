@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-841233e7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10218-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:57+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10218_neg/2026-11-19-lm1909-841233e7.tests.json"
+ },
+ "label": "Russian reflexive verb endings split as …+'ас'+'ь' or …+'ис'+'ь' (feminine past -алась: старалась, пыталась; infinitive -тись: пройтись): the Cyrillic piece 'ас' / 'ис' before the final soft sign; quiet when the ending is one token ('лась', 'лся')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10218_neg/2026-11-19-lm1909-841233e7.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.463,
+     "peak": "ас"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.465,
+     "peak": "ас"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.5,
+     "peak": "ас"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.352,
+     "peak": "ас"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.424,
+     "peak": "ис"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.413,
+     "peak": "ас"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.374,
+     "peak": "ас"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.427,
+     "peak": "ас"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.074,
+     "peak": "уш"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " п"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": "ся"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " цвет"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": "ле"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": "ер"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.024,
+     "peak": " ис"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "ка"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.425,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Cyrillic 'ас'/'ис' before 'ь'",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "Card: 'ас' x19 and 'ис' x4 of the top 32, all before 'ь' in reflexive verbs (сковал|ас|ь, пытал|ас|ь, пройт|ис|ь). Probes: 'испугалась … спряталась' 0.45, 'старалась … пыталась' 0.51, 'осталась … оказалась' 0.48, 'спуститься … пройтись' 0.57, 'смеялась … каталась' 0.21; 'улыбнулась … вернулась' (token 'лась') 0.01, masculine 'старался … пытался' 0.02, non-reflexive 0.02. It follows the tokenizer's split, so the label is on the token. Near misses use masculine and -улась / -илась forms and non-reflexive verbs.",
+ "selection": "random draw"
+}

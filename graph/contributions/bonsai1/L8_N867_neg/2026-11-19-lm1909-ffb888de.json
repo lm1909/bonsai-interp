@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-ffb888de",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N867-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:14:00+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N867_neg/2026-11-19-lm1909-ffb888de.tests.json"
+ },
+ "label": "best guess: a linking or generic word in the middle of a Title-Case title or organisation name ('Key [to] All Mythologies', 'Research [Support] Services', 'Foundation [for] Child Development', 'A [Guide] to …'), strongest near the start of a document; the same words in ordinary lowercase prose stay quiet. The pole is weak (max 3.7)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N867_neg/2026-11-19-lm1909-ffb888de.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.545,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.183,
+     "peak": " Support"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.095,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.041,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.492,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.132,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.129,
+     "peak": " Short"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.091,
+     "peak": " message"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.047,
+     "peak": " county"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.046,
+     "peak": " autumn"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " few"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.082,
+     "peak": " find"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " introduced"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.131,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "mid-title word (Key to …)",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: ' to' x4, '-' x3, ' Support' x2, ' for' x2, ' Resource', all inside headings, book titles and organisation names; 0.65% of tokens reach 0.1 of a small max, and a few top examples are Russian, Chinese and Spanish, which this label does not cover. Probes: 'Keys to Good Cooking' 0.51, a headline 'Smart tools for the farms of tomorrow' 0.34, 'Youth Support Network' 0.31, 'A Guide to Garden Birds' 0.25, 'Student Support Services' 0.11, 'National Resource Center for' 0.01; lowercase prose 0.01-0.06. Near misses use the same words in lowercase running prose.",
+ "selection": "random draw"
+}

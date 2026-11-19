@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-a33d1007",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N4829-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:13:56+00:00",
+ "recipe": {
+  "toolchain_commit": "667873c65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N4829_neg/2026-11-19-lm1909-a33d1007.tests.json"
+ },
+ "label": "the surname Keeffe / O'Keeffe: the token 'ffe' (or 'efe' in the spelling O'Keefe) that completes 'Kee…', as in Georgia O'Keeffe; not other O' surnames, and not 'ffe' at the end of other words",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N4829_neg/2026-11-19-lm1909-a33d1007.tests.json",
+   "prereg_commit": "667873c65",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.304,
+     "peak": "ffe"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.864,
+     "peak": "ffe"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.552,
+     "peak": "ffe"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.225,
+     "peak": "ffe"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.398,
+     "peak": "ffe"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.88,
+     "peak": "ffe"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.449,
+     "peak": "ffe"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.8,
+     "peak": "ffe"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " spring"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": "ullivan"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": " detective"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": "itz"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " estate"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " goal"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "ene"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.832,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "667873c65",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "O'Keeffe (token 'ffe')",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "Card: the four strongest examples are O'Kee|ffe and O'Ke|efe (then much weaker ' Red' in 'Eric the Red', ' field'). Probes: O'Keeffe 1.35 with either apostrophe, 'Keeffe' 0.87, O'Keefe 0.31, 'Eric the Red' 0.35, O'Connor 0.01. Near misses are other O' surnames and other words ending in 'ffe' or starting with 'Kee'.",
+ "selection": "random draw"
+}
