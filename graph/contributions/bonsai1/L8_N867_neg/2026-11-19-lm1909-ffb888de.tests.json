@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-ffb888de",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N867-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:53:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N867",
+   "pole": "-",
+   "label": "best guess: a linking or generic word in the middle of a Title-Case title or organisation name ('Key [to] All Mythologies', 'Research [Support] Services', 'Foundation [for] Child Development', 'A [Guide] to …'), strongest near the start of a document; the same words in ordinary lowercase prose stay quiet. The pole is weak (max 3.7)",
+   "fire": [
+    "For her birthday I bought her Stephen Fry's Secret Key to the Classics.",
+    "Family Support Alliance\nWe run groups for parents across the county.",
+    "His first book, The Beginner's Guide to Mountain Weather, sold well.",
+    "Institute for Coastal Studies\nNews and events for autumn",
+    "The reading list starts with Mortimer Adler's Keys to Great Books.",
+    "Veterans Resource Network\nFind help with housing and work near you.",
+    "The lecture was called A Short Introduction to Roman Coins.",
+    "Clean water for the villages of tomorrow\nOur campaign message this year"
+   ],
+   "quiet": [
+    "For her birthday I bought her a small silver key to wear on a chain.",
+    "we run groups that support parents and their families across the county.",
+    "his first book was written to guide beginners through bad weather in the hills.",
+    "they study the coast and send out news about events in autumn.",
+    "the reading list starts with a few great books that are easy to find.",
+    "veterans can find resources and help with housing and work near them.",
+    "the lecture introduced the students to some coins from Rome.",
+    "our campaign this year wants the villages to have clean water."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "mid-title word (Key to …)",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: ' to' x4, '-' x3, ' Support' x2, ' for' x2, ' Resource', all inside headings, book titles and organisation names; 0.65% of tokens reach 0.1 of a small max, and a few top examples are Russian, Chinese and Spanish, which this label does not cover. Probes: 'Keys to Good Cooking' 0.51, a headline 'Smart tools for the farms of tomorrow' 0.34, 'Youth Support Network' 0.31, 'A Guide to Garden Birds' 0.25, 'Student Support Services' 0.11, 'National Resource Center for' 0.01; lowercase prose 0.01-0.06. Near misses use the same words in lowercase running prose."
+}

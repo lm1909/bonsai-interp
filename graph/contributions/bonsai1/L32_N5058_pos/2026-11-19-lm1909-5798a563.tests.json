@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-5798a563",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N5058+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:53:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N5058",
+   "pole": "+",
+   "label": "the end of the first item after 'neither' (or Spanish/French 'ni', German 'weder'), where 'nor' / 'ni' / 'noch' is due next; quiet after 'either' and 'both', where 'or' / 'and' is due",
+   "fire": [
+    "The report found that neither the pilot nor the ground crew had been warned about the storm.",
+    "In the end neither her parents, nor her teachers, nor her friends could change her mind.",
+    "He owned neither land nor cattle when he arrived in the colony.",
+    "The publisher states that neither the author nor the editors are liable for any errors.",
+    "It turned out that neither the old bridge, nor the ferry could carry the heavy trucks.",
+    "The soup was neither hot nor properly seasoned, so we sent it back.",
+    "The court held that neither the tenant nor the landlord had kept a copy of the lease.",
+    "She trusted neither the doctors, nor the pills they kept giving her."
+   ],
+   "quiet": [
+    "The report found that either the pilot or the ground crew had been warned about the storm.",
+    "In the end both her parents, and her teachers, and her friends tried to change her mind.",
+    "He owned both land and cattle when he arrived in the colony.",
+    "The publisher states that the author and the editors are liable for any errors.",
+    "It turned out that either the old bridge, or the ferry could carry the heavy trucks.",
+    "The soup was not only hot but properly seasoned, so we ordered more.",
+    "The court held that both the tenant and the landlord had kept a copy of the lease.",
+    "She trusted the doctors, and the pills they kept giving her."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "'nor' is due",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Card: top examples in Spanish, German, French and English all sit on the last token of the first conjunct after ni / weder / neither; output promotes ' ni', ' noch' and suppresses ' or', ' both'. Probes: 'Neither the manager,' 0.49, 'Neither the hotel' 0.37, 'neither money' 0.60, Spanish 0.17; 'Either the manager,' 0.01, 'Both the manager,' 0.00. Near misses swap in either / both / not only with the same nouns."
+}

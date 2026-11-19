@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-7765d9b3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N10528+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:53:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N10528",
+   "pole": "+",
+   "label": "the link word right before, or the first piece of, a technical disease name in clinical text ('diagnosed [with] retinitis pigmentosa', 'also known [as] fundus flavimaculatus', 'patients with Le[ber] congenital amaurosis'), mostly inherited and eye disorders in the card; weak in my probes",
+   "fire": [
+    "Her younger brother was diagnosed with Usher syndrome type II before he started school.",
+    "Best disease, also known as vitelliform macular dystrophy, usually appears in childhood.",
+    "The study followed forty adults suffering from Meniere's disease and progressive hearing loss.",
+    "Mutations in this gene are found in patients with Stargardt macular degeneration.",
+    "The infant showed signs of congenital glaucoma and a rare form of aniridia.",
+    "Several members of the family were affected by Ehlers-Danlos syndrome of the vascular type.",
+    "The clinic treats children born with Leber hereditary optic neuropathy and related disorders.",
+    "Doctors suspected an early stage of choroideremia, an inherited disorder of the retina."
+   ],
+   "quiet": [
+    "Her younger brother was presented with a school prize before he started the holidays.",
+    "The square, also known as the cattle market, usually fills up in summer.",
+    "The study followed forty adults travelling from Manchester to London every day.",
+    "Mistakes in this form are found in letters with a foreign address.",
+    "The garden showed signs of careful planning and a rare kind of patience.",
+    "Several members of the family were invited by the mayor to the opening.",
+    "The clinic employs nurses trained in Leeds and other northern cities.",
+    "Doctors expected an early start to the meeting, an annual event at the hospital."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "a disease name is due",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: peaks on ' with', ' an', ' in', ' of', ' as', ' from' just before a named disorder (Stargardt's disease, aniridia, retinitis pigmentosa, sudden sensorineural hearing loss). Probes were weak: 'patients with Leber congenital amaurosis' 0.30, 'suffering from an inherited form of deafness' 0.22, 'also known as brittle bone disease' 0.20, 'diagnosed with retinitis pigmentosa' 0.16; 'presented with a rare medal' 0.01, 'also known as the old mill' 0.00. May miss the 0.20 median. Near misses keep the link words with a non-medical continuation."
+}

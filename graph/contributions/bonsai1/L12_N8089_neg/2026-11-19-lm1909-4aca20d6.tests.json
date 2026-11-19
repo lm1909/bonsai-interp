@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-4aca20d6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N8089-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:53:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N8089",
+   "pole": "-",
+   "label": "the token ' True' given as a documented default value (\"default: True\", \"Default: True\", \"(default True)\") in docstrings and config schemas; ' False' is the + pole of the same neuron",
+   "fire": [
+    "    normalize : bool, default: True\n        Scale each row to unit length.",
+    "    keep_dims : bool, optional\n        Keep the reduced axes. Default: True.",
+    "        'cache': {'type': 'boolean', 'default': True},",
+    "    overwrite : bool\n        Replace existing files (default True).",
+    "  retry:\n    description: Retry failed requests.\n    type: bool\n    default: True",
+    "    copy : boolean, default: True\n        Work on a copy of the input array.",
+    "    sorted : bool, optional\n        Return the keys in order. Default: True.",
+    "        'enabled': {'type': 'boolean', 'default': True},"
+   ],
+   "quiet": [
+    "    normalize : bool, default: False\n        Scale each row to unit length.",
+    "    axis : int, optional\n        Axis to reduce over. Default: None.",
+    "        'cache': {'type': 'boolean', 'default': False},",
+    "    retries : int\n        Number of attempts (default 3).",
+    "  mode:\n    description: How to open the file.\n    type: str\n    default: append",
+    "    tol : float, default: 0.001\n        Tolerance for the stopping rule.",
+    "    sorted : bool, optional\n        Return the keys in order. Default: False.",
+    "        'timeout': {'type': 'integer', 'default': 30},"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "default: True",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Card: 30 of 32 top examples are True tokens, the strongest after 'default'; the + pole is False. Probes: 'default: True' 0.79, 'is_ready = True' 0.26, 'shuffle=True' 0.19, 'default: False' 0.09, prose 'true' 0.00. So the test is on True stated as a default; near misses give other defaults (False, None, numbers, strings) in the same doc style."
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-b1d151cc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N5154+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:53:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N5154",
+   "pole": "+",
+   "label": "the start of a reported answer after 'told <someone>' or 'said' in a question-and-answer story: the ' it' / ' was' in \"she asked who that was, and I told her [it] was my sister\"; not a plain 'it was' statement with no report",
+   "fire": [
+    "My cousin asked me who the tall woman was, and I told him it was our new teacher.",
+    "When the nurse asked whose coat it was, I told her it was my father's.",
+    "The boy wanted to know what the smell was, so we told him it was the paint.",
+    "A neighbour asked who had been at the door, and she told them it was the postman.",
+    "Somebody asked me what that noise was, and I told her it was only the fridge.",
+    "The officer asked who owned the van, and I told him it was my uncle.",
+    "My daughter asked what the light in the sky was, and I told her it was a planet.",
+    "They asked us who had left the gate open, and we told them it was the gardener."
+   ],
+   "quiet": [
+    "My cousin and I met the tall woman, and it was our new teacher.",
+    "The nurse picked up the coat, and it was my father's.",
+    "The boy noticed the smell at once, and it was the paint.",
+    "A neighbour went to the door, and it was the postman.",
+    "Somebody switched off that noise, and it was only the fridge.",
+    "The officer looked at the van, and it was full of boxes.",
+    "My daughter watched the light in the sky until it was gone.",
+    "They closed the gate again because it was getting dark."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "reported answer 'told her it was'",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: no single token and 0.88% of tokens reach 0.1 of max, so this label can only be a part of the pole. The top story example is 'a friend asked me who that lady was... I told her [it] was my sister'. Probes: 'I told him it was my brother' 0.48, 'he said it was the bank' 0.32, 'we told her it was the wind' 0.21, 'I told him I was lost' 0.19; 'In this paper, we' 0.05, 'I saw a dog' 0.08, plain 'It was the wind that' 0.05. Near misses keep the people and the 'it was' but drop the reported answer."
+}

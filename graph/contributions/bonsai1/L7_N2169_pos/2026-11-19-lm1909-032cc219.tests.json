@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-032cc219",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N2169+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:53:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N2169",
+   "pole": "+",
+   "label": "the token right after a lone punctuation mark that stands by itself as a name or string ('/', '_', '-', '.'): fires on what follows the bare symbol, not when the symbol starts a longer path or identifier",
+   "fire": [
+    "To mount the disk at boot, set its mount point to / in the installer and reboot.",
+    "routes = {\"/\": home_view, \"/login\": login_view}",
+    "from django.utils.translation import gettext\n_ = gettext\ntitle = _(\"Welcome\")",
+    "The date parts are glued together with '-', so you get 2020-01-31.",
+    "if url == '/':\n    return redirect('/home')",
+    "version = '.'.join(str(n) for n in numbers)",
+    "By default the fields are separated by '_', which you can change in the settings.",
+    "After chroot the process sees the new directory as / (and cannot climb out of it)."
+   ],
+   "quiet": [
+    "To mount the disk at boot, set its mount point to /mnt/data in the installer and reboot.",
+    "routes = {\"/home\": home_view, \"/login\": login_view}",
+    "from django.utils.translation import gettext\ntranslate = gettext\ntitle = translate(\"Welcome\")",
+    "The date parts are glued together with dashes, so you get 2020-01-31.",
+    "if url == '/start':\n    return redirect('/home')",
+    "version = sep.join(str(n) for n in numbers)",
+    "By default the fields are separated by underscores, which you can change in the settings.",
+    "After chroot the process sees the new directory as its root (and cannot climb out of it)."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "after a bare symbol",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: top examples follow a bare '/', '_', '-', '.' or '--' in code strings and prose. Probes: bare '/' 0.66-0.69, '_ =' 0.44, \"'-',\" 0.34, \"'.'.join\" 0.55; '/home/user' 0.01, '\"/index\"' 0.09, 'tr =' 0.01. Near misses keep the same code or prose but the symbol is part of a longer path or name."
+}

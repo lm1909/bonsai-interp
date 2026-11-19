@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-0d05d857",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8780-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:53:26+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N8780",
+   "pole": "-",
+   "label": "best guess: a middle token inside a multi-word proper name or title that is not ordinary English (band, anime and film titles, foreign personal names: 'Ladysmith [Black] Mambazo', 'Kimagure [Orange] Road', 'Nik[las] Bendtner'), and likewise inside multi-part code identifiers; weak everywhere I probed",
+   "fire": [
+    "The festival opened with Orchestra Baobab and closed with Amadou and Mariam Bagayoko.",
+    "Her favourite shows were Kimi ni Todoke and Maison Ikkoku, both from the same studio.",
+    "On the bench sat Nicklas Lidstrom, Henrik Zetterberg and Tomas Holmstrom.",
+    "We queued for hours to hear Sergio Mendes and Brasil Sixty Six play outdoors.",
+    "The DVD shelf held Tenchi Muyo, Urusei Yatsura and Ranma Nibunnoichi.",
+    "The compilation features Youssou N'Dour, Salif Keita and Toumani Diabate.",
+    "extensions = [\"sphinx_copybutton\", \"sphinx_autodoc_typehints\", \"sphinx_design\"]",
+    "The late show starred Soweto Gospel Choir and the Mahotella Queens."
+   ],
+   "quiet": [
+    "The festival opened with a brass band and closed with a singer from the next town.",
+    "Her favourite shows were about cooking and gardening, both from the same channel.",
+    "On the bench sat three tired players, a coach and the team doctor.",
+    "We queued for hours to hear a famous pianist and his orchestra play outdoors.",
+    "The DVD shelf held old westerns, war films and a few cartoons.",
+    "The compilation features singers, drummers and guitar players from many countries.",
+    "extensions = [\"math\", \"tables\", \"notes\"]",
+    "The late show starred a local church choir and a group of young dancers."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "inside an exotic multi-word name",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Card: no single token; top examples sit mid-name in titles and names (Getsuga Tensho, Kimagure Orange Road, Ladysmith Black Mambazo, Scott Pilgrim Vs. The World: The Game) and mid-identifier in code (sphinx_rtd_theme, ucs2_persian_ci). Probes were weak: Ladysmith Black Mambazo 0.32, Buena Vista Social Club 0.28, sphinx_book_theme 0.24, Niklas 0.22, anime titles 0.08-0.13; plain sentences 0.02. Probably fails the 0.20 median; recorded as a guess."
+}
