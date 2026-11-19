@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-8e9ff9ee",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N12070+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:40:53+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N12070",
+   "pole": "+",
+   "label": "a list of word pieces, not one pattern: 'p' in French 'Développement', 'работ' in Russian 'разработ-', Arabic 'ج' ending 'نموذج', and more weakly ' institutional' (tiny pole, max 0.93, gate-closed echo regime)",
+   "fire": [
+    "Le Programme des Nations Unies pour le Développement a financé le projet.",
+    "La Banque africaine de Développement soutient les petites entreprises.",
+    "Elle travaille à l'Agence française de Développement depuis dix ans.",
+    "Le rapport sur le Développement humain paraît chaque année.",
+    "Компания объявила о разработке новой модели телефона.",
+    "Инженеры участвуют в разработке нового двигателя.",
+    "The report proposes an institutional framework for water management.",
+    "هذا المشروع نموذج ناجح للتعاون بين المدارس."
+   ],
+   "quiet": [
+    "Le Programme des Nations Unies pour l'Environnement a financé le projet.",
+    "La Banque africaine d'Investissement soutient les petites entreprises.",
+    "Elle travaille à l'Agence française de Presse depuis dix ans.",
+    "Le rapport sur le climat mondial paraît chaque année.",
+    "Компания объявила о продаже новой модели телефона.",
+    "Инженеры участвуют в испытаниях нового двигателя.",
+    "The report proposes a practical framework for water management.",
+    "هذا المشروع مثال ناجح للتعاون بين المدارس."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5.2",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "pieces: Dévelop-p-ement, раз-работ, نموذ-ج",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Probe: Développement 0.82, разработке 0.55, ' institutional' 0.21. The words share a 'development / model / institution' sense, but at layer 2 only the list is tested, and the label claims only the list."
+}

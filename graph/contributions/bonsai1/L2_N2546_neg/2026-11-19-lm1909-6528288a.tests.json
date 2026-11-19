@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-6528288a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N2546-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:40:53+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N2546",
+   "pole": "-",
+   "label": "dense pole (56.6% of tokens reach 0.1 of max, gate-closed leak regime); best guess at what peaks it: the tokens ' seized' and ' source'",
+   "fire": [
+    "Customs officers seized two crates of ivory at the port.",
+    "The rebels seized the radio station before dawn.",
+    "Wind is now the largest source of electricity in the country.",
+    "The journalist refused to name her source in court.",
+    "Bailiffs seized the furniture when the rent went unpaid.",
+    "Olive oil is a good source of healthy fats.",
+    "The army seized control of the capital overnight.",
+    "The spring is the only source of fresh water on the island."
+   ],
+   "quiet": [
+    "Customs officers inspected two crates of fruit at the port.",
+    "The rebels left the radio station before dawn.",
+    "Wind now provides most of the electricity in the country.",
+    "The journalist refused to answer questions in court.",
+    "Bailiffs visited the flat when the rent went unpaid.",
+    "Olive oil is rich in healthy fats.",
+    "The army entered the capital overnight.",
+    "The spring provides all the fresh water on the island."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5.2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; peaks on ' seized', ' source'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags the pole dense. Probe: ' seized' 0.79, ' source' 0.37, but a filler sentence ('sat quietly') also 0.38, so the 8 + 8 will probably fail; the test records the density."
+}

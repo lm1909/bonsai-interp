@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-05ce7fea",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7672+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:40:53+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N7672",
+   "pole": "+",
+   "label": "the slot just before a word that states something evident or plainly wrong ('with an [injury]', 'what was [obviously]', 'your anxiety too [evident]'); the output promotes ' obviously', ' obvious', ' clearly'",
+   "fire": [
+    "The striker was carried off in the second half with an injury to his knee.",
+    "Everyone in the room could see that the general was defending what was obviously a hopeless position.",
+    "Try not to make your disappointment too evident when the results are announced.",
+    "A wise reader learns to accept what is true and to reject what is false.",
+    "If you find a bird with an open wound, call the rescue centre.",
+    "The winger left the match early nursing an ankle injury.",
+    "If you think there is something wrong with your dog, take it to the vet.",
+    "The investors kept funding what was clearly a doomed venture."
+   ],
+   "quiet": [
+    "The striker scored twice in the second half with a header and a volley.",
+    "Everyone in the room listened while the general described the new position.",
+    "Try to arrive early when the results are announced on Friday.",
+    "A wise reader keeps a notebook and writes in it every evening.",
+    "If you find a bird in your garden, put out some seeds and water.",
+    "The winger signed a new contract with the club on Tuesday.",
+    "If you have a dog, take it for a long walk every morning.",
+    "The investors met the founders at a hotel in Geneva."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5.2",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "before 'obviously / evident'",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card + look + 5 probe sentences (0.49-0.75 on 'what was', 'with an', 'nervousness too'; 0.04 on a plain 'the design was'). Broad pole (0.7% above 0.1 max), so near misses may fire weakly."
+}
