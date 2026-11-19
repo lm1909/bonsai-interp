@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-19-lm1909-473fd42d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N7882+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N7882",
+   "pole": "+",
+   "label": "dense unit; best guess at its strongest drivers: diet word tokens ('Diet', 'iet', ' dietary', ' diet')",
+   "fire": [
+    "A healthy diet includes plenty of vegetables and whole grains.",
+    "The dietitian reviewed his dietary habits during the visit.",
+    "Dietary supplements are not regulated like medicines.",
+    "She switched to a vegetarian diet two years ago.",
+    "Doctors advise a low-salt diet for high blood pressure.",
+    "The clinic employs a dietitian and two nurses.",
+    "Poor dietary choices raise the risk of diabetes.",
+    "The Mediterranean diet is rich in olive oil and fish."
+   ],
+   "quiet": [
+    "A healthy lawn needs plenty of water and regular mowing.",
+    "The mechanic reviewed his driving habits during the visit.",
+    "Herbal teas are not taxed like wines.",
+    "She moved to a seaside town two years ago.",
+    "Doctors advise a short walk for high blood pressure.",
+    "The clinic employs a porter and two nurses.",
+    "Poor lighting raises the risk of accidents.",
+    "The northern coast is rich in herring and cod."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; diet tokens",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags the pole dense (20.2% of tokens reach 0.1 of max, gate-closed regime 100%). Unrelated tokens (' gardening', ' apenas', ' upon') fire as strongly as the diet tokens. The test records the density honestly; it is not expected to hold.",
+ "trigger": {
+  "words": [
+   "diet",
+   "dietary",
+   "dietitian"
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-74d788fc",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N9384-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N9384",
+   "pole": "-",
+   "label": "the last token of a list item's title, right before the ' - ' / ' – ' separator that introduces its description ('Horton, OR| – This free campsite…', 'Tips (2)| - Advanced…'); needs the list around it",
+   "fire": [
+    "Free hot springs in Idaho:\n- Goldbug Hot Springs – Salmon, ID – A steep two-mile hike to the pools.\n- Kirkham – Lowman, ID – Right beside the highway.\n- Boat Box – Stanley, ID – A single tub by the river.",
+    "The set contains:\n- Drill bits (12) - Hardened steel for wood and metal.\n- Wall plugs (40) - Fit most masonry.\n- Carry case (1) - Holds everything neatly.",
+    "Our priorities are:\n- Cleaner rivers for the valley - Farms will get help to cut runoff.\n- A fairer tax system - Small firms pay less.\n- Better care for the elderly - More nurses in every ward.",
+    "Useful sites about gardening:\n- SeedSwap.org - A place to trade heirloom seeds.\n- GrowGuide.com - Planting calendars for every region.\n- SoilLab.net - Cheap soil testing by post.",
+    "Glossary:\n- baht (B) - Basic unit of Thai currency.\n- wat - A Buddhist temple compound.\n- soi - A side street off a main road.",
+    "Shows to watch this month:\n- “Dark Harbor” - A detective returns to her home town.\n- “The Long Field” - Two brothers inherit a failing farm.\n- “Night Ferry” - Strangers are stranded on a crossing.",
+    "What we teach:\n- Finding maths in daily life – pupils measure, cook and budget.\n- Reading for pleasure – every child picks a book.\n- Working as a team – projects are shared.",
+    "Camping near the lake:\n- Loon Point – Ely, MN – Ten sites with fire rings.\n- Birch Landing – Tower, MN – Boat ramp and a dock.\n- Moose Bay – Orr, MN – No water, bring your own."
+   ],
+   "quiet": [
+    "Free hot springs in Idaho include Goldbug near Salmon, which is a steep two-mile hike, Kirkham near Lowman and Boat Box near Stanley.",
+    "The set contains twelve drill bits of hardened steel, forty wall plugs that fit most masonry and a carry case that holds everything.",
+    "Our priorities are cleaner rivers for the valley, a fairer tax system for small firms and better care for the elderly in every ward.",
+    "Useful sites about gardening let you trade heirloom seeds, read planting calendars for every region and order cheap soil testing by post.",
+    "The baht is the basic unit of Thai currency, a wat is a Buddhist temple compound and a soi is a side street off a main road.",
+    "This month a detective returns to her home town, two brothers inherit a failing farm and strangers are stranded on a crossing.",
+    "We teach pupils to find maths in daily life as they measure, cook and budget, to read for pleasure and to work as a team.",
+    "Near the lake you can camp at Loon Point, which has ten sites with fire rings, at Birch Landing or at Moose Bay."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "end of list-item title before ' - '",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "One-line items scored near zero in probes and three-item lists 0.44-0.60, so the fire items are whole lists. The near misses give the same content as prose, so the test supports 'list item title before its separator' against prose, not against lists without descriptions."
+}

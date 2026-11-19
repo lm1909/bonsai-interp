@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-19-lm1909-55a56ee8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N2775+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N2775",
+   "pole": "+",
+   "label": "a set of official / regulatory word tokens: ' precaution', ' licence', ' sworn', ' automatic' (also fires on Arabic and Spanish administrative word pieces)",
+   "fire": [
+    "The clerk issued a new licence once the fee had been paid.",
+    "Each witness gave a sworn account before the magistrate.",
+    "Wearing gloves is a sensible precaution when handling the solvent.",
+    "The door has an automatic lock that engages at night.",
+    "Without a valid licence the shop cannot sell tobacco.",
+    "The officers were sworn in at a short ceremony on Monday.",
+    "The valve shuts off as a precaution when pressure climbs.",
+    "Payments are taken by automatic transfer each month."
+   ],
+   "quiet": [
+    "The clerk handed over a new folder once the queue had cleared.",
+    "Each visitor gave a short talk before the lunch break.",
+    "Wearing a hat is a nice idea when walking on the beach.",
+    "The door has a brass handle that shines at night.",
+    "Without a good map the hikers cannot find the lake.",
+    "The players were cheered on at a short match on Monday.",
+    "The kettle whistles when the water starts to boil.",
+    "Letters are sent by the school each month."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "precaution / licence / sworn / automatic",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "Card flags the pole broad (4.1% of tokens reach 0.1 of max) with the gate-closed regime dominant. The label is a list of tokens: I found no shared pattern beyond a loose official/administrative register, so coverage is expected to be low.",
+ "trigger": {
+  "words": [
+   "precaution",
+   "licence",
+   "sworn",
+   "automatic"
+  ]
+ }
+}

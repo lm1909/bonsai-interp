@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-5b143e83",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N10929-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N10929",
+   "pole": "-",
+   "label": "code where an accessor's result is used at once: Qt/QGIS-style chained calls (x.dataProvider().getFeatures(), layer.crs()) and C++ operator declarations (bool operator==)",
+   "fire": [
+    "        request = QgsFeatureRequest()\n        ids = [f.id() for f in vl.dataProvider().getFeatures(request)]\n        self.assertEqual(len(ids), 5)",
+    "        name_idx = vl.fields().lookupField('name')\n        self.assertTrue(vl.isValid(), 'Layer not valid')",
+    "    def screenSize(self):\n        return QApplication.desktop().screenGeometry().height()",
+    "const_iterator & operator++ ()\nconst_iterator operator++ (int)\nbool operator== (const const_iterator &other)",
+    "        transform = QgsCoordinateTransform(source.crs(), dest.crs())\n        extent = canvas.mapSettings().extent()",
+    "        self.mainFrameLayout = QtGui.QVBoxLayout(self.mainFrame)\n        self.mainFrameLayout.setContentsMargins(2, 2, 2, 2)",
+    "reverse_iterator & operator= (const reverse_iterator &R)\nreverse_iterator & operator-- ()\nbool operator!= (const reverse_iterator &R)",
+    "        self.assertIsNotNone(vl, 'Provider missing')\n        self.assertTrue(vl.isValid(), 'Layer failed to load')\n        count = vl.dataProvider().featureCount()"
+   ],
+   "quiet": [
+    "    def mean(values):\n        total = 0\n        for v in values:\n            total += v\n        return total / len(values)",
+    "        names = ['alpha', 'beta', 'gamma']\n        for n in names:\n            print(n)",
+    "int add (int a, int b)\n{\n    return a + b;\n}",
+    "    with open(path) as fh:\n        lines = fh.readlines()\n    print(len(lines))",
+    "    if count > 10:\n        count = 0\n    else:\n        count += 1",
+    "struct point {\n    int x;\n    int y;\n};",
+    "    import os\n    import sys\n    home = os.environ['HOME']",
+    "    result = {}\n    for key in keys:\n        result[key] = None\n    return result"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code fable-5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "chained getter calls in code",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Weak in probes (0.1-0.55 of max); the top examples are mostly QGIS/PyQt test code and one C++ iterator header. A guess at the shared context, not a firm label."
+}
