@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-0e4e7342",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3663+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:37:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N3663",
+   "pole": "+",
+   "label": "running Korean text: the space-prefixed first byte-piece of a Korean word, deep in a Korean paragraph (not Japanese, Chinese or other scripts)",
+   "fire": [
+    "우리 회사는 지난해부터 새로운 무선 네트워크 장비를 개발하고 있습니다. 이 제품은 설치가 간단하고 가격도 저렴해서 중소기업 고객들에게 큰 인기를 얻고 있습니다.",
+    "여름 휴가를 준비하는 여행자들은 항공권과 숙소를 미리 예약하는 것이 좋습니다. 특히 성수기에는 가격이 빠르게 오르기 때문에 서둘러 결정해야 합니다.",
+    "그녀는 어릴 때부터 춤을 배웠고 지금은 유명한 무용단에서 활동하고 있습니다. 무대 위에서 보여주는 열정적인 모습은 많은 관객들에게 깊은 감동을 줍니다.",
+    "고혈압 환자는 짠 음식을 피하고 매일 가벼운 운동을 하는 것이 좋습니다. 또한 정기적으로 병원을 방문해서 혈압을 확인하고 의사와 상담해야 합니다.",
+    "이 블로그는 국내외 맛집 정보를 모아서 소개하는 사이트입니다. 모든 글과 사진에 대한 권리는 글을 등록한 각 회원에게 있습니다.",
+    "사고 이후 그는 오랫동안 병원에서 치료를 받았습니다. 다행히 가족들이 곁에서 도와준 덕분에 조금씩 건강을 되찾을 수 있었습니다.",
+    "새로 나온 운영 체제에는 보안 기능과 파일 관리 도구가 포함되어 있습니다. 사용자는 설정 메뉴에서 원하는 기능을 쉽게 선택할 수 있습니다.",
+    "이 탁자는 나무 조각들이 강철 줄로 연결되어 있어서 공중에 떠 있는 것처럼 보입니다. 신기할 뿐만 아니라 실제로 물건을 올려놓을 수도 있습니다."
+   ],
+   "quiet": [
+    "当社は昨年から新しい無線ネットワーク機器を開発しています。この製品は設置が簡単で価格も安いため、中小企業のお客様に大変人気があります。",
+    "夏休みを準備する旅行者は、航空券と宿を早めに予約するとよいでしょう。特に繁忙期には価格がすぐに上がるので、急いで決める必要があります。",
+    "她从小学习舞蹈，现在在一家著名的舞蹈团工作。她在舞台上表现出的热情给许多观众留下了深刻的印象。",
+    "高血压患者应该避免吃太咸的食物，每天做一些轻松的运动。此外，还要定期去医院检查血压，并向医生咨询。",
+    "This blog collects and introduces restaurant tips from home and abroad. All rights to the posts and photos belong to the member who registered them.",
+    "After the accident he was treated in hospital for a long time. Luckily, thanks to his family's help, he slowly recovered his health.",
+    "Новая операционная система включает функции безопасности и инструменты для управления файлами. Пользователь может легко выбрать нужные функции в меню настроек.",
+    "このテーブルは木片が鋼のワイヤーでつながっていて、宙に浮いているように見えます。不思議なだけでなく、実際に物を置くこともできます。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "Korean word-start byte piece",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Top examples are mostly ' <partial byte>' tokens at Korean word starts, with a few Japanese and spaced-Chinese cases. Probing: short Korean sentences 0.08-0.14, two-sentence Korean passages 0.25-0.54; Japanese, Chinese, Russian, Greek and English all under 0.10. The - pole takes Japanese long-vowel katakana pieces."
+}

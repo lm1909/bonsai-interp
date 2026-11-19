@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-2017229e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5518-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:37:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N5518",
+   "pole": "-",
+   "label": "Python test code: the end of a line that sets up `*_cases` variables (n_cases = 3, positive_cases, negative_cases = ...), before the cases are used",
+   "fire": [
+    "def test_parse_dates():\n    n_cases = 5\n    values = np.random.randint(0, 100, size=n_cases)\n",
+    "    def test_lookup_handles_missing(self):\n\n        valid_cases, invalid_cases = self.cases_for_lookup()\n\n        for key in valid_cases:\n            self.assertTrue(self.lookup(key))\n",
+    "def test_rotation_random():\n    num_cases = 10\n    angle = rng.uniform(0, 360)\n    result = rotate(image, angle)\n",
+    "    def test_vault_delete(self):\n\n        for n_case in self.__class__.negative_cases:\n            self.assertFalse(self.delete_vault(n_case))\n",
+    "def test_encode_roundtrip():\n    test_cases = load_cases('encode.json')\n    for case in test_cases:\n        assert decode(encode(case)) == case\n",
+    "    def test_put_block_none_okay(self):\n\n        positive_cases, negative_cases = self.cases_with_none()\n\n        for block in positive_cases:\n            self.put_block(block)\n",
+    "def test_histogram_bins():\n    n_cases = 4\n    bins = np.random.randint(2, 16)\n    hist = histogram(data, bins)\n",
+    "def test_merge_edge_cases():\n    edge_cases = build_edge_cases()\n    for left, right in edge_cases:\n        assert merge(left, right) is not None\n"
+   ],
+   "quiet": [
+    "def read_lines(path):\n    with open(path) as handle:\n        return [line.strip() for line in handle]\n",
+    "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n",
+    "import argparse\n\nparser = argparse.ArgumentParser()\nparser.add_argument('--verbose', action='store_true')\nargs = parser.parse_args()\n",
+    "def area(radius):\n    return math.pi * radius ** 2\n\n\nprint(area(2.0))\n",
+    "    def get(self, request):\n        user = request.user\n        return render(request, 'home.html', {'user': user})\n",
+    "function testParseDates() {\n  const nCases = 5;\n  const values = randomInts(0, 100, nCases);\n}\n",
+    "def test_parse_empty_string():\n    result = parse('')\n    assert result == []\n",
+    "for name in sorted(os.listdir(folder)):\n    if name.endswith('.txt'):\n        print(name)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "Python tests: *_cases setup line",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Top examples are Python statement ends and just-named locals; three of the top sixteen involve *_cases in test functions. Probing: 'n_cases = 3\\n' in a test function 0.83, 'good_cases, bad_cases = self.build_cases()\\n\\n' 0.59; other Python assignments (n_images = 4, msg = ..., module-level code) under 0.18, C loop 0.04. The label is a guess from few cases."
+}

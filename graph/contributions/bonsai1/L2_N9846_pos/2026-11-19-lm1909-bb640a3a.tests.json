@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-bb640a3a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N9846+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:37:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N9846",
+   "pole": "+",
+   "label": "first sub-token of a multi-token proper name (Burn|aby, Hear|ne, Row|an, Arg|us) when the name is mentioned again later in the passage",
+   "fire": [
+    "Burnaby was a quiet suburb when the family arrived. Her father opened a bakery, and within a year most of Burnaby knew his rye bread.",
+    "Hearne kept a careful journal on the march north. The traders doubted the story, but Hearne produced maps to prove it.",
+    "Rowan was founded as a teachers' college. Alumni give generously because they feel Rowan changed their lives.",
+    "Rockwood arrived in the valley with a survey crew. The investors hesitated, yet Rockwood promised them water within two years.",
+    "Browne turned professional late. Sponsors ignored him for years, but last summer Browne won his first major.",
+    "The Argus implant was approved a decade ago. Patients now worry about who will repair Argus devices when they fail.",
+    "Converse once dominated basketball shoes. By the time Nike bought the company, Converse had nearly vanished from the courts.",
+    "Hedgehog signalling guides the growth of the embryo. In several tumours, researchers found that Hedgehog genes were switched back on."
+   ],
+   "quiet": [
+    "Boston was a quiet town when the family arrived. Her father opened a bakery, and within a year most of Boston knew his rye bread.",
+    "Cook kept a careful journal on the voyage north. The traders doubted the story, but Cook produced maps to prove it.",
+    "Yale was founded as a small college. Alumni give generously because they feel Yale changed their lives.",
+    "Brown arrived in the valley with a survey crew. The investors hesitated, yet Brown promised them water within two years.",
+    "Palmer turned professional late. Sponsors ignored him for years, but last summer Palmer won his first major.",
+    "The hearing implant was approved a decade ago. Patients now worry about who will repair these devices when they fail.",
+    "Nike once dominated running shoes. By the time rivals caught up, Nike had already moved into football boots.",
+    "Insulin signalling guides the use of glucose. In several tumours, researchers found that insulin genes were switched back on."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "split name, repeat mention",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Weak, broad pole (max 2.16; card flags broad and gate-closed). One-sentence probes stayed under 0.15; two-sentence passages repeating Burnaby / Hearne reached 0.37 / 0.32, repeating Earp did not fire. Near misses repeat single-token names."
+}
