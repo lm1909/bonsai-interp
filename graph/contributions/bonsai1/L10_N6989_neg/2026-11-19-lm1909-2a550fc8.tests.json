@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-2a550fc8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6989-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:47:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N6989",
+   "pole": "-",
+   "label": "string-quote tokens after a comma inside Python tuple or dict literals (\"', '\" in choices lists and field maps); dense leak-regime unit, best guess",
+   "fire": [
+    "STATUS = [(b'N', 'New'), (b'D', 'Done'), (b'X', 'Closed')]",
+    "    'title': {'key': 'title', 'type': 'str'},\n    'count': {'key': 'count', 'type': 'int'},\n",
+    "COLORS = [('r', 'Red'), ('g', 'Green'), ('b', 'Blue')]",
+    "    'owner': ('models.ForeignKey', [], {'null': 'True', 'to': \"orm['auth.User']\"}),\n",
+    "    url = URL('admin', 'default', 'index')\n",
+    "LEVELS = (('lo', 'Low'), ('mid', 'Medium'), ('hi', 'High'))",
+    "    'port': {'key': 'port', 'type': 'int'},\n    'host': {'key': 'host', 'type': 'str'},\n",
+    "    fields = ('name', 'email', 'phone', 'city')\n"
+   ],
+   "quiet": [
+    "STATUS = [NEW, DONE, CLOSED]",
+    "    title = record.title\n    count = record.count\n",
+    "The three colours on the list are red, green and blue.",
+    "    owner = models.ForeignKey(User, null=True)\n",
+    "    url = build_url(admin, default, index)\n",
+    "The levels are low, medium and high.",
+    "    port = config.port\n    host = config.host\n",
+    "    fields = [name, email, phone, city]\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "quotes in Python literal lists (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.25,
+ "notes": "The card flags the pole dense: 22% of tokens reach 0.1 of its max (1.06) and the gate-closed leak regime dominates. Its top examples also hold newlines inside hard-wrapped prose, digits and Arabic word pieces, which this guess does not describe."
+}

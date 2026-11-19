@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-19-lm1909-5f9161c1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N9266-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:47:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N9266",
+   "pole": "-",
+   "label": "the token ' return' opening a return statement inside an indented Python function body (not the prose word 'return')",
+   "fire": [
+    "class Circle:\n    def area(self):\n        return 3.14159 * self.r ** 2\n",
+    "def is_even(n):\n    return n % 2 == 0\n",
+    "def full_name(first, last):\n    return first + ' ' + last\n",
+    "class Stack:\n    def peek(self):\n        return self.items[-1]\n",
+    "def to_celsius(f):\n    \"\"\"Convert Fahrenheit to Celsius.\"\"\"\n    return (f - 32) * 5 / 9\n",
+    "def count_words(text):\n    words = text.split()\n    return len(words)\n",
+    "class User:\n    def __str__(self):\n        return self.email\n",
+    "def clamp(v, lo, hi):\n    return max(lo, min(v, hi))\n"
+   ],
+   "quiet": [
+    "import math\n\nradius = 2.5\narea = 3.14159 * radius ** 2\nprint(area)\n",
+    "numbers = [1, 2, 3, 4]\nfor n in numbers:\n    print(n % 2 == 0)\n",
+    "first = 'Ada'\nlast = 'Lovelace'\nname = first + ' ' + last\n",
+    "items = []\nitems.append(3)\nitems.append(7)\ntop = items[-1]\n",
+    "Customers may return the shoes within thirty days for a full refund.",
+    "After the long winter, the swallows return to the same barn every year.",
+    "Press the return key twice to start a new paragraph.",
+    "The fund's annual return fell to two percent last year."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' return' in a Python function",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "In probes other first statements of a function body also read 0.3-0.4 (' raise', ' yield', the end of a print line), so the pole may mark the function body's statement rather than ' return' alone; the near misses here are module-level Python and prose, and do not test that. The + pole peaks on ' import' / ' from' as the first statement of a function body.",
+ "trigger": {
+  "tokens": [
+   " return"
+  ]
+ }
+}

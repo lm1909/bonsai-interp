@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-bb2e9717",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6303+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:47:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N6303",
+   "pole": "+",
+   "label": "'In spite' / 'Despite' opening a concession to the fact stated in the previous sentence (In spite of this, Despite that); peaks on ' spite' / ' Despite'",
+   "fire": [
+    "The engine was forty years old and leaked oil. In spite of this, the boat crossed the bay.",
+    "Her mother had warned her twice about the cold. In spite of that, she left her coat at home.",
+    "The harvest failed two years in a row. Despite this, the farmers refused to sell their land.",
+    "Nobody in the office liked the new schedule. Despite that, it stayed in place all winter.",
+    "The museum had lost most of its funding. In spite of this, it opened a new wing in March.",
+    "The climbers were short of food and rope. Despite this, they pushed on toward the summit.",
+    "His first two novels sold almost nothing. In spite of that, the publisher offered him a contract.",
+    "The printer jammed on every third page. Despite that, the report went out on time."
+   ],
+   "quiet": [
+    "The engine was forty years old and leaked oil. Because of this, the boat stayed in the harbour.",
+    "Her mother had warned her twice about the cold. As a result, she packed two coats.",
+    "The harvest failed two years in a row. Because of that, many farmers sold their land.",
+    "Nobody in the office liked the new schedule. As a result, it was dropped within a week.",
+    "The museum had lost most of its funding. For this reason, it closed its east wing in March.",
+    "The climbers were short of food and rope. Thanks to this, they agreed to turn back early.",
+    "His first two novels sold almost nothing. Because of this, the publisher let him go.",
+    "The printer jammed on every third page. As a result, the report went out late."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "concessive 'In spite / Despite' back-reference",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "A sub-trigger: the top examples also hold verbs before a back-reference ('reflect this shift', 'reduce this number', 'violated that trust'), 'due to' and code tokens before a just-named variable, and the output promotes ' these' / ' this' / ' such'. In probes 'Because of this' read 0.05, so the test claims the concessive opener only."
+}

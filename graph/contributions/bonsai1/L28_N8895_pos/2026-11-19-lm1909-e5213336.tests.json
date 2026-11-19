@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-19-lm1909-e5213336",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N8895+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:47:42+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N8895",
+   "pole": "+",
+   "label": "array and matrix manipulation in NumPy/SciPy-style code and comments: the comma after an array argument, or ' to' before the form an array is converted to",
+   "fire": [
+    "    A = np.asarray(A, dtype=float)\n    Q, R = np.linalg.qr(A, mode='reduced')\n",
+    "    # The labels arrive as a sparse matrix, so we convert them to a dense array.\n    y = y.toarray()\n",
+    "    w, v = np.linalg.eigh(cov, UPLO='L')\n",
+    "    tri = Delaunay(points, furthest_site=False)\n",
+    "    # The image is flattened to a one-dimensional vector before the dot product.\n    x = img.reshape(-1)\n",
+    "    X_sorted = np.sort(X, axis=1)\n    M = np.transpose(X_sorted, axes=(1, 0))\n",
+    "    # Each row of the matrix is normalised, then the matrix is converted to CSR format.\n    M = sp.csr_matrix(M)\n",
+    "    Z = np.dot(W, X.T)\n    Z = np.squeeze(Z, axis=0)\n"
+   ],
+   "quiet": [
+    "    resp = requests.get(url, timeout=10)\n    body = resp.text\n",
+    "    # The report arrives as a Word file, so we convert it to a PDF first.\n    path = export_pdf(doc)\n",
+    "    parser.add_argument('--verbose', action='store_true')\n",
+    "    user = User.objects.get(pk=user_id)\n    send_mail(subject, body, sender, [user.email])\n",
+    "    # The date is formatted to a short string before it is printed.\n    label = when.strftime('%d %b')\n",
+    "    log.warning(msg, exc_info=True)\n    time.sleep(delay)\n",
+    "    # Each line of the file is stripped, then the file is renamed to a backup copy.\n    os.rename(src, dst)\n",
+    "    name = os.path.join(root, fname)\n    shutil.copy(name, target)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "array/matrix manipulation code",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "The output promotes ' rearr', ' partition', ' pivot', ' reorder' and suppresses ' symmetric'."
+}
