@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-d41042e3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N4922-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:12:03+00:00",
+ "recipe": {
+  "toolchain_commit": "b3ef71310",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N4922_neg/2026-11-19-lm1909-d41042e3.tests.json"
+ },
+ "label": "the word for 'brain' across languages (English brain, Russian мозг, Spanish cerebro, French cerveau, German Gehirn, Italian cervello), on the piece that completes it; not mind, head or heart",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N4922_neg/2026-11-19-lm1909-d41042e3.tests.json",
+   "prereg_commit": "b3ef71310",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.377,
+     "peak": " brain"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.441,
+     "peak": " Brain"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.904,
+     "peak": "г"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.566,
+     "peak": "га"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.65,
+     "peak": "bro"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.74,
+     "peak": "au"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.506,
+     "peak": "n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.603,
+     "peak": "ello"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.022,
+     "peak": " Mind"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " энер"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " печ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " humano"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " médec"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " unters"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " es"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.585,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3ef71310",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'brain' in several languages",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "The other side: the + pole (weak, gate-closed) peaks on ' mind' and Russian ' голов' (head). Probes also fired on Portuguese cérebro, Polish mózg, ' cerebral' and Chinese 大脑 (0.2-0.4); 'brainstorm' read 0.02.",
+ "selection": "random draw"
+}

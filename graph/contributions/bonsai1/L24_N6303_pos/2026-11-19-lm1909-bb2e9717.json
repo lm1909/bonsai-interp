@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-bb2e9717",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N6303+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:10:57+00:00",
+ "recipe": {
+  "toolchain_commit": "b3ef71310",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N6303_pos/2026-11-19-lm1909-bb2e9717.tests.json"
+ },
+ "label": "'In spite' / 'Despite' opening a concession to the fact stated in the previous sentence (In spite of this, Despite that); peaks on ' spite' / ' Despite'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N6303_pos/2026-11-19-lm1909-bb2e9717.tests.json",
+   "prereg_commit": "b3ef71310",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.655,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.66,
+     "peak": " spite"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.116,
+     "peak": " Despite"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.071,
+     "peak": " liked"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.699,
+     "peak": " spite"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.75,
+     "peak": " Despite"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.484,
+     "peak": " spite"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.06,
+     "peak": " every"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.239,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.045,
+     "peak": " twice"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.048,
+     "peak": " failed"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.071,
+     "peak": " liked"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.196,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.104,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.067,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.041,
+     "peak": " every"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.836,
+    "median_fire": 0.57,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3ef71310",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "concessive 'In spite / Despite' back-reference",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "A sub-trigger: the top examples also hold verbs before a back-reference ('reflect this shift', 'reduce this number', 'violated that trust'), 'due to' and code tokens before a just-named variable, and the output promotes ' these' / ' this' / ' such'. In probes 'Because of this' read 0.05, so the test claims the concessive opener only.",
+ "selection": "random draw"
+}

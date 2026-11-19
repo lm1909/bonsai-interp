@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-b33cebcf",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N6763-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:11:02+00:00",
+ "recipe": {
+  "toolchain_commit": "b3ef71310",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N6763_neg/2026-11-19-lm1909-b33cebcf.tests.json"
+ },
+ "label": "the word completing one of the fixed compounds 'natural-born' / 'natural born', 'historically black' or 'bio-identical' (not plain 'born', 'identical' or another X-born)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N6763_neg/2026-11-19-lm1909-b33cebcf.tests.json",
+   "prereg_commit": "b3ef71310",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.902,
+     "peak": "-born"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.096,
+     "peak": "-born"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.859,
+     "peak": " born"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.809,
+     "peak": " black"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.708,
+     "peak": " Black"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.649,
+     "peak": " black"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.281,
+     "peak": "ical"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.15,
+     "peak": "ical"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.042,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": "Everyone"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": "My"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": " poor"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.031,
+     "peak": "-born"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " prepares"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " two"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.881,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3ef71310",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "completes natural-born / historically black / bio-identical",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "A list, not a pattern: I found no shared rule. Probes also fired on 'Ecological Modelling' (0.92), weaker on 'foreign-born' / 'native-born' (0.4) and 'Experimental Medicine' (0.27); 'Irish-born', 'first-born', 'well-known' and 'self-made' read under 0.08. Journal names are not in this test.",
+ "selection": "random draw"
+}

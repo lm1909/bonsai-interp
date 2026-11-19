@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-19-lm1909-5f9161c1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N9266-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:10:35+00:00",
+ "recipe": {
+  "toolchain_commit": "b3ef71310",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N9266_neg/2026-11-19-lm1909-5f9161c1.tests.json"
+ },
+ "label": "the token ' return' opening a return statement inside an indented Python function body (not the prose word 'return')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N9266_neg/2026-11-19-lm1909-5f9161c1.tests.json",
+   "prereg_commit": "b3ef71310",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.566,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.61,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.482,
+     "peak": " +"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.624,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.594,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.583,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.438,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.486,
+     "peak": " return"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.088,
+     "peak": "print"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.078,
+     "peak": " print"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.029,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " last"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.575,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b3ef71310",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' return' in a Python function",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "In probes other first statements of a function body also read 0.3-0.4 (' raise', ' yield', the end of a print line), so the pole may mark the function body's statement rather than ' return' alone; the near misses here are module-level Python and prose, and do not test that. The + pole peaks on ' import' / ' from' as the first statement of a function body.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " return"
+  ]
+ }
+}
