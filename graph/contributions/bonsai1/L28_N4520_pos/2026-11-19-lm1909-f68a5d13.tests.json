@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-f68a5d13",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N4520+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:43:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N4520",
+   "pole": "+",
+   "label": "Line and clause ends in Python code where a '#' comment can start next (the end of a comment line, a block opener such as 'else:', a statement end); output promotes '#'; quiet in the same code written in //-comment languages",
+   "fire": [
+    "    rows = load(path)\n    # Skip the header line before parsing.\n    rows = rows[1:]\n    return rows",
+    "# Email settings. The defaults below work for local testing:\n# see the README for production values\nEMAIL_HOST = 'localhost'",
+    "    if user.is_admin:\n        grant(user)\n    else:  # Regular users need approval first\n        queue(user)",
+    "    try:\n        value = int(raw)\n    except ValueError:\n        # Fall back to the default when parsing fails.\n        value = 0",
+    "    for name in names:\n        # Ignore hidden files.\n        if name.startswith('.'):\n            continue\n        process(name)",
+    "    def close(self):\n        # Flush pending writes before closing the handle.\n        self.flush()\n        self.handle.close()",
+    "TIMEOUT = 30\n# Retry policy for flaky network calls\nMAX_RETRIES = 3\n# Seconds to wait between attempts\nBACKOFF = 2",
+    "    while not done:\n        step()\n        if stalled():\n            break  # Give up after a stall\n    cleanup()"
+   ],
+   "quiet": [
+    "    var rows = load(path);\n    // Skip the header line before parsing.\n    rows = rows.slice(1);\n    return rows;",
+    "// Email settings. The defaults below work for local testing:\n// see the README for production values\nconst EMAIL_HOST = \"localhost\";",
+    "    if (user.isAdmin) {\n        grant(user);\n    } else {  // Regular users need approval first\n        queue(user);\n    }",
+    "    try {\n        value = Integer.parseInt(raw);\n    } catch (NumberFormatException e) {\n        // Fall back to the default when parsing fails.\n        value = 0;\n    }",
+    "    for (String name : names) {\n        // Ignore hidden files.\n        if (name.startsWith(\".\")) continue;\n        process(name);\n    }",
+    "    void close() {\n        // Flush pending writes before closing the handle.\n        flush();\n        handle.close();\n    }",
+    "const int TIMEOUT = 30;\n// Retry policy for flaky network calls\nconst int MAX_RETRIES = 3;\n// Seconds to wait between attempts\nconst int BACKOFF = 2;",
+    "    while (!done) {\n        step();\n        if (stalled()) break;  // Give up after a stall\n    }\n    cleanup();"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python line end before '#'",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card flags the pole broad (1.1%). Top tokens '\\n', '.\\n', ':', '):' in Python around comments; output direction promotes ' #', '#' and suppresses ' //'. Probe: Python with comments 0.33-0.51, 'else:' without a comment 0.51, three plain assignments 0.09, C with a // comment 0.01, prose lines 0.00."
+}

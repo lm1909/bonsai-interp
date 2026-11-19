@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-99e10947",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N8971+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:43:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N8971",
+   "pole": "+",
+   "label": "GUI toolkit set-up code (Qt, Tkinter, wx): widget, layout and label identifiers and calls while a window is being built; quiet in non-GUI Python",
+   "fire": [
+    "        self.okButton = QtGui.QPushButton(\"OK\")\n        hbox = QtGui.QHBoxLayout()\n        hbox.addWidget(self.okButton)\n        self.setLayout(hbox)",
+    "        entry_name = tk.Entry(root, width=30)\n        entry_name.grid(row=0, column=1)\n        label_name = tk.Label(root, text=\"Name\")\n        label_name.grid(row=0, column=0)",
+    "        self.gridLayout = QtWidgets.QGridLayout(Dialog)\n        self.gridLayout.setObjectName(\"gridLayout\")\n        self.lineEdit = QtWidgets.QLineEdit(Dialog)\n        self.gridLayout.addWidget(self.lineEdit, 0, 1)",
+    "        panel = wx.Panel(self)\n        vbox = wx.BoxSizer(wx.VERTICAL)\n        vbox.Add(wx.StaticText(panel, label=\"Title\"), 0, wx.ALL, 5)\n        panel.SetSizer(vbox)",
+    "        self.checkBox = QtGui.QCheckBox(self.groupBox)\n        self.checkBox.setGeometry(QtCore.QRect(10, 20, 120, 22))\n        self.checkBox.setObjectName(\"checkBox\")",
+    "        frame_top = tk.Frame(window, padx=5)\n        frame_top.pack(side=\"top\", fill=\"x\")\n        button_quit = tk.Button(frame_top, text=\"Quit\", command=window.destroy)\n        button_quit.pack(side=\"right\")",
+    "        self.toolbar = QtGui.QToolBar(MainWindow)\n        MainWindow.addToolBar(self.toolbar)\n        self.statusbar = QtGui.QStatusBar(MainWindow)\n        MainWindow.setStatusBar(self.statusbar)",
+    "        self.slider = QtGui.QSlider(QtCore.Qt.Horizontal)\n        self.slider.setRange(0, 100)\n        self.spinBox = QtGui.QSpinBox()\n        layout.addWidget(self.slider)"
+   ],
+   "quiet": [
+    "        self.session = requests.Session()\n        headers = {'Accept': 'application/json'}\n        self.session.headers.update(headers)\n        self.timeout = timeout",
+    "        writer = csv.writer(handle)\n        writer.writerow(['name', 'score'])\n        for name, score in results:\n            writer.writerow([name, score])",
+    "        self.conn = sqlite3.connect(path)\n        self.cursor = self.conn.cursor()\n        self.cursor.execute('SELECT id FROM users')\n        rows = self.cursor.fetchall()",
+    "        parser = argparse.ArgumentParser()\n        parser.add_argument('--verbose', action='store_true')\n        args = parser.parse_args()\n        run(args)",
+    "        self.mean = np.mean(samples, axis=0)\n        self.std = np.std(samples, axis=0)\n        scaled = (samples - self.mean) / self.std\n        return scaled",
+    "        lines = []\n        for record in records:\n            lines.append(record.strip().lower())\n        return sorted(set(lines))",
+    "        self.lock = threading.Lock()\n        with self.lock:\n            self.counter += 1\n            value = self.counter",
+    "        start = time.time()\n        result = func(*args, **kwargs)\n        elapsed = time.time() - start\n        log.info('took %.2f s', elapsed)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "GUI widget set-up code",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: '.Q', '.set', ' re'(translateUi), '.add', ' label' in PyQt/Tk code. Probe: Qt layout 0.49, wx sizer 0.42, tk buttons 0.37, retranslateUi 0.27; non-GUI Python 0.01-0.03; prose about a dialog 0.13."
+}

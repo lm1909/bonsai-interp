@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-bef5bdf3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2596-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:43:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N2596",
+   "pole": "-",
+   "label": "In code, the operand just before a non-equality or negated comparison (<, <=, 'not', assertNot…): the other side of the + pole, which sits before '==' and promotes ' equals'; quiet before '=='",
+   "fire": [
+    "    pos = 0\n    while pos < size and text[pos].isspace():\n        pos += 1\n    return pos",
+    "    k = 0\n    while 2 ** k < limit:\n        k = k + 1\n    return k",
+    "    def compare(self, other):\n        if close(self.row, other.row):\n            return self.col < other.col\n        return self.row < other.row",
+    "    light = [(a, b, w) for (a, b, w) in pairs if w['cost'] <= cutoff]\n    heavy = [(a, b, w) for (a, b, w) in pairs if w['cost'] > cutoff]",
+    "    def test_copy(self):\n        clone = self.obj.copy()\n        self.assertNotEqual(id(clone), id(self.obj))\n        self.assertNotIn(clone, self.registry)",
+    "    lo, hi = 0, len(arr)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if arr[mid] < target:\n            lo = mid + 1",
+    "    for item in queue:\n        if item.priority < threshold and not item.done:\n            skipped.append(item)",
+    "    def test_tokens_differ(self):\n        first = make_token()\n        second = make_token()\n        self.assertNotEqual(first.value, second.value)"
+   ],
+   "quiet": [
+    "    pos = 0\n    if text[pos] == marker:\n        pos += 1\n    return pos",
+    "    k = 0\n    if 2 ** k == limit:\n        k = k + 1\n    return k",
+    "    def same(self, other):\n        if close(self.row, other.row):\n            return self.col == other.col\n        return False",
+    "    exact = [(a, b, w) for (a, b, w) in pairs if w['cost'] == cutoff]\n    total = sum(w['cost'] for (a, b, w) in exact)",
+    "    def test_copy(self):\n        clone = self.obj.copy()\n        self.assertEqual(clone.name, self.obj.name)\n        self.assertIn(clone, self.registry)",
+    "    lo, hi = 0, len(arr)\n    mid = (lo + hi) // 2\n    if arr[mid] == target:\n        found = mid",
+    "    for item in queue:\n        if item.priority == threshold:\n            matched.append(item)",
+    "    def test_tokens_match(self):\n        first = make_token()\n        second = first\n        self.assertEqual(first.value, second.value)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before '<' / negated check",
+ "unit_kind": "contextual",
+ "confidence": 0.25,
+ "notes": "Card: '.assertNot' x5, ']' before '<=', ' q' before '<', 'do not'; the + pole's top tokens precede '==' and its output promotes ' equals', ' =='. Probe was weak: 'items[i' in a while-< loop 0.28, before '<=' 0.13, before '<' 0.08, one-line assertNotEqual 0.00, 'do not mix' 0.13; before '==' 0.03. Probably fails on the median."
+}

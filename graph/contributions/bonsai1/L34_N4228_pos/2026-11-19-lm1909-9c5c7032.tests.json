@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-9c5c7032",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4228+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:43:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N4228",
+   "pole": "+",
+   "label": "An opening delimiter (opening quote, quote after a bracket, table pipe, line break after a question) directly before a capitalized name, acronym or constant; quiet when the delimiter opens lowercase text",
+   "fire": [
+    "The court ruled that the firm had sold what regulators called “Grade C” fuel to airlines.",
+    "ORDER_CHOICES = (('ASC', 'Ascending order'), ('DESC', 'Descending order'))",
+    "|Currency: ||Euro|\n|Prime minister: ||Mark Rutte|",
+    "What does NATO stand for?\nNorth Atlantic Treaty Organization, founded in 1949.",
+    "Investigators said the suspects belonged to a group known as “Unit K” inside the army.",
+    "    mode = request.GET.get('mode', 'RGB')\n    if mode not in ('RGB', 'CMYK'):\n        raise ValueError(mode)",
+    "|Capital: ||Lima|\n|Official language: ||Spanish|",
+    "The plant was given a “Category A” safety rating after the inspection."
+   ],
+   "quiet": [
+    "The court ruled that the firm had sold what regulators called “dirty” fuel to airlines.",
+    "order_choices = (('asc', 'ascending order'), ('desc', 'descending order'))",
+    "|currency: ||euro|\n|climate: ||mild and wet|",
+    "What does the treaty say about fishing?\nit says very little about fishing at all.",
+    "Investigators said the suspects belonged to a group known as “the cleaners” inside the army.",
+    "    mode = request.GET.get('mode', 'fast')\n    if mode not in ('fast', 'slow'):\n        raise ValueError(mode)",
+    "|soil: ||sandy loam|\n|rainfall: ||moderate|",
+    "The plant was given a “satisfactory” safety rating after the inspection."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "opener before capitalized term",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card flags the pole broad (1.5% of tokens reach 0.1 of max). Top tokens are openers (' “', \" '\", ' (', ' ||', '?\\n') before capitalized items; output direction promotes ' S', ' W', ' T'. Probe: “Class B” 0.35, ('LIFO' 0.55, ||Paris 0.47; “green revolution” 0.03."
+}

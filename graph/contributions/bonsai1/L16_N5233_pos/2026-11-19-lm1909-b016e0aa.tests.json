@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-b016e0aa",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N5233+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:43:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N5233",
+   "pole": "+",
+   "label": "Unclear; best guess from the card: the '=' of a keyword argument that repeats its own name inside a logging call in service code (LOG.warn(..., instance=instance))",
+   "fire": [
+    "        try:\n            self.driver.spawn(context, instance, image_meta)\n        except Exception as exc:\n            LOG.warn(_('Spawn failed: %s') % exc, instance=instance)",
+    "            if not network_info:\n                LOG.debug(_('No network info found'), instance=instance)\n                return",
+    "        except exception.NotFound:\n            LOG.exception(_('Volume could not be detached'), instance=instance)\n            raise",
+    "        LOG.audit(_('Rebooting instance'), context=context, instance=instance)\n        self._notify_about_instance_usage(context, instance, 'reboot.start')",
+    "    def pause(self, context, instance):\n        LOG.info(_('Pausing'), context=context, instance=instance)\n        self.driver.pause(instance)",
+    "            except Exception:\n                LOG.error(_('Failed to revert resize'), instance=instance)\n                self._set_instance_error_state(context, instance)",
+    "        if migration is None:\n            LOG.warn(_('Migration record missing'), instance=instance)\n            return False",
+    "        LOG.debug(_('Checking state'), instance=instance)\n        state = self._get_power_state(context, instance)"
+   ],
+   "quiet": [
+    "        try:\n            self.driver.spawn(context, instance, image_meta)\n        except Exception as exc:\n            LOG.warn(_('Spawn failed: %s') % exc)",
+    "            if not network_info:\n                LOG.debug(_('No network info found'))\n                return",
+    "        except exception.NotFound:\n            LOG.exception(_('Volume could not be detached'))\n            raise",
+    "        LOG.audit(_('Rebooting instance'))\n        self._notify_about_instance_usage(context, instance, 'reboot.start')",
+    "    def pause(self, context, instance):\n        LOG.info(_('Pausing'))\n        self.driver.pause(instance)",
+    "            except Exception:\n                LOG.error(_('Failed to revert resize'))\n                self._set_instance_error_state(context, instance)",
+    "        if migration is None:\n            LOG.warn(_('Migration record missing'))\n            return False",
+    "        LOG.debug(_('Checking state'))\n        state = self._get_power_state(context, instance)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unclear (kwarg '=' in log calls?)",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "No hypothesis fired in probing: kwarg '=' 0.08, list commas 0.04, dict-literal lines 0.04, commas after negated-verb objects 0.03. The card's top 32 mix '=' (x7, LOG.*(…, instance=instance)), list commas and ' and'. Registered as the best remaining guess, with fuller code context than the probe; expected to fail."
+}

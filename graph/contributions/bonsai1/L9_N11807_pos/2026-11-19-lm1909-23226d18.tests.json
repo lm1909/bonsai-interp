@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-23226d18",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N11807+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:43:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N11807",
+   "pole": "+",
+   "label": "The final piece of a protein or sugar name (-albumin, -globulin, -oglobin, -ulose): the token that completes a named biochemical substance; quiet in medical text without such a name",
+   "fire": [
+    "The blood test showed a low level of haptoglobin after the transfusion.",
+    "Patients with liver disease are often given lactulose to reduce ammonia.",
+    "Egg white is mostly water and the protein ovalbumin.",
+    "The thyroid stores its hormones bound to thyroglobulin.",
+    "The whey fraction is rich in lactalbumin and other small proteins.",
+    "The antibodies in the sample were mainly gamma globulin.",
+    "Diabetic patients are monitored by the amount of glycated haemoglobin.",
+    "The seeds contain raffinose and stachyose, which humans digest poorly."
+   ],
+   "quiet": [
+    "The blood test was repeated two days after the transfusion.",
+    "Patients with liver disease are often advised to avoid alcohol.",
+    "The surgeon closed the wound with six stitches.",
+    "The thyroid sits at the front of the neck below the larynx.",
+    "The nurse checked his pulse and temperature every hour.",
+    "The sample was sent to the laboratory on Monday.",
+    "Diabetic patients are asked to check their feet daily.",
+    "The seeds are sown in rows and thinned after three weeks."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "protein / sugar name ending",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: 'oglobin' x5, 'ose' x3, 'in' x2, 'ulin' x2 (haptoglobin, lactulose, ovalbumin), plus doctest output lines. Probe was mixed: 'albumin and immunoglobulin' 0.57, 'hemoglobin' 0.18, 'insulin' 0.05; the food nouns ' milk' 0.37 and ' meat' 0.29 and a doctest '0' 0.39 also fired, so the pole is probably wider than this label."
+}

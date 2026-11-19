@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-19-lm1909-2fee36d0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5042+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:43:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N5042",
+   "pole": "+",
+   "label": "The token 'gly' / 'Gly' opening a glyc- word (glycogen, glycerol, glycine, glycolysis, glycemic); quiet for other biochemical terms and for '-gly' word endings",
+   "fire": [
+    "Muscles burn through their glycogen within two hours of hard cycling.",
+    "The first step in breaking down sugar for energy is called glycolysis.",
+    "Many skin creams contain glycolic acid to remove dead cells.",
+    "Foods with a low glycemic index raise blood sugar slowly.",
+    "The virus is coated with a glycoprotein that binds to the host cell.",
+    "Fats are broken down into fatty acids and glycerol in the gut.",
+    "Collagen is unusually rich in the amino acid glycine.",
+    "Antifreeze is usually made from ethylene glycol and water."
+   ],
+   "quiet": [
+    "Muscles burn through their fat reserves after two hours of hard cycling.",
+    "The first step in breaking down sugar for energy needs two molecules of ATP.",
+    "Many skin creams contain salicylic acid to remove dead cells.",
+    "Foods with a lot of fibre raise blood sugar slowly.",
+    "The virus is coated with a lipid envelope that fuses with the host cell.",
+    "Fats are broken down into fatty acids by lipase in the gut.",
+    "Collagen is unusually rich in the amino acid proline.",
+    "The ugly duckling smiled smugly and swam away."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "the 'gly' prefix token",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' gly' x15, ' Gly' x8, 'ly' x6 (after 'G' or 'antig'), 'gly' x2, ' glyc' x1. Probe: glycerin 0.77, glycogen 0.48, sentence-initial Glycine 1.08; glucose 0.05, ugly 0.02, smugly 0.00. The declared trigger tokens do not include the bare 'ly' piece that follows a split-off 'G'.",
+ "trigger": {
+  "tokens": [
+   " gly",
+   " Gly",
+   "gly",
+   "Gly",
+   " glyc",
+   " Glyc"
+  ]
+ }
+}
