@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-298e5ac2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N1547+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N1547",
+   "pole": "+",
+   "label": "the space before a two-digit numeral in an approximate large count ('an estimated 47 million people', 'over 85% of', 'around 30 million years'), where the output predicts a tens word",
+   "fire": [
+    "According to the latest census, the number of people living in the country's cities has risen to an estimated 54 million people.",
+    "The fossils date from the late Jurassic (around 150 million years ago) to the early Cretaceous (around 95 million years ago).",
+    "The water network currently reaches the homes of over 90% of the population.",
+    "Researchers say that roughly 35 million people are affected by the disease each year.",
+    "The agency reported that the number of households without broadband had fallen from 21.4 million to 18 million.",
+    "The reform would extend coverage to 26 million individuals who are currently uninsured.",
+    "The number of refugees worldwide has increased to an estimated 43 million people, the highest figure on record.",
+    "Rail operators say they now carry over 70% of the freight that moves between the two ports."
+   ],
+   "quiet": [
+    "According to the latest census, the number of people living in the country's cities has risen to a record high.",
+    "The fossils date from the late Jurassic to the early Cretaceous, when the sea covered the region.",
+    "The water network currently reaches the homes of most of the population.",
+    "The lizard in the next enclosure is roughly 1.5 m long and weighs 4 kg.",
+    "The agency reported that the number of households without broadband had fallen sharply.",
+    "The recommended daily dose is 2.5 mg, taken with a glass of water.",
+    "The number of refugees worldwide has increased to the highest figure on record.",
+    "The shrub grows to a height of up to 2 m in sandy, well-drained soil."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "space before approx. count",
+ "unit_kind": "contextual",
+ "confidence": 0.2,
+ "notes": "Card: ' ' x24 before two-digit numerals after around/over/estimated/from; promotes ' fifty', ' twenty', ' thirty' and suppresses unit words, with the - pole on small measurements (2.5m, 1.4 mg). Very sparse and heavy-tailed (max 604, 0.001% above 0.3 of max). One probe round did NOT reproduce it: 'around 12 million people' 0.001, 'estimated 68 million' 0.11, so I expect this test to fail; registered as the card's best reading."
+}

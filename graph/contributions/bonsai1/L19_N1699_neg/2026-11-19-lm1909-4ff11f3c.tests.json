@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-4ff11f3c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N1699-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N1699",
+   "pole": "-",
+   "label": "dense / broad unit; best guess: the head noun that closes a two-word compound or name (day| ticket, Webb| Cove, Slater| Fund)",
+   "fire": [
+    "Visitors can choose between a two-hour ticket, a day ticket and a season ticket.",
+    "A weekly ticket costs less than five single tickets on this line.",
+    "The museum sells a family ticket and a reduced student ticket at the door.",
+    "Ask the driver for a return ticket if you plan to come back today.",
+    "The survey team camped for a week at Baker Cove on the northern shore.",
+    "She served for years as secretary of the Carnegie Fund for teachers.",
+    "The boats were moored at Sandy Cove while the storm passed.",
+    "A grant from the Jeanes Fund paid for the new schoolhouse."
+   ],
+   "quiet": [
+    "Visitors can choose between walking for two hours, staying a day or coming back next season.",
+    "Riding every week costs less than driving five times on this road.",
+    "The museum welcomes families and students who arrive at the door.",
+    "Ask the driver to wait if you plan to come back today.",
+    "The survey team camped for a week on the northern shore.",
+    "She served for years as secretary to a group of teachers.",
+    "The boats were moored together while the storm passed.",
+    "A wealthy donor paid for the new schoolhouse."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "broad; compound head noun?",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags the pole broad (3.0% of tokens reach 0.1 of max) and its top examples share no token: ' Cove', 'ics', ' day', \"',\", ' ticket', ' Fund'. Probes: 'a day ticket' 0.58, but Miller Cove 0.05 and Peabody Fund 0.14, so the compound-head guess is weak. Registered to record the density honestly; I expect it to fail."
+}

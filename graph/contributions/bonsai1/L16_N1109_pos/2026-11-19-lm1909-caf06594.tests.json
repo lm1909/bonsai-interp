@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-caf06594",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N1109+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N1109",
+   "pole": "+",
+   "label": "research-reporting prose at the point where a group or condition has just been named and its measured outcome is about to be reported ('posts with images receive ...', 'with a complete treatment, I saw ...')",
+   "fire": [
+    "The field trials ran for three seasons across the county. \"On my plots, when I used seed with the full fungicide coating, I saw a remarkable gain in yield,\" one grower told us.",
+    "Automation brought lower costs and faster service. Sales per employee rose more than 3 percent a year in the wholesale sector after 2001.",
+    "Exercise seems to protect the brain. The study found that those with the most demanding routines showed the smallest loss of memory over ten years.",
+    "Pictures clearly matter on social media: tweets with photos get about 35% more replies than tweets without them.",
+    "The survey compared two groups of stores. In shops where staff greeted customers at the door, average spending was nearly 20 percent higher.",
+    "Sleep had a measurable effect. Among pupils who went to bed before ten, test scores improved by almost a full grade after one term.",
+    "The results were clear by harvest. Fields with drip irrigation produced roughly 30% more grain than fields watered by hand.",
+    "Wearables are everywhere now. In offices today, employees with a step counter walk on average 2,000 more steps than those without one."
+   ],
+   "quiet": [
+    "The field trials ran for three seasons across the county. \"On my plots, I keep the seed in a dry shed and I check the bags every week,\" one grower told us.",
+    "Automation brought new machines and new uniforms. The wholesale sector moved its offices to the edge of town after 2001.",
+    "Exercise seems to be popular here. The club is open to those who enjoy demanding routines and meets in the hall every Tuesday.",
+    "Pictures are easy to add on social media: tap the camera icon, choose a photo and write a caption.",
+    "The survey visited two groups of stores. In some shops the staff wore blue aprons and stood near the door.",
+    "Bedtime was a matter of routine. Pupils brushed their teeth, read a chapter and switched off the light before ten.",
+    "The work was finished by harvest. Fields near the river belong to the co-operative and are fenced with wire.",
+    "Wearables are everywhere now. In offices today, employees charge them at their desks and compare the colours of the straps."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "group before reported outcome",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card: no single token (',', ' with', ' today', ' in', ' where', ' after'); top examples name a group or condition right before a quantified result, and the output promotes ' amount', ' incidence'. One probe round did NOT reproduce it (all 8 probes under 0.09, including close paraphrases of the top examples), so the trigger probably needs more context than a sentence. Registered as the card's best reading with longer passages; I expect it to fail."
+}

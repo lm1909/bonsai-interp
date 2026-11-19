@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-b4f21878",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N4649+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N4649",
+   "pole": "+",
+   "label": "inside a negated clause in German, French or Russian text (weder ... noch, ne ... pas/aucune, не/ни ...), where a 'neither/nor' continuation is still open; English negation does not fire it",
+   "fire": [
+    "Die Bilder dürfen ohne schriftliche Zustimmung weder gedruckt noch im Internet veröffentlicht werden.",
+    "Der Verein übernimmt weder für verlorene Gegenstände noch für Schäden am Fahrzeug die Haftung.",
+    "Er hatte weder Geld noch einen gültigen Ausweis bei sich.",
+    "L'éditeur ne garantit pas l'exactitude des informations publiées sur ce site.",
+    "L'association ne fait aucune promesse quant aux résultats de la formation.",
+    "Le vendeur ne peut pas être tenu responsable des retards de livraison.",
+    "Администрация не отвечает ни за потерянные вещи, ни за повреждение автомобиля.",
+    "Он не знал ни её имени, ни адреса, ни номера телефона."
+   ],
+   "quiet": [
+    "Die Bilder dürfen mit schriftlicher Zustimmung gedruckt und im Internet veröffentlicht werden.",
+    "Der Verein übernimmt für verlorene Gegenstände und für Schäden am Fahrzeug die Haftung.",
+    "Er hatte genug Geld und einen gültigen Ausweis bei sich.",
+    "L'éditeur garantit l'exactitude des informations publiées sur ce site.",
+    "The association makes no promise about the results of the training.",
+    "The seller cannot be held responsible for delays in delivery.",
+    "Администрация отвечает за потерянные вещи и за повреждение автомобиля.",
+    "Он знал её имя, адрес и номер телефона."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "non-English negated clause",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: Russian, French, German and Korean disclaimer-style negations; output promotes ' also' and suppresses ' neither'/' ni'/' ни', and the - pole is the comma before English 'nor'. Probes: German weder 0.74, French ne ... pas 0.48, Russian не ... ни 0.24; affirmative French 0.01, English not/never 0.02-0.12."
+}

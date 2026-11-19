@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-0ffecc98",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N2366+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N2366",
+   "pole": "+",
+   "label": "contexts where body weight / weight loss is the live topic or the likely next word (calorie deficit, energy needs, diabetes symptom lists), plus ML optimizer code where 'weight'/'loss' is equally expected",
+   "fire": [
+    "To drop two pounds a month, most adults have to eat roughly 250 fewer calories every day.",
+    "Once you have slimmed down, your body burns less energy at rest than it did before.",
+    "Warning signs of type 2 diabetes include constant hunger, blurred vision, tiredness, and unexplained",
+    "An overactive thyroid speeds up the metabolism, so patients often notice a racing heart, sweating, and sudden",
+    "If you eat more calories than you burn, the extra energy is stored as fat and you gradually gain",
+    "optimizer = torch.optim.SGD(net.parameters(), lr=0.01, momentum=0.9)\nfor batch in loader:\n    optimizer.zero_grad()\n    out = net(batch)",
+    "opt = tf.keras.optimizers.Adam(learning_rate=1e-3)\nmodel.compile(optimizer=opt,",
+    "scheduler = StepLR(optimizer, step_size=30)\nfor epoch in range(epochs):\n    train(model, optimizer)\n    optimizer.step()"
+   ],
+   "quiet": [
+    "To save two hundred dollars a month, most adults have to spend roughly ten fewer dollars every day.",
+    "Once you have tuned the engine, your car burns less fuel at idle than it did before.",
+    "Warning signs of the flu include a sore throat, a dry cough, tiredness, and a sudden",
+    "A faulty thermostat confuses the furnace, so owners often notice cold rooms, strange noises, and sudden",
+    "If you earn more money than you spend, the extra cash is kept in the bank and you gradually build",
+    "reader = csv.reader(open(path), delimiter=',')\nfor row in reader:\n    names.append(row[0])\n    print(row)",
+    "app = flask.Flask(__name__)\napp.config.update(debug=True,",
+    "timer = Timer(interval, step_size=30)\nfor page in range(pages):\n    fetch(site, page)\n    timer.sleep()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "weight-loss / optimizer context",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: fires on varied tokens (',', '(', ' less', ' optim', '.optimizer'); output promotes ' weight', ' food', ' appetite', ' loss'. The two families (dieting text, optimizer code) share the upcoming words weight/loss. Probes: diabetes symptom list 1.06, optimizer.zero_grad 0.84, cut 500 calories 0.80, body needs less energy 0.72; car needs less fuel 0.17, plain loop 0.01, 'report a reduced' 0.15."
+}

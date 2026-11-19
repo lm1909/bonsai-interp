@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-1312c3c4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N1014-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:42:17+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N1014",
+   "pole": "-",
+   "label": "Python: the line break right after an assignment that joins two values with '+' (s = a + b), i.e. the end of a concatenation statement; top examples also include final pieces of split compounds (windch|ill, hydr|ate)",
+   "fire": [
+    "def full_name(first, last):\n    name = first + ' ' + last\n    return name",
+    "def repeat(word):\n    twice = word + word\n    return twice.upper()",
+    "def make_path(folder, filename):\n    path = folder + '/' + filename\n    return path",
+    "def label(count):\n    text = 'Items: ' + str(count)\n    return text",
+    "def is_rotation(a, b):\n    joined = a + a\n    return b in joined",
+    "def sign_off(user):\n    line = 'Regards, ' + user\n    return line",
+    "def add_suffix(base):\n    result = base + '_copy'\n    return result",
+    "def shout(msg):\n    loud = msg + '!'\n    return loud"
+   ],
+   "quiet": [
+    "def full_name(first, last):\n    name = (first, last)\n    return name",
+    "def repeat(word):\n    twice = word * 2\n    return twice.upper()",
+    "def make_path(folder, filename):\n    path = os.path.join(folder, filename)\n    return path",
+    "def label(count):\n    text = str(count)\n    return text",
+    "def is_rotation(a, b):\n    size = len(a)\n    return size == len(b)",
+    "def sign_off(user):\n    line = user.title()\n    return line",
+    "def add_suffix(base):\n    result = base.lower()\n    return result",
+    "def shout(msg):\n    loud = msg.upper()\n    return loud"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "end of a + b statement",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Card: ' +' x3, \" '\" x2, ')' x2 in string-concatenation code, top example is the newline after 's = string1 + string1'; the rest are word-final fragments (al|ge|bras, hydr|ate, windch|ill). Probes: \"message = 'Hello, ' + name\" 0.38 and 't = s + s' 0.28 (both on the newline), windchill 0.34, hydrate 0.29; 'w * h' 0.03, one-line print with + 0.01. Mixed unit; the test covers only the code half and is close to the bar."
+}
