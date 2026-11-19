@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-0624e797",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N5458-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:54:23+00:00",
+ "recipe": {
+  "toolchain_commit": "c114583a6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N5458_neg/2026-11-19-lm1909-0624e797.tests.json"
+ },
+ "label": "Insect and other invertebrate reproduction: ' eggs' being laid by insects, ' larvae' / ' larval' and the host plant they feed on; quiet for kitchen or bird eggs and for insects without the life cycle",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N5458_neg/2026-11-19-lm1909-0624e797.tests.json",
+   "prereg_commit": "c114583a6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.726,
+     "peak": " eggs"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.379,
+     "peak": "val"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.565,
+     "peak": " eggs"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.479,
+     "peak": " eggs"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.343,
+     "peak": "val"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.476,
+     "peak": " egg"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.767,
+     "peak": " eggs"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.217,
+     "peak": " larvae"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.059,
+     "peak": " hairs"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.018,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.049,
+     "peak": "quito"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": "Wild"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.051,
+     "peak": " four"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": " flies"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": " ant"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c114583a6",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "insect eggs and larvae",
+ "unit_kind": "sparse feature",
+ "confidence": 0.6,
+ "notes": "Card: ' eggs' x7, ' larvae' x6, ' lar' x4, ' lay' x4, all butterflies, moths and mayflies. Probe: beetle 'lays her eggs' 0.65, 'larval host plant' 0.49, 'larvae feed' 0.22; cooking eggs 0.04, hen's eggs 0.02, salmon eggs 0.11, dragonflies hunting 0.04.",
+ "selection": "random draw"
+}

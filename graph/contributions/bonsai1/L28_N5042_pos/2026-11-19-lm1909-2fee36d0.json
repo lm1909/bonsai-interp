@@ -1,0 +1,163 @@
+{
+ "id": "2026-11-19-lm1909-2fee36d0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N5042+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:54:41+00:00",
+ "recipe": {
+  "toolchain_commit": "c114583a6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N5042_pos/2026-11-19-lm1909-2fee36d0.tests.json"
+ },
+ "label": "The token 'gly' / 'Gly' opening a glyc- word (glycogen, glycerol, glycine, glycolysis, glycemic); quiet for other biochemical terms and for '-gly' word endings",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N5042_pos/2026-11-19-lm1909-2fee36d0.tests.json",
+   "prereg_commit": "c114583a6",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.456,
+     "peak": " glyc"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.868,
+     "peak": " gly"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.694,
+     "peak": " gly"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.434,
+     "peak": " glyc"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.706,
+     "peak": " gly"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.6,
+     "peak": " gly"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.713,
+     "peak": " glyc"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.552,
+     "peak": " gly"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " fat"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.075,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": "lic"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.046,
+     "peak": " sugar"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " lip"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " acid"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " ugly"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.647,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c114583a6",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "the 'gly' prefix token",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' gly' x15, ' Gly' x8, 'ly' x6 (after 'G' or 'antig'), 'gly' x2, ' glyc' x1. Probe: glycerin 0.77, glycogen 0.48, sentence-initial Glycine 1.08; glucose 0.05, ugly 0.02, smugly 0.00. The declared trigger tokens do not include the bare 'ly' piece that follows a split-off 'G'.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " gly",
+   " Gly",
+   "gly",
+   "Gly",
+   " glyc",
+   " Glyc"
+  ]
+ }
+}

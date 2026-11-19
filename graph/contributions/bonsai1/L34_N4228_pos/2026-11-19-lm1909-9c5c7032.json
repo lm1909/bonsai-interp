@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-9c5c7032",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N4228+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:53:39+00:00",
+ "recipe": {
+  "toolchain_commit": "c114583a6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N4228_pos/2026-11-19-lm1909-9c5c7032.tests.json"
+ },
+ "label": "An opening delimiter (opening quote, quote after a bracket, table pipe, line break after a question) directly before a capitalized name, acronym or constant; quiet when the delimiter opens lowercase text",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N4228_pos/2026-11-19-lm1909-9c5c7032.tests.json",
+   "prereg_commit": "c114583a6",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.025,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.433,
+     "peak": " '"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.143,
+     "peak": "|"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.126,
+     "peak": "?\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.014,
+     "peak": " “"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.124,
+     "peak": " '"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.204,
+     "peak": " ||"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.01,
+     "peak": " A"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " what"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.485,
+     "peak": " '"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.156,
+     "peak": "|"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.073,
+     "peak": "?\n"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " “"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.126,
+     "peak": " ('"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.031,
+     "peak": " ||"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.562,
+    "median_fire": 0.125,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c114583a6",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "opener before capitalized term",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card flags the pole broad (1.5% of tokens reach 0.1 of max). Top tokens are openers (' “', \" '\", ' (', ' ||', '?\\n') before capitalized items; output direction promotes ' S', ' W', ' T'. Probe: “Class B” 0.35, ('LIFO' 0.55, ||Paris 0.47; “green revolution” 0.03.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-f68a5d13",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N4520+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:54:34+00:00",
+ "recipe": {
+  "toolchain_commit": "c114583a6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N4520_pos/2026-11-19-lm1909-f68a5d13.tests.json"
+ },
+ "label": "Line and clause ends in Python code where a '#' comment can start next (the end of a comment line, a block opener such as 'else:', a statement end); output promotes '#'; quiet in the same code written in //-comment languages",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N4520_pos/2026-11-19-lm1909-f68a5d13.tests.json",
+   "prereg_commit": "c114583a6",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.409,
+     "peak": ":]\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.676,
+     "peak": "'"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.504,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.308,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.562,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.433,
+     "peak": "()\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.397,
+     "peak": "\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.295,
+     "peak": "()"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.069,
+     "peak": ");\n"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.132,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " if"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.024,
+     "peak": " when"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.227,
+     "peak": ";\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " calls"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": ")"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.421,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c114583a6",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Python line end before '#'",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card flags the pole broad (1.1%). Top tokens '\\n', '.\\n', ':', '):' in Python around comments; output direction promotes ' #', '#' and suppresses ' //'. Probe: Python with comments 0.33-0.51, 'else:' without a comment 0.51, three plain assignments 0.09, C with a // comment 0.01, prose lines 0.00.",
+ "selection": "random draw"
+}

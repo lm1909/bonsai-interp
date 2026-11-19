@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-b5000f36",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8027-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:54:21+00:00",
+ "recipe": {
+  "toolchain_commit": "c114583a6",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N8027_neg/2026-11-19-lm1909-b5000f36.tests.json"
+ },
+ "label": "The noun that completes a figurative framing of a situation (a vicious circle, another world, a giant experiment, the Age of X); quiet for the same nouns used literally",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N8027_neg/2026-11-19-lm1909-b5000f36.tests.json",
+   "prereg_commit": "c114583a6",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.486,
+     "peak": " cycle"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.303,
+     "peak": " world"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.449,
+     "peak": " experiment"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.312,
+     "peak": " Age"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.13,
+     "peak": "igsaw"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.171,
+     "peak": " storm"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.32,
+     "peak": " universe"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.023,
+     "peak": " reform"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.013,
+     "peak": " children"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " library"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " soda"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.018,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " storm"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " staircase"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.307,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "c114583a6",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "noun of a figurative frame",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: ' world', ' circle', ' window', ' experiment', ' Age', ' puzzle', all metaphorical. Probe was weak: 'vicious circle' 0.40, 'another world' 0.14, 'pieces of the puzzle' 0.14, 'Golden Age' 0.14, 'window of opportunity' 0.05; literal uses 0.01-0.02. Probably fails on the median.",
+ "selection": "random draw"
+}
