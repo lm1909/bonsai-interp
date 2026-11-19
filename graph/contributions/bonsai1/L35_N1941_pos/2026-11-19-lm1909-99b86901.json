@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-99b86901",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1941+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:38+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N1941_pos/2026-11-19-lm1909-99b86901.tests.json"
+ },
+ "label": "Arabic ' ص' as the first piece of صعوبات 'difficulties' after a verb of facing, suffering or causing (the start of a hardship word); other ص-initial words stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N1941_pos/2026-11-19-lm1909-99b86901.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.393,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.439,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.283,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.337,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.398,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.502,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.095,
+     "peak": " ص"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.139,
+     "peak": " ص"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.096,
+     "peak": " ص"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.086,
+     "peak": " ص"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " الط"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.337,
+     "peak": " ص"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.142,
+     "peak": " ص"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": " الص"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": "ظ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "حقق"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.365,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic ص of صعوبات (hardship)",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Card: ' ص' x8 and ' الص' x7, the top ones opening صعوبات/صعوبة/صداع/صخب, plus Russian ' н' of неприятностей; the output direction acts on damage/harm/pain/confusion words. Probes: صعوبات after faces/causes/suffers 0.53-0.58, singular صعوبة 0.22, صراعات 0.21, الصداع 0.19; صديق, صندوق, الصباح 0.08-0.12. Russian was inconsistent (0.59, 0.16), so the test is Arabic only.",
+ "selection": "random draw"
+}

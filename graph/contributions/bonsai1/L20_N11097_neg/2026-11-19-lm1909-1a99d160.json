@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-1a99d160",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11097-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:18+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N11097_neg/2026-11-19-lm1909-1a99d160.tests.json"
+ },
+ "label": "compass-direction adjectives (northern, southern, eastern, western, either case) modifying a region or place",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N11097_neg/2026-11-19-lm1909-1a99d160.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.709,
+     "peak": " northern"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.495,
+     "peak": " southern"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.533,
+     "peak": " eastern"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.559,
+     "peak": " western"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.636,
+     "peak": " Northern"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.632,
+     "peak": " Southern"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.621,
+     "peak": " Eastern"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.536,
+     "peak": " Western"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.138,
+     "peak": " rural"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.07,
+     "peak": " coastal"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.077,
+     "peak": " mountain"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.232,
+     "peak": " inland"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.157,
+     "peak": " mainland"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": "8"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": " open"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": " frontier"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.59,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "northern/southern/eastern/western",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: ' Northern' x13, ' northern' x8, ' southern' x4, ' Southern' x4, ' Western' x2. Probes 0.52-0.66 on all four directions; bare ' north' 0.39; rural/coastal 0.12-0.15.",
+ "selection": "random draw"
+}

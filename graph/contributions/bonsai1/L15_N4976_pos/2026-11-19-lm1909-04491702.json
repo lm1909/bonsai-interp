@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-04491702",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N4976+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:41+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N4976_pos/2026-11-19-lm1909-04491702.tests.json"
+ },
+ "label": "the thing being transferred in a genetic-engineering sentence: 'gene'/'it' between 'inserted/spliced a …' and 'into' the host organism; weak and inconsistent",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N4976_pos/2026-11-19-lm1909-04491702.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.619,
+     "peak": " gene"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.292,
+     "peak": " gene"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.558,
+     "peak": " gene"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.481,
+     "peak": " gene"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.325,
+     "peak": " gene"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.334,
+     "peak": " gene"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.594,
+     "peak": " gene"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.474,
+     "peak": " gene"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.252,
+     "peak": " gene"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": " maize"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "Engine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": " bulb"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.173,
+     "peak": " gene"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "inserted gene (into host)",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card top examples: trans|pl|anted microbes, inserted ⟦it⟧ into the AIDS virus, inserted a ⟦gene⟧ into rutabagas, but also 'put ⟦him⟧ on a team' and 'not enough ⟦to⟧ restore'. Very sparse (0.035% above 0.1 of max). Probes: 'spliced a jellyfish gene into' 0.53; other insertion sentences 0.09-0.29; 'insufficient to' 0.01; pouring or loading something into a container 0.00.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-2170f264",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N10894-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:54+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N10894_neg/2026-11-19-lm1909-2170f264.tests.json"
+ },
+ "label": "a person's first name written in lowercase inside a handle in code: the local part of an email address or the user segment of a URL (paul@…, github.com/jamesl…), also first names in author/copyright credits; role addresses and prose names stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N10894_neg/2026-11-19-lm1909-2170f264.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.394,
+     "peak": "tom"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.794,
+     "peak": "ve"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.446,
+     "peak": "ike"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.524,
+     "peak": "aniel"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.35,
+     "peak": "ris"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.61,
+     "peak": "rew"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.483,
+     "peak": "bert"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.586,
+     "peak": "vin"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.158,
+     "peak": "ainer"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.257,
+     "peak": "/renderer"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.086,
+     "peak": ".org"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "https"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.055,
+     "peak": "admin"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " Andrew"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.072,
+     "peak": " '"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " meeting"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.504,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first name in email/URL handle",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: 'John' x5, '(j' x3, and name pieces inside handles (j|ames, j|ake, ced|ric, p|aul), all in code headers, emails and repository URLs. Probes: github.com/peterh 0.87, github.com/jamesmiller 0.79, paul@ 0.64, mark.olsen@ 0.61, jake@ 0.56, '# Author: John Smith' 0.50, david@ 0.43; github.com/numpy 0.30, github.com/requests 0.20, legal@ 0.16, sales@ 0.11, 'My friend Paul' in prose 0.08, 'John walked' 0.25.",
+ "selection": "random draw"
+}

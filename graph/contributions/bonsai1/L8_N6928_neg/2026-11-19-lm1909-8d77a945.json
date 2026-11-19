@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-8d77a945",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N6928-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:43+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N6928_neg/2026-11-19-lm1909-8d77a945.tests.json"
+ },
+ "label": "the verb 'to be' outside plain modern English use: mentioned as a word or infinitive in another language (esse, sunt, être, ser), used absolutely ('to be is to…'), or in archaic subjunctive 'be not'; ordinary copulas stay low",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N6928_neg/2026-11-19-lm1909-8d77a945.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.695,
+     "peak": " esse"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.696,
+     "peak": " être"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.572,
+     "peak": " ser"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.733,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.662,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.584,
+     "peak": " sunt"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.672,
+     "peak": " être"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.541,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": " am"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " any"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.047,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.125,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.192,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " children"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.667,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'to be' as mentioned/archaic/foreign",
+ "unit_kind": "sparse feature",
+ "confidence": 0.6,
+ "notes": "Card top examples: '(he who is)', Latin 'esset' and 'sunt', 'To be ⟦is⟧', French 'être' in a stop-word list, 'if your wife be ⟦not⟧'; the + pole takes English auxiliaries (do, does, has). Probes: 'To be is' 0.79, 'be not' 0.78 and 0.45, sunt 0.75, ser 0.71, esse 0.67, être 0.59, 'am, is, are' as cited forms 0.41; 'The dog is', 'She was', 'wants to be' 0.07-0.13.",
+ "selection": "random draw"
+}

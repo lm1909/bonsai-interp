@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-4b021a8e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9333-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:06+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N9333_neg/2026-11-19-lm1909-4b021a8e.tests.json"
+ },
+ "label": "non-English text: a hyphen attached to an Arabic word in a parenthetical aside, and the final 'é' of a French participle split by the tokenizer (cens|é); leaky, low-amplitude pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N9333_neg/2026-11-19-lm1909-4b021a8e.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.594,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.531,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.285,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.462,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.211,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.564,
+     "peak": "é"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.441,
+     "peak": "é"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.432,
+     "peak": "é"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.064,
+     "peak": " ال"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.109,
+     "peak": "فت"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.104,
+     "peak": " الك"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.19,
+     "peak": " مدير"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.11,
+     "peak": "Mon"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.079,
+     "peak": "Le"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.073,
+     "peak": " chair"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.452,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic aside hyphen / French split 'é'",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Card flags the gate-closed regime (76% leak); peak tokens '-' x14 (Arabic), ' of', single Cyrillic/French letters. Probes: Arabic aside hyphens 0.57 and 0.43, 'censé' 0.70 and 0.69, Russian 'тих|о' 0.22-0.37; English hyphens and whole-token French participles near zero. A list, not one distinction; recorded as unclear.",
+ "selection": "random draw"
+}

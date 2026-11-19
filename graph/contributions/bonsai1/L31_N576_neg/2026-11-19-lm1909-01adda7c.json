@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-01adda7c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N576-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:14+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N576_neg/2026-11-19-lm1909-01adda7c.tests.json"
+ },
+ "label": "a slash fused with the first letter of the next word ('/c', '/s', '/g') in an X/Y alternative, when the word continues in the following token (doors/closing, first/surname, parent/guardian)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N576_neg/2026-11-19-lm1909-01adda7c.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.312,
+     "peak": "/c"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.627,
+     "peak": "/c"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.026,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.464,
+     "peak": "/g"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.215,
+     "peak": "/s"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.217,
+     "peak": "/g"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.156,
+     "peak": " long"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.38,
+     "peak": "/g"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.094,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.053,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.168,
+     "peak": "/or"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.265,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'/x' + rest of word",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card peak tokens '/c', '/s', '-c', '-s', 'c', 'g': a punctuation mark fused with a word's first letter, the word finishing in the next token. Probes: doors/closing 0.66, first/surname 0.40, parent/guardian 0.38, buyer/seller and north/south 0.25; slashes followed by a whole-word token (on/off, his/her, input/output, start/finish) 0.02. Depends on how the tokenizer splits each pair, which I could not check before registering.",
+ "selection": "random draw"
+}

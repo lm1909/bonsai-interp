@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-19-lm1909-96f43bbd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N3554+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T16:43:28+00:00",
+ "recipe": {
+  "toolchain_commit": "e2a50dedb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N3554_pos/2026-11-19-lm1909-96f43bbd.tests.json"
+ },
+ "label": "the pivot to the remainder or the substitute once a part has been set aside: 'Most'/'the rest' after a stated minority, 'replace/replacing' (them with…) after things to drop",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N3554_pos/2026-11-19-lm1909-96f43bbd.tests.json",
+   "prereg_commit": "e2a50dedb",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.756,
+     "peak": " Most"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.641,
+     "peak": " replacing"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.752,
+     "peak": " Most"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.209,
+     "peak": " rest"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.391,
+     "peak": " replace"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.318,
+     "peak": " Most"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.233,
+     "peak": " steel"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.277,
+     "peak": " rest"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.078,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " fresh"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " h"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " storage"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.037,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.092,
+     "peak": " steel"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " summer"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.355,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2a50dedb",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pivot to the rest / replacement",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' Most' x3, ',' x3, ';' x2, ' replace', ' replacing'; output suppresses ' other', ' remaining', ' others', ' else' (so it fires where the complement set is about to be named). Probes: 'Only ten percent … fresh. Most' 0.79, 'replacing them with' 0.80, 'replace them with' 0.40, '; the rest' 0.42; sentence-initial 'Most apples' 0.01; no-contrast controls 0.01.",
+ "selection": "random draw"
+}
