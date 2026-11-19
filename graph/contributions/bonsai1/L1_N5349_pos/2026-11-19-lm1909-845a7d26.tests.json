@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-845a7d26",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N5349+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:41:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N5349",
+   "pole": "+",
+   "label": "dense layer-1 pole; strongest on the document separator token <|endoftext|>",
+   "fire": [
+    "Thank you for reading and see you next week.<|endoftext|>The committee approved the new road on Tuesday.",
+    "All prices include tax and delivery.<|endoftext|>Scientists have found a new species of frog in Peru.",
+    "Call us today for a free quote.<|endoftext|>The river rose two metres after the weekend storms.",
+    "Leave a comment below if you enjoyed the recipe.<|endoftext|>Chapter one begins in a small town in Ohio.",
+    "We hope to see you at the next meeting.<|endoftext|>Interest rates were left unchanged by the central bank.",
+    "Follow the link to read the full report.<|endoftext|>My grandmother kept bees behind the house.",
+    "Offer ends on the last day of June.<|endoftext|>The team trained twice a day before the final.",
+    "Subscribe to our newsletter for more tips.<|endoftext|>Heavy snow closed the mountain pass for three days."
+   ],
+   "quiet": [
+    "Thank you for reading and see you next week. The committee approved the new road on Tuesday.",
+    "All prices include tax and delivery. Scientists have found a new species of frog in Peru.",
+    "Call us today for a free quote. The river rose two metres after the weekend storms.",
+    "Leave a comment below if you enjoyed the recipe. Chapter one begins in a small town in Ohio.",
+    "We hope to see you at the next meeting. Interest rates were left unchanged by the central bank.",
+    "Follow the link to read the full report. My grandmother kept bees behind the house.",
+    "Offer ends on the last day of June. The team trained twice a day before the final.",
+    "Subscribe to our newsletter for more tips. Heavy snow closed the mountain pass for three days."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; <|endoftext|>",
+ "unit_kind": "dense / positional",
+ "confidence": 0.3,
+ "notes": "card flags it dense (47% of tokens reach 0.1 of max); all 32 top examples peak on <|endoftext|>. Probe: 0.74 with the separator, about 0.5 on ordinary sentences, so the near misses are expected to fire."
+}

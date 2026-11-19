@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-d3d4c883",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N1937+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:41:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N1937",
+   "pole": "+",
+   "label": "dense layer-1 pole; strongest on the tokens 'complete' / 'prefer' right after an opening bracket and on ' permission'",
+   "fire": [
+    "The seller listed an old chess set (complete with its wooden box) for forty dollars.",
+    "Students must obtain permission from a parent before joining the trip.",
+    "Bring a warm jacket (preferably a waterproof one) for the evening walk.",
+    "The landlord gave us permission to paint the kitchen walls.",
+    "We found a vintage tent (complete with poles and pegs) in the attic.",
+    "Send the form by email (preferably before Friday) to the office.",
+    "Nobody may film inside the hall without permission from the director.",
+    "He restored a rusty bicycle (complete with a brass bell) over the winter."
+   ],
+   "quiet": [
+    "The seller listed an old chess set (along with its wooden box) for forty dollars.",
+    "Students must obtain a signature from a parent before joining the trip.",
+    "Bring a warm jacket (ideally a waterproof one) for the evening walk.",
+    "The landlord gave us a week to paint the kitchen walls.",
+    "We found a vintage tent (including poles and pegs) in the attic.",
+    "Send the form by email (if you can, before Friday) to the office.",
+    "Nobody may film inside the hall without a pass from the director.",
+    "He restored a rusty bicycle (and its brass bell) over the winter."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense; (complete, permission",
+ "unit_kind": "dense / positional",
+ "confidence": 0.3,
+ "notes": "card flags it dense (41% of tokens reach 0.1 of max). The test records the best token guess; ordinary sentences already reach 0.2-0.3."
+}

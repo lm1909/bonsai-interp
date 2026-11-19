@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-e7940810",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6198+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:41:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N6198",
+   "pole": "+",
+   "label": "retinoid / vitamin A context: the tokens right after a retinoid or vitamin A is named (tretinoin, isotretinoin, retinoids, vitamin A), also skin-treatment lists where a retinoid is the expected next word",
+   "fire": [
+    "For stubborn acne, many doctors start with tretinoin, a cream that speeds up skin cell turnover.",
+    "Pregnant women should avoid isotretinoin (sold under several brand names) because it causes birth defects.",
+    "Deficiency of vitamin A (common in parts of Africa and Asia) can lead to night blindness.",
+    "Sunscreen should be worn daily by anyone using retinoids, since these drugs make skin more sensitive.",
+    "The cream contains adapalene, a newer retinoid that tends to irritate the skin less.",
+    "Liver is extremely rich in vitamin A, or retinol, and should be eaten only in moderation.",
+    "Fine lines often respond well to prescription retinoids, glycolic acid and daily sun protection.",
+    "Her dermatologist switched her from tretinoin (which made her skin peel) to a gentler lotion."
+   ],
+   "quiet": [
+    "For stubborn heartburn, many doctors start with omeprazole, a pill that reduces stomach acid production.",
+    "Pregnant women should avoid warfarin (sold under several brand names) because it causes birth defects.",
+    "Deficiency of vitamin D (common in northern countries in winter) can lead to weak bones.",
+    "A helmet should be worn daily by anyone using scooters, since these vehicles offer little protection.",
+    "The tablet contains loratadine, a newer antihistamine that tends to cause less drowsiness.",
+    "Citrus fruit is extremely rich in vitamin C, or ascorbic acid, and can be eaten freely.",
+    "Sore throats often respond well to salt water gargles, warm tea and plenty of rest.",
+    "Her cardiologist switched her from atenolol (which made her feel tired) to a different pill."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "retinoid / vitamin A context",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "probe: fires just after retinoid names and on ' ret'; also on 'treated with ... or' in acne/eczema treatment lists (retinoid expected). Near misses are other vitamins and non-skin drugs."
+}

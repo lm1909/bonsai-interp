@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-9365c49d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N3038+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T17:41:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N3038",
+   "pole": "+",
+   "label": "the word-internal piece 'id' / 'idi' when it follows a piece ending in r (Mer|id|ional, plur|id|isciplinary, Far|idi, tr|idi|agonal, Eur|id|ice); '-id' endings and 'idian' stay quiet",
+   "fire": [
+    "My uncle read the Meridional every morning with his coffee.",
+    "Our flight home on Meridiana was delayed by three hours.",
+    "The clinic offers pluridisciplinary care for patients with chronic pain.",
+    "The cricket fans cheered when Afridi walked out to bat.",
+    "A lecture by Professor Faridi opened the conference on Monday.",
+    "The philosopher Floridi has written widely about the ethics of information.",
+    "The algorithm reduces the system to a tridiagonal form in two passes.",
+    "In the opera, Euridice dies a second time when Orfeo turns round."
+   ],
+   "quiet": [
+    "My uncle read the Guardian every morning with his coffee.",
+    "Our flight home across the meridian was delayed by three hours.",
+    "The clinic offers rapid and candid advice for patients with chronic pain.",
+    "The cricket fans cheered when David walked out to bat.",
+    "A lecture by Professor Hamid opened the conference on Monday.",
+    "The Floridian writer has written widely about the humid climate of the coast.",
+    "The algorithm reduces the system to a valid solid form in two passes.",
+    "In the opera, the timid hero dies a second time beside the pyramid."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "piece 'id' after r, mid-word",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "spelling-unit pole: it fires only where the tokenizer makes 'id'/'idi' its own piece (meridian and Floridian split as 'idian' and scored about 0.1)."
+}
