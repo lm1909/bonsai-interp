@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-4fa91c8d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N7060+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:53:56+00:00",
+ "recipe": {
+  "toolchain_commit": "1eac53d74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N7060_pos/2026-11-19-lm1909-4fa91c8d.tests.json"
+ },
+ "label": "gambling and speculative-trading activity terms (sports betting, forex trading, roulette, casino); the output promotes ' strategy' / ' system'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N7060_pos/2026-11-19-lm1909-4fa91c8d.tests.json",
+   "prereg_commit": "1eac53d74",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.99,
+     "peak": " betting"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.604,
+     "peak": " forex"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.471,
+     "peak": " roulette"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.132,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.757,
+     "peak": " betting"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.902,
+     "peak": " forex"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.622,
+     "peak": " sports"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.601,
+     "peak": " binary"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": " academy"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": " basics"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": " past"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " their"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": "ension"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.069,
+     "peak": " seating"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " is"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.613,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1eac53d74",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "betting / forex / casino terms",
+ "unit_kind": "sparse feature",
+ "confidence": 0.65,
+ "notes": "Probing: 'sports betting' 0.91, 'forex trading' 0.72, roulette sentence 0.65, Bet365 0.25, poker 0.13; football coach 0.12, marketing and bank rates under 0.01. Output direction promotes strategy/strategies/system/brokers.",
+ "selection": "random draw"
+}

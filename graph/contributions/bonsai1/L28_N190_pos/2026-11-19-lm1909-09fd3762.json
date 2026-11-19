@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-09fd3762",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N190+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:54:04+00:00",
+ "recipe": {
+  "toolchain_commit": "1eac53d74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N190_pos/2026-11-19-lm1909-09fd3762.tests.json"
+ },
+ "label": "circadian / body-clock context: text about daily biological rhythms, sleep-wake timing, melatonin and light-dark entrainment (fires on function tokens inside such text)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N190_pos/2026-11-19-lm1909-09fd3762.tests.json",
+   "prereg_commit": "1eac53d74",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.627,
+     "peak": "adian"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.228,
+     "peak": " cycle"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.673,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.262,
+     "peak": " still"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.343,
+     "peak": " than"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.609,
+     "peak": "atic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.61,
+     "peak": " with"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.191,
+     "peak": " shift"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " crossing"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.097,
+     "peak": " regulate"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.049,
+     "peak": " control"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " movements"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": " for"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.476,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1eac53d74",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "circadian rhythm context",
+ "unit_kind": "sparse feature",
+ "confidence": 0.7,
+ "notes": "Probing: melatonin/pineal 0.73, 24-hour cycle in darkness 0.48, circadian rhythm 0.44, internal clock 0.36, jet lag 0.35; heart, insulin and a drummer's rhythm at 0.10 or less. Output promotes entr-, phot-, mel-, pine-, zeit-.",
+ "selection": "random draw"
+}

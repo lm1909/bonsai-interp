@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-ba55560c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9593+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:54:10+00:00",
+ "recipe": {
+  "toolchain_commit": "1eac53d74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N9593_pos/2026-11-19-lm1909-ba55560c.tests.json"
+ },
+ "label": "plain-form (non-polite) sentence-final copula: Japanese だ / である, Korean -이다, as against polite です / 입니다",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N9593_pos/2026-11-19-lm1909-ba55560c.tests.json",
+   "prereg_commit": "1eac53d74",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.71,
+     "peak": "だ"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.802,
+     "peak": "である"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.673,
+     "peak": "である"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.783,
+     "peak": "だ"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.332,
+     "peak": "다"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.559,
+     "peak": "이다"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.676,
+     "peak": "だ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.66,
+     "peak": "である"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.195,
+     "peak": "彼"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.106,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.111,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.131,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.067,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.051,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.263,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.111,
+     "peak": "。"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.675,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1eac53d74",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "plain copula だ/である/이다",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probing: 이다 0.69, だ 0.59, である sentence 0.59, 俺 sentence 0.57; polite です versions under 0.10. The pole also fires on ' fuck' (0.88) and 俺, so the wider reading is blunt / plain register; this test covers the copula only.",
+ "selection": "random draw"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-38c24375",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N11122-",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:53:24+00:00",
+ "recipe": {
+  "toolchain_commit": "1eac53d74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N11122_neg/2026-11-19-lm1909-38c24375.tests.json"
+ },
+ "label": "capitalised first token of a geographic modifier (' South' in South African/South Korean, ' New', ' Cape') arriving late in a long expository sentence",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N11122_neg/2026-11-19-lm1909-38c24375.tests.json",
+   "prereg_commit": "1eac53d74",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.477,
+     "peak": " South"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.669,
+     "peak": " South"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.555,
+     "peak": " South"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.222,
+     "peak": " New"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.64,
+     "peak": " Cape"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.405,
+     "peak": " New"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.466,
+     "peak": " South"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.435,
+     "peak": " South"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": "ors"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.087,
+     "peak": " founded"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": " across"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": "If"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.041,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.04,
+     "peak": " band"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " supplier"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.061,
+     "peak": " south"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.472,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1eac53d74",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "late ' South'/' New' place modifier",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Short sentences with the same names stayed under 0.26 in probing; a long lead-in before 'or South African' reached 0.96, 'rural Cape Breton' 0.43, 'a New Zealand agency' only 0.10. Top examples also include other capitalised fragments (' M'&E, ' G'Ps, ' Ch'adic), so the label may be too narrow.",
+ "selection": "random draw"
+}

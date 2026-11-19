@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-88860a80",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N6225+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:54:15+00:00",
+ "recipe": {
+  "toolchain_commit": "1eac53d74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N6225_pos/2026-11-19-lm1909-88860a80.tests.json"
+ },
+ "label": "' hard' in 'hard working' / 'hard-working' / 'hardworking' as praise for a diligent person (not 'hard' = solid, and not other praise words)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N6225_pos/2026-11-19-lm1909-88860a80.tests.json",
+   "prereg_commit": "1eac53d74",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.56,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.548,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.395,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.439,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.499,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.541,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.424,
+     "peak": " hard"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.597,
+     "peak": " hard"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.189,
+     "peak": " honest"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " extremely"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.053,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": " industri"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " incredibly"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.106,
+     "peak": " curious"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.52,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1eac53d74",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' hard' of hard-working",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card flags the pole broad (1.8% of tokens reach 0.1 of max). Probing: 'hard working' 0.68, 'hard-codes' 0.28, 'hard to say' 0.22, 'fast and loose' 0.20, 'harder' 0.09, 'gone hard' 0.02, praise without 'hard' 0.07.",
+ "selection": "random draw"
+}

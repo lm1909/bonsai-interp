@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-19-lm1909-0e4e7342",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3663+",
+ "contributor": "lm1909",
+ "created": "2026-11-19T17:53:44+00:00",
+ "recipe": {
+  "toolchain_commit": "1eac53d74",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N3663_pos/2026-11-19-lm1909-0e4e7342.tests.json"
+ },
+ "label": "running Korean text: the space-prefixed first byte-piece of a Korean word, deep in a Korean paragraph (not Japanese, Chinese or other scripts)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N3663_pos/2026-11-19-lm1909-0e4e7342.tests.json",
+   "prereg_commit": "1eac53d74",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.46,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.035,
+     "peak": " 예"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.153,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.239,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.112,
+     "peak": "을"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.151,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.043,
+     "peak": " 보"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.422,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": "価"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": "宿"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "学习"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.023,
+     "peak": "，"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": "стро"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.023,
+     "peak": "思"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.152,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1eac53d74",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Korean word-start byte piece",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Top examples are mostly ' <partial byte>' tokens at Korean word starts, with a few Japanese and spaced-Chinese cases. Probing: short Korean sentences 0.08-0.14, two-sentence Korean passages 0.25-0.54; Japanese, Chinese, Russian, Greek and English all under 0.10. The - pole takes Japanese long-vowel katakana pieces.",
+ "selection": "random draw"
+}
