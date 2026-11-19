@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-96f43bbd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N3554+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N3554",
+   "pole": "+",
+   "label": "the pivot to the remainder or the substitute once a part has been set aside: 'Most'/'the rest' after a stated minority, 'replace/replacing' (them with…) after things to drop",
+   "fire": [
+    "Only a fifth of the town's waste is recycled. Most is buried in a landfill outside the valley.",
+    "Cut out fried snacks, replacing them with nuts or fresh fruit.",
+    "Just three of the paintings are originals. Most are copies made by students.",
+    "Three of the boats returned by noon; the rest stayed out until dark.",
+    "Take down the faded posters and replace them with the new season's schedule.",
+    "Barely a tenth of the letters were answered. Most were filed without a reply.",
+    "Remove the rusted bolts, replacing them with stainless steel ones.",
+    "One of the wells still gives clean water; the rest have run dry."
+   ],
+   "quiet": [
+    "A fifth of the town's waste is recycled at a plant outside the valley.",
+    "Fried snacks, nuts and fresh fruit were laid out on the table.",
+    "Three of the paintings are originals bought from a dealer in Vienna.",
+    "Three of the boats returned by noon with a full catch of herring.",
+    "Take down the faded posters and fold them into the storage box.",
+    "A tenth of the letters were answered by the mayor in person.",
+    "The rusted bolts were holding up the old steel gate.",
+    "One of the wells still gives clean water throughout the summer."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "pivot to the rest / replacement",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' Most' x3, ',' x3, ';' x2, ' replace', ' replacing'; output suppresses ' other', ' remaining', ' others', ' else' (so it fires where the complement set is about to be named). Probes: 'Only ten percent … fresh. Most' 0.79, 'replacing them with' 0.80, 'replace them with' 0.40, '; the rest' 0.42; sentence-initial 'Most apples' 0.01; no-contrast controls 0.01."
+}

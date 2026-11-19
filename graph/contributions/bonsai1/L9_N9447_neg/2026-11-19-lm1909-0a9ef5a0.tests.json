@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-0a9ef5a0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N9447-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N9447",
+   "pole": "-",
+   "label": "unclear: an inner piece of a split word in non-English text, seen on Arabic تخ|في|ض 'reduction' and German durch|aus; no shared meaning found",
+   "fire": [
+    "قررت الوزارة تخفيض الرسوم على الطلاب الجدد.",
+    "يهدف البرنامج إلى تخفيض عدد الحوادث في الطرق.",
+    "طلب العمال تخفيض ساعات العمل في الصيف.",
+    "أعلن المصرف تخفيض الفائدة على القروض الصغيرة.",
+    "تريد المدينة تخفيض استهلاك الماء في المنازل.",
+    "Der Plan ist durchaus sinnvoll, meinte die Lehrerin.",
+    "Man darf durchaus anderer Meinung sein als der Chef.",
+    "Das Buch ist durchaus lesenswert, auch für Kinder."
+   ],
+   "quiet": [
+    "قررت الوزارة زيادة الرسوم على الطلاب الجدد.",
+    "يهدف البرنامج إلى معرفة عدد الحوادث في الطرق.",
+    "طلب العمال تغيير ساعات العمل في الصيف.",
+    "أعلن المصرف رفع الفائدة على القروض الصغيرة.",
+    "تريد المدينة قياس استهلاك الماء في المنازل.",
+    "Der Plan ist sehr sinnvoll, meinte die Lehrerin.",
+    "Man darf gerne anderer Meinung sein als der Chef.",
+    "Das Buch ist wirklich lesenswert, auch für Kinder."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unclear (split-word piece)",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card: no dominant token (Korean '주' x3, Arabic shadda x3, ' to' x3, ' on' x2, 'في' inside تخفيض, 'aus' inside durchaus). Probes: تخفيض 0.54, durchaus 0.29-0.30, 'stomp on' 0.14, other 'on' 0.02-0.05. I did not find a distinction; this test records the two word pieces that reproduced."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-0d75f3e2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N7800-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N7800",
+   "pole": "-",
+   "label": "unit-test code at the point of the check: the indentation before an assert line, the ' ==' of an asserted comparison, and the comma between actual and expected in assertEqual",
+   "fire": [
+    "def test_multiply():\n    product = multiply(4, 6)\n    assert product == 24\n",
+    "def test_title(self):\n        book = make_book()\n        self.assertEqual(book.title, 'Dune')\n",
+    "def test_reverse():\n    out = reverse('abc')\n    assert out == 'cba'\n",
+    "def test_count(self):\n        items = load_items()\n        self.assertEqual(len(items), 3)\n",
+    "def test_strip():\n    cleaned = strip_tags('<b>hi</b>')\n    assert cleaned == 'hi'\n",
+    "def test_price(self):\n        order = build_order()\n        self.assertEqual(order.total, 40)\n",
+    "def test_lower():\n    word = lower('ABC')\n    assert word == 'abc'\n",
+    "def test_owner(self):\n        repo = open_repo()\n        self.assertEqual(repo.owner, 'alice')\n"
+   ],
+   "quiet": [
+    "def multiply(a, b):\n    product = a * b\n    return product\n",
+    "def make_book(self):\n        book = Book()\n        book.title = 'Dune'\n        return book\n",
+    "if mode == 'fast':\n    out = reverse('abc')\n    print(out)\n",
+    "def load_items(self):\n        items = read_file()\n        return items[:3]\n",
+    "while count == 0:\n    cleaned = strip_tags(line)\n    count = len(cleaned)\n",
+    "def build_order(self):\n        order = Order()\n        order.total = 40\n        return order\n",
+    "for word in words:\n    if word == 'abc':\n        print(word)\n",
+    "def open_repo(self):\n        repo = Repo()\n        repo.owner = 'alice'\n        return repo\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "test assertion comparison point",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Card: indentation x17 before assert/self.assert lines, ' ==' x6 in test comparisons, ',' x2 in assertEqual; as the - pole its output promotes ' correctly', ' expected', ' matches'. Probes: assert x == 5 in a test 0.45, assertEqual 0.49, 'return upper(..) == ..' in a test 0.56; '==' in a plain if 0.05; plain function 0.01."
+}

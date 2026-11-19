@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-e7ce4d4b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N6705-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L7/N6705",
+   "pole": "-",
+   "label": "the first name piece on a line of a column-aligned block in code (names padded with spaces so values line up), where the line's name differs from its neighbours' start; weak, with one outlier on a dash rule inside a print string",
+   "fire": [
+    "    host_name    = config.host,\n    is_secure    = config.is_secure,\n    is_cached    = config.is_cached,\n",
+    "lib_prefix   = 'lib'\nlib_suffix   = '.a'\nshlib_suffix = '.so'\n",
+    "    title           Label\n    caption         Label\n    dirname         EntryField\n",
+    "    group_id     = team.id,\n    is_owner     = team.is_owner,\n    is_member    = team.is_member,\n",
+    "src_ext      = '.c'\nhdr_ext      = '.h'\nshobj_ext    = '.os'\n",
+    "    colour          OptionMenu\n    border          OptionMenu\n    dirtree         ScrolledTree\n",
+    "    page_no      = reader.page,\n    is_first     = reader.is_first,\n    is_last      = reader.is_last,\n",
+    "bin_dir      = '/bin'\nlib_dir      = '/lib'\nshare_dir    = '/share'\n"
+   ],
+   "quiet": [
+    "host_name = config.host\nprint(host_name)\nreturn host_name\n",
+    "prefix = 'lib'\nsuffix = '.a'\nprint(prefix + suffix)\n",
+    "The title and the caption are both labels, and the folder name is an entry field.",
+    "group = team.id\nif group:\n    print(group)\n",
+    "ext = '.c'\nfor name in names:\n    print(name + ext)\n",
+    "The colour and the border use option menus, and the folder tree scrolls.",
+    "page = reader.page\nwhile page:\n    page = page.next\n",
+    "path = '/bin'\nprint(path)\nreturn path\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "line start in aligned code block",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Card: top example is the last '-' of a dash rule in a print string (9.8), the rest are 5.3-5.6 on the first token of a line in space-aligned blocks (' is'_admin, ' sh'obj_suffix, ' dir'list, '(?P') or in '#' rules. Probes: aligned blocks 0.29-0.36; a '#' rule 0.31; dash rule in a print string 0.81 but an '=' rule 0.01 and a comment dash rule 0.04; an aligned block of unrelated short names 0.13; unaligned code 0.06-0.09."
+}

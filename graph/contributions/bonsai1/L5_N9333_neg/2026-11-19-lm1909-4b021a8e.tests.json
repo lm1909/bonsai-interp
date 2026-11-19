@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-19-lm1909-4b021a8e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9333-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-19T16:33:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N9333",
+   "pole": "-",
+   "label": "non-English text: a hyphen attached to an Arabic word in a parenthetical aside, and the final 'é' of a French participle split by the tokenizer (cens|é); leaky, low-amplitude pole",
+   "fire": [
+    "ذهب الولد -وهو صغير- إلى السوق وحده.",
+    "قالت الأم -رحمها الله- إن الصبر مفتاح الفرج.",
+    "هذا الكتاب -كما قلنا- من أهم الكتب القديمة.",
+    "زار المدير -يعني مدير المدرسة- بيت الطالب.",
+    "كانت المدينة -في ذلك الوقت- صغيرة وهادئة.",
+    "Mon frère était censé arriver avant midi.",
+    "Le train est censé partir dans une heure.",
+    "Personne n'est censé ignorer la loi, dit le juge."
+   ],
+   "quiet": [
+    "ذهب الولد الصغير إلى السوق وحده.",
+    "قالت الأم إن الصبر مفتاح الفرج.",
+    "هذا الكتاب من أهم الكتب القديمة.",
+    "زار مدير المدرسة بيت الطالب أمس.",
+    "Mon frère devait arriver avant midi.",
+    "Le train va partir dans une heure.",
+    "The so-called shortcut added a half-hour to the trip.",
+    "A well-made chair lasts a long-term owner for decades."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code claude-fable-5-2",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Arabic aside hyphen / French split 'é'",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Card flags the gate-closed regime (76% leak); peak tokens '-' x14 (Arabic), ' of', single Cyrillic/French letters. Probes: Arabic aside hyphens 0.57 and 0.43, 'censé' 0.70 and 0.69, Russian 'тих|о' 0.22-0.37; English hyphens and whole-token French participles near zero. A list, not one distinction; recorded as unclear."
+}
