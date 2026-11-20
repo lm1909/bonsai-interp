@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-20-lm1909-4476770d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N839-",
+ "contributor": "lm1909",
+ "created": "2026-11-20T03:00:42+00:00",
+ "recipe": {
+  "toolchain_commit": "04973eb65",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N839_neg/2026-11-20-lm1909-4476770d.tests.json"
+ },
+ "label": "stock-market and exchange vocabulary (NYSE, Nasdaq, blue chip, small-cap, investing in markets)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N839_neg/2026-11-20-lm1909-4476770d.tests.json",
+   "prereg_commit": "04973eb65",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.369,
+     "peak": "SE"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.206,
+     "peak": " blue"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.358,
+     "peak": "-cap"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.383,
+     "peak": "daq"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.263,
+     "peak": " emerging"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.609,
+     "peak": "daq"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.867,
+     "peak": " large"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.102,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " housing"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " poor"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "Heavy"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "Travel"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " Boston"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "Teachers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " more"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.363,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "04973eb65",
+  "minutes": 9,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "stock exchange terms",
+ "unit_kind": "sparse feature",
+ "confidence": 0.5,
+ "selection": "random draw"
+}
