@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-20-lm1909-680e976a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N6991+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-20T02:40:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N6991",
+   "pole": "+",
+   "label": "a class or module name in Python code at the point where an attribute access follows (Post|.objects, tornado|.autoreload, Data|.objects)",
+   "fire": [
+    "    def test_count(self):\n        Post.objects.create(title='a')\n        self.assertEqual(Post.objects.count(), 1)",
+    "    def setUp(self):\n        self.user = User.objects.create(username='bob')\n        Profile.objects.create(user=self.user)",
+    "http_server.listen(options.port)\ntornado.autoreload.start()\ntornado.ioloop.IOLoop.current().start()",
+    "    def test_update(self):\n        instance = Item.objects.get(pk=1)\n        Item.objects.filter(pk=instance.pk).update(name='x')",
+    "        Data.objects.create(contributor=self.contributor)\n        Data.objects.create(contributor=self.other)",
+    "    def tearDown(self):\n        Comment.objects.all().delete()\n        Article.objects.all().delete()",
+    "    def save(self):\n        self.session.set_data(self.key, self.value)\n        self.session.commit()",
+    "    model = Order.objects.select_related('customer')\n    result = Order.objects.filter(paid=True)"
+   ],
+   "quiet": [
+    "    def test_count(self):\n        posts = ['a']\n        self.assertEqual(len(posts), 1)",
+    "    def setUp(self):\n        self.user = 'bob'\n        self.profile = None",
+    "port = 8080\nhost = 'localhost'\nprint(host, port)",
+    "    def test_update(self):\n        instance = {'pk': 1}\n        instance['name'] = 'x'",
+    "        contributors = [self.contributor]\n        contributors.append(self.other)",
+    "    def tearDown(self):\n        comments = []\n        articles = []",
+    "    def save(self):\n        key = self.key\n        value = self.value",
+    "    orders = []\n    result = [o for o in orders if o]"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "code class before attribute",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": ""
+}
