@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-20-lm1909-bd13e9a7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N2660-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-20T02:50:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N2660",
+   "pole": "-",
+   "label": "the '.abspath' piece of os.path.abspath in Python code",
+   "fire": [
+    "base = os.path.dirname(os.path.abspath(__file__))",
+    "    here = os.path.abspath(os.path.dirname(__file__))",
+    "config_path = os.path.abspath(args.config)",
+    "    root = os.path.abspath(os.path.join(here, '..'))",
+    "print(os.path.abspath('data/input.csv'))",
+    "    out_dir = os.path.abspath(opts.output)",
+    "sys.path.insert(0, os.path.abspath('../src'))",
+    "        target = os.path.abspath(path)"
+   ],
+   "quiet": [
+    "base = os.path.dirname(os.path.realpath(__file__))",
+    "    here = os.path.dirname(os.path.dirname(__file__))",
+    "config_path = os.path.expanduser(args.config)",
+    "    root = os.path.normpath(os.path.join(here, '..'))",
+    "print(os.path.basename('data/input.csv'))",
+    "    out_dir = os.path.join(opts.output, 'run')",
+    "sys.path.insert(0, os.path.realpath('../src'))",
+    "        target = os.path.exists(path)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "os.path.abspath",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "card top-1 shows .abspath x3; rest of top examples are scattered name pieces, so label may be partial"
+}
