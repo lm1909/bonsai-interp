@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-20-lm1909-6c2038c1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N4959-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-20T02:48:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N4959",
+   "pole": "-",
+   "label": "software-defined networking terms in code (OpenFlow, flow rules, ovs, SDN)",
+   "fire": [
+    "import ryu\n\nclass OF_Switch(app_manager.RyuApp):\n    OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]",
+    "def setUp(self):\n    self.ovs = OVSBridge('br0')\n    self.ovs.add_port('eth1')",
+    "    match = parser.OFPMatch(in_port=1)\n    self.add_flow(datapath, 1, match, actions)",
+    "The controller in a Software Defined Network (SDN) pushes flow rules to switches.",
+    "cmd = 'ovs-ofctl add-flow br0 priority=10,actions=drop'\nos.system(cmd)",
+    "    if proto == 0x85:\n        return 'flow'\n    if proto == 0x86:\n        return 'vpn'",
+    "rules = agent.get_flow_entries(table_id=0)\nfor r in rules:\n    print(r)",
+    "tc filter add dev eth0 parent 1: protocol ip u32 match u32 0 0 police rate 1mbit drop flowid :1"
+   ],
+   "quiet": [
+    "import django\n\nclass UserView(generic.ListView):\n    template_name = 'users.html'",
+    "def setUp(self):\n    self.db = Database('test')\n    self.db.add_table('users')",
+    "    query = session.query(User).filter_by(age=30)\n    self.add_user(session, 1, query, names)",
+    "The manager in a small office pushes new schedules to employees.",
+    "cmd = 'ls -la /home/user/docs'\nos.system(cmd)",
+    "    if code == 0x85:\n        return 'red'\n    if code == 0x86:\n        return 'blue'",
+    "rows = reader.get_rows(sheet_id=0)\nfor r in rows:\n    print(r)",
+    "cp /etc/hosts /tmp/hosts.bak && echo done > /tmp/log.txt"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "SDN / flow code",
+ "unit_kind": "contextual",
+ "confidence": 0.4
+}
