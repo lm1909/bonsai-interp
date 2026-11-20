@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-20-lm1909-210dfd78",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N561+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-20T02:44:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N561",
+   "pole": "+",
+   "label": "the first subword piece of a split adjective (often after a hyphen or comparative: less-ser|ious, time-p|oor, res|plendent), where the output predicts the adjective's completion",
+   "fire": [
+    "Officials said a less-serious collision had happened on the same line last spring.",
+    "The planner offers a package for time-poor couples who cannot organise everything.",
+    "Older athletes are prone to more-severe injuries and need longer to recover.",
+    "The leaves are broadly elliptic-oblanceolate with a slightly wavy margin.",
+    "Peacocks are famous for their resplendent plumage and loud calls.",
+    "The hikers crossed an unforgiving, sun-scorched plateau before dusk.",
+    "Critics found the sequel overwrought and needlessly convoluted in places.",
+    "The shop sold slightly mismatched, semi-transparent glass beads."
+   ],
+   "quiet": [
+    "Officials said a small collision had happened on the same line last spring.",
+    "The planner offers a package for busy couples who cannot organise everything.",
+    "Older athletes are prone to bad injuries and need longer to recover.",
+    "The leaves are broad and long with a slightly wavy margin.",
+    "Peacocks are famous for their bright plumage and loud calls.",
+    "The hikers crossed a hot, dry plateau before dusk.",
+    "Critics found the sequel long and slow in places.",
+    "The shop sold small, clear glass beads."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "split adjective piece",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "card: no single token; peaks on word-internal pieces of adjectives; output promotes adjective words (noisy, risky, messy). Near misses use whole-token common adjectives in the same frames."
+}

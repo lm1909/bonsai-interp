@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-20-lm1909-a7295c2d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2977-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-20T02:44:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N2977",
+   "pole": "-",
+   "label": "an opening parenthesis followed by a line break in code, starting a multi-line function call",
+   "fire": [
+    "def load(path):\n    data = pd.read_csv(\n        path,\n        index_col=0,\n    )\n    return data",
+    "    logger.info(\n        \"Saved %d rows to %s\", count, table\n    )",
+    "    entry = registry.async_get_or_create(\n        \"sensor\",\n        \"hue\",\n    )",
+    "        result = self.model.predict(\n            batch,\n            verbose=0,\n        )",
+    "    response = client.post(\n        url,\n        json=payload,\n    )",
+    "    plt.savefig(\n        out_file,\n        dpi=200,\n    )",
+    "    parser.add_argument(\n        \"--epochs\",\n        type=int,\n    )",
+    "        return np.concatenate(\n            [left, right],\n            axis=1,\n        )"
+   ],
+   "quiet": [
+    "def load(path):\n    data = pd.read_csv(path, index_col=0)\n    return data",
+    "    logger.info(\"Saved %d rows to %s\", count, table)",
+    "    entry = registry.async_get_or_create(\"sensor\", \"hue\")",
+    "        result = self.model.predict(batch, verbose=0)",
+    "    response = client.post(url, json=payload)",
+    "    plt.savefig(out_file, dpi=200)",
+    "    parser.add_argument(\"--epochs\", type=int)",
+    "        return np.concatenate([left, right], axis=1)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "'(' + newline in calls",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "card: '(\\n' x28 and ' (\\n' x3 of top 32, all multi-line Python calls. Near misses are the same calls written on one line."
+}
