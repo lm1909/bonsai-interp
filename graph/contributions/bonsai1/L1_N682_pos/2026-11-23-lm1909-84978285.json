@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-23-lm1909-84978285",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N682+",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:23:28+00:00",
+ "recipe": {
+  "toolchain_commit": "0028f4680",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N682_pos/2026-11-23-lm1909-84978285.tests.json"
+ },
+ "label": "dense gate-closed echo pole whose strongest peaks are ' Maine', Japanese '依', and ' UDP'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N682_pos/2026-11-23-lm1909-84978285.tests.json",
+   "prereg_commit": "0028f4680",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.64,
+     "peak": " Maine"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.671,
+     "peak": " Maine"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.759,
+     "peak": " Maine"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.716,
+     "peak": " Maine"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.629,
+     "peak": "依"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.832,
+     "peak": "依"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.351,
+     "peak": " over"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.356,
+     "peak": " UDP"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.465,
+     "peak": " Delaware"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.162,
+     "peak": " released"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.269,
+     "peak": " Georgia"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.368,
+     "peak": " Michigan"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.251,
+     "peak": "再生"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.401,
+     "peak": "工"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.351,
+     "peak": " over"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.244,
+     "peak": " HTTPS"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.655,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0028f4680",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense echo: ' Maine', '依', ' UDP'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.9,
+ "notes": "Card flags dense on both poles (+ pole: 16.0% >0.1 max, 1.37% >0.3 max, -x- echo 98%, max 0.20). Probing confirmed ' Maine' (0.67-0.70), Japanese '依' (0.99), and ' UDP' (0.45) peak highest, while ordinary English near misses still hit 0.38 on ' on'. Marked dense / positional per brief.",
+ "selection": "random draw"
+}

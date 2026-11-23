@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-23-lm1909-45b5a8ba",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N3614+",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:22:52+00:00",
+ "recipe": {
+  "toolchain_commit": "0028f4680",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N3614_pos/2026-11-23-lm1909-45b5a8ba.tests.json"
+ },
+ "label": "broad Layer-1 multilingual word-final subword cluster peaking on Russian '-х' and '-ение', Korean '용' (in 수용), Spanish '-o' (núcleo/efecto), and German '-ung'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N3614_pos/2026-11-23-lm1909-45b5a8ba.tests.json",
+   "prereg_commit": "0028f4680",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.442,
+     "peak": "х"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.249,
+     "peak": " после"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.521,
+     "peak": "ение"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.565,
+     "peak": "ение"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.981,
+     "peak": "용"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.95,
+     "peak": "용"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.702,
+     "peak": "o"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.139,
+     "peak": "ung"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.14,
+     "peak": "ет"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.178,
+     "peak": "ени"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.428,
+     "peak": "ер"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.344,
+     "peak": "ом"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.085,
+     "peak": "치"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.097,
+     "peak": "한"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.555,
+     "peak": "ó"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.075,
+     "peak": "hi"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.543,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0028f4680",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "multilingual suffixes (-х, -ение, 용, -o, -ung)",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "Broad weak L1 pole (max 0.52, 4.7% >0.1 max, -x- echo 68%). Probing and tokenizer inspection verified strong firing (0.34-1.02) when these exact subword tokens occur (-х, -ение, 용, -o, -ung) versus 0.08-0.26 in same-language near misses lacking them.",
+ "selection": "random draw"
+}

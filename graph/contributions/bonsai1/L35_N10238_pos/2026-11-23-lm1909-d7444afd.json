@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-23-lm1909-d7444afd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10238+",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:23:28+00:00",
+ "recipe": {
+  "toolchain_commit": "0028f4680",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N10238_pos/2026-11-23-lm1909-d7444afd.tests.json"
+ },
+ "label": "the token ' per' in 'perished' during disaster, war, or fatality accounts (Layer 35 output unit suppressing ' per'/'Per' logits)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N10238_pos/2026-11-23-lm1909-d7444afd.tests.json",
+   "prereg_commit": "0028f4680",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.107,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.282,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.263,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.179,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.265,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.235,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.405,
+     "peak": " per"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.078,
+     "peak": " per"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " white"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.054,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.043,
+     "peak": " had"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "Do"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " across"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.034,
+     "peak": " have"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " warned"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.249,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0028f4680",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' per' in 'perished' (suppresses ' per')",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Layer 35 output pole (max 676.00) whose direct logit effect strongly suppresses ' per', ' Per', 'per', ' permutation', ' perimeter'. Tokenizer splits ' perished' into [' per', 'ished'] while ' perish' is one token. Probing confirmed fatality contexts with 'perished' peak on ' per' (0.13-0.72) whereas synonyms (died, drowned, disappeared) and 'perish'/'perimeter' stay <= 0.04.",
+ "selection": "random draw"
+}

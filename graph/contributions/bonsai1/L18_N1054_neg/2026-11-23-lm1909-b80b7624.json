@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-23-lm1909-b80b7624",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1054-",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:23:15+00:00",
+ "recipe": {
+  "toolchain_commit": "0028f4680",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N1054_neg/2026-11-23-lm1909-b80b7624.tests.json"
+ },
+ "label": "population prevalence, familial heritability, or household-wide impact of chronic medical, psychiatric, neurodevelopmental, or addiction disorders",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N1054_neg/2026-11-23-lm1909-b80b7624.tests.json",
+   "prereg_commit": "0028f4680",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.484,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.298,
+     "peak": " disorder"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.663,
+     "peak": " families"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.586,
+     "peak": " families"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.279,
+     "peak": " prevalence"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.212,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.252,
+     "peak": " people"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.12,
+     "peak": " struggling"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.111,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.189,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": " history"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.427,
+     "peak": " families"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " since"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " storm"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.101,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.038,
+     "peak": " years"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.288,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0028f4680",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "population/family prevalence of disorders",
+ "unit_kind": "contextual",
+ "confidence": 0.8,
+ "notes": "Clean +g -u pole (max 18.88). Probing showed prevalence figures (1 in N children/adults), familial heritability (runs in families), general-population disease rates, and household-wide addiction impact fire 0.23-0.75 while non-medical population/family statistics stay 0.01-0.14.",
+ "selection": "random draw"
+}
