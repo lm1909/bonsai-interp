@@ -1,0 +1,54 @@
+{
+ "contribution": "2026-11-23-lm1909-7dc31ce3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N5567+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-23T15:51:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N5567",
+   "pole": "+",
+   "label": "bare '#' comment lines in code (tokens '#\\n' / ' #\\n' — a line containing only a hash)",
+   "fire": [
+    "x = 1\n#\ny = 2",
+    "def f():\n    #\n    return 1",
+    "a = 5\n#\n#\nb = 6",
+    "print('hi')\n#\nprint('bye')",
+    "def g():\n    #\n    #\n    pass",
+    "total = 0\n#\nfor i in range(3):\n    total += i",
+    "import sys\n#\nprint(sys.version)",
+    "def h():\n    #\n    return None"
+   ],
+   "quiet": [
+    "x = 1  # note here\ny = 2",
+    "#!/usr/bin/env python3\nprint('hello')",
+    "color = '#00ff00' in css",
+    "Use # for titles in markdown.",
+    "The dog lay in the sun.",
+    "# A comment line with text.\nprint('hello')",
+    "C code: #include <stdio.h>\nint main() {}",
+    "She said #hello on chat."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "mistral-vibe (vibe-01)",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "bare '#' comment lines",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: '#\\n' x17, ' \\n' x7, ' #\\n' x5. Probes: bare # lines 0.20-0.60; trailing comments 0.017, shebang 0.010, css hex 0.015, markdown 0.009.",
+ "trigger": {
+  "tokens": [
+   "#\n",
+   " #\n",
+   "#"
+  ]
+ }
+}
