@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-23-lm1909-dafe4aba",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N8322+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-23T15:51:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N8322",
+   "pole": "+",
+   "label": "negated, partial, or unsupported runtime, type, or data-structure properties in code and technical comments ('non-', 'un-', 'not supported/serializable', 'partially defined')",
+   "fire": [
+    "class JoinOptimizer:\n    def plan(self, expr):\n        # Reject queries that group on an uncomparable column type\n        return self.compile(expr)",
+    "from distributed.errors import NonIdempotentError\n# Native C++ closures are not picklable for transfer across worker queues.",
+    "class SyntaxTree:\n    # Non-leaf nodes hold operator labels, while leaf nodes store literal constants.\n    def children(self):\n        return self._nodes",
+    "def lower_loop(block):\n    # Early break and yield are currently not supported inside vectorized kernels.\n    return block.ops",
+    "def infer_layout(tensor):\n    # For partially known shapes, preserve symbolic dimensions until runtime.\n    return tensor.layout",
+    "def verify_zones(records):\n    # Trigger an alert if primary nameservers become unresolvable or stale.\n    return all(r.ok for r in records)",
+    "class StreamPipeline:\n    @property\n    def non_scalar_outputs(self):\n        \"\"\"Return all non-scalar outputs emitted by the stage.\"\"\"",
+    "def parse_tokens(grammar):\n    # Ensure all production rules remain non-ambiguous under one-token lookahead.\n    return grammar.table"
+   ],
+   "quiet": [
+    "class OrderService:\n    def compute_subtotal(self, cart):\n        # Sum line item prices and apply the regional VAT rate.\n        return sum(cart.prices)",
+    "from accounting.models import LedgerEntry\n# Archive monthly bank reconciliation statements to cold storage.",
+    "class DebianControl:\n    package = 'media-daemon'\n    depends = ['libavcodec', 'libssl']\n    conflicts = ['legacy-media']",
+    "def export_csv(rows, path):\n    # Write header names followed by each formatted customer row.\n    return write_rows(path, rows)",
+    "def format_address(user):\n    # Combine street, city, and postal code for shipping labels.\n    return f'{user.street}, {user.city}'",
+    "class SetupMetadata:\n    name = 'geo-tools'\n    install_requires = ['shapely>=2.0', 'pyproj']\n    tests_require = ['pytest']",
+    "def send_newsletter(subscribers, body):\n    # Queue weekly digest emails for all confirmed mailing-list members.\n    return mailer.enqueue(subscribers, body)",
+    "def resize_thumbnail(image, width):\n    # Scale uploaded avatars to standard profile dimensions.\n    return image.resize((width, width))"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "negated/partial code & type properties",
+ "unit_kind": "contextual",
+ "confidence": 0.85,
+ "notes": "Clean +x+ pole (max 70.00) contrasting with the - pole's software package dependency/installation metadata (Depends:, conflicts, obsoletes; logit effect suppresses ' depends', ' conflict', ' dependencies'). Probing confirmed negated/partial runtime & type comments/identifiers fire 0.36-1.02 while standard application logic and package manifests stay 0.02-0.11."
+}

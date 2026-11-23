@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-23-lm1909-ddaeba7d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5756+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-23T15:51:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N5756",
+   "pole": "+",
+   "label": "code string literals containing nested or escaped quotes, unbalanced punctuation/brackets, or split HTML/XML markup fragments",
+   "fire": [
+    "def render_banner():\n    markup = (\n        '<section><img src=\"https://cdn.site.net/'\n        'hero/photo.png\" alt=\"view\"></section>'\n    )\n    return markup",
+    "def strip_symbols(raw):\n    cleaned = re.sub(r'[(\\']', ' ', raw)\n    cleaned = re.sub(r'[\\',)]', ' ', cleaned)\n    return cleaned",
+    "def build_js_call(target, delay):\n    script = 'scheduleJob(\\'' + target + '\\', ' + str(delay) + ')'\n    return script",
+    "def report_missing(paths):\n    return \"Unknown entries: `%s'\" % \"', `\".join(paths)",
+    "def write_node(handler):\n    handler.startElement(\"entry\", {})\n    handler.characters(\"<raw&payload\")\n    handler.endElement(\"entry\")",
+    "def check_boundary(ch):\n    openers = '(,=:[?!&|'\n    return ch in openers",
+    "def format_ansi(code, text):\n    template = '\\033[%dm%s'\n    return template % (code, text)",
+    "def build_join_clause():\n    clause = (\n        'left_join=\"and_('\n        'table_a.id == table_b.parent_id)\"'\n    )\n    return clause"
+   ],
+   "quiet": [
+    "def render_banner():\n    markup = '<section><span>welcome</span></section>'\n    return markup",
+    "def strip_symbols(raw):\n    cleaned = re.sub(r'[a-z]+', ' ', raw)\n    cleaned = cleaned.strip()\n    return cleaned",
+    "def build_js_call(target, delay):\n    script = 'scheduleJob(' + target + ', ' + str(delay) + ')'\n    return script",
+    "def report_missing(paths):\n    return 'Unknown entries: ' + ', '.join(paths)",
+    "def write_node(handler):\n    handler.startElement('entry', {})\n    handler.characters('plain payload')\n    handler.endElement('entry')",
+    "def check_boundary(ch):\n    openers = '()[]{}'\n    return ch in openers",
+    "def format_ansi(code, text):\n    template = 'color-%d-%s'\n    return template % (code, text)",
+    "def build_join_clause():\n    clause = 'table_a.id == table_b.parent_id'\n    return clause"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unbalanced quotes/markup in code strings",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Gate-closed echo dominates (-x- echo 74%, max 8.31 vs - pole max 80.0 on parenthetical citation commas). Probing confirmed multi-line split markup strings, escaped quotes in regex/concatenation, and unbalanced punctuation/tag literals fire 0.27-0.57, while balanced single-line strings stay <= 0.08."
+}

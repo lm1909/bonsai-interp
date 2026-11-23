@@ -1,0 +1,56 @@
+{
+ "contribution": "2026-11-23-lm1909-ca58f327",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N6681+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-23T15:51:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N6681",
+   "pole": "+",
+   "label": "the split subword prefix tokens ' cons', ' Con', ' Cons', 'con', ' uncon', and Russian ' кон' (not whole-word tokens like ' consider' or ' consume')",
+   "fire": [
+    "Behavioral ecologists recorded alarm calls directed exclusively toward conspecifics entering the nesting grove.",
+    "Travelers who lose their passports overseas must schedule an emergency appointment with consular officers.",
+    "Contract law textbooks distinguish between consensual settlements and court-imposed remedies.",
+    "Anthropologists mapped patterns of consanguinity across isolated mountain parishes in the nineteenth century.",
+    "Three crates of rare botanical specimens were consigned to a climate-controlled cargo vessel.",
+    "Thanks to strict grazing bans, the limestone meadows remain remarkably well conserved.",
+    "Biographers celebrated the painter's stubborn nonconformist streak throughout her career in Paris.",
+    "В новом обзоре экономисты констатируют постепенное замедление промышленного экспорта."
+   ],
+   "quiet": [
+    "Behavioral ecologists always consider seasonal rainfall patterns when interpreting avian nesting data.",
+    "Endurance cyclists consume electrolyte drinks steadily throughout long mountain stages.",
+    "Urban commuters are increasingly conscious of air quality along congested highway corridors.",
+    "Civil engineers plan to construct an arched stone footbridge across the narrow gorge.",
+    "The provincial hospital network voted to consolidate two billing offices into one regional center.",
+    "Laboratory technicians maintained consistent humidity levels inside the seed vault all winter.",
+    "Astronomers tracked a constant radio signal emanating from the distant binary pulsar.",
+    "Emergency coordinators advised hikers to contact park rangers before attempting the northern ridge."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split prefix tokens ' cons' / 'con' / ' кон'",
+ "unit_kind": "lexical",
+ "confidence": 0.95,
+ "notes": "Clean +x+ Layer-33 spelling/prefix pole (max 114.50; direct logit effect suppresses ' conscious'/' ethical', opposite the - pole's ethical/health-conscious consumerism). Tokenizer check and probing confirmed split-piece words fire 0.53-1.14 while whole-word con-/cons- tokens (consider, consume, conscious, construct, consolidate, consistent) stay 0.003-0.10.",
+ "trigger": {
+  "pieces": [
+   "cons",
+   "con",
+   "-con",
+   "uncon",
+   "кон"
+  ]
+ }
+}

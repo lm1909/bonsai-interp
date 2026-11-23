@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-23-lm1909-d7444afd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10238+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-23T15:51:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N10238",
+   "pole": "+",
+   "label": "the token ' per' in 'perished' during disaster, war, or fatality accounts (Layer 35 output unit suppressing ' per'/'Per' logits)",
+   "fire": [
+    "Nearly all members of the Arctic survey team perished in the whiteout before supply sleds reached camp.",
+    "Several fishermen were feared to have perished after the trawler capsized off the rocky headland.",
+    "The entire crew of the merchant schooner had perished before rescuers located the drifting hull.",
+    "Dozens of trapped miners also perished in the tunnel collapse despite round-the-clock excavation efforts.",
+    "Many of the refugees fleeing across the mountain pass perished in the sudden November blizzard.",
+    "Four explorers were believed to have perished while crossing the flooded canyon during the monsoon.",
+    "Chroniclers recorded that most of the besieged garrison perished before relief columns arrived at dawn.",
+    "More than thirty passengers aboard the river steamer had perished when the boiler exploded near the pier."
+   ],
+   "quiet": [
+    "Nearly all members of the Arctic survey team died in the whiteout before supply sleds reached camp.",
+    "Several fishermen were feared to have drowned after the trawler capsized off the rocky headland.",
+    "The entire crew of the merchant schooner had vanished before rescuers located the drifting hull.",
+    "Dozens of trapped miners also succumbed in the tunnel collapse despite round-the-clock excavation efforts.",
+    "Many of the refugees fleeing across the mountain pass froze in the sudden November blizzard.",
+    "Four explorers were believed to have disappeared while crossing the flooded canyon during the monsoon.",
+    "Relief workers warned that stranded livestock might perish unless hay deliveries arrived before frost.",
+    "Surveyors walked the full perimeter of the harbor breakwater to inspect storm damage near the pier."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' per' in 'perished' (suppresses ' per')",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "Layer 35 output pole (max 676.00) whose direct logit effect strongly suppresses ' per', ' Per', 'per', ' permutation', ' perimeter'. Tokenizer splits ' perished' into [' per', 'ished'] while ' perish' is one token. Probing confirmed fatality contexts with 'perished' peak on ' per' (0.13-0.72) whereas synonyms (died, drowned, disappeared) and 'perish'/'perimeter' stay <= 0.04."
+}

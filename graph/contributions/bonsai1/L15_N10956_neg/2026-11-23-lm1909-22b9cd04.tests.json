@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-23-lm1909-22b9cd04",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N10956-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-23T15:51:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N10956",
+   "pole": "-",
+   "label": "initializing a Python variable to a default sentinel ('= None' or '= False') before a loop or conditional block (opposite the + pole's early-exit return/continue)",
+   "fire": [
+    "def locate_record(records, key):\n    found = None\n    for entry in records:\n        if entry.key == key:\n            found = entry\n            break\n    return found",
+    "def open_stream(target):\n    handle = None\n    if isinstance(target, str):\n        handle = open(target, 'r')\n    return handle",
+    "def lookup_session(pool, token):\n    active = None\n    try:\n        active = pool.fetch(token)\n    except KeyError:\n        pass\n    return active",
+    "def extract_title(lines):\n    title = None\n    for raw in lines:\n        if raw.startswith('# '):\n            title = raw[2:].strip()\n    return title",
+    "def resolve_owner(account, org=None):\n    owner = None\n    if org is not None:\n        owner = org.get_owner(account)\n    return owner",
+    "def has_valid_checksum(packets):\n    verified = False\n    for pkt in packets:\n        if pkt.checksum == pkt.expected:\n            verified = True\n    return verified",
+    "def scan_for_conflict(rules, candidate):\n    blocked = False\n    for rule in rules:\n        if rule.rejects(candidate):\n            blocked = True\n    return blocked",
+    "def check_quota(accounts, limit):\n    exceeded = False\n    for acc in accounts:\n        if acc.usage > limit:\n            exceeded = True\n    return exceeded"
+   ],
+   "quiet": [
+    "def locate_record(records, key):\n    matches = []\n    for entry in records:\n        if entry.key == key:\n            matches.append(entry)\n    return matches",
+    "def sum_weights(items):\n    total = 0\n    for item in items:\n        if item.enabled:\n            total += item.weight\n    return total",
+    "def build_index(entries):\n    table = {}\n    for item in entries:\n        table[item.code] = item.label\n    return table",
+    "def join_headers(lines):\n    output = ''\n    for raw in lines:\n        if raw.startswith('X-'):\n            output += raw\n    return output",
+    "def count_errors(events):\n    errors = 0\n    for ev in events:\n        if ev.level >= 40:\n            errors += 1\n    return errors",
+    "def validate_packet(pkt):\n    if pkt.size == 0:\n        return False\n    return pkt.checksum == pkt.expected",
+    "def filter_active(users):\n    active = []\n    for u in users:\n        if u.status == 'open':\n            active.append(u)\n    return active",
+    "def parse_port(raw):\n    if not raw.isdigit():\n        return -1\n    return int(raw)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "antigravity gemini-4-neon",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python default '= None' / '= False' init",
+ "unit_kind": "contextual",
+ "confidence": 0.9,
+ "notes": "Clean +g -u pole (max 14.19) directly contrasting with the + pole's early-exit guard statements (return, return None, return False, continue). Probing confirmed var = None and flag = False initializations fire 0.67-1.20 while = 0, = [], and early returns stay below 0.30."
+}
