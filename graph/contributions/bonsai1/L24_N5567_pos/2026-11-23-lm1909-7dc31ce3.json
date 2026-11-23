@@ -1,0 +1,160 @@
+{
+ "id": "2026-11-23-lm1909-7dc31ce3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N5567+",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:36:22+00:00",
+ "recipe": {
+  "toolchain_commit": "2a6573601",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N5567_pos/2026-11-23-lm1909-7dc31ce3.tests.json"
+ },
+ "label": "bare '#' comment lines in code (tokens '#\\n' / ' #\\n' — a line containing only a hash)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N5567_pos/2026-11-23-lm1909-7dc31ce3.tests.json",
+   "prereg_commit": "2a6573601",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.137,
+     "peak": "#\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.368,
+     "peak": " #\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.315,
+     "peak": "#\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.044,
+     "peak": "#\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.652,
+     "peak": " #\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.114,
+     "peak": "#\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.404,
+     "peak": "#\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.384,
+     "peak": " #\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.027,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": " titles"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " line"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.028,
+     "peak": ":"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": "She"
+    }
+   ],
+   "probed_before": {
+    "fire": 1,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.342,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "mistral-vibe (vibe-01)",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2a6573601",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "bare '#' comment lines",
+ "unit_kind": "lexical",
+ "confidence": "high",
+ "notes": "Card: '#\\n' x17, ' \\n' x7, ' #\\n' x5. Probes: bare # lines 0.20-0.60; trailing comments 0.017, shebang 0.010, css hex 0.015, markdown 0.009.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "#\n",
+   " #\n",
+   "#"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-23-lm1909-a63c97be",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N917-",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:35:59+00:00",
+ "recipe": {
+  "toolchain_commit": "2a6573601",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N917_neg/2026-11-23-lm1909-a63c97be.tests.json"
+ },
+ "label": "first-person 'I'/'my' in archaic or literary dialogue (Shakespeare-style: 'I pray thee', 'my servant', 'sirrah')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N917_neg/2026-11-23-lm1909-a63c97be.tests.json",
+   "prereg_commit": "2a6573601",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.678,
+     "peak": " speak"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.129,
+     "peak": " I"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.229,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.166,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.261,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.09,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.199,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.046,
+     "peak": " you"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " walks"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " think"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.075,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 4,
+    "quiet": 4,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "exploratory",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.182,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "mistral-vibe (vibe-01)",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2a6573601",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "archaic first person I/my",
+ "unit_kind": "contextual",
+ "confidence": "medium",
+ "notes": "The + pole peaks on modern ' I' x14; the - pole on ' I'/' my' in old/literary text. Probes: archaic 0.05-0.68, modern first person 0.001-0.07.",
+ "selection": "random draw"
+}

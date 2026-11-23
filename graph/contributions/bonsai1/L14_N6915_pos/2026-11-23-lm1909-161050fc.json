@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-23-lm1909-161050fc",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N6915+",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:35:42+00:00",
+ "recipe": {
+  "toolchain_commit": "2a6573601",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N6915_pos/2026-11-23-lm1909-161050fc.tests.json"
+ },
+ "label": "public speaking / addressing an audience: 'speaker', 'audience', 'attendees', 'applause', 'presenter', 'speech'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N6915_pos/2026-11-23-lm1909-161050fc.tests.json",
+   "prereg_commit": "2a6573601",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.283,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.48,
+     "peak": " attendees"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.28,
+     "peak": " applause"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.235,
+     "peak": " audience"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.313,
+     "peak": " attendees"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.312,
+     "peak": " audience"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.368,
+     "peak": " audience"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.427,
+     "peak": " attendees"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.099,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.208,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " posted"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.072,
+     "peak": " concert"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.192,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.214,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 2,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.312,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "mistral-vibe (vibe-01)",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2a6573601",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "speaker/audience/attendees",
+ "unit_kind": "contextual",
+ "confidence": "high",
+ "notes": "Probes: speaker/audience/attendees/applause/presenter sentences 0.15-0.48; controls 0.004-0.09.",
+ "selection": "random draw"
+}

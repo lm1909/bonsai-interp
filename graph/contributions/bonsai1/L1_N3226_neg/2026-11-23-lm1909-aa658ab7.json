@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-23-lm1909-aa658ab7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N3226-",
+ "contributor": "lm1909",
+ "created": "2026-11-23T16:36:00+00:00",
+ "recipe": {
+  "toolchain_commit": "2a6573601",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N3226_neg/2026-11-23-lm1909-aa658ab7.tests.json"
+ },
+ "label": "the token ' too' and ' of' in 'actors of the ...' (broad early-layer unit; best guess: short function words 'too'/'of')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N3226_neg/2026-11-23-lm1909-aa658ab7.tests.json",
+   "prereg_commit": "2a6573601",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.832,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.832,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.832,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.832,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.133,
+     "peak": " too"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.205,
+     "peak": " too"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.156,
+     "peak": " too"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.151,
+     "peak": " too"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.035,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.102,
+     "peak": " drank"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " ruled"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": " very"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.35,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.151,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.053,
+     "peak": " of"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.914,
+    "median_fire": 0.518,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "mistral-vibe (vibe-01)",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "2a6573601",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'too' / 'actors of the'",
+ "unit_kind": "lexical",
+ "confidence": "low",
+ "notes": "Card peaks: ' too' x10, ' of' x2. Probes: 'The actors of the X' 0.83, ' too' sentences 0.13-0.25, other 'of the' sentences 0.03-0.15. Broad flag (2.7%).",
+ "selection": "random draw"
+}
