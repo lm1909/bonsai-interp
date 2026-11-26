@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-cf483d59",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N4306+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:22:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N4306",
+   "pole": "+",
+   "label": "in Python, the variable being tested in an if condition (if dups.any():, if image.shape[0] == 3:)",
+   "fire": [
+    "def clean(df):\n    nulls = df.isnull()\n    if nulls.any():\n        df = df.fillna(0)\n",
+    "    frame = read_frame(f)\n    frame = frame.astype(float)\n    if frame.ndim == 2:\n        return frame\n",
+    "def check(arr):\n    mask = arr < 0\n    if mask.sum() > 0:\n        raise ValueError('negative')\n",
+    "    labels = model.predict(X)\n    if labels.size == 0:\n        return None\n",
+    "    keys = table.keys()\n    missing = set(keys) - set(cols)\n    if missing:\n        print(missing)\n",
+    "    img = Image.open(path)\n    img = np.asarray(img)\n    if img.shape[-1] == 4:\n        img = img[..., :3]\n",
+    "    dupes = s.duplicated()\n    if dupes.any():\n        s = s[~dupes]\n",
+    "    ts = series.index\n    if ts.is_monotonic_increasing:\n        print('sorted')\n"
+   ],
+   "quiet": [
+    "def clean(df):\n    df = df.fillna(0)\n    return df.reset_index()\n",
+    "    frame = read_frame(f)\n    frame = frame.astype(float)\n    return frame\n",
+    "def scale(arr):\n    arr = arr * 2\n    return arr / 3\n",
+    "    labels = model.predict(X)\n    print('done predicting')\n    return None\n",
+    "    keys = table.keys()\n    cols = list(keys)\n    print(cols)\n",
+    "    img = Image.open(path)\n    img = np.asarray(img)\n    return img\n",
+    "    s = s.sort_values()\n    s = s.drop_duplicates()\n    return s\n",
+    "    ts = series.index\n    print('index loaded')\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "variable tested in if",
+ "unit_kind": "contextual",
+ "confidence": 0.45
+}

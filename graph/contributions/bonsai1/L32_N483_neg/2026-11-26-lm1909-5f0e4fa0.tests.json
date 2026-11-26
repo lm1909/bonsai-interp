@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5f0e4fa0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N483-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:22:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N483",
+   "pole": "-",
+   "label": "a split-off word-initial ' r' / ' R' piece: the start of an r-word the tokenizer breaks into ' r' + rest (r|ations, r|avioli, r|ansacked)",
+   "fire": [
+    "During the long siege the garrison survived on half rations for weeks.",
+    "For dinner my grandmother served homemade ravioli with sage butter.",
+    "When we came home we found that burglars had ransacked the flat.",
+    "The teacher struggled to calm a class of rambunctious eight-year-olds.",
+    "After the hike everyone was ravenous and ate in silence.",
+    "The museum's new wing is devoted to fossil raptors from Mongolia.",
+    "We climbed a rickety ladder up to the hayloft.",
+    "The orchestra closed the concert with a Hungarian rhapsody."
+   ],
+   "quiet": [
+    "During the long siege the garrison survived on boiled rice for weeks.",
+    "For dinner my grandmother served homemade rabbit stew with sage butter.",
+    "When we came home we found that burglars had broken into the flat.",
+    "The teacher struggled to calm a class of restless eight-year-olds.",
+    "After the hike everyone was really hungry and ate in silence.",
+    "The museum's new wing is devoted to fossil reptiles from Mongolia.",
+    "We climbed a wooden ladder up to the hayloft.",
+    "The orchestra closed the concert with a Hungarian dance."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off initial r",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Near misses keep r-words that are whole tokens (rice, rabbit, restless, really, reptiles) or swap the word; only the split ' r' piece is removed. Tokenization checked with the model's tokenizer.json."
+}

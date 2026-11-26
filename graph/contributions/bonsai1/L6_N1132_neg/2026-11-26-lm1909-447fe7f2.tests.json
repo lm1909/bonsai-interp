@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-447fe7f2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N1132-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:22:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N1132",
+   "pole": "-",
+   "label": "in code, the name piece right after a leading underscore or short prefix in an identifier (_|data, _|w, lib|ctx, mock|_get)",
+   "fire": [
+    "        node = tree.root()\n        _node = node.copy()\n        _node.reset()",
+    "        req = Request(url)\n        _req = req.prepare()\n        _req.send()",
+    "    def visit(ctx, subctx, tree):\n        return subctx",
+    "        s = Session()\n        _s = s.open()\n        _s.close()",
+    "        conf = load_conf()\n        _conf = conf['main']\n        print(_conf)",
+    "        with patch.object(api, 'fetch') as mock_fetch:\n            mock_fetch.return_value = 1",
+    "        btn = Widgets.Label()\n        _btn = btn.get_widget()\n        _btn.show()",
+    "    def render(ctx, libctx, page):\n        return libctx.draw(page)"
+   ],
+   "quiet": [
+    "        node = tree.root()\n        copy = node.copy()\n        copy.reset()",
+    "        req = Request(url)\n        prepared = req.prepare()\n        prepared.send()",
+    "    def visit(context, tree):\n        return tree",
+    "        s = Session()\n        handle = s.open()\n        handle.close()",
+    "        conf = load_conf()\n        main = conf['main']\n        print(main)",
+    "        with patch.object(api, 'fetch') as fetcher:\n            fetcher.return_value = 1",
+    "        btn = Widgets.Label()\n        widget = btn.get_widget()\n        widget.show()",
+    "    def render(context, page):\n        return context.draw(page)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "identifier after _ prefix",
+ "unit_kind": "contextual",
+ "confidence": 0.45
+}
