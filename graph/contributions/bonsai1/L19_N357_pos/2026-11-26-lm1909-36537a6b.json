@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-36537a6b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N357+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:51:16+00:00",
+ "recipe": {
+  "toolchain_commit": "bd72866ed",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N357_pos/2026-11-26-lm1909-36537a6b.tests.json"
+ },
+ "label": "the word introducing what a change depends on, after a change verb ('varies depending on', 'changes based on')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N357_pos/2026-11-26-lm1909-36537a6b.tests.json",
+   "prereg_commit": "bd72866ed",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.167,
+     "peak": " depending"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.26,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.115,
+     "peak": " depending"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.295,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.285,
+     "peak": " depending"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.055,
+     "peak": " how"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.23,
+     "peak": " calculated"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.07,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.108,
+     "peak": " vary"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.04,
+     "peak": " so"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.102,
+     "peak": " fall"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.235,
+     "peak": " differ"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": " autumn"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.23,
+     "peak": " calculated"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.031,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.199,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd72866ed",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "change depends on",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card top: 'can change based on', 'doubled after', 'easier depending on', 'change depending on'. Near misses keep the change verb but drop the conditioning phrase.",
+ "selection": "random draw"
+}

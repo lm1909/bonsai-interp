@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-6a828211",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1250-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:51:00+00:00",
+ "recipe": {
+  "toolchain_commit": "bd72866ed",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N1250_neg/2026-11-26-lm1909-6a828211.tests.json"
+ },
+ "label": "first piece of a capitalized word the tokenizer splits (' Par'adies, ' Car'ibou, ' Pro'gnose)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N1250_neg/2026-11-26-lm1909-6a828211.tests.json",
+   "prereg_commit": "bd72866ed",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.766,
+     "peak": " Par"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.457,
+     "peak": " Car"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.496,
+     "peak": " Pro"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.477,
+     "peak": " Kar"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.191,
+     "peak": " Par"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.445,
+     "peak": " Car"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.052,
+     "peak": " Par"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.587,
+     "peak": " Par"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.202,
+     "peak": " Spiel"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " rein"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.141,
+     "peak": " Ergebn"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.09,
+     "peak": " hol"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " Peru"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.065,
+     "peak": "ds"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.136,
+     "peak": "ül"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.467,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd72866ed",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "capitalized split-word start",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card: ' Par', ' Per', ' Pro', ' Car', ' Kar' as starts of split words. Probe: Paradies 0.77, Caribou 0.56, Prognosen 0.43; whole-token 'Paris' 0.007. Near misses use capitalized words that are one token.",
+ "selection": "random draw"
+}

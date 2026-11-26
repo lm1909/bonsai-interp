@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-26-lm1909-12cd7795",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N6941-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:51:22+00:00",
+ "recipe": {
+  "toolchain_commit": "bd72866ed",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N6941_neg/2026-11-26-lm1909-12cd7795.tests.json"
+ },
+ "label": "the token ' non' as a word prefix (non-native, nonempty, non-stop) (dense pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N6941_neg/2026-11-26-lm1909-12cd7795.tests.json",
+   "prereg_commit": "bd72866ed",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.561,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.444,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.543,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.505,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.555,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.602,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.767,
+     "peak": " non"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.653,
+     "peak": " non"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.204,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.139,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.219,
+     "peak": "G"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.26,
+     "peak": " difficult"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.294,
+     "peak": "Return"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.29,
+     "peak": " factory"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.201,
+     "peak": " charity"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.164,
+     "peak": " soft"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.558,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd72866ed",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "prefix ' non'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags dense (22% of tokens reach 0.1 of max) and gate-closed regime 100%; ' non' dominates the top 32. Records the density honestly.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " non",
+   "non"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-b2f1a12c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N8153-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:50:33+00:00",
+ "recipe": {
+  "toolchain_commit": "bd72866ed",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N8153_neg/2026-11-26-lm1909-b2f1a12c.tests.json"
+ },
+ "label": "head noun closing a multi-word category or index name in tables and metadata (Target Age Group, PPP index)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N8153_neg/2026-11-26-lm1909-b2f1a12c.tests.json",
+   "prereg_commit": "bd72866ed",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.596,
+     "peak": " Group"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.451,
+     "peak": " Index"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.258,
+     "peak": " Group"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.221,
+     "peak": " Index"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.086,
+     "peak": " file"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.428,
+     "peak": " Index"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.158,
+     "peak": " |"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.214,
+     "peak": " index"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.179,
+     "peak": " weeks"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.213,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.159,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.148,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.097,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.429,
+     "peak": " statistics"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.11,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.233,
+     "peak": " countries"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.703,
+    "median_fire": 0.239,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd72866ed",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "category-name head noun",
+ "unit_kind": "contextual",
+ "confidence": 0.25,
+ "notes": "Card flags broad (9%) and gate-closed regime 99%; no single token. Probe: ' Group' in a table header and ' index' in 'PPP index' fire.",
+ "selection": "random draw"
+}

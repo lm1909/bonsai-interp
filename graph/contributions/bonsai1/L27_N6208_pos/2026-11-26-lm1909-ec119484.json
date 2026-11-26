@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-ec119484",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N6208+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:51:21+00:00",
+ "recipe": {
+  "toolchain_commit": "bd72866ed",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N6208_pos/2026-11-26-lm1909-ec119484.tests.json"
+ },
+ "label": "' made' and preparation participles in food and recipe descriptions (bread made in-house, drizzled with sauce)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N6208_pos/2026-11-26-lm1909-ec119484.tests.json",
+   "prereg_commit": "bd72866ed",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.39,
+     "peak": " made"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.483,
+     "peak": "led"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.387,
+     "peak": " made"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.261,
+     "peak": "led"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.273,
+     "peak": " made"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.35,
+     "peak": "renched"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.293,
+     "peak": " made"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.235,
+     "peak": " glazed"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " pasta"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.101,
+     "peak": " caramel"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.047,
+     "peak": "ola"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.36,
+     "peak": " toasted"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " bowl"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.306,
+     "peak": " roasted"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.042,
+     "peak": " soy"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.322,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bd72866ed",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "food preparation verb",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card top: 'made from whatever you have left', 'made in their in-house bakery', 'drizzled', 'cumin', 'jewel tones'. Probe: bread 'made' 0.34, 'drizzled' 0.33, car 'made' 0.18, report 'made' 0.05.",
+ "selection": "random draw"
+}
