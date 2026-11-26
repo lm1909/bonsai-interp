@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-d03e8726",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N9380-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N9380",
+   "pole": "-",
+   "label": "the parameter name 'q' (search query) in URLs and code",
+   "fire": [
+    "    url = 'https://example.org/search?q=' + quote(term)",
+    "Open http://shop.local/products?q=boots&page=2 in the browser.",
+    "    term = request.GET.get('q', '')",
+    "    params = {'q': keyword, 'limit': 20}",
+    "curl \"https://api.example.com/v1/find?q=paris\"",
+    "    resp = client.get('/admin/users/?q=smith')",
+    "<form action=\"/search\"><input name=\"q\" type=\"text\"></form>",
+    "    query = flask.request.args.get('q')"
+   ],
+   "quiet": [
+    "    url = 'https://example.org/search?term=' + quote(term)",
+    "Open http://shop.local/products?page=2&sort=price in the browser.",
+    "    term = request.GET.get('search', '')",
+    "    params = {'keyword': keyword, 'limit': 20}",
+    "curl \"https://api.example.com/v1/find?city=paris\"",
+    "    resp = client.get('/admin/users/?name=smith')",
+    "<form action=\"/search\"><input name=\"term\" type=\"text\"></form>",
+    "    query = flask.request.args.get('search')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "query param q",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "Top examples: ?q= in URLs, request.args.get('q'), 'q': term. Also Spanish 'q' (que) abbreviation."
+}
