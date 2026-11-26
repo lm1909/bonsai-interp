@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-9fbce227",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2816-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T17:11:01+00:00",
+ "recipe": {
+  "toolchain_commit": "e2282c51f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N2816_neg/2026-11-26-lm1909-9fbce227.tests.json"
+ },
+ "label": "a population compared with its own past (people are healthier now, patients are waiting longer): the verb or comparative in a then-versus-now trend",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N2816_neg/2026-11-26-lm1909-9fbce227.tests.json",
+   "prereg_commit": "e2282c51f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.381,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.418,
+     "peak": " far"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.354,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.47,
+     "peak": " spending"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.526,
+     "peak": "ier"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.406,
+     "peak": " earning"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.659,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.415,
+     "peak": " reading"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.075,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.042,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " retirees"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.029,
+     "peak": " grow"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.13,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.046,
+     "peak": " read"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.416,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2282c51f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "then-versus-now trend",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: tops are trend statements (fat cells were now smaller, Americans are living longer, people are healthier); the output promotes comparatives (the + pole suppresses more/better/longer). Probe: trend 0.56-0.65, plain 'the cars are parked' 0.06, object-vs-object comparison 0.16.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-189313f1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N6941+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T17:10:21+00:00",
+ "recipe": {
+  "toolchain_commit": "e2282c51f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N6941_pos/2026-11-26-lm1909-189313f1.tests.json"
+ },
+ "label": "records-system nouns in application or service instructions (database, search, upload a photo, public file, referee)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N6941_pos/2026-11-26-lm1909-189313f1.tests.json",
+   "prereg_commit": "e2282c51f",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.361,
+     "peak": " photo"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.809,
+     "peak": " database"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.352,
+     "peak": " search"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.552,
+     "peak": " public"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.321,
+     "peak": " list"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.485,
+     "peak": " volunteer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.294,
+     "peak": " archive"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.21,
+     "peak": " your"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.451,
+     "peak": " test"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.055,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": "Classes"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.305,
+     "peak": " least"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.089,
+     "peak": " May"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.254,
+     "peak": " hours"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": " pen"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.356,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2282c51f",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "application records nouns",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card: database, Referee, public file, age limit, search in application/admissions listings; the - pole takes information/deadlines/dates in the same genre. Probe: photo 0.64, database 0.59, search 0.42, age limit 0.10. Weak pole (max 6).",
+ "selection": "random draw"
+}

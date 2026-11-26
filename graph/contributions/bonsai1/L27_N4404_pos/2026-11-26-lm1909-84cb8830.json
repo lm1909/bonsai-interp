@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-26-lm1909-84cb8830",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N4404+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T17:11:30+00:00",
+ "recipe": {
+  "toolchain_commit": "e2282c51f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N4404_pos/2026-11-26-lm1909-84cb8830.tests.json"
+ },
+ "label": "the verb 'need' (need not, needn't, need only), not the noun 'need'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N4404_pos/2026-11-26-lm1909-84cb8830.tests.json",
+   "prereg_commit": "e2282c51f",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.408,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.677,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.027,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.944,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.891,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.357,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.381,
+     "peak": " need"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.319,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " understand"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "Anyone"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " feel"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " needs"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " school"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.394,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e2282c51f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verb 'need'",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Card: ' need' is 29 of the top 32, mostly modal uses (need not, needn't, one need only). Probe: verb 0.14-0.39, noun 'need' ~0.00. Fire uses modal forms.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "need"
+  ]
+ }
+}
