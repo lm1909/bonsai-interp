@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-613dac69",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N8319-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:07:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N8319",
+   "pole": "-",
+   "label": "broad weak unit; best guess: the noun ' sink' in 'under the sink' and sentence-final ' here' in a question",
+   "fire": [
+    "She keeps the bleach in a bucket under the sink.",
+    "We found a family of mice living under the bathroom sink.",
+    "The plumber crawled under the sink to fix the leak.",
+    "Is there something I am not seeing here?",
+    "What exactly are we doing here?",
+    "Can anyone explain what went wrong here?",
+    "He hid the spare key under the sink in the garage.",
+    "Am I the only one confused here?"
+   ],
+   "quiet": [
+    "She keeps the bleach in a bucket in the garage.",
+    "We found a family of mice living in the bathroom wall.",
+    "The plumber crawled into the attic to fix the leak.",
+    "Is there something I am not seeing in this picture?",
+    "What exactly are we doing tomorrow?",
+    "Can anyone explain what went wrong yesterday?",
+    "He hid the spare key behind a loose brick.",
+    "Am I the only one who is confused?"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' sink' / final ' here'",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card flags broad (1.8% of tokens reach 0.1 of max), no single token. Probe: 'under the sink' 0.15-0.34, 'missing ... here?' 0.20-0.23, but filler sentences also reached 0.13-0.32. Expected to fail."
+}

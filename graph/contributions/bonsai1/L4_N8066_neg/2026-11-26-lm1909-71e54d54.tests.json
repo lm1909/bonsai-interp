@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-26-lm1909-71e54d54",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N8066-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:07:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N8066",
+   "pole": "-",
+   "label": "the subword 'ün' in German M-ün- words split by the tokenizer (Münster, Münchner, mündlich, Münzen)",
+   "fire": [
+    "The peace treaty was signed in Münster in 1648.",
+    "Last year she visited the Münsterland by bicycle.",
+    "Er bestand die mündliche Prüfung mit Bravour.",
+    "Im Spiel sammelt man Münzen und Sterne.",
+    "Viele Münchner fahren am Wochenende in die Berge.",
+    "The old coin dealer sold rare Münzen from Prussia.",
+    "Die Universität Münster hat eine große Bibliothek.",
+    "Bitte bewerben Sie sich mit guten mündlichen Englischkenntnissen."
+   ],
+   "quiet": [
+    "The peace treaty was signed in Osnabrück in 1648.",
+    "Last year she visited the Rhineland by bicycle.",
+    "Er bestand die schriftliche Prüfung mit Bravour.",
+    "Im Spiel sammelt man Punkte und Sterne.",
+    "Viele Kölner fahren am Wochenende in die Eifel.",
+    "The old dealer sold rare stamps from Prussia.",
+    "Die Universität Göttingen hat eine große Bibliothek.",
+    "Bitte bewerben Sie sich mit guten schriftlichen Englischkenntnissen."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "subword 'ün' (Mün-)",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "Card top 32: 'ün' x12, all M-ün- words. Probe: 'München' is a single token and fires weakly (0.20); Münster/mündlich/Münzen/Münchner 0.59-0.91; other ü words (Düsseldorf, Lübeck, Müller) <= 0.16.",
+ "trigger": {
+  "pieces": [
+   "ün",
+   "ünd"
+  ]
+ }
+}

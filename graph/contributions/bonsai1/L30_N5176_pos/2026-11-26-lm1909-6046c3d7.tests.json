@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-6046c3d7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N5176+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:07:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N5176",
+   "pole": "+",
+   "label": "argument and function-word syntax inside genomics / bioinformatics code and data descriptions (source='RefSeq', name given by NCBI)",
+   "fire": [
+    "# for each transcript, take the gene symbol given by HGNC and print it",
+    "    record.save(handle=out, db='Ensembl', style='gff3')",
+    "# if no reference genome is supplied, use hg38 by default",
+    "    exons = load_bed(path, chrom='chr7', strand='+')",
+    "# convert the alignment of all orthologs into a phylip input for RAxML",
+    "    for variant in vcf_reader:\n        print(variant.CHROM, variant.POS, file=fh)",
+    "# map each protein ID to the organism name given by UniProt",
+    "    seq = SeqIO.read(fasta_path, format='fasta')"
+   ],
+   "quiet": [
+    "# for each customer, take the account name given by Stripe and print it",
+    "    invoice.save(handle=out, db='Postgres', style='csv')",
+    "# if no config file is supplied, use settings.ini by default",
+    "    rows = load_csv(path, sheet='Q3', order='+')",
+    "# convert the list of all orders into a json input for Kafka",
+    "    for order in csv_reader:\n        print(order.ID, order.TOTAL, file=fh)",
+    "# map each employee ID to the department name given by Workday",
+    "    doc = yaml.safe_load(config_path)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "syntax in genomics code",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: ' use', ' by', \"='\", ' for' in gene-annotation scripts. Probe: genomics code 0.60-0.99, identical non-bio code 0.002-0.005, genome prose 0.03-0.52."
+}
