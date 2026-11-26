@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-99815c75",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N1107+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:27:51+00:00",
+ "recipe": {
+  "toolchain_commit": "aaabdc213",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N1107_pos/2026-11-26-lm1909-99815c75.tests.json"
+ },
+ "label": "Japanese particles も and が (and ことが / のが) before a predicate such as できる or 可能",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N1107_pos/2026-11-26-lm1909-99815c75.tests.json",
+   "prereg_commit": "aaabdc213",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.009,
+     "peak": "ま"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.398,
+     "peak": "も"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.329,
+     "peak": "のが"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.239,
+     "peak": "安心"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.132,
+     "peak": "く"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.379,
+     "peak": "も"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.413,
+     "peak": "簡単に"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.12,
+     "peak": "が"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.091,
+     "peak": "の"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": "は"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.247,
+     "peak": "で"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.074,
+     "peak": "た"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.165,
+     "peak": "を開"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.187,
+     "peak": "で"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.142,
+     "peak": "を"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "�"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.75,
+    "median_fire": 0.284,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "aaabdc213",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese も/が",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: 'も' x9, 'が' x7, 'のが', 'ることが', 'ことも' in Japanese web prose ('〜も可能', '〜ことができます'). Near misses are Japanese sentences using only は/を/に/で. Not probed.",
+ "selection": "random draw"
+}

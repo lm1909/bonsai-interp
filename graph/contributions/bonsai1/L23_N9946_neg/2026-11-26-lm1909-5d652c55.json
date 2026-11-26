@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-5d652c55",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N9946-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:27:30+00:00",
+ "recipe": {
+  "toolchain_commit": "aaabdc213",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N9946_neg/2026-11-26-lm1909-5d652c55.tests.json"
+ },
+ "label": "the object of 'about' in informal talk ('talked about importance', 'do anything about the noise')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N9946_neg/2026-11-26-lm1909-5d652c55.tests.json",
+   "prereg_commit": "aaabdc213",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.241,
+     "peak": " why"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.355,
+     "peak": " about"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.09,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.034,
+     "peak": " about"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.279,
+     "peak": " do"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.093,
+     "peak": " about"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.075,
+     "peak": " friendship"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.106,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.081,
+     "peak": " outside"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.119,
+     "peak": " fix"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.052,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.109,
+     "peak": "?"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.07,
+     "peak": " always"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.1,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "aaabdc213",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "object of 'about'",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card is broad (1.6%) with mixed peaks (' importance', ' terms', ' DO', ' helps', ' meant'). Probe: 'talked about importance' 0.46, 'do anything about the noise' 0.38; 'in terms of', 'helps us', 'meant to' low. Weak guess.",
+ "selection": "random draw"
+}

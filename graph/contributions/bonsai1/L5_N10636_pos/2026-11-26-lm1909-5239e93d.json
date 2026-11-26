@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-5239e93d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10636+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:27:25+00:00",
+ "recipe": {
+  "toolchain_commit": "aaabdc213",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N10636_pos/2026-11-26-lm1909-5239e93d.tests.json"
+ },
+ "label": "the first character inside a quoted string value in code (username='Σ…', name=\"%s\")",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N10636_pos/2026-11-26-lm1909-5239e93d.tests.json",
+   "prereg_commit": "aaabdc213",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.135,
+     "peak": "Ω"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.853,
+     "peak": "=\"%"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.251,
+     "peak": "Ε"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.318,
+     "peak": "s"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.335,
+     "peak": "Δ"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.49,
+     "peak": "=\"%"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.108,
+     "peak": "(slug"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.798,
+     "peak": "=\"%"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.053,
+     "peak": " Profile"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.071,
+     "peak": " db"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.122,
+     "peak": "=user"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.133,
+     "peak": "books"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.05,
+     "peak": "="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.059,
+     "peak": "=context"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.108,
+     "peak": "(slug"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.064,
+     "peak": "tag"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.961,
+    "median_fire": 0.327,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "aaabdc213",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "opening of a string literal",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card top: 'Σ' opening username='Σαρα', '=\"%' in an SQL string, Russian 'сю|да', ' averages'/' between' in maths word problems. Probe: code string openings 0.68-0.91; 'сюда' 0.17, word-problem words 0.16-0.31. Near misses pass the same arguments as numbers or variables, without a quoted string.",
+ "selection": "random draw"
+}
