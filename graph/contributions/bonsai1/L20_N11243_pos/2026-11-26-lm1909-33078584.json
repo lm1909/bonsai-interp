@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-33078584",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11243+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:57:16+00:00",
+ "recipe": {
+  "toolchain_commit": "b9ce7576d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N11243_pos/2026-11-26-lm1909-33078584.tests.json"
+ },
+ "label": "small classes / low student-teacher ratio giving close personal attention (school marketing)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N11243_pos/2026-11-26-lm1909-33078584.tests.json",
+   "prereg_commit": "b9ce7576d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.644,
+     "peak": " small"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.889,
+     "peak": "-one"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.703,
+     "peak": " receives"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.008,
+     "peak": " can"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.719,
+     "peak": " give"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.782,
+     "peak": " closer"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.398,
+     "peak": " small"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.383,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.074,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " travel"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.079,
+     "peak": " each"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " social"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": " can"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.711,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b9ce7576d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "small-class personal attention",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "card: 'opportunity for close interaction', 'Classes are small', 'small classes'; output promotes ' individual', ' attention', ' personalized'. Probe: 0.7-0.9 vs ~0.01 for other campus features. Quiet items advertise other school features.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-ef8b26c7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N8902-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:56:38+00:00",
+ "recipe": {
+  "toolchain_commit": "b9ce7576d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N8902_neg/2026-11-26-lm1909-ef8b26c7.tests.json"
+ },
+ "label": "empty-listing placeholder text: 'Be the first to review', 'No entries found'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N8902_neg/2026-11-26-lm1909-ef8b26c7.tests.json",
+   "prereg_commit": "b9ce7576d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.965,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.642,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.908,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.827,
+     "peak": " empty"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.553,
+     "peak": " found"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.804,
+     "peak": " first"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.742,
+     "peak": " found"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.66,
+     "peak": " first"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": " train"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "He"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.048,
+     "peak": " seen"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " finished"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.018,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.773,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b9ce7576d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "empty-state placeholder",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "card: ' first' x10 in 'There are no reviews yet. Be the first to ...', plus 'No entries found', ' empty', ' yet'. Probe: 'first time I visited Rome' is near zero. Quiet items use 'first' and 'no ... yet' in ordinary prose.",
+ "selection": "random draw"
+}

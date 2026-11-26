@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-7d671c3e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9909+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:57:29+00:00",
+ "recipe": {
+  "toolchain_commit": "b9ce7576d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N9909_pos/2026-11-26-lm1909-7d671c3e.tests.json"
+ },
+ "label": "' pressure' / ' quality' as the head of a measured-condition compound (partial pressure, air quality, blood pressure)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N9909_pos/2026-11-26-lm1909-7d671c3e.tests.json",
+   "prereg_commit": "b9ce7576d",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.029,
+     "peak": " pressure"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.09,
+     "peak": " quality"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.169,
+     "peak": " pressure"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.19,
+     "peak": " quality"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.207,
+     "peak": " pressure"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.312,
+     "peak": " pressure"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.011,
+     "peak": " quality"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " checked"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.038,
+     "peak": " view"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " issued"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " t"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": " scientists"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.242,
+     "peak": " air"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.199,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b9ce7576d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "pressure/quality compounds",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "card: ' pressure' x3, ' quality' x2 in 'partial pressure', 'indoor air quality', plus ' climate', ' distribution'. Probe: partial pressure 1.0, air quality 0.73, peer pressure 0.40, 'high quality shoes' ~0. Quiet items keep the modifier and swap the head noun.",
+ "selection": "random draw"
+}
