@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-3f5a10fe",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N6297+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:37:12+00:00",
+ "recipe": {
+  "toolchain_commit": "e053038d5",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N6297_pos/2026-11-26-lm1909-3f5a10fe.tests.json"
+ },
+ "label": "an object pronoun (him, them, these) after a verb or preposition, pointing back to someone or something named earlier",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N6297_pos/2026-11-26-lm1909-3f5a10fe.tests.json",
+   "prereg_commit": "e053038d5",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.537,
+     "peak": " him"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.043,
+     "peak": " them"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.096,
+     "peak": " him"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.292,
+     "peak": " them"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.16,
+     "peak": " them"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.27,
+     "peak": " them"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.219,
+     "peak": " him"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.273,
+     "peak": " these"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.193,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.016,
+     "peak": " tutors"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.046,
+     "peak": " chosen"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " council"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " lunch"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.059,
+     "peak": " response"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.055,
+     "peak": " reply"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.05,
+     "peak": " effect"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.244,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e053038d5",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "anaphoric object pronoun",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Top peaks ' them' x8, ' him' x4, ' it', ' this', ' these'. Probe: 'sold the business to him' 0.43, 'from them' 0.14, same with a noun object 0.04.",
+ "selection": "random draw"
+}
