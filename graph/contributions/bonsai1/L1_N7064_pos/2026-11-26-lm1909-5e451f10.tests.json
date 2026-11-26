@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-26-lm1909-5e451f10",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N7064+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N7064",
+   "pole": "+",
+   "label": "' since' used as a causal conjunction ('because'), weakly also the space token before a digit argument in code",
+   "fire": [
+    "We cancelled the picnic, since the forecast promised heavy storms.",
+    "She took the train, since her car was still in the garage.",
+    "The meeting was moved online, since half the team was travelling.",
+    "He skipped dessert, since he had already eaten too much bread.",
+    "They hired a guide, since nobody in the group knew the trails.",
+    "I left the window open, since the room felt very stuffy.",
+    "The shop closed early, since the owner had a family event.",
+    "Our results are preliminary, since the sample was quite small."
+   ],
+   "quiet": [
+    "We cancelled the picnic, because the forecast promised heavy storms.",
+    "She took the train, as her car was still in the garage.",
+    "The meeting was moved online, and half the team was travelling.",
+    "He skipped dessert, having already eaten too much bread.",
+    "They hired a guide, because nobody in the group knew the trails.",
+    "I left the window open, as the room felt very stuffy.",
+    "The shop closed early, so the owner could attend a family event.",
+    "Our results are preliminary, given that the sample was quite small."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "causal 'since'",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "broad, low-max pole (max 0.17) and the gate-closed echo regime dominates; card top tokens ' ', ' Today', ' adverse', 'Since'. Probe: causal ' since' 0.35 of max, ' ' before a digit in a call 0.11.",
+ "trigger": {
+  "tokens": [
+   " since"
+  ]
+ }
+}
