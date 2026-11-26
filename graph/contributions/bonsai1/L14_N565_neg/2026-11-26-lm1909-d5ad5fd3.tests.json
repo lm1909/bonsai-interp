@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-d5ad5fd3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N565-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:21:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N565",
+   "pole": "-",
+   "label": "the colon-newline token that ends a Python block header (def/class/while/if/for … ':\\n')",
+   "fire": [
+    "import time\n\nwhile True:\n    print('tick')\n    time.sleep(1)",
+    "class Parser(object):\n    def __init__(self, text):\n        self.text = text",
+    "def load(path):\n    with open(path) as f:\n        return f.read()",
+    "total = 0\nfor item in items:\n    total += item.price\nprint(total)",
+    "import sys\n\nif __name__ == '__main__':\n    main(sys.argv)",
+    "raw = input()\ntry:\n    value = int(raw)\nexcept ValueError:\n    value = 0",
+    "import math\n\ndef area(r):\n    return math.pi * r * r",
+    "class Config:\n    debug = False\n    port = 8080"
+   ],
+   "quiet": [
+    "import time\n\ncount = 0\nprint('tick')\ntime.sleep(1)",
+    "parser = Parser(text)\nparser.text = text.strip()\nprint(parser)",
+    "path = 'data.txt'\ndata = open(path).read()\nprint(len(data))",
+    "total = sum(item.price for item in items)\nprint(total)",
+    "import sys\n\nargs = sys.argv[1:]\nresult = main(args)",
+    "raw = input()\nvalue = int(raw) if raw else 0\nprint(value)",
+    "import math\n\nr = 2\narea = math.pi * r * r",
+    "config = {'debug': False, 'port': 8080}\nprint(config['port'])"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python block-header colon",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Card: '():\\n', '):\\n', ':\\n' after while True / def main / class X(object). Multi-line code passages; near misses are the same code written without a block header."
+}

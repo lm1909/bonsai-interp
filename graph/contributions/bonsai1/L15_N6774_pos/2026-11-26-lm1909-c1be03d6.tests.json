@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-c1be03d6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N6774+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:21:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N6774",
+   "pole": "+",
+   "label": "word pieces inside non-Latin-script text (Cyrillic, CJK, Hangul, Arabic)",
+   "fire": [
+    "Сегодня в парке было много детей и собак.",
+    "Мой брат работает врачом в большой больнице.",
+    "图书馆的新书架上摆满了历史书。",
+    "私は毎朝コーヒーを飲んでから仕事に行きます。",
+    "저는 주말마다 친구들과 산에 갑니다.",
+    "ذهبت العائلة إلى السوق لشراء الخضروات.",
+    "Учитель объяснил задачу ещё раз.",
+    "このレストランの料理はとても美味しいです。"
+   ],
+   "quiet": [
+    "Today there were many children and dogs in the park.",
+    "My brother works as a doctor in a large hospital.",
+    "The library's new shelves are full of history books.",
+    "Every morning I drink coffee before going to work.",
+    "Every weekend I go to the mountains with friends.",
+    "The family went to the market to buy vegetables.",
+    "The teacher explained the problem once again.",
+    "The food at this restaurant is very delicious."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "non-Latin script text",
+ "unit_kind": "sparse feature",
+ "confidence": 0.35,
+ "notes": "Card top 32 are all mid-word pieces in Russian, Japanese, Arabic, Korean. Near misses are English translations of the same sentences."
+}
