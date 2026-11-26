@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-26-lm1909-6fa80e18",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N7901+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:22:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N7901",
+   "pole": "+",
+   "label": "'.Module' in PyTorch class definitions (class X(nn.Module):)",
+   "fire": [
+    "import torch.nn as nn\n\nclass Decoder(nn.Module):\n    def __init__(self, dim):",
+    "class SelfAttention(nn.Module):\n    \"\"\"Multi-head attention.\"\"\"",
+    "from torch import nn\n\nclass MLPBlock(nn.Module):\n    pass",
+    "# model\nclass ConvNet(nn.Module):\n    def forward(self, x):",
+    "class PatchEmbed(nn.Module):\n    def __init__(self, size=16):",
+    "\n\nclass ResidualBlock(nn.Module):\n    expansion = 4",
+    "import torch\n\nclass Classifier(torch.nn.Module):\n    def forward(self, x):",
+    "class GatedUnit(nn.Module):\n    def __init__(self, hidden):"
+   ],
+   "quiet": [
+    "import json\n\nclass Decoder(object):\n    def __init__(self, dim):",
+    "class SelfAttention:\n    \"\"\"Multi-head attention.\"\"\"",
+    "from typing import List\n\nclass MLPBlock(Base):\n    pass",
+    "# model\nclass ConvNet(Model):\n    def forward(self, x):",
+    "class PatchEmbed(Layer):\n    def __init__(self, size=16):",
+    "\n\nclass ResidualBlock(Block):\n    expansion = 4",
+    "import numpy\n\nclass Classifier(Estimator):\n    def predict(self, x):",
+    "class GatedUnit(dict):\n    def __init__(self, hidden):"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "nn.Module",
+ "unit_kind": "lexical",
+ "confidence": 0.35,
+ "notes": "card flags broad (3.5% of tokens at 0.1 of max) and gate-closed regime; near misses may fire weakly",
+ "trigger": {
+  "tokens": [
+   ".Module"
+  ]
+ }
+}
