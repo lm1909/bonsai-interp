@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-87c0aa7d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N607-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:37:14+00:00",
+ "recipe": {
+  "toolchain_commit": "747f63771",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N607_neg/2026-11-26-lm1909-87c0aa7d.tests.json"
+ },
+ "label": "'.create' in Django ORM calls (Model.objects.create(...)), especially in test setup code",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N607_neg/2026-11-26-lm1909-87c0aa7d.tests.json",
+   "prereg_commit": "747f63771",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.308,
+     "peak": ".create"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.565,
+     "peak": ".create"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.243,
+     "peak": ".create"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.38,
+     "peak": ".create"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.271,
+     "peak": ".create"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.412,
+     "peak": ".create"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.31,
+     "peak": ".create"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.306,
+     "peak": ".create"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.135,
+     "peak": ".get"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.175,
+     "peak": ".get"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.163,
+     "peak": ".get"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.204,
+     "peak": ".get"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.11,
+     "peak": "(self"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.064,
+     "peak": " events"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.1,
+     "peak": "(self"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.11,
+     "peak": ".get"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.309,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "747f63771",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Django objects.create",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: '.create' x10 of top 32 (Django tests), top-1 is ' a' in 'admission of a new state'. Probe: multi-line setUp with objects.create 0.21, objects.get/filter 0.07.",
+ "selection": "random draw"
+}

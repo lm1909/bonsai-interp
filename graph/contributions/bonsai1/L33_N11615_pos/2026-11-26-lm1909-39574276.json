@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-39574276",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N11615+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:37:47+00:00",
+ "recipe": {
+  "toolchain_commit": "747f63771",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N11615_pos/2026-11-26-lm1909-39574276.tests.json"
+ },
+ "label": "inner word pieces of foam/plastic material names (styro-fo-am, poly-fo-am, polyure-thane)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N11615_pos/2026-11-26-lm1909-39574276.tests.json",
+   "prereg_commit": "747f63771",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.62,
+     "peak": "fo"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.529,
+     "peak": "fo"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.006,
+     "peak": " poly"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.515,
+     "peak": "fo"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.51,
+     "peak": "fo"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.04,
+     "peak": " sag"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.579,
+     "peak": "fo"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.012,
+     "peak": " paper"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.099,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " oil"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": "We"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " years"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " sag"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " attic"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " planets"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.789,
+    "median_fire": 0.512,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "747f63771",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "foam material word pieces",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card: 'thane', 'fo' (styrofoam, polyfoam); output suppresses ' fo', ' foam', ' foil', i.e. it fires on a piece that is not the whole word. Tokenizer checked: styrofoam -> sty|ro|fo|am, polyurethane -> poly|ure|thane, polyfoam -> poly|fo|am. Probe: styrofoam 0.59, polyurethane 0.26, 'memory foam' 0.00.",
+ "selection": "random draw"
+}

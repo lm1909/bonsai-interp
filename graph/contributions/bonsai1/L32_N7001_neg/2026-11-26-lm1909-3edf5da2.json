@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-3edf5da2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N7001-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:38:02+00:00",
+ "recipe": {
+  "toolchain_commit": "747f63771",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N7001_neg/2026-11-26-lm1909-3edf5da2.tests.json"
+ },
+ "label": "' to' after 'need' in Indian exam, admission and job notices (candidates ... need to apply/check)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N7001_neg/2026-11-26-lm1909-3edf5da2.tests.json",
+   "prereg_commit": "747f63771",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.903,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.788,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.309,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.655,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.601,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.5,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.663,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.69,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.635,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.125,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.102,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.077,
+     "peak": "SE"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.049,
+     "peak": "2"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.28,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.173,
+     "peak": " every"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.659,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "747f63771",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'need to' in exam notices",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card: ' to' x18 in eligibility/exam-notice text (need to check PSEB 11th, Must be a Chartered Accountant, Qualification:). Probe: 'Candidates who have passed Class 12th need to apply online' 0.71, plain 'Applicants need to submit a resume' 0.06, 'went to the beach' 0.01. The register matters more than the words; risky.",
+ "selection": "random draw"
+}
