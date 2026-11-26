@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-386968f3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4883-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:47:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N4883",
+   "pole": "-",
+   "label": "file-system path segments (/var/www, /home, C:\\) (dense, gate-closed leak regime)",
+   "fire": [
+    "Copy the file to /var/www/html/index.php on the server.",
+    "Save the logs under /home/alice/logs before rebooting.",
+    "Open C:\\Users\\Bob\\Documents and find the report.",
+    "Set MEDIA_ROOT to /srv/www/media/ in settings.",
+    "The config lives in /etc/nginx/sites-available/default.",
+    "Move the backup to D:\\Backups\\2024 tonight.",
+    "Point the alias at /var/www/static/ instead.",
+    "Upload it to /home/user/public_html/images."
+   ],
+   "quiet": [
+    "Copy the file to the web server folder.",
+    "Save the logs in your home folder before rebooting.",
+    "Open your documents folder and find the report.",
+    "Set the media root in the settings file.",
+    "The config lives in the nginx folder.",
+    "Move the backup to the second drive tonight.",
+    "Point the alias at the static folder instead.",
+    "Upload it to the images folder on your site."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "file path segments (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags dense (21.7% of tokens reach 0.1 of max), -g +u leak 100%. Top examples are path pieces '/www', ':\\', '/home' and ' except'. Test records the density; expected to fail."
+}

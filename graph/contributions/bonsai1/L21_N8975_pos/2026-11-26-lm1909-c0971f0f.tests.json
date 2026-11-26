@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-c0971f0f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N8975+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:47:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N8975",
+   "pole": "+",
+   "label": "the first token of a statement in the body of a Python unit-test method",
+   "fire": [
+    "class TestCart(unittest.TestCase):\n\n    def test_empty_total(self):\n        cart = Cart()\n        self.assertEqual(cart.total(), 0)",
+    "class OrderTests(TestCase):\n\n    def test_order_status_default(self):\n        order = Order.objects.create(number=1)\n        self.assertEqual(order.status, 'new')",
+    "    def test_parse_header(self):\n        parser = HeaderParser()\n        result = parser.parse('X-Id: 5')\n        assert result['X-Id'] == '5'",
+    "    def test_token_expiry(self, mock_now):\n        token = Token.issue(user=self.user)\n        mock_now.return_value += 3600\n        self.assertTrue(token.expired)",
+    "class TestQueue:\n    def test_push_pop(self):\n        q = Queue()\n        q.push(3)\n        assert q.pop() == 3",
+    "    @mock.patch('app.mail.send')\n    def test_signup_sends_mail(self, mock_send):\n        response = self.client.post('/signup', data)\n        mock_send.assert_called_once()",
+    "    def test_config_defaults(self):\n        config = load_config({})\n        self.assertEqual(config.port, 8080)",
+    "    def test_matrix_shape(self):\n        m = np.zeros((3, 4))\n        self.assertEqual(m.shape, (3, 4))"
+   ],
+   "quiet": [
+    "class Cart:\n\n    def total(self):\n        items = self.items\n        return sum(i.price for i in items)",
+    "class Order(Model):\n\n    def mark_paid(self):\n        self.status = 'paid'\n        self.save()",
+    "    def parse(self, line):\n        name, value = line.split(':', 1)\n        return {name: value.strip()}",
+    "    def issue(cls, user):\n        expires = now() + timedelta(hours=1)\n        return cls(user=user, expires=expires)",
+    "class Queue:\n    def push(self, item):\n        self.items.append(item)\n        return len(self.items)",
+    "    def send_welcome(self, address):\n        body = render('welcome.txt')\n        mail.send(address, body)",
+    "def load_config(values):\n    port = values.get('port', 8080)\n    return Config(port=port)",
+    "def make_grid(rows, cols):\n    m = np.zeros((rows, cols))\n    return m"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python test-method body",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card: top examples are first statements inside def test_...(self) bodies (rh =, user, deployment, tf.variable_scope), but also ' Chemistry' in prose. Probe of a short test method scored only 0.03, so this is a weak guess; likely to fail."
+}
