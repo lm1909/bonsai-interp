@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-35bcc01b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N7018-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:53:21+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N7018",
+   "pole": "-",
+   "label": "the 'grad'/'Grad' piece of code identifiers for gradients (max_grad_norm, _ArgMaxGrad, x_grad)",
+   "fire": [
+    "    loss_grad = tape.gradient(loss, params)",
+    "    clipped, _ = tf.clip_by_norm(w_grad, max_norm)",
+    "@ops.RegisterGradient(\"TopK\")\ndef _TopKGrad(op, grad):\n    return None",
+    "    if param.requires_grad:\n        total += param.numel()",
+    "    y_grad = backprop(y, upstream)",
+    "def _SoftmaxGrad(op, grad_softmax):\n    softmax = op.outputs[0]",
+    "    opt.apply(model_grad, lr=0.01)",
+    "    acc_grad = acc_grad + batch_grad"
+   ],
+   "quiet": [
+    "    loss_value = model(inputs, params)",
+    "    clipped, _ = tf.clip_by_value(w_val, 0, 1)",
+    "@ops.RegisterShape(\"TopK\")\ndef _TopKShape(op, shape):\n    return None",
+    "    if param.requires_update:\n        total += param.numel()",
+    "    y_out = forward(y, downstream)",
+    "def _SoftmaxCall(op, x_softmax):\n    softmax = op.outputs[0]",
+    "    opt.apply(model_step, lr=0.01)",
+    "    acc_sum = acc_sum + batch_sum"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "code 'grad' identifier",
+ "unit_kind": "lexical",
+ "confidence": 0.6
+}
