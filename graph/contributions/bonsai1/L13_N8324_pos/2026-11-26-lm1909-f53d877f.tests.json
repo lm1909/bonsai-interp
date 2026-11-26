@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-f53d877f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N8324+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:18:52+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L13/N8324",
+   "pole": "+",
+   "label": "' return' at the start of a return_value= keyword argument (mock.patch / MagicMock)",
+   "fire": [
+    "@mock.patch('shop.cart.get_price', return_value=9.99)\ndef test_price(self, mock_price):\n    pass",
+    "@mock.patch('os.path.exists', return_value=True)\ndef test_exists(self, mock_exists):",
+    "    with mock.patch.object(client, 'fetch',\n                           return_value=fake_response):\n        run()",
+    "@patch('weather.api.current_temp', return_value=21)\ndef test_temp(mock_temp):",
+    "self.patcher = mock.patch('db.connect', return_value=self.conn)\nself.patcher.start()",
+    "@mock.patch('auth.tokens.is_valid',\n            return_value=False)\ndef test_invalid(self, mock_valid):",
+    "    mock_open = mock.MagicMock(return_value=io.StringIO('data'))\n",
+    "@mock.patch('billing.invoice.total', return_value=Decimal('10.00'))\ndef test_total(self, m):"
+   ],
+   "quiet": [
+    "def get_price(cart):\n    price = cart.total()\n    return price",
+    "def exists(path):\n    ok = os.path.exists(path)\n    return ok",
+    "    with open(path) as f:\n        data = f.read()\n    return data",
+    "@patch('weather.api.current_temp')\ndef test_temp(mock_temp):\n    mock_temp.side_effect = ValueError",
+    "self.patcher = mock.patch('db.connect')\nself.patcher.start()",
+    "def is_valid(token):\n    if not token:\n        return False",
+    "    mock_open = mock.MagicMock(side_effect=IOError)\n",
+    "def total(invoice):\n    return sum(line.amount for line in invoice)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' return' in return_value=",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probe: return_value= inside mock.patch 0.39; '.return_value =' attribute 0.08; plain return statement 0.02."
+}

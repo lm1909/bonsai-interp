@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-45eecca3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N4216-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:18:52+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N4216",
+   "pole": "-",
+   "label": "hex and character-range literals in character-handling code (the 'x' of 0x20 in ord() checks, the '0' of [0-9] in regexes)",
+   "fire": [
+    "def clean(s):\n    out = ''\n    for ch in s:\n        if ord(ch) >= 0x20:\n            out += ch\n    return out",
+    "HEX_RE = re.compile(r'[a-fA-F0-9]{6}')",
+    "    if ord(key) == 0x1b:\n        self.escape()\n",
+    "char_map[0x2014] = '-'\nchar_map[0x2018] = \"'\"",
+    "token = re.match(r'[^0-9a-z]+', text)",
+    "    elif ord(c) < 0x80:\n        ascii_count += 1\n",
+    "IDENT = re.compile('[A-Za-z_][A-Za-z0-9_]*')",
+    "if (byte & 0x80) == 0:\n    length = 1\n"
+   ],
+   "quiet": [
+    "def clean(s):\n    out = ''\n    for ch in s:\n        if ch.isprintable():\n            out += ch\n    return out",
+    "HEX_LEN = 6\ncolor = text[:HEX_LEN]",
+    "    if key == 'q':\n        self.quit()\n",
+    "char_map['dash'] = '-'\nchar_map['quote'] = \"'\"",
+    "token = text.split()[0]",
+    "    elif c.isascii():\n        ascii_count += 1\n",
+    "IDENT = 'name'\nprint(IDENT.upper())",
+    "if length == 1:\n    size = 8\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "hex/char-range literals",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Opposite (+) pole's output promotes ' char'/' character'. Probe: ord(c) >= 0x20 0.83, regex [^0-9...] 0.54, but plain 0x10 constants 0.01-0.09: hex alone is not enough, character context matters."
+}

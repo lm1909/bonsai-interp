@@ -1,0 +1,55 @@
+{
+ "contribution": "2026-11-26-lm1909-da1f6bd9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9578+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:18:52+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N9578",
+   "pole": "+",
+   "label": "the token ' gun' or ' pen' as its own token (gun, gunmetal, water gun, pen)",
+   "fire": [
+    "The officer kept his gun locked in a safe at home.",
+    "My grandfather wrote every letter with a fountain pen.",
+    "The car's wheels are painted a dark gunmetal grey.",
+    "She reached for the pen on the desk and signed.",
+    "The starter fired a gun to begin the race.",
+    "Please bring a pen and a notebook to the class.",
+    "He sprayed his sister with a water gun in the garden.",
+    "The hunter cleaned his gun before the trip."
+   ],
+   "quiet": [
+    "The officer kept his badge locked in a safe at home.",
+    "My grandfather wrote every letter with a feather quill.",
+    "The car's wheels are painted a dark silver grey.",
+    "She reached for the stapler on the desk and smiled.",
+    "The starter blew a whistle to begin the race.",
+    "Please bring a notebook and a ruler to the class.",
+    "He sprayed his sister with the garden hose.",
+    "The hunter cleaned his rifle before the trip."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "' gun' / ' pen' token",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Card top 32: ' gun' x10, ' pen'/' Pen' x14, ' Gun' x5. Probe: single-token 'gunfire'/'gunman' stay quiet (0.02-0.06), so it is the piece, not the weapon meaning.",
+ "trigger": {
+  "tokens": [
+   " gun",
+   " Gun",
+   " pen",
+   " Pen"
+  ]
+ }
+}
