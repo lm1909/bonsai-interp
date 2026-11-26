@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-91af72dd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N114-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:12:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N114",
+   "pole": "-",
+   "label": "host/IP address values in server or settings code (host='0.0.0.0', '127.0.0.1', 'localhost')",
+   "fire": [
+    "import flask\napp = flask.Flask(__name__)\n\nif __name__ == '__main__':\n    app.run(host=\"0.0.0.0\", port=5000)\n",
+    "REDIS = {\n    'host': '127.0.0.1',\n    'port': 6379,\n}\n",
+    "import socket\ns = socket.socket()\ns.bind(('0.0.0.0', 9000))\ns.listen(5)\n",
+    "import uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host='0.0.0.0', port=8000)\n",
+    "ALLOWED_HOSTS = ['localhost', '127.0.0.1']\nDEBUG = True\n",
+    "conn = psycopg2.connect(\n    host=\"localhost\",\n    dbname=\"shop\",\n    user=\"admin\")\n",
+    "from http.server import HTTPServer\nhttpd = HTTPServer(('127.0.0.1', 8080), MyHandler)\nhttpd.serve_forever()\n",
+    "MONGO_HOST = '127.0.0.1'\nMONGO_PORT = 27017\nclient = MongoClient(MONGO_HOST, MONGO_PORT)\n"
+   ],
+   "quiet": [
+    "import flask\napp = flask.Flask(__name__)\n\n@app.route('/')\ndef index():\n    return 'hello'\n",
+    "REDIS = {\n    'timeout': 30,\n    'retries': 3,\n}\n",
+    "import socket\ns = socket.socket()\ndata = s.recv(1024)\nprint(data)\n",
+    "import uvicorn\n\ndef main():\n    print('starting up')\n    run_tasks()\n",
+    "INSTALLED_APPS = ['django.contrib.admin', 'shop']\nDEBUG = True\n",
+    "conn = psycopg2.connect(dsn)\ncur = conn.cursor()\ncur.execute(\"SELECT 1\")\n",
+    "from http.server import BaseHTTPRequestHandler\nclass MyHandler(BaseHTTPRequestHandler):\n    pass\n",
+    "MONGO_DB = 'inventory'\nMONGO_COLLECTION = 'items'\ndb = client[MONGO_DB]\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "host address in code",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probe: host='0.0.0.0' 0.63, HTTPServer(('localhost' 0.54, '127.0.0.1' 0.37-0.42; app.run(debug=True) 0.02."
+}
