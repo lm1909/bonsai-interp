@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-6924a914",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N9981+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:31:36+00:00",
+ "recipe": {
+  "toolchain_commit": "d5fd905a8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N9981_pos/2026-11-26-lm1909-6924a914.tests.json"
+ },
+ "label": "the level/amount noun in an 'at <low/high/certain> <doses/levels/temperatures>' phrase (stating a condition)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N9981_pos/2026-11-26-lm1909-6924a914.tests.json",
+   "prereg_commit": "d5fd905a8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.091,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.194,
+     "peak": " low"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.276,
+     "peak": " higher"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.41,
+     "peak": " low"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.427,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.457,
+     "peak": "ages"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.628,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.14,
+     "peak": " elevated"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.324,
+     "peak": " even"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": " flies"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.069,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.219,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.021,
+     "peak": " among"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": "employment"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.041,
+     "peak": " its"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.418,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d5fd905a8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "at <level> X condition",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "probe: 'At low doses' 1.04, 'at certain temperatures' 0.73, 'at a cafe' 0.02",
+ "selection": "random draw"
+}

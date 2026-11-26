@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-fee574f3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N2536-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:31:08+00:00",
+ "recipe": {
+  "toolchain_commit": "d5fd905a8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N2536_neg/2026-11-26-lm1909-fee574f3.tests.json"
+ },
+ "label": "a CJK character that follows a space (space-separated Chinese token such as ' 每')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N2536_neg/2026-11-26-lm1909-fee574f3.tests.json",
+   "prereg_commit": "d5fd905a8",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.096,
+     "peak": "吧"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.18,
+     "peak": "考试"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.995,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.036,
+     "peak": " said"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.068,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.036,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.933,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.053,
+     "peak": "三年"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.077,
+     "peak": "吧"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.157,
+     "peak": "考试"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.072,
+     "peak": "吧"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": " large"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.02,
+     "peak": "非常"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.036,
+     "peak": " fried"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.08,
+     "peak": "作业"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": "三年"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.656,
+    "median_fire": 0.082,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d5fd905a8",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "space + CJK char",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "probe: '我觉得 每天' 0.84 vs no space 0.03; peaks on byte pieces",
+ "selection": "random draw"
+}

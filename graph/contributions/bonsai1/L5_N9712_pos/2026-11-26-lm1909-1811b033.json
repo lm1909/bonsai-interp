@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-1811b033",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N9712+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:31:32+00:00",
+ "recipe": {
+  "toolchain_commit": "d5fd905a8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N9712_pos/2026-11-26-lm1909-1811b033.tests.json"
+ },
+ "label": "word-initial piece of a term right after a separator (dash, colon, comma, space before CJK)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N9712_pos/2026-11-26-lm1909-1811b033.tests.json",
+   "prereg_commit": "d5fd905a8",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.303,
+     "peak": " Smoke"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.37,
+     "peak": " Par"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.128,
+     "peak": "服务"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.223,
+     "peak": " Frost"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.124,
+     "peak": " Ch"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.075,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.369,
+     "peak": " Fire"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.028,
+     "peak": "Mil"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": " bomb"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.218,
+     "peak": " Par"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.128,
+     "peak": "服务"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " slow"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.151,
+     "peak": " Ch"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.121,
+     "peak": " Mil"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.175,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d5fd905a8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "term start after separator",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "weak, mixed card; probes ~0.5 on card-like items; best guess",
+ "selection": "random draw"
+}
