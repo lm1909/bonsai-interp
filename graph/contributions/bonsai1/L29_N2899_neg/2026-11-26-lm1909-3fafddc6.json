@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-3fafddc6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N2899-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:29:14+00:00",
+ "recipe": {
+  "toolchain_commit": "16e1d2aba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N2899_neg/2026-11-26-lm1909-3fafddc6.tests.json"
+ },
+ "label": "the verb take/took/taking or walk introducing an action (take a walk, take the turn, took a long walk)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N2899_neg/2026-11-26-lm1909-3fafddc6.tests.json",
+   "prereg_commit": "16e1d2aba",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.371,
+     "peak": " take"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.09,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.558,
+     "peak": " take"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.36,
+     "peak": " walked"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.353,
+     "peak": " taking"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.052,
+     "peak": " take"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.442,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.221,
+     "peak": " take"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.048,
+     "peak": " lunch"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": " twice"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "On"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": " seems"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.13,
+     "peak": " went"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.356,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "16e1d2aba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "take / walk verbs",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card top 32: ' take' x11, ' walk' x6, ' took' x3, ' walked' x3, ' taking' x2. Near misses keep the scenes with other verbs (have, make, go, run).",
+ "selection": "random draw"
+}

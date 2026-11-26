@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-08da8299",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N5659+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:29:05+00:00",
+ "recipe": {
+  "toolchain_commit": "16e1d2aba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N5659_pos/2026-11-26-lm1909-08da8299.tests.json"
+ },
+ "label": "identifier tokens inside the argument list of a Python function call (keyword=value, positional names)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N5659_pos/2026-11-26-lm1909-08da8299.tests.json",
+   "prereg_commit": "16e1d2aba",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.159,
+     "peak": "up"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.056,
+     "peak": "_id"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.021,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.002,
+     "peak": "(choice"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.004,
+     "peak": "_url"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.004,
+     "peak": "_curve"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.035,
+     "peak": " port"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.015,
+     "peak": "_size"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " data"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " output"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " data"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": " service"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " values"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " its"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.002,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.018,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "16e1d2aba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Python call arguments",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card top: nwarm|up=nwarmup, publisher|_name=publisher_name, ncols|, nrows, stock|Data inside a call, requests|.get(url), if| self.frobnorm. No single token dominates. Near misses describe the same functions and arguments in English prose without code.",
+ "selection": "random draw"
+}

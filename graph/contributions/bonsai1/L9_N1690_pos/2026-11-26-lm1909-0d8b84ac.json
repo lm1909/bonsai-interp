@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-0d8b84ac",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N1690+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:28:37+00:00",
+ "recipe": {
+  "toolchain_commit": "16e1d2aba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N1690_pos/2026-11-26-lm1909-0d8b84ac.tests.json"
+ },
+ "label": "positive-feeling word that completes a wish or exclamation (' love' after 'I would', ' happy', a 'relaxing day', 'how cool is that')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N1690_pos/2026-11-26-lm1909-0d8b84ac.tests.json",
+   "prereg_commit": "16e1d2aba",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.697,
+     "peak": " love"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.304,
+     "peak": " day"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.741,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.149,
+     "peak": " happy"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.306,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.198,
+     "peak": " day"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.131,
+     "peak": " happy"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.797,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.164,
+     "peak": " need"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.051,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " deliver"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " want"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": " Lisbon"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": " beach"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.034,
+     "peak": " bank"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.045,
+     "peak": " week"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.305,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "16e1d2aba",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "positive wish word",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card top: ' love' x6 (I would love to), ' day' (relaxing day!), ' that' (How cool is that?), ' happy'. Near misses keep the sentence frames with neutral words.",
+ "selection": "random draw"
+}

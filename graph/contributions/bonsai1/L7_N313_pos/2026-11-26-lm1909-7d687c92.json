@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-7d687c92",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N313+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:28:39+00:00",
+ "recipe": {
+  "toolchain_commit": "16e1d2aba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N313_pos/2026-11-26-lm1909-7d687c92.tests.json"
+ },
+ "label": "medical treatment and condition terms: 'therapy', physio'ther'apists, 'diabetes'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N313_pos/2026-11-26-lm1909-7d687c92.tests.json",
+   "prereg_commit": "16e1d2aba",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.44,
+     "peak": " therapy"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.767,
+     "peak": "ther"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.698,
+     "peak": " diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.299,
+     "peak": " therapy"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.035,
+     "peak": " diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.812,
+     "peak": "ther"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.837,
+     "peak": " Therapy"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.013,
+     "peak": " damage"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " surgery"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.348,
+     "peak": " injuries"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " blood"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": " recommended"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": " asthma"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.067,
+     "peak": " nurses"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " published"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " damage"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.867,
+    "median_fire": 0.569,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "16e1d2aba",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "therapy / diabetes terms",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card top 32: 'ther' x6, ' therapy' x5, ' Therapy' x4, ' diabetes' x4, 'io' (physio) x3. Near misses keep clinical register with other specialties and conditions.",
+ "selection": "random draw"
+}

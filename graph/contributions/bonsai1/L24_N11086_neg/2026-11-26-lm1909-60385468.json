@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-60385468",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N11086-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:29:18+00:00",
+ "recipe": {
+  "toolchain_commit": "16e1d2aba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N11086_neg/2026-11-26-lm1909-60385468.tests.json"
+ },
+ "label": "the first digit of a four-digit year after a day and month in a citation date ('May 2|013', 'December 2|005')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N11086_neg/2026-11-26-lm1909-60385468.tests.json",
+   "prereg_commit": "16e1d2aba",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.012,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.003,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.014,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.007,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.005,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.003,
+     "peak": ")."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": "\"."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": "\"."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " soon"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " Nature"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.68,
+    "median_fire": 0.005,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "16e1d2aba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "year digit in a date",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Very sparse pole (0.006% reach 0.1 of max). Top 32: '2' x8, '1' x2, '-' x4; the clearest pattern is the space-split first digit of a year in reference dates (Retrieved 22 December 2005, (2 September 2016)). Near misses keep citation style with dates in words or no year.",
+ "selection": "random draw"
+}

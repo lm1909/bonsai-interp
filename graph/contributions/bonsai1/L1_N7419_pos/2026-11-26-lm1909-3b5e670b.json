@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-3b5e670b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N7419+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:29:08+00:00",
+ "recipe": {
+  "toolchain_commit": "16e1d2aba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N7419_pos/2026-11-26-lm1909-3b5e670b.tests.json"
+ },
+ "label": "dense layer-1 pole: weak activation on function words such as ' à' and ' for' near the start of a text",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N7419_pos/2026-11-26-lm1909-3b5e670b.tests.json",
+   "prereg_commit": "16e1d2aba",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.513,
+     "peak": " de"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.204,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.465,
+     "peak": " se"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.251,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.532,
+     "peak": "uit"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.217,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.437,
+     "peak": " ce"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.209,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.402,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.164,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.436,
+     "peak": " se"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.195,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.312,
+     "peak": " t"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.359,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.198,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.27,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.688,
+    "median_fire": 0.344,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "16e1d2aba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense early function words",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card flags dense (16.7% of tokens reach 0.1 of max), positional (22% of top peaks at window position 0) and gate-closed (-x- echo 100%), max 0.19. Recorded honestly as dense; the test is a best guess and will probably fail.",
+ "selection": "random draw"
+}
