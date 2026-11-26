@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-50f2ef6a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N3175+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:39:58+00:00",
+ "recipe": {
+  "toolchain_commit": "feb278f87",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N3175_pos/2026-11-26-lm1909-50f2ef6a.tests.json"
+ },
+ "label": "the token that closes a coordinated list: the predicate after 'A, B and C', German 'usw.', Chinese 都 after 'A和B'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N3175_pos/2026-11-26-lm1909-50f2ef6a.tests.json",
+   "prereg_commit": "feb278f87",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.155,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.013,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.413,
+     "peak": "w"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.65,
+     "peak": "w"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.356,
+     "peak": "都在"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.425,
+     "peak": "都在"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.14,
+     "peak": " all"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.072,
+     "peak": " both"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": " Friday"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.0,
+     "peak": "B"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.005,
+     "peak": "Tickets"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.0,
+     "peak": "价格"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": "The"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.256,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "feb278f87",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "close of coordinated list",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "card: weak pole (max 5.9): usw, spoken French, 都在, 、, -Israel, do. probe: usw 0.64, 都在 0.59, 'A, B and C are' 0.51, 'spoken English' 0.31, non-Israelis 0.40, list 'and' itself ~0.",
+ "selection": "random draw"
+}

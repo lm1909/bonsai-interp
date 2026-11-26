@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-08694db5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N1630-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:39:56+00:00",
+ "recipe": {
+  "toolchain_commit": "feb278f87",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N1630_neg/2026-11-26-lm1909-08694db5.tests.json"
+ },
+ "label": "an activity or service noun as the object of a verb or preposition (mentoring, tourism, harvesting)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N1630_neg/2026-11-26-lm1909-08694db5.tests.json",
+   "prereg_commit": "feb278f87",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.312,
+     "peak": " tutoring"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.184,
+     "peak": " guidance"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.268,
+     "peak": " fishing"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.247,
+     "peak": " counseling"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.141,
+     "peak": " rely"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.156,
+     "peak": " volunteers"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.342,
+     "peak": "ishing"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.281,
+     "peak": " coaching"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.239,
+     "peak": " students"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.157,
+     "peak": " badges"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.245,
+     "peak": " bananas"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.065,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.157,
+     "peak": " rely"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.097,
+     "peak": " volunteers"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.263,
+     "peak": " boats"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.177,
+     "peak": " workers"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.75,
+    "median_fire": 0.258,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "feb278f87",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "activity noun object",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "card flags broad (4.5% of tokens at 0.1 of max); top examples mixed (mentoring, him, tourism, over-har|vest). Best guess; expected to fail.",
+ "selection": "random draw"
+}
