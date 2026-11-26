@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-8fd29b6e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9603+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:19:09+00:00",
+ "recipe": {
+  "toolchain_commit": "082c96ecf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N9603_pos/2026-11-26-lm1909-8fd29b6e.tests.json"
+ },
+ "label": "a noun naming a document's format or styling (format, font, template, layout)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N9603_pos/2026-11-26-lm1909-8fd29b6e.tests.json",
+   "prereg_commit": "082c96ecf",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.318,
+     "peak": " font"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.379,
+     "peak": " templates"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.496,
+     "peak": " format"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.796,
+     "peak": " fonts"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.871,
+     "peak": " calculation"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.594,
+     "peak": " templates"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.27,
+     "peak": " format"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.634,
+     "peak": " font"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.082,
+     "peak": " color"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.029,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.224,
+     "peak": " Monday"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.055,
+     "peak": " videos"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.063,
+     "peak": " story"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.043,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.132,
+     "peak": " saved"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.032,
+     "peak": " so"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.545,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "082c96ecf",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "format / font / template nouns",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card top examples: format, fonts, calculation, templates after 'here is a sample/example'. Probe: format/font/template ~0.85-1.05; 'sample of the soup' 0.30.",
+ "selection": "random draw"
+}

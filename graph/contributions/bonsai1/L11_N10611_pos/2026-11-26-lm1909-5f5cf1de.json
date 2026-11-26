@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-5f5cf1de",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N10611+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:19:50+00:00",
+ "recipe": {
+  "toolchain_commit": "082c96ecf",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N10611_pos/2026-11-26-lm1909-5f5cf1de.tests.json"
+ },
+ "label": "'is' in a passive or inverted clause (as is revealed, of interest is, a similar system is proposed)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N10611_pos/2026-11-26-lm1909-5f5cf1de.tests.json",
+   "prereg_commit": "082c96ecf",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.725,
+     "peak": " suggested"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.499,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.1,
+     "peak": "Of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.342,
+     "peak": " comparable"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.362,
+     "peak": " as"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.107,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.033,
+     "peak": " proposed"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.407,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.04,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.053,
+     "peak": "His"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " holds"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.016,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.134,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.089,
+     "peak": " worry"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.013,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.352,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "082c96ecf",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "passive/inverted 'is'",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Card flags the pole broad (2.7% of tokens >0.1 max). Probe values 0.16-0.63, peaks not always on 'is'.",
+ "selection": "random draw"
+}
