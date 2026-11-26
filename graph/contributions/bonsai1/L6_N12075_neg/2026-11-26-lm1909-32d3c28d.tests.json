@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-26-lm1909-32d3c28d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N12075-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:40:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N12075",
+   "pole": "-",
+   "label": "the 'deep' piece in deepcopy / deeply",
+   "fire": [
+    "state = deepcopy(self.initial_state)",
+    "The villagers were deeply grateful for the help.",
+    "backup = copy.deepcopy(settings)",
+    "She was deeply suspicious of the offer.",
+    "new_board = deepcopy(board)\nnew_board.move(x, y)",
+    "The report was deeply critical of the agency.",
+    "params = deepcopy(base_params)\nparams['lr'] = 0.01",
+    "He felt deeply ashamed of his behaviour."
+   ],
+   "quiet": [
+    "state = copy(self.initial_state)",
+    "The villagers were truly grateful for the help.",
+    "backup = copy.copy(settings)",
+    "She was highly suspicious of the offer.",
+    "new_board = clone(board)\nnew_board.move(x, y)",
+    "The report was sharply critical of the agency.",
+    "params = dict(base_params)\nparams['lr'] = 0.01",
+    "He felt terribly ashamed of his behaviour."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'deep' in deepcopy/deeply",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: ' db' x7, deepcopy x2, deeply x2, flask, oslo in Python code. Probe: ' deepcopy' 0.57, ' deeply' 0.26, ' db' only 0.05 (so db was not tested). Early layer: bare words.",
+ "trigger": {
+  "words": [
+   "deepcopy",
+   "deeply"
+  ]
+ }
+}
