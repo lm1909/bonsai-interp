@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5ab5cb16",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N1600+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:04:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N1600",
+   "pole": "+",
+   "label": "closing '()' / ')' that ends a method-call line in Python code",
+   "fire": [
+    "    def refresh(self):\n        self.items = self.load_items()\n        self.render()\n",
+    "\tdef on_cancel(self):\n\t\tself.reset_totals()\n\t\tself.notify_owner()\n",
+    "if __name__ == '__main__':\n    app = create_app()\n    app.run()\n",
+    "    def close(self):\n        self.conn.commit()\n        self.conn.close()\n",
+    "        result = self.compute_score()\n        self.log_result(result)\n",
+    "    parser = build_parser()\n    args = parser.parse_args()\n",
+    "\tdef validate(self):\n\t\tself.check_dates()\n\t\tself.check_amounts()\n",
+    "        self.timer.stop()\n        self.update_display()\n"
+   ],
+   "quiet": [
+    "    def refresh(self):\n        self.items = []\n        self.count = 0\n",
+    "\tdef on_cancel(self):\n\t\tself.total = 0\n\t\tself.owner = None\n",
+    "if __name__ == '__main__':\n    debug = True\n    port = 8000\n",
+    "    def close(self):\n        self.open = False\n        self.conn = None\n",
+    "        result = self.score\n        self.last = result\n",
+    "    name = 'parser'\n    version = 3\n",
+    "\tdef validate(self):\n\t\tself.valid = True\n\t\tself.errors = []\n",
+    "        self.timer = None\n        self.display = ''\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "call-closing paren",
+ "unit_kind": "sparse feature",
+ "confidence": 0.25,
+ "notes": "Card flags broad (2.8% of tokens reach 0.1 of max); tops are '()\\n' and '(builder)' ending calls. Probe: get_status() line 0.26. The - pole is identifier pieces inside calls (while_loop, _action)."
+}

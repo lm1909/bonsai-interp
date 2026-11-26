@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-78aecc83",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N1455+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:04:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N1455",
+   "pole": "+",
+   "label": "first indentation token of a line inside a for-loop body in Python code",
+   "fire": [
+    "rows = []\nfor line in open('data.txt'):\n    line = line.strip()\n    rows.append(line)\n",
+    "def names(people):\n    out = []\n    for person in people:\n        out.append(person.name)\n    return out\n",
+    "total = 0\nfor item in cart:\n    total += item.price\nprint(total)\n",
+    "class Board:\n    def draw(self):\n        for row in self.rows:\n            print(row)\n",
+    "words = text.split()\nfor w in words:\n    counts[w] = counts.get(w, 0) + 1\n",
+    "def scan(paths):\n    for path in paths:\n        data = load(path)\n        yield data\n",
+    "for key in config:\n    value = config[key]\n    print(key, value)\n",
+    "def flatten(lists):\n    flat = []\n    for sub in lists:\n        flat.extend(sub)\n    return flat\n"
+   ],
+   "quiet": [
+    "rows = []\nif path.exists():\n    text = path.read_text()\n    rows.append(text)\n",
+    "def name(person):\n    out = person.first\n    if person.last:\n        out += person.last\n    return out\n",
+    "total = 0\nif cart:\n    total = cart.total()\nprint(total)\n",
+    "class Board:\n    def draw(self):\n        if self.visible:\n            print(self)\n",
+    "words = text.split()\nwith open('out.txt', 'w') as f:\n    f.write(' '.join(words))\n",
+    "def scan(path):\n    try:\n        data = load(path)\n    except IOError:\n        data = None\n",
+    "if key in config:\n    value = config[key]\n    print(key, value)\n",
+    "def first(lists):\n    if not lists:\n        return None\n    return lists[0]\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "for-loop body indent",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card + pole tops are indentation tokens on the first line of for-loop bodies; the - pole tops are if/else bodies, so the distinction tested is loop body versus conditional body. Probe peaks were weak (0.17), low confidence."
+}
