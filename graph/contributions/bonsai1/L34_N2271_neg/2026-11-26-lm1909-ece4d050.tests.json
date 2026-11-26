@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-ece4d050",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N2271-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:38:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N2271",
+   "pole": "-",
+   "label": "line-ending '.' followed by a newline in health and care advice text",
+   "fire": [
+    "Rinse your mouth with warm salt water after every meal.\nDo not smoke for at least three days.",
+    "Keep the wound clean and dry for the first week.\nChange the dressing every morning.",
+    "Apply ice to the swollen cheek for ten minutes.\nTake the painkiller only as directed.",
+    "Avoid hot drinks until the numbness wears off.\nEat soft foods for two days.",
+    "Brush gently around the stitches with a soft brush.\nCall the clinic if bleeding returns.",
+    "Drink plenty of water during the recovery period.\nRest with your head raised at night.",
+    "Do not spit or use a straw on the first day.\nThe clot needs time to form.",
+    "Wash your hands before touching the bandage.\nReport any redness or swelling."
+   ],
+   "quiet": [
+    "Rinse your mouth with warm salt water after every meal, and do not smoke for at least three days.",
+    "Keep the wound clean and dry for the first week, changing the dressing every morning.",
+    "Apply ice to the swollen cheek for ten minutes and take the painkiller only as directed.",
+    "Avoid hot drinks until the numbness wears off and eat soft foods for two days.",
+    "Brush gently around the stitches with a soft brush; call the clinic if bleeding returns.",
+    "Drink plenty of water during the recovery period and rest with your head raised at night.",
+    "Do not spit or use a straw on the first day, because the clot needs time to form.",
+    "Wash your hands before touching the bandage and report any redness or swelling."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "advice line end '.\\n'",
+ "unit_kind": "contextual",
+ "confidence": 0.25,
+ "notes": "Card: '.\\n' x18 of top 32 (dental aftercare advice), also Arabic ' الش'. Probe weak: gums advice '.\\n' 0.14, plain prose '.\\n' 0.03. Likely to fail on median."
+}

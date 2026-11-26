@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-591d638f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N562-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:38:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N562",
+   "pole": "-",
+   "label": "statement boundary (newline, ' =') inside indented Python code blocks",
+   "fire": [
+    "    for row in rows:\n        total += row.value\n        if total > limit:\n            break\n",
+    "def load(path):\n    data = []\n    with open(path) as fh:\n        data = fh.read()\n    return data\n",
+    "    x, y, z = 0, 0, 0\n    while x < n:\n        x += step\n",
+    "class Box:\n    def __init__(self, w):\n        self.w = w\n        self.h = w * 2\n",
+    "        if item is None:\n            continue\n        seen.add(item)\n        out.append(item)\n",
+    "    try:\n        conn = connect(url)\n    except OSError:\n        conn = None\n",
+    "    count = len(items)\n    assert count == expected\n    return count\n",
+    "    for key in sorted(d):\n        val = d[key]\n        print(key, val)\n"
+   ],
+   "quiet": [
+    "We loop over the rows, add each value to the total, and stop once it passes the limit.",
+    "The load function opens the file at the given path, reads it and returns the data.",
+    "Three counters start at zero and the first one grows by a step until it reaches n.",
+    "A box stores its width and sets its height to twice that width when it is made.",
+    "Empty items are skipped; every other item is recorded as seen and added to the output.",
+    "The code tries to open a connection and falls back to nothing if the network fails.",
+    "It counts the items, checks the count against the expected number and returns it.",
+    "Each key of the dictionary is visited in sorted order and printed with its value."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python statement boundary",
+ "unit_kind": "contextual",
+ "confidence": 0.25,
+ "notes": "Top examples are newlines and ' =' inside nested Python; probe gave only 0.14-0.29 of max, so this may fail on median."
+}

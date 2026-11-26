@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-1f6f7c4b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N2470-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:38:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N2470",
+   "pole": "-",
+   "label": "a split word's first piece when it is a bare b-sound (' الب'كالوريوس, ' ب'حث, ' B'egriff)",
+   "fire": [
+    "تخرج أخي العام الماضي وحصل على البكالوريوس في الطب.",
+    "تقدمت ابنتي لبرنامج البكالوريوس في جامعة القاهرة.",
+    "يدرس الطلاب أربع سنوات للحصول على البكالوريوس في الهندسة.",
+    "قال الباحث إن النتائج تحتاج إلى مزيد من الدراسة.",
+    "نشر الباحث مقالاً جديداً عن تغير المناخ.",
+    "قدمت الطالبة بحث التخرج أمام اللجنة أمس.",
+    "In der Physik ist der Begriff Energie sehr genau definiert.",
+    "Im Unterricht erklärte die Lehrerin zwei neue Begriffe."
+   ],
+   "quiet": [
+    "تخرج أخي العام الماضي وحصل على الماجستير في الطب.",
+    "تقدمت ابنتي لوظيفة في البنك في القاهرة.",
+    "يدرس الطلاب أربع سنوات في المدرسة الثانوية.",
+    "قال المدير إن البيانات تحتاج إلى مزيد من المراجعة.",
+    "نشر المدير مقالاً جديداً عن تغير المناخ.",
+    "قدمت الطالبة مشروع التخرج أمام اللجنة أمس.",
+    "In der Physik ist der Bereich Energie sehr genau definiert.",
+    "Im Unterricht erklärte die Lehrerin zwei neue Antworten."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-word b- start",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: ' الب' x11, 'ب', ' B' (Begriff) in top 32. Probe: البكالوريوس 0.53, Begriff 0.42, الماجستير 0.002. Near misses use whole-token الب- words (البيانات, البنك) and unsplit B-words."
+}

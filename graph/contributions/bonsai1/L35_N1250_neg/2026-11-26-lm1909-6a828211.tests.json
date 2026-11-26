@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-6a828211",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N1250-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:38:54+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N1250",
+   "pole": "-",
+   "label": "first piece of a capitalized word the tokenizer splits (' Par'adies, ' Car'ibou, ' Pro'gnose)",
+   "fire": [
+    "Für viele Kinder ist der Spielplatz ein echtes Paradies im Sommer.",
+    "In the far north, herds of Caribou cross the river every autumn.",
+    "Die Ärzte gaben eine gute Prognose nach der Operation.",
+    "Die Kinder schnitten eine Karotte für den Schneemann.",
+    "Our flight to Asunción, the capital of Paraguay, left at dawn.",
+    "Shepherds still graze their flocks in the Carpathian mountains.",
+    "The nurse gave him Paracetamol for the fever last night.",
+    "Der Lehrer las den Schülern eine kurze Parabel vor."
+   ],
+   "quiet": [
+    "Für viele Kinder ist der Spielplatz der schönste Ort im Sommer.",
+    "In the far north, herds of reindeer cross the river every autumn.",
+    "Die Ärzte waren nach der Operation sehr zufrieden mit dem Ergebnis.",
+    "Die Kinder holten einen Apfel für den Schneemann.",
+    "Our flight to Lima, the capital of Peru, left at dawn.",
+    "Shepherds still graze their flocks in the Alps every summer.",
+    "The nurse gave him water for the fever last night.",
+    "Der Lehrer las den Schülern eine kurze Antwort vor."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "capitalized split-word start",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card: ' Par', ' Per', ' Pro', ' Car', ' Kar' as starts of split words. Probe: Paradies 0.77, Caribou 0.56, Prognosen 0.43; whole-token 'Paris' 0.007. Near misses use capitalized words that are one token."
+}
