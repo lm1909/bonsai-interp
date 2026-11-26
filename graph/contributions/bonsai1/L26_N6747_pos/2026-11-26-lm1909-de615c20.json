@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-de615c20",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N6747+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:45:25+00:00",
+ "recipe": {
+  "toolchain_commit": "3fca9bf2d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N6747_pos/2026-11-26-lm1909-de615c20.tests.json"
+ },
+ "label": "unclear: a mid-word piece or operator inside an all-caps name or a code string (REVENUES, ANDERSON, string concatenation '+')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N6747_pos/2026-11-26-lm1909-de615c20.tests.json",
+   "prereg_commit": "3fca9bf2d",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.017,
+     "peak": "EMP"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.007,
+     "peak": " have"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.01,
+     "peak": " note"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.009,
+     "peak": " été"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.009,
+     "peak": " '/'"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.027,
+     "peak": "RE"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.008,
+     "peak": " +"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.007,
+     "peak": "ierre"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " message"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " été"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " file"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": " founded"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": "gré"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.009,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3fca9bf2d",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "unclear, broad",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "Card flags broad (1.3%); top examples are heterogeneous (split capitals, code operators, URLs). Five probes in that style all scored under 0.03. Best guess recorded; expected to fail.",
+ "selection": "random draw"
+}
