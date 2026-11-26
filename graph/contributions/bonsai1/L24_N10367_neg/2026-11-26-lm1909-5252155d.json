@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-5252155d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10367-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:40:40+00:00",
+ "recipe": {
+  "toolchain_commit": "b860d16e1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N10367_neg/2026-11-26-lm1909-5252155d.tests.json"
+ },
+ "label": "the '0' after '20' in a 200x number used as a name or label (Windows 2000, 2001: A Space Odyssey, version '2003')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N10367_neg/2026-11-26-lm1909-5252155d.tests.json",
+   "prereg_commit": "b860d16e1",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.935,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.369,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.481,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.146,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.883,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.541,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.663,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.513,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.306,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.236,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.081,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.23,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.149,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.11,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.082,
+     "peak": "1"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.602,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b860d16e1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'0' in 200x names",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "All top 32 peak on the second '0' of 200x. Probe: 'Windows 2000' 0.78, plain years 2001/2003 ~0.14, 2015 ~0. Near misses use 201x/199x names.",
+ "selection": "random draw"
+}

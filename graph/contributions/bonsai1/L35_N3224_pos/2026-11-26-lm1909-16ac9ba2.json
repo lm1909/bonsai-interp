@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-16ac9ba2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3224+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:41:11+00:00",
+ "recipe": {
+  "toolchain_commit": "b860d16e1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N3224_pos/2026-11-26-lm1909-16ac9ba2.tests.json"
+ },
+ "label": "a CJK character token that follows a space in space-separated Chinese/Japanese text (subtitle-style clauses)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N3224_pos/2026-11-26-lm1909-16ac9ba2.tests.json",
+   "prereg_commit": "b860d16e1",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.081,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.151,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.541,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.071,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.609,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.298,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.487,
+     "peak": " �"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.143,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.025,
+     "peak": "走到"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": "大家都"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.007,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "去"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.007,
+     "peak": "很大"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.008,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.006,
+     "peak": "项目"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": "�"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.224,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b860d16e1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "CJK after a space",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Probe: space-separated Chinese 0.48-0.53, same text with punctuation ~0.01, Japanese product text 0.46. Top examples are TED-style space-separated Chinese transcripts.",
+ "selection": "random draw"
+}
