@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-a49c0060",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N9076-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:13:27+00:00",
+ "recipe": {
+  "toolchain_commit": "5171b6755",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N9076_neg/2026-11-26-lm1909-a49c0060.tests.json"
+ },
+ "label": "attention-directing imperative in direct speech ('look what I can do', 'Look up!', 'watch this')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N9076_neg/2026-11-26-lm1909-a49c0060.tests.json",
+   "prereg_commit": "5171b6755",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.461,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.521,
+     "peak": "Look"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.326,
+     "peak": " watch"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.207,
+     "peak": "Look"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.571,
+     "peak": " look"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.272,
+     "peak": "Watch"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.208,
+     "peak": "Look"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.596,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " toward"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.044,
+     "peak": " through"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.031,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.394,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5171b6755",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "'look!' imperative in dialogue",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Probe: 'Look up!' 0.65, 'watch this!' 0.48, 'look what I can do' 0.45; narrative 'looked at' 0.01. 'let me help you' only 0.09.",
+ "selection": "random draw"
+}

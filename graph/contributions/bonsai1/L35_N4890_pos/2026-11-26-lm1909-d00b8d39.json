@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-d00b8d39",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4890+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:12:36+00:00",
+ "recipe": {
+  "toolchain_commit": "5171b6755",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N4890_pos/2026-11-26-lm1909-d00b8d39.tests.json"
+ },
+ "label": "token that begins re-spelling a rare word or acronym already given in context (dictionary 'stab (plural st|abs)', 'Standard (VCS)')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N4890_pos/2026-11-26-lm1909-d00b8d39.tests.json",
+   "prereg_commit": "5171b6755",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.293,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.414,
+     "peak": " j"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.015,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.278,
+     "peak": " gr"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.149,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.022,
+     "peak": " stub"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.036,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.573,
+     "peak": " sn"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " climate"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " piece"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.214,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5171b6755",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "re-spelling a just-seen word",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card peaks are huge (752) on scattered fragments in code and dictionary text; probe: 'Verified Carbon Standard (VCS)' 0.70 and 'stab (plural stabs)' 0.38, but WHO/NFL acronyms and dog/dogs near zero. Weak guess.",
+ "selection": "random draw"
+}
