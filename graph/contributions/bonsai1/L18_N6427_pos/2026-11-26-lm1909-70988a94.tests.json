@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-70988a94",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N6427+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:03:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N6427",
+   "pole": "+",
+   "label": "the indentation run before a block-exiting statement in Python (break, raise, return, a final print) inside an if/else or except branch",
+   "fire": [
+    "def scan(tokens):\n    pos = 0\n    while True:\n        tok = tokens[pos]\n        if tok is None:\n            break\n        pos += 1\n    return pos",
+    "def connect(host):\n    try:\n        sock = open_socket(host)\n    except OSError:\n        log.error('connect failed')\n        raise\n    return sock",
+    "def handle(self, msg):\n    if not self.ready:\n        return\n    self.queue.put(msg)",
+    "def check(self):\n    if self.closed:\n        print \"closed\"\n    else:\n        print \"open\"\n        print self.name",
+    "for line in stream:\n    if line.startswith('#'):\n        continue\n    if line == 'END':\n        break\n    rows.append(line)",
+    "def read_all(self):\n    data = []\n    while True:\n        chunk = self.fh.read(1024)\n        if not chunk:\n            return data\n        data.append(chunk)",
+    "def close(self):\n    try:\n        self.conn.shutdown()\n    except Exception:\n        self.conn = None\n        raise\n\n@property\ndef open(self):",
+    "def lookup(table, key):\n    for k, v in table:\n        if k == key:\n            return v\n    else:\n        raise KeyError(key)"
+   ],
+   "quiet": [
+    "def scan(tokens):\n    pos = 0\n    while True:\n        tok = tokens[pos]\n        if tok is None:\n            tok = default\n        pos += 1\n    return pos",
+    "def connect(host):\n    try:\n        sock = open_socket(host)\n    except OSError:\n        log.error('connect failed')\n        sock = None\n    return sock",
+    "def handle(self, msg):\n    if not self.ready:\n        self.wait()\n    self.queue.put(msg)",
+    "def check(self):\n    if self.closed:\n        self.state = \"closed\"\n    else:\n        self.state = \"open\"\n        self.name = name",
+    "for line in stream:\n    if line.startswith('#'):\n        comments.append(line)\n    if line == 'END':\n        seen_end = True\n    rows.append(line)",
+    "def read_all(self):\n    data = []\n    while True:\n        chunk = self.fh.read(1024)\n        if not chunk:\n            chunk = b''\n        data.append(chunk)",
+    "def close(self):\n    try:\n        self.conn.shutdown()\n    except Exception:\n        self.conn = None\n        self.failed = True\n\n@property\ndef open(self):",
+    "def lookup(table, key):\n    for k, v in table:\n        if k == key:\n            found = v\n    else:\n        found = None"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "indent before break/return",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: 21 of the top 32 peak on indentation runs, immediately before break, raise, return or print in an if/else/except branch; a few on ' ='. Not probed (my probes went to the - pole by mistake and are not used here). Near misses keep the code and replace the exiting statement with an ordinary assignment or call."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-96f67877",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N8324-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:03:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N8324",
+   "pole": "-",
+   "label": "statement-start positions (indentation and first token) inside indented Python method bodies",
+   "fire": [
+    "class Loader:\n    def __init__(self, path):\n        self.path = path\n        self.cache = {}\n\n    def get(self, key):\n        if key in self.cache:\n            return self.cache[key]\n        value = self._read(key)\n        self.cache[key] = value\n        return value",
+    "    def update(self, batch):\n        states = batch['states']\n        rewards = batch['rewards']\n        dones = batch['dones']\n        loss = self.compute_loss(states, rewards, dones)\n        self.optimizer.zero_grad()\n        loss.backward()",
+    "    def remove(self, user, item_id):\n        item = self.items.get(item_id)\n        if item is None:\n            raise KeyError(item_id)\n        for owner in item.owners:\n            if owner == user:\n                item.owners.remove(owner)",
+    "    def parse(self, lines):\n        result = []\n        for line in lines:\n            line = line.strip()\n            if not line:\n                continue\n            key, value = line.split('=')\n            result.append((key, value))\n        return result",
+    "class Graph(object):\n    def __init__(self):\n        self.nodes = []\n        self.edges = []\n\n    def add_edge(self, a, b):\n        if isinstance(a, Node):\n            self.edges.append((a, b))",
+    "    def render(self, ctx):\n        width = ctx.width\n        height = ctx.height\n        try:\n            self.surface.draw(width, height)\n        except IOError:\n            self.log.warning('draw failed')",
+    "    def run(self):\n        while self.running:\n            event = self.queue.get()\n            handler = self.handlers.get(event.kind)\n            if handler:\n                handler(event)",
+    "    def save(self, path):\n        data = self.serialize()\n        with open(path, 'w') as fh:\n            json.dump(data, fh)\n        self.dirty = False\n        return path"
+   ],
+   "quiet": [
+    "The Loader class keeps a path and a small cache. When you ask it for a key, it first checks the cache, and only reads from disk if the value is missing.",
+    "The update step takes a batch of states, rewards and done flags, computes the loss, clears the old gradients and runs the backward pass.",
+    "To remove an item, the method looks it up by id, raises an error if it is missing, and then removes the user from the list of owners.",
+    "The parser strips each line, skips the empty ones, splits the rest on the equals sign, and collects the key and value pairs into a list.",
+    "A graph object starts with empty lists of nodes and edges, and adding an edge only works when the first argument is a node.",
+    "Rendering reads the width and height from the context and draws the surface, logging a warning if the drawing fails.",
+    "The run loop keeps taking events off the queue while the service is running and passes each one to the handler for its kind.",
+    "Saving serializes the object, writes the data to the file as JSON, marks the object as clean and returns the path."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python statement starts",
+ "unit_kind": "contextual",
+ "confidence": 0.25,
+ "notes": "Top examples are indentation runs or the first token of a statement inside class methods. Short probed snippets scored only ~0.1, so the fire items are longer passages; expected to be weak."
+}
