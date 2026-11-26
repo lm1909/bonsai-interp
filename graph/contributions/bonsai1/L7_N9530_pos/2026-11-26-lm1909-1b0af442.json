@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-1b0af442",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9530+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:55:56+00:00",
+ "recipe": {
+  "toolchain_commit": "e27903436",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N9530_pos/2026-11-26-lm1909-1b0af442.tests.json"
+ },
+ "label": "' Joe' completing the franchise name 'G.I. Joe' / 'GI Joe'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N9530_pos/2026-11-26-lm1909-1b0af442.tests.json",
+   "prereg_commit": "e27903436",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.796,
+     "peak": " Joe"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.937,
+     "peak": " Joe"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.734,
+     "peak": " Joe"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.848,
+     "peak": " Joe"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.109,
+     "peak": " Joe"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.674,
+     "peak": " Joe"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.859,
+     "peak": " Joe"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.622,
+     "peak": " Joe"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.003,
+     "peak": " figure"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": " sequel"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " summers"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.017,
+     "peak": " Wheels"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " cartoon"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": "box"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " Barbie"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.822,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e27903436",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "G.I. Joe",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Probe: G.I. Joe 0.96, GI Joe 0.59, 'uncle Joe' 0.17, 'Joe Biden' 0.02; other top examples (Ouabache, oauth2client, LOUIS-CÉSAIRE) suggest a broader 'last piece of a fixed multi-part name' that this test does not claim. Near misses keep the toy/film topic or use Joe as a plain first name.",
+ "selection": "random draw"
+}
