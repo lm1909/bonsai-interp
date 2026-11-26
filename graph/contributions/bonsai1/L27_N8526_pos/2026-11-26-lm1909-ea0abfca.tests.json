@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-ea0abfca",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N8526+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:06:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N8526",
+   "pole": "+",
+   "label": "start of a parenthesised or cast expression on the right of an assignment/return in code (return (..., =(char*), date_diff(",
+   "fire": [
+    "def norm(x, a, b):\n    width = b - a\n    return (x - a) / width",
+    "int *p;\nlong *q=(long*)&p;",
+    "def age(person):\n    days_left = date_diff(due_date, today)\n    return days_left",
+    "def ratio(n, d):\n    d = d or 1\n    return (n * 100) / d",
+    "float *fp;\nfloat *g=(float*)&buf;",
+    "def span(job):\n    weeks = date_diff(stop_date, begin_date) // 7\n    return weeks",
+    "def mid(lo, hi):\n    size = hi - lo\n    return (lo + hi) // 2",
+    "char *s;\nunsigned char *u=(unsigned char*)s;"
+   ],
+   "quiet": [
+    "def norm(x, a, b):\n    width = b - a\n    return x / width",
+    "int *p;\nlong q = 0;",
+    "def age(person):\n    days_left = 30\n    return days_left",
+    "def ratio(n, d):\n    d = d or 1\n    return n",
+    "float *fp;\nfloat g = 0.0;",
+    "def span(job):\n    weeks = 7\n    return weeks",
+    "def mid(lo, hi):\n    size = hi - lo\n    return size",
+    "char *s;\nunsigned int u = 0;"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code RHS expression start",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Output promotes difference/subtract/minus. Probe was inconsistent: return '(' 0.6, '=(' 0.5, date_diff 0.39, but '(value - min_value)' only 0.08. Low confidence."
+}

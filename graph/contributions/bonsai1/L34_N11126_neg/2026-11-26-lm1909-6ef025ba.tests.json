@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-6ef025ba",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N11126-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:06:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N11126",
+   "pole": "-",
+   "label": "a split-off letter 'l'/'L' as its own token at the start of an uncommon word (Ver|l|autbarung, l|illois, L|aut)",
+   "fire": [
+    "Der Minister gab gestern eine offizielle Verlautbarung heraus.",
+    "Le club lillois a signé un nouveau gardien cet été.",
+    "Die Behörde veröffentlichte am Montag eine kurze Verlautbarung.",
+    "Il est devenu le meilleur buteur lillois de la saison.",
+    "Craft beers on tap tonight:\nPorter\nLucky U IPA\nPale Ale",
+    "Nach einer Verlautbarung des Ministeriums bleibt die Grenze offen.",
+    "Les supporters lillois ont chanté pendant tout le match.",
+    "The Breckenridge menu lists Lucky U IPA next to the stout."
+   ],
+   "quiet": [
+    "Der Minister gab gestern eine offizielle Erklärung heraus.",
+    "Le club parisien a signé un nouveau gardien cet été.",
+    "Die Behörde veröffentlichte am Montag eine kurze Mitteilung.",
+    "Il est devenu le meilleur buteur parisien de la saison.",
+    "Craft beers on tap tonight:\nPorter\nAmber Ale\nPale Ale",
+    "Nach einer Erklärung des Ministeriums bleibt die Grenze offen.",
+    "Les supporters parisiens ont chanté pendant tout le match.",
+    "The Breckenridge menu lists the amber ale next to the stout."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off initial l/L",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "Very high-magnitude late-layer pole (max 268). The + pole also fires on l-pieces (l|imestones, л|ичную), so the distinction between the poles is unclear; this tests the - pole's top examples' pattern."
+}
