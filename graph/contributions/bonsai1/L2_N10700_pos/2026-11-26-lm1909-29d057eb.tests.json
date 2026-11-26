@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-29d057eb",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N10700+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:00:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N10700",
+   "pole": "+",
+   "label": "file-name and extension tokens inside quoted string literals in code ('a100p.jpg')",
+   "fire": [
+    "    thumb = Image.open(os.path.join(root, 'preview_large.png'))",
+    "    with open('results/output_final.jpg', 'rb') as fh:",
+    "    icon_path = resource_dir + '/icons/save_button.png'",
+    "    shutil.copy(src, 'backup/photo_2019.jpeg')",
+    "    self.assertTrue(exists(join(tmp, 'corrupted.jpg')))",
+    "    logo = pygame.image.load('assets/logo_small.png')",
+    "    cv2.imwrite('frames/frame_%04d.jpg' % i, frame)",
+    "    banner = load_image(\"static/img/banner_wide.png\")"
+   ],
+   "quiet": [
+    "    thumb = Image.open(os.path.join(root, preview_name))",
+    "    with open(output_path, 'rb') as fh:",
+    "    icon_path = resource_dir + icon_name",
+    "    shutil.copy(src, backup_dir)",
+    "    self.assertTrue(exists(join(tmp, filename)))",
+    "    logo = pygame.image.load(logo_file)",
+    "    cv2.imwrite(frame_path, frame)",
+    "    banner = load_image(settings.BANNER)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "filenames in code strings",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "card flags broad (8.9% > 0.1 max) and gate-closed echo regime; top examples are tokens inside quoted strings in Python. Probe: '.png'/'.jpg' in code strings 0.27-0.33, '.csv' 0.09."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-094e9ff6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10504+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:00:50+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N10504",
+   "pole": "+",
+   "label": "the subject or modal right before an expected negation in a denial ('No, that ...', 'of course, it is not ...'); output promotes cannot/unable",
+   "fire": [
+    "\"No, that is simply untrue,\" the minister replied.",
+    "\"No! This can't be happening,\" she cried.",
+    "Rain is a factor, but it is not the main cause of the flooding.",
+    "\"No, that wasn't me at the door,\" he insisted.",
+    "Sure, the car is cheap, but that doesn't make it a good buy.",
+    "\"No, this isn't what we agreed on,\" said the client.",
+    "Diet matters, of course, but it isn't the whole story.",
+    "\"No way, that can't be right,\" muttered the clerk."
+   ],
+   "quiet": [
+    "\"Yes, that is entirely true,\" the minister replied.",
+    "\"Yes! This is finally happening,\" she cried.",
+    "Rain is a factor, and it is also the main cause of the flooding.",
+    "\"Yes, that was me at the door,\" he admitted.",
+    "Sure, the car is cheap, and that makes it a good buy.",
+    "\"Yes, this is what we agreed on,\" said the client.",
+    "Diet matters, of course, and it shapes the whole story.",
+    "\"Oh good, that must be right,\" said the clerk."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "before a denial's 'not'",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "card: ' can' x7, ' it' x5, ' this'/' that' before not/can't; logit promotes cannot/couldn't/unable. Probe: 'No, that was never' 0.39 vs 'Yes, that was' 0.11; 'No, this is not' 0.24; 'Of course, that does not' 0.21."
+}
