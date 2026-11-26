@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-ff42b059",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N8854-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N8854",
+   "pole": "-",
+   "label": "managed / serverless cloud compute (serverless, fully managed service, service account)",
+   "fire": [
+    "We rebuilt the API as serverless functions so we no longer patch machines.",
+    "The startup chose a fully managed Kubernetes service to save time.",
+    "Each microservice runs under its own service account with limited rights.",
+    "Serverless computing bills you only for the milliseconds your code runs.",
+    "Azure offers a fully managed database server with automatic backups.",
+    "Our nightly jobs moved to a serverless container platform last year.",
+    "Grant the service account permission to invoke the cloud function.",
+    "A managed compute service handles scaling and patching for you."
+   ],
+   "quiet": [
+    "We stored the API logs in a bucket so we could search them later.",
+    "The startup chose a cheap object storage plan to save money.",
+    "Each microservice writes its files to a shared network drive.",
+    "Cloud storage bills you for every gigabyte you keep each month.",
+    "Azure offers blob storage with automatic replication across regions.",
+    "Our nightly backups moved to a cold storage archive last year.",
+    "Copy the images to the storage bucket before the release.",
+    "A virtual network connects the subnets in each region."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "managed cloud compute",
+ "unit_kind": "sparse feature",
+ "confidence": 0.45,
+ "notes": "Card top: 'fully managed', 'service account', flexible servers, game servers; the + pole is cloud storage/network (S3, azure.storage). Probe: 'serverless' 1.66, 'fully managed database service' 0.44, 'S3 bucket' 0.02. Near misses are cloud storage/network sentences."
+}

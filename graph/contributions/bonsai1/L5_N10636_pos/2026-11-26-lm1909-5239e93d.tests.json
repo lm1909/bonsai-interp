@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5239e93d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N10636+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N10636",
+   "pole": "+",
+   "label": "the first character inside a quoted string value in code (username='Σ…', name=\"%s\")",
+   "fire": [
+    "    Profile.objects.create(nickname='Ωmega', age=30)",
+    "    db.execute('UPDATE items SET name=\"%s\" WHERE id=1' % new_name)",
+    "    client.login(username='Ελένη', password='secret')",
+    "    query = \"SELECT * FROM books WHERE title='%s'\" % title",
+    "    user = User(first_name='Δημήτρης', last_name='Papas')",
+    "    logger.info('value=\"%s\" saved', value)",
+    "    self.assertEqual(slug, 'αβγ-test')",
+    "    conn.execute('DELETE FROM jobs WHERE tag=\"%s\"' % tag)"
+   ],
+   "quiet": [
+    "    Profile.objects.create(nickname=nick, age=30)",
+    "    db.execute(update_sql, (new_name, 1))",
+    "    client.login(username=user_name, password=pwd)",
+    "    query = build_query(table=books, title=title)",
+    "    user = User(first_name=first, last_name=last)",
+    "    logger.info(value, extra=context)",
+    "    self.assertEqual(slug, expected_slug)",
+    "    conn.execute(delete_stmt, (tag,))"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "opening of a string literal",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card top: 'Σ' opening username='Σαρα', '=\"%' in an SQL string, Russian 'сю|да', ' averages'/' between' in maths word problems. Probe: code string openings 0.68-0.91; 'сюда' 0.17, word-problem words 0.16-0.31. Near misses pass the same arguments as numbers or variables, without a quoted string."
+}

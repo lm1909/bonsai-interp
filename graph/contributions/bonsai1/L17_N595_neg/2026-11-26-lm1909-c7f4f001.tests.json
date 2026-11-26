@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-c7f4f001",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N595-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N595",
+   "pole": "-",
+   "label": "the first token of a text window (positional), e.g. a leading dash or 'just'",
+   "fire": [
+    " – this was the last train of the night.",
+    " just make sure the door is locked before you leave.",
+    " – the results will be posted on Monday.",
+    " indicate your seat number on the form.",
+    " just add salt and stir for two minutes.",
+    " – every student must bring a calculator.",
+    " Jasmine and roses grew along the fence.",
+    " – nobody expected the storm to hit so early."
+   ],
+   "quiet": [
+    "We ran – this was the last train of the night.",
+    "Please just make sure the door is locked before you leave.",
+    "Good news – the results will be posted on Monday.",
+    "Please indicate your seat number on the form.",
+    "Then just add salt and stir for two minutes.",
+    "Reminder – every student must bring a calculator.",
+    "Tall jasmine and roses grew along the fence.",
+    "Sadly – nobody expected the storm to hit so early."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "window position 0",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card flags positional: 100% of top peaks at window position 0, with mixed tokens (' –', ' just', ' J', ' indicate'). Test is a best guess (leading dash / 'just' at the very start vs the same word mid-text); expected to fail, recorded to note the positional unit."
+}
