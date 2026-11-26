@@ -1,0 +1,52 @@
+{
+ "contribution": "2026-11-26-lm1909-3562c639",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3845+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:53:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N3845",
+   "pole": "+",
+   "label": "the '|\\n' token that ends a row of a pipe-delimited table",
+   "fire": [
+    "Ingredients:\n|3 eggs|\n|1 cup flour|\n|2 tbsp butter|\n|a pinch of salt|\n",
+    "|Name||Role|\n|Alice||Engineer|\n|Bob||Designer|\n",
+    "Schedule\n|Monday||Swimming|\n|Wednesday||Piano|\n|Friday||Chess club|\n",
+    "|City||Population|\n|Lyon||520,000|\n|Nice||340,000|\n",
+    "Vowels:\n|o||as in 'boat'|\n|u||as in 'boot'|\n",
+    "|Year||Champion|\n|2019||Liverpool|\n|2020||Bayern|\n",
+    "Price list\n|Coffee||$3|\n|Tea||$2|\n|Juice||$4|\n",
+    "|Planet||Moons|\n|Mars||2|\n|Jupiter||95|\n"
+   ],
+   "quiet": [
+    "Ingredients: 3 eggs, 1 cup flour, 2 tbsp butter and a pinch of salt.",
+    "Name: Alice, engineer. Name: Bob, designer.",
+    "Schedule: Monday is swimming, Wednesday is piano, Friday is chess club.",
+    "City and population: Lyon has 520,000 people and Nice has 340,000.",
+    "Vowels: o as in 'boat', u as in 'boot'.",
+    "Year and champion: Liverpool won in 2019 and Bayern in 2020.",
+    "Price list: coffee costs $3, tea $2 and juice $4.",
+    "Planets and moons: Mars has 2 moons and Jupiter has 95."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "table row end '|\\n'",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "'|\\n' is 22 of the top 32; output promotes pipe tokens (predicting the next row's opening pipe).",
+ "trigger": {
+  "tokens": [
+   "|\n"
+  ]
+ }
+}

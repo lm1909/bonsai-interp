@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-be6f6add",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N5245-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:53:34+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N5245",
+   "pole": "-",
+   "label": "word-initial fragments of non-English (German / Spanish) words that the tokenizer splits into short pieces",
+   "fire": [
+    "Bitte vergessen Sie nicht, das Paket persönlich entgegenzunehmen.",
+    "Im Sommer reisen viele Familien nach Kroatien an die Küste.",
+    "Der Arzt empfahl eine Hormonbehandlung nach der Operation.",
+    "Los pájaros empezaron a picotear las migas de pan.",
+    "La abuela solía pellizcar las mejillas de sus nietos.",
+    "Die Rückerstattung des Betrags erfolgt innerhalb von zwei Wochen.",
+    "El viento comenzó a zarandear las ramas del árbol.",
+    "Man muss die Zwiebeln fein würfeln und dann anbraten."
+   ],
+   "quiet": [
+    "Bitte vergessen Sie nicht, das Paket heute zu holen.",
+    "Im Sommer fahren viele Familien an die Küste.",
+    "Der Arzt gab ihr nach der Operation ein Medikament.",
+    "Los pájaros comieron el pan en el parque.",
+    "La abuela siempre besaba a sus nietos.",
+    "Das Geld kommt in zwei Wochen zurück.",
+    "El viento movía las ramas del árbol.",
+    "Man muss die Zwiebeln schneiden und dann kochen."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split foreign-word pieces",
+ "unit_kind": "sparse feature",
+ "confidence": 0.4,
+ "notes": "+ pole (not tested) is numerals in Arabic-Indic digits and Chinese ordinals; output suppresses English number words."
+}
