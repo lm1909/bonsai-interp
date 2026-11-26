@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-ba152781",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N8752-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:36:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N8752",
+   "pole": "-",
+   "label": "'def' opening a top-level test function in Python test files (after imports/fixtures)",
+   "fire": [
+    "import pytest\nfrom shop.cart import Cart\n\n\ndef test_empty_cart_total():\n    assert Cart().total() == 0",
+    "import os\nimport pytest\n\n\n@pytest.fixture\ndef tmp_config(tmp_path):\n    return tmp_path / 'cfg.ini'\n\n\ndef test_config_created(tmp_config):\n    assert not tmp_config.exists()",
+    "from mathlib import add\n\n\ndef test_add_two_numbers():\n    assert add(2, 3) == 5",
+    "import json\nimport pytest\nfrom api.client import parse\n\n\ndef test_parse_rejects_bad_json():\n    with pytest.raises(ValueError):\n        parse('{')",
+    "from datetime import date\nfrom app.utils import is_weekend\n\n\ndef test_saturday_is_weekend():\n    assert is_weekend(date(2024, 6, 1))",
+    "import pytest\nfrom users.models import User\n\n\ndef test_user_name_required():\n    with pytest.raises(TypeError):\n        User()",
+    "from queue_lib import Queue\n\n\ndef test_queue_pop_order():\n    q = Queue()\n    q.push(1)\n    q.push(2)\n    assert q.pop() == 1",
+    "import pytest\nfrom geo import distance\n\n\ndef test_distance_zero():\n    assert distance((0, 0), (0, 0)) == 0"
+   ],
+   "quiet": [
+    "import pytest\nfrom shop.cart import Cart\n\n\ncart = Cart()\nprint(cart.total())",
+    "import os\nimport pytest\n\n\nCONFIG_DIR = os.path.expanduser('~/.app')\nCONFIG_FILE = os.path.join(CONFIG_DIR, 'cfg.ini')\nprint(CONFIG_FILE)",
+    "from mathlib import add\n\n\nresult = add(2, 3)\nprint(result)",
+    "import json\nimport pytest\nfrom api.client import parse\n\n\ndata = parse('{}')\nprint(json.dumps(data))",
+    "from datetime import date\nfrom app.utils import is_weekend\n\n\ntoday = date(2024, 6, 1)\nprint(is_weekend(today))",
+    "import pytest\nfrom users.models import User\n\n\nadmin = User('admin')\nprint(admin.name)",
+    "from queue_lib import Queue\n\n\nq = Queue()\nq.push(1)\nq.push(2)\nprint(q.pop())",
+    "import pytest\nfrom geo import distance\n\n\norigin = (0, 0)\nprint(distance(origin, origin))"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "def of pytest test",
+ "unit_kind": "contextual",
+ "confidence": 0.5
+}
