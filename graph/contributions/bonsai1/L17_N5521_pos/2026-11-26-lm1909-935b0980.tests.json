@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-935b0980",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N5521+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T17:06:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N5521",
+   "pole": "+",
+   "label": "end of a parameter header line in a numpy-style docstring (the line break before the indented description)",
+   "fire": [
+    "def fit(X):\n    \"\"\"\n    Parameters\n    ----------\n    n_jobs : int, optional\n        Number of parallel workers to use.\n    \"\"\"",
+    "def load(path):\n    \"\"\"\n    Parameters\n    ----------\n    path : str\n        Location of the file on disk.\n    \"\"\"",
+    "def resize(img, scale):\n    \"\"\"\n    Parameters\n    ----------\n    scale : float, optional\n        Factor applied to both axes. Default: 1.0\n    \"\"\"",
+    "def train(model, epochs):\n    \"\"\"\n    Parameters\n    ----------\n    epochs : int\n        How many passes over the data to make.\n    \"\"\"",
+    "def plot(data, color):\n    \"\"\"\n    Parameters\n    ----------\n    color : str, optional\n        Line colour passed to matplotlib.\n    \"\"\"",
+    "def sample(rng, size):\n    \"\"\"\n    Parameters\n    ----------\n    size : int, optional\n        Number of draws to return. Default: None\n    \"\"\"",
+    "def merge(left, right):\n    \"\"\"\n    Parameters\n    ----------\n    right : DataFrame\n        Table joined onto the left one.\n    \"\"\"",
+    "def encode(text, vocab):\n    \"\"\"\n    Parameters\n    ----------\n    vocab : dict\n        Mapping from tokens to integer ids.\n    \"\"\""
+   ],
+   "quiet": [
+    "def fit(X):\n    \"\"\"\n    Args:\n        n_jobs (int, optional): Number of parallel workers to use.\n    \"\"\"",
+    "def load(path):\n    \"\"\"\n    Args:\n        path (str): Location of the file on disk.\n    \"\"\"",
+    "def resize(img, scale):\n    \"\"\"\n    Args:\n        scale (float, optional): Factor applied to both axes. Default: 1.0\n    \"\"\"",
+    "def train(model, epochs):\n    \"\"\"\n    Args:\n        epochs (int): How many passes over the data to make.\n    \"\"\"",
+    "def plot(data, color):\n    \"\"\"\n    Args:\n        color (str, optional): Line colour passed to matplotlib.\n    \"\"\"",
+    "def sample(rng, size):\n    \"\"\"\n    Args:\n        size (int, optional): Number of draws to return. Default: None\n    \"\"\"",
+    "def merge(left, right):\n    \"\"\"\n    Args:\n        right (DataFrame): Table joined onto the left one.\n    \"\"\"",
+    "def encode(text, vocab):\n    \"\"\"\n    Args:\n        vocab (dict): Mapping from tokens to integer ids.\n    \"\"\""
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "docstring param newline",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Card flags broad (1.0%); top examples scattered over newlines, '.', code identifiers and 'estimated'. Best guess only; probes ~0.19 on the docstring newline. Near misses are Google-style one-line Args."
+}

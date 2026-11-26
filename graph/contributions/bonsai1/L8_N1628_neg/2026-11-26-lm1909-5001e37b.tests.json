@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5001e37b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N1628-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T17:06:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N1628",
+   "pole": "-",
+   "label": "a hard line break inside a running sentence (wrapped prose, the newline right after a function word)",
+   "fire": [
+    "This booklet is written for parents who want to know more about\nthe early years of their child's schooling.",
+    "Visitors who wish to explore the gardens should start at\nthe north gate and follow the gravel path.",
+    "The report describes the main causes of the flooding and\nthe steps the town has taken since then.",
+    "Many of the early settlers came from farming villages in\nthe south and brought their customs with them.",
+    "Students are expected to read the first three chapters of\nthe textbook before the seminar begins.",
+    "The museum holds a large collection of tools used by\nthe miners who worked in the valley.",
+    "Our volunteers spend most weekends cleaning the banks of\nthe river near the old mill.",
+    "The committee will review all of the proposals and\nannounce its decision in the spring."
+   ],
+   "quiet": [
+    "This booklet is written for parents of young children.\nIt covers the first years of school.",
+    "Visitors are welcome in the gardens every day.\nThe north gate opens at nine.",
+    "The report describes the main causes of the flooding.\nIt also lists the town's plans.",
+    "Many of the early settlers were farmers.\nThey brought their customs with them.",
+    "Students should read three chapters this week.\nThe seminar begins on Monday.",
+    "The museum holds a large collection of mining tools.\nMost of them are over a century old.",
+    "Our volunteers clean the river banks most weekends.\nThey meet near the old mill.",
+    "The committee will review all of the proposals.\nIts decision is due in the spring."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "mid-sentence line wrap",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card: '\\n' x23 of the top 32, nearly all hard wraps mid-sentence; the + pole also peaks on wrap newlines, so the split between poles is not clear. Probes on wrapped prose were mixed (0.55 on one, ~0.01-0.02 on others). Near misses break only at sentence ends."
+}
