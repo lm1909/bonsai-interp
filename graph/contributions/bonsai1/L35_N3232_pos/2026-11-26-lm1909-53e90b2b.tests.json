@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-26-lm1909-53e90b2b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3232+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:44:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N3232",
+   "pole": "+",
+   "label": "positional: the first tokens of a text window (guess: the token after an opening connective)",
+   "fire": [
+    "However, the council has not yet replied.",
+    "Meanwhile, the river kept rising overnight.",
+    "Still, the team played well in the second half.",
+    "Moreover, the report lists several new risks.",
+    "Instead, the shop now opens only on weekends.",
+    "Thus, the plan was delayed until autumn.",
+    "Yet the price of bread kept going up.",
+    "Besides, the road to the village is closed."
+   ],
+   "quiet": [
+    "The council has not yet replied to our letter.",
+    "The river kept rising overnight after the storm.",
+    "The team played well in the second half.",
+    "The report lists several new risks to the project.",
+    "The shop now opens only on weekends in winter.",
+    "The plan was delayed until autumn because of costs.",
+    "The price of bread kept going up all year.",
+    "The road to the village is closed for repairs."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "positional",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "card FLAG positional: 78% of top peaks at window position 0. Recorded as dense / positional with a guess; expected to fail."
+}

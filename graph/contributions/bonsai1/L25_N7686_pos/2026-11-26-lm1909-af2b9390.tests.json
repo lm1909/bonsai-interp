@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-26-lm1909-af2b9390",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N7686+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:44:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N7686",
+   "pole": "+",
+   "label": "GUI or markup code at the point where a window title or heading is being set (setWindowTitle, <head><title>, font=)",
+   "fire": [
+    "        self.resize(400, 300)\n        self.setWindowTitle('Settings')",
+    "html = '<html><head><title>Report</title></head><body>'",
+    "        root = tk.Tk()\n        root.title('Calculator')",
+    "layout = [[sg.Text('Name', font=('Arial', 14))]]",
+    "page = '<div><h2>Results</h2></div>'",
+    "        self.set_title('Image Viewer')\n        self.show_all()",
+    "    window = Gtk.Window(title='Hello')",
+    "<head>\n<title>Contact us</title>\n</head>"
+   ],
+   "quiet": [
+    "        self.total = 0\n        self.load_data('settings.csv')",
+    "rows = [r for r in data if r['status'] == 'ok']",
+    "        conn = db.connect()\n        conn.commit()",
+    "values = [[1, 2, 3], [4, 5, 6]]",
+    "        self.button = QPushButton('OK')\n        self.button.clicked.connect(self.close)",
+    "        self.cache.clear()\n        self.reset()",
+    "    total = sum(item.price for item in cart)",
+    "for line in open('log.txt'):\n    print(line)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "code: setting a title",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "card: output promotes ' title' strongly; peaks on ' self' before setWindowTitle/set_title, font=('Helvetica', and <head><. Fires where the model expects a title next."
+}

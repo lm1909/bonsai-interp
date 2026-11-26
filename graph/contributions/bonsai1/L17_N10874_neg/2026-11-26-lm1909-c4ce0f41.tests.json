@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-26-lm1909-c4ce0f41",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N10874-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:44:36+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N10874",
+   "pole": "-",
+   "label": "an attempt failing or running out, in error messages and narration ('timed out', 'ran out', 'unable to')",
+   "fire": [
+    "    if retries > 3:\n        log.error('Connection timed out after three attempts')",
+    "raise RuntimeError('unable to open the database file')",
+    "The printer ran out of paper halfway through the job.",
+    "    except IOError:\n        print('Failed: unable to write output file')",
+    "Our car ran out of fuel just outside the town.",
+    "The request timed out before the server could answer.",
+    "msg = 'Error: unable to connect to host'",
+    "We had run out of options by the end of the week."
+   ],
+   "quiet": [
+    "    if retries > 3:\n        log.info('Connection opened after three attempts')",
+    "print('opening the database file')",
+    "The printer printed every page of the job.",
+    "    else:\n        print('Done: wrote output file')",
+    "Our car pulled into the station just outside the town.",
+    "The request reached the server and got an answer.",
+    "msg = 'Success: connected to host'",
+    "We had plenty of options by the end of the week."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe"
+  ]
+ },
+ "short": "failure / ran out",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "card/look: 'Timed out', 'unable to save', 'run out of element', 'Search Called Off', 'Fail to lookup', 'internal error', 'terminado'. Weak pole (max 9.3)."
+}
