@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5a8053f2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4070-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:30:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N4070",
+   "pole": "-",
+   "label": "the word that opens a condition or instruction clause inside a quantitative word problem (If..., Assume..., Neglecting..., '(' before units)",
+   "fire": [
+    "A stone is dropped from a bridge 45 m high. If air resistance is negligible, how long does it take to hit the water?",
+    "A cyclist rides at 8 m/s for 20 minutes. Assume the speed is constant. How far does she travel?",
+    "A pendulum of length 2 m swings with small amplitude. Neglecting friction, what is its period?",
+    "A tank holds 500 litres of water. If water drains at 4 litres per minute, when will it be empty?",
+    "A 3 kg box rests on a ramp inclined at 30 degrees. If the ramp is frictionless, find the acceleration of the box.",
+    "Two resistors of 6 ohms and 3 ohms are connected in parallel. Assume the wires have no resistance. Find the total resistance.",
+    "A rocket burns fuel for 40 s and reaches 900 m/s. What is its average acceleration? (Answer in m/s^2)",
+    "The mean mark of 20 pupils is 62. If one more pupil scoring 83 joins, what is the new mean?"
+   ],
+   "quiet": [
+    "My grandmother called this morning. If you are free on Sunday, she would love a visit.",
+    "We packed the car before sunrise. Assume nothing about the weather, my father always said.",
+    "The garden was overgrown by July. Neglecting the weeds for a month had been a mistake.",
+    "The museum opens at nine on weekdays. If the queue is long, try the side entrance.",
+    "A stone is dropped from a bridge 45 m high and takes 3 s to hit the water.",
+    "A cyclist rode at 8 m/s for 20 minutes and covered nearly ten kilometres.",
+    "Two resistors of 6 ohms and 3 ohms were connected in parallel on the bench.",
+    "The mean mark of the 20 pupils was 62, which pleased the head teacher."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "word-problem condition",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "card: top peaks ' If', ' (', 'lect' (Neglecting), 'ume' (Assume) in physics/math problems. Probes: physics 'If' 0.74-0.82, 'Assume' 0.88, 'Neglecting' 1.4, everyday 'if' 0.003. Near misses: everyday prose with if/assume/neglect, and word problems without a condition clause."
+}

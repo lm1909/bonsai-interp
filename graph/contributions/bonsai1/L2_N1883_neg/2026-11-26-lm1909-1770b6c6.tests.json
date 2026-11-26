@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-1770b6c6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N1883-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:30:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N1883",
+   "pole": "-",
+   "label": "best guess: the first piece of a longer word split mid-stem (travers|ed, acces|ibles, заяв|ление), read through the gate-closed regime",
+   "fire": [
+    "Он подал заявление в университет прошлой осенью.",
+    "Los billetes de tren son accesibles para todos los estudiantes.",
+    "The caravan had traversed the desert in eleven days.",
+    "Компания сделала официальное заявление для прессы.",
+    "Las rampas hacen el museo accesible a todos los visitantes.",
+    "Explorers traversing the glacier roped themselves together.",
+    "Министр сделал заявление о новых налогах.",
+    "The bridge was built so that carts could traverse the gorge."
+   ],
+   "quiet": [
+    "Он подал документы в университет прошлой осенью.",
+    "Los billetes de tren son baratos para todos los estudiantes.",
+    "The caravan had crossed the desert in eleven days.",
+    "Компания сделала официальное сообщение для прессы.",
+    "Las rampas hacen el museo cómodo para todos los visitantes.",
+    "Explorers crossing the glacier roped themselves together.",
+    "Министр выступил с речью о новых налогах.",
+    "The bridge was built so that carts could cross the gorge."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unclear: split word stem",
+ "unit_kind": "unclear",
+ "confidence": 0.1,
+ "notes": "card: max only 1.87, gate-closed leak regime 100%, + pole flagged broad (5%). Top tokens ' заяв', ' acces', ' travers', ' LINUX', ' Women'. Probes all <= 0.024. Expected to fail; records an unclear early-layer pole."
+}

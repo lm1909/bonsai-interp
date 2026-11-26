@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-7d77fc84",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N9553-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:30:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N9553",
+   "pole": "-",
+   "label": "a keyword-argument value or variable name being defined in code or technical definitions (blank=True, the variable \"s\", shall be defined)",
+   "fire": [
+    "title = models.CharField(max_length=200, null=True)",
+    "In the formula below, the variable \"k\" stands for the spring constant.",
+    "The return value shall be defined only when the call succeeds.",
+    "is_active = models.BooleanField(default=True)",
+    "Let the variable \"r\" denote the radius of the circle.",
+    "The behaviour is undefined unless the flag is defined before the call.",
+    "created = models.DateTimeField(auto_now_add=True)",
+    "The constant \"g\" is taken to be 9.81 in all examples."
+   ],
+   "quiet": [
+    "print('The title is too long, please shorten it')",
+    "In the photo below, the spring is stretched by a heavy weight.",
+    "The function returns quickly when the call succeeds.",
+    "print('Account is active')",
+    "Draw a circle and measure it with a ruler.",
+    "The program crashes unless the user waits before the call.",
+    "print('Created a new record')",
+    "Gravity pulls every object toward the ground in all examples."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unclear: defined value",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "card: no single token; top peaks ' \"' (variable \"s\"), ' n' after else:, ' defined', '=True', '_name'. Probes 0.26-0.38 on 'variable \"t\"', 'shall be defined', 'blank=True'; prose about values 0.13. Near misses: similar code and prose without a definition or keyword value."
+}

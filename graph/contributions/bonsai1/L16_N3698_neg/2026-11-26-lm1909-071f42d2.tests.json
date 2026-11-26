@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-071f42d2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N3698-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:30:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N3698",
+   "pole": "-",
+   "label": "best guess: the subject or verb that opens a new statement about the topic in expository / biographical prose (He was..., The chromosomes are...)",
+   "fire": [
+    "The bishop died in 1820 at the age of eighty. He was buried in the cathedral crypt.",
+    "Ravens are found across the northern hemisphere. They are known for their intelligence.",
+    "The engineer grew up near the docks of Belfast. He was trained as a shipwright.",
+    "Mitochondria produce most of the cell's energy. Their membranes are folded into ridges.",
+    "The village school opened in 1872. Its first teacher was a young widow.",
+    "Lichens grow on bare rock and tree bark. They are partnerships of fungi and algae.",
+    "The composer lost his hearing in middle age. He continued to write symphonies.",
+    "The comet returns every seventy-six years. Its tail always points away from the sun."
+   ],
+   "quiet": [
+    "The bishop died in 1820 at the age of eighty, and the town mourned for a week.",
+    "Ravens are found across the northern hemisphere, from Alaska to Siberia.",
+    "The engineer grew up near the docks of Belfast with three younger sisters.",
+    "Mitochondria produce most of the cell's energy from sugar and oxygen.",
+    "The village school opened in 1872 with only fourteen pupils.",
+    "Lichens grow on bare rock and tree bark in almost every climate.",
+    "The composer lost his hearing in middle age, after years of illness.",
+    "The comet returns every seventy-six years, most recently in 1986."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "broad: new-statement subject",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "card flags it broad (1.0% of tokens reach 0.1 of max); top peaks are scattered (' He', '\\tself', ' was', ' are', ' Its'). Probes all <= 0.11. Test records the density; expected to fail."
+}

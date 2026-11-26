@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-94d8c148",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N508+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:30:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N508",
+   "pole": "+",
+   "label": "an empty dict literal {} used as a value in Python code (x = {}, kw={})",
+   "fire": [
+    "def build(name, headers={}):\n    return Request(name, headers)",
+    "class Store:\n    def __init__(self):\n        self.items = {}\n        self.count = 0",
+    "    result = {}\n    for key in keys:\n        result[key] = lookup(key)",
+    "response = client.post(url, data={}, timeout=30)",
+    "def merge(base, extra={}):\n    out = dict(base)\n    out.update(extra)",
+    "        self.registry = {}\n        self.ready = False",
+    "    counts = {}\n    for word in text.split():\n        counts[word] = counts.get(word, 0) + 1",
+    "params = {}\nparams['page'] = 2\nparams['limit'] = 50"
+   ],
+   "quiet": [
+    "def build(name, headers=None):\n    return Request(name, headers)",
+    "class Store:\n    def __init__(self):\n        self.items = []\n        self.count = 0",
+    "    result = 0\n    for key in keys:\n        result += lookup(key)",
+    "response = client.post(url, data=payload, timeout=30)",
+    "def merge(base, extra=None):\n    out = list(base)\n    out.extend(extra)",
+    "        self.registry = None\n        self.ready = False",
+    "    words = text.split()\n    for word in words:\n        print(word.upper())",
+    "page = 2\nlimit = 50\nurl = base_url + '?page=' + str(page)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "empty dict {}",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "card: top peaks are '={}', ' {}\\n', '={},', ' {}'. Probes: 'opts={}' 0.85, 'self.cache = {}' 0.64, 'x = []' 0.13, 'dict()' 0.32. Near misses: the same code with None, [], 0 or a string instead of {}."
+}
