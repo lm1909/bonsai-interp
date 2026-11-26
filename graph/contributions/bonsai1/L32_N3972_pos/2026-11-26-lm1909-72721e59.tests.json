@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-26-lm1909-72721e59",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N3972+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:26:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N3972",
+   "pole": "+",
+   "label": "' was' / ' were' as the passive auxiliary when the text says when or by whom a building or artwork was made (was completed / built / painted); it promotes ' completed'",
+   "fire": [
+    "The old lighthouse on the cape was finished in 1874.",
+    "Most of these frescoes were painted by his students.",
+    "The stone chapel was erected in 1902 by local farmers.",
+    "According to records, the dam was completed in 1936.",
+    "Both statues in the square were carved from local marble.",
+    "The city's first library was constructed with private funds.",
+    "Experts believe the altarpiece was commissioned around 1480.",
+    "The station's glass roof was installed after the war."
+   ],
+   "quiet": [
+    "The old lighthouse on the cape still guides ships at night.",
+    "Most of these frescoes show scenes from village life.",
+    "The stone chapel stands at the edge of the farmers' fields.",
+    "According to records, the dam supplies water to three towns.",
+    "Both statues in the square face the old town hall.",
+    "The city's first library now houses a small cafe.",
+    "Experts believe the altarpiece shows the donor's family.",
+    "The station's glass roof leaks during heavy rain."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "was (built/completed)",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probe: 'was' before built/painted/completed 0.31-0.58, before 'empty'/'very crowded' 0.16-0.27, so the near misses drop 'was' altogether.",
+ "trigger": {
+  "tokens": [
+   " was",
+   " were"
+  ]
+ }
+}

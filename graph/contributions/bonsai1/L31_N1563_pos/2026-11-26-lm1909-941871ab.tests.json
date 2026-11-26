@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-941871ab",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N1563+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:26:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N1563",
+   "pole": "+",
+   "label": "later piece of a compound code identifier that the code already spelled out earlier (the re-use of get_fieldvalues, filemenu): copying a multi-token name",
+   "fire": [
+    "def load(rows):\n    for r in rows:\n        name = get_cellvalue(r, \"A1\") + \\\n               get_cellvalue(r, \"B1\")\n    return name\n",
+    "    editmenu = menubar.add_name(\"Edit\")\n    item = editmenu.add_name(\"Copy\")\n",
+    "    total = count_wordtokens(text)\n    avg = total / count_wordtokens(title)\n",
+    "    self.userlist = []\n    for u in data:\n        self.userlist.append(u)\n",
+    "def show(win):\n    toolbar = win.make_toolbar()\n    toolbar.add_button(\"Save\")\n    toolbar.add_button(\"Load\")\n",
+    "    maxheight = compute_maxheight(boxes)\n    if maxheight > limit:\n        maxheight = limit\n",
+    "    rowcount = len(table)\n    for i in range(rowcount):\n        print(i)\n",
+    "    keymap = load_keymap(path)\n    for k in keymap:\n        bind(k, keymap[k])\n"
+   ],
+   "quiet": [
+    "def load(rows):\n    for r in rows:\n        name = get_cellvalue(r, \"A1\") + \\\n               read_text(r, \"B1\")\n    return name\n",
+    "    editmenu = menubar.add_name(\"Edit\")\n    item = panel.add_name(\"Copy\")\n",
+    "    total = count_wordtokens(text)\n    avg = total / len(title)\n",
+    "    self.userlist = []\n    for u in data:\n        print(u)\n",
+    "def show(win):\n    toolbar = win.make_toolbar()\n    win.add_button(\"Save\")\n    win.add_button(\"Load\")\n",
+    "    maxheight = compute_maxheight(boxes)\n    if limit > 0:\n        print(limit)\n",
+    "    rowcount = len(table)\n    for i in range(10):\n        print(i)\n",
+    "    keymap = load_keymap(path)\n    for k in items:\n        bind(k, path)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "re-used compound identifier",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Probe: the second get_fieldvalues fired 0.60 at '_field', the re-used filemenu 0.42; one-off compound names stayed near 0. Near misses keep the first spelling and drop only the re-use."
+}

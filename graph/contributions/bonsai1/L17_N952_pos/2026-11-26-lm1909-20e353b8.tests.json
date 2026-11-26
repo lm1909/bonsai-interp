@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-20e353b8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N952+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:26:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N952",
+   "pole": "+",
+   "label": "' #' (or the ' =' / ':' after it) that comments out a line of code, such as a disabled setting or dict entry, as opposed to a '#' that starts a prose comment",
+   "fire": [
+    "settings = {\n    'host': 'localhost',\n    # 'port': 8080,\n    # 'timeout': 30,\n}",
+    "DEFAULTS = {\n    # 'cache': True,\n    # 'retries': 3,\n    'name': 'demo',\n}",
+    "# Theme options for the docs.\n#html_logo = None\n\n# Extra static files.\n#html_extra_path = []\n",
+    "def main():\n    args = parse()\n    # print(args)\n    # import pdb; pdb.set_trace()\n    run(args)\n",
+    "options = [\n    'fast',\n    # 'slow',\n    # 'medium',\n]",
+    "    # self.reset()\n    # self.buffer = []\n    self.count = 0\n",
+    "CONFIG = {\n    'level': 'info',\n    # 'format': '%(message)s',\n    # 'stream': sys.stdout,\n}",
+    "# Language settings.\n#language = 'en'\n\n# Default role for markup.\n#default_role = None\n"
+   ],
+   "quiet": [
+    "settings = {\n    'host': 'localhost',\n    # the port is set later\n    # by the deploy script\n}",
+    "DEFAULTS = {\n    # these are safe values\n    # for local testing only\n    'name': 'demo',\n}",
+    "# Theme options for the docs.\nhtml_logo = None\n\n# Extra static files.\nhtml_extra_path = []\n",
+    "def main():\n    args = parse()\n    # check the arguments first\n    # before running anything\n    run(args)\n",
+    "options = [\n    'fast',\n    # keep this list short\n    # and sorted by speed\n]",
+    "    # reset the state here\n    # and clear the buffer\n    self.count = 0\n",
+    "CONFIG = {\n    'level': 'info',\n    # use a plain format\n    # and write to stdout\n}",
+    "# Language settings.\nlanguage = 'en'\n\n# Default role for markup.\ndefault_role = None\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "commented-out code line",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probe: commented-out dict entries fired 0.72, a commented-out Sphinx setting 0.22, prose comments near 0."
+}
