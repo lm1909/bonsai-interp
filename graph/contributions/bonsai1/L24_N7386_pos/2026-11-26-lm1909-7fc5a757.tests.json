@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-7fc5a757",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N7386+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:06:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N7386",
+   "pole": "+",
+   "label": "leading indentation whitespace at the start of a line inside an indented Python block",
+   "fire": [
+    "def load(path):\n    with open(path) as fh:\n        data = fh.read()\n        return data.strip()",
+    "for row in rows:\n    if not row:\n        continue\n    total += row[0]\n    count += 1",
+    "class Cache:\n    def __init__(self):\n        self.items = {}\n        self.hits = 0",
+    "try:\n    result = compute(x)\n    log(result)\nexcept ValueError:\n    result = None",
+    "while queue:\n    node = queue.pop()\n    for child in node.children:\n        queue.append(child)",
+    "async def fetch(url):\n    loop = asyncio.get_event_loop()\n    info = await loop.run_in_executor(None, get, url)\n    return info",
+    "if line.startswith('#'):\n    pass\nelse:\n    value = line.split('=')\n    config[value[0]] = value[1]",
+    "def parse(lines):\n    out = []\n    for line in lines:\n        line = line.rstrip()\n        out.append(line)\n    return out"
+   ],
+   "quiet": [
+    "data = open(path).read().strip()",
+    "total = sum(row[0] for row in rows if row)",
+    "cache = {}; hits = 0",
+    "result = compute(x) if x else None",
+    "node = queue.pop(); queue.extend(node.children)",
+    "info = get(url)",
+    "config = dict(line.split('=') for line in lines)",
+    "out = [line.rstrip() for line in lines]"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code line indentation",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "card also shows ' the' after verbs in long prose sentences; this test covers only the code half"
+}

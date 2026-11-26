@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-e38be94d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N11110-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:06:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N11110",
+   "pole": "-",
+   "label": "inner word-piece of a multi-word snake_case code identifier (validate|_character|_set, knn_feature_search)",
+   "fire": [
+    "def check_character_limit(text):\n    return len(text) < 80",
+    "opts = {'validate_character_set': True, 'strip': False}",
+    "if config.max_feature_count > 10:\n    prune()",
+    "self.use_character_map = False",
+    "def load_feature_vectors(path):\n    pass",
+    "result = parse_character_stream(buf)",
+    "params['n_clusters'] = len(centers)",
+    "neighbors = knn_feature_search(k, query)"
+   ],
+   "quiet": [
+    "def check(text):\n    return len(text) < 80",
+    "opts = {'validate': True, 'strip': False}",
+    "if config.limit > 10:\n    prune()",
+    "self.mapping = False",
+    "def load(path):\n    pass",
+    "result = parse(buf)",
+    "params['k'] = len(centers)",
+    "neighbors = search(k, query)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "inner piece of identifier",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "probe: validate_character_set 0.70 on '_character', n_layers 0.02; may be specific to '_character'/'feature'"
+}
