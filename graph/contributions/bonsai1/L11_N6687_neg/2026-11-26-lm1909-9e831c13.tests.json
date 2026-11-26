@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-9e831c13",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N6687-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:21:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N6687",
+   "pole": "-",
+   "label": "stop/start control of a worker, thread or server in code (self.stopped, def stop, .start_server, is_set)",
+   "fire": [
+    "class Worker(threading.Thread):\n    def __init__(self):\n        super().__init__()\n        self.stopped = False\n        self.queue = queue.Queue()",
+    "    def run(self):\n        while not self._stop_event.is_set():\n            job = self.queue.get()\n            self.handle(job)",
+    "    def stop(self):\n        self.running = False\n        self.thread.join()\n        self.log.info('worker stopped')",
+    "    def __init__(self, port):\n        self.port = port\n        self.clients = []\n        self.start_server()",
+    "    def shutdown(self):\n        for t in self.threads:\n            t.stop()\n        self.pool.terminate()",
+    "def main():\n    server = EchoServer(8080)\n    server.start()\n    try:\n        server.serve_forever()\n    finally:\n        server.stop()",
+    "    def _loop(self):\n        while not self.stop_requested.wait(self.interval):\n            self.poll_sensors()",
+    "class Daemon:\n    def __init__(self):\n        self.halted = False\n        self.should_stop = threading.Event()"
+   ],
+   "quiet": [
+    "class Invoice(models.Model):\n    def __init__(self):\n        super().__init__()\n        self.total = 0\n        self.items = []",
+    "    def render(self):\n        for row in self.rows:\n            cells = self.format(row)\n            self.write(cells)",
+    "    def total_price(self):\n        price = sum(self.items)\n        tax = price * 0.2\n        return price + tax",
+    "    def __init__(self, name):\n        self.name = name\n        self.friends = []\n        self.load_profile()",
+    "    def summary(self):\n        for book in self.books:\n            print(book.title)\n        return len(self.books)",
+    "def main():\n    report = SalesReport(2024)\n    report.load()\n    rows = report.rows()\n    print(len(rows))",
+    "    def _format(self):\n        lines = [str(x) for x in self.values]\n        return ', '.join(lines)",
+    "class Recipe:\n    def __init__(self):\n        self.title = ''\n        self.ingredients = dict()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "code stop/start control",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card top 32: '.stop' x3, ' stop' x3, 'opped' x3 (self.stopped), '.start' x2, '_set' (should_run.is_set()). Fire items are multi-line Python with thread/worker lifecycle control; near misses are the same kind of class code with unrelated attribute and method names."
+}

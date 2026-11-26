@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-08da8299",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N5659+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:21:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N5659",
+   "pole": "+",
+   "label": "identifier tokens inside the argument list of a Python function call (keyword=value, positional names)",
+   "fire": [
+    "    model = fit_model(\n        data=data,\n        nchains=nchains,\n        nwarmup=nwarmup,\n        seed=seed,\n    )",
+    "    record = Article(\n        title=title,\n        author_name=author_name,\n        journal_id=journal_id,\n    )",
+    "    raster = driver.Create(out_path, ncols, nrows, 1, gdal.GDT_Float32)",
+    "    result = sort_prices(stockData, user_map.get(choice))",
+    "    resp = requests.get(api_url, params=query, timeout=timeout)",
+    "    plot_curve(x_values, y_values, color=line_color, label=series_name)",
+    "    conn = connect(host=db_host, port=db_port, user=db_user)",
+    "    loader = DataLoader(train_set, batch_size=batch_size, shuffle=True)"
+   ],
+   "quiet": [
+    "The model is fitted on the data with a few chains, a warm-up period and a fixed seed.",
+    "Each record stores the title of the article, the author's name and the journal.",
+    "The raster is created at the output path with the given number of columns and rows.",
+    "The prices are sorted using the stock data and whatever option the user chose.",
+    "The client asks the web service for the results and gives up after a timeout.",
+    "The curve is plotted from the x and y values in the chosen colour with a label.",
+    "The program connects to the database host on its port as the configured user.",
+    "The training set is loaded in batches of a fixed size and shuffled every epoch."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "Python call arguments",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card top: nwarm|up=nwarmup, publisher|_name=publisher_name, ncols|, nrows, stock|Data inside a call, requests|.get(url), if| self.frobnorm. No single token dominates. Near misses describe the same functions and arguments in English prose without code."
+}
