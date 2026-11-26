@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-0ccd61ac",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N5163-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:12:41+00:00",
+ "recipe": {
+  "toolchain_commit": "77e37f282",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L32_N5163_neg/2026-11-26-lm1909-0ccd61ac.tests.json"
+ },
+ "label": "'ож' (and the 'п' before it) inside the Russian word пожалуйста 'please'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L32_N5163_neg/2026-11-26-lm1909-0ccd61ac.tests.json",
+   "prereg_commit": "77e37f282",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.911,
+     "peak": "ож"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.978,
+     "peak": "ож"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.48,
+     "peak": "ож"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.739,
+     "peak": "ож"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.881,
+     "peak": "ож"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.34,
+     "peak": "ал"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.072,
+     "peak": "ож"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.305,
+     "peak": "ож"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.173,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.135,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.263,
+     "peak": " помог"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.445,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.139,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.107,
+     "peak": " к"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.162,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.255,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.81,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "77e37f282",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian пожалуйста",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: 9 of the top 32 peak on 'ож' of пожалуйста; the output promotes 'please' in several languages. Near misses are Russian requests worded without пожалуйста.",
+ "selection": "random draw"
+}

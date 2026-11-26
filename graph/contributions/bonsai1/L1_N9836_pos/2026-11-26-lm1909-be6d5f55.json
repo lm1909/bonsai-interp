@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-be6d5f55",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9836+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:12:31+00:00",
+ "recipe": {
+  "toolchain_commit": "77e37f282",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N9836_pos/2026-11-26-lm1909-be6d5f55.tests.json"
+ },
+ "label": "the syllable 기 written for 棄 'discard/abandon' in Sino-Korean and Japanese compounds (폐기, 파기, 포기, 廃棄, 放棄)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N9836_pos/2026-11-26-lm1909-be6d5f55.tests.json",
+   "prereg_commit": "77e37f282",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.154,
+     "peak": "기"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.802,
+     "peak": "기"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.626,
+     "peak": "기"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.218,
+     "peak": "기"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.849,
+     "peak": "기"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.609,
+     "peak": "기"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.528,
+     "peak": "棄"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.095,
+     "peak": "棄"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.016,
+     "peak": "차"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": " 말"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.017,
+     "peak": "그"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.036,
+     "peak": "해야"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.015,
+     "peak": "이"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.039,
+     "peak": "랐"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": "切れ"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.019,
+     "peak": "は"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.714,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "77e37f282",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "棄 'discard' syllable",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card: '기' is 23 of the top 32, plus 废/棄/폐. Probe: 폐기 and 파기 fire, 표기 half, word-initial 기 (기차) and 일기 stay quiet; Chinese 废弃 did not fire.",
+ "selection": "random draw"
+}
