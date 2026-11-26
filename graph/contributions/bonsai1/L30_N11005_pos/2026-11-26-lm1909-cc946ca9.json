@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-cc946ca9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N11005+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:15:50+00:00",
+ "recipe": {
+  "toolchain_commit": "cea963efb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N11005_pos/2026-11-26-lm1909-cc946ca9.tests.json"
+ },
+ "label": "the word before 'reputation' or 'rap' in 'have/get/earn a (bad) reputation' frames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N11005_pos/2026-11-26-lm1909-cc946ca9.tests.json",
+   "prereg_commit": "cea963efb",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 6,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.72,
+     "peak": " bad"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.682,
+     "peak": " bad"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.682,
+     "peak": " bad"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.765,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.71,
+     "peak": " bad"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.564,
+     "peak": " poor"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.028,
+     "peak": " reputation"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.097,
+     "peak": " bad"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.72,
+     "peak": " bad"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.682,
+     "peak": " bad"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.681,
+     "peak": " bad"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.766,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.71,
+     "peak": " bad"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.564,
+     "peak": " poor"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " house"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.097,
+     "peak": " bad"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.516,
+    "median_fire": 0.682,
+    "near_misses_at_0.3": 6
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cea963efb",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "a bad reputation",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Top examples: 'got a bad rap', 'given ionization a bad reputation', 'earned a reputation'. Fires before the reputation noun, so near misses use 'bad' or 'a' in other frames.",
+ "selection": "random draw"
+}

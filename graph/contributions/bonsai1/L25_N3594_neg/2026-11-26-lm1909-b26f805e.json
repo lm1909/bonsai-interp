@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-b26f805e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3594-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:16:05+00:00",
+ "recipe": {
+  "toolchain_commit": "cea963efb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N3594_neg/2026-11-26-lm1909-b26f805e.tests.json"
+ },
+ "label": "a degree or quantity word just before a negative or deficient description (more of a nightmare, well below, a very bad)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N3594_neg/2026-11-26-lm1909-b26f805e.tests.json",
+   "prereg_commit": "cea963efb",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.175,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.013,
+     "peak": " what"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.063,
+     "peak": " very"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.124,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.015,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.105,
+     "peak": " well"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.227,
+     "peak": " truly"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.195,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.093,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.045,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.014,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " farmers"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.108,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.02,
+     "peak": " over"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.766,
+    "median_fire": 0.114,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cea963efb",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "degree before a negative",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Top tokens ' a', ' more', ' well', ' very' before negative outcomes; also code quote tokens. The + pole fires on negative prefixes (in-, mis-). Probe 0.08-0.23.",
+ "selection": "random draw"
+}

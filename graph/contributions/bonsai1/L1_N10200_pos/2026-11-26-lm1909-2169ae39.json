@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-2169ae39",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N10200+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:16:11+00:00",
+ "recipe": {
+  "toolchain_commit": "cea963efb",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N10200_pos/2026-11-26-lm1909-2169ae39.tests.json"
+ },
+ "label": "the French ending piece 'ant' (present participles and -ant adjectives split as stem + 'ant')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N10200_pos/2026-11-26-lm1909-2169ae39.tests.json",
+   "prereg_commit": "cea963efb",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.066,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.73,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.845,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.177,
+     "peak": " ch"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.125,
+     "peak": "Il"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.346,
+     "peak": " l"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.682,
+     "peak": "ant"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.388,
+     "peak": "ant"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " en"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.217,
+     "peak": " cal"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.202,
+     "peak": " numéro"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.263,
+     "peak": " l"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.125,
+     "peak": "Il"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.344,
+     "peak": " l"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.059,
+     "peak": "vert"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.123,
+     "peak": "ement"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.773,
+    "median_fire": 0.367,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cea963efb",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "French -ant ending",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Early layer; top 'ant' x9 in fatigant, conciliant, tirant, précisant. Fire only where 'ant' is its own token; tokenization not verified for every word.",
+ "selection": "random draw"
+}
