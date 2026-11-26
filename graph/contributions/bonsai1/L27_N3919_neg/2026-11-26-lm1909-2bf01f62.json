@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-2bf01f62",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N3919-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:42:17+00:00",
+ "recipe": {
+  "toolchain_commit": "bf0199ce3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N3919_neg/2026-11-26-lm1909-2bf01f62.tests.json"
+ },
+ "label": "the suffix or piece of a place name written in non-Latin script (Russian -ского/-ской place adjectives, katakana place names)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N3919_neg/2026-11-26-lm1909-2bf01f62.tests.json",
+   "prereg_commit": "bf0199ce3",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.597,
+     "peak": "ского"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.203,
+     "peak": "ан"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.399,
+     "peak": "бур"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.471,
+     "peak": "город"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.266,
+     "peak": "ской"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.482,
+     "peak": "ン"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.618,
+     "peak": "ニア"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.16,
+     "peak": "ской"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": "рос"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.012,
+     "peak": "О"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.127,
+     "peak": " древ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.014,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.045,
+     "peak": "山"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.051,
+     "peak": "有名"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.028,
+     "peak": "еп"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.435,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf0199ce3",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "place-name pieces, non-Latin",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: 'ского', 'ской', 'ク' of ニューヨーク, 'イン' of スペイン. The + pole is US/Australian state names as modifiers ('a Texas quarry'), so the unit marks place names. Near misses are the same sentences with ordinary adjectives/nouns.",
+ "selection": "random draw"
+}

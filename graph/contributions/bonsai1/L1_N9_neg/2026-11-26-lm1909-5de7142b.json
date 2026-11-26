@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-5de7142b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:42:07+00:00",
+ "recipe": {
+  "toolchain_commit": "bf0199ce3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N9_neg/2026-11-26-lm1909-5de7142b.tests.json"
+ },
+ "label": "the final word of 'United …' country/organisation names (United Nations, United Arab Emirates)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N9_neg/2026-11-26-lm1909-5de7142b.tests.json",
+   "prereg_commit": "bf0199ce3",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.748,
+     "peak": " Nations"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.035,
+     "peak": " Emirates"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.011,
+     "peak": " Emirates"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.659,
+     "peak": " Nations"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.64,
+     "peak": " Nations"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.975,
+     "peak": " Emirates"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.686,
+     "peak": " Nations"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.99,
+     "peak": " Emirates"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.383,
+     "peak": " Bank"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.389,
+     "peak": " Arabia"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.263,
+     "peak": " hosted"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.069,
+     "peak": " famine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.112,
+     "peak": " law"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.185,
+     "peak": " Kuwait"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.048,
+     "peak": " gathered"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.154,
+     "peak": "ats"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.861,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf0199ce3",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "United Nations / Emirates",
+ "unit_kind": "lexical",
+ "confidence": 0.35,
+ "notes": "Card: ' Emirates' x6, ' Nations' x6 (broad 8.2%, gate-closed leak regime). Probe: Emirates 1.0, Nations 0.67, but 'Arab world' 0.39, so it may be broader. Near misses name other countries/bodies.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-9fb0bce6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N1633-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:41:53+00:00",
+ "recipe": {
+  "toolchain_commit": "bf0199ce3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N1633_neg/2026-11-26-lm1909-9fb0bce6.tests.json"
+ },
+ "label": "a hyphen or slash that continues a chain of three or more joined elements (A-B-C, pen-paper-ink, 7/7/11)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N1633_neg/2026-11-26-lm1909-9fb0bce6.tests.json",
+   "prereg_commit": "bf0199ce3",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.486,
+     "peak": "-C"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.807,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.702,
+     "peak": "-com"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.668,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.105,
+     "peak": "-A"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.48,
+     "peak": "-sc"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.17,
+     "peak": "-east"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.217,
+     "peak": "/"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.074,
+     "peak": "ones"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": "etched"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " growing"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": "-running"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " main"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " aired"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.483,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bf0199ce3",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "hyphen chain continuation",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Card: Pole-Tylney-Long-Wellesley, pen-paper-ink-brush, Jing-Jin-Ji, military-industrial-complex, 7/7/11. Probe: chain hyphens ~0.4, 'well-known' ~0. Near misses use single hyphenated compounds or none.",
+ "selection": "random draw"
+}
