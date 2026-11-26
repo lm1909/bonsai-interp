@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-f5d33564",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N2960+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:18:53+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N2960",
+   "pole": "+",
+   "label": "'#' that opens a comment in code, especially an inline comment after code on the same line",
+   "fire": [
+    "def area(r):\n    pi = 3.14159  # rough value is fine here\n    return pi * r * r",
+    "for row in rows:\n    total += row[2]  # third column is price\nprint(total)",
+    "import os\n\npath = os.getcwd()  # start from current folder\nfiles = os.listdir(path)",
+    "x = load()\ny = x * 2  # double it before saving\nsave(y)",
+    "count = 0\nwhile count < 10:  # stop after ten tries\n    count += 1",
+    "names = []\nnames.append(user)  # keep order of arrival\nreturn names",
+    "self.timer = 0  # reset on every frame\nself.score += 1",
+    "data = json.loads(raw)  # server sends a string\nitems = data['items']"
+   ],
+   "quiet": [
+    "The bakery was ranked #1 in town for the third year running.",
+    "Fans flooded the feed with #WorldCup posts after the match.",
+    "Press the # key after entering your account number.",
+    "She finished #3 overall in the regional marathon.",
+    "Use #summerfun when you share your beach photos with us.",
+    "The song climbed to #5 on the charts by Friday.",
+    "Dial the extension, then the # sign, then wait for the tone.",
+    "Our team is #2 in the league after the weekend games."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code comment '#'",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' #' x7 (inline comments), tokens inside comments (for multiple contours, Register). Near misses: '#' outside code (hashtags, ranks)."
+}
