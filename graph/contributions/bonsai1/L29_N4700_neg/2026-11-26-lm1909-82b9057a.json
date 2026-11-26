@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-82b9057a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N4700-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:10:08+00:00",
+ "recipe": {
+  "toolchain_commit": "db827287c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N4700_neg/2026-11-26-lm1909-82b9057a.tests.json"
+ },
+ "label": "the month digit at the start of a numeric date (M/D/YYYY, e.g. the 4 in '4/9/2004')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N4700_neg/2026-11-26-lm1909-82b9057a.tests.json",
+   "prereg_commit": "db827287c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.377,
+     "peak": "/"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.268,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.582,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.32,
+     "peak": "7"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.602,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.26,
+     "peak": "4"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.333,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.537,
+     "peak": "9"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " March"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.116,
+     "peak": " until"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.069,
+     "peak": " June"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.052,
+     "peak": " mid"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.045,
+     "peak": " dated"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.355,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "db827287c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "month in numeric date",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "notes": "card: 'Expiration Date: 9/13/2016', 'Review Date: 11/2012', '(Seattle Times, 4/18/04)'; output suppresses '/', ' Jan', '月'",
+ "selection": "random draw"
+}

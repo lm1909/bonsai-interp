@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-7605dc43",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N5980-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:10:00+00:00",
+ "recipe": {
+  "toolchain_commit": "db827287c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N5980_neg/2026-11-26-lm1909-7605dc43.tests.json"
+ },
+ "label": "the first kanji/hanzi of a content word in Japanese or Chinese prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N5980_neg/2026-11-26-lm1909-7605dc43.tests.json",
+   "prereg_commit": "db827287c",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.836,
+     "peak": "旅"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.795,
+     "peak": "役"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.636,
+     "peak": "店"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.805,
+     "peak": "病"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.688,
+     "peak": "名"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.704,
+     "peak": "役"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.24,
+     "peak": "彼"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.75,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.314,
+     "peak": "き"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.302,
+     "peak": "そう"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.185,
+     "peak": "わ"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.272,
+     "peak": "どう"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.006,
+     "peak": " reviewing"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.227,
+     "peak": "いく"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.727,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "db827287c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "CJK word-initial kanji",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "card flags broad (2.4% of tokens > 0.1 max); top tokens are kanji starting compounds (動, 宿, 旧, 役, 病, 例); quiet items are kana/Latin-heavy text",
+ "selection": "random draw"
+}
