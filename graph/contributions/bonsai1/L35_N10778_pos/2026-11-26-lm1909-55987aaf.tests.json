@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-55987aaf",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10778+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:19:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N10778",
+   "pole": "+",
+   "label": "function and method names called in Python web-framework code (Flask render_template, register_blueprint, url_for); plain Python without framework calls stays weak",
+   "fire": [
+    "from flask import Flask, render_template, request\n\napp = Flask(__name__)\n\n@app.route('/about')\ndef about():\n    return render_template('about.html', title='About')",
+    "def create_app():\n    app = Flask(__name__)\n    from .auth import auth as auth_blueprint\n    app.register_blueprint(auth_blueprint)\n    return app",
+    "@app.route('/logout')\ndef logout():\n    session.pop('user_id', None)\n    return redirect(url_for('index'))",
+    "@bp.route('/post/<int:id>')\ndef show_post(id):\n    post = get_post(id)\n    return render_template('blog/post.html', post=post)",
+    "from flask import (\n    Blueprint,\n    flash,\n    redirect,\n    render_template,\n    url_for,\n)",
+    "    if form.validate_on_submit():\n        flash('Saved')\n        return redirect(url_for('dashboard'))\n    return render_template('edit.html', form=form)",
+    "app = Flask(__name__)\nfrom .api import api_bp\napp.register_blueprint(api_bp, url_prefix='/api')",
+    "@app.errorhandler(404)\ndef not_found(e):\n    return render_template('404.html'), 404"
+   ],
+   "quiet": [
+    "def mean(values):\n    total = 0\n    for v in values:\n        total += v\n    return total / len(values)",
+    "def create_list():\n    items = []\n    for i in range(10):\n        items.append(i * 2)\n    return items",
+    "def logout_count(log):\n    count = 0\n    for line in log:\n        if 'logout' in line:\n            count += 1\n    return count",
+    "def show_post(post):\n    title = post['title']\n    body = post['body']\n    print(title)\n    print(body)",
+    "import os\nimport sys\nimport json\nimport math\nimport random",
+    "    if value > limit:\n        value = limit\n    elif value < 0:\n        value = 0\n    return value",
+    "numbers = [3, 1, 2]\nnumbers.sort()\nprint(numbers)",
+    "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Flask API call names",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": ""
+}

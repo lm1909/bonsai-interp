@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-58f7cdd3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N3488-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:19:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N3488",
+   "pole": "-",
+   "label": "the call or argument token inside a nested Python aggregation expression such as list(sum(...)) or os.path.join(*x); simple assignments stay quiet",
+   "fire": [
+    "    merged = list(sum(groups_of_ids, ()))\n    return merged",
+    "        nested = [[1, 2], [3], [4, 5]]\n        flat = list(sum(nested, []))",
+    "    full = os.path.join(*segments)\n    return full",
+    "    totals = dict(zip(keys, map(sum, values)))\n    print(totals)",
+    "    combined = tuple(sum(pairs, ()))\n    print(combined)",
+    "    all_tags = set(sum([p.tags for p in posts], []))\n    return sorted(all_tags)",
+    "    joined = os.path.join(*(base, sub, name))\n    os.makedirs(joined)",
+    "    flat_list = list(sum(rows_by_day.values(), []))\n    return flat_list"
+   ],
+   "quiet": [
+    "    merged = groups_of_ids\n    return merged",
+    "        nested = [[1, 2], [3], [4, 5]]\n        first = nested[0]",
+    "    full = base + '/' + name\n    return full",
+    "    totals = {}\n    print(totals)",
+    "    combined = pairs\n    print(combined)",
+    "    all_tags = []\n    return all_tags",
+    "    joined = base\n    print(joined)",
+    "    flat_list = []\n    return flat_list"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "nested Python aggregation call",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": ""
+}
