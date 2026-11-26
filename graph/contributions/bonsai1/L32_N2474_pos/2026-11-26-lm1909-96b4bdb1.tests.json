@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-26-lm1909-96b4bdb1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N2474+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:11:20+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N2474",
+   "pole": "+",
+   "label": "string-valued method keyword argument (param='...') in Python ML/scientific code",
+   "fire": [
+    "from sklearn.manifold import TSNE\nemb = TSNE(n_components=2, init='pca', method='exact')\n",
+    "clf = LogisticRegression(penalty='l1', solver='liblinear')\nclf.fit(X, y)\n",
+    "km = KMeans(n_clusters=5, algorithm='elkan')\nlabels = km.fit_predict(X)\n",
+    "svd = TruncatedSVD(n_components=50, algorithm='arpack')\nZ = svd.fit_transform(X)\n",
+    "nn = NearestNeighbors(n_neighbors=3, metric='cosine')\nnn.fit(data)\n",
+    "imp = SimpleImputer(strategy='median')\nX = imp.fit_transform(X)\n",
+    "gm = GaussianMixture(n_components=4, covariance_type='full')\ngm.fit(X)\n",
+    "from scipy.cluster.hierarchy import linkage\nZ = linkage(X, method='ward')\n"
+   ],
+   "quiet": [
+    "emb = TSNE(n_components=2, perplexity=30, n_iter=1000)\nemb.fit(X)\n",
+    "clf = LogisticRegression(C=0.5, max_iter=200)\nclf.fit(X, y)\n",
+    "km = KMeans(n_clusters=5, n_init=10)\nlabels = km.fit_predict(X)\n",
+    "svd = TruncatedSVD(n_components=50, n_iter=7)\nZ = svd.fit_transform(X)\n",
+    "nn = NearestNeighbors(n_neighbors=3, leaf_size=20)\nnn.fit(data)\n",
+    "imp = SimpleImputer(fill_value=0, copy=True)\nX = imp.fit_transform(X)\n",
+    "gm = GaussianMixture(n_components=4, max_iter=100)\ngm.fit(X)\n",
+    "Z = linkage_matrix(X, 3, 0.5)\nprint(Z.shape)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "ML code string kwarg ='",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probe: init=' 0.47, but ' import' in sklearn code also fired 0.55; numeric kwargs 0.18. Some fire items include imports."
+}
