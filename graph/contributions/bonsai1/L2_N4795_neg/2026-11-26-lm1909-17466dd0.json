@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-17466dd0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4795-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:39:31+00:00",
+ "recipe": {
+  "toolchain_commit": "cb4bc4c7d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N4795_neg/2026-11-26-lm1909-17466dd0.tests.json"
+ },
+ "label": "dense, gate-closed pole (4.9% of tokens reach 0.1 of a tiny max; <|endoftext|> dominates its top examples); best guess: the end of a document",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N4795_neg/2026-11-26-lm1909-17466dd0.tests.json",
+   "prereg_commit": "cb4bc4c7d",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.066,
+     "peak": "Thanks"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": -0.069,
+     "peak": " rights"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": -0.058,
+     "peak": "###"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": -0.064,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.171,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": -0.098,
+     "peak": "Source"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.088,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": -0.039,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.079,
+     "peak": "Thanks"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.078,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.15,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.277,
+     "peak": " slopes"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "Sources"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.055,
+     "peak": "Terms"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.02,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.281,
+    "median_fire": -0.049,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cb4bc4c7d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; document end?",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card flags broad density and a gate-closed regime; the strongest examples sit on <|endoftext|>, which a sentence test cannot place. Expected to fail; recorded for density.",
+ "selection": "random draw"
+}
