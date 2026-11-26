@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-132bb2fd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N5739+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:43:08+00:00",
+ "recipe": {
+  "toolchain_commit": "83840f1de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N5739_pos/2026-11-26-lm1909-132bb2fd.tests.json"
+ },
+ "label": "'because of' / 'due to' introducing the reason someone left or split from a group (the slot where 'creative differences' would follow)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N5739_pos/2026-11-26-lm1909-132bb2fd.tests.json",
+   "prereg_commit": "83840f1de",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.111,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.373,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.539,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.045,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.466,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 1.237,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.514,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.77,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.07,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.021,
+     "peak": " released"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.109,
+     "peak": " joined"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.078,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.149,
+     "peak": " still"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.078,
+     "peak": " network"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.907,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "83840f1de",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "reason for leaving a group",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: top examples are 'diverg|ences', 'из-|за' (разногласий), 'Director' (Creative), 'led by' (Creative Director); output promotes ' creative'. Probe: 'left the band because of' fires above the corpus max, 'game cancelled because of rain' ~0.2. Also fires before job titles ('led by the studio's chief'), not tested here.",
+ "selection": "random draw"
+}

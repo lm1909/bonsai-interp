@@ -1,0 +1,161 @@
+{
+ "id": "2026-11-26-lm1909-da1f6bd9",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9578+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:43:43+00:00",
+ "recipe": {
+  "toolchain_commit": "83840f1de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N9578_pos/2026-11-26-lm1909-da1f6bd9.tests.json"
+ },
+ "label": "the token ' gun' or ' pen' as its own token (gun, gunmetal, water gun, pen)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N9578_pos/2026-11-26-lm1909-da1f6bd9.tests.json",
+   "prereg_commit": "83840f1de",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.297,
+     "peak": " gun"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.184,
+     "peak": " pen"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.989,
+     "peak": " gun"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.368,
+     "peak": " pen"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.436,
+     "peak": " gun"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.435,
+     "peak": " pen"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.063,
+     "peak": " gun"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.254,
+     "peak": " gun"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " kept"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.024,
+     "peak": "ill"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " car"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": "ler"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.001,
+     "peak": " begin"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "Please"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " garden"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " rifle"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.333,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "83840f1de",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' gun' / ' pen' token",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Card top 32: ' gun' x10, ' pen'/' Pen' x14, ' Gun' x5. Probe: single-token 'gunfire'/'gunman' stay quiet (0.02-0.06), so it is the piece, not the weapon meaning.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " gun",
+   " Gun",
+   " pen",
+   " Pen"
+  ]
+ }
+}

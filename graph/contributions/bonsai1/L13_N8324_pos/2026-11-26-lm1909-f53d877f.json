@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-f53d877f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N8324+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:43:52+00:00",
+ "recipe": {
+  "toolchain_commit": "83840f1de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N8324_pos/2026-11-26-lm1909-f53d877f.tests.json"
+ },
+ "label": "' return' at the start of a return_value= keyword argument (mock.patch / MagicMock)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N8324_pos/2026-11-26-lm1909-f53d877f.tests.json",
+   "prereg_commit": "83840f1de",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.542,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.22,
+     "peak": " mock"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.429,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.097,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.558,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.23,
+     "peak": "_value"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.503,
+     "peak": "_value"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.551,
+     "peak": " return"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " price"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.042,
+     "peak": " os"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": "       "
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.177,
+     "peak": " mock"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.025,
+     "peak": "db"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.073,
+     "peak": " False"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.119,
+     "peak": " mock"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.054,
+     "peak": " for"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.466,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "83840f1de",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' return' in return_value=",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probe: return_value= inside mock.patch 0.39; '.return_value =' attribute 0.08; plain return statement 0.02.",
+ "selection": "random draw"
+}

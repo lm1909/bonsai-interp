@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-cd28ed20",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N8434+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:43:36+00:00",
+ "recipe": {
+  "toolchain_commit": "83840f1de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N8434_pos/2026-11-26-lm1909-cd28ed20.tests.json"
+ },
+ "label": "conjunction opening a parenthetical hedge or escalation inside a comparison (', and sometimes better,' / ', or even better,' / ', if any,')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N8434_pos/2026-11-26-lm1909-cd28ed20.tests.json",
+   "prereg_commit": "83840f1de",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.508,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.121,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.302,
+     "peak": " or"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.158,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.115,
+     "peak": " ones"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.028,
+     "peak": " cheaper"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.086,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.074,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " labels"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.026,
+     "peak": " longer"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": "Online"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " improvement"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": " than"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " cheaper"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": " guests"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " her"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.945,
+    "median_fire": 0.118,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "83840f1de",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "parenthetical escalation conjunction",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Output suppresses ' even' in many languages. Probe: such parentheticals 0.15-0.32, plain coordination ~0.03; median may sit near the 0.20 bar.",
+ "selection": "random draw"
+}

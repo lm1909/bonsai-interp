@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-45eecca3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N4216-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:43:30+00:00",
+ "recipe": {
+  "toolchain_commit": "83840f1de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N4216_neg/2026-11-26-lm1909-45eecca3.tests.json"
+ },
+ "label": "hex and character-range literals in character-handling code (the 'x' of 0x20 in ord() checks, the '0' of [0-9] in regexes)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N4216_neg/2026-11-26-lm1909-45eecca3.tests.json",
+   "prereg_commit": "83840f1de",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.031,
+     "peak": "x"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.653,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.505,
+     "peak": "x"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.44,
+     "peak": "x"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.645,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.864,
+     "peak": "x"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.579,
+     "peak": "-z"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.597,
+     "peak": "x"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.116,
+     "peak": " ch"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.019,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.044,
+     "peak": "q"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " '-"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.01,
+     "peak": "]"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": "_count"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": "'\n"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " =="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.621,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "83840f1de",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "hex/char-range literals",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Opposite (+) pole's output promotes ' char'/' character'. Probe: ord(c) >= 0x20 0.83, regex [^0-9...] 0.54, but plain 0x10 constants 0.01-0.09: hex alone is not enough, character context matters.",
+ "selection": "random draw"
+}

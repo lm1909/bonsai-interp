@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-06ba3a3a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N9902+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:43:12+00:00",
+ "recipe": {
+  "toolchain_commit": "83840f1de",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N9902_pos/2026-11-26-lm1909-06ba3a3a.tests.json"
+ },
+ "label": "preposition linking a group of people to the institution or place they belong to ('academics based at universities', 'bands from any era')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N9902_pos/2026-11-26-lm1909-06ba3a3a.tests.json",
+   "prereg_commit": "83840f1de",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.177,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.503,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.078,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.043,
+     "peak": " signed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.016,
+     "peak": "Vol"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.029,
+     "peak": " farmers"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.076,
+     "peak": " interviewed"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.18,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": " together"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.037,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.04,
+     "peak": " signed"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.056,
+     "peak": " kitchen"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.032,
+     "peak": " prices"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": " interviewed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.096,
+     "peak": "Gr"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.727,
+    "median_fire": 0.077,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "83840f1de",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "group-to-place preposition",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Weak pole (max 7.7, 35% echo regime). Probe: 'scientists based at hospitals' 0.24, others <0.15; expected to fail.",
+ "selection": "random draw"
+}
