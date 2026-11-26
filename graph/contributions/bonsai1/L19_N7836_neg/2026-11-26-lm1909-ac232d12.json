@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-ac232d12",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N7836-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:53:53+00:00",
+ "recipe": {
+  "toolchain_commit": "d7d4f7d48",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N7836_neg/2026-11-26-lm1909-ac232d12.tests.json"
+ },
+ "label": "an inner word of a spelled-out acronym expansion (SERP: Search Engine Result Page), as against the same words used outside an acronym expansion",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N7836_neg/2026-11-26-lm1909-ac232d12.tests.json",
+   "prereg_commit": "d7d4f7d48",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.315,
+     "peak": " Engine"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.195,
+     "peak": "Customer"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.2,
+     "peak": "Enterprise"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.247,
+     "peak": "Service"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.419,
+     "peak": "Content"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.298,
+     "peak": "Internet"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.33,
+     "peak": "Domain"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.229,
+     "peak": "Click"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.017,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.015,
+     "peak": " warehouse"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": " service"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": " update"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.012,
+     "peak": " test"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " redesign"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.272,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d7d4f7d48",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "inner word of acronym expansion",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Top examples have no common token; the probe fired only on ' Engine' in an acronym expansion (0.49). Low-confidence guess.",
+ "selection": "random draw"
+}

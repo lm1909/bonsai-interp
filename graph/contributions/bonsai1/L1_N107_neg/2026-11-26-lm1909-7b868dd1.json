@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-7b868dd1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N107-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:52:43+00:00",
+ "recipe": {
+  "toolchain_commit": "d7d4f7d48",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N107_neg/2026-11-26-lm1909-7b868dd1.tests.json"
+ },
+ "label": "an opening bracket inside a chemical or mathematical formula ([Fe(CN)6], E((x+1)), m[[i, j]]), as against the same formulas written without brackets",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N107_neg/2026-11-26-lm1909-7b868dd1.tests.json",
+   "prereg_commit": "d7d4f7d48",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.462,
+     "peak": "(C"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.253,
+     "peak": "(N"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.929,
+     "peak": "(("
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.061,
+     "peak": "[["
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.652,
+     "peak": "(C"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.358,
+     "peak": " (("
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.389,
+     "peak": "(H"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.953,
+     "peak": "(("
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.063,
+     "peak": " dissolved"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.035,
+     "peak": " clarity"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.044,
+     "peak": " square"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.148,
+     "peak": " holds"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.041,
+     "peak": " copper"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "Compute"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.073,
+     "peak": " solution"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.112,
+     "peak": " once"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.557,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "d7d4f7d48",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "open bracket in formulas",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "",
+ "selection": "random draw"
+}
