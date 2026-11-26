@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-26-lm1909-ed345afb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N4787+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:35:07+00:00",
+ "recipe": {
+  "toolchain_commit": "699afa253",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N4787_pos/2026-11-26-lm1909-ed345afb.tests.json"
+ },
+ "label": "the auxiliary/verb right after 'so <pronoun>' in a consequence clause ('so we were able', 'so it's', 'so I'm')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N4787_pos/2026-11-26-lm1909-ed345afb.tests.json",
+   "prereg_commit": "699afa253",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.167,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.483,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.361,
+     "peak": " must"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.227,
+     "peak": "'m"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.499,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.382,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.695,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.31,
+     "peak": " must"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " closed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.012,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " ends"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.023,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.015,
+     "peak": " dry"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " runs"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.371,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "699afa253",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verb after 'so <pronoun>'",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Probe: 'so we were able' 0.36, 'so I'm' 0.22, 'so the field was' 0.13.",
+ "selection": "random draw"
+}

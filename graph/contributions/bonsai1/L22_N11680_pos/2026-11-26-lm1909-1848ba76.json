@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-26-lm1909-1848ba76",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11680+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:35:16+00:00",
+ "recipe": {
+  "toolchain_commit": "699afa253",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N11680_pos/2026-11-26-lm1909-1848ba76.tests.json"
+ },
+ "label": "dense: mid-clause function words in long informational prose (the, or, in, its)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N11680_pos/2026-11-26-lm1909-1848ba76.tests.json",
+   "prereg_commit": "699afa253",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.619,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.383,
+     "peak": " committee"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.459,
+     "peak": " at"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.133,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.269,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.409,
+     "peak": " view"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.28,
+     "peak": " group"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.359,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.114,
+     "peak": " lovely"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.089,
+     "peak": "Monday"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.054,
+     "peak": "!"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.015,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.082,
+     "peak": "Price"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.06,
+     "peak": "Hello"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.038,
+     "peak": "ats"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.099,
+     "peak": "Yes"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.371,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "699afa253",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense prose function words",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags broad (3.6% of tokens >0.1 max). Recorded as dense; the test is a best guess (prose vs telegraphic fragments).",
+ "selection": "random draw"
+}

@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-26-lm1909-f7c3424a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N5417-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:36:11+00:00",
+ "recipe": {
+  "toolchain_commit": "699afa253",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N5417_neg/2026-11-26-lm1909-f7c3424a.tests.json"
+ },
+ "label": "Russian verb-stem token right after a verbal prefix (раз-вер-нул, с-хват-ил, вы-рис-овывался)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N5417_neg/2026-11-26-lm1909-f7c3424a.tests.json",
+   "prereg_commit": "699afa253",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.655,
+     "peak": "вер"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.543,
+     "peak": "хват"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.331,
+     "peak": "рис"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.25,
+     "peak": " рас"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.475,
+     "peak": "оч"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.218,
+     "peak": "хот"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.22,
+     "peak": "хват"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.55,
+     "peak": "вет"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.043,
+     "peak": " на"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.124,
+     "peak": " зам"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.1,
+     "peak": "О"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.169,
+     "peak": " ок"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.193,
+     "peak": "я"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.057,
+     "peak": " н"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": "д"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.403,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "699afa253",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian verb stem after prefix",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Probe: вер 0.44, хват 0.52, рис 0.48, and посмотрел (по- prefix) 0.21. The + pole is unprefixed stems (говор-, -од-, хран-).",
+ "selection": "random draw"
+}

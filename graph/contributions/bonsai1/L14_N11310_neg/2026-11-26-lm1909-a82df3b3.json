@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-26-lm1909-a82df3b3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N11310-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:36:01+00:00",
+ "recipe": {
+  "toolchain_commit": "699afa253",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N11310_neg/2026-11-26-lm1909-a82df3b3.tests.json"
+ },
+ "label": "Korean locative particle 에서 ('at/in/from') after a place or menu noun",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N11310_neg/2026-11-26-lm1909-a82df3b3.tests.json",
+   "prereg_commit": "699afa253",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.209,
+     "peak": "에서"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.158,
+     "peak": "에서"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.183,
+     "peak": "에서"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.056,
+     "peak": " 원"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.046,
+     "peak": "그"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.098,
+     "peak": "가"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.053,
+     "peak": "에서"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.086,
+     "peak": " 있습니다"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.099,
+     "peak": "에"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.06,
+     "peak": "설"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.057,
+     "peak": "우"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.056,
+     "peak": " 항"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.046,
+     "peak": "그"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.11,
+     "peak": "가"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.032,
+     "peak": "을"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.035,
+     "peak": "회의"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.703,
+    "median_fire": 0.092,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "699afa253",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Korean locative 에서",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card flags the gate-closed leak regime (80%), max only 5.2. A probe of 회사에서 scored 0.07; expected to fail.",
+ "selection": "random draw"
+}
