@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-f60d8ee5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N6397-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:43:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N6397",
+   "pole": "-",
+   "label": "the indentation at the start of the first line inside a Python class body",
+   "fire": [
+    "import os\n\nclass Config(object):\n    debug = False\n    port = 8080",
+    "from base import Model\n\nclass User(Model):\n    def __init__(self, name):\n        self.name = name",
+    "import json\n\nclass Loader:\n    \"\"\"Load data files.\"\"\"\n    def load(self, path):\n        return json.load(open(path))",
+    "class Stack(object):\n    def __init__(self):\n        self.items = []",
+    "import unittest\n\nclass TestMath(unittest.TestCase):\n    def test_add(self):\n        self.assertEqual(1 + 1, 2)",
+    "from enum import Enum\n\nclass Color(Enum):\n    RED = 1\n    GREEN = 2",
+    "import logging\n\nclass Handler(logging.Handler):\n    level = 10\n    def emit(self, record):\n        pass",
+    "class Node:\n    value = None\n    next = None"
+   ],
+   "quiet": [
+    "import os\n\ndef get_config():\n    debug = False\n    port = 8080",
+    "from base import model\n\ndef make_user(name):\n    user = model()\n    user.name = name",
+    "import json\n\ndef load(path):\n    \"\"\"Load data files.\"\"\"\n    return json.load(open(path))",
+    "def stack():\n    items = []\n    return items",
+    "import unittest\n\nif __name__ == '__main__':\n    unittest.main()",
+    "from enum import Enum\n\nfor color in Enum:\n    print(color)\n    count = 2",
+    "import logging\n\ndef emit(record):\n    level = 10\n    return record",
+    "def node():\n    value = None\n    return value"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "class-body first indent",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "card: '   ' x26, the indent right after 'class X(object):'. Probe: class body indent 0.40, function body indent ~0. Quiet items are code where the first indented line follows a def/if/for, not a class."
+}

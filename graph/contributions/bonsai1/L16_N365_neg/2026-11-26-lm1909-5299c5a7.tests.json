@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5299c5a7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N365-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:43:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L16/N365",
+   "pole": "-",
+   "label": "a request for someone's personal details: the name/address field list ('include your name, address ...')",
+   "fire": [
+    "To enter the contest, send your full name, address and age to the station.",
+    "Each letter to the editor must include the writer's name and city.",
+    "When ordering, please provide your name, shipping address and email.",
+    "Guests should give their name and room number at the front desk.",
+    "Fill in your name, phone number and date of birth below.",
+    "All submissions need the author's name, email and a short bio.",
+    "Before the interview, state your name and current address for the record.",
+    "On the card, write your name, your class and your teacher's name."
+   ],
+   "quiet": [
+    "The famous name of the restaurant drew tourists from the city.",
+    "The writer's name appeared on the cover in large gold letters.",
+    "My grandmother's old address was a small house near the station.",
+    "Nobody at the party could remember the guest's name that evening.",
+    "The street address was painted on the mailbox years ago.",
+    "The author's name became well known after her second novel.",
+    "He changed his name and moved to a new address in Spain.",
+    "The teacher's name was carved into the wooden desk by a student."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "personal-details request",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "card: peaks on ' address', ' author', ',', newline after 'your name' in forms and submission rules; logit effect of the - pole promotes ' info', ' date', ' contact', ' identity'. Probe: 'Her name was Clara' low, form requests high. Quiet items mention names/addresses outside a request for details."
+}

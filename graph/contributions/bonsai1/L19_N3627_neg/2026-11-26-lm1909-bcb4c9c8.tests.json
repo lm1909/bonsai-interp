@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-bcb4c9c8",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N3627-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:43:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N3627",
+   "pole": "-",
+   "label": "the quantity or unit noun that a step-by-step calculation instruction operates on ('Multiply seconds by 343', 'per work hour')",
+   "fire": [
+    "Find the total cost in dollars. Multiply gallons by 3.50 per gallon.",
+    "To convert the time, divide minutes by 60 to get the number of hours.",
+    "Work out the area in square meters. Multiply meters by meters.",
+    "Calculate the energy used. Multiply watts by the number of hours it runs.",
+    "Find the speed of the car. Divide kilometers by hours traveled.",
+    "To get the weight in pounds, multiply kilograms by 2.2.",
+    "Estimate the wages owed. Multiply days by the daily rate of $120.",
+    "Calculate the volume in liters. Multiply milliliters by 0.001."
+   ],
+   "quiet": [
+    "Find the total cost in dollars. The receipt is in the kitchen drawer.",
+    "To convert the time, ask your teacher to explain the clock again.",
+    "Work out the area in square meters. The garden is behind the house.",
+    "Calculate the energy used. The lamp has been on since this morning.",
+    "Find the speed of the car. It was painted red last summer.",
+    "To get the weight in pounds, step onto the bathroom scale.",
+    "Estimate the wages owed. The workers will be paid on Friday.",
+    "Calculate the volume in liters. The jug is sitting on the table."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "operand unit in calculation",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "card: peaks on 'hour', ' letter', ' u', ' seconds' in worked-problem instructions; no single token. Probe: 'Multiply hours by ...' 0.43, other rate/substitution phrasings under 0.1. Low confidence."
+}

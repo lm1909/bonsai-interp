@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-dace9868",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N11623-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:43:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N11623",
+   "pole": "-",
+   "label": "sub-word piece right after a single capital-letter prefix: '-c' in 'T-cells', '.s' in 'D.s.' / 'T.sqr'",
+   "fire": [
+    "The virus hides inside T-cells for many years.",
+    "Doctors measured the number of B-cells in the blood sample.",
+    "The code computes T.sqrt of the summed values.",
+    "Only the A-class models passed the safety test.",
+    "The species D.s. major lives in northern forests.",
+    "Her immune system produced more T-cells after the vaccine.",
+    "The B-cells make antibodies against the infection.",
+    "We grouped the C-cases separately from the controls."
+   ],
+   "quiet": [
+    "The virus hides inside nerve cells for many years.",
+    "Doctors measured the number of white cells in the blood sample.",
+    "The code computes the square root of the summed values.",
+    "Only the luxury models passed the safety test.",
+    "The species called major lives in northern forests.",
+    "Her immune system produced more cells after the vaccine.",
+    "The plasma cells make antibodies against the infection.",
+    "We grouped the severe cases separately from the controls."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "piece after letter prefix",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "layer 0. Card: '-c' x11, '.s' x5 after a lone capital (T-cells, A-cases, D.s., T.sqr). Tokenizer splits ' T','-c','ells'. Quiet items use the same words without the letter prefix."
+}

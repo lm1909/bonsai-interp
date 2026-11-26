@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-46888c56",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N12000+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:43:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N12000",
+   "pole": "+",
+   "label": "a float literal or float type in numeric code (the '.' / '0' of '1024.0', ': float')",
+   "fire": [
+    "def scale(x):\n    if x > 255.0:\n        return x / 255.0\n    return x",
+    "total = 0\nfor v in values:\n    total += v * 0.5\nprint(total)",
+    "def percent(part, whole):\n    return 100.0 * part / whole",
+    "def to_seconds(ms):\n    return ms / 1000.0",
+    "rate = 3.0\nsteps = int(length / rate)\nprint(steps)",
+    "def size_mb(n):\n    if n < 1024.0:\n        return n\n    return n / 1024.0",
+    "class Tool:\n    diameter: float\n    speed: float",
+    "def mean(xs):\n    return sum(xs) / float(len(xs))"
+   ],
+   "quiet": [
+    "def scale(x):\n    if x > 255:\n        return x // 255\n    return x",
+    "total = 0\nfor v in values:\n    total += v * 2\nprint(total)",
+    "def percent(part, whole):\n    return 100 * part // whole",
+    "def to_seconds(ms):\n    return ms // 1000",
+    "rate = 3\nsteps = int(length / rate)\nprint(steps)",
+    "def size_mb(n):\n    if n < 1024:\n        return n\n    return n // 1024",
+    "class Tool:\n    name: str\n    count: int",
+    "def mean(xs):\n    return sum(xs) // len(xs)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "float literal in code",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "card: '.' x8, '0' x5 in '1024.0', '100.0', ' float'. Probe: '1024.0' 0.38 vs '1024' 0.15. Quiet items are the same code with integer literals."
+}
