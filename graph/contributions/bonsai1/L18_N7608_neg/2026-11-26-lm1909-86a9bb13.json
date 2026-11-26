@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-86a9bb13",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N7608-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:36:41+00:00",
+ "recipe": {
+  "toolchain_commit": "adb96b4e4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N7608_neg/2026-11-26-lm1909-86a9bb13.tests.json"
+ },
+ "label": "corporate ownership of brands: the object slot after own/acquire and 'brands include' ('owns the brand', 'its brands include')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N7608_neg/2026-11-26-lm1909-86a9bb13.tests.json",
+   "prereg_commit": "adb96b4e4",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.59,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.36,
+     "peak": " brands"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.617,
+     "peak": " brand"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.265,
+     "peak": " acquired"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.525,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.296,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.658,
+     "peak": " its"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.8,
+     "peak": " brands"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.379,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.072,
+     "peak": " sold"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.05,
+     "peak": " headquarters"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.377,
+     "peak": " acquired"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.022,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.491,
+     "peak": " farm"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.331,
+     "peak": " smaller"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.557,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "adb96b4e4",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "owned brands",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "probe: 'owns the brand' 0.65 at ' the', 'consumer brands include' 0.65, 'The brand of coffee I like' 0.01",
+ "selection": "random draw"
+}

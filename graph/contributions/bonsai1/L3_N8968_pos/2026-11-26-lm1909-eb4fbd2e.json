@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-eb4fbd2e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N8968+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:35:35+00:00",
+ "recipe": {
+  "toolchain_commit": "adb96b4e4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N8968_pos/2026-11-26-lm1909-eb4fbd2e.tests.json"
+ },
+ "label": "word-piece completing an Italian personal or place name (Gi|useppe, P|iazza, Pal|azzo, Aless|andro)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N8968_pos/2026-11-26-lm1909-eb4fbd2e.tests.json",
+   "prereg_commit": "adb96b4e4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.734,
+     "peak": "useppe"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.905,
+     "peak": "iazza"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.917,
+     "peak": "andro"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.923,
+     "peak": "azzo"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.96,
+     "peak": "azio"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.611,
+     "peak": "izio"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.888,
+     "peak": "useppe"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.901,
+     "peak": "azzo"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.086,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.132,
+     "peak": " Grand"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.049,
+     "peak": " meeting"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.072,
+     "peak": "vre"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.118,
+     "peak": " physicist"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.079,
+     "peak": " Damien"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.07,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.082,
+     "peak": " concert"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.903,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "adb96b4e4",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Italian name pieces",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "card flags broad and gate-closed (echo) regime; the - pole is ' Italy'",
+ "selection": "random draw"
+}

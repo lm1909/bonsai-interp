@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-4e52e2bd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N1169-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:35:53+00:00",
+ "recipe": {
+  "toolchain_commit": "adb96b4e4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N1169_neg/2026-11-26-lm1909-4e52e2bd.tests.json"
+ },
+ "label": "content word after a negation in biblical or scriptural prose ('no more mourning', 'I find no case')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N1169_neg/2026-11-26-lm1909-4e52e2bd.tests.json",
+   "prereg_commit": "adb96b4e4",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.208,
+     "peak": " pain"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.127,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.059,
+     "peak": " fil"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.256,
+     "peak": " tear"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.136,
+     "peak": " thing"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.076,
+     "peak": " more"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.078,
+     "peak": "Beh"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.089,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.064,
+     "peak": " tomorrow"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.116,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.057,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.1,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.102,
+     "peak": " phone"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.04,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.102,
+     "peak": "Look"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.124,
+     "peak": " land"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.672,
+    "median_fire": 0.108,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "adb96b4e4",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "scriptural negated noun",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "weak (max 4.3), broad, gate-leak regime 80%; top examples also include digits in code; probes of the scriptural examples stayed below 0.2, so a fail is expected",
+ "selection": "random draw"
+}
