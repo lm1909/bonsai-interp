@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-87c0aa7d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N607-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N607",
+   "pole": "-",
+   "label": "'.create' in Django ORM calls (Model.objects.create(...)), especially in test setup code",
+   "fire": [
+    "class OrderTests(TestCase):\n    def setUp(self):\n        self.customer = Customer.objects.create(name='Ada')\n        self.order = Order.objects.create(customer=self.customer, total=10)",
+    "    def test_slug_is_unique(self):\n        Article.objects.create(title='Hello', slug='hello')\n        with self.assertRaises(IntegrityError):\n            Article.objects.create(title='Hi', slug='hello')",
+    "    def setUp(self):\n        self.team = Team.objects.create(name='Blue')\n        self.player = Player.objects.create(team=self.team, number=7)",
+    "    def test_str(self):\n        tag = Tag.objects.create(label='urgent')\n        self.assertEqual(str(tag), 'urgent')",
+    "    def setUp(self):\n        self.city = City.objects.create(name='Oslo', population=700000)\n        self.street = Street.objects.create(city=self.city, name='Main')",
+    "    def test_ordering(self):\n        Event.objects.create(title='B', day=2)\n        Event.objects.create(title='A', day=1)\n        self.assertEqual(Event.objects.first().title, 'A')",
+    "    def setUp(self):\n        self.owner = User.objects.create_user(username='kim', password='pw')\n        self.shop = Shop.objects.create(owner=self.owner)",
+    "    def test_total(self):\n        cart = Cart.objects.create(user=self.user)\n        Item.objects.create(cart=cart, price=5)\n        self.assertEqual(cart.total(), 5)"
+   ],
+   "quiet": [
+    "class OrderTests(TestCase):\n    def setUp(self):\n        self.customer = Customer.objects.get(name='Ada')\n        self.order = Order.objects.filter(customer=self.customer).first()",
+    "    def test_slug_is_unique(self):\n        Article.objects.filter(slug='hello').delete()\n        with self.assertRaises(ValueError):\n            Article.objects.get(slug='hello')",
+    "    def setUp(self):\n        self.team = Team.objects.get(name='Blue')\n        self.player = Player.objects.filter(team=self.team).last()",
+    "    def test_str(self):\n        tag = Tag.objects.get(label='urgent')\n        self.assertEqual(str(tag), 'urgent')",
+    "    def setUp(self):\n        self.city = City.objects.get(name='Oslo')\n        self.street = Street.objects.filter(city=self.city).first()",
+    "    def test_ordering(self):\n        events = Event.objects.order_by('day')\n        self.assertEqual(events.count(), 2)\n        self.assertEqual(events.first().title, 'A')",
+    "    def setUp(self):\n        self.owner = User.objects.get(username='kim')\n        self.shop = Shop.objects.filter(owner=self.owner).first()",
+    "    def test_total(self):\n        cart = Cart.objects.get(user=self.user)\n        items = Item.objects.filter(cart=cart)\n        self.assertEqual(cart.total(), 5)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Django objects.create",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: '.create' x10 of top 32 (Django tests), top-1 is ' a' in 'admission of a new state'. Probe: multi-line setUp with objects.create 0.21, objects.get/filter 0.07."
+}

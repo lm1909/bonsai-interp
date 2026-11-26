@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-8fd16e2c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N8497-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N8497",
+   "pole": "-",
+   "label": "'D'/'d' split off as the first piece of a word (Dusche -> ' D'+'us'+'che', dials -> ' d'+'ials')",
+   "fire": [
+    "Im Bad gibt es eine große Dusche mit Glaswand.",
+    "Nach dem Sturm mussten wir das ganze Dach neu decken.",
+    "Sie kaufte im Supermarkt ein neues Duschgel mit Lavendel.",
+    "Our hotel room had a small balcony and a Dusche, as the sign said.",
+    "Wir wohnen in einer alten Wohnung direkt unter dem Dach.",
+    "The ferry crossed the Dnipro just before sunset.",
+    "Local dailies printed the story on their front pages.",
+    "The pilot glanced at the dials before starting the engines."
+   ],
+   "quiet": [
+    "Im Bad gibt es eine große Badewanne mit Glaswand.",
+    "Nach dem Sturm mussten wir das ganze Haus neu streichen.",
+    "Sie kaufte im Supermarkt eine neue Seife mit Lavendel.",
+    "Our hotel room had a small balcony and a bathtub, as the sign said.",
+    "Wir wohnen in einer alten Wohnung direkt unter dem Keller.",
+    "The ferry crossed the river just before sunset.",
+    "Local newspapers printed the story on their front pages.",
+    "The pilot glanced at the screens before starting the engines."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-off word-initial D",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Card: ' D', ' d', '-d', 'D' dominate the top 32 (DHT11, Dusche, dailies, dials). Tokenizer checked: Dusche, Dach, Duschgel, Dnipro, dials, dailies split off a lone D/d; Dogs, door, dwarf are single tokens. Probe: Dusche 0.59, dials 0.13."
+}

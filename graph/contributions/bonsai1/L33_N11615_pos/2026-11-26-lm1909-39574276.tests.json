@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-39574276",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N11615+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:06+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N11615",
+   "pole": "+",
+   "label": "inner word pieces of foam/plastic material names (styro-fo-am, poly-fo-am, polyure-thane)",
+   "fire": [
+    "Pack the glasses in styrofoam peanuts so they do not break.",
+    "The seat cushion is filled with soft polyfoam and covered in cotton.",
+    "Coat the wooden table with a clear polyurethane varnish.",
+    "We used a styrofoam cooler to keep the drinks cold.",
+    "Old styrofoam cups take centuries to break down in landfills.",
+    "The cheap sofa had a thin polyfoam core that sagged quickly.",
+    "Spray polyurethane insulation filled the gaps in the attic.",
+    "She carved the model planets out of styrofoam balls."
+   ],
+   "quiet": [
+    "Pack the glasses in crumpled paper so they do not break.",
+    "The seat cushion is filled with soft cotton and covered in linen.",
+    "Coat the wooden table with a clear oil varnish.",
+    "We used a plastic cooler to keep the drinks cold.",
+    "Old paper cups take years to break down in landfills.",
+    "The cheap sofa had a thin spring core that sagged quickly.",
+    "Thick wool insulation filled the gaps in the attic.",
+    "She carved the model planets out of clay balls."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "foam material word pieces",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card: 'thane', 'fo' (styrofoam, polyfoam); output suppresses ' fo', ' foam', ' foil', i.e. it fires on a piece that is not the whole word. Tokenizer checked: styrofoam -> sty|ro|fo|am, polyurethane -> poly|ure|thane, polyfoam -> poly|fo|am. Probe: styrofoam 0.59, polyurethane 0.26, 'memory foam' 0.00."
+}
