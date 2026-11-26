@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-ef4c2f6a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N3000-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:27:01+00:00",
+ "recipe": {
+  "toolchain_commit": "a051e1d82",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N3000_neg/2026-11-26-lm1909-ef4c2f6a.tests.json"
+ },
+ "label": "software running on or emulating another platform: the slot where 'run'/'emulate' goes (it can run on Windows, free emulators, runs in a browser)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N3000_neg/2026-11-26-lm1909-ef4c2f6a.tests.json",
+   "prereg_commit": "a051e1d82",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.525,
+     "peak": " an"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.308,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.194,
+     "peak": " Windows"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.013,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.481,
+     "peak": " using"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.372,
+     "peak": " run"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.026,
+     "peak": " be"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.361,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.027,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.114,
+     "peak": " game"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " source"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.006,
+     "peak": " script"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.113,
+     "peak": " glass"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.041,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.449,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a051e1d82",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "running software on a platform",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Top: French 'permet de faire tourner des applications Android sur Windows', 'It can run on Windows, OS X', 'free em|ulators', 'Mosaic ran in the X Window System'. The output direction of this pole promotes ' run', ' em', ' emulate', ' running'. Probe: emulator sentence 0.61, 'runs smoothly in a browser' 0.36, 'can run on Linux' 0.23, 'installed Windows XP' 0.10.",
+ "selection": "random draw"
+}

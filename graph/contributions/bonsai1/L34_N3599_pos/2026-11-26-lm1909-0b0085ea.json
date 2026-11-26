@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-0b0085ea",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3599+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:27:24+00:00",
+ "recipe": {
+  "toolchain_commit": "a051e1d82",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N3599_pos/2026-11-26-lm1909-0b0085ea.tests.json"
+ },
+ "label": "the first token inside a short bracketed literal: an area code in parentheses '(212)' or a quoted string value in code ['GET'], 'blue'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N3599_pos/2026-11-26-lm1909-0b0085ea.tests.json",
+   "prereg_commit": "a051e1d82",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.619,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.879,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.704,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.751,
+     "peak": "GET"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.335,
+     "peak": "darwin"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.218,
+     "peak": "3"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.047,
+     "peak": "green"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.21,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " Main"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.046,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " both"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " uses"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " venue"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.03,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.477,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a051e1d82",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "first token of bracketed literal",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Top: '(12|3)', \"('blue'\", \"['GET'\", \"'train'\", \"'win3|2'\", '+49 (0)'. Probe: '(555) 123-4567' 0.86, \"else 'blue'\" 0.39, \"methods=['POST']\" 0.28, \"mode: 'test' or 'train'\" 0.05.",
+ "selection": "random draw"
+}

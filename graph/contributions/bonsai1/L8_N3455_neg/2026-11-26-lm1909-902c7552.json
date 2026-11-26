@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-902c7552",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N3455-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:27:37+00:00",
+ "recipe": {
+  "toolchain_commit": "a051e1d82",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N3455_neg/2026-11-26-lm1909-902c7552.tests.json"
+ },
+ "label": "verbs of coming / arriving ('venimos', 'come back'), weakly; also surname and title endings ('Osch|man', 'Daily Mail')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N3455_neg/2026-11-26-lm1909-902c7552.tests.json",
+   "prereg_commit": "a051e1d82",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.358,
+     "peak": "imos"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.501,
+     "peak": " come"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.502,
+     "peak": " con"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.102,
+     "peak": " come"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.627,
+     "peak": "imos"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.194,
+     "peak": " come"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.305,
+     "peak": "imos"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.064,
+     "peak": " come"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.006,
+     "peak": " celebr"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.246,
+     "peak": " call"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.036,
+     "peak": " año"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.03,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": "ada"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.036,
+     "peak": " plan"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": " pas"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.003,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.332,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a051e1d82",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "coming verbs, weak",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Gate-closed regime 82%, max 2.88. Top: Spanish 'ven|imos' x3, ' come' x3, 'Osch|man', ' Mail', ' back'. Probe: 'Oschman' 0.67, 'Venimos de' 0.35, 'come back' 0.32, 'Daily Mail' 0.32. The opposite (+) pole fires on arrivals of a sound or caller (knock at, phone rang, came from). Guessed label.",
+ "selection": "random draw"
+}
