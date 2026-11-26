@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-99a6fb10",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N10782+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:33:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N10782",
+   "pole": "+",
+   "label": "first word of an entry's text that restates the entry's heading name (heading 'Black Saturday' -> 'Black Saturday was ...')",
+   "fire": [
+    "3. Red Rock Canyon\nRed Rock Canyon is a short drive west of the city.",
+    "- Miso (fermented soybean paste): Miso adds a salty depth to soups.",
+    "2. Great Fire of London, 1666\nGreat Fire of London destroyed much of the old city.",
+    "Seattle, Washington: Food Lifeline\nFood Lifeline delivers groceries to local pantries.",
+    "- Kimchi (spicy fermented cabbage): Kimchi is rich in probiotics.",
+    "4. Hurricane Katrina, 2005\nHurricane Katrina flooded most of New Orleans.",
+    "Boston, Massachusetts: Rosie's Place\nRosie's Place offers meals and shelter to women.",
+    "- Kombucha (fermented tea): Kombucha has a slightly sour taste."
+   ],
+   "quiet": [
+    "3. Red Rock Canyon\nThe area is a short drive west of the city.",
+    "- Miso (fermented soybean paste): It adds a salty depth to soups.",
+    "2. Great Fire of London, 1666\nThe blaze destroyed much of the old city.",
+    "Seattle, Washington: Food Lifeline\nThis charity delivers groceries to local pantries.",
+    "- Kimchi (spicy fermented cabbage): It is rich in probiotics.",
+    "4. Hurricane Katrina, 2005\nThe storm flooded most of New Orleans.",
+    "Boston, Massachusetts: Rosie's Place\nThe shelter offers meals and beds to women.",
+    "- Kombucha (fermented tea): The drink has a slightly sour taste."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "entry restates heading",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Weak pole (max 5.9), gate-closed regime dominates (84%). Top: 'Black', 'San', ' Tem', ' Em' starting descriptions after a heading line. Probe: 0.62 and 0.44 on two such items, ~0.07 on others."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-75de92d1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N12198-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:33:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N12198",
+   "pole": "-",
+   "label": "' =' that initializes a container entry in the else-branch of an append-or-create idiom (else: d[k] = [x])",
+   "fire": [
+    "for row in rows:\n    if row.user in by_user:\n        by_user[row.user].append(row)\n    else:\n        by_user[row.user] = [row]",
+    "for w in words:\n    if w[0] in index:\n        index[w[0]].append(w)\n    else:\n        index[w[0]] = [w]",
+    "for path in files:\n    ext = path.suffix\n    if ext in seen:\n        seen[ext].append(path)\n    else:\n        seen[ext] = [path]",
+    "def add_edge(graph, a, b):\n    if a in graph:\n        graph[a].append(b)\n    else:\n        graph[a] = [b]",
+    "for gene, read in pairs:\n    if gene in table:\n        table[gene].append(read)\n    else:\n        table[gene] = [read]",
+    "for t in tokens:\n    try:\n        freq[t] += 1\n    except KeyError:\n        freq[t] = 1",
+    "for city, person in records:\n    if city in people:\n        people[city].append(person)\n    else:\n        people[city] = [person]",
+    "for msg in inbox:\n    if msg.sender in threads:\n        threads[msg.sender].append(msg)\n    else:\n        threads[msg.sender] = [msg]"
+   ],
+   "quiet": [
+    "for row in rows:\n    by_user.setdefault(row.user, []).append(row)\nprint(len(by_user))",
+    "words = sorted(words)\nfirst = words[0]\nlast = words[-1]\nprint(first, last)",
+    "for path in files:\n    ext = path.suffix\n    print(ext)",
+    "def add_edge(graph, a, b):\n    graph[a].append(b)\n    graph[b].append(a)\n    return graph",
+    "width = 640\nheight = 480\narea = width * height\nprint(area)",
+    "for t in tokens:\n    if t == stop:\n        break\n    print(t)",
+    "x = load(path)\ny = transform(x)\nsave(y, out)",
+    "for msg in inbox:\n    if msg.unread:\n        notify(msg.sender)\n    print(msg.subject)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "else-branch init assignment",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Top 32: ' =' x21, almost all 'd[k].append(x) ... else: d[k] = [x]'. Probe: idiom 0.80, plain assignments ~0.01."
+}

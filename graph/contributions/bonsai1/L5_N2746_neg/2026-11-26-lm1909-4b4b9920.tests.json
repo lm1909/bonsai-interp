@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-4b4b9920",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N2746-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:33:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N2746",
+   "pole": "-",
+   "label": "CJK relative-position word after a noun or verb (目の前, 以降, 如上, 以上, 상대로)",
+   "fire": [
+    "駅の前にある小さな店でパンを買った。",
+    "震災以降、町の人口は減り続けている。",
+    "如上所述，这个方法并不适用。",
+    "テーブルの上に古い地図が置いてあった。",
+    "그는 상대로 나온 선수를 쉽게 이겼다.",
+    "家の前に大きな木が立っている。",
+    "二〇一〇年以降、価格は少しずつ上がった。",
+    "책상 아래에 고양이가 숨어 있었다."
+   ],
+   "quiet": [
+    "駅で小さな店を見つけてパンを買った。",
+    "震災のあと、町の人口は減り続けている。",
+    "我们认为，这个方法并不适用。",
+    "テーブルに古い地図が置いてあった。",
+    "그는 처음 나온 선수를 쉽게 이겼다.",
+    "家に大きな木が立っている。",
+    "二〇一〇年から、価格は少しずつ上がった。",
+    "책상에 고양이가 숨어 있었다."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "CJK relative position",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Weak pole (max 3.1), gate-closed leak dominates. Top: 前/上/降/대로/아래. Probe: 0.30-0.63 on such words, 0.10 without."
+}
