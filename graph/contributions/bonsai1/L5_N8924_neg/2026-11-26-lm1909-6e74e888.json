@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-6e74e888",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N8924-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:46:44+00:00",
+ "recipe": {
+  "toolchain_commit": "9670c95a8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N8924_neg/2026-11-26-lm1909-6e74e888.tests.json"
+ },
+ "label": "the final piece of an all-caps acronym ending in M (SAM, CAM, HCIM, AIM), not the time 'AM' or the word 'am'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N8924_neg/2026-11-26-lm1909-6e74e888.tests.json",
+   "prereg_commit": "9670c95a8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.74,
+     "peak": " SAM"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.766,
+     "peak": " SAM"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.348,
+     "peak": " BAM"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.303,
+     "peak": "AM"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.616,
+     "peak": "IM"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.748,
+     "peak": " SAM"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.725,
+     "peak": " SAM"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.578,
+     "peak": " AIM"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.031,
+     "peak": " AM"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " am"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " aircraft"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " grant"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.007,
+     "peak": " lineup"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " launch"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.091,
+     "peak": "Sam"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " coated"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.67,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9670c95a8",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "acronym ending in M",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "probe: SAM/WAM/CAM/AIM ~0.46-0.67 of max; time 'AM' and 'am' ~0.03.",
+ "selection": "random draw"
+}

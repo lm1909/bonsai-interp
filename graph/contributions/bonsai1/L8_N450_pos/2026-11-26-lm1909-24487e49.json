@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-24487e49",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N450+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:47:31+00:00",
+ "recipe": {
+  "toolchain_commit": "9670c95a8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N450_pos/2026-11-26-lm1909-24487e49.tests.json"
+ },
+ "label": "the verb right after expletive 'Es' in German (Es wurden, Es können, Es sind)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N450_pos/2026-11-26-lm1909-24487e49.tests.json",
+   "prereg_commit": "9670c95a8",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.966,
+     "peak": " wurden"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.815,
+     "peak": " können"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.708,
+     "peak": " sind"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.015,
+     "peak": " kommen"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.621,
+     "peak": "sten"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.765,
+     "peak": " werden"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.016,
+     "peak": " wurden"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.661,
+     "peak": " dürfen"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.151,
+     "peak": " wurden"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.082,
+     "peak": " ist"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.038,
+     "peak": " sind"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.238,
+     "peak": " neue"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.104,
+     "peak": "wei"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.154,
+     "peak": " alles"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.173,
+     "peak": " wurden"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.198,
+     "peak": " der"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.79,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9670c95a8",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verb after expletive Es",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "probe: 'Es wurden' 0.84, 'Es können' 0.51, 'Es gibt' 0.10, verbs without Es ~0.1. Top examples also include Russian -ются and Spanish 'Han intervenido' (verb after a dummy/impersonal subject).",
+ "selection": "random draw"
+}
