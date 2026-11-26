@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-0cca787b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N2344-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:11:10+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N2344",
+   "pole": "-",
+   "label": "the first word of a continued line in a wrapped code comment (best guess; the pole is broad and its gate-closed leak regime dominates)",
+   "fire": [
+    "def load():\n    # This makes sure that the cache files\n    # for each build are kept in sync\n    return cache",
+    "if ok:\n    # The warning is skipped when the version\n    # is newer than the configured minimum\n    pass",
+    "x = 1\n    # Paths to the jar files stored\n    # in the shared folder are rewritten here\n",
+    "    # We use the extended runner instead of the plain one\n    # for comparison tests in this module\n",
+    "    # Keep these values small because large values\n    # in production can overflow the buffer\n",
+    "    # The parser is called twice, once for headers\n    # and once for the body of the request\n",
+    "    # Note that the timeout is measured in seconds\n    # rather than milliseconds in this API\n",
+    "    # Store the result so that later calls\n    # to this function return immediately\n"
+   ],
+   "quiet": [
+    "def load():\n    return cache",
+    "if ok:\n    pass",
+    "x = 1\ny = 2\nz = x + y\n",
+    "result = run_tests(module)\nprint(result)\n",
+    "values = [1, 2, 3]\nbuffer = bytes(values)\n",
+    "headers = parse(request)\nbody = read(request)\n",
+    "timeout = 30\nclient = Client(timeout)\n",
+    "cache = {}\nresult = compute(x)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "wrapped comment word",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card flags broad (2.3% >0.1 max) and -g +u leak 99%; probes all <0.05. Recorded as dense; test of the best guess."
+}
