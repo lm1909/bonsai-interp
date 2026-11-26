@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-ee8542fd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N4205-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:45:02+00:00",
+ "recipe": {
+  "toolchain_commit": "af128ac4d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N4205_neg/2026-11-26-lm1909-ee8542fd.tests.json"
+ },
+ "label": "dense weak pole (max 0.26, ~18% of tokens above 0.1 of max); best guess: identifier-like pieces in code, paths and filenames",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N4205_neg/2026-11-26-lm1909-ee8542fd.tests.json",
+   "prereg_commit": "af128ac4d",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.472,
+     "peak": "file"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.28,
+     "peak": " firefox"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.431,
+     "peak": " PYTHON"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.384,
+     "peak": ".py"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.299,
+     "peak": ".cfg"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.275,
+     "peak": "file"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.503,
+     "peak": " chmod"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.246,
+     "peak": ".log"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.274,
+     "peak": " read"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.172,
+     "peak": " teacher"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.131,
+     "peak": " table"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.258,
+     "peak": " notebook"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.109,
+     "peak": " folder"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.12,
+     "peak": " walked"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.082,
+     "peak": " wait"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.178,
+     "peak": " diary"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.342,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af128ac4d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense: code identifiers",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags dense and gate-closed leak regime; top peaks 'ocs', ' myfile', 'firefox', 'PYTHON'. Test records the density; expected to fail.",
+ "selection": "random draw"
+}

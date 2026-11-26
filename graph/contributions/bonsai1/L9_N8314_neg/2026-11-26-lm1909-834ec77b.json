@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-26-lm1909-834ec77b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N8314-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:44:48+00:00",
+ "recipe": {
+  "toolchain_commit": "af128ac4d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N8314_neg/2026-11-26-lm1909-834ec77b.tests.json"
+ },
+ "label": "' whether' opening a concessive 'whether X or Y / or not' clause after a comma (regardless-of sense)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N8314_neg/2026-11-26-lm1909-834ec77b.tests.json",
+   "prereg_commit": "af128ac4d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.843,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.832,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.025,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.913,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.767,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.745,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.924,
+     "peak": " whether"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.893,
+     "peak": " whether"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": " even"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.089,
+     "peak": " everyone"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.133,
+     "peak": " all"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " on"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.076,
+     "peak": " or"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.199,
+     "peak": " matter"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.194,
+     "peak": " regardless"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.868,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af128ac4d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "concessive whether",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "Card: ' whether' 29/32 top peaks, mostly after a comma. Probe: concessive 0.90/0.73, embedded question 'wonder whether' 0.27, ' if' up to 0.45 so near misses avoid 'if'.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " whether"
+  ]
+ }
+}

@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-26-lm1909-acbb2fb3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N3964+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:44:59+00:00",
+ "recipe": {
+  "toolchain_commit": "af128ac4d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N3964_pos/2026-11-26-lm1909-acbb2fb3.tests.json"
+ },
+ "label": "the word-piece 'kin'/'kins' ending a word split before it (Hodg|kin, cat|kins, Push|kin)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N3964_pos/2026-11-26-lm1909-acbb2fb3.tests.json",
+   "prereg_commit": "af128ac4d",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.854,
+     "peak": "kin"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.838,
+     "peak": "kins"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.806,
+     "peak": "kin"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.353,
+     "peak": "kin"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.897,
+     "peak": "kins"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.879,
+     "peak": "kin"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.876,
+     "peak": "kin"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.31,
+     "peak": "kin"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " last"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.001,
+     "peak": " flowers"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.001,
+     "peak": " roses"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.002,
+     "peak": " every"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": " pollen"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.001,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " Sundays"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": "ov"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.846,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af128ac4d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word-final piece kin",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Card: 'kin' x11 'kins' x4 as word-final pieces (Hodgkin, catkins, Aitkin). Probe: Hodgkin/catkins 0.85, Pushkin 0.43, ' kin' as a word 0.28, 'pumpkin' as one token 0.",
+ "selection": "random draw",
+ "trigger": {
+  "pieces": [
+   "kin",
+   "kins"
+  ]
+ }
+}

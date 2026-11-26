@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-38c44128",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N1678-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:45:28+00:00",
+ "recipe": {
+  "toolchain_commit": "af128ac4d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N1678_neg/2026-11-26-lm1909-38c44128.tests.json"
+ },
+ "label": "final head noun of a formal multiword technical or policy term (Environmental Policy Act, protected areas, transcription factors)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N1678_neg/2026-11-26-lm1909-38c44128.tests.json",
+   "prereg_commit": "af128ac4d",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.036,
+     "peak": " amended"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.251,
+     "peak": " areas"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.277,
+     "peak": " Act"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.231,
+     "peak": " Act"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.101,
+     "peak": " areas"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.284,
+     "peak": " request"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.119,
+     "peak": " season"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.191,
+     "peak": " wage"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " water"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.095,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.027,
+     "peak": " foot"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.085,
+     "peak": " request"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.075,
+     "peak": " closed"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.062,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.211,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af128ac4d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "head of technical term",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card flags broad; top peaks spread over transcription, Act, Policy, areas, battle. Probe: 'Policy Act' 0.29, 'protected areas' 0.19, others <0.07. Low confidence.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-4b0461ca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N2294-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:45:06+00:00",
+ "recipe": {
+  "toolchain_commit": "af128ac4d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N2294_neg/2026-11-26-lm1909-4b0461ca.tests.json"
+ },
+ "label": "preposition or resumptive pronoun that closes a relative clause, pointing back to its head ('the crisis it is going through', Arabic التي يمر بها)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N2294_neg/2026-11-26-lm1909-4b0461ca.tests.json",
+   "prereg_commit": "af128ac4d",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.353,
+     "peak": " بها"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.721,
+     "peak": " بها"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.426,
+     "peak": " إليها"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.403,
+     "peak": " منها"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.79,
+     "peak": " بها"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.032,
+     "peak": " ذ"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.573,
+     "peak": " بها"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.031,
+     "peak": " إليها"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.053,
+     "peak": " ص"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.097,
+     "peak": "عبة"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": "هذه"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.058,
+     "peak": "الية"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.026,
+     "peak": "كل"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " الك"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.051,
+     "peak": "قل"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.647,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af128ac4d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "relative-clause preposition",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Card: mixed prepositions; Arabic بها/إليها after relative verbs (التي يمر بها, التي وصلت إليها). Probe on English stranded prepositions was weak (<=0.12). Low confidence.",
+ "selection": "random draw"
+}

@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-26-lm1909-d5541e76",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N7791-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:44:38+00:00",
+ "recipe": {
+  "toolchain_commit": "af128ac4d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N7791_neg/2026-11-26-lm1909-d5541e76.tests.json"
+ },
+ "label": "the CJK character 王 (Wang / king) as its own token, e.g. the surname Wang in Chinese bylines and names",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N7791_neg/2026-11-26-lm1909-d5541e76.tests.json",
+   "prereg_commit": "af128ac4d",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.706,
+     "peak": "王"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.782,
+     "peak": "王"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.819,
+     "peak": "王"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.824,
+     "peak": "王"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.289,
+     "peak": "国王"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.694,
+     "peak": "王"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.081,
+     "peak": "王先生"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.804,
+     "peak": "王"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": "昨天"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.066,
+     "peak": "刘"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": "名字"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.019,
+     "peak": "建国"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.079,
+     "peak": "皇帝"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.016,
+     "peak": "张"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": "这家"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "打败"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.744,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "af128ac4d",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese 王 (Wang/king)",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "Card: '王' 22/32 of top peaks, plus Korean 왕 and ' kings'. Probe: 王 0.68, other surname 李 0.06.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   "王"
+  ]
+ }
+}
