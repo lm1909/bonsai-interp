@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-0ab98283",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N5009+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T17:14:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N5009",
+   "pole": "+",
+   "label": "the slot right before an expected 'replace'/'re-' word (predicts replacement, e.g. 'will gradually be …', 'self.re…')",
+   "fire": [
+    "The ageing diesel buses will progressively be replaced by electric ones.",
+    "Once the warranty runs out, the cracked screen has to be swapped for a new one.",
+    "Les anciens compteurs seront progressivement remplacés par des modèles connectés.",
+    "When the cartridge runs dry, it should be replaced with a genuine one.",
+    "def replace_token(self, old, new):\n    return self.text.replace(old, new)",
+    "The worn brake pads need to be replaced before the next long trip.",
+    "The interim coach is expected to be replaced at the end of the season.",
+    "Over the next decade, coal plants will gradually be replaced by wind farms."
+   ],
+   "quiet": [
+    "The ageing diesel buses still run on the airport route every morning.",
+    "Once the warranty runs out, the repair shop charges a fixed fee.",
+    "Les anciens compteurs sont installés dans la cave de l'immeuble.",
+    "When the cartridge runs dry, the printer shows a small warning light.",
+    "def count_tokens(self, text):\n    return len(text.split())",
+    "The worn brake pads made a squealing noise on the long trip.",
+    "The interim coach is expected to speak to the press on Friday.",
+    "Over the next decade, coal plants will face stricter pollution rules."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "predicts 'replace'",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: peaks on the token just before remplacées/replaced/replacement in French, Russian and code; output promotes '-re', 'unre', 'reset'. Probe: 'will gradually be' 0.48 whether the next word was replaced or repainted, so the neuron reads the context, not the word; 'was replaced as manager' 0.03."
+}

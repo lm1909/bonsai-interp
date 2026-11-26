@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-099a8a4f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N4232-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T17:14:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N4232",
+   "pole": "-",
+   "label": "a token that closes nested brackets in code (')),' '])' ']]' ' []' at the end of a call or literal)",
+   "fire": [
+    "config = dict(\n    name='worker',\n    tags=sorted(set(tags)))\n",
+    "rows = [[r['id'], r['name']] for r in data]\nprint(len(rows))",
+    "payload = {'items': [], 'total': 0}\nreturn payload",
+    "paths.append(os.path.join(base, name))\nreturn paths",
+    "x = np.array([[1, 2], [3, 4]])\nprint(x.shape)",
+    "logger.info('done: {}'.format(len(results)))\nreturn results",
+    "value = int(float(row['price']))\ntotal += value",
+    "users = list(filter(None, names.split(',')))\nprint(users)"
+   ],
+   "quiet": [
+    "config = make_config\nname = 'worker'\ntags = tags\n",
+    "rows = data\nfor r in rows:\n    print r",
+    "payload = None\nreturn payload",
+    "base = name\nreturn base",
+    "x = 12\ny = x + 4",
+    "logger = log\nresults = done",
+    "value = row\ntotal += value",
+    "users = names\ncount = users"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "nested closing brackets",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Card: top 32 are \"'))\", ' []', '))', ']]', \"'])\", '])' in Python code."
+}

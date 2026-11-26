@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-97fbb201",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N523-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T17:14:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N523",
+   "pole": "-",
+   "label": "an exclamation-mark token inside code markup ('# !TODO', '<![CDATA[', '! comment')",
+   "fire": [
+    "    def run(self):\n        # !TODO: handle the timeout case\n        return self.fetch()",
+    "<script><![CDATA[\nvar x = 1;\n]]></script>",
+    "    total = 0\n    # !FIXME: this double counts refunds\n    for r in rows:",
+    "<description><![CDATA[Fresh bread daily]]></description>",
+    "        cfg = load()\n        # !NOTE: keep this order\n        init(cfg)",
+    "! Fortran comment: compute the mean\n      mean = sum / n",
+    "<data><![CDATA[a < b && c > d]]></data>",
+    "    # !HACK: skip the broken mirror\n    urls = urls[1:]"
+   ],
+   "quiet": [
+    "    def run(self):\n        # TODO: handle the timeout case\n        return self.fetch()",
+    "<script>\nvar x = 1;\n</script>",
+    "    total = 0\n    # FIXME: this double counts refunds\n    for r in rows:",
+    "<description>Fresh bread daily</description>",
+    "        cfg = load()\n        # NOTE: keep this order\n        init(cfg)",
+    "C Fortran comment: compute the mean\n      mean = sum / n",
+    "<data>a less than b</data>",
+    "    # HACK: skip the broken mirror\n    urls = urls[1:]"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'!' in code",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: ' !' x11, ' (!' x4, '![' x2 in code comments and CDATA; gate-closed leak regime dominates (88%)."
+}

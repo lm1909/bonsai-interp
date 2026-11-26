@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5b28d461",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N7601-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T17:14:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L29/N7601",
+   "pole": "-",
+   "label": "a location inside a tree or directory hierarchy in technical text (entries in a subtree, a file in a subdirectory, reaching the root)",
+   "fire": [
+    "# Skip any file that sits in a nested subdirectory\nif depth > 1:\n    continue",
+    "Each user entry in the subtree ou=staff is replicated to the backup server.",
+    "# Climb until we hit the root of the tree\nwhile node.parent:\n    node = node.parent",
+    "Config files placed in a child directory override those in the parent directory.",
+    "The search returns all nodes in the left subtree of the current element.",
+    "# Move the folder into a subfolder of the project root\nshutil.move(src, dst)",
+    "Objects nested in a group inherit the transform of their parent group.",
+    "Leaf entries in the lower branches of the hierarchy are loaded lazily."
+   ],
+   "quiet": [
+    "# Skip any file that is larger than the limit\nif size > limit:\n    continue",
+    "Each user entry in the database is replicated to the backup server.",
+    "# Loop until we hit the end of the list\nwhile item.next:\n    item = item.next",
+    "Config files placed in the system path override the default settings.",
+    "The search returns all rows in the result set of the current query.",
+    "# Move the file into the trash after upload\nshutil.move(src, dst)",
+    "Objects drawn in the scene inherit the color of the current brush.",
+    "Log entries in the error stream are written lazily."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "position in a tree",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: peaks on ' in', ' a', ' the' just before subtree/subdirectory/root, and on nltk_tree. Probe: 'in the subdirectory' 0.21, flat archive 0.01; 'root node of the tree' only 0.05."
+}

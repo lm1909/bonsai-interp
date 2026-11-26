@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-f428c00a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N5938-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T17:14:19+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L5/N5938",
+   "pole": "-",
+   "label": "positional: the second digit of a number right at the start of the text (window position 1); card flags this pole positional",
+   "fire": [
+    "30 kilometres separate the two villages on the coast.",
+    "70 students enrolled in the evening course this spring.",
+    "20 years ago the factory closed its doors for good.",
+    "50 volunteers cleaned the river bank on Saturday.",
+    "10 tips for keeping your houseplants alive in winter.",
+    "80 percent of the seats were already taken by noon.",
+    "60 seconds is all it takes to brew this tea.",
+    "2009 marked the first season of the new league."
+   ],
+   "quiet": [
+    "The two villages on the coast are 30 kilometres apart.",
+    "This spring the evening course enrolled 70 students.",
+    "The factory closed its doors for good 20 years ago.",
+    "On Saturday 50 volunteers cleaned the river bank.",
+    "Here are 10 tips for keeping houseplants alive in winter.",
+    "By noon 80 percent of the seats were already taken.",
+    "Brewing this tea takes only 60 seconds.",
+    "The new league played its first season in 2009."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "early digit, positional",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card: 66% of top peaks at window position 1, mostly '0' after another digit. A probe of sentence-initial '90 minutes' did not fire, so this test of the best guess will probably fail; it records the positional flag."
+}
