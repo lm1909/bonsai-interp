@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-0b0085ea",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3599+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:17:01+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N3599",
+   "pole": "+",
+   "label": "the first token inside a short bracketed literal: an area code in parentheses '(212)' or a quoted string value in code ['GET'], 'blue'",
+   "fire": [
+    "For bookings, please phone our front desk at (212) 555-0198 today.",
+    "Head office: Main Street 4, Toronto. Tel: (416) 555-2231.",
+    "Reach the clinic on +44 (0)20 7946 0018 during office hours.",
+    "@app.route('/upload', methods=['GET', 'PUT'])",
+    "if sys.platform in ['linux', 'darwin']:\n    use_fork = True",
+    "Contact Dave at (303) 555-7710 for directions to the venue.",
+    "style = TextStyle('green', 'bold', size=12)",
+    "Our Denver store can be reached at (720) 555-4402 on weekends."
+   ],
+   "quiet": [
+    "For bookings, please use the form on our website or visit us.",
+    "Head office: Main Street 4, Toronto. Open weekdays from nine.",
+    "Reach the clinic by email during office hours on weekdays.",
+    "The upload page accepts both new files and replacements.",
+    "On Linux and macOS the program uses fork by default.",
+    "Contact Dave by email for directions to the venue.",
+    "The text is styled in bold green at twelve points.",
+    "Our Denver store is open late on Fridays and weekends."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "first token of bracketed literal",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Top: '(12|3)', \"('blue'\", \"['GET'\", \"'train'\", \"'win3|2'\", '+49 (0)'. Probe: '(555) 123-4567' 0.86, \"else 'blue'\" 0.39, \"methods=['POST']\" 0.28, \"mode: 'test' or 'train'\" 0.05."
+}
