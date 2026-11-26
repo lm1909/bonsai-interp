@@ -1,0 +1,44 @@
+{
+ "contribution": "2026-11-26-lm1909-f1d544dd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N7444-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:39:44+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L11/N7444",
+   "pole": "-",
+   "label": "the end of a Python if-condition (the ':' newline or the compared value such as None / True / [])",
+   "fire": [
+    "def find(nodes, key):\n    for node in nodes:\n        if node.key == key:\n            return node\n    return None",
+    "def update(self, value):\n    if value is None:\n        return\n    self.value = value",
+    "    result = lookup(name)\n    if result != []:\n        print(result[0])",
+    "def run(self):\n    if self.debug == True:\n        log.info('debug mode')",
+    "    data = load()\n    if not data:\n        raise ValueError('empty')",
+    "    for key in config:\n        if key in defaults:\n            config[key] = defaults[key]",
+    "def close(self):\n    if self.handle is not None:\n        self.handle.close()",
+    "    count = len(items)\n    if count > 0 and items[0]:\n        first = items[0]"
+   ],
+   "quiet": [
+    "def find(nodes, key):\n    matches = [n for n in nodes]\n    return matches",
+    "def update(self, value):\n    self.value = value\n    self.count += 1",
+    "    result = lookup(name)\n    print(result)\n    return result",
+    "def run(self):\n    log.info('starting run')\n    self.start()",
+    "    data = load()\n    total = sum(data)\n    print(total)",
+    "    keys = list(config)\n    print(keys)",
+    "def close(self):\n    self.handle.close()\n    self.handle = None",
+    "    count = len(items)\n    first = items[0]\n    last = items[-1]"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": "card,probe"
+ },
+ "short": "Python if-condition end",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Probe: 'if item is not None:' 0.39, a plain 'if self.path:' 0.13, code without if 0.05."
+}
