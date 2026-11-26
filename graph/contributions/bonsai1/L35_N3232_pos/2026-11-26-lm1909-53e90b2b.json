@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-26-lm1909-53e90b2b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N3232+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:57:36+00:00",
+ "recipe": {
+  "toolchain_commit": "7adcf6ef0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N3232_pos/2026-11-26-lm1909-53e90b2b.tests.json"
+ },
+ "label": "positional: the first tokens of a text window (guess: the token after an opening connective)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N3232_pos/2026-11-26-lm1909-53e90b2b.tests.json",
+   "prereg_commit": "7adcf6ef0",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": -0.0,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": -0.0,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.002,
+     "peak": " new"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": -0.0,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": -0.0,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": -0.0,
+     "peak": " price"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": -0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.001,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.0,
+     "peak": " storm"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.001,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.002,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.001,
+     "peak": " winter"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.001,
+     "peak": " autumn"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.0,
+     "peak": " price"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.002,
+     "peak": " village"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": -0.0,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7adcf6ef0",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "positional",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "card FLAG positional: 78% of top peaks at window position 0. Recorded as dense / positional with a guess; expected to fail.",
+ "selection": "random draw"
+}

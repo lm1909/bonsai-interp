@@ -1,0 +1,154 @@
+{
+ "id": "2026-11-26-lm1909-6f4eb6f7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N9457-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:57:30+00:00",
+ "recipe": {
+  "toolchain_commit": "7adcf6ef0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N9457_neg/2026-11-26-lm1909-6f4eb6f7.tests.json"
+ },
+ "label": "the '.\\n' token: a period that ends a line, between short complete lines (lists, reviews, steps)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N9457_neg/2026-11-26-lm1909-6f4eb6f7.tests.json",
+   "prereg_commit": "7adcf6ef0",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.14,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.04,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.152,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.114,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.071,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.119,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.16,
+     "peak": ".\n"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.178,
+     "peak": ".\n"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.034,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.032,
+     "peak": " Highly"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.03,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": " Clean"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " law"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.036,
+     "peak": " Remove"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.043,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.048,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.13,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "look",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7adcf6ef0",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "line-final period",
+ "unit_kind": "lexical",
+ "confidence": 0.35,
+ "notes": "card: '.\\n' x17 in the top 32 (one token dominates), max only 5.7. Probing gave weak readings on short texts, so this may fail.",
+ "selection": "random draw"
+}
