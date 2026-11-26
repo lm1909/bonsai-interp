@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-9163102f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N10334+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:06:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N10334",
+   "pole": "+",
+   "label": "Python program-termination and HTTP-error raising: '.exit' in sys.exit(...) and 'Error' in raise HTTPError(...)",
+   "fire": [
+    "if not ok:\n    logging.error('failed')\n    sys.exit(1)",
+    "    if not args:\n        print(usage)\n        sys.exit(2)",
+    "if __name__ == '__main__':\n    code = main()\n    sys.exit(code)",
+    "    if args.dry_run:\n        print('nothing to do')\n        sys.exit(0)",
+    "    if resp.status != 200:\n        raise HTTPError(resp.status)",
+    "    if user is None:\n        raise HTTPError(403)",
+    "for path in missing:\n    print('missing', path)\nsys.exit(len(missing))",
+    "    if not token:\n        log.warning('no token')\n        sys.exit(3)"
+   ],
+   "quiet": [
+    "if not ok:\n    logging.error('failed')\n    return 1",
+    "    if not args:\n        print(usage)\n        return None",
+    "if __name__ == '__main__':\n    code = main()\n    print(code)",
+    "    if args.dry_run:\n        print('nothing to do')\n        return",
+    "    if resp.status != 200:\n        retries += 1",
+    "    if user is None:\n        user = load_default()",
+    "for path in missing:\n    print('missing', path)\ncount = len(missing)",
+    "    if not token:\n        log.warning('no token')\n        token = ''"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "sys.exit / raise HTTPError",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": ""
+}
