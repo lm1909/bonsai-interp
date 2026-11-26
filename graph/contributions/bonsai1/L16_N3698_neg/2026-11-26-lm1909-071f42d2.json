@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-071f42d2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L16/N3698-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:47:09+00:00",
+ "recipe": {
+  "toolchain_commit": "cc5d21f4b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L16_N3698_neg/2026-11-26-lm1909-071f42d2.tests.json"
+ },
+ "label": "best guess: the subject or verb that opens a new statement about the topic in expository / biographical prose (He was..., The chromosomes are...)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L16_N3698_neg/2026-11-26-lm1909-071f42d2.tests.json",
+   "prereg_commit": "cc5d21f4b",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.069,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.189,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.051,
+     "peak": " docks"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.043,
+     "peak": " Their"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.064,
+     "peak": " Its"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.09,
+     "peak": " are"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.037,
+     "peak": " age"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.052,
+     "peak": " Its"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.098,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.03,
+     "peak": " found"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.016,
+     "peak": " docks"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.033,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.05,
+     "peak": " every"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.033,
+     "peak": " age"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.033,
+     "peak": " "
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.058,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cc5d21f4b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "broad: new-statement subject",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "card flags it broad (1.0% of tokens reach 0.1 of max); top peaks are scattered (' He', '\\tself', ' was', ' are', ' Its'). Probes all <= 0.11. Test records the density; expected to fail.",
+ "selection": "random draw"
+}

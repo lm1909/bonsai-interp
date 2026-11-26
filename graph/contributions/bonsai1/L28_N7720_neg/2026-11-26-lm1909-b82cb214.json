@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-b82cb214",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7720-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:47:26+00:00",
+ "recipe": {
+  "toolchain_commit": "cc5d21f4b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N7720_neg/2026-11-26-lm1909-b82cb214.tests.json"
+ },
+ "label": "the copula (is / was) linking an abstract subject (plan, evidence, idea, objective) to an assessment of it ('the plan is very simple', 'the evidence was circumstantial')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N7720_neg/2026-11-26-lm1909-b82cb214.tests.json",
+   "prereg_commit": "cc5d21f4b",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.931,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.989,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.841,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.935,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.607,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.98,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.553,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.566,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.6,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.37,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.344,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.053,
+     "peak": " novel"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.353,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.136,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.016,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.886,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cc5d21f4b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "copula before assessment",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "card: top peaks ' was' x10, ' is' x4 after 'evidence', 'objective', 'it' (a good idea); + pole is the same slot before a negative verdict (a sin, a pity, a disservice). Probes: 'evidence was circumstantial' 0.70, 'plan is very simple' 0.78, 'movie was a great experience' 0.44, 'would be a shame' 0.01, 'weather was cold' 0.09. Near misses: copula with a concrete subject and a physical description, and the negative-verdict frame.",
+ "selection": "random draw"
+}

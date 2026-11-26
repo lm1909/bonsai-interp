@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-48be092e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N8026-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:47:00+00:00",
+ "recipe": {
+  "toolchain_commit": "cc5d21f4b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N8026_neg/2026-11-26-lm1909-48be092e.tests.json"
+ },
+ "label": "Italian personal names (given names and surname pieces such as Gian-, Bon-, Bell-, Medici), as opposed to Italian place names (the + pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N8026_neg/2026-11-26-lm1909-48be092e.tests.json",
+   "prereg_commit": "cc5d21f4b",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.556,
+     "peak": "a"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.702,
+     "peak": "'"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.7,
+     "peak": " F"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.742,
+     "peak": "can"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.91,
+     "peak": " S"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.405,
+     "peak": "andro"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.195,
+     "peak": "ico"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.005,
+     "peak": "rico"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.058,
+     "peak": " Mem"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.044,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.023,
+     "peak": " Coy"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " Herbert"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " Bav"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.084,
+     "peak": "el"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": "els"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.628,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cc5d21f4b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Italian person names",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "card: peaks on surname pieces after Italian given names (Leonardo Bonafede, Giovanni Sforza, Giacomo Moro, Horacio Gianello); + pole fires on Sicilian/Italian place names (Taormina, Bari, Sicilian). Probes: Bellini 0.81, Gian Lorenzo 0.83, Medici 0.67, Puccini 0.40, Dickens 0.03. Near misses: the same sentences with non-Italian names, or Italian places instead of people.",
+ "selection": "random draw"
+}

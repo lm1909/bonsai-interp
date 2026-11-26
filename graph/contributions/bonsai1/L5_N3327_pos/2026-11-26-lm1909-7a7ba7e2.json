@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-7a7ba7e2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N3327+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:46:32+00:00",
+ "recipe": {
+  "toolchain_commit": "cc5d21f4b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N3327_pos/2026-11-26-lm1909-7a7ba7e2.tests.json"
+ },
+ "label": "the word-final '-an' piece (-shan, -athan, -aran, -zan) of a transliterated South Asian name or word, when it is split off as its own token",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N3327_pos/2026-11-26-lm1909-7a7ba7e2.tests.json",
+   "prereg_commit": "cc5d21f4b",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.08,
+     "peak": "han"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.4,
+     "peak": "shan"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.044,
+     "peak": "ub"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.652,
+     "peak": "aran"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.134,
+     "peak": "athan"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.496,
+     "peak": "adan"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.197,
+     "peak": "an"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.054,
+     "peak": "an"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": " crowds"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": "k"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.074,
+     "peak": "mi"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": " speakers"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": "im"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.027,
+     "peak": " clerk"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": "After"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.166,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cc5d21f4b",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Indic final -an",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "card: peaks on 'shan' (darshan), 'aran' (Nedumaran), 'an' (Vedanthan), 'adan' (Gandhamadan); probes: darshan 0.44, Ramanathan 0.31, Ramzan 0.22, but Pakistan/naan/Roshan ~0. Near misses: South Asian names in the same frames that do not end in -an.",
+ "selection": "random draw"
+}

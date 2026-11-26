@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-5a8053f2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N4070-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:46:48+00:00",
+ "recipe": {
+  "toolchain_commit": "cc5d21f4b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N4070_neg/2026-11-26-lm1909-5a8053f2.tests.json"
+ },
+ "label": "the word that opens a condition or instruction clause inside a quantitative word problem (If..., Assume..., Neglecting..., '(' before units)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N4070_neg/2026-11-26-lm1909-5a8053f2.tests.json",
+   "prereg_commit": "cc5d21f4b",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.422,
+     "peak": " If"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.971,
+     "peak": " Assume"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.252,
+     "peak": "lect"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.322,
+     "peak": " If"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.507,
+     "peak": " If"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.788,
+     "peak": " Assume"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.81,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.241,
+     "peak": " If"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.0,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.203,
+     "peak": " Assume"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.612,
+     "peak": "lect"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " nine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.183,
+     "peak": " takes"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.155,
+     "peak": " nearly"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.018,
+     "peak": " oh"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": "0"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.647,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "cc5d21f4b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word-problem condition",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "card: top peaks ' If', ' (', 'lect' (Neglecting), 'ume' (Assume) in physics/math problems. Probes: physics 'If' 0.74-0.82, 'Assume' 0.88, 'Neglecting' 1.4, everyday 'if' 0.003. Near misses: everyday prose with if/assume/neglect, and word problems without a condition clause.",
+ "selection": "random draw"
+}
