@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-b05abdce",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N284+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:03:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N284",
+   "pole": "+",
+   "label": "the short word-initial prefix piece ' ab' / ' an' / ' tri' when the tokenizer splits a word there (ab|normally, an|ergy, tri|athlon)",
+   "fire": [
+    "Doctors noticed that the baby's skull was abnormally shaped.",
+    "The fluid levels in her lungs were abnormally high for weeks.",
+    "Some of the patients' white cells behaved abnormally in the lab.",
+    "My cousin is training for a triathlon in the mountains this summer.",
+    "Thousands of athletes entered the triathlon held along the coast.",
+    "Without a second signal, the T cells slip into anergy and stop responding.",
+    "The clinic treats teenagers struggling with anorexia and other eating disorders.",
+    "The scan revealed a small aneurysm in one artery of his brain."
+   ],
+   "quiet": [
+    "Doctors noticed that the baby's skull was unusually shaped.",
+    "The fluid levels in her lungs were very high for weeks.",
+    "Some of the patients' white cells behaved strangely in the lab.",
+    "My cousin is training for a marathon in the mountains this summer.",
+    "Thousands of athletes entered the race held along the coast.",
+    "Without a second signal, the T cells become inactive and stop responding.",
+    "The clinic treats teenagers struggling with depression and other mood disorders.",
+    "The scan revealed a small clot in one artery of his brain."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split prefix ab-/an-/tri-",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "probe: ab|normally 0.52, an|ergy 0.48, tri|athlon 0.32, an|emia 0.20; other split words (aberr|ant, trib|utary, abs|cess) ~0; article ' an' ~0.2."
+}

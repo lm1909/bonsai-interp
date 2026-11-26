@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-02545ca6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9088-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:03:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L4/N9088",
+   "pole": "-",
+   "label": "machine-learning training identifiers in Python code (valid, SGD, average, sample)",
+   "fire": [
+    "def split(data):\n    train_data = data[:800]\n    valid_data = data[800:]\n    return train_data, valid_data",
+    "from torch.optim import SGD\noptimizer = SGD(model.parameters(), lr=0.01)",
+    "losses = [step(batch) for batch in loader]\n# average over all batches\nmean_loss = average(losses)",
+    "for epoch in range(10):\n    train(model)\n    valid_loss = evaluate(model, valid_loader)",
+    "clf = SGDClassifier(loss='hinge', alpha=0.001)\nclf.fit(X_train, y_train)",
+    "def sample_and_average(z, n):\n    draws = [z.sample() for _ in range(n)]\n    return sum(draws) / n",
+    "metrics = {'train_acc': 0.91, 'valid_acc': 0.87}\nprint(metrics)",
+    "seq_loss = sequence_loss(logits, targets, weights,\n    average_across_timesteps=True)"
+   ],
+   "quiet": [
+    "def split(text):\n    head = text[:800]\n    tail = text[800:]\n    return head, tail",
+    "from pathlib import Path\nfolder = Path('/tmp/output')",
+    "names = [line.strip() for line in lines]\n# keep the first name only\nfirst = names[0]",
+    "for row in range(10):\n    draw(row)\n    width = measure(row, canvas)",
+    "client = HttpClient(host='localhost', port=8080)\nclient.connect()",
+    "def read_lines(path):\n    with open(path) as f:\n        return f.readlines()",
+    "settings = {'title': 'Home', 'color': 'blue'}\nprint(settings)",
+    "message = format_message(user, text, date,\n    include_footer=True)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "ML training identifiers",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "card: 'valid' x4, SGD, average, random, Plot in ML code."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-86155fa7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N10013+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:03:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N10013",
+   "pole": "+",
+   "label": "the slot for a widget property in GUI/form code (attrs={' , .set…) where 'placeholder' could come next",
+   "fire": [
+    "class SignupForm(forms.Form):\n    email = forms.EmailField(widget=forms.EmailInput(attrs={'autocomplete': 'email'}))",
+    "self.search_box = QLineEdit()\nself.search_box.setMaxLength(40)",
+    "self.username_entry = Gtk.Entry()\nself.username_entry.set_max_length(20)",
+    "widgets = {\n    'title': forms.TextInput(attrs={'size': 40}),\n    'body': forms.Textarea(attrs={'rows': 4}),\n}",
+    "self.input = QtWidgets.QLineEdit(self)\nself.input.setEchoMode(QtWidgets.QLineEdit.Password)",
+    "comment = forms.CharField(widget=forms.Textarea(attrs={'cols': 60}))",
+    "self.city_field = Gtk.Entry()\nself.city_field.set_width_chars(30)",
+    "phone = forms.CharField(widget=forms.TextInput(attrs={'type': 'tel'}))"
+   ],
+   "quiet": [
+    "class Signup(models.Model):\n    email = models.EmailField(max_length=254, unique=True)",
+    "self.search_results = []\nself.search_results.append(item)",
+    "self.username = 'admin'\nself.username_count = len(self.username)",
+    "defaults = {\n    'title': 'Untitled',\n    'body': '',\n}",
+    "self.total = 0\nself.total += sum(values)",
+    "comment = Comment.objects.create(author=user, text=body)",
+    "city = cities.get('Berlin')\nprint(city.population)",
+    "phone = re.sub(r'\\D', '', raw_phone)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "widget property slot",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "card: attrs={' and .set on entry widgets; output promotes 'placeholder'. probe: plain dict 0.00, attrs={' 0.44, entry.set 0.86."
+}
