@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-f1f046cd",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N253-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:43:17+00:00",
+ "recipe": {
+  "toolchain_commit": "ad72ba377",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N253_neg/2026-11-26-lm1909-f1f046cd.tests.json"
+ },
+ "label": "the split-off word-initial Cyrillic ' о' / ' оп' piece of Russian о-words (определить, охранять, оказать)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N253_neg/2026-11-26-lm1909-f1f046cd.tests.json",
+   "prereg_commit": "ad72ba377",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.28,
+     "peak": " оп"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.035,
+     "peak": " ок"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.901,
+     "peak": " о"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.059,
+     "peak": " под"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.241,
+     "peak": " о"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.102,
+     "peak": "бил"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.124,
+     "peak": " правильно"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.103,
+     "peak": " ос"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.023,
+     "peak": "ясн"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.0,
+     "peak": " зак"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.471,
+     "peak": " у"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " под"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.001,
+     "peak": " работы"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.083,
+     "peak": "бил"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.124,
+     "peak": " правильно"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " зам"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.789,
+    "median_fire": 0.113,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad72ba377",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian о- word start",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Top 32 mostly ' о' / ' оп' starting Russian verbs and nouns; probe 0.16-0.34 on о-words, 0.02 without. Quiet items avoid words beginning with о.",
+ "selection": "random draw"
+}

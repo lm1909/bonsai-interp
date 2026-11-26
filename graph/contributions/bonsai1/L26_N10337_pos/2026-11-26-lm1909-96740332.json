@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-96740332",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N10337+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:43:42+00:00",
+ "recipe": {
+  "toolchain_commit": "ad72ba377",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N10337_pos/2026-11-26-lm1909-96740332.tests.json"
+ },
+ "label": "the predicate start after a generic activity or domain subject in an evaluative claim ('Learning X is so much…', 'Physics education has been…')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N10337_pos/2026-11-26-lm1909-96740332.tests.json",
+   "prereg_commit": "ad72ba377",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.342,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.351,
+     "peak": " learning"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.15,
+     "peak": " definitely"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.532,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.162,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.465,
+     "peak": " much"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.191,
+     "peak": " definitely"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.238,
+     "peak": " teaching"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.06,
+     "peak": "ing"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.064,
+     "peak": "Language"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.02,
+     "peak": "work"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.209,
+     "peak": "ening"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.133,
+     "peak": "Music"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.162,
+     "peak": " children"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.064,
+     "peak": " speaking"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "istry"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.93,
+    "median_fire": 0.29,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad72ba377",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "after generic subject",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Peak tokens are function words (' is', ' much', ' has', ' definitely') after an abstract subject; the - pole is the 'X is important' slot (logit suppresses important/crucial). Probe mixed: 'so much more' 0.56, 'is crucial' 0.005. Low confidence guess.",
+ "selection": "random draw"
+}

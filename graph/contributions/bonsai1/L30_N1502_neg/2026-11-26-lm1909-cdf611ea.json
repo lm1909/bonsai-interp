@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-cdf611ea",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N1502-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:44:02+00:00",
+ "recipe": {
+  "toolchain_commit": "ad72ba377",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N1502_neg/2026-11-26-lm1909-cdf611ea.tests.json"
+ },
+ "label": "' the' introducing a specific referent as object of a verb in explanatory prose (often body / biology)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N1502_neg/2026-11-26-lm1909-cdf611ea.tests.json",
+   "prereg_commit": "ad72ba377",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.855,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.473,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.414,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.502,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.339,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.161,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.528,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.874,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.229,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.131,
+     "peak": " extra"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.059,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.066,
+     "peak": " attack"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.078,
+     "peak": " our"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.03,
+     "peak": " our"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.068,
+     "peak": " carry"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.267,
+     "peak": "ested"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.487,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad72ba377",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "object 'the'",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "31 of 32 top examples peak on ' the', mostly after a verb or preposition in explanations (respond to the hormone, converts food to glucose, the simple sugar). The + pole is also ' the' (idioms: to the last minute), so the distinction is unclear. Probe: 0.92 'absorb the sugar', 0.14 'opened the door'.",
+ "selection": "random draw"
+}

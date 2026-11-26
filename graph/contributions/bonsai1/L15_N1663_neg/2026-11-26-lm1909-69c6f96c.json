@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-69c6f96c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N1663-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:44:06+00:00",
+ "recipe": {
+  "toolchain_commit": "ad72ba377",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N1663_neg/2026-11-26-lm1909-69c6f96c.tests.json"
+ },
+ "label": "a cooking heat level ('over medium-high heat', 'on high')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N1663_neg/2026-11-26-lm1909-69c6f96c.tests.json",
+   "prereg_commit": "ad72ba377",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.671,
+     "peak": "-high"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.451,
+     "peak": " heat"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.287,
+     "peak": " low"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.335,
+     "peak": " medium"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.438,
+     "peak": " high"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.382,
+     "peak": " medium"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.249,
+     "peak": " medium"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.153,
+     "peak": " heat"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.193,
+     "peak": " pan"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.096,
+     "peak": "aks"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.013,
+     "peak": " minutes"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": " pan"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.277,
+     "peak": " vegetables"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.13,
+     "peak": " skillet"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.175,
+     "peak": " onions"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " until"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.359,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ad72ba377",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "cooking heat level",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Top examples are scattered (solitaire Foundations, 'there is only one boat', poker variants, coughing, Vesuvius, 'medium-high' heat). Probe: 'medium-high heat' 0.65, 'high heat' 0.38, foundations 0.72. Picked the most reproducible cue; likely partial at best.",
+ "selection": "random draw"
+}
