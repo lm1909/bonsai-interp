@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-8d837e53",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N6913-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:39:43+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N6913",
+   "pole": "-",
+   "label": "separator or entry inside a NumPy-style array shape / axis / index tuple in Python code (shape=(n, m), X[i, :], axis=0)",
+   "fire": [
+    "import numpy as np\nweights = np.random.randn(n_in, n_out)\nbias = np.zeros((1, n_out))",
+    "    Parameters\n    ----------\n    X : ndarray, shape (n_points, n_dims)\n        Input coordinates.",
+    "grid = np.empty((height, width), dtype=np.float32)\ngrid.fill(0.0)",
+    "    for k in range(n):\n        out[k, :] = A[k, :] * scale",
+    "mean_rows = np.mean(matrix, axis=1)\nprint(mean_rows)",
+    "    coef_ : array, shape = (n_classes, n_features)\n        Weights assigned to the features.",
+    "    img = frames[t, :, :, 0]\n    img = img / 255.0",
+    "total = np.sum(values, axis=0, keepdims=True)\nreturn total"
+   ],
+   "quiet": [
+    "import os\nfiles = os.listdir(path)\nnames = sorted(files, key=len)",
+    "    Parameters\n    ----------\n    name : str, optional\n        Display name of the user.",
+    "logger = logging.getLogger(__name__)\nlogger.info('start %s', job)",
+    "    for k in range(n):\n        result.append(make_item(k, label))",
+    "message = format_text(header, body)\nprint(message)",
+    "    callback : callable, default None\n        Called after each epoch.",
+    "    user = db.get(user_id, None)\n    send_mail(user, subject)",
+    "total = add_numbers(first, second)\nreturn total"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "array shape/index tuple",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Probe: commas in np.zeros((a, b)) and docstring 'shape (n_samples, n_features)' fire; commas in ordinary calls and prose do not."
+}
