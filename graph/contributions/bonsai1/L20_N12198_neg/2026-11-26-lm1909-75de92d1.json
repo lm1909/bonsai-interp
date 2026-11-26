@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-75de92d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N12198-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:48:30+00:00",
+ "recipe": {
+  "toolchain_commit": "400a13d0f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N12198_neg/2026-11-26-lm1909-75de92d1.tests.json"
+ },
+ "label": "' =' that initializes a container entry in the else-branch of an append-or-create idiom (else: d[k] = [x])",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N12198_neg/2026-11-26-lm1909-75de92d1.tests.json",
+   "prereg_commit": "400a13d0f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.988,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.056,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.862,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.012,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.071,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.94,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.112,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.017,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.168,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.042,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.047,
+     "peak": " return"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": "\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " stop"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": ".sender"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 1.014,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "400a13d0f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "else-branch init assignment",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Top 32: ' =' x21, almost all 'd[k].append(x) ... else: d[k] = [x]'. Probe: idiom 0.80, plain assignments ~0.01.",
+ "selection": "random draw"
+}

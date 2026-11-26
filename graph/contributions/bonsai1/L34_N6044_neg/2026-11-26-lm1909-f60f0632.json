@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-f60f0632",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6044-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:49:24+00:00",
+ "recipe": {
+  "toolchain_commit": "400a13d0f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N6044_neg/2026-11-26-lm1909-f60f0632.tests.json"
+ },
+ "label": "digit inside a year or clock/race time written as numerals (the '0' in 200x, ':' in 4:04)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N6044_neg/2026-11-26-lm1909-f60f0632.tests.json",
+   "prereg_commit": "400a13d0f",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.457,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.438,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.194,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.348,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.216,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.296,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.426,
+     "peak": ":"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.288,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.003,
+     "peak": " title"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.013,
+     "peak": " money"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " coach"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " half"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " quickly"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.322,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "400a13d0f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "digits in years and times",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Dense-ish (0.59% > 0.1 max). Top: '0' x11 and ':' x8 in years and times. Probe: 'since 2001' 0.52, '4:04.43' 0.52 but '17:10' only 0.01, so label is a guess.",
+ "selection": "random draw"
+}

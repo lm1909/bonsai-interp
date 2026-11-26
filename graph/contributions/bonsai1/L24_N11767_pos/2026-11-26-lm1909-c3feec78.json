@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-c3feec78",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N11767+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:48:44+00:00",
+ "recipe": {
+  "toolchain_commit": "400a13d0f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N11767_pos/2026-11-26-lm1909-c3feec78.tests.json"
+ },
+ "label": "an additive operation being applied: the 'adding'/'+='/'total -' step of a sum or difference",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N11767_pos/2026-11-26-lm1909-c3feec78.tests.json",
+   "prereg_commit": "400a13d0f",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.203,
+     "peak": " adding"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.505,
+     "peak": " +="
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.068,
+     "peak": ":',"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.605,
+     "peak": " vectors"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.059,
+     "peak": " until"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.078,
+     "peak": " score"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.049,
+     "peak": "print"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.391,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.005,
+     "peak": " area"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": ")"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": " ratio"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.412,
+     "peak": " arrow"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": "for"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.119,
+     "peak": "(total"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.046,
+     "peak": " first"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.141,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "400a13d0f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "adding / subtracting step",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Top: ' adding', ' +=', 'total -'; logit promotes sum/difference/subtract. Probe fires only ~0.2 of max, so median may fall short.",
+ "selection": "random draw"
+}

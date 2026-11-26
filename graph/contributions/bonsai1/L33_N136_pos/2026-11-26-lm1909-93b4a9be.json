@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-93b4a9be",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N136+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:50:24+00:00",
+ "recipe": {
+  "toolchain_commit": "400a13d0f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N136_pos/2026-11-26-lm1909-93b4a9be.tests.json"
+ },
+ "label": "first piece of a romanized Chinese, Japanese or Korean name part (Yang |Sh|ao, Liu |Ch|ong, Shiga |Y|okaichi)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N136_pos/2026-11-26-lm1909-93b4a9be.tests.json",
+   "prereg_commit": "400a13d0f",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.543,
+     "peak": " Sh"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.165,
+     "peak": " Lee"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.837,
+     "peak": " Sh"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.573,
+     "peak": " Ch"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.267,
+     "peak": " Yosh"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.417,
+     "peak": " Y"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.027,
+     "peak": " nood"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.832,
+     "peak": " Sh"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " Mary"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.126,
+     "peak": " St"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "Our"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " Ken"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " forty"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " paper"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.48,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "400a13d0f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "romanized East Asian name",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Top: ' Y' x7, ' Ch' x6, ' Sh' x6 opening East Asian names; - pole is South/East (Asia); logit promotes Japanese/Chinese/Korean. Probe: Shao 0.79, Chong 0.69, John Smith 0.00.",
+ "selection": "random draw"
+}

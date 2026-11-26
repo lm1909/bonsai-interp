@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-2ec2d093",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N4192+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:49:37+00:00",
+ "recipe": {
+  "toolchain_commit": "400a13d0f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N4192_pos/2026-11-26-lm1909-2ec2d093.tests.json"
+ },
+ "label": "renting or hiring a vehicle: 'car rental', 'bike rental', 'car hire' and what is rented",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N4192_pos/2026-11-26-lm1909-2ec2d093.tests.json",
+   "prereg_commit": "400a13d0f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.517,
+     "peak": " rental"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.403,
+     "peak": " rental"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.571,
+     "peak": " hire"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.488,
+     "peak": " rentals"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.58,
+     "peak": " rental"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.323,
+     "peak": " rental"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.334,
+     "peak": " cars"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.319,
+     "peak": " hire"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.308,
+     "peak": " keys"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.161,
+     "peak": " bike"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.028,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": " arrange"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " agencies"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " hut"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": " because"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.052,
+     "peak": " day"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.446,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "400a13d0f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "vehicle rental",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Top: rental/Rental/rent/rentals, 'car hire', Russian аренде велосипедов, Japanese 借り; logit promotes ' rental', ' lease'.",
+ "selection": "random draw"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-4c3e0d70",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N8380-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:48:55+00:00",
+ "recipe": {
+  "toolchain_commit": "400a13d0f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N8380_neg/2026-11-26-lm1909-4c3e0d70.tests.json"
+ },
+ "label": "accented vowel right after a capital V in Czech words (V|í|ce, V|á|clav)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N8380_neg/2026-11-26-lm1909-4c3e0d70.tests.json",
+   "prereg_commit": "400a13d0f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.952,
+     "peak": "í"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.058,
+     "peak": "á"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.031,
+     "peak": "á"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.897,
+     "peak": "í"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.594,
+     "peak": "ác"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.781,
+     "peak": "í"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 1.089,
+     "peak": "á"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.007,
+     "peak": "í"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.23,
+     "peak": "án"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.415,
+     "peak": "á"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.169,
+     "peak": "í"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.287,
+     "peak": "á"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.08,
+     "peak": " H"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.169,
+     "peak": "í"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.169,
+     "peak": "ř"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.218,
+     "peak": "á"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.979,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "400a13d0f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Czech V+accented vowel",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Top two: 'í' in Více, 'á' in Václav (86, 78); rest are dashes/ellipses in title separators at ~0.5 of max. Probe Více 0.96, Václav 0.58, dashes 0.06.",
+ "selection": "random draw"
+}
