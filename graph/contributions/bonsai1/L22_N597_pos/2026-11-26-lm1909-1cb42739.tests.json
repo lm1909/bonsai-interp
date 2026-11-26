@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-1cb42739",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N597+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:37:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N597",
+   "pole": "+",
+   "label": "in code, completing an identifier or closing bracket that repeats a pattern from the line before (SharedData, SharedDataAdmin)",
+   "fire": [
+    "from django.contrib import admin\nfrom .models import Author, Book, Review\n\nadmin.site.register(Author, AuthorAdmin)\nadmin.site.register(Book, BookAdmin)\nadmin.site.register(Review, ReviewAdmin)",
+    "class Tool:\n    pass\n\ndef build(tool):\n    args = {}\n    args['depth'] = tool.depth\n    args['feed_rate'] = tool.feed_rate\n    args['plunge_rate'] = tool.plunge_rate\n    return args",
+    "def test_paths(self):\n    exists_mock.assert_called_once_with('dir')\n    open_mock.assert_called_once_with('file')\n    stat_mock.assert_called_once_with('file')",
+    "|Console||Units sold|\n|NES||61 million (as of 2009)|\n|SNES||49 million (as of 2009)|\n|Game Boy||118 million (as of 2009)|",
+    "from django.contrib import admin\nadmin.site.register(Order, OrderAdmin)\nadmin.site.register(Customer, CustomerAdmin)\nadmin.site.register(Invoice, InvoiceAdmin)",
+    "config = {}\nconfig['host'] = settings.host\nconfig['port'] = settings.port\nconfig['timeout'] = settings.timeout",
+    "node.append(make_node(element=T.Items(), items=event.items))\nnode.append(make_node(element=T.Tags(), tags=event.tags))",
+    "def setup(self):\n    self.user_mock = patch('app.user')\n    self.cart_mock = patch('app.cart')\n    self.order_mock = patch('app.order')"
+   ],
+   "quiet": [
+    "from django.contrib import admin\nfrom .models import Author\n\nclass AuthorAdmin(admin.ModelAdmin):\n    list_display = ['name', 'born']\n    search_fields = ['name']",
+    "class Tool:\n    pass\n\ndef build(tool):\n    depth = 3\n    speed = compute(depth)\n    total = depth * speed\n    return total",
+    "def test_paths(self):\n    result = run()\n    self.assertTrue(result)\n    self.assertEqual(len(result), 3)",
+    "The NES sold about sixty million units, while the Game Boy sold far more over its long life.",
+    "from django.contrib import admin\nfrom django.urls import path\n\nurlpatterns = [path('admin/', admin.site.urls)]",
+    "config = load()\nif config is None:\n    raise SystemExit(1)\nprint('loaded')",
+    "node = make_node()\nfor item in event.items:\n    node.add(item)\nreturn node",
+    "def setup(self):\n    self.client = Client()\n    self.client.login(name='bob')\n    self.ready = True"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code repeat completion",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "card: 'Admin' in 'register(X, XAdmin)', ')' and \"')\\n\" closings, '_rate'; probe with short two-line snippets scored near zero (<0.03), so this is a weak guess with longer passages"
+}

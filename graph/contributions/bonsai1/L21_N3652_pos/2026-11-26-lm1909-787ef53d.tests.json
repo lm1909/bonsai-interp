@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-787ef53d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N3652+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:37:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N3652",
+   "pole": "+",
+   "label": "the token ' try' opening a try block in code (try:), also the character 好 in Chinese",
+   "fire": [
+    "import json\n\ndef parse(text):\n    try:\n        return json.loads(text)\n    except ValueError:\n        return {}",
+    "for url in urls:\n    try:\n        page = fetch(url)\n    except TimeoutError:\n        continue",
+    "def close(conn):\n    if conn is not None:\n        try:\n            conn.close()\n        except Exception:\n            pass",
+    "public void run() {\n    try {\n        worker.start();\n    } catch (Exception e) {\n        log(e);\n    }\n}",
+    "with open(path) as f:\n    for line in f:\n        try:\n            n = int(line)\n        except ValueError:\n            n = 0",
+    "def get(key):\n    try:\n        return cache[key]\n    except KeyError:\n        return None",
+    "async function load() {\n  try {\n    const r = await fetch(api);\n  } catch (err) {\n    console.log(err);\n  }\n}",
+    "while True:\n    try:\n        msg = queue.get(timeout=1)\n    except Empty:\n        break"
+   ],
+   "quiet": [
+    "import json\n\ndef parse(text):\n    if text:\n        return json.loads(text)\n    return {}",
+    "for url in urls:\n    if url:\n        page = fetch(url)\n    else:\n        continue",
+    "def close(conn):\n    if conn is not None:\n        conn.close()\n        conn = None",
+    "public void run() {\n    if (ready) {\n        worker.start();\n    } else {\n        log(\"wait\");\n    }\n}",
+    "with open(path) as f:\n    for line in f:\n        if line.strip():\n            n = int(line)\n        else:\n            n = 0",
+    "def get(key):\n    if key in cache:\n        return cache[key]\n    return None",
+    "async function load() {\n  if (api) {\n    const r = await fetch(api);\n  } else {\n    console.log(\"none\");\n  }\n}",
+    "while True:\n    msg = queue.get(timeout=1)\n    if msg is None:\n        break"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code 'try:'",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "card: ' try' x19, '好' x12; probe: Python try block 0.63, English 'try' 0.00, '好好' 0.30"
+}
