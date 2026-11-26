@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-916a9d6f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N6378+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:51:42+00:00",
+ "recipe": {
+  "toolchain_commit": "6371bc785",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N6378_pos/2026-11-26-lm1909-916a9d6f.tests.json"
+ },
+ "label": "the token ' hash' in cryptographic contexts (hash function, a hash of the data)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N6378_pos/2026-11-26-lm1909-916a9d6f.tests.json",
+   "prereg_commit": "6371bc785",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.193,
+     "peak": " block"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.008,
+     "peak": " compares"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.558,
+     "peak": " hash"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.057,
+     "peak": " commit"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.139,
+     "peak": "2"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.066,
+     "peak": " one"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.235,
+     "peak": " hash"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.042,
+     "peak": " never"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.009,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": "A"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.044,
+     "peak": " commit"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.036,
+     "peak": " page"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": " one"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.03,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.859,
+    "median_fire": 0.103,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "6371bc785",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' hash' (crypto)",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "card: ' hash' x3 of the top 32 (max 8.1, weak pole), others scattered ('the', 'experiment')",
+ "selection": "random draw"
+}
