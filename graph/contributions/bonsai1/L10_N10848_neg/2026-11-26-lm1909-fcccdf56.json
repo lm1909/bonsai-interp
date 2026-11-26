@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-fcccdf56",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N10848-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:20:19+00:00",
+ "recipe": {
+  "toolchain_commit": "4ebaf2ad3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N10848_neg/2026-11-26-lm1909-fcccdf56.tests.json"
+ },
+ "label": "book-apparatus descriptors in catalog-style text: 'annotated', 'notes', 'jacket'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N10848_neg/2026-11-26-lm1909-fcccdf56.tests.json",
+   "prereg_commit": "4ebaf2ad3",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.5,
+     "peak": " annotated"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.974,
+     "peak": " notes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.479,
+     "peak": " annotated"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.32,
+     "peak": " jacket"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.326,
+     "peak": " annotated"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.297,
+     "peak": " notes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.331,
+     "peak": " annotated"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.151,
+     "peak": " flap"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": " edition"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.09,
+     "peak": " Leipzig"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.13,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.029,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.101,
+     "peak": " poem"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.472,
+     "peak": "-page"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": " heavily"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.035,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.329,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4ebaf2ad3",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "annotated / notes / jacket",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card top: Annotated, notes, jacket, Note on; probe: 'annotated' 0.73, others 0.13-0.27.",
+ "selection": "random draw"
+}

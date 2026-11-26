@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-c5da824a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N4950-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:21:05+00:00",
+ "recipe": {
+  "toolchain_commit": "4ebaf2ad3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N4950_neg/2026-11-26-lm1909-c5da824a.tests.json"
+ },
+ "label": "harms falling disproportionately on vulnerable or disadvantaged groups",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N4950_neg/2026-11-26-lm1909-c5da824a.tests.json",
+   "prereg_commit": "4ebaf2ad3",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.474,
+     "peak": " disproportionately"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.732,
+     "peak": " most"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.501,
+     "peak": " hardest"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.99,
+     "peak": " students"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.164,
+     "peak": " dangerous"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.517,
+     "peak": " people"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.644,
+     "peak": "aviest"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.495,
+     "peak": " disproportionately"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.099,
+     "peak": " pushed"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.004,
+     "peak": "Air"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.11,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.009,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.001,
+     "peak": " flu"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": -0.004,
+     "peak": " recent"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " months"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.509,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4ebaf2ad3",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "harm to vulnerable groups",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probe: 'disproportionately impacts low-income' 0.73, 'hit vulnerable children' 0.62; tax cuts benefit wealthy 0.13; 'poor families cannot afford' -0.01 (that's the + pole side).",
+ "selection": "random draw"
+}
