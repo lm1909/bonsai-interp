@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-e1495438",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1663-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:15:12+00:00",
+ "recipe": {
+  "toolchain_commit": "22d8ba0d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N1663_neg/2026-11-26-lm1909-e1495438.tests.json"
+ },
+ "label": "plural noun for a reference collection where items are recorded or listed (reading lists, dictionaries, manuals, databases)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N1663_neg/2026-11-26-lm1909-e1495438.tests.json",
+   "prereg_commit": "22d8ba0d2",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.868,
+     "peak": " lists"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.741,
+     "peak": " dictionaries"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.628,
+     "peak": " manuals"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.487,
+     "peak": " databases"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.644,
+     "peak": " guides"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.155,
+     "peak": " registers"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.607,
+     "peak": "ologies"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.591,
+     "peak": "ues"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.501,
+     "peak": "shops"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " teachers"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " cells"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.156,
+     "peak": " garden"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.031,
+     "peak": " official"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.022,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.133,
+     "peak": " forests"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.617,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22d8ba0d2",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "reference collections",
+ "unit_kind": "sparse feature",
+ "confidence": 0.6,
+ "notes": "Card tops: reading lists, phylogenetic trees, diagnostic manuals, gardening books, databases. Probe: 'reading list' 1.10, dictionaries 0.49, cookbooks 0.47, databases 0.36, unrelated plural 0.05. The pattern behind the list: places where things are listed or recorded.",
+ "selection": "random draw"
+}

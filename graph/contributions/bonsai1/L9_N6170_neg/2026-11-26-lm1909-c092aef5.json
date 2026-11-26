@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-c092aef5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N6170-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:15:19+00:00",
+ "recipe": {
+  "toolchain_commit": "22d8ba0d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N6170_neg/2026-11-26-lm1909-c092aef5.tests.json"
+ },
+ "label": "nouns in environmental sustainability terminology (biomass energy, energy recovery, conservation society, organic pollutants)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N6170_neg/2026-11-26-lm1909-c092aef5.tests.json",
+   "prereg_commit": "22d8ba0d2",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.491,
+     "peak": " energy"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.435,
+     "peak": " recovery"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.038,
+     "peak": " habitats"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.243,
+     "peak": " grid"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.225,
+     "peak": " pollutants"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.313,
+     "peak": " recycling"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.337,
+     "peak": " adaptation"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.17,
+     "peak": " Society"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.019,
+     "peak": " into"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " protect"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": " kitchen"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.021,
+     "peak": " several"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " repairs"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.021,
+     "peak": " bank"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.01,
+     "peak": " weekends"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.278,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22d8ba0d2",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "environmental terms",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card tops: biomass energy, energy recovery, grid, Persistent Organic Pollutants, Wildlife Conservation Society, GHG. Probe confirmed on these and a non-environmental 'recovered' gives 0.00. The + pole is activism ('be the change'), so the axis may be technical environment terms vs. activism.",
+ "selection": "random draw"
+}

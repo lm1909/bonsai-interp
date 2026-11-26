@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-78aecc83",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N1455+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:14:54+00:00",
+ "recipe": {
+  "toolchain_commit": "22d8ba0d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N1455_pos/2026-11-26-lm1909-78aecc83.tests.json"
+ },
+ "label": "first indentation token of a line inside a for-loop body in Python code",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N1455_pos/2026-11-26-lm1909-78aecc83.tests.json",
+   "prereg_commit": "22d8ba0d2",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.405,
+     "peak": "()\n"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.085,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.153,
+     "peak": " item"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.075,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.245,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.1,
+     "peak": ":\n"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.18,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.073,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.051,
+     "peak": "   "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.146,
+     "peak": "):\n"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": "print"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.039,
+     "peak": "(self"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.1,
+     "peak": "()\n"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.186,
+     "peak": " None"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.111,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.071,
+     "peak": "):\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.719,
+    "median_fire": 0.127,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22d8ba0d2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "for-loop body indent",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card + pole tops are indentation tokens on the first line of for-loop bodies; the - pole tops are if/else bodies, so the distinction tested is loop body versus conditional body. Probe peaks were weak (0.17), low confidence.",
+ "selection": "random draw"
+}

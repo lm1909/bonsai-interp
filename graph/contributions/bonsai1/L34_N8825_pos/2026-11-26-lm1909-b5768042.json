@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-b5768042",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N8825+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:14:40+00:00",
+ "recipe": {
+  "toolchain_commit": "22d8ba0d2",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N8825_pos/2026-11-26-lm1909-b5768042.tests.json"
+ },
+ "label": "' m' / ' M' as the first piece of a word the tokenizer splits (m-eringue, m-occasins, M-ardi)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N8825_pos/2026-11-26-lm1909-b5768042.tests.json",
+   "prereg_commit": "22d8ba0d2",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.616,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.193,
+     "peak": "occ"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.23,
+     "peak": " Gr"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.469,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.217,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.233,
+     "peak": " m"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.325,
+     "peak": " M"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.265,
+     "peak": " m"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.237,
+     "peak": " lemon"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": " summer"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " carnival"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.078,
+     "peak": " old"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.037,
+     "peak": " glossy"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.029,
+     "peak": "kin"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " masks"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.08,
+     "peak": " cream"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.249,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "22d8ba0d2",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split m- word start",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "Probe: 'mosaic' and 'market' (single tokens) do not fire; meringue/moccasins/Mardi do.",
+ "selection": "random draw"
+}
