@@ -1,0 +1,48 @@
+{
+ "contribution": "2026-11-26-lm1909-e72eeb6c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N2381-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:21:53+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N2381",
+   "pole": "-",
+   "label": "the colon after a repeated entry name in a docstring list (the second 'ValueError:' under Raises)",
+   "fire": [
+    "    Raises:\n      TypeError: If `x` is not a tensor.\n      TypeError: If `y` has the wrong dtype.",
+    "    Raises:\n      KeyError: If the key is missing.\n      KeyError: If the key is empty.",
+    "  Raises:\n    ValueError: If `axis` is negative.\n    ValueError: If `axis` is larger than the rank.",
+    "    Raises:\n        IOError: If the file cannot be opened.\n        IOError: If the file is locked.",
+    "  Raises:\n    RuntimeError: If the session is closed.\n    RuntimeError: If the graph is finalized.",
+    "    Raises:\n      ValueError: If `padding` is unknown.\n      ValueError: If `strides` has length other than 2.",
+    "  Raises:\n    IndexError: If `i` is out of range.\n    IndexError: If `j` is out of range.",
+    "    Raises:\n      OSError: If the directory does not exist.\n      OSError: If permission is denied."
+   ],
+   "quiet": [
+    "    Returns:\n      A tensor with the same shape as `x`.\n      The dtype matches `y`.",
+    "    Returns:\n      The value stored under the key.\n      None if nothing is stored.",
+    "  Args:\n    axis: An integer, the axis to reduce.\n    keepdims: Whether to keep the reduced axis.",
+    "    Note:\n        The file is opened in binary mode.\n        It is closed automatically.",
+    "  Returns:\n    The session's graph.\n    The graph is finalized before return.",
+    "    Args:\n      padding: One of 'SAME' or 'VALID'.\n      strides: A list of two integers.",
+    "  Returns:\n    The element at position `i`.\n    The element at position `j` is ignored.",
+    "    Returns:\n      A list of file names.\n      The list is sorted alphabetically."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "look"
+  ]
+ },
+ "short": "repeated docstring entry",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "top examples are mixed docstring/comment punctuation; only one probe hit (0.47) on a repeated ValueError line"
+}
