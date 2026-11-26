@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-7c36104e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N9688+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:38:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N9688",
+   "pole": "+",
+   "label": "warning/exception calls in Python code ('warnings.warn', exception names, assertRaises)",
+   "fire": [
+    "def check(cfg):\n    if 'path' not in cfg:\n        warnings.warn('no path given, using default')\n    return cfg",
+    "def parse(s):\n    if not s:\n        raise error.ParseError('empty string')\n    return s.split()",
+    "class T(unittest.TestCase):\n    def test_bad(self):\n        self.assertRaises(expected_exc, load, 'x')",
+    "def get(k):\n    try:\n        return table[k]\n    except KeyError:\n        raise LookupFailedError(k)",
+    "def old_api():\n    warnings.warn('old_api is deprecated', DeprecationWarning)\n    return new_api()",
+    "def view(request):\n    if not request.user.is_authenticated:\n        return redirect('/login')\n    return render(request)",
+    "def size(x):\n    if x < 0:\n        raise error.SizeError('negative size')\n    return x",
+    "def run(job):\n    if job.failed:\n        warnings.warn('job failed, retrying')\n    return job.retry()"
+   ],
+   "quiet": [
+    "def check(cfg):\n    if 'path' not in cfg:\n        cfg['path'] = default_path()\n    return cfg",
+    "def parse(s):\n    if not s:\n        s = 'default'\n    return s.split()",
+    "class T(unittest.TestCase):\n    def test_good(self):\n        self.assertEqual(expected, load('x'))",
+    "def get(k):\n    if k in table:\n        return table[k]\n    return default",
+    "def old_api():\n    logger.info('calling old_api')\n    return new_api()",
+    "def view(request):\n    if not request.user.is_authenticated:\n        return render(request, 'login.html')\n    return render(request)",
+    "def size(x):\n    if x < 0:\n        x = abs(x)\n    return x",
+    "def run(job):\n    if job.failed:\n        print('job failed, retrying')\n    return job.retry()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "python warn/except",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Top examples are mixed code tokens (_exc, Error, redirect, .warn) with no dominant token; probing gave at most 0.23 (warnings.warn). Low confidence best guess."
+}

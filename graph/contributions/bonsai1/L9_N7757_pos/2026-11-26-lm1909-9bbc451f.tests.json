@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-9bbc451f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N7757+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:38:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L9/N7757",
+   "pole": "+",
+   "label": "the clause keyword that opens a branch of a conditional block in code: SQL 'WHEN' in 'CASE <column> WHEN' and indented Python 'except'",
+   "fire": [
+    "UPDATE orders SET flag = CASE region WHEN 'EU' THEN 1 ELSE 0 END;",
+    "SELECT id, CASE grade WHEN 'A' THEN 'top' WHEN 'B' THEN 'good' END FROM marks;",
+    "UPDATE staff SET bonus = CASE level WHEN 3 THEN 500 ELSE 0 END;",
+    "SELECT CASE color WHEN 'r' THEN 'red' ELSE 'other' END AS c FROM items;",
+    "def read_cfg(p):\n    try:\n        return json.load(open(p))\n    except ValueError:\n        return {}",
+    "UPDATE users SET tier = CASE plan WHEN 'pro' THEN 2 ELSE 1 END;",
+    "def fetch(url):\n    try:\n        return get(url).text\n    except TimeoutError:\n        return ''",
+    "SELECT name, CASE dept WHEN 10 THEN 'sales' ELSE 'ops' END FROM emp;"
+   ],
+   "quiet": [
+    "UPDATE orders SET flag = 1 WHERE region = 'EU';",
+    "SELECT id, grade FROM marks WHERE grade IN ('A', 'B');",
+    "UPDATE staff SET bonus = 500 WHERE level = 3;",
+    "SELECT color AS c FROM items ORDER BY color;",
+    "def read_cfg(p):\n    with open(p) as f:\n        data = json.load(f)\n    return data",
+    "UPDATE users SET tier = 2 WHERE plan = 'pro';",
+    "def fetch(url):\n    resp = get(url)\n    text = resp.text\n    return text",
+    "SELECT name, dept FROM emp WHERE dept = 10;"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "CASE WHEN / except",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Probe: 'CASE status WHEN' 0.65, 'CASE a WHEN' 0.53, 'CASE WHEN age' 0.20, indented Python except 0.20-0.26, prose 'except'/'when' ~0.01-0.1, SQL without CASE ~0."
+}
