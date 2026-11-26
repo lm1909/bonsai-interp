@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-72f5fb3a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N5937-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:34:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N5937",
+   "pole": "-",
+   "label": "end-of-document token right after a source-code file ends (<|endoftext|> closing code)",
+   "fire": [
+    "class Cache:\n    def get(self, key):\n        return self.store.get(key)\n\n    \n<|endoftext|>",
+    "def area(r):\n    return 3.14 * r * r\n\n\nprint(area(2))\n    \n<|endoftext|>",
+    "for i in range(10):\n    total += i\nprint(total)\n\t\n\t\n<|endoftext|>",
+    "    }\n    return result;\n}\n\n\n<|endoftext|>",
+    "import os\n\ndef clean(path):\n    os.remove(path)\n\n\n<|endoftext|>",
+    "function add(a, b) {\n  return a + b;\n}\nmodule.exports = add;\n\n<|endoftext|>",
+    "SELECT name, age\nFROM users\nWHERE age > 30;\n\n\n<|endoftext|>",
+    "if __name__ == \"__main__\":\n    unittest.main()\n    \n<|endoftext|>"
+   ],
+   "quiet": [
+    "class Cache:\n    def get(self, key):\n        return self.store.get(key)\n\n    def put(self, key, value):",
+    "def area(r):\n    return 3.14 * r * r\n\n\nprint(area(2))\nprint(area(3))",
+    "for i in range(10):\n    total += i\nprint(total)\nprint(count)",
+    "    }\n    return result;\n}\n\nint main() {",
+    "import os\n\ndef clean(path):\n    os.remove(path)\n\ndef make(path):",
+    "function add(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {",
+    "SELECT name, age\nFROM users\nWHERE age > 30\nORDER BY age;",
+    "if __name__ == \"__main__\":\n    unittest.main(verbosity=2)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "endoftext after code",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "18 of the top 32 peaks are <|endoftext|> after code. A short probe of endoftext after code reached only 0.04 of max, so this may fail."
+}

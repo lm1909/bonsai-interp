@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-5466445e",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N11691-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:34:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L20/N11691",
+   "pole": "-",
+   "label": "code: the object name right before a method call ('return comp|.compress(buff)', 'grab|ber.run(force)')",
+   "fire": [
+    "def pack(data):\n    data = bytes(data)\n    return zlib.compress(data)",
+    "    loader = Loader(path)\n    return loader.load(force)",
+    "        model = self.build()\n        pred = model.predict(x)",
+    "    conn = db.connect()\n    rows = cursor.fetchall()",
+    "    worker = Worker(queue)\n    worker.start()",
+    "    p = Parser(text)\n    tree = p.parse()",
+    "    sched = Scheduler()\n    result = sched.run(jobs)",
+    "    enc = Encoder()\n    return enc.encode(buff)"
+   ],
+   "quiet": [
+    "def pack(data):\n    data = bytes(data)\n    return compress(data)",
+    "    path = clean(path)\n    return load(path, force)",
+    "        x = self.prepare()\n        pred = predict(x)",
+    "    conn = connect()\n    rows = fetch_all(conn)",
+    "    queue = make_queue()\n    start(queue)",
+    "    text = read(path)\n    tree = parse(text)",
+    "    jobs = collect()\n    result = run(jobs)",
+    "    buff = read()\n    return encode(buff)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "object before .method()",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Probe of a similar snippet reached only 0.03 of max; expected to fail."
+}

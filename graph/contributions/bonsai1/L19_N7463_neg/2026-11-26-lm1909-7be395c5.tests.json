@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-7be395c5",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N7463-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:34:07+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N7463",
+   "pole": "-",
+   "label": "Python code that handles command-line arguments or configuration (parse_args, Config, options, opts)",
+   "fire": [
+    "parser = argparse.ArgumentParser()\nparser.add_argument('--out')\nargs = parser.parse_args()\nprint(args.out)",
+    "from myapp.settings import Config\n\nclass ConfiguredApp(Config):\n    debug = True",
+    "def main(argv):\n    opts, rest = getopt.getopt(argv, 'hv')\n    for opt, val in opts:\n        print(opt)",
+    "import click\n\n@click.command()\n@click.option('--count', default=1)\ndef hello(count):\n    pass",
+    "cfg = configparser.ConfigParser()\ncfg.read('settings.ini')\nport = cfg.getint('server', 'port')",
+    "parser = OptionParser()\nparser.add_option('-f', dest='filename')\n(options, args) = parser.parse_args()",
+    "def get_config():\n    with open('config.yaml') as f:\n        return yaml.safe_load(f)\n\nconf = get_config()",
+    "args = sys.argv[1:]\nif len(args) < 2:\n    print('usage: run.py <in> <out>')\n    sys.exit(1)"
+   ],
+   "quiet": [
+    "numbers = [4, 8, 15]\ntotal = sum(numbers)\nmean = total / len(numbers)\nprint(mean)",
+    "from myapp.shapes import Circle\n\nclass BigCircle(Circle):\n    radius = 10",
+    "def main(items):\n    seen = set()\n    for item in items:\n        seen.add(item)",
+    "import math\n\ndef hypot(a, b):\n    return math.sqrt(a * a + b * b)",
+    "words = text.split()\ncounts = Counter(words)\ntop = counts.most_common(5)",
+    "matrix = [[1, 2], [3, 4]]\nflat = [x for row in matrix for x in row]\nprint(flat)",
+    "def read_lines(path):\n    with open(path) as f:\n        return f.readlines()\n\nlines = read_lines('a.txt')",
+    "letters = list('hello')\nif len(letters) < 2:\n    print('too short')\n    letters.reverse()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python args/config code",
+ "unit_kind": "contextual",
+ "confidence": 0.4
+}
