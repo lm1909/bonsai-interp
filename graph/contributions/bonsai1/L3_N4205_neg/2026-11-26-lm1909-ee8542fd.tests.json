@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-ee8542fd",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N4205-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:37+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N4205",
+   "pole": "-",
+   "label": "dense weak pole (max 0.26, ~18% of tokens above 0.1 of max); best guess: identifier-like pieces in code, paths and filenames",
+   "fire": [
+    "open docs/myfile.txt in the editor and read it",
+    "the script calls firefox --new-window with the url",
+    "set PYTHON_PATH before running the installer",
+    "copy config/settings_local.py into the project root",
+    "the folder contains readme.md and setup.cfg",
+    "import os; path = os.path.join(base_dir, 'tmpfile')",
+    "run chmod +x build_docs.sh first",
+    "the log is written to logs/myapp_error.log by default"
+   ],
+   "quiet": [
+    "open the letter on the kitchen table and read it",
+    "the teacher opens the window with a smile",
+    "set the table before the guests arrive",
+    "copy the recipe into your notebook at home",
+    "the folder contains two letters and a photo",
+    "she walked to the shop and bought some bread",
+    "run to the corner first and then wait",
+    "the diary is kept in the top drawer"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "dense: code identifiers",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags dense and gate-closed leak regime; top peaks 'ocs', ' myfile', 'firefox', 'PYTHON'. Test records the density; expected to fail."
+}

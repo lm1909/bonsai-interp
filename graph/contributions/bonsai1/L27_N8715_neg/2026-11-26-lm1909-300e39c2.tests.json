@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-300e39c2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N8715-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:05:37+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N8715",
+   "pole": "-",
+   "label": "the opening ' [\"' / ' ['' of a list of string literals in code (\"col\": [\"b\", \"c\"])",
+   "fire": [
+    "df = pd.DataFrame({\"name\": [\"ann\", \"bo\", \"cy\"]})",
+    "params = {\"tags\": [\"red\", \"blue\"], \"size\": 3}",
+    "data = {\"city\": [\"Rome\", \"Oslo\"], \"pop\": [3, 1]}",
+    "frame = pd.DataFrame({\"id\": [1, 2], \"label\": [\"cat\", \"dog\"]})",
+    "config = {\"hosts\": [\"a.example\", \"b.example\"]}",
+    "payload = {\"users\": [\"alice\", \"bob\"], \"active\": True}",
+    "table = pd.DataFrame({\"key\": [\"k1\", \"k2\", \"k3\"]})",
+    "spec = {\"columns\": [\"x\", \"y\"], \"rows\": 10}"
+   ],
+   "quiet": [
+    "df = pd.DataFrame({\"count\": [4, 5, 6]})",
+    "params = {\"sizes\": [10, 20], \"depth\": 3}",
+    "data = {\"year\": [2020, 2021], \"pop\": [3, 1]}",
+    "frame = pd.DataFrame({\"id\": [1, 2], \"score\": [0.5, 0.7]})",
+    "config = {\"ports\": [8080, 8081]}",
+    "payload = {\"ids\": [17, 42], \"active\": True}",
+    "table = pd.DataFrame({\"key\": [1, 2, 3]})",
+    "spec = {\"widths\": [3, 4], \"rows\": 10}"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "list-of-strings opener",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: top peaks on ' [\"', \" ['\", \" '\" opening string literals in Python tests. Probe: ' [\"' 0.74, \" ['\" 0.13, numeric lists ~0; also an odd 0.59 on ' Corporation' in prose."
+}
