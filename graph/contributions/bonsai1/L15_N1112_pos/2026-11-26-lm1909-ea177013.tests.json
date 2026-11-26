@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-ea177013",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N1112+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:04:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L15/N1112",
+   "pole": "+",
+   "label": "'(self' opening a Python method's parameter list",
+   "fire": [
+    "class Client:\n    def connect(self, host, port=80):\n        self.host = host",
+    "class Parser(Base):\n    def parse(self, text, *args, **kwargs):\n        return text.split()",
+    "class Queue:\n    def push(self, item):\n        self.items.append(item)",
+    "class Handler:\n    def on_error(self, exc):\n        \"\"\" override me \"\"\"\n        raise exc",
+    "class Timer:\n    def start(self, interval, callback):\n        self.cb = callback",
+    "class Shape:\n    def area(self):\n        raise NotImplementedError",
+    "class Cache:\n    def get(self, key, default=None):\n        return self.d.get(key, default)",
+    "class Stack:\n    def pop(self):\n        return self.items.pop()"
+   ],
+   "quiet": [
+    "def connect(host, port=80):\n    sock = open_socket(host)\n    return sock",
+    "def parse(text, *args, **kwargs):\n    return text.split()",
+    "def push(stack, item):\n    stack.append(item)",
+    "def on_error(exc):\n    \"\"\" override me \"\"\"\n    raise exc",
+    "def start(interval, callback):\n    timer = Timer(interval)\n    timer.cb = callback",
+    "def area(width, height):\n    return width * height",
+    "def get(store, key, default=None):\n    return store.get(key, default)",
+    "def pop(items):\n    return items.pop()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "(self in method defs",
+ "unit_kind": "lexical",
+ "confidence": 0.35
+}

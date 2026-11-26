@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-842eff10",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N5366-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:04:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N5366",
+   "pole": "-",
+   "label": "unary minus that negates a value in math code (' -' before a number or expression), not subtraction",
+   "fire": [
+    "    scale = -0.5 * np.log(var)",
+    "    grad[mask] *= -1",
+    "    return -torch.mean(log_probs)",
+    "    z = w * -3 + b",
+    "    step = -lr * grad",
+    "    penalty = -(alpha * entropy)",
+    "    v[0] = -v[0]",
+    "    loss = -np.sum(y * np.log(p))"
+   ],
+   "quiet": [
+    "    scale = 0.5 - np.log(var)",
+    "    grad[mask] -= 1",
+    "    return 1 - torch.mean(log_probs)",
+    "    z = w * 3 - b",
+    "    step = lr - grad",
+    "    penalty = alpha - entropy",
+    "    v[0] = v[1] - v[0]",
+    "    loss = np.sum(y) - np.log(p)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "unary minus in code",
+ "unit_kind": "contextual",
+ "confidence": 0.55
+}

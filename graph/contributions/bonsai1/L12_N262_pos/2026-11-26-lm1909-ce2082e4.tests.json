@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-ce2082e4",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N262+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:04:33+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N262",
+   "pole": "+",
+   "label": "the tag name right after '<' in HTML written inside code strings (img, input)",
+   "fire": [
+    "html += '<img src=\"' + url + '\" alt=\"logo\">'",
+    "out.write('<input type=\"checkbox\" name=\"opt\">\\n')",
+    "pattern = re.compile(r'<img\\s+src=\"([^\"]+)\"')",
+    "print('<IMG SRC=\"/pics/banner.gif\">')",
+    "form = '<form><input name=\"user\"></form>'",
+    "row += \"<td><img src='\" + icon + \"'></td>\"",
+    "s = '<INPUT TYPE=\"submit\" VALUE=\"Go\">'",
+    "body = body.replace('<img', '<img loading=\"lazy\"')"
+   ],
+   "quiet": [
+    "html += '<a href=\"' + url + '\">logo</a>'",
+    "out.write('<span class=\"opt\">\\n')",
+    "pattern = re.compile(r'<a\\s+href=\"([^\"]+)\"')",
+    "print('<H1>Banner</H1>')",
+    "form = '<form><label>user</label></form>'",
+    "row += \"<td><b>\" + icon + \"</b></td>\"",
+    "s = '<BUTTON TYPE=\"submit\">Go</BUTTON>'",
+    "body = body.replace('<p', '<p class=\"lazy\"')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "HTML img/input tag in code",
+ "unit_kind": "lexical",
+ "confidence": 0.55
+}
