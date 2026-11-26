@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-26-lm1909-f1c2c5aa",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N2210+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:18:57+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L23/N2210",
+   "pole": "+",
+   "label": "the newline that ends a statement inside an indented code block, where the next line continues at the same depth",
+   "fire": [
+    "class Loader(object):\n    def run(self, items):\n        results = []\n        for item in items:\n            value = self.parse(item)\n            results.append(value)\n            self.log.debug(value)\n        return results",
+    "def main():\n    args = parse_args()\n    config = load_config(args.path)\n    if config.verbose:\n        print('starting')\n        print(config)\n    server = Server(config)\n    server.start()",
+    "    for row in reader:\n        name = row[0].strip()\n        age = int(row[1])\n        if age > 18:\n            adults.append(name)\n            total += 1\n        seen.add(name)",
+    "try:\n    conn = connect(host, port)\n    cursor = conn.cursor()\n    cursor.execute(query)\n    rows = cursor.fetchall()\nexcept Exception as e:\n    log.error(e)",
+    "        while queue:\n            node = queue.pop(0)\n            visited.add(node)\n            for child in node.children:\n                if child not in visited:\n                    queue.append(child)\n                    depth[child] = depth[node] + 1",
+    "def save(self):\n    data = self.to_dict()\n    path = os.path.join(self.root, 'out.json')\n    with open(path, 'w') as f:\n        json.dump(data, f)\n        f.flush()\n    self.saved = True",
+    "    if len(matches) > 0:\n        first = matches[0]\n        num = int(first[1])\n        url = first[2]\n        title = first[3].strip()\n        items.append((num, url, title))",
+    "    def update(self, dt):\n        self.x += self.vx * dt\n        self.y += self.vy * dt\n        if self.y < 0:\n            self.y = 0\n            self.vy = -self.vy\n        self.age += dt"
+   ],
+   "quiet": [
+    "The loader class has a run method that parses each ready item, appends the value to a list of results, logs it and finally returns the list.",
+    "The main function parses the arguments, loads the config from the given path, prints it when verbose is set, and then starts the server.",
+    "For every row in the reader we strip the name, convert the age to a number, and count the adults we have seen so far.",
+    "We try to connect to the host and port, open a cursor, run the query and fetch all rows, and log any error that occurs.",
+    "While the queue is not empty we pop a node, mark it visited, and push each unvisited child with a depth one larger.",
+    "The save method turns the object into a dictionary, builds the output path, writes the data as JSON and marks the object as saved.",
+    "If there are any matches, we take the first one, read its number, url and title, and append them as a tuple to the items.",
+    "The update method moves the object by its velocity times the time step, bounces it off the floor and increases its age."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "newline inside code block",
+ "unit_kind": "contextual",
+ "confidence": 0.3
+}
