@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-c11f05d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N4206+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:55:40+00:00",
+ "recipe": {
+  "toolchain_commit": "e7f46e4f3",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N4206_pos/2026-11-26-lm1909-c11f05d1.tests.json"
+ },
+ "label": "pieces inside Irish Gaelic words and names written in Gaelic spelling (Bó Finne, Caoimhin, Inis Dubhthaigh); the - pole is the English-language side, Ireland talked about in English",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N4206_pos/2026-11-26-lm1909-c11f05d1.tests.json",
+   "prereg_commit": "e7f46e4f3",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.205,
+     "peak": "ithe"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.314,
+     "peak": "ir"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.55,
+     "peak": "ib"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.028,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.01,
+     "peak": " lake"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.535,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.027,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.016,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.027,
+     "peak": " above"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.028,
+     "peak": " luck"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.032,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.028,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.011,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.028,
+     "peak": " twice"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " about"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.648,
+    "median_fire": 0.116,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "e7f46e4f3",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Irish Gaelic spelling",
+ "unit_kind": "sparse feature",
+ "confidence": 0.3,
+ "notes": "Probe of Gaelic names reached only ~0.10 of max; the top example (0.87 of max over the next) may be an outlier. Output direction of the - pole promotes Ireland/Irish/Dublin.",
+ "selection": "random draw"
+}
