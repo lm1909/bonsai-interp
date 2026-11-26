@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-f524a608",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N8429-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:42:31+00:00",
+ "recipe": {
+  "toolchain_commit": "90945aa43",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L10_N8429_neg/2026-11-26-lm1909-f524a608.tests.json"
+ },
+ "label": "the action whose ease or difficulty is being judged ('makes getting out of the bath easy', 'difficult to install')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L10_N8429_neg/2026-11-26-lm1909-f524a608.tests.json",
+   "prereg_commit": "90945aa43",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.417,
+     "peak": " into"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.36,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.502,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.349,
+     "peak": " code"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.299,
+     "peak": " was"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.215,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.312,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.446,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.02,
+     "peak": " yellow"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.014,
+     "peak": " office"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " next"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.011,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " see"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.011,
+     "peak": " fitted"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.104,
+     "peak": " on"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.354,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "90945aa43",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "action judged easy / hard",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' off' in 'getting on or off ... easy', ' program' in 'difficult than the PlayStation to program for', ' buying', ' Creating'. Probe: 'getting out of the bath safe' 0.71, 'easy to install on' 0.34, 'difficult to develop' 0.35, same verbs without the frame 0.04-0.13.",
+ "selection": "random draw"
+}

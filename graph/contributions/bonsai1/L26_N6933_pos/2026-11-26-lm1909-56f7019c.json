@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-56f7019c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N6933+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:42:20+00:00",
+ "recipe": {
+  "toolchain_commit": "90945aa43",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N6933_pos/2026-11-26-lm1909-56f7019c.tests.json"
+ },
+ "label": "long-distance commerce in historical narrative: trade routes, trading centres, merchants and caravans linking regions",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N6933_pos/2026-11-26-lm1909-56f7019c.tests.json",
+   "prereg_commit": "90945aa43",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 7,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.786,
+     "peak": " dominated"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.977,
+     "peak": " along"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.592,
+     "peak": " controlled"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.683,
+     "peak": " traders"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.933,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.831,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.47,
+     "peak": " merchants"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.753,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.505,
+     "peak": "ese"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.787,
+     "peak": "ili"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.433,
+     "peak": " built"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.389,
+     "peak": " sailors"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.371,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 1.279,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.206,
+     "peak": " cities"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.379,
+     "peak": " was"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.77,
+    "near_misses_at_0.3": 7
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "90945aa43",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "historical trade routes",
+ "unit_kind": "sparse feature",
+ "confidence": 0.7,
+ "notes": "Card: ' trade' x11, ' trading' x6, 'spice routes'; output promotes trade/merchant/commerce. Probe: 'trade routes to the East' 0.70, 'Silk Road linked China with Rome' 0.50, salt caravans 0.42, army crossing the Sahara 0.23, modern online trading app 0.003.",
+ "selection": "random draw"
+}

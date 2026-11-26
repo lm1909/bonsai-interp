@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-86ba467e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N150+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:42:22+00:00",
+ "recipe": {
+  "toolchain_commit": "90945aa43",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N150_pos/2026-11-26-lm1909-86ba467e.tests.json"
+ },
+ "label": "the oven and baking in recipes, across languages (bake, oven, French 'au four', Spanish 'horno')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N150_pos/2026-11-26-lm1909-86ba467e.tests.json",
+   "prereg_commit": "90945aa43",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.589,
+     "peak": " bake"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.59,
+     "peak": " oven"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.933,
+     "peak": " four"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.606,
+     "peak": "orno"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.676,
+     "peak": " oven"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.557,
+     "peak": " bake"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.398,
+     "peak": " oven"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.876,
+     "peak": " four"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.052,
+     "peak": " until"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.06,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.174,
+     "peak": "le"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.018,
+     "peak": " cinco"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.052,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.093,
+     "peak": "4"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.075,
+     "peak": " over"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.081,
+     "peak": "0"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.598,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "90945aa43",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "oven / baking",
+ "unit_kind": "sparse feature",
+ "confidence": 0.8,
+ "notes": "Card: ' four' (French oven), 'horno', ' oven', ' bake', oven temperatures; output promotes ' oven', ' bake'. Probe: 'preheat the oven ... bake' 0.81, 'au four' 0.94, frying 0.09, boiling 0.05.",
+ "selection": "random draw"
+}

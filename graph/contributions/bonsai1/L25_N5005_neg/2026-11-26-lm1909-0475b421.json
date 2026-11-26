@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-0475b421",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N5005-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:42:03+00:00",
+ "recipe": {
+  "toolchain_commit": "90945aa43",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N5005_neg/2026-11-26-lm1909-0475b421.tests.json"
+ },
+ "label": "words naming genetic or inherited disease ('genetic disorders', 'inherited diseases', curing a hereditary condition)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N5005_neg/2026-11-26-lm1909-0475b421.tests.json",
+   "prereg_commit": "90945aa43",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.889,
+     "peak": " genetic"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.381,
+     "peak": " inherited"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.982,
+     "peak": " genetic"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.545,
+     "peak": "editary"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.484,
+     "peak": " inherited"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.716,
+     "peak": " genetic"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.704,
+     "peak": " genetic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.465,
+     "peak": " inherited"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.204,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": "erculosis"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.387,
+     "peak": " for"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.163,
+     "peak": " blindness"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.152,
+     "peak": " from"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.252,
+     "peak": " fix"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.084,
+     "peak": " his"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.044,
+     "peak": " nutritional"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.984,
+    "median_fire": 0.625,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "90945aa43",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "genetic / inherited disease",
+ "unit_kind": "sparse feature",
+ "confidence": 0.75,
+ "notes": "Card: ' genetic' x7, ' gene', ' inherited', ' cure' in rare-disease contexts; logit effect of the + pole suppresses mutations/inherited/syndrome. Probe: 'rare genetic disorders' 0.83, 'inherited disease' 0.50, infectious disease 0.06.",
+ "selection": "random draw"
+}
