@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-ab7f9f2c",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N9819-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:11:21+00:00",
+ "recipe": {
+  "toolchain_commit": "b4a94ffba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N9819_neg/2026-11-26-lm1909-ab7f9f2c.tests.json"
+ },
+ "label": "final word of a stock multiword connective phrase (be that as it may, in the wake of, on the off chance, notwithstanding)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N9819_neg/2026-11-26-lm1909-ab7f9f2c.tests.json",
+   "prereg_commit": "b4a94ffba",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.272,
+     "peak": " may"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.331,
+     "peak": " may"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.009,
+     "peak": " off"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.009,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.275,
+     "peak": " may"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.013,
+     "peak": " cash"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.015,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.623,
+     "peak": " may"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.098,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.005,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " coat"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.102,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.013,
+     "peak": " cash"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.017,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.049,
+     "peak": ","
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.695,
+    "median_fire": 0.144,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b4a94ffba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "end of stock connective",
+ "unit_kind": "contextual",
+ "confidence": 0.2,
+ "notes": "card top: off chance, In the wake, Not|withstanding, Be that as it may, a large number, mostly in spun SEO prose; + pole is plain connectives (However, Additionally, due). Probe: only 'Be that as it may' fired (0.38); off chance, wake, notwithstanding, large number near zero in clean prose. Weak guess.",
+ "selection": "random draw"
+}

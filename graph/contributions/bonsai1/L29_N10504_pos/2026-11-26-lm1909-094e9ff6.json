@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-094e9ff6",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N10504+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:11:02+00:00",
+ "recipe": {
+  "toolchain_commit": "b4a94ffba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N10504_pos/2026-11-26-lm1909-094e9ff6.tests.json"
+ },
+ "label": "the subject or modal right before an expected negation in a denial ('No, that ...', 'of course, it is not ...'); output promotes cannot/unable",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N10504_pos/2026-11-26-lm1909-094e9ff6.tests.json",
+   "prereg_commit": "b4a94ffba",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.388,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.906,
+     "peak": " can"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.114,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.388,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.113,
+     "peak": " that"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.237,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.06,
+     "peak": " it"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 1.09,
+     "peak": " can"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.114,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.02,
+     "peak": " finally"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.114,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.035,
+     "peak": " that"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.016,
+     "peak": " it"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.128,
+     "peak": " that"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.312,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b4a94ffba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "before a denial's 'not'",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "card: ' can' x7, ' it' x5, ' this'/' that' before not/can't; logit promotes cannot/couldn't/unable. Probe: 'No, that was never' 0.39 vs 'Yes, that was' 0.11; 'No, this is not' 0.24; 'Of course, that does not' 0.21.",
+ "selection": "random draw"
+}

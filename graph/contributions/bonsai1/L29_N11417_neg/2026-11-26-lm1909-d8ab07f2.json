@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-26-lm1909-d8ab07f2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N11417-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:11:26+00:00",
+ "recipe": {
+  "toolchain_commit": "b4a94ffba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N11417_neg/2026-11-26-lm1909-d8ab07f2.tests.json"
+ },
+ "label": "the token ' food' (food safety, food choices, food label); the output suppresses ' soup'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N11417_neg/2026-11-26-lm1909-d8ab07f2.tests.json",
+   "prereg_commit": "b4a94ffba",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.406,
+     "peak": " food"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.49,
+     "peak": " food"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.193,
+     "peak": " food"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.346,
+     "peak": " food"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.299,
+     "peak": " food"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.143,
+     "peak": " food"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.111,
+     "peak": " food"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.047,
+     "peak": " food"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.136,
+     "peak": " portion"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.157,
+     "peak": " kitchen"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " hit"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.287,
+     "peak": " cooked"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.176,
+     "peak": " lunch"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.046,
+     "peak": " they"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.088,
+     "peak": " with"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.797,
+    "median_fire": 0.246,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b4a94ffba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "food",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "card: ' food' x20, ' meal' x3, ' Food' x2, mostly nutrition / food-safety prose; + pole is soup contexts (bowl of, chicken soup). Probe: ' food' 0.25-0.30, 'nutrition' 0.04, 'meal' 0.03.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "food",
+   "Food"
+  ]
+ }
+}

@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-60a7c6c1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N4504-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:10:28+00:00",
+ "recipe": {
+  "toolchain_commit": "b4a94ffba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N4504_neg/2026-11-26-lm1909-60a7c6c1.tests.json"
+ },
+ "label": "word pieces inside Hungarian- and Turkish-language names and text (Orvostudományi, Tisza, Karatay)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N4504_neg/2026-11-26-lm1909-60a7c6c1.tests.json",
+   "prereg_commit": "b4a94ffba",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.698,
+     "peak": "et"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.051,
+     "peak": " T"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.4,
+     "peak": " d"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.836,
+     "peak": "ost"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.712,
+     "peak": " T"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.727,
+     "peak": "sz"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.738,
+     "peak": "id"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.852,
+     "peak": "et"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.01,
+     "peak": "Bitte"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.075,
+     "peak": "ed"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": "i"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.195,
+     "peak": "cs"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.003,
+     "peak": "idad"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": " Sciences"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.007,
+     "peak": " Istanbul"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.026,
+     "peak": "oz"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.732,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b4a94ffba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Hungarian/Turkish word pieces",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "card top: Orv|ost|udományi, Tisza, Karadaglilar, Karatay. Probe: Hungarian/Turkish-language strings fire (0.7-0.9), English sentences about Hungary/Turkey weakly (0.1-0.2).",
+ "selection": "random draw"
+}

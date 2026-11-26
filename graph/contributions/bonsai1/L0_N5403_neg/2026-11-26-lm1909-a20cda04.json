@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-26-lm1909-a20cda04",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N5403-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:10:51+00:00",
+ "recipe": {
+  "toolchain_commit": "b4a94ffba",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N5403_neg/2026-11-26-lm1909-a20cda04.tests.json"
+ },
+ "label": "the token ' Asia' (and ' Asian')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N5403_neg/2026-11-26-lm1909-a20cda04.tests.json",
+   "prereg_commit": "b4a94ffba",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.734,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.539,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.665,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.848,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.654,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.574,
+     "peak": " Asian"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.66,
+     "peak": " Asia"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.879,
+     "peak": " Asia"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.075,
+     "peak": " China"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.225,
+     "peak": " America"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.17,
+     "peak": " Africa"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.315,
+     "peak": " Europe"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.069,
+     "peak": " Siber"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.056,
+     "peak": " African"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.16,
+     "peak": " Europe"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "ber"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.663,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b4a94ffba",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Asia",
+ "unit_kind": "lexical",
+ "confidence": 0.8,
+ "notes": "card: ' Asia' x29, ' Asian' x3 (mostly 'Southeast Asia'). Probe: ' Asia' 0.91, ' Asian' 0.57, ' Africa' 0.16.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "Asia",
+   "Asian"
+  ]
+ }
+}
