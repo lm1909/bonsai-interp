@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-bf642cb7",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N2828-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:16:03+00:00",
+ "recipe": {
+  "toolchain_commit": "16f80c5c1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N2828_neg/2026-11-26-lm1909-bf642cb7.tests.json"
+ },
+ "label": "dense / positional: weak broad unit in layer 2; best guess the token ' valuable'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N2828_neg/2026-11-26-lm1909-bf642cb7.tests.json",
+   "prereg_commit": "16f80c5c1",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.526,
+     "peak": " valuable"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.247,
+     "peak": " valuable"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.564,
+     "peak": " valuable"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.312,
+     "peak": " valuable"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.471,
+     "peak": " valuable"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.266,
+     "peak": " valuable"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.25,
+     "peak": " valuable"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.226,
+     "peak": " valuable"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.028,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.017,
+     "peak": " heavy"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.188,
+     "peak": " helpful"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.073,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.247,
+     "peak": " internship"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.062,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.083,
+     "peak": "Time"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.086,
+     "peak": "This"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.289,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "16f80c5c1",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense L2 unit",
+ "unit_kind": "dense / positional",
+ "confidence": 0.05,
+ "notes": "card flags broad (4.7% of tokens reach 0.1·max), max 0.33, gate-closed leak 87%; ' valuable' x15 in the top 32",
+ "selection": "random draw"
+}
