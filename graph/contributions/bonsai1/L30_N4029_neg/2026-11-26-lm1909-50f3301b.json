@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-50f3301b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N4029-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:41:06+00:00",
+ "recipe": {
+  "toolchain_commit": "7d59c86a0",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L30_N4029_neg/2026-11-26-lm1909-50f3301b.tests.json"
+ },
+ "label": "the word just before an approximate quantity ('beats about 70', 'sleeps for about seven hours'): the verb or preposition that introduces a rough measurement",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L30_N4029_neg/2026-11-26-lm1909-50f3301b.tests.json",
+   "prereg_commit": "7d59c86a0",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.117,
+     "peak": " beats"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.036,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.031,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.13,
+     "peak": " population"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.573,
+     "peak": " contains"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.025,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.332,
+     "peak": " produces"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.049,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.117,
+     "peak": " beats"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.048,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.051,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.008,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.573,
+     "peak": " contains"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.343,
+     "peak": " produces"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.586,
+    "median_fire": 0.083,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "7d59c86a0",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "word before approximate quantity",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "",
+ "selection": "random draw"
+}
