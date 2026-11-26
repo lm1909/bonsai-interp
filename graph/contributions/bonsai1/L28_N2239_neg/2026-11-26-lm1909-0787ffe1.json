@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-0787ffe1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N2239-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:37:26+00:00",
+ "recipe": {
+  "toolchain_commit": "0baf2fd93",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L28_N2239_neg/2026-11-26-lm1909-0787ffe1.tests.json"
+ },
+ "label": "' x' or '×' used as the 'by' sign between numbers in dimensions ('15.1 x 10.2 cm')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L28_N2239_neg/2026-11-26-lm1909-0787ffe1.tests.json",
+   "prereg_commit": "0baf2fd93",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.099,
+     "peak": " x"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.347,
+     "peak": " ×"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.186,
+     "peak": " inches"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.329,
+     "peak": " x"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.408,
+     "peak": " ×"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.472,
+     "peak": " x"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.381,
+     "peak": " x"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.462,
+     "peak": " x"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.038,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.015,
+     "peak": "Box"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.054,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " hand"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " clean"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.02,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " hours"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.364,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0baf2fd93",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dimension 'x' sign",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "Card: ' x' x9, ' ×' x3, 'x' x3, all in measurements. The + pole is the 'fit' side (whether something fits in a space); the - pole is stating its size.",
+ "selection": "random draw"
+}

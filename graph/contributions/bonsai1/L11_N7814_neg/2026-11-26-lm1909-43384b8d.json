@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-43384b8d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L11/N7814-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:37:14+00:00",
+ "recipe": {
+  "toolchain_commit": "0baf2fd93",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L11_N7814_neg/2026-11-26-lm1909-43384b8d.tests.json"
+ },
+ "label": "the content word that completes a goal or evaluation phrase ('making sure', 'most effective', 'most interesting', 'potable water')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L11_N7814_neg/2026-11-26-lm1909-43384b8d.tests.json",
+   "prereg_commit": "0baf2fd93",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.107,
+     "peak": " sure"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.021,
+     "peak": " effective"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.003,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.111,
+     "peak": " basic"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.016,
+     "peak": " making"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.018,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.006,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.014,
+     "peak": " illness"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.025,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.09,
+     "peak": " medicine"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " always"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.001,
+     "peak": " isolation"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.688,
+    "median_fire": 0.017,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0baf2fd93",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "goal/evaluation complement",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card top: 'making sure', 'most effective', 'reuniting', 'most interesting', 'potable water'; no single token. Not probed; low confidence.",
+ "selection": "random draw"
+}

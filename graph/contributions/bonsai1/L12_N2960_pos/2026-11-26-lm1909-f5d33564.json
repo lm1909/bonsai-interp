@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-f5d33564",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N2960+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:37:16+00:00",
+ "recipe": {
+  "toolchain_commit": "0baf2fd93",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N2960_pos/2026-11-26-lm1909-f5d33564.tests.json"
+ },
+ "label": "'#' that opens a comment in code, especially an inline comment after code on the same line",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N2960_pos/2026-11-26-lm1909-f5d33564.tests.json",
+   "prereg_commit": "0baf2fd93",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.14,
+     "peak": " value"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.971,
+     "peak": " third"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.4,
+     "peak": " from"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.378,
+     "peak": " double"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.27,
+     "peak": " ten"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.285,
+     "peak": " keep"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.167,
+     "peak": " reset"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.279,
+     "peak": " string"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.024,
+     "peak": " bakery"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.018,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.033,
+     "peak": "Press"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.029,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.069,
+     "peak": "D"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": "Our"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.282,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0baf2fd93",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "code comment '#'",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' #' x7 (inline comments), tokens inside comments (for multiple contours, Register). Near misses: '#' outside code (hashtags, ranks).",
+ "selection": "random draw"
+}
