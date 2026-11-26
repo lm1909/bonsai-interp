@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-ce2082e4",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N262+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T21:42:03+00:00",
+ "recipe": {
+  "toolchain_commit": "f31d37a54",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L12_N262_pos/2026-11-26-lm1909-ce2082e4.tests.json"
+ },
+ "label": "the tag name right after '<' in HTML written inside code strings (img, input)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L12_N262_pos/2026-11-26-lm1909-ce2082e4.tests.json",
+   "prereg_commit": "f31d37a54",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.783,
+     "peak": "img"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.333,
+     "peak": "input"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.367,
+     "peak": "img"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.438,
+     "peak": " SRC"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.497,
+     "peak": "input"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.531,
+     "peak": "img"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.253,
+     "peak": "submit"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.301,
+     "peak": "img"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.124,
+     "peak": "</"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.033,
+     "peak": "('<"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.021,
+     "peak": "+"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.032,
+     "peak": "H"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.094,
+     "peak": "label"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.169,
+     "peak": " \"</"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.116,
+     "peak": "submit"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": "p"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f31d37a54",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "HTML img/input tag in code",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "selection": "random draw"
+}
