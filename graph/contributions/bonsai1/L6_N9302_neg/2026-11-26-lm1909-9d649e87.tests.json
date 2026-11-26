@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-9d649e87",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N9302-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:08:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L6/N9302",
+   "pole": "-",
+   "label": "the digit '6' directly after a '7' (76, 767, 7.62, 1976)",
+   "fire": [
+    "The old Philadelphia 76ers jersey still hangs in his closet.",
+    "Our plane was a wide-body Boeing 767 with two aisles.",
+    "The hunters carried rifles chambered in 7.62 caliber.",
+    "My parents got married in the summer of 1976 in Ohio.",
+    "The hex dump showed \\x1f\\x76\\x00\\xab near the header.",
+    "Route 76 runs straight through the middle of the valley.",
+    "The bicentennial celebrations of 1776 were re-enacted downtown.",
+    "He scored 76 points over the whole tournament."
+   ],
+   "quiet": [
+    "The old Philadelphia Eagles jersey still hangs in his closet.",
+    "Our plane was a narrow-body Boeing 737 with one aisle.",
+    "The hunters carried rifles chambered in 5.56 caliber.",
+    "My parents got married in the summer of 1986 in Ohio.",
+    "The hex dump showed \\x1f\\x75\\x00\\xab near the header.",
+    "Route 66 runs straight through the middle of the valley.",
+    "The bicentennial celebrations of 1789 were re-enacted downtown.",
+    "He scored 74 points over the whole tournament."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "digit 6 after 7",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "Card: all 32 top tokens are '6', nearly all after '7' (\\x76, 767, Fallout 76, 7.62mm, 1976). Probe: '6' after 7 0.4-0.98; '6' alone or other digits ~0.005. Near misses keep the numbers, change the digit pair."
+}

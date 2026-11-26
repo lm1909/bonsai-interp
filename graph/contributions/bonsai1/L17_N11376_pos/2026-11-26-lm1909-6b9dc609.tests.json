@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-6b9dc609",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N11376+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:08:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N11376",
+   "pole": "+",
+   "label": "date/number fields inside dense machine-formatted records (patent citation tables, device status lines)",
+   "fire": [
+    "|US2398112 *||2 feb 1944||19 jul 1946||Eastman Kodak||Camera shutter|\n|US2411876 *||5 mar 1944||3 dec 1946||Bell Labs||Relay|",
+    "config: pool DEGRADED raidz1-0 DEGRADED c1t5000C5004A2B11Ed0 ONLINE c1t5000C5004A2B11Fd0 FAULTED",
+    "Архивировано из первоисточника 3 марта 2011. Проверено 14 апреля 2011.",
+    "- total project value 512,300\n- assisted by $41,250 Ohio State grant",
+    "|DE1023344 *||11 nov 1955||2 aug 1958||Siemens AG||Switch housing|",
+    "mock_now.return_value = '2017-06-30T12:00:00'",
+    "NAME STATE READ WRITE CKSUM tank ONLINE 0 0 0 mirror-0 ONLINE 0 0 0",
+    "|FR987654 *||7 jan 1949||22 jun 1951||Thomson||Lens mount|"
+   ],
+   "quiet": [
+    "The patent for the camera shutter was filed in February and granted two years later.",
+    "The storage pool was degraded because one of the disks had failed overnight.",
+    "The page was archived in March and checked again in April by the editors.",
+    "The total value of the project was about half a million dollars.",
+    "Siemens filed a patent for a new switch housing in the nineteen fifties.",
+    "The mock returned a fixed timestamp at noon on the last day of June.",
+    "The tank was online again after the technicians replaced the mirror.",
+    "Thomson received a French patent for its lens mount after the war."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "fields in data records",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card: top examples are a month token in a patent citation table, digits in Russian archive notes, 'ONLINE' in zpool status. Probes of similar strings scored under 0.1; best guess recorded honestly, expected to fail."
+}

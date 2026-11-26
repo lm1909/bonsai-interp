@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-7d3d94e7",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N5446+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:08:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N5446",
+   "pole": "+",
+   "label": "the first sub-word piece of a multi-token surname right after a given name (David S|wofford)",
+   "fire": [
+    "The keynote at the conference was delivered by Laura Wojcicki of Princeton.",
+    "This theorem was first proved by Martin Hvidsten in 1972.",
+    "The exhibition features new portraits by Sarah Kniestedt and others.",
+    "According to Robert Szymborski, the data were collected over a decade.",
+    "The quarterback was replaced by Kevin Thorgaard in the second half.",
+    "A review article by Helen Vreeburg summarises the evidence.",
+    "Our guest tonight is the novelist Peter Gzowski from Toronto.",
+    "The grant was awarded to Daniel Pfeiffenberger and his lab."
+   ],
+   "quiet": [
+    "The keynote at the conference was delivered by Dr. Wojcicki of Princeton.",
+    "This theorem was first proved by Professor Hvidsten in 1972.",
+    "The exhibition features new portraits by Sarah Brown and others.",
+    "According to Mr. Szymborski, the data were collected over a decade.",
+    "The quarterback was replaced by Kevin Jones in the second half.",
+    "A review article by Helen Clark summarises the evidence.",
+    "Our guest tonight is the novelist Peter Smith from Toronto.",
+    "The grant was awarded to Daniel Green and his lab."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split surname after first name",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "notes": "Card: ' W' (Wiest), ' K' (Koller), ' St' (Stieb), ' H' (Hockney) after given names. Probe: given name + split surname 0.76-0.87; 'Mr. Swofford' 0.004; 'David Smith' 0.18. Near misses use a title instead of a first name, or one-token surnames."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-3b07aa5f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N4272-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:08:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N4272",
+   "pole": "-",
+   "label": "':\\n' ending an else: or except …: clause header in Python",
+   "fire": [
+    "def load(path):\n    try:\n        return json.load(open(path))\n    except IOError as err:\n        return None\n",
+    "if user.is_admin:\n    grant(user)\nelse:\n    deny(user)\n",
+    "try:\n    conn = connect(host)\nexcept socket.timeout:\n    conn = None\n",
+    "for item in items:\n    if item.ok:\n        keep(item)\n    else:\n        drop(item)\n",
+    "try:\n    value = cache[key]\nexcept KeyError:\n    value = compute(key)\n",
+    "while running:\n    try:\n        step()\n    except Exception as exc:\n        log(exc)\n",
+    "if n % 2 == 0:\n    kind = 'even'\nelse:\n    kind = 'odd'\n",
+    "try:\n    import numpy as np\nexcept ImportError:\n    np = None\n"
+   ],
+   "quiet": [
+    "def load(path):\n    with open(path) as fh:\n        return json.load(fh)\n",
+    "if user.is_admin:\n    grant(user)\n",
+    "while not conn:\n    conn = connect(host)\n",
+    "for item in items:\n    keep(item)\n",
+    "class Cache:\n    store = {}\n",
+    "def step(state):\n    return state + 1\n",
+    "if n % 2 == 0:\n    kind = 'even'\n",
+    "with lock:\n    counter += 1\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "else/except colon",
+ "unit_kind": "lexical",
+ "confidence": 0.65,
+ "notes": "Card: ':\\n' x30, almost all 'except X as e:'. Probe: else:/except: 0.6-0.85; if/class/while/def/for/with headers <0.1. Near misses end other block headers."
+}

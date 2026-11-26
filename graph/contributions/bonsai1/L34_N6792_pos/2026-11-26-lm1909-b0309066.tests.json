@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-b0309066",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N6792+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:08:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N6792",
+   "pole": "+",
+   "label": "word piece of a counted object noun right after a numeral in non-English text (zehn Kleidungs|stücke, ３０点)",
+   "fire": [
+    "Im Paket befinden sich zwölf Kleidungsstücke aus reiner Wolle.",
+    "Die Sammlung umfasst rund vierzig Schmuckstücke aus Gold.",
+    "Unser Laden bietet fünf bis sechs Möbelstücke pro Woche an.",
+    "Wir haben drei Ausstellungsstücke an das Museum verliehen.",
+    "Die Kollektion besteht aus fünfzehn handgefertigten Kleidungsstücken.",
+    "La orquesta ha estrenado veinte nuevas obras este año.",
+    "Für das Fest wurden sieben Kunststücke einstudiert.",
+    "In der Vitrine liegen acht wertvolle Schmuckstücke."
+   ],
+   "quiet": [
+    "Im Paket befindet sich ein Kleidungsstück aus reiner Wolle.",
+    "Die Sammlung ist berühmt für ihren Schmuck aus Gold.",
+    "Unser Laden bietet schöne Möbel aus Eichenholz an.",
+    "Wir haben das Ausstellungsstück an das Museum verliehen.",
+    "Die Kollektion besteht aus handgefertigter Kleidung.",
+    "La orquesta ha estrenado una obra nueva este año.",
+    "Für das Fest wurde ein Kunststück einstudiert.",
+    "In der Vitrine liegt wertvoller Schmuck."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "counted item after numeral",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: 'acht bis zehn Kleidungs|st|ücken', 'Schm|uck|stück', '３|０|点', '160 nuevas obras', '7|00 рублей'; logit suppresses ' item/piece'. Probe: 'acht bis zehn Kleidungsstücke' 0.86 but 'Grundstück' / 'Theaterstück' without a count ~0.02. Near misses keep the nouns without a count."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-05dea6e6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N2249-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T22:08:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N2249",
+   "pole": "-",
+   "label": "empty-string initialisation \"= ''\" ending a line of Python",
+   "fire": [
+    "def parse(row):\n    label = ''\n    value = ''\n    return label, value\n",
+    "    for rec in records:\n        city = ''\n        zip_code = ''\n",
+    "class Item:\n    def __init__(self):\n        self.title = ''\n        self.body = ''\n",
+    "    result = ''\n    for ch in text:\n        result += ch\n",
+    "        prefix = ''\n        suffix = ''\n        if flag:\n            prefix = '>'\n",
+    "def reset():\n    global buf\n    buf = ''\n",
+    "    first = ''\n    last = ''\n    email = ''\n",
+    "    message = ''\n    if errors:\n        message = 'failed'\n"
+   ],
+   "quiet": [
+    "def parse(row):\n    label = None\n    value = None\n    return label, value\n",
+    "    for rec in records:\n        city = 0\n        zip_code = 0\n",
+    "class Item:\n    def __init__(self):\n        self.title = None\n        self.body = []\n",
+    "    result = []\n    for ch in text:\n        result.append(ch)\n",
+    "        prefix = 0\n        suffix = 1\n        if flag:\n            prefix = 2\n",
+    "def reset():\n    global buf\n    buf = []\n",
+    "    first = None\n    last = None\n    email = None\n",
+    "    message = None\n    if errors:\n        message = 0\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "empty-string init",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Card: gate-closed regime dominates (83%), max only 4.41; top examples include \"name = ''\\n\" runs. Probe: \"= ''\" lines 0.35-0.38, '= None' 0.09, '= 0' 0.06. Near misses initialise to other values."
+}
