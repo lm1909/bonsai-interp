@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-328ce5f3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6244+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:20:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L31/N6244",
+   "pole": "+",
+   "label": "a container (queue, heap, list, cart) at the point where something is about to be added to it",
+   "fire": [
+    "from queue import Queue\n\njobs = Queue()\nfor url in urls:\n    jobs.put(url)",
+    "import heapq\n\nopen_set = []\nheapq.heappush(open_set, (0, start))",
+    "tasks = Queue()\nwhile running:\n    tasks.put(read_event())",
+    "pending = PriorityQueue()\nfor i in range(10):\n    pending.put((i, name))",
+    "buffer = deque()\nfor line in stream:\n    buffer.append(line)",
+    "self.outbox = Queue()\n\ndef send(self, msg):\n    self.outbox.put(msg)",
+    "seen = set()\nfor item in items:\n    seen.add(item)",
+    "cart = Cart()\nfor product in selected:\n    cart.add(product)"
+   ],
+   "quiet": [
+    "from math import sqrt\n\nresult = 0\nfor x in values:\n    print(x)",
+    "import os\n\npath = os.getcwd()\nprint(path, start)",
+    "name = input()\nwhile running:\n    print(read_event())",
+    "total = 0\nfor i in range(10):\n    total += i",
+    "count = 0\nfor line in stream:\n    count += len(line)",
+    "self.name = name\n\ndef send(self, msg):\n    print(msg)",
+    "score = 0\nfor item in items:\n    score = max(score, item)",
+    "user = User()\nfor product in selected:\n    print(product.price)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "about to add to container",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Top examples: self._input_queue.put, heapq.heappush, Warenkorb/cart; output promotes ' add'. Probe: ' q' before q.put fired 0.44, a stack 0.17."
+}

@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-26-lm1909-d2a042f9",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8319+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T21:20:47+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N8319",
+   "pole": "+",
+   "label": "' test' at the start of a Python test-method name (def test_...)",
+   "fire": [
+    "class ParserCase(unittest.TestCase):\n    def test_empty_string(self):\n        self.assertEqual(parse(''), [])",
+    "import pytest\n\ndef test_division_by_zero():\n    with pytest.raises(ZeroDivisionError):\n        1 / 0",
+    "class CartSuite(TestCase):\n    def test_add_item(self):\n        self.cart.add('apple')",
+    "async def test_fetch_user(client):\n    resp = await client.get('/user/1')\n    assert resp.status == 200",
+    "    def test_login_redirects(self):\n        response = self.client.get('/login')\n        self.assertRedirects(response, '/')",
+    "@pytest.mark.slow\ndef test_large_upload(tmp_path):\n    f = tmp_path / 'big.bin'",
+    "    def test_sort_is_stable(self):\n        data = [(1, 'a'), (1, 'b')]\n        self.assertEqual(sorted(data), data)",
+    "def test_config_defaults():\n    cfg = load_config()\n    assert cfg.debug is False"
+   ],
+   "quiet": [
+    "class Parser(object):\n    def parse_string(self, text):\n        return text.split()",
+    "import math\n\ndef safe_divide(a, b):\n    if b == 0:\n        return None",
+    "class Cart(object):\n    def add_item(self, name):\n        self.items.append(name)",
+    "async def fetch_user(client):\n    resp = await client.get('/user/1')\n    return resp.json()",
+    "    def login_redirect(self):\n        response = self.client.get('/login')\n        return response.url",
+    "@lru_cache\ndef large_upload(path):\n    f = path / 'big.bin'",
+    "    def sort_records(self):\n        data = [(1, 'a'), (1, 'b')]\n        return sorted(data)",
+    "def load_defaults():\n    cfg = load_config()\n    return cfg.debug"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "def test_",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "24 of the top 32 peaks are ' test' right after 'def'. Card flags it broad (1.3%)."
+}
