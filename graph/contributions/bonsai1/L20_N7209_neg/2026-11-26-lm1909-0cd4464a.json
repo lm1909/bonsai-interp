@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-0cd4464a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N7209-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T22:10:07+00:00",
+ "recipe": {
+  "toolchain_commit": "def9edda8",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N7209_neg/2026-11-26-lm1909-0cd4464a.tests.json"
+ },
+ "label": "Chinese clause-chaining connectives (並 / 並且 / 而且, 'and also / moreover') that add a further predicate",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N7209_neg/2026-11-26-lm1909-0cd4464a.tests.json",
+   "prereg_commit": "def9edda8",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.542,
+     "peak": "並且"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.328,
+     "peak": "而且"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.209,
+     "peak": "於"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.218,
+     "peak": "而且"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.388,
+     "peak": "並"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.293,
+     "peak": "並且"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.428,
+     "peak": "而且"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.304,
+     "peak": "並"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.108,
+     "peak": "會"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.135,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": "報告"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.038,
+     "peak": "。"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.087,
+     "peak": "來"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.066,
+     "peak": "照片"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.078,
+     "peak": "這"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.048,
+     "peak": "。"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.316,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "def9edda8",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese 'and also' connective",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card also shows English ' which' (4 of top 32). Probing suggested Chinese text without the connective also fires weakly, so near misses may leak.",
+ "selection": "random draw"
+}
