@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-b56d9186",
+ "kind": "interpret",
+ "neuron": "bonsai1/L13/N3111+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:40:26+00:00",
+ "recipe": {
+  "toolchain_commit": "a918204e4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L13_N3111_pos/2026-11-26-lm1909-b56d9186.tests.json"
+ },
+ "label": "a sports position noun used as a title right before a player's name (\"defenceman Luc Bourdon\", \"catcher Zane Evans\")",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L13_N3111_pos/2026-11-26-lm1909-b56d9186.tests.json",
+   "prereg_commit": "a918204e4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.974,
+     "peak": "eman"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.444,
+     "peak": " quarterback"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.374,
+     "peak": " pitcher"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.52,
+     "peak": " goalkeeper"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.665,
+     "peak": " striker"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.569,
+     "peak": " guard"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.37,
+     "peak": " linebacker"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.38,
+     "peak": " forward"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.083,
+     "peak": " player"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.102,
+     "peak": " coach"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.008,
+     "peak": " traded"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.013,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.009,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.018,
+     "peak": "Coach"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.054,
+     "peak": " rookie"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.015,
+     "peak": " year"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.482,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a918204e4",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "position before player name",
+ "unit_kind": "contextual",
+ "confidence": 0.7,
+ "selection": "random draw"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-26-lm1909-adbf3ca2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N4594-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:40:03+00:00",
+ "recipe": {
+  "toolchain_commit": "a918204e4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N4594_neg/2026-11-26-lm1909-adbf3ca2.tests.json"
+ },
+ "label": "weak broad activation on Arabic word pieces (and spaces); dense at the low end, gate-leak regime",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N4594_neg/2026-11-26-lm1909-adbf3ca2.tests.json",
+   "prereg_commit": "a918204e4",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.768,
+     "peak": "جة"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.087,
+     "peak": "تع"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.096,
+     "peak": " الك"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.044,
+     "peak": "عل"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.053,
+     "peak": "ة"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.08,
+     "peak": "ك"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.035,
+     "peak": "اص"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.044,
+     "peak": "تاب"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.049,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.055,
+     "peak": " social"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.299,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.097,
+     "peak": " farming"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.574,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.337,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.19,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.085,
+     "peak": " international"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.266,
+    "median_fire": 0.067,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "a918204e4",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic pieces (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "selection": "random draw"
+}
