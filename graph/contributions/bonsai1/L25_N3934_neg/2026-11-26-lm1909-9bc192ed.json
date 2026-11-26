@@ -1,0 +1,159 @@
+{
+ "id": "2026-11-26-lm1909-9bc192ed",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N3934-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:45:56+00:00",
+ "recipe": {
+  "toolchain_commit": "dbd017e07",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N3934_neg/2026-11-26-lm1909-9bc192ed.tests.json"
+ },
+ "label": "Latin comma (often spaced ' ,') in Arabic text, not the Arabic comma '،'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N3934_neg/2026-11-26-lm1909-9bc192ed.tests.json",
+   "prereg_commit": "dbd017e07",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.161,
+     "peak": " ,"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.192,
+     "peak": " ,"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.215,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.152,
+     "peak": "طعم"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.135,
+     "peak": " عن"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.095,
+     "peak": " ف"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.268,
+     "peak": " ,"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.051,
+     "peak": "اف"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.089,
+     "peak": " وا"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.086,
+     "peak": "قر"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.091,
+     "peak": "ينا"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.144,
+     "peak": "طعم"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.092,
+     "peak": " عن"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.058,
+     "peak": " ف"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.159,
+     "peak": "صح"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.04,
+     "peak": "اف"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.157,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dbd017e07",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Latin comma in Arabic",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Card: ' ,' x12 and ',' x4 of the top 32, all in Arabic; probe: Arabic ' ,' 0.38, English ' ,' 0.07. Four near misses use the Arabic comma and four use none.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " ,",
+   ","
+  ]
+ }
+}

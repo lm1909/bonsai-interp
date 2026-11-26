@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-9bbdb535",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N4981-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:46:23+00:00",
+ "recipe": {
+  "toolchain_commit": "dbd017e07",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L24_N4981_neg/2026-11-26-lm1909-9bbdb535.tests.json"
+ },
+ "label": "cue word in consumer health advice: 'check-up', 'risk of', 'look for', 'times per week'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L24_N4981_neg/2026-11-26-lm1909-9bbdb535.tests.json",
+   "prereg_commit": "dbd017e07",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.201,
+     "peak": "-up"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.028,
+     "peak": " diabetes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.038,
+     "peak": "ados"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.443,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.075,
+     "peak": "Dr"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.06,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.15,
+     "peak": " can"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.026,
+     "peak": " week"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.072,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.054,
+     "peak": " pleasant"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": "oc"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.077,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.077,
+     "peak": "Dr"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": "Mel"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.01,
+     "peak": " numbers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": " shapes"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.734,
+    "median_fire": 0.068,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dbd017e07",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "health-advice cue",
+ "unit_kind": "unclear",
+ "confidence": 0.3,
+ "notes": "Diffuse top examples with no single token; probe: 'check-up' 0.51, 'risk of' 0.06-0.21, 'look for' 0.04-0.15. Low confidence.",
+ "selection": "random draw"
+}

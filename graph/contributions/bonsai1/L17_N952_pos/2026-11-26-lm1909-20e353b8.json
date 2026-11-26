@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-20e353b8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N952+",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:45:03+00:00",
+ "recipe": {
+  "toolchain_commit": "dbd017e07",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N952_pos/2026-11-26-lm1909-20e353b8.tests.json"
+ },
+ "label": "' #' (or the ' =' / ':' after it) that comments out a line of code, such as a disabled setting or dict entry, as opposed to a '#' that starts a prose comment",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N952_pos/2026-11-26-lm1909-20e353b8.tests.json",
+   "prereg_commit": "dbd017e07",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.895,
+     "peak": " '"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.835,
+     "peak": " #"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.036,
+     "peak": " ="
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.163,
+     "peak": " print"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.697,
+     "peak": " '"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.029,
+     "peak": " self"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.628,
+     "peak": " '"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.031,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.255,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.065,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " Theme"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.026,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.162,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.062,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.139,
+     "peak": " #"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.021,
+     "peak": ".\n"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.75,
+    "median_fire": 0.396,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dbd017e07",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "commented-out code line",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Probe: commented-out dict entries fired 0.72, a commented-out Sphinx setting 0.22, prose comments near 0.",
+ "selection": "random draw"
+}

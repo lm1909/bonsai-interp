@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-26-lm1909-42fe2d91",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N5940-",
+ "contributor": "lm1909",
+ "created": "2026-11-26T16:46:18+00:00",
+ "recipe": {
+  "toolchain_commit": "dbd017e07",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L33_N5940_neg/2026-11-26-lm1909-42fe2d91.tests.json"
+ },
+ "label": "words naming a small brewery's taproom or a farm's production room ('tiny taproom', 'our taproom')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L33_N5940_neg/2026-11-26-lm1909-42fe2d91.tests.json",
+   "prereg_commit": "dbd017e07",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.136,
+     "peak": " cramped"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.526,
+     "peak": " st"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.723,
+     "peak": "'s"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.387,
+     "peak": "wh"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.334,
+     "peak": " our"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.538,
+     "peak": " a"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.394,
+     "peak": " rustic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.514,
+     "peak": " brewing"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.136,
+     "peak": " cramped"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.067,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.132,
+     "peak": "'s"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.129,
+     "peak": " warehouse"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.053,
+     "peak": " pharmacy"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.002,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.198,
+     "peak": " old"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.454,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "dbd017e07",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "brewery taproom",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Probe: brewery taproom phrases 0.35-0.72, a farm cheese room 0.40-0.52, a winery tasting room 0.15, an office meeting room 0.02.",
+ "selection": "random draw"
+}
