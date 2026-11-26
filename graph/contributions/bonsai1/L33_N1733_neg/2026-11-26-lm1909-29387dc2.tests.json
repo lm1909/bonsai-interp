@@ -1,0 +1,57 @@
+{
+ "contribution": "2026-11-26-lm1909-29387dc2",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L33/N1733-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-26T16:45:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L33/N1733",
+   "pole": "-",
+   "label": "the first piece of a word the tokenizer splits, mostly ' bl' / ' be' / ' dr' (bl|ight, be|vy, dr|ab)",
+   "fire": [
+    "Farmers feared the blight would ruin the potato harvest again.",
+    "The aunt bequeathed her farmhouse to the village library.",
+    "A bevy of reporters waited outside the courthouse.",
+    "The blimp drifted slowly over the football stadium.",
+    "His drab gray coat hung near the door all winter.",
+    "One small blunder cost the team the championship.",
+    "The publisher wrote a short blurb for the back cover.",
+    "Years of drudgery at the mill wore him down."
+   ],
+   "quiet": [
+    "Farmers feared the drought would ruin the potato harvest again.",
+    "The aunt left her farmhouse to the village library.",
+    "A crowd of reporters waited outside the courthouse.",
+    "The balloon drifted slowly over the football stadium.",
+    "His black wool coat hung near the door all winter.",
+    "One small bluff cost the team the championship.",
+    "The publisher wrote a short note for the back cover.",
+    "Years of hard labor at the mill wore him down."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split-word onset",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "probes: beagle/blizzard/drizzle (split) fire, bride (single token) does not. Fire words checked with the tokenizer to split as ' bl'/' be'/' dr' + rest; near misses use single-token words with the same onset.",
+ "trigger": {
+  "pieces": [
+   " bl",
+   " be",
+   " Be",
+   " BE",
+   " dr",
+   "br"
+  ]
+ }
+}
