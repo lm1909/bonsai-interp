@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-42e91c0f",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N11695+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:14:22+00:00",
+ "recipe": {
+  "toolchain_commit": "895cf5f00",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L19_N11695_pos/2026-11-27-lm1909-42e91c0f.tests.json"
+ },
+ "label": "addition in code: the + operator or the argument boundary inside an add() call (a + b, numpy.add(x), y)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L19_N11695_pos/2026-11-27-lm1909-42e91c0f.tests.json",
+   "prereg_commit": "895cf5f00",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.026,
+     "peak": " total"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.071,
+     "peak": " +"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.268,
+     "peak": "),"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.542,
+     "peak": " +"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.019,
+     "peak": "       "
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.015,
+     "peak": "   "
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.364,
+     "peak": ".add"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.115,
+     "peak": " +"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.078,
+     "peak": " rate"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.09,
+     "peak": " *"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.187,
+     "peak": "),"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " np"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " count"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.019,
+     "peak": "()\n"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.169,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.178,
+     "peak": " *"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.57,
+    "median_fire": 0.093,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "895cf5f00",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "addition in code",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: ' +' x6, '),' in numpy.add(numpy.squeeze(weights), ...), 'adding the opposite'. Output promotes inverse/reverse/subtract. Near misses keep code with *, - or calls that are not additions.",
+ "selection": "random draw"
+}

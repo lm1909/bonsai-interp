@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-a10c1392",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N7997+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:14:14+00:00",
+ "recipe": {
+  "toolchain_commit": "895cf5f00",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N7997_pos/2026-11-27-lm1909-a10c1392.tests.json"
+ },
+ "label": "the Russian word 'как' (how / like / as)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N7997_pos/2026-11-27-lm1909-a10c1392.tests.json",
+   "prereg_commit": "895cf5f00",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.154,
+     "peak": " по"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.391,
+     "peak": " как"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.525,
+     "peak": " как"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.47,
+     "peak": " как"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.347,
+     "peak": " как"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.106,
+     "peak": " как"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.383,
+     "peak": " как"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.399,
+     "peak": " как"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.154,
+     "peak": " по"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.097,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.38,
+     "peak": " под"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.199,
+     "peak": " по"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.152,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.093,
+     "peak": " до"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.085,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.169,
+     "peak": " стало"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.852,
+    "median_fire": 0.387,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "895cf5f00",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian 'как'",
+ "unit_kind": "lexical",
+ "confidence": 0.7,
+ "notes": "Card: ' как' x20, ' Как' x4 among top 32. Near misses are Russian sentences of the same kind with other function words.",
+ "selection": "random draw"
+}

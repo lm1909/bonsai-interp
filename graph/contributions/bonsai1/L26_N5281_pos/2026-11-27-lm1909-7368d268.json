@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-7368d268",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N5281+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:13:55+00:00",
+ "recipe": {
+  "toolchain_commit": "895cf5f00",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N5281_pos/2026-11-27-lm1909-7368d268.tests.json"
+ },
+ "label": "a resource name used as an API parameter or field key in code (docId, QueueUrl=, deployment=, receipt_type)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N5281_pos/2026-11-27-lm1909-7368d268.tests.json",
+   "prereg_commit": "895cf5f00",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.645,
+     "peak": "invoice"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.515,
+     "peak": " Bucket"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.401,
+     "peak": "(project"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.726,
+     "peak": " order"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.71,
+     "peak": "doc"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.426,
+     "peak": " Order"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.663,
+     "peak": "ticket"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.496,
+     "peak": " job"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.039,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.042,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.102,
+     "peak": " total"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.043,
+     "peak": " "
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": "hello"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.009,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.042,
+     "peak": "("
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.043,
+     "peak": " "
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.58,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "895cf5f00",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "API resource key",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card: '{doc}Id' in a REST path, ' Queue'Url=, deployment=name, receipt_type column, (task_result). Near misses keep code but use generic names.",
+ "selection": "random draw"
+}
