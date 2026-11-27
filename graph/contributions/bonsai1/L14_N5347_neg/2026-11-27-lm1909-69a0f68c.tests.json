@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-69a0f68c",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N5347-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:17:08+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L14/N5347",
+   "pole": "-",
+   "label": "a short variable/argument name used inside a Python expression (index, slice or call argument) in a method body",
+   "fire": [
+    "    def pop(self, key):\n        value = self.cache[key]\n        del self.cache[key]\n        return value",
+    "        for i in range(n):\n            total += weights[i] * values[i]",
+    "    def handle(self, event):\n        self.queue.put(event)\n        return self.dispatch(event)",
+    "            if s[i:j] in words and dp[i]:\n                dp[j] = True",
+    "        node = self.nodes.get(name, None)\n        self.visit(node)",
+    "    def write(self, buf):\n        self.stream.write(buf)\n        return len(buf)",
+    "        result = matrix[row][col] + offset[col]\n        out.append(result)",
+    "        with open(path) as fh:\n            data = parse(fh, strict=flag)"
+   ],
+   "quiet": [
+    "The function removes the cached value for the key and then returns it to the caller.",
+    "We loop over all items and add each weight multiplied by its value to the total.",
+    "The handler puts the event on the queue and then dispatches it to listeners.",
+    "If the substring is a dictionary word and the prefix is valid, mark the end as reachable.",
+    "Look up the node by its name in the table, then visit it.",
+    "The writer sends the buffer to the stream and reports how many bytes it wrote.",
+    "Each result is the matrix entry plus an offset, and it is appended to the output list.",
+    "Open the file at the given path and parse it, using strict mode if requested."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "Python variable in expression",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Near misses are prose descriptions of the same code; tests code-vs-prose more than the exact variable slot."
+}
