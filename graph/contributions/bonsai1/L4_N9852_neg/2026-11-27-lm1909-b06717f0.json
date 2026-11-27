@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-b06717f0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N9852-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:33:02+00:00",
+ "recipe": {
+  "toolchain_commit": "31c51f73d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N9852_neg/2026-11-27-lm1909-b06717f0.tests.json"
+ },
+ "label": "the suffix token 'ation' split off a word stem (ovation, staycation, claymation, imitation)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N9852_neg/2026-11-27-lm1909-b06717f0.tests.json",
+   "prereg_commit": "31c51f73d",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.899,
+     "peak": "ation"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.754,
+     "peak": "cation"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.814,
+     "peak": "ation"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.113,
+     "peak": "ation"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.983,
+     "peak": "cation"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.718,
+     "peak": "ation"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.009,
+     "peak": " statue"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.919,
+     "peak": "ation"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": " warm"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.003,
+     "peak": " planned"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " studio"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": " off"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " chose"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " short"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.01,
+     "peak": " statue"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " night"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.977,
+    "median_fire": 0.857,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31c51f73d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split -ation suffix",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "tokenizer split matters: fire depends on 'ation' being its own token",
+ "selection": "random draw"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-e211be06",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N5160-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:33:36+00:00",
+ "recipe": {
+  "toolchain_commit": "31c51f73d",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N5160_neg/2026-11-27-lm1909-e211be06.tests.json"
+ },
+ "label": "identifiers and arguments inside Python def lines and calls (def process_title(self, title), re.search('...",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N5160_neg/2026-11-27-lm1909-e211be06.tests.json",
+   "prereg_commit": "31c51f73d",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.097,
+     "peak": " process"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.091,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.254,
+     "peak": ","
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.368,
+     "peak": ".*?)"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.286,
+     "peak": "]"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.304,
+     "peak": " path"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.178,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.018,
+     "peak": " self"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.011,
+     "peak": " strict"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.007,
+     "peak": " client"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.069,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.023,
+     "peak": " user"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.008,
+     "peak": " are"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.969,
+    "median_fire": 0.216,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "31c51f73d",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "python def/call args",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "code vs prose description of the same code",
+ "selection": "random draw"
+}
