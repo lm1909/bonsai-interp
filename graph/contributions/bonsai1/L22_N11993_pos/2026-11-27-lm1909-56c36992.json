@@ -1,0 +1,158 @@
+{
+ "id": "2026-11-27-lm1909-56c36992",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N11993+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:32:32+00:00",
+ "recipe": {
+  "toolchain_commit": "b2350153c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L22_N11993_pos/2026-11-27-lm1909-56c36992.tests.json"
+ },
+ "label": "the first keyword ('if' / 'return') of a new indented statement line in Python code",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L22_N11993_pos/2026-11-27-lm1909-56c36992.tests.json",
+   "prereg_commit": "b2350153c",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.405,
+     "peak": " not"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.195,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.243,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.212,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.229,
+     "peak": " len"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.198,
+     "peak": " if"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.2,
+     "peak": " return"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.465,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.26,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.177,
+     "peak": " seen"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.192,
+     "peak": " print"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.262,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.38,
+     "peak": ".append"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.179,
+     "peak": " names"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.297,
+     "peak": " ="
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.625,
+    "median_fire": 0.221,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2350153c",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Python line-start if/return",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: ' if' x9, ' return' x3 of top 32, all at the start of an indented Python line after an assignment. Near misses are the same code where that line starts with an assignment or call instead.",
+ "selection": "random draw",
+ "trigger": {
+  "tokens": [
+   " if",
+   " return"
+  ]
+ }
+}

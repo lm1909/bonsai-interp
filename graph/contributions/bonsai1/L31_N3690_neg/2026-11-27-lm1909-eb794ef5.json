@@ -1,0 +1,157 @@
+{
+ "id": "2026-11-27-lm1909-eb794ef5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N3690-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:31:42+00:00",
+ "recipe": {
+  "toolchain_commit": "b2350153c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N3690_neg/2026-11-27-lm1909-eb794ef5.tests.json"
+ },
+ "label": "the Korean word ' 문서' ('document') in Korean technical-support prose",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N3690_neg/2026-11-27-lm1909-eb794ef5.tests.json",
+   "prereg_commit": "b2350153c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.7,
+     "peak": " 문서"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.689,
+     "peak": " 문서"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.482,
+     "peak": " 문서"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.565,
+     "peak": " 문서"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.691,
+     "peak": " 문서"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.473,
+     "peak": " 문서"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.124,
+     "peak": " 문서"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.112,
+     "peak": "책"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.778,
+     "peak": "크"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.058,
+     "peak": "하는"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.217,
+     "peak": " 사진"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.138,
+     "peak": "는"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.292,
+     "peak": "튼"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.43,
+     "peak": " 서비스"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.108,
+     "peak": "�"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.097,
+     "peak": "책"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.75,
+    "median_fire": 0.523,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2350153c",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Korean 'document'",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: ' 문서' x6 of top 32 (Microsoft KB-style Korean); other peaks are scattered (hyphens in Russian dates, '여러분'). Near misses are Korean KB-style sentences without 문서.",
+ "selection": "random draw",
+ "trigger": {
+  "words": [
+   "문서"
+  ]
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-fff6e3ec",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N9411+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:33:59+00:00",
+ "recipe": {
+  "toolchain_commit": "b2350153c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N9411_pos/2026-11-27-lm1909-fff6e3ec.tests.json"
+ },
+ "label": "'return' / 'back' meaning a return TO a previous state or place (returns to, falls back to), as opposed to coming back FROM a trip (the - pole)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N9411_pos/2026-11-27-lm1909-fff6e3ec.tests.json",
+   "prereg_commit": "b2350153c",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.669,
+     "peak": " returns"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.061,
+     "peak": "After"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.602,
+     "peak": " back"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.071,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.197,
+     "peak": " back"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.482,
+     "peak": " returns"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.045,
+     "peak": " their"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.24,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " Brazil"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": "After"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.006,
+     "peak": " colour"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.006,
+     "peak": " elections"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": " stopped"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": "After"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.009,
+     "peak": " Korea"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.007,
+     "peak": "Prices"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.218,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "b2350153c",
+  "minutes": 6,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "return to prior state",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: ' back' x15, ' return' x8 of top 32, followed by 'to <state>' (return to democracy, falls back to its ground state); the - pole is 'returned from <trip>', and the + output direction suppresses ' from'. Near misses use 'returned/back from' travel and non-return verbs.",
+ "selection": "random draw"
+}
