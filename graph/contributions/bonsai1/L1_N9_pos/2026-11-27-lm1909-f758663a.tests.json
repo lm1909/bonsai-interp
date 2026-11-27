@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-27-lm1909-f758663a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:06:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L1/N9",
+   "pole": "+",
+   "label": "dense, tiny pole (max 0.17, 45% of tokens reach 0.1 of max); best guess: identifier pieces in code such as 'Field' in SelectField",
+   "fire": [
+    "account_type = SelectField('Account type', choices=TYPES)",
+    "name = CharField(max_length=100, blank=True)",
+    "created = DateTimeField(auto_now_add=True)",
+    "price = DecimalField(max_digits=8, decimal_places=2)",
+    "email = EmailField(unique=True, null=False)",
+    "status = SelectField('Status', choices=STATUS_CHOICES)",
+    "score = IntegerField(default=0, validators=[check])",
+    "notes = TextField(blank=True, default='')"
+   ],
+   "quiet": [
+    "The account type was chosen from a short list of options.",
+    "Her name was written in small letters on the label.",
+    "The record was created automatically on the first visit.",
+    "The price had two decimal places and a currency sign.",
+    "Each email address on the list had to be unique.",
+    "The status was chosen from a short list of choices.",
+    "The score started at zero and was checked each round.",
+    "The notes were left blank for most of the entries."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "dense; code identifiers",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1
+}
