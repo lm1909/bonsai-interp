@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-b0e4026f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L30/N886-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:07:01+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L30/N886",
+   "pole": "-",
+   "label": "SQL query construction in code (SQL clauses, query-builder calls, sql modules)",
+   "fire": [
+    "from sqlalchemy.sql import select\n\nquery = select(users).where(users.c.age > 30)",
+    "cur = conn.cursor()\ncur.execute(\"SELECT name FROM users WHERE id = ?\", (uid,))",
+    "    def test_where_filter_pushdown(self):\n        expr = t.filter(t.a > 1).group_by('b')",
+    "self.connection.execute(\"PRAGMA journal_mode = WAL;\")\nself.connection.commit()",
+    "agg = table.group_by('city').aggregate(table.price.sum().name('total'))",
+    "sql = \"INSERT INTO orders (id, total) VALUES (%s, %s)\"\ncursor.execute(sql, row)",
+    "query = session.query(Order).filter(Order.total > 100).order_by(Order.id)",
+    "class ToSQLite(luigi.Task):\n    table = luigi.Parameter()\n"
+   ],
+   "quiet": [
+    "from collections import OrderedDict\n\nitems = OrderedDict(sorted(data.items()))",
+    "f = open(path)\nlines = f.read().splitlines()",
+    "    def test_split_words(self):\n        words = text.split(' ')",
+    "self.window.title(\"Settings\")\nself.window.mainloop()",
+    "total = sum(price for price in prices if price > 0)",
+    "msg = \"Hello %s, you have %s messages\"\nprint(msg % (name, n))",
+    "result = sorted(items, key=lambda x: x.total, reverse=True)",
+    "class Downloader(object):\n    url = None\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "SQL in code",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: test_where_no_pushdown, PRAGMA temp_store, GROUP BY/ORDER BY docs, .sum().name('sum'), ToSQl task, sqlalchemy.sql import. Output + promotes 'stored/procedure'. Near misses are Python of the same shape without SQL."
+}

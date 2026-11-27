@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-7368d268",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N5281+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:07:01+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N5281",
+   "pole": "+",
+   "label": "a resource name used as an API parameter or field key in code (docId, QueueUrl=, deployment=, receipt_type)",
+   "fire": [
+    "def test_get(self):\n    \"\"\"Test GET /api/invoices/{invoiceId}/status\"\"\"\n    r = self.client.get(url)",
+    "response = client.get_bucket_policy(\n    BucketName=bucket,\n)",
+    "try:\n    op = services_client.delete(project=project, service=name).execute()\nexcept errors.HttpError:",
+    "CREATE TABLE payments (id INT, order_number VARCHAR(12), invoice_type VARCHAR(20))",
+    "url = base + '/documents?docId=' + str(doc_id)\nr = requests.get(url)",
+    "result = api.update_order(\n    OrderId=order_id,\n    Status='shipped',\n)",
+    "params = {'userId': uid, 'ticketId': tid}\nresp = session.post(url, json=params)",
+    "job = jobs_client.get(project=project, job=job_name).execute()\nprint(job['state'])"
+   ],
+   "quiet": [
+    "def test_get(self):\n    \"\"\"Test that the sum is correct\"\"\"\n    r = add(2, 3)",
+    "response = compute(\n    3,\n)",
+    "try:\n    total = sum(values) / len(values)\nexcept ZeroDivisionError:",
+    "x = [1, 2, 3]\ny = [v * 2 for v in x]\nprint(len(y))",
+    "s = 'hello ' + str(n)\nprint(s.upper())",
+    "result = math.sqrt(\n    a * a + b * b,\n)",
+    "for i in range(10):\n    if i % 2 == 0:\n        print(i)",
+    "n = len(items)\nwhile n > 0:\n    n -= 1"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "API resource key",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card: '{doc}Id' in a REST path, ' Queue'Url=, deployment=name, receipt_type column, (task_result). Near misses keep code but use generic names."
+}

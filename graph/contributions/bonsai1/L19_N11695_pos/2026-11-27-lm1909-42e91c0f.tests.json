@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-42e91c0f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N11695+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:07:01+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N11695",
+   "pole": "+",
+   "label": "addition in code: the + operator or the argument boundary inside an add() call (a + b, numpy.add(x), y)",
+   "fire": [
+    "    total = price + tax\n    return total",
+    "        s = left + right\n        return s if s else None",
+    "    out = numpy.add(numpy.squeeze(a), numpy.squeeze(b))\n    return out",
+    "angle = np.arctan((x.flatten() + 1e-6) / y)",
+    "        count = count + 1\n        if count > limit:",
+    "    name = first + ' ' + last\n    print(name)",
+    "    result = torch.add(features, bias)\n    return result",
+    "    z = x + y + offset\n    return z"
+   ],
+   "quiet": [
+    "    total = price * rate\n    return total",
+    "        s = left * right\n        return s if s else None",
+    "    out = numpy.multiply(numpy.squeeze(a), 2)\n    return out",
+    "angle = np.arctan(x.flatten() / y)",
+    "        count = len(items)\n        if count > limit:",
+    "    name = first.upper()\n    print(name)",
+    "    result = torch.matmul(features, weights)\n    return result",
+    "    z = x * y * scale\n    return z"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "addition in code",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: ' +' x6, '),' in numpy.add(numpy.squeeze(weights), ...), 'adding the opposite'. Output promotes inverse/reverse/subtract. Near misses keep code with *, - or calls that are not additions."
+}
