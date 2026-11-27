@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-1737c32d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N4989-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:27:33+00:00",
+ "recipe": {
+  "toolchain_commit": "bfea15fd4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L3_N4989_neg/2026-11-27-lm1909-1737c32d.tests.json"
+ },
+ "label": "broad weak unit: mid-word subword pieces of rare or foreign words (Pur|ported, opport|unist, opprob|rium)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L3_N4989_neg/2026-11-27-lm1909-1737c32d.tests.json",
+   "prereg_commit": "bfea15fd4",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.267,
+     "peak": " purported"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.091,
+     "peak": " opportun"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.352,
+     "peak": "rium"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.518,
+     "peak": "t"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.135,
+     "peak": "ls"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.041,
+     "peak": " were"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.1,
+     "peak": "She"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.024,
+     "peak": " puzzle"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.115,
+     "peak": " later"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.052,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.113,
+     "peak": " public"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.041,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": "They"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.083,
+     "peak": " were"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.089,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.056,
+     "peak": " puzzle"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.695,
+    "median_fire": 0.118,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "bfea15fd4",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "mid-word subword pieces",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags broad (5.6% of tokens above 0.1 of max) and the gate-closed regime dominates (92%); max 0.85. Recorded to document the density.",
+ "selection": "random draw"
+}
