@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-6c66aade",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3840+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:06:45+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N3840",
+   "pole": "+",
+   "label": "an inner piece of a word the tokenizer splits (genau|e, En|list, Fid|uci|ary); the pole is dense",
+   "fire": [
+    "Bitte lesen Sie die genaue Anleitung zuerst.",
+    "The bank holds fiduciary accounts for the trust.",
+    "He decided to enlist in the navy at eighteen.",
+    "The town of Rastatt lies near Gaggenau.",
+    "The judge rejected the defendant's perfunctory apology.",
+    "Wir brauchen eine ungefähre Schätzung bis Freitag.",
+    "The surgeon removed the appendix laparoscopically.",
+    "She studied the idiosyncrasies of the old machine."
+   ],
+   "quiet": [
+    "Bitte lesen Sie die Anleitung zuerst.",
+    "The bank holds savings accounts for the trust.",
+    "He decided to join the navy at eighteen.",
+    "The town lies near the river.",
+    "The judge rejected the defendant's short apology.",
+    "Wir brauchen eine Zahl bis Freitag.",
+    "The surgeon removed the appendix this morning.",
+    "She studied the habits of the old machine."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "inner piece of split word",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "card flags both poles dense (23% of tokens reach 0.1 of max). Probe: genaue 0.87, Enlist 0.73, fiduciary 0.68"
+}

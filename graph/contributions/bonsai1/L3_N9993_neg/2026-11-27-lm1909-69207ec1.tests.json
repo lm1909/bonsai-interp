@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-69207ec1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L3/N9993-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:06:45+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L3/N9993",
+   "pole": "-",
+   "label": "the word piece right after 'off' when the tokenizer splits off+X (off|spring, off|load, off|shoot)",
+   "fire": [
+    "The sows cared for their offsprings until weaning.",
+    "We offload heavy jobs to a second machine at night.",
+    "Trucks were offloading crates at the dock all morning.",
+    "That band was an offshoot of an older punk group.",
+    "for child in parent.n_offspring: count += 1",
+    "The plan is to offload the backups onto tape.",
+    "Several offshoots of the movement appeared in the 1970s.",
+    "The study tracked the offsprings of two hundred mice."
+   ],
+   "quiet": [
+    "The sows cared for their young until weaning.",
+    "We run heavy jobs on a second machine at night.",
+    "Trucks were loading crates at the dock all morning.",
+    "That band grew out of an older punk group.",
+    "for child in parent.children: count += 1",
+    "The plan is to copy the backups onto tape.",
+    "Several branches of the movement appeared in the 1970s.",
+    "The study tracked the spring births of two hundred mice."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "piece after split 'off'",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "' offspring' is a single token; the pole fires on the second piece when the word splits. Probe: offsprings 0.84, offload 0.54, offshoot 0.31, 'spring day' 0.0"
+}
