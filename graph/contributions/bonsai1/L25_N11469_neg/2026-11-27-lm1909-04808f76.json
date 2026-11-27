@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-04808f76",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N11469-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:36:39+00:00",
+ "recipe": {
+  "toolchain_commit": "3ca48fe45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L25_N11469_neg/2026-11-27-lm1909-04808f76.tests.json"
+ },
+ "label": "an opening quotation mark or parenthesis (' \"', ' (', ' “', ' «') inside Arabic-script text",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L25_N11469_neg/2026-11-27-lm1909-04808f76.tests.json",
+   "prereg_commit": "3ca48fe45",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.466,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.458,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.584,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.703,
+     "peak": " “"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.381,
+     "peak": " ("
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.358,
+     "peak": " «"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.52,
+     "peak": " \""
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.376,
+     "peak": " ("
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.064,
+     "peak": " لل"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.014,
+     "peak": "ؤ"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.062,
+     "peak": " ال"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.005,
+     "peak": "ان"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": "قف"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "قال"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " ا"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.0,
+     "peak": " ج"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.462,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3ca48fe45",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "open quote/paren in Arabic",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "Card: ' (' x14, ' \"' x11, ' “' x3, ' «' in top 32, all in Arabic text. The + pole is broad Arabic function words (من, في, أي). Near misses are Arabic sentences of the same kind with no quote or bracket.",
+ "selection": "random draw"
+}

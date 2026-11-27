@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-bd21b2bb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N1954+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:36:21+00:00",
+ "recipe": {
+  "toolchain_commit": "3ca48fe45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N1954_pos/2026-11-27-lm1909-bd21b2bb.tests.json"
+ },
+ "label": "a digit inside a decimal number, journal volume, ratio or measurement (33.1, 255(5506), 179/289), as opposed to digits inside comma-grouped thousands, which the - pole takes",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N1954_pos/2026-11-27-lm1909-bd21b2bb.tests.json",
+   "prereg_commit": "3ca48fe45",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.911,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.844,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.631,
+     "peak": "1"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.549,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.433,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.413,
+     "peak": "5"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.267,
+     "peak": "8"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.441,
+     "peak": "7"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.336,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.206,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.103,
+     "peak": "6"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.138,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.063,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.466,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.061,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.431,
+     "peak": "7"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.495,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3ca48fe45",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "digits in decimals/volumes",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: + pole top tokens are single digits in decimals, citation volumes, fractions and IDs; - pole is digits in comma-separated large counts ('1,700,000', '9,818,605'). Near misses are same-topic text with comma-grouped counts, which tests that distinction.",
+ "selection": "random draw"
+}

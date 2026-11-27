@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-18b1156e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N12240+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:36:23+00:00",
+ "recipe": {
+  "toolchain_commit": "3ca48fe45",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N12240_pos/2026-11-27-lm1909-18b1156e.tests.json"
+ },
+ "label": "the Arabic attached pronoun suffix 'م' ('-hum', their/them) as its own token at the end of a word such as عددهم or تجدهم",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N12240_pos/2026-11-27-lm1909-18b1156e.tests.json",
+   "prereg_commit": "3ca48fe45",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.904,
+     "peak": "م"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.396,
+     "peak": "م"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.111,
+     "peak": "طلب"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.089,
+     "peak": "خرج"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.082,
+     "peak": " إلى"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.069,
+     "peak": "اج"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.072,
+     "peak": "عاد"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.082,
+     "peak": " المس"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.068,
+     "peak": " إلى"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.11,
+     "peak": "ك"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.119,
+     "peak": "طلب"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.101,
+     "peak": "خرج"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.072,
+     "peak": "قال"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.069,
+     "peak": "اج"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.072,
+     "peak": "عاد"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.136,
+     "peak": " ابن"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.602,
+    "median_fire": 0.085,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3ca48fe45",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Arabic suffix -hum",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card flags broad (2.6%) and gate-closed (-x- echo 88%), max 0.48. 'م' x10 of top 32, all the -hum suffix. Also weak English adverbs ('easy', 'exclusively'). Expected to be hard to pass.",
+ "selection": "random draw"
+}
