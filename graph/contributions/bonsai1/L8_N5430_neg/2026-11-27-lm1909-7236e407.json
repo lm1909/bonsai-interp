@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-7236e407",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N5430-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:27:12+00:00",
+ "recipe": {
+  "toolchain_commit": "5b1bbb826",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N5430_neg/2026-11-27-lm1909-7236e407.tests.json"
+ },
+ "label": "best guess: a word piece completing a proper name (surname or place name ending)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N5430_neg/2026-11-27-lm1909-7236e407.tests.json",
+   "prereg_commit": "5b1bbb826",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.111,
+     "peak": " recent"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.446,
+     "peak": "r"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.127,
+     "peak": " new"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.731,
+     "peak": " Hours"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.23,
+     "peak": " Margaret"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.05,
+     "peak": " Chicago"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.225,
+     "peak": " Hend"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.155,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.093,
+     "peak": " recent"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.161,
+     "peak": " ancient"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.257,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.033,
+     "peak": " film"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.174,
+     "peak": " novel"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.07,
+     "peak": " city"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.236,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.21,
+     "peak": " a"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.594,
+    "median_fire": 0.19,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5b1bbb826",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "name completion (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card flags broad (10% of tokens reach 0.1 of max), gate-closed regime, tiny max 1.26; top examples are name endings (Al-Hijr, Bock, Johnson, 127 Hours). Recorded as dense.",
+ "selection": "random draw"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-63ee7760",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N6256-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:27:34+00:00",
+ "recipe": {
+  "toolchain_commit": "5b1bbb826",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N6256_neg/2026-11-27-lm1909-63ee7760.tests.json"
+ },
+ "label": "best guess: the token ' shade' / 'shade' (hillshade, lamp shade)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N6256_neg/2026-11-27-lm1909-63ee7760.tests.json",
+   "prereg_commit": "5b1bbb826",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.725,
+     "peak": " shade"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.738,
+     "peak": " shade"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.839,
+     "peak": "shade"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.7,
+     "peak": " shade"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.644,
+     "peak": " shade"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.845,
+     "peak": " shade"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.737,
+     "peak": " shade"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.718,
+     "peak": " shade"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.182,
+     "peak": " bench"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": " brass"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.138,
+     "peak": " shape"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.15,
+     "peak": " side"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.137,
+     "peak": " noise"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.068,
+     "peak": " barn"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.179,
+     "peak": " patio"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.731,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5b1bbb826",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "shade (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags dense (13.5% of tokens reach 0.1 of max), gate-closed leak regime, max 0.31; 'shade'/'ade' lead the top 32. Recorded as dense.",
+ "selection": "random draw"
+}

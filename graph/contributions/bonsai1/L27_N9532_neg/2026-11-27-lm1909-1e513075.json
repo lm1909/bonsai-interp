@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-1e513075",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N9532-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:26:32+00:00",
+ "recipe": {
+  "toolchain_commit": "5b1bbb826",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N9532_neg/2026-11-27-lm1909-1e513075.tests.json"
+ },
+ "label": "' stay' (and similar self-care verbs) in public-health advice to the sick: 'stay home', 'keep yourself healthy'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N9532_neg/2026-11-27-lm1909-1e513075.tests.json",
+   "prereg_commit": "5b1bbb826",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.428,
+     "peak": " stay"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.662,
+     "peak": " stay"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.291,
+     "peak": " stay"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.456,
+     "peak": " stay"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.694,
+     "peak": " stay"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.587,
+     "peak": " stay"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.563,
+     "peak": " them"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.252,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.071,
+     "peak": " before"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.412,
+     "peak": " after"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.052,
+     "peak": " down"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.083,
+     "peak": " test"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.209,
+     "peak": " wear"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.269,
+     "peak": " drink"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.227,
+     "peak": " and"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.076,
+     "peak": " and"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.509,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "5b1bbb826",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "stay home if sick",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "Card: top example ' stay' in 'If you are sick with flu-like illness, stay home'; also 'Keep yourself healthy', 'stay in jail'.",
+ "selection": "random draw"
+}
