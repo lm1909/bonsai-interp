@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-27-lm1909-09c22797",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N12086-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N12086",
+   "pole": "-",
+   "label": "directory or root-path identifiers in code (BASE_DIR, PROJECT_ROOT, basedir)",
+   "fire": [
+    "import os\nBASE_DIR = os.path.dirname(os.path.abspath(__file__))",
+    "import os\nPROJECT_ROOT = os.path.dirname(SETTINGS_DIR)",
+    "    config_path = os.path.join(basedir, 'config.yaml')",
+    "DATA_DIR = '/var/lib/myapp/data'\nLOG_DIR = '/var/log/myapp'",
+    "    template_dir = os.path.join(ROOT_DIR, 'templates')",
+    "export WORKSPACE_ROOT=/home/build/workspace",
+    "    self.cache_dir = os.path.expanduser('~/.cache/tool')",
+    "OUTPUT_DIR = os.path.join(REPO_ROOT, 'build')"
+   ],
+   "quiet": [
+    "import os\nMAX_RETRIES = int(os.environ.get('RETRIES', 3))",
+    "import os\nDEBUG = os.environ.get('DEBUG') == '1'",
+    "    config = yaml.safe_load(open('config.yaml'))",
+    "TIMEOUT = 30\nLOG_LEVEL = 'info'",
+    "    template = env.get_template('index.html')",
+    "export BUILD_NUMBER=42",
+    "    self.cache_size = 1024 * 1024",
+    "OUTPUT_FORMAT = 'json'"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "directory path identifier",
+ "unit_kind": "lexical",
+ "confidence": 0.45
+}

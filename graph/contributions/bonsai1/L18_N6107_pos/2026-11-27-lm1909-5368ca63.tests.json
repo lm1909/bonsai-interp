@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-27-lm1909-5368ca63",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N6107+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:04+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N6107",
+   "pole": "+",
+   "label": "end of a statement line inside a Python class or method body (newline after an assignment or call)",
+   "fire": [
+    "class Plot:\n    def __init__(self):\n        self.ax = None\n        self.fig = None\n",
+    "    def start(self):\n        logging.info('starting')\n        self._connect()\n        logging.debug('done')",
+    "class Kind:\n    Integer = 'int'\n    String = 'str'\n    Boolean = 'bool'",
+    "    def reset(self):\n        self.count = 0\n        self.items = []\n        self.total = 0",
+    "    order = [start_node]\n    seen = set([start_node])\n    queue = [start_node]",
+    "class Client:\n    def connectionLost(self, reason):\n        print(reason)",
+    "    def close(self):\n        self.sock.close()\n        self.sock = None",
+    "    def __repr__(self):\n        return 'Point(%d, %d)' % (self.x, self.y)"
+   ],
+   "quiet": [
+    "The plot class keeps the axes and the figure empty until they are drawn.",
+    "The start method logs a message, connects, and then logs that it is done.",
+    "The kind class lists integer, string and boolean as plain names.",
+    "Resetting sets the count to zero, clears the items and the total.",
+    "The order begins with the start node, which is also marked as seen.",
+    "When the client loses its connection, it prints the reason.",
+    "Closing the object closes the socket and then forgets it.",
+    "The point is printed with its two coordinates in brackets."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "code line end",
+ "unit_kind": "unclear",
+ "confidence": 0.15
+}
