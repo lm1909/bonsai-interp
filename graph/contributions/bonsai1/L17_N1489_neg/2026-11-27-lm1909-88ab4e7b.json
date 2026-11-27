@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-88ab4e7b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N1489-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:19:27+00:00",
+ "recipe": {
+  "toolchain_commit": "ca21f2691",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L17_N1489_neg/2026-11-27-lm1909-88ab4e7b.tests.json"
+ },
+ "label": "' account' / ' cash' as the money object in banking and payment phrases (bank account, ATM cash)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L17_N1489_neg/2026-11-27-lm1909-88ab4e7b.tests.json",
+   "prereg_commit": "ca21f2691",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.158,
+     "peak": " to"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.097,
+     "peak": " paid"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.46,
+     "peak": " cash"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.12,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.245,
+     "peak": " purchases"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.263,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.507,
+     "peak": " cash"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.086,
+     "peak": " end"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.071,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.062,
+     "peak": " paid"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.093,
+     "peak": " purchases"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.028,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.177,
+     "peak": " replacement"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.026,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.071,
+     "peak": " bakery"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " bank"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.922,
+    "median_fire": 0.202,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ca21f2691",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "bank account / cash",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "Card top examples are mixed (code outputs[0], kwargs ',\\n', bank account, ATM cash, coming out); testing the banking pair only.",
+ "selection": "random draw"
+}

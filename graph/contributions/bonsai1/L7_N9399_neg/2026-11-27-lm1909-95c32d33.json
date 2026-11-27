@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-95c32d33",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N9399-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:19:33+00:00",
+ "recipe": {
+  "toolchain_commit": "ca21f2691",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N9399_neg/2026-11-27-lm1909-95c32d33.tests.json"
+ },
+ "label": "' via' / ' credit' in image-attribution lines (via Wikimedia Commons, Image credit)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N9399_neg/2026-11-27-lm1909-95c32d33.tests.json",
+   "prereg_commit": "ca21f2691",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.316,
+     "peak": " via"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.326,
+     "peak": " via"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.344,
+     "peak": " credit"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.182,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.373,
+     "peak": " credit"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.124,
+     "peak": " via"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.186,
+     "peak": " credit"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.11,
+     "peak": " via"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": " years"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.034,
+     "peak": " glacier"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": "3"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.017,
+     "peak": " fox"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.029,
+     "peak": " famous"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.036,
+     "peak": " Way"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.017,
+     "peak": " fire"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.251,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ca21f2691",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "image attribution via",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Weak pole (max 4.0); also fires on '.' in chemical formulas and '%' in code.",
+ "selection": "random draw"
+}

@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-67a69703",
+ "kind": "interpret",
+ "neuron": "bonsai1/L14/N7466-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:20:18+00:00",
+ "recipe": {
+  "toolchain_commit": "ca21f2691",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L14_N7466_neg/2026-11-27-lm1909-67a69703.tests.json"
+ },
+ "label": "the line break (',\\n' / '\\n') ending a line of rhymed verse",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L14_N7466_neg/2026-11-27-lm1909-67a69703.tests.json",
+   "prereg_commit": "ca21f2691",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.072,
+     "peak": " sleeps"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.095,
+     "peak": ",\n"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.146,
+     "peak": ",\n"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.128,
+     "peak": " bed"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.177,
+     "peak": " we"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.11,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.094,
+     "peak": " see"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.076,
+     "peak": " cool"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.007,
+     "peak": " turns"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": " home"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.011,
+     "peak": " most"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.007,
+     "peak": " played"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.008,
+     "peak": " cheese"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.014,
+     "peak": " up"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.005,
+     "peak": " along"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.103,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ca21f2691",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "verse line breaks",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "selection": "random draw"
+}
