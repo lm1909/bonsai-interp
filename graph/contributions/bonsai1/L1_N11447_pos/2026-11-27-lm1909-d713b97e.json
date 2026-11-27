@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-d713b97e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N11447+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:27:00+00:00",
+ "recipe": {
+  "toolchain_commit": "4622926f4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N11447_pos/2026-11-27-lm1909-d713b97e.tests.json"
+ },
+ "label": "dense layer-1 unit; best guess: ' based' in 'X based' / 'based on' compounds",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N11447_pos/2026-11-27-lm1909-d713b97e.tests.json",
+   "prereg_commit": "4622926f4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.707,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.656,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.608,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.609,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.431,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.444,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.465,
+     "peak": " based"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.566,
+     "peak": " based"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.302,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.338,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.246,
+     "peak": " startup"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.296,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.258,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.185,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.25,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.249,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.587,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4622926f4",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "' based' (dense)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags dense (26% of tokens > 0.1 max) and gate-closed echo regime; recorded as dense.",
+ "selection": "random draw"
+}
