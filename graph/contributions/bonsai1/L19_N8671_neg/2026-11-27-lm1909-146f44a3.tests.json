@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-146f44a3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N8671-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:28:31+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N8671",
+   "pole": "-",
+   "label": "the start of a print / logging / raise call in Python code: the indentation or opening '(\"' / \"('\" token of a print, logger or raise statement",
+   "fire": [
+    "def load(path):\n    data = read_file(path)\n    if not data:\n        print(\"no data found in\", path)\n    return data",
+    "for item in batch:\n    total += item.size\n    logger.error('failed to parse item %s', item.id)\n    continue",
+    "try:\n    conn = connect(host)\nexcept OSError:\n    logging.exception('could not reach host')\n    sys.exit(1)",
+    "results = train(model, epochs=5)\n\n    print(results)\n    print(\"accuracy:\", results['acc'])",
+    "if response.status != 200:\n    app.logger.warning(\"bad status from upstream server\")\n    raise RuntimeError(\"request failed\")",
+    "def check(cfg):\n    if 'key' not in cfg:\n        raise ValueError(\"missing key in config\")\n    print('config ok')",
+    "while queue:\n    job = queue.pop()\n    # debug\n    print \"processing job %d\" % job.id\n    job.run()",
+    "with open(out, 'w') as fh:\n    fh.write(text)\n    log.info(\"wrote %d bytes to %s\", len(text), out)\n"
+   ],
+   "quiet": [
+    "def load(path):\n    data = read_file(path)\n    if not data:\n        data = default_payload()\n    return data",
+    "for item in batch:\n    total += item.size\n    sizes.append(item.size)\n    continue",
+    "try:\n    conn = connect(host)\nexcept OSError:\n    conn = connect(backup_host)\n    retries += 1",
+    "results = train(model, epochs=5)\n\n    scores = results['acc']\n    best = max(scores)",
+    "if response.status != 200:\n    attempts += 1\n    response = session.get(url, timeout=10)",
+    "def check(cfg):\n    if 'key' not in cfg:\n        cfg['key'] = generate_key()\n    return cfg",
+    "while queue:\n    job = queue.pop()\n    # next step\n    job.prepare()\n    job.run()",
+    "with open(out, 'w') as fh:\n    fh.write(text)\n    written = len(text)\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "Python print/log call start",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: top tokens are indentation before print, \"('\" after logger.exception, ' \"' after print. The + pole also fires on print/debug lines, so the two poles may split print-statement context finely."
+}
