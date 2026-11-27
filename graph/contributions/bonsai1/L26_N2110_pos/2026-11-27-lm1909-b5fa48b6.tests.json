@@ -1,0 +1,51 @@
+{
+ "contribution": "2026-11-27-lm1909-b5fa48b6",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N2110+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L26/N2110",
+   "pole": "+",
+   "label": "the token ' &' joining two operands or names (pandas boolean masks, 'Simon & Schuster'), plus bracketed citation numbers",
+   "fire": [
+    "mask = (df['age'] > 30) & (df['city'] == 'Paris')",
+    "The novel was first published by Simon & Schuster in 1987.",
+    "subset = data[(data['lat'] > 40.2) & (data['lat'] < 41.0)]",
+    "Smith, J. & Jones, K. (2004). Learning to read. London: Hodder & Stoughton.",
+    "Resistance to these drugs is rising worldwide (1, 2).",
+    "keep = (values >= low) & (values <= high)",
+    "Several trials have reported similar effects [14, 15].",
+    "The firm was founded as Johnson & Sons in a small shop in Leeds."
+   ],
+   "quiet": [
+    "mask = df['age'] > 30\nprint(mask.sum())",
+    "The novel was first published by a small press in 1987.",
+    "subset = data[data['lat'] > 40.2]",
+    "Smith and Jones wrote a book about learning to read in London.",
+    "Resistance to these drugs is rising worldwide, doctors say.",
+    "keep = values >= low",
+    "Several trials have reported similar effects in older patients.",
+    "The firm was founded by Johnson and his sons in a small shop in Leeds."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "' &' joiner / citation no.",
+ "unit_kind": "lexical",
+ "confidence": 0.4,
+ "notes": "Card: ' &' x8 (pandas masks, publisher names), digits x11 (citation numbers '(1,2)', '[14, 15]'). The shared pattern may be 'a short connective/number inside a reference or expression'; test leans on ' &'. Near misses use 'and' / no citation.",
+ "trigger": {
+  "tokens": [
+   " &"
+  ]
+ }
+}

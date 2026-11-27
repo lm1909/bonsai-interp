@@ -1,0 +1,53 @@
+{
+ "contribution": "2026-11-27-lm1909-6970681f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N3808-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N3808",
+   "pole": "-",
+   "label": "the start of a split form of 'survey' (' Sur'|veys, ' SUR'|VEYOR, re'-s'|urvey)",
+   "fire": [
+    "Recent national Surveys of more than 3,000 households show rising rents.",
+    "The county hired a team to re-survey the old farm boundaries.",
+    "A LICENSED BUILDING SURVEYOR MUST SIGN OFF ON THE PLANS.",
+    "Annual Health Surveys have tracked smoking rates since the 1960s.",
+    "Earlier Surveys of the reef found far more coral than today.",
+    "After the flood, engineers had to re-survey the whole river bank.",
+    "THE CHIEF SURVEYOR ARRIVED ON SITE EARLY ON MONDAY.",
+    "Two Surveys carried out last spring gave very different results."
+   ],
+   "quiet": [
+    "Recent national studies of more than 3,000 households show rising rents.",
+    "The county hired a team to fence the old farm boundaries.",
+    "A LICENSED BUILDING INSPECTOR MUST SIGN OFF ON THE PLANS.",
+    "Annual health reports have tracked smoking rates since the 1960s.",
+    "Earlier dives on the reef found far more coral than today.",
+    "After the flood, engineers had to rebuild the whole river bank.",
+    "THE CHIEF ENGINEER ARRIVED ON SITE EARLY ON MONDAY.",
+    "Two experiments carried out last spring gave very different results."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "split 'survey' start",
+ "unit_kind": "lexical",
+ "confidence": 0.55,
+ "notes": "Card: ' Sur' x3, '-s' x2 (re-survey), ' SUR'VEYOR, 'Ordnance' before Survey; the opposite output direction promotes survey/poll words. Tokenizer: ' Surveys' = ' Sur'+'veys', ' SURVEYOR' = ' SUR'+..., ' re-survey' = ' re'+'-s'+'urvey'; ' Survey' and ' surveyor' do not split this way, so fire items use the split forms. Near misses use other words for studies/inspectors.",
+ "trigger": {
+  "pieces": [
+   " Sur",
+   " SUR",
+   "-s"
+  ]
+ }
+}

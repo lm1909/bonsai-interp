@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-6e8c3176",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L32/N11993-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L32/N11993",
+   "pole": "-",
+   "label": "separator tokens (',' and ' in') inside Python code expressions (argument lists, 'for x in', 'if s in name')",
+   "fire": [
+    "def build(items):\n    result = []\n    for item in items:\n        result.append(item)\n    return result",
+    "    def test_flags(self):\n        self.flags(enabled=True, group='console')\n        self.assertTrue(self.ok)",
+    "if 'error' in message:\n    return 'failed'\nelif 'warn' in message:\n    return 'warning'",
+    "    path = os.path.join(base_dir, 'data', name)\n    with open(path, 'r') as fh:\n        text = fh.read()",
+    "for key in sorted(counts):\n    print(key, counts[key])\n",
+    "    resp = make_response(json.dumps(rows), 200)\n    resp.headers['Content-Type'] = 'application/json'",
+    "names = [n.strip() for n in line.split(',') if n]\nprint(len(names), names[0])",
+    "    model.fit(X_train, y_train, epochs=10, batch_size=32)\n    score = model.evaluate(X_test, y_test)"
+   ],
+   "quiet": [
+    "To build the list, we walk through the items one by one, append each item, and return the result at the end.",
+    "In the test we turn the flags on, set the group to console, and check that the result is fine.",
+    "If the word error appears in the message, the function reports a failure, and otherwise it warns.",
+    "The path is joined from the base folder, the data folder and the name, and then the file is read.",
+    "We go through the keys in sorted order, and print each key with its count.",
+    "The response holds the rows as JSON, with status 200, and its content type is set to JSON.",
+    "Each line is split on commas, the names are stripped, and empty ones are thrown away.",
+    "The model is trained for ten epochs, in batches of thirty-two, and then scored on the test set."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "Python code separators",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "Card: ',' x13 and ' in' x4 of the top 32, all inside Python source. Near misses are English prose about the same programming topics that also use commas and 'in'."
+}

@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-49fcf72a",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N11539-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N11539",
+   "pole": "-",
+   "label": "the word introducing the clock time of an incident in news reports ('at' around 8 p.m., 'just' after 11pm, 'early' Monday)",
+   "fire": [
+    "Police said the man was arrested at about 9 p.m. outside a bar.",
+    "The victim was pronounced dead at 2.15am, officers confirmed.",
+    "Firefighters were called to the warehouse just after 10pm on Sunday.",
+    "The driver was taken to hospital and underwent surgery early Tuesday.",
+    "Neighbours reported hearing shots at around 11.30pm last night.",
+    "The blaze was discovered at roughly 6:40am by a passing jogger.",
+    "A woman was robbed on the high street shortly before midnight.",
+    "Officers stopped the car at 1.20am and found a knife inside."
+   ],
+   "quiet": [
+    "Police said the man was arrested outside a bar for fighting.",
+    "The victim was pronounced dead in hospital, officers confirmed.",
+    "Firefighters were called to the warehouse by a worried neighbour.",
+    "The driver was taken to hospital and underwent surgery for leg injuries.",
+    "Neighbours reported hearing shots from the house across the road.",
+    "The blaze was discovered by a passing jogger who called for help.",
+    "A woman was robbed on the high street by two young men.",
+    "Officers stopped the car near the bridge and found a knife inside."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "news incident time 'at'",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Card: ' at' x11, ' on' x5, ' early' x3 of top 32, all right before the time of a crime/accident in local news; output suppresses ' around', weekday names. Near misses keep the news report but give no time (place or manner instead) and avoid 'at'."
+}
