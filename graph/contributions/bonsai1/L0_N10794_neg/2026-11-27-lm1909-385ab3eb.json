@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-385ab3eb",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N10794-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T03:15:03+00:00",
+ "recipe": {
+  "toolchain_commit": "55fb50e16",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L0_N10794_neg/2026-11-27-lm1909-385ab3eb.tests.json"
+ },
+ "label": "the word-final piece 'ay'/'AY' split off a word (ST|AY, astr|ay)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L0_N10794_neg/2026-11-27-lm1909-385ab3eb.tests.json",
+   "prereg_commit": "55fb50e16",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.595,
+     "peak": "ay"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.74,
+     "peak": "AY"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.086,
+     "peak": "AY"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.991,
+     "peak": "AY"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.593,
+     "peak": "ay"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.555,
+     "peak": "ay"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.954,
+     "peak": "AY"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.812,
+     "peak": "AY"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": " off"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.095,
+     "peak": " MONTH"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.031,
+     "peak": " TOM"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.037,
+     "peak": " package"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.119,
+     "peak": "lead"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.063,
+     "peak": "s"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.109,
+     "peak": " BE"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.039,
+     "peak": "AIN"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.776,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "55fb50e16",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split-off 'ay' piece",
+ "unit_kind": "lexical",
+ "confidence": 0.3,
+ "notes": "Card flags broad (2.3%) and gate-closed leak (73%); max only 0.31.",
+ "selection": "random draw"
+}
