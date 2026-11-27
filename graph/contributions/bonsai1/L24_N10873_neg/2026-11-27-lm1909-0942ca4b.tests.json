@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-27-lm1909-0942ca4b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N10873-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N10873",
+   "pole": "-",
+   "label": "Python code: the argument slot after isinstance(, convert or import, where a type or module name follows",
+   "fire": [
+    "def check(value):\n    if isinstance(value, str):\n        return value.strip()\n    return value",
+    "from os.path import join\nfrom collections import OrderedDict\n\nitems = OrderedDict()",
+    "def to_text(data):\n    elif isinstance(data, (bytes, bytearray)):\n        return data.decode('utf8')",
+    "import numpy as np\nfrom twisted.python.compat import unicode\n\nx = np.zeros(3)",
+    "# Set to true to convert tabs to spaces\nconvert_tabs = True\nwidth = 4",
+    "def load(obj):\n    if isinstance(obj, dict):\n        return obj.get('name')\n    raise TypeError",
+    "net = mx.symbol.Flatten(data=pool)\nnet = mx.symbol.FullyConnected(data=net, num_hidden=10)",
+    "def norm(path):\n    if isinstance(path, six.string_types):\n        path = [path]\n    return path"
+   ],
+   "quiet": [
+    "You should check whether the value is a string before you strip the spaces from it.",
+    "The module gives you a join function and an ordered dictionary for your items.",
+    "If the data is made of bytes, decode it as UTF-8 text before you print it.",
+    "We used numpy for the arrays and an older compatibility helper for unicode text.",
+    "Set this option if you want tabs turned into spaces, four per tab by default.",
+    "When the object is a dictionary, the loader returns its name field directly.",
+    "The network flattens the pooled output and then adds a fully connected layer.",
+    "If the path is a single string, the function wraps it in a list first."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "python type/module slot",
+ "unit_kind": "contextual",
+ "confidence": 0.3
+}
