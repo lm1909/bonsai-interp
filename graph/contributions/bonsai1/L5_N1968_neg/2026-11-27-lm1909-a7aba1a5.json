@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-a7aba1a5",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N1968-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T03:00:36+00:00",
+ "recipe": {
+  "toolchain_commit": "f0a0bec20",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N1968_neg/2026-11-27-lm1909-a7aba1a5.tests.json"
+ },
+ "label": "a verb or pronoun that opens a dependent clause after a framing word (\"figure out how\", \"inconceivable they\", \"keep from becoming\") (broad, unclear)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N1968_neg/2026-11-27-lm1909-a7aba1a5.tests.json",
+   "prereg_commit": "f0a0bec20",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.213,
+     "peak": " this"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.549,
+     "peak": " they"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.599,
+     "peak": " becoming"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.129,
+     "peak": " answering"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.234,
+     "peak": " these"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.141,
+     "peak": " done"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.086,
+     "peak": " approach"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.039,
+     "peak": "She"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.07,
+     "peak": " year"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.094,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.136,
+     "peak": "Before"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.025,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.032,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.025,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.065,
+     "peak": " Thursday"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.051,
+     "peak": " at"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.177,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "f0a0bec20",
+  "minutes": 5,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "clause-opening after frame",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Card flags broad (2.4%); top examples are mixed-language clause openings. Low confidence guess.",
+ "selection": "random draw"
+}
