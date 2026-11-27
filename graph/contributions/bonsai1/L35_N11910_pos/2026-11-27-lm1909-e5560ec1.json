@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-e5560ec1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N11910+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T03:07:43+00:00",
+ "recipe": {
+  "toolchain_commit": "9a379f060",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N11910_pos/2026-11-27-lm1909-e5560ec1.tests.json"
+ },
+ "label": "the first letter-piece of an adjective split by the tokenizer in French or German text (k|ünstlerisch, d|änisch)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N11910_pos/2026-11-27-lm1909-e5560ec1.tests.json",
+   "prereg_commit": "9a379f060",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.787,
+     "peak": " k"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.501,
+     "peak": " k"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.412,
+     "peak": " d"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.52,
+     "peak": " k"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.023,
+     "peak": " am"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.511,
+     "peak": " dé"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.521,
+     "peak": " kö"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.349,
+     "peak": " d"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.332,
+     "peak": " pol"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.104,
+     "peak": " ver"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.013,
+     "peak": "Wir"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.089,
+     "peak": " Et"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.34,
+     "peak": " ut"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.01,
+     "peak": "Le"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.097,
+     "peak": " fr"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " Lands"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.516,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "9a379f060",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "split word onset (FR/DE)",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "card: ' k', ' d', ' v', ' am' pieces before ünstlerisch, roatisch, änisch, usants; max 187.",
+ "selection": "random draw"
+}
