@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-a3a90926",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N1884-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:38:30+00:00",
+ "recipe": {
+  "toolchain_commit": "98c9b0a8f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N1884_neg/2026-11-27-lm1909-a3a90926.tests.json"
+ },
+ "label": "a Chinese change-of-state or result verb that takes 了 or a result complement next (搭建了, 变小了, 变得复杂, 暴露在)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N1884_neg/2026-11-27-lm1909-a3a90926.tests.json",
+   "prereg_commit": "98c9b0a8f",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.489,
+     "peak": "搭建"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.977,
+     "peak": "变"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.766,
+     "peak": "暴露"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.463,
+     "peak": "变得更加"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.532,
+     "peak": "屏蔽"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.486,
+     "peak": "纳入"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.173,
+     "peak": "改变"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.406,
+     "peak": "上涨"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.03,
+     "peak": "是"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.321,
+     "peak": "聊天"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.198,
+     "peak": "疲惫"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.169,
+     "peak": "大家都在"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.031,
+     "peak": "早上"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.067,
+     "peak": "有很多"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.04,
+     "peak": "几年"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.176,
+     "peak": "空气"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.487,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "98c9b0a8f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Chinese result verb before 了",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: 搭建, 变, 暴露, 屏蔽, 变得, 纳入; the + pole's logit suppresses 了, so this pole promotes 了 and perfective endings.",
+ "selection": "random draw"
+}

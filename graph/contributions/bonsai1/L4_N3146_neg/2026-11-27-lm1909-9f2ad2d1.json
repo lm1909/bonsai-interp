@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-9f2ad2d1",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N3146-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:38:20+00:00",
+ "recipe": {
+  "toolchain_commit": "98c9b0a8f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N3146_neg/2026-11-27-lm1909-9f2ad2d1.tests.json"
+ },
+ "label": "word-initial German umlaut syllable pieces (' hö', ' Dü') as in hört, Dürr, Dünen",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N3146_neg/2026-11-27-lm1909-9f2ad2d1.tests.json",
+   "prereg_commit": "98c9b0a8f",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.728,
+     "peak": " hö"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.772,
+     "peak": " Dü"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.648,
+     "peak": " Dü"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.179,
+     "peak": " la"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.391,
+     "peak": "ö"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.185,
+     "peak": "Sie"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.312,
+     "peak": " dü"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.45,
+     "peak": " hö"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.087,
+     "peak": " sch"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.134,
+     "peak": " Weber"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.058,
+     "peak": " dem"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.232,
+     "peak": " la"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.411,
+     "peak": "ö"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.216,
+     "peak": " sang"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.055,
+     "peak": " lang"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.43,
+     "peak": " Gä"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.812,
+    "median_fire": 0.42,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "98c9b0a8f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "German umlaut onset",
+ "unit_kind": "lexical",
+ "confidence": 0.35,
+ "notes": "Card: ' hö' x4, ' Dü' x3; max only 0.84, broad (3.4%) and leak regime, so near misses will fire weakly.",
+ "selection": "random draw"
+}

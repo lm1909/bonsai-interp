@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-0bba8278",
+ "kind": "interpret",
+ "neuron": "bonsai1/L7/N5052+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:40:06+00:00",
+ "recipe": {
+  "toolchain_commit": "98c9b0a8f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L7_N5052_pos/2026-11-27-lm1909-0bba8278.tests.json"
+ },
+ "label": "the word right after an existence or placement verb whose subject comes later ('there existed in', 'there emerged in', 'there was played', 'places in their hand')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L7_N5052_pos/2026-11-27-lm1909-0bba8278.tests.json",
+   "prereg_commit": "98c9b0a8f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.788,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.305,
+     "peak": " in"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.501,
+     "peak": " played"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.384,
+     "peak": " hands"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.436,
+     "peak": " lived"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.435,
+     "peak": " on"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.713,
+     "peak": " dans"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.717,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.018,
+     "peak": " those"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " capital"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " full"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.003,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " ago"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.014,
+     "peak": " stage"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.058,
+     "peak": " trouve"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.008,
+     "peak": " divided"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.469,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "98c9b0a8f",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "after inverted existential verb",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card: ' in' x9, ' to' x4, ' в' x3 after existed/emerged/retrouve/place/played with a postponed subject. Near misses: the same verbs in ordinary subject-first order, or no such verb.",
+ "selection": "random draw"
+}

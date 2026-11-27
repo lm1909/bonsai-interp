@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-de7dcde3",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N3685+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:38:42+00:00",
+ "recipe": {
+  "toolchain_commit": "98c9b0a8f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L27_N3685_pos/2026-11-27-lm1909-de7dcde3.tests.json"
+ },
+ "label": "the position where the next token names a person or user (author, user, owner, the person running it), mostly in code format strings",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L27_N3685_pos/2026-11-27-lm1909-de7dcde3.tests.json",
+   "prereg_commit": "98c9b0a8f",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.338,
+     "peak": "(ctx"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.014,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.484,
+     "peak": "(self"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.474,
+     "peak": "ote"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.262,
+     "peak": " the"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.393,
+     "peak": " request"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.124,
+     "peak": " by"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.374,
+     "peak": "format"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.004,
+     "peak": "msg"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.251,
+     "peak": "0"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " valid"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.154,
+     "peak": " vote"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.016,
+     "peak": " runs"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.065,
+     "peak": "',"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.037,
+     "peak": " deleted"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.309,
+     "peak": ".created"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.938,
+    "median_fire": 0.384,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "98c9b0a8f",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "next token is a user",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: tokens just before .uploader, self.user.username, v.user, ctx.author, 'the person running the program'; logit promotes person/someone/user/player/owner. Near misses keep the code shape but the next slot is not a person.",
+ "selection": "random draw"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-02ec080e",
+ "kind": "interpret",
+ "neuron": "bonsai1/L5/N7112-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:37:59+00:00",
+ "recipe": {
+  "toolchain_commit": "98c9b0a8f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L5_N7112_neg/2026-11-27-lm1909-02ec080e.tests.json"
+ },
+ "label": "the name piece ' Finn' / 'inn' / 'iss' inside surnames and given names (Finnegan, Finnis, Finnur, Grissom)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L5_N7112_neg/2026-11-27-lm1909-02ec080e.tests.json",
+   "prereg_commit": "98c9b0a8f",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.828,
+     "peak": " Finn"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.561,
+     "peak": "nis"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.692,
+     "peak": " Finn"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.882,
+     "peak": "iss"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.702,
+     "peak": " Finn"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.745,
+     "peak": " Finn"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.625,
+     "peak": " Finn"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.829,
+     "peak": " Finn"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.026,
+     "peak": "ss"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.008,
+     "peak": " keynote"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.002,
+     "peak": " team"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.022,
+     "peak": " Glenn"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " brave"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": "af"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " raft"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " Dublin"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.724,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "98c9b0a8f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "name piece Finn",
+ "unit_kind": "lexical",
+ "confidence": 0.6,
+ "notes": "Card: ' Finn' x14, 'iss' x7, 'inn' x3 of the top 32, all inside personal or place names. + pole is dense (19%).",
+ "selection": "random draw"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-52090ea0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7457+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:39:24+00:00",
+ "recipe": {
+  "toolchain_commit": "98c9b0a8f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L34_N7457_pos/2026-11-27-lm1909-52090ea0.tests.json"
+ },
+ "label": "the onset of the word 'crime' and words standing right before it ('cr' in crimes/crímenes/crimen, 'war' in war crimes, тяжкие before убийства)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L34_N7457_pos/2026-11-27-lm1909-52090ea0.tests.json",
+   "prereg_commit": "98c9b0a8f",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.743,
+     "peak": " cr"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.516,
+     "peak": " cr"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.139,
+     "peak": " war"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.292,
+     "peak": "cr"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.039,
+     "peak": " crimes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.179,
+     "peak": " crimes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.233,
+     "peak": " cr"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.164,
+     "peak": " war"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.561,
+     "peak": " los"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " los"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.079,
+     "peak": " alleged"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " as"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.008,
+     "peak": "Os"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.003,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": " de"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.003,
+     "peak": " by"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.875,
+    "median_fire": 0.206,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "98c9b0a8f",
+  "minutes": 4,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "crime word onset",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: ' cr' x5, ' war' x3, ' Cr' x3 (cr|imes, cr|ímenes, cr|imen, war crimes); logit suppresses crime/offense/sins, so the pole sits on the slot that the crime word fills.",
+ "selection": "random draw"
+}

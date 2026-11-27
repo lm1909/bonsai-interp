@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-76e1630b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L26/N3642-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:38:10+00:00",
+ "recipe": {
+  "toolchain_commit": "98c9b0a8f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L26_N3642_neg/2026-11-27-lm1909-76e1630b.tests.json"
+ },
+ "label": "Arabic-script letters early in a text window (positional: top peaks cluster at window position 1)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L26_N3642_neg/2026-11-27-lm1909-76e1630b.tests.json",
+   "prereg_commit": "98c9b0a8f",
+   "author": "lm1909",
+   "n_fire": 0,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.051,
+     "peak": " تن"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.153,
+     "peak": "قسم"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.162,
+     "peak": " الكريم"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.209,
+     "peak": " الص"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.09,
+     "peak": " الع"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.223,
+     "peak": " جديد"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.058,
+     "peak": "قرأ"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.097,
+     "peak": "ر"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.001,
+     "peak": " city"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": " section"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.005,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.004,
+     "peak": " lesson"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " book"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.011,
+     "peak": " to"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.125,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "98c9b0a8f",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "early Arabic letters",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags positional (25% of top peaks at position 1, 59% within the first 16 tokens); top examples are short Arabic fragments. Expected to fail; recorded to document the positional unit.",
+ "selection": "random draw"
+}
