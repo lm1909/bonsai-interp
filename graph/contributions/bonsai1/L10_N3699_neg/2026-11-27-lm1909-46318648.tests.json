@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-27-lm1909-46318648",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N3699-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:48:30+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N3699",
+   "pole": "-",
+   "label": "argument slot after the path in a Python I/O call: ' mode'/' timeout' keywords and the opening quote of the mode string",
+   "fire": [
+    "def load(path):\n    with open(path, mode='rb') as fh:\n        return fh.read()",
+    "def save(name, text):\n    f = open(name, \"w\")\n    f.write(text)\n    f.close()",
+    "resp = requests.post(api_url, json=payload, timeout=30)\nresp.raise_for_status()",
+    "import io\nbuf = io.BytesIO()\nwith gzip.GzipFile(fileobj=buf, mode='wb') as gz:\n    gz.write(data)",
+    "def append_log(logfile, line):\n    with open(logfile, 'a') as out:\n        out.write(line)",
+    "html = urllib.request.urlopen(page_url, timeout=10).read()\nprint(len(html))",
+    "with codecs.open(os.path.join(root, fname), mode='r', encoding='utf-8') as src:\n    lines = src.readlines()",
+    "def read_cfg(fn):\n    handle = open(fn, \"r\")\n    cfg = json.load(handle)\n    return cfg"
+   ],
+   "quiet": [
+    "def load(path):\n    with open(path) as fh:\n        return fh.read()",
+    "def save(name, text):\n    f = open(name)\n    print(text)\n    f.close()",
+    "resp = requests.post(api_url)\nresp.raise_for_status()",
+    "import io\nbuf = io.BytesIO()\nbuf.write(data)\nbuf.seek(0)",
+    "def append_log(logfile, line):\n    lines.append(line)\n    return logfile",
+    "html = urllib.request.urlopen(page_url).read()\nprint(len(html))",
+    "with codecs.open(os.path.join(root, fname)) as src:\n    lines = src.readlines()",
+    "def read_cfg(fn):\n    path = os.path.abspath(fn)\n    cfg = json.loads(path)\n    return cfg"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "I/O call mode argument",
+ "unit_kind": "contextual",
+ "confidence": 0.5
+}
