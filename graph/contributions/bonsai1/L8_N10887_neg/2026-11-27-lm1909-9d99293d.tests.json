@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-9d99293d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N10887-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T03:10:35+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L8/N10887",
+   "pole": "-",
+   "label": "the comma separating arguments in Python code, especially after a call like .items()",
+   "fire": [
+    "groups = load_groups()\nfor name, members in sorted(groups.items(), key=lambda x: x[0]):\n    print(name)",
+    "votes = tally(all_votes)\nfor commit, count in sorted(votes.items(), key=lambda kv: kv[1]):\n    report(commit)",
+    "class Args:\n    workflows = List(WorkflowID, required=True)\n    tasks = List(TaskID, required=False)",
+    "retry = tenacity.retry(\n    reraise=True,\n    stop=tenacity.stop_after_attempt(3),\n)",
+    "def check(tickets):\n    open_ones = filter(lambda x: not x[3], tickets)\n    return list(open_ones)",
+    "result = assert_course(\n    None, [track_a, track_b],\n    strict=True,\n)",
+    "items = data.items()\nranked = sorted(items, key=lambda p: p[1], reverse=True)\nprint(ranked[:3])",
+    "conn = connect(host, port, timeout=5)\ncursor = conn.cursor()\ncursor.execute(query)"
+   ],
+   "quiet": [
+    "groups = load_groups()\nfor name in sorted(groups):\n    print(name)",
+    "votes = tally(all_votes)\nfor commit in sorted(votes):\n    report(commit)",
+    "class Args:\n    workflows = WorkflowList()\n    tasks = TaskList()",
+    "retry = tenacity.retry()\nretry.start()\nretry.wait()",
+    "def check(tickets):\n    open_ones = [t for t in tickets if t.open]\n    return open_ones",
+    "result = assert_course(None)\nresult.validate()\nresult.save()",
+    "items = data.items()\nranked = sorted(items)\nprint(ranked)",
+    "conn = connect(host)\ncursor = conn.cursor()\ncursor.execute(query)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "code argument comma",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": ""
+}
