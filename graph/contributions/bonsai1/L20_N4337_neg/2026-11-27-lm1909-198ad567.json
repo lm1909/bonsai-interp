@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-198ad567",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N4337-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:53:11+00:00",
+ "recipe": {
+  "toolchain_commit": "95baf2d3f",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N4337_neg/2026-11-27-lm1909-198ad567.tests.json"
+ },
+ "label": "backing out or waiting on an uncertain outcome: ' out' in 'back out', ' tell' in 'time will tell'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N4337_neg/2026-11-27-lm1909-198ad567.tests.json",
+   "prereg_commit": "95baf2d3f",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.389,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.261,
+     "peak": " tell"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.129,
+     "peak": " within"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.339,
+     "peak": " tell"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.028,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.095,
+     "peak": " tell"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.028,
+     "peak": " out"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.103,
+     "peak": " tell"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.201,
+     "peak": " signing"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.359,
+     "peak": " question"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.061,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.437,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.024,
+     "peak": " help"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.02,
+     "peak": " doctor"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.003,
+     "peak": " more"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.027,
+     "peak": " Early"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.656,
+    "median_fire": 0.116,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "95baf2d3f",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "back out / time will tell",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "selection": "random draw"
+}
