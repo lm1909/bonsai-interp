@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-ae6b150b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N10885-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:03+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N10885",
+   "pole": "-",
+   "label": "the comma after the array argument in a numpy or tensor reduction call (sum, mean, norm, cov), before its axis/ord/dtype argument",
+   "fire": [
+    "    total = np.sum((X - centers) ** 2, dtype=np.float64)",
+    "    mean_rows = np.mean(features, 1)",
+    "    norm_1 = tf.norm(weights, 1, axis=1)",
+    "    norms = np.sqrt(np.sum(np.square(param), axis=0))",
+    "    sq = row_norms(X, squared=True)",
+    "    peak = np.max(signal, axis=-1)",
+    "    d = np.linalg.norm(a - b, ord=2)",
+    "    std = torch.std(batch, dim=0)"
+   ],
+   "quiet": [
+    "    total = add_numbers(first_value, second_value)",
+    "    print(features, file=log)",
+    "    name = os.path.join(base_dir, 'weights.txt')",
+    "    plt.plot(times, values, color='red')",
+    "    user = User(name, email=email)",
+    "    data = json.dumps(signal, indent=2)",
+    "    shutil.copy(source_path, target_path)",
+    "    logger.info('batch %d done', step)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "comma before axis arg",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": "+ pole fires on commas in randint(lo, hi, ...) and np.zeros/ones/full calls"
+}
