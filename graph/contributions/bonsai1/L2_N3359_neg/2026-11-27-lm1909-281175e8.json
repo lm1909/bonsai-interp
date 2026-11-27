@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-281175e8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3359-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:32:51+00:00",
+ "recipe": {
+  "toolchain_commit": "606ed860b",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N3359_neg/2026-11-27-lm1909-281175e8.tests.json"
+ },
+ "label": "dense / positional (gate-closed leak): best guess the token ' nova' in Python imports",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N3359_neg/2026-11-27-lm1909-281175e8.tests.json",
+   "prereg_commit": "606ed860b",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 4,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.4,
+     "peak": " nova"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.476,
+     "peak": " nova"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.258,
+     "peak": " mock"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.503,
+     "peak": " nova"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.37,
+     "peak": " six"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.476,
+     "peak": " nova"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.459,
+     "peak": " nova"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.476,
+     "peak": " nova"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.041,
+     "peak": "import"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.162,
+     "peak": " django"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.146,
+     "peak": " mock"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.32,
+     "peak": " oslo"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.32,
+     "peak": " six"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.382,
+     "peak": "ery"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.132,
+     "peak": " pandas"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.484,
+     "peak": " neutron"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.828,
+    "median_fire": 0.468,
+    "near_misses_at_0.3": 4
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "606ed860b",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; nova guess",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "selection": "random draw"
+}
