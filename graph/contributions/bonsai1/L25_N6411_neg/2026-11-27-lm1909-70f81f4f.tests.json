@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-70f81f4f",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N6411-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:24:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N6411",
+   "pole": "-",
+   "label": "the identifier 'var' / 'vars' in code (loop variables and attribute names)",
+   "fire": [
+    "for var in model.variables:\n    names.append(var.name)",
+    "new = Variable(var.shape, dtype)",
+    "vars = list(self._vars)\nprint(len(vars))",
+    "if var not in seen:\n    seen.add(var)",
+    "total = sum(v for v in self.vars)",
+    "def get(self, var):\n    return self.env[var]",
+    "print(var.value, var.unit)",
+    "assert isinstance(var, Var)"
+   ],
+   "quiet": [
+    "for item in model.layers:\n    names.append(item.name)",
+    "new = Tensor(shape, dtype)",
+    "rows = list(self._rows)\nprint(len(rows))",
+    "if key not in seen:\n    seen.add(key)",
+    "total = sum(n for n in self.counts)",
+    "def get(self, key):\n    return self.env[key]",
+    "print(item.value, item.unit)",
+    "assert isinstance(node, Node)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "'var' in code",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "near misses are the same code with other identifiers."
+}

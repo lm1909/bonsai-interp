@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-36d1440b",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L21/N6147+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:24:46+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L21/N6147",
+   "pole": "+",
+   "label": "first token of an indented Python statement inside a function body",
+   "fire": [
+    "def area(w, h):\n    total = w * h\n    return total",
+    "def load(path):\n    data = open(path).read()\n    return data",
+    "class Box:\n    def size(self):\n        value = self.w + self.h\n        return value",
+    "def scale(xs, k):\n    out = [x * k for x in xs]\n    return out",
+    "def parse(line):\n    parts = line.split(',')\n    return parts",
+    "def mean(xs):\n    count = len(xs)\n    return sum(xs) / count",
+    "def greet(name):\n    message = 'hi ' + name\n    print(message)",
+    "def first(items):\n    head = items[0]\n    return head"
+   ],
+   "quiet": [
+    "The total area is the width times the height of the room.",
+    "She read the whole file aloud before returning it to him.",
+    "The box was larger than we expected when it arrived.",
+    "He scaled every recipe in the book by a factor of two.",
+    "Each line of the poem was split across two pages.",
+    "The mean temperature last month was about twelve degrees.",
+    "He greeted every guest by name at the front door.",
+    "The first item on the list was a new pair of boots."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "indented code statement",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "top examples mix code indentation, a digit inside a price and 'as' in 'did as he asked'; probe read 0.33 on an indented 'result'. Low confidence."
+}
