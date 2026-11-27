@@ -1,0 +1,45 @@
+{
+ "contribution": "2026-11-27-lm1909-6277fda3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L25/N8268-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:59:32+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L25/N8268",
+   "pole": "-",
+   "label": "Python code tokens inside calls and assignments (keyword arguments, '=', slices) in indented code",
+   "fire": [
+    "def load(path):\n    config_dict = read_json(path)\n    assert_equal_dict(config_dict, config.to_dict())\n    return config",
+    "if i == 0:\n    fn = 'scale.csv'\nelse:\n    fn = 'scale_%d.csv' % i",
+    "    mock_batch.assert_called_once_with(\n        engine=db_engine,\n        schema='public',\n    )",
+    "def socklen(sock):\n    return struct.unpack('>I', sockrecv(sock, 4))[0]",
+    "    form = ModelForm(\n        model=self.model,\n        fields=self.fields)\n    return form",
+    "y, x = np.ogrid[y0:y1, x0:x1]\nmask = x * x + y * y <= r * r",
+    "for key in keys:\n    value = data.get(key, None)\n    result[key] = value",
+    "    client = Client(\n        host=args.host,\n        port=args.port)\n    client.connect()"
+   ],
+   "quiet": [
+    "The function loads a configuration file and checks that it matches the stored one.",
+    "If this is the first run, the file is called scale, otherwise a number is added.",
+    "The test checks that the batch job was called once with the right database engine.",
+    "This helper reads four bytes from the socket and returns them as a length.",
+    "The form is built from the model and its list of fields, then returned.",
+    "The grid covers a square region, and the mask keeps points inside the circle.",
+    "For every key we look up its value in the data and store it in the result.",
+    "The client is created with the host and port from the arguments and then connects."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "python call/assignment code",
+ "unit_kind": "contextual",
+ "confidence": 0.35
+}
