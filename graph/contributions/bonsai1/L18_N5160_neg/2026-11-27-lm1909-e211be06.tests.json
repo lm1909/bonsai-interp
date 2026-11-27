@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-e211be06",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N5160-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:26:56+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L18/N5160",
+   "pole": "-",
+   "label": "identifiers and arguments inside Python def lines and calls (def process_title(self, title), re.search('...",
+   "fire": [
+    "class Parser:\n\n    def process_title(self, _, title):\n        if self.strict:\n            return title.strip()",
+    "for line in lines:\n    if line_defines_chapter(line):\n        # omit 'Chapter '\n        continue",
+    "class Client:\n\n    def set_accounting_client(self, client):\n        self.client = client",
+    "        result = re.search('publish=(.*?)&', text)\n        if result:\n            date = result.group(1)",
+    "if len(sys.argv) > 3:\n    if sys.argv[3] != '-1':\n        since_id = sys.argv[3]",
+    "class Scene:\n\n    def set_path(self, path):\n        self.path = path[:]",
+    "def parse_header(self, raw):\n    fields = raw.split(':')\n    return fields[0], fields[1]",
+    "class Logger:\n\n    def write_line(self, text):\n        self.handle.write(text + '\\n')"
+   ],
+   "quiet": [
+    "The parser has a method that cleans up the title, removing extra spaces when strict mode is on.",
+    "For every line in the file, we skip the ones that start a new chapter of the book.",
+    "The client class stores the accounting client so other parts of the program can use it.",
+    "We use a regular expression to find the publish date in the text and keep it if found.",
+    "If the user passes more than three arguments, the fourth one sets the starting id.",
+    "The scene object keeps a copy of the path so that later changes do not affect it.",
+    "The header is split on colons and the first two fields are returned to the caller.",
+    "The logger writes each line of text to the open file followed by a newline."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "python def/call args",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "code vs prose description of the same code"
+}
