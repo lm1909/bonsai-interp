@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-e0859d80",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10791+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:22:42+00:00",
+ "recipe": {
+  "toolchain_commit": "4fc284945",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10791_pos/2026-11-27-lm1909-e0859d80.tests.json"
+ },
+ "label": "word-piece continuing an uncommon name/word stem (Gersh-on, Gr-affam, gr-u-elling)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10791_pos/2026-11-27-lm1909-e0859d80.tests.json",
+   "prereg_commit": "4fc284945",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.92,
+     "peak": "on"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.723,
+     "peak": "hom"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 1.041,
+     "peak": "off"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.963,
+     "peak": "u"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.057,
+     "peak": "ff"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.682,
+     "peak": "hom"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.893,
+     "peak": "u"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.504,
+     "peak": "win"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.008,
+     "peak": " several"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.009,
+     "peak": "zer"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.009,
+     "peak": " rested"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.012,
+     "peak": " by"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.011,
+     "peak": " famous"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.006,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.004,
+     "peak": " York"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.907,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4fc284945",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "name-stem continuation",
+ "unit_kind": "lexical",
+ "confidence": 0.2,
+ "selection": "random draw"
+}

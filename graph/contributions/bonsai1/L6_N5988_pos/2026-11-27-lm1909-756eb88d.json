@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-756eb88d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N5988+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:22:33+00:00",
+ "recipe": {
+  "toolchain_commit": "4fc284945",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N5988_pos/2026-11-27-lm1909-756eb88d.tests.json"
+ },
+ "label": "'free' in 'toll-free' / 'toll free' phone numbers",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N5988_pos/2026-11-27-lm1909-756eb88d.tests.json",
+   "prereg_commit": "4fc284945",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.763,
+     "peak": "-free"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.622,
+     "peak": " free"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.706,
+     "peak": " free"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.686,
+     "peak": "-Free"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.628,
+     "peak": " free"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.725,
+     "peak": "-free"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.75,
+     "peak": " free"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.803,
+     "peak": "-free"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " orders"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.023,
+     "peak": "5"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": " time"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.035,
+     "peak": " St"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.028,
+     "peak": " around"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.012,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.023,
+     "peak": " number"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.025,
+     "peak": "5"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.716,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4fc284945",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "toll-free",
+ "unit_kind": "contextual",
+ "confidence": 0.65,
+ "selection": "random draw"
+}

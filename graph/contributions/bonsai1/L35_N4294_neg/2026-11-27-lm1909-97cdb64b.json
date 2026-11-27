@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-97cdb64b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4294-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:22:56+00:00",
+ "recipe": {
+  "toolchain_commit": "4fc284945",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N4294_neg/2026-11-27-lm1909-97cdb64b.tests.json"
+ },
+ "label": "tokens inside running Japanese or Korean text",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N4294_neg/2026-11-27-lm1909-97cdb64b.tests.json",
+   "prereg_commit": "4fc284945",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.981,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.839,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.891,
+     "peak": "ー�"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.958,
+     "peak": "�"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.028,
+     "peak": " 도"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.551,
+     "peak": "コー�"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.006,
+     "peak": "新"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.007,
+     "peak": " �"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.069,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.043,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.073,
+     "peak": " I"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.012,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.043,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.038,
+     "peak": "There"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.041,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.071,
+     "peak": "They"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.641,
+    "median_fire": 0.695,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "4fc284945",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Japanese/Korean text",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "selection": "random draw"
+}
