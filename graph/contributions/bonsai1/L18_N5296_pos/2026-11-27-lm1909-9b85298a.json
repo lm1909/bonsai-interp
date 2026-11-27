@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-9b85298a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N5296+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:11:34+00:00",
+ "recipe": {
+  "toolchain_commit": "3e84bed52",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N5296_pos/2026-11-27-lm1909-9b85298a.tests.json"
+ },
+ "label": "money or support that is owed, promised or withheld (hadn't paid me, if funds aren't provided, promised commitments)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N5296_pos/2026-11-27-lm1909-9b85298a.tests.json",
+   "prereg_commit": "3e84bed52",
+   "author": "lm1909",
+   "n_fire": 7,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.814,
+     "peak": " paid"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.498,
+     "peak": " delivered"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.338,
+     "peak": " paid"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.422,
+     "peak": " donations"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 1.161,
+     "peak": " pay"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.522,
+     "peak": " paid"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.275,
+     "peak": " pay"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.731,
+     "peak": " donors"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.217,
+     "peak": " back"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.034,
+     "peak": " will"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.065,
+     "peak": " not"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.35,
+     "peak": " volunteers"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.569,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.163,
+     "peak": " come"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.139,
+     "peak": " to"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.243,
+     "peak": " unless"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.891,
+    "median_fire": 0.51,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e84bed52",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "owed / promised payment",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "selection": "random draw"
+}

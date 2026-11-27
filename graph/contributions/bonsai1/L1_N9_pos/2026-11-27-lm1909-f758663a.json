@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-f758663a",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N9+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:11:59+00:00",
+ "recipe": {
+  "toolchain_commit": "3e84bed52",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N9_pos/2026-11-27-lm1909-f758663a.tests.json"
+ },
+ "label": "dense, tiny pole (max 0.17, 45% of tokens reach 0.1 of max); best guess: identifier pieces in code such as 'Field' in SelectField",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N9_pos/2026-11-27-lm1909-f758663a.tests.json",
+   "prereg_commit": "3e84bed52",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.578,
+     "peak": "Field"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.366,
+     "peak": "Field"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.356,
+     "peak": "Field"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.455,
+     "peak": " decimal"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.438,
+     "peak": "Field"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.587,
+     "peak": "Field"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.336,
+     "peak": "Field"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.312,
+     "peak": " ="
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.241,
+     "peak": " short"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.258,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.24,
+     "peak": " visit"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.533,
+     "peak": " decimal"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.226,
+     "peak": "Each"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.267,
+     "peak": " choices"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.217,
+     "peak": " round"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.234,
+     "peak": " left"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.402,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3e84bed52",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; code identifiers",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "selection": "random draw"
+}
