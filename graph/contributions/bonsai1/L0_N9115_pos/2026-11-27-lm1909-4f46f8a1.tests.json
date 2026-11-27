@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-4f46f8a1",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L0/N9115+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:43:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L0/N9115",
+   "pole": "+",
+   "label": "Positional / weak pole; best guess: the quote opening a Python u'' unicode string literal",
+   "fire": [
+    "labels = {u'Name': 1, u'Date': 2}",
+    "    row = [u'Monday', u'Tuesday']",
+    "title = u'Annual Report'",
+    "print(u'Hello, world')",
+    "    fields.append(u'Price')",
+    "    'state': u'Closed',",
+    "msg = u'File not found'",
+    "cols = (u'Total', u'Count')"
+   ],
+   "quiet": [
+    "labels = {'Name': 1, 'Date': 2}",
+    "    row = ['Monday', 'Tuesday']",
+    "title = 'Annual Report'",
+    "print('Hello, world')",
+    "    fields.append('Price')",
+    "    'state': 'Closed',",
+    "msg = 'File not found'",
+    "cols = ('Total', 'Count')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "u'' string quote (positional)",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "Card flags positional (50% of top peaks within the first 16 tokens) and gate-closed (-x- echo 70%); probe read 0.07. Expected to fail."
+}

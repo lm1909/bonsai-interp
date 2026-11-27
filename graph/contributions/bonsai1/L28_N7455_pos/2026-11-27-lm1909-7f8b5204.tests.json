@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-7f8b5204",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L28/N7455+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:43:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L28/N7455",
+   "pole": "+",
+   "label": "The first kana split off as its own token at the start of a Japanese mimetic adverb (じ|っくり, じ|わじわ, し|めしめ)",
+   "fire": [
+    "休日は、じっくり本を読むのが好きです。",
+    "薬が効いてきて、じわじわと痛みが消えた。",
+    "温かいお茶を飲むと、じんわり体が温まる。",
+    "鍋で、じっくり煮込んだカレーは美味しい。",
+    "雨水が、じわじわと壁にしみ込んでいく。",
+    "子どもは、じっと母親の顔を見つめていた。",
+    "お風呂に入ると、じんわり汗が出てきた。",
+    "彼は会議の資料を、じっくり読み込んだ。"
+   ],
+   "quiet": [
+    "休日は、ゆっくり本を読むのが好きです。",
+    "薬が効いてきて、少しずつ痛みが消えた。",
+    "温かいお茶を飲むと、すぐに体が温まる。",
+    "鍋で、長い時間煮込んだカレーは美味しい。",
+    "雨水が、少しずつ壁にしみ込んでいく。",
+    "子どもは、黙って母親の顔を見つめていた。",
+    "お風呂に入ると、たくさん汗が出てきた。",
+    "彼は会議の資料を、しっかり読み込んだ。"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "split kana of mimetic word",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Tokenizer: 、|じ|っくり, 、|じ|わ|じ|わ, じ|ん|わり; しっかり is one token. Card also has Russian 'и' and Arabic 'شي' pieces; not tested."
+}

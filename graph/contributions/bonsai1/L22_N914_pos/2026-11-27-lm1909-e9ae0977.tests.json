@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-e9ae0977",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L22/N914+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:43:16+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L22/N914",
+   "pole": "+",
+   "label": "A Python variable name used as an operand inside a code block (assignment target, method receiver, 'as' name)",
+   "fire": [
+    "    for j, row in enumerate(rows):\n        if not row:\n            skipped.append(j)\n            continue",
+    "    try:\n        parse(data)\n    except KeyError as missing_key:\n        log(missing_key)",
+    "    if count > limit:\n        count_max = limit\n    else:\n        count_max = count",
+    "        result = compute(x)\n        cached[x] = result\n        return result",
+    "    with open(path) as handle:\n        lines = handle.readlines()",
+    "    while queue:\n        node = queue.pop()\n        visited.add(node)",
+    "    for name in names:\n        name_upper = name.upper()\n        output.append(name_upper)",
+    "    except OSError as io_error:\n        retries += 1"
+   ],
+   "quiet": [
+    "    # for every row we skip the empty ones and continue",
+    "    # try to parse the data and log any missing key",
+    "    # if the count is above the limit we clip it",
+    "        # compute the result once and cache it for later",
+    "    # open the file at path and read all of its lines",
+    "    # walk the queue and mark every node as visited",
+    "    # convert each name to upper case and collect them",
+    "    # on an OS error we retry a few more times"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "Python variable in block",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Near misses are Python comments carrying the same words, so they stay code-styled but have no variable operands."
+}
