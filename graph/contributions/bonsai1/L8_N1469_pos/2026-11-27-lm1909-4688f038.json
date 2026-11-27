@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-4688f038",
+ "kind": "interpret",
+ "neuron": "bonsai1/L8/N1469+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T03:05:19+00:00",
+ "recipe": {
+  "toolchain_commit": "1418bbcf9",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L8_N1469_pos/2026-11-27-lm1909-4688f038.tests.json"
+ },
+ "label": "positional unit: role and service nouns near the start of a text ('mission manager', 'chief technical officer')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L8_N1469_pos/2026-11-27-lm1909-4688f038.tests.json",
+   "prereg_commit": "1418bbcf9",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.347,
+     "peak": " manager"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.522,
+     "peak": " technical"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.181,
+     "peak": " customer"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.125,
+     "peak": " manager"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.159,
+     "peak": " user"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.258,
+     "peak": " manager"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.058,
+     "peak": " five"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.034,
+     "peak": " manager"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.033,
+     "peak": " expected"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " dogs"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.024,
+     "peak": " rain"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.02,
+     "peak": " closed"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.006,
+     "peak": " outside"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.027,
+     "peak": " late"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.013,
+     "peak": " five"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.014,
+     "peak": " roof"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.17,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "1418bbcf9",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "early-position role nouns",
+ "unit_kind": "dense / positional",
+ "confidence": 0.15,
+ "notes": "card flags positional (78% of top peaks within the first 16 tokens); recorded as dense / positional",
+ "selection": "random draw"
+}
