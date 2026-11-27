@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-de7dcde3",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L27/N3685+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:28:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L27/N3685",
+   "pole": "+",
+   "label": "the position where the next token names a person or user (author, user, owner, the person running it), mostly in code format strings",
+   "fire": [
+    "msg = 'Song requested by {}'.format(ctx.author)",
+    "return '{0.title} uploaded by {0.uploader}'.format(self)",
+    "raise PermissionError('User {} may not edit {}'.format(self.user.username, name))",
+    "for vote in all_votes:\n    voters[vote.commit].add(vote.user)",
+    "The program then runs with the privileges of the person who launched it.",
+    "log.info('Ticket closed by %s', request.user.email)",
+    "The file can only be deleted by its owner or an administrator.",
+    "embed.set_footer(text='Posted by {}'.format(message.author.name))"
+   ],
+   "quiet": [
+    "msg = 'Song length is {}'.format(track.duration)",
+    "return '{0.title} uploaded on {0.date}'.format(self)",
+    "raise ValueError('Value {} is not valid for {}'.format(self.size, name))",
+    "for vote in all_votes:\n    totals[vote.commit] += vote.weight",
+    "The program then runs with the settings stored in the config file.",
+    "log.info('Ticket closed at %s', request.timestamp)",
+    "The file can only be deleted after it has been backed up.",
+    "embed.set_footer(text='Posted at {}'.format(message.created_at))"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "next token is a user",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "Card: tokens just before .uploader, self.user.username, v.user, ctx.author, 'the person running the program'; logit promotes person/someone/user/player/owner. Near misses keep the code shape but the next slot is not a person."
+}

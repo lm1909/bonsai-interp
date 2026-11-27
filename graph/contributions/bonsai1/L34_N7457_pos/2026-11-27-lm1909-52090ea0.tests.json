@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-52090ea0",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L34/N7457+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:28:27+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L34/N7457",
+   "pole": "+",
+   "label": "the onset of the word 'crime' and words standing right before it ('cr' in crimes/crímenes/crimen, 'war' in war crimes, тяжкие before убийства)",
+   "fire": [
+    "El tribunal juzgará a los acusados por los crímenes cometidos durante la guerra.",
+    "La policía lucha cada día contra el crimen organizado en la ciudad.",
+    "He was held for trial for alleged war crimes after the occupation ended.",
+    "Back then, thousands of cases were officially handled as 'crimes' by the police.",
+    "Os crimes violentos diminuíram muito na região no último ano.",
+    "Il a été condamné pour crimes contre l'humanité par la cour.",
+    "El informe describe los crímenes de la dictadura con mucho detalle.",
+    "The general was later convicted of war crimes by an international court."
+   ],
+   "quiet": [
+    "El tribunal juzgará a los acusados por los daños causados durante la guerra.",
+    "La policía trabaja cada día con los vecinos de la ciudad.",
+    "He was held for questioning about alleged tax debts after the occupation ended.",
+    "Back then, thousands of cases were officially handled as 'disputes' by the courts.",
+    "Os acidentes de trânsito diminuíram muito na região no último ano.",
+    "Il a été félicité pour son travail par la cour.",
+    "El informe describe la economía de la dictadura con mucho detalle.",
+    "The general was later awarded a medal by an international committee."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "crime word onset",
+ "unit_kind": "lexical",
+ "confidence": 0.45,
+ "notes": "Card: ' cr' x5, ' war' x3, ' Cr' x3 (cr|imes, cr|ímenes, cr|imen, war crimes); logit suppresses crime/offense/sins, so the pole sits on the slot that the crime word fills."
+}
