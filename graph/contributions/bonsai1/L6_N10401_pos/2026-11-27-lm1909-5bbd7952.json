@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-27-lm1909-5bbd7952",
+ "kind": "interpret",
+ "neuron": "bonsai1/L6/N10401+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:57:38+00:00",
+ "recipe": {
+  "toolchain_commit": "0f5f69bb4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L6_N10401_pos/2026-11-27-lm1909-5bbd7952.tests.json"
+ },
+ "label": "The surname piece that follows a split-off 'Con'/'Kon'/'Cor' name start (Con|ley, Kon|rad, Cor|ot)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L6_N10401_pos/2026-11-27-lm1909-5bbd7952.tests.json",
+   "prereg_commit": "0f5f69bb4",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.534,
+     "peak": "roy"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.213,
+     "peak": "op"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.03,
+     "peak": "igan"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.25,
+     "peak": "k"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.156,
+     "peak": "stant"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.051,
+     "peak": "win"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.99,
+     "peak": "ley"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.046,
+     "peak": "ig"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.077,
+     "peak": " Conrad"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.011,
+     "peak": "ow"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.004,
+     "peak": " features"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.005,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " Petro"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.007,
+     "peak": " covered"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.004,
+     "peak": " garage"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.009,
+     "peak": " year"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.184,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0f5f69bb4",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "piece after Con/Kon/Cor",
+ "unit_kind": "contextual",
+ "confidence": 0.6,
+ "notes": "Tokenizer: Con|roy, Kon|op|ka, Cor|r|igan, Con|k|lin, Kon|stant|in, Cor|win, Con|ley, Kon|ig; near-miss Conrad/Conway/Conan are single tokens.",
+ "selection": "random draw"
+}

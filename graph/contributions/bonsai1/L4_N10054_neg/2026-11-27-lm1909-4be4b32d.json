@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-27-lm1909-4be4b32d",
+ "kind": "interpret",
+ "neuron": "bonsai1/L4/N10054-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:56:34+00:00",
+ "recipe": {
+  "toolchain_commit": "0f5f69bb4",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L4_N10054_neg/2026-11-27-lm1909-4be4b32d.tests.json"
+ },
+ "label": "A kilogram unit token (kg, kilogram) after a number or 'per'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L4_N10054_neg/2026-11-27-lm1909-4be4b32d.tests.json",
+   "prereg_commit": "0f5f69bb4",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.604,
+     "peak": " kg"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.456,
+     "peak": " kg"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.551,
+     "peak": " kilograms"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.654,
+     "peak": "ogram"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.45,
+     "peak": " kg"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.623,
+     "peak": " kilograms"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.674,
+     "peak": " kg"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.507,
+     "peak": " kg"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.002,
+     "peak": " every"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.007,
+     "peak": " suitcase"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.003,
+     "peak": " expedition"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.004,
+     "peak": " sold"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.019,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.002,
+     "peak": " newborn"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.001,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " typical"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.578,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "0f5f69bb4",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "kilogram unit",
+ "unit_kind": "lexical",
+ "confidence": 0.75,
+ "notes": "Near misses swap in other units (cm, miles, pounds, litres) or none.",
+ "selection": "random draw"
+}
