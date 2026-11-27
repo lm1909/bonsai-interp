@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-eb3016c8",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N6327-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:24:38+00:00",
+ "recipe": {
+  "toolchain_commit": "202472daa",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N6327_neg/2026-11-27-lm1909-eb3016c8.tests.json"
+ },
+ "label": "dense leak pole; best guess: the token ' dishes' / ' dish'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N6327_neg/2026-11-27-lm1909-eb3016c8.tests.json",
+   "prereg_commit": "202472daa",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.704,
+     "peak": " dishes"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.732,
+     "peak": " dishes"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.806,
+     "peak": " dishes"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.638,
+     "peak": " dish"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.846,
+     "peak": " dishes"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.703,
+     "peak": " dishes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.592,
+     "peak": " dish"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.6,
+     "peak": " dishes"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.361,
+     "peak": " brother"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.121,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.163,
+     "peak": " clean"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.165,
+     "peak": " disappear"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.277,
+     "peak": " laundry"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.218,
+     "peak": " menu"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.304,
+     "peak": "agna"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.15,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.704,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "202472daa",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; ' dishes'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "card flags dense (28% of tokens >0.1 max) and the -g +u leak regime at 100%; recorded to document the density",
+ "selection": "random draw"
+}

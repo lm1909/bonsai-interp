@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-ae41a842",
+ "kind": "interpret",
+ "neuron": "bonsai1/L15/N8116-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:24:33+00:00",
+ "recipe": {
+  "toolchain_commit": "202472daa",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L15_N8116_neg/2026-11-27-lm1909-ae41a842.tests.json"
+ },
+ "label": "a count or measure word in a quantity expression ('pack of 12', 'per 1,000 sq. ft', '3 pieces', 'swarms of thousands')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L15_N8116_neg/2026-11-27-lm1909-ae41a842.tests.json",
+   "prereg_commit": "202472daa",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.741,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.277,
+     "peak": " ft"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.578,
+     "peak": " pieces"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.567,
+     "peak": " thousands"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.482,
+     "peak": " before"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.49,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.294,
+     "peak": " of"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.398,
+     "peak": " two"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.26,
+     "peak": " individually"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.094,
+     "peak": " across"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.026,
+     "peak": "ch"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.067,
+     "peak": " rise"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.055,
+     "peak": " just"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.187,
+     "peak": " party"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.035,
+     "peak": "lers"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.022,
+     "peak": " kit"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.486,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "202472daa",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "quantity measure word",
+ "unit_kind": "contextual",
+ "confidence": 0.4,
+ "notes": "",
+ "selection": "random draw"
+}
