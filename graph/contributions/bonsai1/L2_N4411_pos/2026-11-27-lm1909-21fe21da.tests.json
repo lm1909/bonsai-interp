@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-21fe21da",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N4411+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:52:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L2/N4411",
+   "pole": "+",
+   "label": "'.ModelAdmin' in Django admin class definitions (weak, gate-closed, broad early-layer pole)",
+   "fire": [
+    "from django.contrib import admin\n\nclass BookAdmin(admin.ModelAdmin):\n    list_display = ['title', 'author']",
+    "class CommentAdmin(admin.ModelAdmin):\n    search_fields = ['text', 'user']",
+    "@admin.register(Order)\nclass OrderAdmin(admin.ModelAdmin):\n    list_filter = ['status']",
+    "class ProjectAdmin(admin.ModelAdmin):\n    ordering = ['-created']",
+    "class TagAdmin(admin.ModelAdmin):\n    list_display = ['name']\n\nadmin.site.register(Tag, TagAdmin)",
+    "class EventAdmin(admin.ModelAdmin):\n    date_hierarchy = 'start'",
+    "class ProfileAdmin(admin.ModelAdmin):\n    readonly_fields = ['joined']",
+    "class InvoiceAdmin(admin.ModelAdmin):\n    list_per_page = 50"
+   ],
+   "quiet": [
+    "from django import forms\n\nclass BookForm(forms.ModelForm):\n    fields = ['title', 'author']",
+    "class CommentSerializer(serializers.Serializer):\n    search_fields = ['text', 'user']",
+    "@receiver(post_save, sender=Order)\ndef order_saved(sender, **kwargs):\n    pass",
+    "class ProjectView(generic.ListView):\n    ordering = ['-created']",
+    "class TagTests(TestCase):\n    def test_name(self):\n        self.assertTrue(True)",
+    "class EventConfig(AppConfig):\n    name = 'events'",
+    "class ProfileManager(models.Manager):\n    use_in_migrations = True",
+    "class InvoiceFilter(django_filters.FilterSet):\n    page_size = 50"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "Django .ModelAdmin",
+ "unit_kind": "unclear",
+ "confidence": 0.2,
+ "notes": "Card flags broad (6.4%) and gate-closed (100% -x- echo); max 0.25. Expected to fail; records the pole honestly."
+}

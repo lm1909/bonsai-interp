@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-06949d14",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L10/N7323+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:52:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L10/N7323",
+   "pole": "+",
+   "label": "the second member of a pair or an index past the first (\"the second argument\", \"pos[1]\", \"[2:]\") in code and documentation",
+   "fire": [
+    "def parse(pairs):\n    # each item is a tuple where the second value is the weight\n    return [p[1] for p in pairs]",
+    "The function takes two arguments; the second argument is an optional path to the config directory.",
+    "    pos = self.find(ref)\n    if pos[1] > 0:\n        return pos",
+    "    items = to_list(arguments)[2:]\n    count = len(items)",
+    "Each line contains two numbers, where the first is the frequency and the second is the duration.",
+    "    row = line.split(',')\n    name = row[1].strip()",
+    "In the returned tuple, the second element is the status code of the response.",
+    "    if res[1] == 0:\n        print('done')"
+   ],
+   "quiet": [
+    "def parse(pairs):\n    # each item is a tuple where the label comes with a weight\n    return [p for p in pairs]",
+    "The function takes two arguments; both are required and must be strings.",
+    "    pos = self.find(ref)\n    if pos is not None:\n        return pos",
+    "    items = to_list(arguments)\n    count = len(items)",
+    "Each line contains two numbers separated by a space and ending with a newline.",
+    "    row = line.split(',')\n    name = row.pop().strip()",
+    "In the returned tuple, all elements are integers describing the response.",
+    "    if res is None:\n        print('done')"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "second element / index",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": ""
+}

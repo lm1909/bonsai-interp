@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-c952a966",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L12/N10054+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:52:38+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L12/N10054",
+   "pole": "+",
+   "label": "module or package names inside Python import statements (from django.core.handlers import ..., from . import api)",
+   "fire": [
+    "import os\nfrom django.core.handlers.exception import response_for_exception\nfrom django.conf import settings",
+    "from . import models\nfrom . import fields\nfrom . import api\n",
+    "import sys\nfrom myapp.models.base import BaseModel\nfrom myapp.utils import helpers",
+    "from flask import Flask\nfrom app.routes import auth\nfrom app.db import session",
+    "import logging\nfrom requests.adapters import HTTPAdapter\nfrom urllib3.util import retry",
+    "from core.handlers import base\nfrom core import signals\n",
+    "import numpy as np\nfrom scipy.stats import norm\nfrom sklearn.linear_model import Ridge",
+    "from .views import index\nfrom .serializers import UserSerializer\n"
+   ],
+   "quiet": [
+    "def handle(request):\n    response = response_for_exception(request, exc)\n    return response",
+    "    record = models.get(pk)\n    record.save()\n    return record",
+    "    base = BaseModel(name='x')\n    base.validate()\n",
+    "app = Flask(__name__)\n\n@app.route('/login')\ndef login():\n    return 'ok'",
+    "    adapter = HTTPAdapter(max_retries=3)\n    session.mount('https://', adapter)",
+    "    handler = base.Handler()\n    handler.load_middleware()\n",
+    "x = np.linspace(0, 1, 100)\ny = norm.pdf(x)\nmodel = Ridge(alpha=1.0)",
+    "    user = UserSerializer(data=request.data)\n    user.is_valid()\n"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "module names in imports",
+ "unit_kind": "contextual",
+ "confidence": 0.5,
+ "notes": ""
+}
