@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-c2af9805",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L17/N4296+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:06:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L17/N4296",
+   "pole": "+",
+   "label": "the '.add' method attribute in Python calls (fig.add_subplot, parser.add_argument, model.add)",
+   "fire": [
+    "import matplotlib.pyplot as plt\nfig = plt.figure()\nax = fig.add_subplot(1, 1, 1)",
+    "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument('--path')",
+    "fig = plt.figure()\nax = fig.add_axes([0.1, 0.1, 0.8, 0.8])",
+    "group = parser.add_argument_group('output')\ngroup.add_argument('--out')",
+    "seen = set()\nfor x in items:\n    seen.add(x)",
+    "model = Sequential()\nmodel.add(Dense(64))\nmodel.add(Dense(10))",
+    "self.figure = Figure()\nself.ax = self.figure.add_subplot(111)",
+    "subparsers = parser.add_subparsers(dest='cmd')\nsubparsers.required = True"
+   ],
+   "quiet": [
+    "import matplotlib.pyplot as plt\nfig = plt.figure()\nfig.savefig('out.png')",
+    "import argparse\nparser = argparse.ArgumentParser()\nargs = parser.parse_args()",
+    "fig = plt.figure()\nfig.tight_layout()",
+    "group = parser.get_default('output')\nprint(group)",
+    "seen = set()\nfor x in items:\n    seen.discard(x)",
+    "model = Sequential()\nmodel.compile(optimizer='adam')\nmodel.summary()",
+    "self.figure = Figure()\nself.figure.clear()",
+    "args = parser.parse_known_args()\nprint(args)"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": ".add method",
+ "unit_kind": "lexical",
+ "confidence": 0.55
+}

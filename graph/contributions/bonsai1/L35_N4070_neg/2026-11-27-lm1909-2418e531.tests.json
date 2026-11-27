@@ -1,0 +1,47 @@
+{
+ "contribution": "2026-11-27-lm1909-2418e531",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N4070-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:06:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L35/N4070",
+   "pole": "-",
+   "label": "tokens inside identifiers in source code and config (snake_case and dotted names), versus prose about the same software",
+   "fire": [
+    "def publish_gcp_image(builder):\n    image = builder['image']\n    return image",
+    "client = MqttClient(mqtt_host, mqtt_port)\nclient.connect()",
+    "settings.USE_CACHE_BACKEND = True\nsettings.MAX_RETRIES = 5",
+    "url = 'https://dev.azure.com/org/_apis/projects'\nresp = requests.get(url)",
+    "def make_report_deterministic(path):\n    return load_archive(path)",
+    "self.region_name = config['region_name']\nself.bucket_id = config['bucket_id']",
+    "import os\nAPI_TOKEN = os.environ.get('API_TOKEN')",
+    "handler = logging.StreamHandler()\nlogger.addHandler(handler)"
+   ],
+   "quiet": [
+    "We published the cloud image after the builder finished its run.",
+    "The client connects to the message broker over the local network.",
+    "Turning on the cache backend made the site noticeably faster.",
+    "The project page lists every repository the team maintains.",
+    "Making reports repeatable was the main goal of the rewrite.",
+    "Each region keeps its own storage bucket for backups.",
+    "Keep your access token secret and rotate it every month.",
+    "The logger writes every message to the console by default."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "code identifier pieces",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "card flags the pole broad (1.2% of tokens reach 0.1 of max)"
+}

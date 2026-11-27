@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-3d0c166d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N2005-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:06:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N2005",
+   "pole": "-",
+   "label": "the newline after a Python decorator line (@property, @classmethod, @staticmethod)",
+   "fire": [
+    "class Config:\n    @property\n    def name(self):\n        return self._name",
+    "class Loader:\n    @classmethod\n    def from_path(cls, path):\n        return cls(path)",
+    "class Util:\n    @staticmethod\n    def clean(text):\n        return text.strip()",
+    "class Item:\n    def __init__(self, v):\n        self.v = v\n\n    @property\n    def value(self):\n        return self.v",
+    "class Shape:\n    @abstractmethod\n    def area(self):\n        pass",
+    "@app.route('/home')\ndef home():\n    return 'hi'",
+    "class Model:\n    @cached_property\n    def size(self):\n        return len(self.data)",
+    "class Parser:\n    @classmethod\n    def from_string(cls, s):\n        return cls(s.split())"
+   ],
+   "quiet": [
+    "class Config:\n    def name(self):\n        return self._name",
+    "class Loader:\n    def from_path(self, path):\n        return Loader(path)",
+    "class Util:\n    def clean(self, text):\n        return text.strip()",
+    "class Item:\n    def __init__(self, v):\n        self.v = v\n\n    def value(self):\n        return self.v",
+    "class Shape:\n    def area(self):\n        pass",
+    "def home():\n    return 'hi'",
+    "class Model:\n    def size(self):\n        return len(self.data)",
+    "class Parser:\n    def parse(self, s):\n        return s.split()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe"
+  ]
+ },
+ "short": "newline after decorator",
+ "unit_kind": "contextual",
+ "confidence": 0.5
+}
