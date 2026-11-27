@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-68bbfcbf",
+ "kind": "interpret",
+ "neuron": "bonsai1/L1/N8868-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:29:22+00:00",
+ "recipe": {
+  "toolchain_commit": "49bddd2af",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L1_N8868_neg/2026-11-27-lm1909-68bbfcbf.tests.json"
+ },
+ "label": "dense / positional: weakly on across most text; best guess ' Ot' as in Otterbox",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L1_N8868_neg/2026-11-27-lm1909-68bbfcbf.tests.json",
+   "prereg_commit": "49bddd2af",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.867,
+     "peak": " Ot"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.65,
+     "peak": " Ot"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.844,
+     "peak": " Ot"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.801,
+     "peak": " Ot"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.747,
+     "peak": " Ot"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.783,
+     "peak": " Ot"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.8,
+     "peak": " Ot"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.738,
+     "peak": " Ot"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.317,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.252,
+     "peak": " phone"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.281,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.37,
+     "peak": " cases"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.248,
+     "peak": " tablet"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.466,
+     "peak": " grip"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.289,
+     "peak": " kept"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.291,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.792,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "49bddd2af",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "dense; guess ' Ot'",
+ "unit_kind": "dense / positional",
+ "confidence": 0.1,
+ "notes": "Card flags dense (45.9% of tokens >0.1 max, max 0.17) and gate-closed; recorded as dense, test expected to fail.",
+ "selection": "random draw"
+}

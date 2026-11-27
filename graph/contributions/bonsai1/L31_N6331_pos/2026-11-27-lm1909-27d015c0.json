@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-27d015c0",
+ "kind": "interpret",
+ "neuron": "bonsai1/L31/N6331+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:30:05+00:00",
+ "recipe": {
+  "toolchain_commit": "49bddd2af",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L31_N6331_pos/2026-11-27-lm1909-27d015c0.tests.json"
+ },
+ "label": "an indefinite or generic determiner before an unspecified noun (any, some, his or her, no), vs 'the' / 'one' on the - pole",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L31_N6331_pos/2026-11-27-lm1909-27d015c0.tests.json",
+   "prereg_commit": "49bddd2af",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 2,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.478,
+     "peak": " any"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.253,
+     "peak": " his"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.263,
+     "peak": " some"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.416,
+     "peak": "Any"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.418,
+     "peak": " no"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.283,
+     "peak": " some"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.307,
+     "peak": " his"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.203,
+     "peak": " any"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.456,
+     "peak": " this"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.18,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.228,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.193,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.326,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.196,
+     "peak": " a"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.205,
+     "peak": "Every"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.126,
+     "peak": " the"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.295,
+    "near_misses_at_0.3": 2
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "49bddd2af",
+  "minutes": 3,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "indefinite determiner slot",
+ "unit_kind": "contextual",
+ "confidence": 0.3,
+ "notes": "Card flags broad (5.2%); logit effect promotes generic nouns (thing, reason, purpose, way).",
+ "selection": "random draw"
+}
