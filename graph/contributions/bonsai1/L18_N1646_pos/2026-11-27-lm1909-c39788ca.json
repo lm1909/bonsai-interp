@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-c39788ca",
+ "kind": "interpret",
+ "neuron": "bonsai1/L18/N1646+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:25:10+00:00",
+ "recipe": {
+  "toolchain_commit": "809a14da1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L18_N1646_pos/2026-11-27-lm1909-c39788ca.tests.json"
+ },
+ "label": "digits inside citation numbers in reference lists (page ranges, volume numbers, DOIs)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L18_N1646_pos/2026-11-27-lm1909-c39788ca.tests.json",
+   "prereg_commit": "809a14da1",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.389,
+     "peak": "0"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.117,
+     "peak": " and"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.545,
+     "peak": "6"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.194,
+     "peak": "-"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.125,
+     "peak": " Int"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.114,
+     "peak": " disease"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.099,
+     "peak": "9"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.476,
+     "peak": "1"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.121,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.129,
+     "peak": " discussed"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.085,
+     "peak": " colleagues"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.117,
+     "peak": " link"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.097,
+     "peak": " studied"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.102,
+     "peak": "inal"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.112,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.13,
+     "peak": " studied"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.758,
+    "median_fire": 0.16,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "809a14da1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "citation digits",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "Card flags dense (13.5% of tokens at 0.1 of max) and gate-closed; recorded as dense / positional.",
+ "selection": "random draw"
+}

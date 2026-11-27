@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-a21b23da",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N459-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:25:53+00:00",
+ "recipe": {
+  "toolchain_commit": "809a14da1",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N459_neg/2026-11-27-lm1909-a21b23da.tests.json"
+ },
+ "label": "the word-final piece of split medical/biochemical words ('abetic' in diabetic, 'e/es' in enzyme(s))",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N459_neg/2026-11-27-lm1909-a21b23da.tests.json",
+   "prereg_commit": "809a14da1",
+   "author": "lm1909",
+   "n_fire": 2,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.092,
+     "peak": " diabetic"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 1.207,
+     "peak": "e"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.15,
+     "peak": " diabetic"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 1.097,
+     "peak": "es"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.222,
+     "peak": " diabetic"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": -0.216,
+     "peak": " enzymes"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.092,
+     "peak": " diabetic"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.123,
+     "peak": " enzyme"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": -0.222,
+     "peak": "Patients"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": -0.331,
+     "peak": "Metal"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": -0.104,
+     "peak": " hearing"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": -0.718,
+     "peak": " like"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": -0.188,
+     "peak": " diet"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.13,
+     "peak": "ach"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": -0.578,
+     "peak": " pain"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": -0.826,
+     "peak": " purified"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.906,
+    "median_fire": 0.137,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "809a14da1",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "diabetic / enzyme piece",
+ "unit_kind": "unclear",
+ "confidence": 0.15,
+ "notes": "Max activation only 0.09 and gate-closed leak dominates; the + pole is dense (97.7%).",
+ "selection": "random draw"
+}
