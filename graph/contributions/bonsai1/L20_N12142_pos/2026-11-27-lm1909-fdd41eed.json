@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-27-lm1909-fdd41eed",
+ "kind": "interpret",
+ "neuron": "bonsai1/L20/N12142+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:36:53+00:00",
+ "recipe": {
+  "toolchain_commit": "ac2b62a40",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L20_N12142_pos/2026-11-27-lm1909-fdd41eed.tests.json"
+ },
+ "label": "broad weak pole: the verb or noun that opens an argument slot ('has' after 'neither of these', 'ability' before 'to'); card flags broad",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L20_N12142_pos/2026-11-27-lm1909-fdd41eed.tests.json",
+   "prereg_commit": "ac2b62a40",
+   "author": "lm1909",
+   "n_fire": 4,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.285,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.152,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.415,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.369,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.29,
+     "peak": " ability"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.224,
+     "peak": " has"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.393,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.325,
+     "peak": " has"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.336,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.285,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.206,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.233,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.191,
+     "peak": " at"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.174,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.239,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.188,
+     "peak": " were"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.758,
+    "median_fire": 0.307,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "ac2b62a40",
+  "minutes": 1,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "has / ability slot",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "card flags the pole broad (7.6% of tokens reach 0.1 of max); probe of a neutral sentence read 0.35 on a full stop, so this is recorded as dense with a best guess.",
+ "selection": "random draw"
+}
