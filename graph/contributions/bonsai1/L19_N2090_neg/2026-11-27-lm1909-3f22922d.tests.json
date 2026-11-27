@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-3f22922d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L19/N2090-",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T02:19:40+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L19/N2090",
+   "pole": "-",
+   "label": "assignment '=' in code, at the equals sign after the target (x = value, keyword=value)",
+   "fire": [
+    "def reset(self):\n    self.count = 0\n    self.total = 0",
+    "if retries > 3:\n    timeout = 30\nelse:\n    timeout = 10",
+    "config = load_config(path)\nconfig.debug = True\nconfig.verbose = False",
+    "start = datetime(year=2020, month=1, day=1)\nend = start.replace(year=2021)",
+    "buffer = []\nfor line in lines:\n    current = line.strip()\n    buffer.append(current)",
+    "old_stdout = sys.stdout\nsys.stdout = io.StringIO()",
+    "driver.MAX_RETRIES = 5\ndriver.timeout = 2.5\ndriver.connect()",
+    "width = 640\nheight = 480\nscreen = make_window(width, height)"
+   ],
+   "quiet": [
+    "def reset(self):\n    self.clear()\n    return None",
+    "if retries > 3:\n    print('slow')\nelse:\n    print('fast')",
+    "load_config(path)\nconfig.debug_mode()\nconfig.save()",
+    "print(datetime.now())\nprint(start.year)\nlog.info(end)",
+    "for line in lines:\n    print(line.strip())\n    log.write(line)",
+    "print(sys.stdout)\nsys.stdout.flush()",
+    "driver.connect()\ndriver.reset()\ndriver.close()",
+    "make_window(640, 480)\nscreen.show()\nscreen.refresh()"
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "code assignment =",
+ "unit_kind": "contextual",
+ "confidence": 0.35,
+ "notes": "Card flags broad. Top examples: 'month=1', 'sys.stdout = sys.stderr', 'MAX_CONSOLE_BYTES = 5'; also prose ' is', ' was', ' to'."
+}
