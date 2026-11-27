@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-27-lm1909-771c20db",
+ "kind": "interpret",
+ "neuron": "bonsai1/L9/N10683-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:18:35+00:00",
+ "recipe": {
+  "toolchain_commit": "3546f399c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L9_N10683_neg/2026-11-27-lm1909-771c20db.tests.json"
+ },
+ "label": "' bottom' (or 'pocket') used as a stand-in for someone's finances: a firm's 'bottom line', a family's 'pocketbook'",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L9_N10683_neg/2026-11-27-lm1909-771c20db.tests.json",
+   "prereg_commit": "3546f399c",
+   "author": "lm1909",
+   "n_fire": 8,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.682,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.505,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.446,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.667,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.478,
+     "peak": " pocket"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.724,
+     "peak": " line"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.387,
+     "peak": "books"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.581,
+     "peak": " line"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.015,
+     "peak": " bottom"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.253,
+     "peak": " bottom"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.009,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": " in"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.004,
+     "peak": " rents"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.022,
+     "peak": " bottom"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.057,
+     "peak": " lined"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.001,
+     "peak": " in"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 1.0,
+    "median_fire": 0.543,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3546f399c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "finances as 'bottom line'",
+ "unit_kind": "contextual",
+ "confidence": 0.55,
+ "notes": "probe: financial bottom 0.86, pocketbook 0.65, literal bottom 0.01",
+ "selection": "random draw"
+}

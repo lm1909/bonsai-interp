@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-27-lm1909-a1fb7e71",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N1933-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:18:55+00:00",
+ "recipe": {
+  "toolchain_commit": "3546f399c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N1933_neg/2026-11-27-lm1909-a1fb7e71.tests.json"
+ },
+ "label": "an abstract 'grounds' noun after its adjective ('biological basis', 'reasonable suspicion')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N1933_neg/2026-11-27-lm1909-a1fb7e71.tests.json",
+   "prereg_commit": "3546f399c",
+   "author": "lm1909",
+   "n_fire": 1,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.428,
+     "peak": " basis"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.057,
+     "peak": " needs"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.265,
+     "peak": " is"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.161,
+     "peak": " must"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.17,
+     "peak": " empirical"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.178,
+     "peak": " strong"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.182,
+     "peak": "our"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.035,
+     "peak": " saw"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.022,
+     "peak": " still"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.184,
+     "peak": " new"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.116,
+     "peak": " is"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.161,
+     "peak": " must"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.039,
+     "peak": " damp"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.101,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.029,
+     "peak": " fresh"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.165,
+     "peak": " large"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.742,
+    "median_fire": 0.174,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3546f399c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "grounds noun after adjective",
+ "unit_kind": "unclear",
+ "confidence": 0.25,
+ "notes": "card flags the - pole broad (7% of tokens reach 0.1 of max). Probe: 'biological basis' 0.79, 'reasonable suspicion' 0.37",
+ "selection": "random draw"
+}

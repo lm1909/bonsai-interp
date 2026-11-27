@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-27-lm1909-6c66aade",
+ "kind": "interpret",
+ "neuron": "bonsai1/L2/N3840+",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:18:59+00:00",
+ "recipe": {
+  "toolchain_commit": "3546f399c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L2_N3840_pos/2026-11-27-lm1909-6c66aade.tests.json"
+ },
+ "label": "an inner piece of a word the tokenizer splits (genau|e, En|list, Fid|uci|ary); the pole is dense",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L2_N3840_pos/2026-11-27-lm1909-6c66aade.tests.json",
+   "prereg_commit": "3546f399c",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 1,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.653,
+     "peak": "ue"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.709,
+     "peak": "uci"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.241,
+     "peak": " enlist"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.548,
+     "peak": "au"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.084,
+     "peak": "The"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.17,
+     "peak": "ät"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.188,
+     "peak": "osc"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.265,
+     "peak": "ync"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.35,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.088,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.146,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.084,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.084,
+     "peak": "The"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.165,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.159,
+     "peak": " appendix"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.077,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.844,
+    "median_fire": 0.253,
+    "near_misses_at_0.3": 1
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3546f399c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "inner piece of split word",
+ "unit_kind": "dense / positional",
+ "confidence": 0.2,
+ "notes": "card flags both poles dense (23% of tokens reach 0.1 of max). Probe: genaue 0.87, Enlist 0.73, fiduciary 0.68",
+ "selection": "random draw"
+}

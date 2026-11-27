@@ -1,0 +1,153 @@
+{
+ "id": "2026-11-27-lm1909-43e7e5a2",
+ "kind": "interpret",
+ "neuron": "bonsai1/L35/N10812-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:18:33+00:00",
+ "recipe": {
+  "toolchain_commit": "3546f399c",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L35_N10812_neg/2026-11-27-lm1909-43e7e5a2.tests.json"
+ },
+ "label": "the first piece of a Russian or Arabic word meaning everyday or ordinary (повседневный, обыкновенный, العادي)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L35_N10812_neg/2026-11-27-lm1909-43e7e5a2.tests.json",
+   "prereg_commit": "3546f399c",
+   "author": "lm1909",
+   "n_fire": 6,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.681,
+     "peak": "с"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.641,
+     "peak": " обы"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.636,
+     "peak": "с"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.286,
+     "peak": " обы"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.634,
+     "peak": "с"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.583,
+     "peak": "с"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.494,
+     "peak": " الع"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.04,
+     "peak": " الع"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.059,
+     "peak": " в"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.002,
+     "peak": " вещ"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.014,
+     "peak": " для"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.001,
+     "peak": "ел"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.002,
+     "peak": "�от"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.041,
+     "peak": " п"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.069,
+     "peak": " الف"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.012,
+     "peak": " الث"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "held",
+   "stats": {
+    "auroc": 0.953,
+    "median_fire": 0.609,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "3546f399c",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "Russian/Arabic 'everyday, ordinary'",
+ "unit_kind": "lexical",
+ "confidence": 0.5,
+ "notes": "probe: Russian 0.68, Arabic 0.30 (peak not on الع), English 0.03. Logit effect promotes ' everyday', ' ordinary'.",
+ "selection": "random draw"
+}
