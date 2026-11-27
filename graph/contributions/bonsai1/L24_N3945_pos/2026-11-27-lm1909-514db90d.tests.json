@@ -1,0 +1,46 @@
+{
+ "contribution": "2026-11-27-lm1909-514db90d",
+ "contributor": "lm1909",
+ "kind": "interpret",
+ "neuron": "bonsai1/L24/N3945+",
+ "protocol": "quick-8+8@3",
+ "written": "2026-11-27T03:03:02+00:00",
+ "selection": "random draw",
+ "neighbours": [
+  {
+   "unit": "L24/N3945",
+   "pole": "+",
+   "label": "indentation whitespace at the start of a code line inside a Python method body",
+   "fire": [
+    "class Pipe:\n    def __del__(self):\n        os.close(self.fd_in)\n        os.close(self.fd_out)",
+    "    def toggle(self):\n        if not self.visible:\n            self.show()\n        else:\n            self.hide()",
+    "def save(db, rows):\n    cursor = db.cursor()\n    for row in rows:\n        cursor.execute(sql, row)",
+    "    def reset(self):\n        self.count = 0\n        self.items = []\n        self.done = False",
+    "def main():\n    args = parse()\n    if args.verbose:\n        print('starting')",
+    "    def close(self):\n        if self._open:\n            self._file.close()\n            self._open = False",
+    "for name in names:\n    if name.startswith('_'):\n        continue\n    print(name)",
+    "    def run(self):\n        while True:\n            job = self.queue.get()\n            job.execute()"
+   ],
+   "quiet": [
+    "The pipe class closes both file handles when the object is deleted by the program.",
+    "The toggle method shows the window if it is hidden and hides it otherwise.",
+    "The save function opens a cursor and executes the query once for each row.",
+    "The reset method sets the count to zero, empties the list and clears the flag.",
+    "The main function parses arguments and prints a message when verbose is set.",
+    "The close method closes the file if it is open and then clears the flag.",
+    "The loop skips names that start with an underscore and prints the others.",
+    "The run method keeps taking jobs from the queue and executing them forever."
+   ]
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card"
+  ]
+ },
+ "short": "code indentation",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "notes": "card: whitespace tokens x16 inside def bodies; also ' when', ' =' ."
+}
