@@ -1,0 +1,151 @@
+{
+ "id": "2026-11-27-lm1909-641884ef",
+ "kind": "interpret",
+ "neuron": "bonsai1/L23/N5577-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T03:16:04+00:00",
+ "recipe": {
+  "toolchain_commit": "40ca97993",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L23_N5577_neg/2026-11-27-lm1909-641884ef.tests.json"
+ },
+ "label": "a word that picks out a position in a sequence (the seventh of nine, this is the last)",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L23_N5577_neg/2026-11-27-lm1909-641884ef.tests.json",
+   "prereg_commit": "40ca97993",
+   "author": "lm1909",
+   "n_fire": 5,
+   "n_false_pos": 3,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 0.927,
+     "peak": " fifth"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.094,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.353,
+     "peak": " second"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.698,
+     "peak": " fourth"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.252,
+     "peak": " ninth"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.931,
+     "peak": " sixth"
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.175,
+     "peak": "venth"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.496,
+     "peak": " of"
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.365,
+     "peak": " family"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.013,
+     "peak": " with"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.15,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.443,
+     "peak": ","
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.172,
+     "peak": " the"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.424,
+     "peak": " family"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " was"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.065,
+     "peak": "."
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.781,
+    "median_fire": 0.424,
+    "near_misses_at_0.3": 3
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "40ca97993",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "position in a sequence",
+ "unit_kind": "sparse feature",
+ "confidence": 0.4,
+ "selection": "random draw"
+}
