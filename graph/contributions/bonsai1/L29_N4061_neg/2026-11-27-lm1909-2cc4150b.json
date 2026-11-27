@@ -1,0 +1,152 @@
+{
+ "id": "2026-11-27-lm1909-2cc4150b",
+ "kind": "interpret",
+ "neuron": "bonsai1/L29/N4061-",
+ "contributor": "lm1909",
+ "created": "2026-11-27T02:13:34+00:00",
+ "recipe": {
+  "toolchain_commit": "68e71cf99",
+  "command": "python -m bonsai_interp.graph.play run graph/contributions/bonsai1/L29_N4061_neg/2026-11-27-lm1909-2cc4150b.tests.json"
+ },
+ "label": "cancer screening and treatment text: the token that sets up a cancer target ('Pap smears detect ...', 'treatment of ... cancer', 'up to age 65')",
+ "tests": [
+  {
+   "protocol": "quick-8+8@3",
+   "tests_file": "graph/contributions/bonsai1/L29_N4061_neg/2026-11-27-lm1909-2cc4150b.tests.json",
+   "prereg_commit": "68e71cf99",
+   "author": "lm1909",
+   "n_fire": 3,
+   "n_false_pos": 0,
+   "n_written": [
+    8,
+    8
+   ],
+   "per_sentence": [
+    {
+     "set": "fire",
+     "i": 0,
+     "act": 1.039,
+     "peak": " find"
+    },
+    {
+     "set": "fire",
+     "i": 1,
+     "act": 0.274,
+     "peak": " for"
+    },
+    {
+     "set": "fire",
+     "i": 2,
+     "act": 0.01,
+     "peak": "M"
+    },
+    {
+     "set": "fire",
+     "i": 3,
+     "act": 0.182,
+     "peak": "-stage"
+    },
+    {
+     "set": "fire",
+     "i": 4,
+     "act": 0.42,
+     "peak": " throat"
+    },
+    {
+     "set": "fire",
+     "i": 5,
+     "act": 0.256,
+     "peak": "."
+    },
+    {
+     "set": "fire",
+     "i": 6,
+     "act": 0.706,
+     "peak": " age"
+    },
+    {
+     "set": "fire",
+     "i": 7,
+     "act": 0.007,
+     "peak": "."
+    },
+    {
+     "set": "quiet",
+     "i": 0,
+     "act": 0.021,
+     "peak": " long"
+    },
+    {
+     "set": "quiet",
+     "i": 1,
+     "act": 0.01,
+     "peak": " over"
+    },
+    {
+     "set": "quiet",
+     "i": 2,
+     "act": 0.01,
+     "peak": " when"
+    },
+    {
+     "set": "quiet",
+     "i": 3,
+     "act": 0.01,
+     "peak": "bl"
+    },
+    {
+     "set": "quiet",
+     "i": 4,
+     "act": 0.005,
+     "peak": " treatment"
+    },
+    {
+     "set": "quiet",
+     "i": 5,
+     "act": 0.005,
+     "peak": " adults"
+    },
+    {
+     "set": "quiet",
+     "i": 6,
+     "act": 0.005,
+     "peak": " months"
+    },
+    {
+     "set": "quiet",
+     "i": 7,
+     "act": 0.006,
+     "peak": " tests"
+    }
+   ],
+   "probed_before": {
+    "fire": 0,
+    "quiet": 0,
+    "source": "this checkout's .probe-log, before the pre-registration commit"
+   },
+   "outcome": "failed",
+   "stats": {
+    "auroc": 0.898,
+    "median_fire": 0.265,
+    "near_misses_at_0.3": 0
+   }
+  }
+ ],
+ "methods": {
+  "agent": "claude-code opus-5.5",
+  "screens": [
+   "card",
+   "probe",
+   "quick-test"
+  ],
+  "detected": [],
+  "toolchain_commit": "68e71cf99",
+  "minutes": 2,
+  "batch_size": 16,
+  "dtype": "float16"
+ },
+ "short": "cancer screening context",
+ "unit_kind": "contextual",
+ "confidence": 0.45,
+ "selection": "random draw"
+}
